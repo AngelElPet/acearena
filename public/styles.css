@@ -58,7 +58,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; color-scheme: dark; }
+html { scroll-behavior: smooth; color-scheme: dark; font-size: 15px; }
 body {
   margin: 0;
   font-family: var(--font);
@@ -512,6 +512,13 @@ textarea { min-height: 7rem; resize: vertical; }
 .hero-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.8fr); gap: 1.5rem; align-items: start; }
 .week-line { max-width: 42rem; color: var(--text-2); margin: 0 0 1.2rem; }
 .week-line a { color: var(--accent); }
+ul.event-list { margin: 0.35rem 0 1.2rem; padding-left: 1.2rem; color: var(--text-2); }
+ul.event-list > li { margin: 0 0 0.85rem; }
+ul.event-list > li > p { margin: 0.25rem 0 0; }
+ul.event-list a { color: var(--accent); }
+ul.event-list .kicker { margin: 0 0 0.2rem; }
+.event-where { color: var(--text); }
+.week-line ul.event-list, .today-card ul.event-list { margin-bottom: 0.7rem; }
 .today-card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -672,6 +679,7 @@ ul.sheet li:not(:last-child)::after { content: " ·\00a0"; }
   .nav a { padding: 0.75rem 0.2rem; min-height: 44px; }
 }
 @media (max-width: 800px) {
+  html { font-size: 16px; }
   .hero { padding-top: 2.4rem; }
   .fact-row, .hero-layout, .diagram-grid, .mock-grid { grid-template-columns: 1fr; }
   .package-grid, .footer-links { grid-template-columns: 1fr; }

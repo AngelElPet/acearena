@@ -123,7 +123,7 @@ ${playerCards}
       : `\n      <h2>Ficha técnica</h2>\n${paragraphs(player.style, esc)}`;
     const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
     const nextEvent = player.nextEvent
-      ? `\n      <p><strong>${esc(player.nextEvent.text)}</strong> <a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a></p>`
+      ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
       : '';
     const related = Array.isArray(player.related) && player.related.length
       ? `\n      <p class="results-more">${player.related.map((item) => `<a href="${esc(item.href)}">${esc(item.label)}</a>`).join(' · ')}</p>`
@@ -183,22 +183,20 @@ ${sourceList(player.sources, esc)}
   }
 
   const calendarBlocks = calendarDoc.sections.map((section) => {
-    const intro = section.intro ? `\n      <p class="section-intro">${esc(section.intro)}</p>` : '';
-    const cards = section.events.map((event) => {
-      const place = [event.place, event.surface].filter(Boolean).join(' · ');
+    const items = section.events.map((event) => {
+      const where = [event.place, event.when].filter(Boolean).join(', ');
       const icon = surfaceMark(event.surface, '');
-      const placeLine = place ? `\n          <p class="news-meta surface-line">${icon}${esc(place)}</p>` : '';
       const detail = event.detail ? `\n          <p>${esc(event.detail)}</p>` : '';
-      return `        <article class="card">
-          <h3>${esc(event.name)}</h3>${placeLine}
-          <p>${esc(event.when)}</p>${detail}
+      const surface = event.surface ? `\n          <p class="event-where">${icon}${esc(event.surface)}</p>` : '';
+      return `        <li>
+          ${esc(event.name)}, ${esc(where)}${surface}${detail}
           <p>Fuentes: ${event.sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a>`).join(' · ')}</p>
-        </article>`;
+        </li>`;
     }).join('\n');
-    return `      <h2>${esc(section.title)}</h2>${intro}
-      <div class="card-grid">
-${cards}
-      </div>`;
+    return `      <h2>${esc(section.title)}</h2>
+      <ul class="event-list">
+${items}
+      </ul>`;
   }).join('\n');
   entries.push({
     file: 'calendario-2027.html',

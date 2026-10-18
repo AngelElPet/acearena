@@ -54,11 +54,19 @@
     while (node.firstChild) node.removeChild(node.firstChild);
   }
 
-  function showEmpty(box, title, message) {
+  var upcomingTemplate = null;
+  var liveBox = document.getElementById("liveMatches");
+  if (liveBox) {
+    var existingList = liveBox.querySelector(".event-list");
+    if (existingList) upcomingTemplate = existingList.cloneNode(true);
+  }
+
+  function showEmpty(box, title, message, withList) {
     clear(box);
     var wrap = text("div", "live-empty");
     wrap.appendChild(text("p", "live-empty-title", title));
-    wrap.appendChild(text("p", null, message));
+    if (message) wrap.appendChild(text("p", null, message));
+    if (withList && upcomingTemplate) wrap.appendChild(upcomingTemplate.cloneNode(true));
     box.appendChild(wrap);
   }
 
@@ -85,7 +93,7 @@
     return status === "live" || status === "inprogress" || status === "in_progress";
   }
 
-  var LIVE_FALLBACK = "Mientras tanto: Maja Chwalińska ganó a Sonay Kartal por 2-6, 6-4, 6-2 en la final de Wuhan. Esta semana, del 19 al 25 de octubre: Almaty, Bruselas, Lyon, Ningbo y Osaka. Próxima cita de equipo: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.";
+  var LIVE_RESULT = "Mientras tanto: Maja Chwalińska ganó a Sonay Kartal por 2-6, 6-4, 6-2 en la final de Wuhan.";
 
   async function loadLiveMatches(options) {
     var box = document.getElementById("liveMatches");
@@ -101,7 +109,7 @@
       var data = await response.json();
       var matches = Array.isArray(data.matches) ? data.matches.filter(isLive).slice(0, 6) : [];
       if (!matches.length) {
-        showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_FALLBACK);
+        showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, true);
         return;
       }
       clear(box);
@@ -109,7 +117,7 @@
         box.appendChild(renderMatch(match));
       });
     } catch (error) {
-      showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_FALLBACK);
+      showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, true);
     } finally {
       if (button) button.disabled = false;
     }

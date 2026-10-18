@@ -170,7 +170,8 @@
       "birthPlace": "Málaga",
       "nextEvent": {
         "name": "BNP Paribas Fortis European Open",
-        "text": "Próximo torneo: European Open de Bruselas, del 19 al 25 de octubre.",
+        "place": "Bruselas, Bélgica",
+        "dates": "19–25 de octubre de 2026",
         "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
       },
       "related": [
@@ -526,7 +527,8 @@
       "birthPlace": "Buenos Aires",
       "nextEvent": {
         "name": "BNP Paribas Fortis European Open",
-        "text": "Próximo torneo: European Open de Bruselas, del 19 al 25 de octubre.",
+        "place": "Bruselas, Bélgica",
+        "dates": "19–25 de octubre de 2026",
         "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
       }
     },

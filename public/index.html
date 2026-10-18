@@ -32,7 +32,9 @@
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <style>
+    html{font-size:15px}
     body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+    input,select,textarea{font-size:16px}
     .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
     .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
     .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
@@ -41,7 +43,7 @@
     .hero:has(.hero-banner){padding-top:0}
     .hero-banner{margin:0 0 1.4rem}
     .hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-    @media (max-width:800px){.hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}}
+    @media (max-width:800px){html{font-size:16px}.hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}}
   </style>
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
@@ -127,9 +129,18 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
 <!-- /AUTO:EDITION --></p>
         <h1>El tenis, contado en español <span>y con datos</span></h1>
         <p class="lede">ATP y WTA, con Alcaraz, Jódar y los españoles en primer plano. Resultados con fuente, rankings con fecha y explicaciones claras para que no se te escape nada del circuito.</p>
-        <p class="week-line"><!-- AUTO:WEEKLINE -->
-Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty</a>, <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">Bruselas</a> y <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Lyon</a> (ATP 250), y <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">Ningbo</a> y <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Osaka</a> (WTA), del 19 al 25 de octubre. Después, <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">Basilea</a> y <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">Viena</a> (ATP 500), del 26 de octubre al 1 de noviembre, y el <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">Rolex Paris Masters</a>, del 2 al 8 de noviembre.
-<!-- /AUTO:WEEKLINE --></p>
+        <div class="week-line"><!-- AUTO:WEEKLINE -->
+<ul class="event-list">
+          <li><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a>, Almaty, Kazajistán, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a>, Bruselas, Bélgica, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a>, Lyon, Francia, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a>, Ningbo, China, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a>, Osaka, Japón, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">Swiss Indoors Basel</a>, Basilea, Suiza, 26 de octubre–1 de noviembre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">Erste Bank Open</a>, Viena, Austria, 26 de octubre–1 de noviembre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">Rolex Paris Masters</a>, París, Francia, 2–8 de noviembre de 2026</li>
+        </ul>
+<!-- /AUTO:WEEKLINE --></div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#noticias">Lo último del circuito</a>
           <a class="btn btn-ghost" href="#newsletter">Recibe el resumen del lunes</a>
@@ -152,7 +163,14 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
           <h2><a href="noticias/final-de-wuhan-chwalinska-y-kartal.html">Chwalińska gana el Wuhan Open</a></h2>
           <p>Remontó a Sonay Kartal por 2-6, 6-4 y 6-2. Es su primer título en el circuito WTA.</p>
           <h3>Próxima cita</h3>
-          <p><a href="semana.html">Del 19 al 25 de octubre: Almaty, Bruselas y Lyon en la ATP, y Ningbo y Osaka en la WTA.</a></p>
+          <ul class="event-list">
+          <li><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a>, Almaty, Kazajistán, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a>, Bruselas, Bélgica, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a>, Lyon, Francia, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a>, Ningbo, China, 19–25 de octubre de 2026</li>
+          <li><a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a>, Osaka, Japón, 19–25 de octubre de 2026</li>
+        </ul>
+          <p><a href="semana.html">Toda la semana</a></p>
         </div>
 <!-- /AUTO:TODAY -->
         </aside>
@@ -172,7 +190,16 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
         <div class="live-matches" id="liveMatches" aria-live="polite">
           <div class="live-empty">
             <p class="live-empty-title">Ahora mismo no hay partidos en pista.</p>
-            <p>Mientras tanto: Maja Chwalińska ganó a Sonay Kartal por 2-6, 6-4, 6-2 en la final de Wuhan. Esta semana, del 19 al 25 de octubre: Almaty, Bruselas, Lyon, Ningbo y Osaka. Próxima cita de equipo: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.</p>
+            <p>Mientras tanto: Maja Chwalińska ganó a Sonay Kartal por 2-6, 6-4, 6-2 en la final de Wuhan.</p>
+            <ul class="event-list">
+              <li><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview">Almaty Open</a>, Almaty, Kazajistán, 19–25 de octubre de 2026</li>
+              <li><a href="https://www.atptour.com/en/tournaments/brussels/7485/overview">BNP Paribas Fortis European Open</a>, Bruselas, Bélgica, 19–25 de octubre de 2026</li>
+              <li><a href="https://www.atptour.com/en/tournaments/lyon/496/overview">Grand Prix Auvergne-Rhône-Alpes</a>, Lyon, Francia, 19–25 de octubre de 2026</li>
+              <li><a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026">BNB Ningbo Open</a>, Ningbo, China, 19–25 de octubre de 2026</li>
+              <li><a href="https://www.wtatennis.com/tournaments/405/osaka/2026">Kinoshita Group Japan Open</a>, Osaka, Japón, 19–25 de octubre de 2026</li>
+              <li><a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup Final 8</a>, Bolonia, Italia, 24–29 de noviembre de 2026. España juega los cuartos ante Austria el 26 de noviembre. La final es el 29 de noviembre.</li>
+              <li><a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>, Melbourne Park, 11–31 de enero de 2027. El cuadro principal se juega del 17 al 31 de enero.</li>
+            </ul>
           </div>
         </div>
         <p class="live-note">Marcadores: <a href="https://sportscore.com/" rel="noopener noreferrer">Powered by SportScore</a>.</p>
@@ -185,43 +212,38 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
         <h2 id="week-title">Qué ver esta semana</h2>
         <!-- AUTO:WEEK -->
 <p class="section-intro">Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.</p>
-        <div class="card-grid">
-        <article class="card">
-          <p class="kicker">ATP · ATP 250</p>
-          <h3><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a></h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">19–25 de octubre de 2026 · Almaty, Kazajistán · pista dura indoor</p>
+        <ul class="event-list">
+        <li>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
+          <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a>, Almaty, Kazajistán, 19–25 de octubre de 2026
           <p>ATP 250 bajo techo en Almaty (Kazajistán).</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Almaty Open</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
-        </article>
-        <article class="card">
-          <p class="kicker">ATP · ATP 250</p>
-          <h3><a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a></h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">19–25 de octubre de 2026 · Bruselas, Bélgica · pista dura indoor</p>
+        </li>
+        <li>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
+          <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a>, Bruselas, Bélgica, 19–25 de octubre de 2026
           <p>ATP 250 bajo techo en el Brussels Expo. En el cuadro: Alejandro Davidovich Fokina, recién campeón en Shanghái, y Francisco Cerúndolo.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a> · <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Bruselas</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
-        </article>
-        <article class="card">
-          <p class="kicker">ATP · ATP 250</p>
-          <h3><a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a></h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">19–25 de octubre de 2026 · Lyon, Francia · pista dura indoor</p>
+        </li>
+        <li>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
+          <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a>, Lyon, Francia, 19–25 de octubre de 2026
           <p>ATP 250 bajo techo en el LDLC Arena. Nombres destacados de la previa ATP: Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa de Lyon 2026</a> · <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Lyon</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
-        </article>
-        <article class="card">
-          <p class="kicker">WTA · WTA 500</p>
-          <h3><a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a></h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">19–25 de octubre de 2026 · Ningbo, China · pista dura</p>
+        </li>
+        <li>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">WTA · WTA 500 · pista dura</p>
+          <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a>, Ningbo, China, 19–25 de octubre de 2026
           <p>WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Ningbo Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
-        </article>
-        <article class="card">
-          <p class="kicker">WTA · WTA 250</p>
-          <h3><a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a></h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">19–25 de octubre de 2026 · Osaka, Japón · pista dura</p>
+        </li>
+        <li>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">WTA · WTA 250 · pista dura</p>
+          <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a>, Osaka, Japón, 19–25 de octubre de 2026
           <p>WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Japan Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
-        </article>
-        </div>
+        </li>
+        </ul>
       <h2>Españoles y latinoamericanos esta semana</h2>
       <ul>
           <li><a href="jugadores/alejandro-davidovich-fokina.html">Alejandro Davidovich Fokina</a>. En el cuadro del European Open, del 19 al 25 de octubre. <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a>.</li>
@@ -415,19 +437,10 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
       <div class="container">
         <p class="kicker">Calendario</p>
         <h2 id="cal-title">La próxima cita del circuito</h2>
-        <p class="section-intro">La Copa Davis cierra 2026 en Bolonia. El primer Grand Slam de 2027 es el Australian Open, en Melbourne Park.</p>
-        <div class="card-grid">
-          <article class="card">
-            <p class="kicker">Noviembre 2026</p>
-            <h3>Davis Cup Final 8</h3>
-            <p>Bolonia · 24–29 de noviembre de 2026. España juega los cuartos ante Austria el 26 de noviembre. La final es el 29 de noviembre.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">Enero 2027</p>
-            <h3>Australian Open 2027</h3>
-            <p>Melbourne Park · 11–31 de enero de 2027. El cuadro principal se juega del 17 al 31 de enero. El primer grande del año, en pleno verano austral.</p>
-          </article>
-        </div>
+        <ul class="event-list">
+          <li><a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup Final 8</a>, Bolonia, Italia, 24–29 de noviembre de 2026. España juega los cuartos ante Austria el 26 de noviembre. La final es el 29 de noviembre.</li>
+          <li><a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>, Melbourne Park, 11–31 de enero de 2027. El cuadro principal se juega del 17 al 31 de enero.</li>
+        </ul>
         <p class="as-of">Fuentes: <a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup, entradas del Final 8</a>, <a href="https://www.daviscup.com/en/davis-cup-final-8-all-you-need-to-know">sede en Bolonia</a>, <a href="https://www.daviscup.com/en/teams/5255f60d-f9a3-40d1-9009-e4acf3f6a942">España–Austria</a> y <a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>. <a href="calendario-2027.html">Calendario 2027</a>.</p>
       </div>
     </section>

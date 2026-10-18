@@ -108,7 +108,7 @@
     "body": [
       "Rafael Jódar, de 20 años, alcanzó en Shanghái su primera final de Masters 1000. Con esa semana, la ATP lo sube dos puestos hasta el noveno de la PIF ATP Live Race a Turín y refuerza su opción de clasificarse por primera vez para las Nitto ATP Finals. El Infosys ATP Win/Loss Index le atribuye un balance de 43 victorias y 17 derrotas en partidos de nivel tour en 2026. En el cuadro venció a Casper Ruud en cuartos y a Daniil Medvedev en semifinales. En la crónica de la ATP, Jódar describió el torneo como una gran semana en la que disputó muchos partidos.",
       "La lista en vivo de la Race, con Shanghái ya sumado, queda así en la ATP: Alexander Zverev, 9.150 puntos; Jannik Sinner, 7.950; Carlos Alcaraz, 4.600; Ben Shelton, 4.480; Flavio Cobolli, 3.540; Daniil Medvedev, 3.420; Frances Tiafoe, 3.380; Arthur Fils, 3.325; Jódar, 3.159; Alex de Minaur, 2.880, y Novak Djokovic, 2.840. Alejandro Davidovich Fokina es 16.º en la Race, con 2.450 puntos.",
-      "Mundo Deportivo señala que, como Sinner ya cerró la temporada, el corte de Turín queda en la novena plaza, justo la que Jódar ocupa en la lista en vivo. Para cerrar el billete tiene previsto jugar dos torneos más: el ATP 500 de Basilea y el Masters 1000 de París. En el ranking ATP, la misma crónica lo lleva del puesto 13 al 11, igualando su mejor posición. Davidovich Fokina subiría al 13, el mejor registro de su carrera: nunca había ocupado un puesto mejor que el 14. Llegaba desde el 26 después de dos meses fuera por una lesión de espalda.",
+      "Mundo Deportivo señala que, como Sinner ya cerró la temporada, el corte de Turín queda en la novena plaza, justo la que Jódar ocupa en la lista en vivo. Para cerrar el billete tiene previsto jugar dos torneos más. En el ranking ATP, la misma crónica lo lleva del puesto 13 al 11, igualando su mejor posición. Davidovich Fokina subiría al 13, el mejor registro de su carrera: nunca había ocupado un puesto mejor que el 14. Llegaba desde el 26 después de dos meses fuera por una lesión de espalda.",
       "Yahoo Sports y Tennis365 coinciden en la subida de trece puestos de Davidovich Fokina hasta el número 13 y en el 11 de Jódar, a 101 puntos de Arthur Fils, décimo. Si Jódar hubiera ganado la final, habría entrado en el top 10 por primera vez. Con Alcaraz tercero, hay tres españoles en el top 15: Alcaraz, Jódar y Davidovich Fokina. Estas cifras son en vivo o proyectadas: el ranking oficial de la ATP se publica el lunes 19 de octubre de 2026."
     ],
     "tags": [
@@ -141,6 +141,28 @@
       {
         "name": "Tennis365",
         "url": "https://www.tennis365.com/tennis-news/alejandro-davidovich-fokina-ranking-points-prize-money-shanghai-masters"
+      },
+      {
+        "name": "ATP, ficha de Basilea",
+        "url": "https://www.atptour.com/en/tournaments/-/328/overview"
+      },
+      {
+        "name": "ATP, ficha del Rolex Paris Masters",
+        "url": "https://www.atptour.com/en/tournaments/-/352/overview"
+      }
+    ],
+    "upcoming": [
+      {
+        "name": "Swiss Indoors Basel",
+        "place": "Basilea, Suiza",
+        "dates": "26 de octubre–1 de noviembre de 2026",
+        "url": "https://www.atptour.com/en/tournaments/-/328/overview"
+      },
+      {
+        "name": "Rolex Paris Masters",
+        "place": "París, Francia",
+        "dates": "2–8 de noviembre de 2026",
+        "url": "https://www.atptour.com/en/tournaments/-/352/overview"
       }
     ],
     "brief": [

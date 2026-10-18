@@ -15,7 +15,9 @@ const LLMS_LATEST = 20;
 const BEACON = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>`;
 const BYLINE = 'Redacción AceArena';
 const CRITICAL_CSS = `<style>
+html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
@@ -26,6 +28,7 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
 .hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
 .page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
+  html{font-size:16px}
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
 </style>`;
@@ -484,6 +487,14 @@ ${briefItems}
         </ul>
       </section>
 ` : '';
+  const upcomingItems = Array.isArray(article.upcoming)
+    ? article.upcoming.map((event) => `          <li><a href="${esc(event.url)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}</li>`).join('\n')
+    : '';
+  const upcoming = upcomingItems ? `      <h2>Próximos torneos</h2>
+      <ul class="event-list">
+${upcomingItems}
+      </ul>
+` : '';
   const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">${tourBadge(article)}${articleTopic(article)}</p>
@@ -496,7 +507,7 @@ ${briefItems}
 ${brief}      <div class="article-body">
 ${paragraphs}
       </div>
-      <ul class="tag-list">
+${upcoming}      <ul class="tag-list">
 ${tags}
       </ul>
       <section class="sources">
@@ -747,12 +758,9 @@ function longDay(iso) {
   return `${day} de ${MONTHS_LONG[month - 1]} de ${year}`;
 }
 
-function linkParts(parts) {
-  return parts.map((part) => (
-    part.href
-      ? `<a href="${esc(part.href)}" target="_blank" rel="noopener noreferrer">${esc(part.text)}</a>`
-      : esc(part.text)
-  )).join('');
+function upcomingList(events) {
+  const items = events.map((event) => `          <li><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}</li>`).join('\n');
+  return `<ul class="event-list">\n${items}\n        </ul>`;
 }
 
 function sourceLinks(sources) {
@@ -772,24 +780,24 @@ function surfaceIcon(surface, prefix) {
   return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="36" height="36">`;
 }
 
-function tournamentCard(event, prefix) {
+function tournamentItem(event, prefix) {
   const entries = event.entries ? `\n          <p>${esc(event.entries)}</p>` : '';
-  return `        <article class="card">
-          <p class="kicker">${esc(event.tour)} · ${esc(event.level)}</p>
-          <h3><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a></h3>
-          <p class="news-meta surface-line">${surfaceIcon(event.surface, prefix)}${esc(event.dates)} · ${esc(event.place)} · ${esc(event.surfaceLabel)}</p>
+  return `        <li>
+          <p class="kicker">${surfaceIcon(event.surface, prefix)}${esc(event.tour)} · ${esc(event.level)} · ${esc(event.surfaceLabel)}</p>
+          <a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}
           <p>${esc(event.detail)}</p>${entries}
           <p>Fuentes: ${sourceLinks(event.sources)}</p>
-        </article>`;
+        </li>`;
 }
 
-function todayCard(today) {
+function todayCard(today, events) {
   return `<div class="today-card">
           <p class="kicker">Hoy</p>
           <h2><a href="${esc(today.resultHref)}">${esc(today.resultTitle)}</a></h2>
           <p>${esc(today.resultText)}</p>
           <h3>${esc(today.nextTitle)}</h3>
-          <p><a href="${esc(today.nextHref)}">${esc(today.nextText)}</a></p>
+          ${upcomingList(events)}
+          <p><a href="${esc(today.nextHref)}">Toda la semana</a></p>
         </div>`;
 }
 
@@ -803,19 +811,19 @@ ${items}
 }
 
 function weekHome(week) {
-  const cards = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
+  const items = week.tournaments.map((event) => tournamentItem(event, '')).join('\n');
   return `<p class="section-intro">${esc(week.hoursNote)}</p>
-        <div class="card-grid">
-${cards}
-        </div>
+        <ul class="event-list">
+${items}
+        </ul>
 ${spotlightBlock(week, '')}
         <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a> · <a href="rankings.html">Rankings</a></p>`;
 }
 
 function weekPage(week) {
   const url = `${SITE}/semana.html`;
-  const current = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
-  const later = week.later.map((event) => tournamentCard(event, '')).join('\n');
+  const current = week.tournaments.map((event) => tournamentItem(event, '')).join('\n');
+  const later = week.later.map((event) => tournamentItem(event, '')).join('\n');
   const events = [...week.tournaments, ...week.later];
   const main = `  <main class="section page-section" id="contenido">
     ${photoFigure('pelota', '', { priority: true, sizes: '100vw', className: 'photo-figure hero-banner' })}
@@ -826,14 +834,14 @@ function weekPage(week) {
         <h1>Qué ver esta semana</h1>
         <p>${esc(week.hoursNote)} Actualizado el ${esc(longDay(week.updated))}.</p>
       </div>
-      <div class="card-grid">
+      <ul class="event-list">
 ${current}
-      </div>
+      </ul>
 ${spotlightBlock(week, '')}
       <h2>Después</h2>
-      <div class="card-grid">
+      <ul class="event-list">
 ${later}
-      </div>
+      </ul>
     </div>
   </main>`;
   return page({
@@ -1391,8 +1399,8 @@ async function build() {
 
   let home = readFileSync(join(publicDir, 'index.html'), 'utf8');
   home = fillRegion(home, 'EDITION', editionLabel(contentDay, today));
-  home = fillRegion(home, 'WEEKLINE', linkParts(week.hero));
-  home = fillRegion(home, 'TODAY', todayCard(week.today));
+  home = fillRegion(home, 'WEEKLINE', upcomingList([...week.tournaments, ...week.later]));
+  home = fillRegion(home, 'TODAY', todayCard(week.today, week.tournaments));
   home = fillRegion(home, 'WEEK', weekHome(week));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));

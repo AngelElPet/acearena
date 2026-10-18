@@ -26,7 +26,9 @@
   <meta name="twitter:description" content="Grand Slams, finales de temporada y torneos 1000 de 2027 con las fechas ya publicadas. La Copa Davis de 2026, en Bolonia, abre la página.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <style>
+html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
@@ -37,6 +39,7 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
 .hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
 .page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
+  html{font-size:16px}
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
 </style>
@@ -78,187 +81,158 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
         <p>Las grandes citas de 2027, con la fuente oficial de cada fecha.</p>
       </div>
       <h2>Lo que queda de 2026</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Davis Cup Final 8</h3>
-          <p class="news-meta surface-line">Bolonia, Italia</p>
-          <p>24–29 de noviembre de 2026</p>
+      <ul class="event-list">
+        <li>
+          Davis Cup Final 8, Bolonia, Italia, 24–29 de noviembre de 2026
           <p>España juega los cuartos ante Austria el 26 de noviembre. La final es el 29 de noviembre.</p>
           <p>Fuentes: <a href="https://www.daviscup.com/en/final-8-tickets" target="_blank" rel="noopener noreferrer">Davis Cup, entradas del Final 8</a> · <a href="https://www.daviscup.com/en/davis-cup-final-8-all-you-need-to-know" target="_blank" rel="noopener noreferrer">Davis Cup, sede en Bolonia</a> · <a href="https://www.daviscup.com/en/teams/5255f60d-f9a3-40d1-9009-e4acf3f6a942" target="_blank" rel="noopener noreferrer">Davis Cup, España</a></p>
-        </article>
-      </div>
+        </li>
+      </ul>
       <h2>Grand Slams 2027</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Australian Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Melbourne Park · pista dura</p>
-          <p>11–31 de enero de 2027. Cuadro principal: 17–31 de enero.</p>
+      <ul class="event-list">
+        <li>
+          Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>La semana de apertura es del 11 al 16 de enero. El cuadro principal empieza el 17 de enero. Las finales de individuales son el 30 y el 31 de enero.</p>
           <p>Fuentes: <a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced" target="_blank" rel="noopener noreferrer">Australian Open</a></p>
-        </article>
-        <article class="card">
-          <h3>Roland Garros</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">París · tierra batida</p>
-          <p>23 de mayo–6 de junio de 2027</p>
+        </li>
+        <li>
+          Roland Garros, París, 23 de mayo–6 de junio de 2027
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">tierra batida</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/903/roland-garros/2027" target="_blank" rel="noopener noreferrer">WTA, Roland Garros 2027</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Wimbledon</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-grass.svg?v=3326d922fe" alt="" width="36" height="36">Wimbledon · hierba</p>
-          <p>28 de junio–11 de julio de 2027</p>
+        </li>
+        <li>
+          Wimbledon, Wimbledon, 28 de junio–11 de julio de 2027
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-grass.svg?v=3326d922fe" alt="" width="36" height="36">hierba</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/904/wimbledon/2027" target="_blank" rel="noopener noreferrer">WTA, Wimbledon 2027</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>US Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Nueva York · pista dura</p>
-          <p>Empieza el 29 de agosto de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          US Open, Nueva York, Empieza el 29 de agosto de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-      </div>
+        </li>
+      </ul>
       <h2>Finales de temporada 2027</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Nitto ATP Finals</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">Italia · pista dura indoor</p>
-          <p>Empieza el 14 de noviembre de 2027. Fecha de cierre por confirmar.</p>
+      <ul class="event-list">
+        <li>
+          Nitto ATP Finals, Italia, Empieza el 14 de noviembre de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">pista dura indoor</p>
           <p>Séptima edición en Italia.</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a> · <a href="https://www.atptour.com/-/media/sites/atp-tour/press/press-releases/2027-atp-tour-calendar-announced.pdf" target="_blank" rel="noopener noreferrer">ATP, comunicado del calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>WTA Finals</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Charlotte, Estados Unidos · pista dura</p>
-          <p>10–14 de noviembre de 2027</p>
+        </li>
+        <li>
+          WTA Finals, Charlotte, Estados Unidos, 10–14 de noviembre de 2027
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/808/wta-finals/2027" target="_blank" rel="noopener noreferrer">WTA Finals 2027</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>Next Gen ATP Finals</h3>
-          <p>Sede y fechas por confirmar.</p>
+        </li>
+        <li>
+          Next Gen ATP Finals, Sede y fechas por confirmar.
           <p>La sede se confirmará durante 2026.</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/sites/atp-tour/press/press-releases/2027-atp-tour-calendar-announced.pdf" target="_blank" rel="noopener noreferrer">ATP, comunicado del calendario 2027</a></p>
-        </article>
-      </div>
+        </li>
+      </ul>
       <h2>ATP Masters 1000</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>BNP Paribas Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Indian Wells · pista dura</p>
-          <p>Empieza el 3 de marzo de 2027. Fecha de cierre por confirmar.</p>
+      <ul class="event-list">
+        <li>
+          BNP Paribas Open, Indian Wells, Empieza el 3 de marzo de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Miami Open presented by Itaú</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Miami · pista dura</p>
-          <p>Empieza el 17 de marzo de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Miami Open presented by Itaú, Miami, Empieza el 17 de marzo de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Rolex Monte-Carlo Masters</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">Montecarlo · tierra batida</p>
-          <p>Empieza el 4 de abril de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Rolex Monte-Carlo Masters, Montecarlo, Empieza el 4 de abril de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">tierra batida</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Mutua Madrid Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">Madrid · tierra batida</p>
-          <p>Empieza el 21 de abril de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Mutua Madrid Open, Madrid, Empieza el 21 de abril de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">tierra batida</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Internazionali BNL d&#39;Italia</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">Roma · tierra batida</p>
-          <p>Empieza el 5 de mayo de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Internazionali BNL d&#39;Italia, Roma, Empieza el 5 de mayo de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">tierra batida</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>National Bank Open presented by Rogers</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Toronto · pista dura</p>
-          <p>Empieza el 1 de agosto de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          National Bank Open presented by Rogers, Toronto, Empieza el 1 de agosto de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Cincinnati Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Cincinnati · pista dura</p>
-          <p>Empieza el 12 de agosto de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Cincinnati Open, Cincinnati, Empieza el 12 de agosto de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Rolex Shanghai Masters</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Shanghái · pista dura</p>
-          <p>Empieza el 6 de octubre de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Rolex Shanghai Masters, Shanghái, Empieza el 6 de octubre de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Rolex Paris Masters</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">París · pista dura indoor</p>
-          <p>Empieza el 1 de noviembre de 2027. Fecha de cierre por confirmar.</p>
+        </li>
+        <li>
+          Rolex Paris Masters, París, Empieza el 1 de noviembre de 2027. Fecha de cierre por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">pista dura indoor</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
-        </article>
-      </div>
+        </li>
+      </ul>
       <h2>WTA 1000</h2>
-      <p class="section-intro">Los WTA 1000 de 2027.</p>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Qatar Ladies Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Doha · pista dura</p>
-          <p>Semana del 8 de febrero de 2027. Fechas exactas por confirmar.</p>
+      <ul class="event-list">
+        <li>
+          Qatar Ladies Open, Doha, Semana del 8 de febrero de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>Dubai Duty Free Tennis Championships</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Dubái · pista dura</p>
-          <p>Semana del 15 de febrero de 2027. Fechas exactas por confirmar.</p>
+        </li>
+        <li>
+          Dubai Duty Free Tennis Championships, Dubái, Semana del 15 de febrero de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>BNP Paribas Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Indian Wells · pista dura</p>
-          <p>3–14 de marzo de 2027</p>
+        </li>
+        <li>
+          BNP Paribas Open, Indian Wells, 3–14 de marzo de 2027
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/609/indian-wells/2027" target="_blank" rel="noopener noreferrer">WTA, Indian Wells 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Miami Open presented by Itaú</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Miami · pista dura</p>
-          <p>16–28 de marzo de 2027</p>
+        </li>
+        <li>
+          Miami Open presented by Itaú, Miami, 16–28 de marzo de 2027
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/902/miami/2027" target="_blank" rel="noopener noreferrer">WTA, Miami 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Mutua Madrid Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">Madrid · tierra batida</p>
-          <p>Semana del 19 de abril de 2027. Fechas exactas por confirmar.</p>
+        </li>
+        <li>
+          Mutua Madrid Open, Madrid, Semana del 19 de abril de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">tierra batida</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>Internazionali BNL d&#39;Italia</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">Roma · tierra batida</p>
-          <p>Semana del 3 de mayo de 2027. Fechas exactas por confirmar.</p>
+        </li>
+        <li>
+          Internazionali BNL d&#39;Italia, Roma, Semana del 3 de mayo de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">tierra batida</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>Omnium Banque Nationale présenté par Rogers</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Montreal · pista dura</p>
-          <p>Semana del 2 de agosto de 2027. Fechas exactas por confirmar.</p>
+        </li>
+        <li>
+          Omnium Banque Nationale présenté par Rogers, Montreal, Semana del 2 de agosto de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>Cincinnati Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Cincinnati · pista dura</p>
-          <p>Semana del 9 de agosto de 2027. Fechas exactas por confirmar.</p>
+        </li>
+        <li>
+          Cincinnati Open, Cincinnati, Semana del 9 de agosto de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-        <article class="card">
-          <h3>China Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Pekín · pista dura</p>
-          <p>29 de septiembre–10 de octubre de 2027</p>
+        </li>
+        <li>
+          China Open, Pekín, 29 de septiembre–10 de octubre de 2027
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>WTA 1000 en pista dura.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/1020/beijing/2027" target="_blank" rel="noopener noreferrer">WTA, Pekín 2027</a></p>
-        </article>
-        <article class="card">
-          <h3>Wuhan Open</h3>
-          <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Wuhan · pista dura</p>
-          <p>Semana del 11 de octubre de 2027. Fechas exactas por confirmar.</p>
+        </li>
+        <li>
+          Wuhan Open, Wuhan, Semana del 11 de octubre de 2027. Fechas exactas por confirmar.
+          <p class="event-where"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">pista dura</p>
           <p>Fuentes: <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
-        </article>
-      </div>
+        </li>
+      </ul>
     </div>
   </main>
 
