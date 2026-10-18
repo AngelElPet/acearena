@@ -1,9 +1,10 @@
-import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
-import { validateEvergreen, validatePayload } from './validate.mjs';
+import { validateEvergreen, validatePayload, validateRace, validateWeek } from './validate.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const publicDir = join(root, 'public');
@@ -146,15 +147,17 @@ function chrome(depth) {
         <div>
           <h2>El circuito</h2>
           <a href="${p}index.html#hoy">Hoy</a>
+          <a href="${p}semana.html">Esta semana</a>
           <a href="${p}noticias/index.html">Noticias</a>
           <a href="${p}jugadores/index.html">Rankings</a>
+          <a href="${p}race.html">Race a Turín</a>
           <a href="${p}resultados.html">Resultados</a>
           <a href="${p}calendario-2027.html">Calendario</a>
           <a href="${p}aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>AceArena</h2>
-          <a href="${p}index.html#sobre">Sobre AceArena</a>
+          <a href="${p}sobre.html">Sobre AceArena</a>
           <a href="${p}index.html#newsletter">Resumen del lunes</a>
           <a href="${p}agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
@@ -225,12 +228,20 @@ ${footer}
 `;
 }
 
-function newsCards(articles, hrefFor) {
+function tourBadge(article) {
+  const tags = Array.isArray(article.tags) ? article.tags : [];
+  const tour = tags.includes('WTA') ? 'WTA' : tags.includes('ATP') ? 'ATP' : '';
+  if (!tour) return '';
+  return `<span class="tour-badge">${tour}</span> `;
+}
+
+function newsCards(articles, hrefFor, assetPrefix = '') {
   if (articles.length === 0) {
     return '<p class="rankings-note">No hay noticias de los últimos 60 días.</p>';
   }
   return articles.map((article) => `        <article class="news-card">
-          <div class="news-meta">Por el equipo de AceArena · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
+          <a class="news-card-media" href="${esc(hrefFor(article))}" tabindex="-1" aria-hidden="true"><img src="${assetPrefix}og/${esc(article.slug)}.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
+          <div class="news-meta">${tourBadge(article)}Por el equipo de AceArena · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
           <h3><a href="${esc(hrefFor(article))}">${esc(article.title)}</a></h3>
           <p>${esc(article.summary)}</p>
         </article>`).join('\n');
@@ -286,7 +297,7 @@ function newsletterBlock(depth) {
         <div class="form-thanks" hidden tabindex="-1" role="status">
           <h3>¡Dentro!</h3>
           <p>Te escribiremos con el resumen del lunes.</p>
-          <p class="form-thanks-fallback">Si esta página no confirma el envío, escríbenos a <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
+          <p class="form-thanks-fallback">¿No te ha llegado nada? Escríbenos a <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
         </div>
       </form>
     </div>
@@ -307,6 +318,12 @@ function articleJsonLd(article) {
     keywords: article.tags.join(', '),
     url,
     mainEntityOfPage: url,
+    image: {
+      '@type': 'ImageObject',
+      url: `${SITE}/og/${article.slug}.png`,
+      width: 1200,
+      height: 630,
+    },
     author: { '@type': 'Organization', name: 'AceArena', url: SITE },
     publisher: { '@type': 'Organization', name: 'AceArena', url: SITE },
     about: [
@@ -325,16 +342,27 @@ function articlePage(article) {
   const url = `${SITE}/noticias/${article.slug}.html`;
   const paragraphs = article.body.map((paragraph) => `        <p>${esc(paragraph)}</p>`).join('\n');
   const tags = article.tags.map((tag) => `          <li>${esc(tag)}</li>`).join('\n');
-  const sources = article.sources.map((source) => `          <li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a> <span class="source-url">${esc(source.url)}</span></li>`).join('\n');
+  const sources = article.sources.map((source) => `          <li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a></li>`).join('\n');
+  const briefItems = Array.isArray(article.brief)
+    ? article.brief.map((item) => `          <li>${esc(item)}</li>`).join('\n')
+    : '';
+  const brief = briefItems ? `      <section class="brief">
+        <h2>En 30 segundos</h2>
+        <ul>
+${briefItems}
+        </ul>
+      </section>
+` : '';
   const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta">${esc(article.tournament)}</p>
+      <p class="news-meta">${tourBadge(article)}${esc(article.tournament)}</p>
       <h1>${esc(article.title)}</h1>
+      <img class="article-hero" src="../og/${esc(article.slug)}.png" alt="${esc(`Tarjeta de la noticia: ${article.title}`)}" width="1200" height="630">
       <p class="article-byline">Por el equipo de AceArena</p>
       <p class="article-dates">Publicado el <time datetime="${esc(article.date)}">${esc(formatDay(article.date))}</time>. Actualizado el <time datetime="${esc(article.updated)}">${esc(formatDay(article.updated))}</time>.</p>
       <p class="article-kicker">${esc(article.players.join(' · '))}</p>
       <p class="article-summary">${esc(article.summary)}</p>
-      <div class="article-body">
+${brief}      <div class="article-body">
 ${paragraphs}
       </div>
       <ul class="tag-list">
@@ -383,7 +411,7 @@ function newsIndex(articles) {
         <p>Lo más importante del circuito, con fecha, firma y fuente. La portada muestra las piezas de los últimos 60 días.</p>
       </div>
       <div class="news-grid">
-${newsCards(articles, (article) => `${article.slug}.html`)}
+${newsCards(articles, (article) => `${article.slug}.html`, '../')}
       </div>
       <p class="results-more"><a href="../resultados.html">Resultados</a> · <a href="/data/news.json">Datos JSON</a></p>
     </div>
@@ -506,11 +534,31 @@ ${body}
       </div>
     </article>
   </main>`;
+  const url = `${SITE}/${file}`;
   return page({
     title: `${title} | AceArena`,
     description,
-    canonical: `${SITE}/${file}`,
+    canonical: url,
     depth: 0,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: title,
+        description,
+        url,
+        inLanguage: 'es',
+        isPartOf: { '@type': 'WebSite', name: 'AceArena', url: `${SITE}/` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: title, item: url },
+        ],
+      },
+    ],
     main,
   });
 }
@@ -553,6 +601,269 @@ ${items}
 `;
 }
 
+function longDay(iso) {
+  const [year, month, day] = iso.slice(0, 10).split('-').map(Number);
+  return `${day} de ${MONTHS_LONG[month - 1]} de ${year}`;
+}
+
+function linkParts(parts) {
+  return parts.map((part) => (
+    part.href
+      ? `<a href="${esc(part.href)}" target="_blank" rel="noopener noreferrer">${esc(part.text)}</a>`
+      : esc(part.text)
+  )).join('');
+}
+
+function sourceLinks(sources) {
+  return sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a>`).join(' · ');
+}
+
+const SURFACE_FILES = {
+  hard: 'surface-hard.svg',
+  clay: 'surface-clay.svg',
+  grass: 'surface-grass.svg',
+  indoor: 'surface-indoor.svg',
+};
+
+function surfaceIcon(surface, prefix) {
+  const file = SURFACE_FILES[surface];
+  if (!file) return '';
+  return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="36" height="36">`;
+}
+
+function tournamentCard(event, prefix) {
+  const entries = event.entries ? `\n          <p>${esc(event.entries)}</p>` : '';
+  return `        <article class="card">
+          <p class="kicker">${esc(event.tour)} · ${esc(event.level)}</p>
+          <h3><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a></h3>
+          <p class="news-meta surface-line">${surfaceIcon(event.surface, prefix)}${esc(event.dates)} · ${esc(event.place)} · ${esc(event.surfaceLabel)}</p>
+          <p>${esc(event.detail)}</p>${entries}
+          <p>Fuentes: ${sourceLinks(event.sources)}</p>
+        </article>`;
+}
+
+function todayCard(today) {
+  return `<div class="today-card">
+          <p class="kicker">Hoy</p>
+          <h2><a href="${esc(today.resultHref)}">${esc(today.resultTitle)}</a></h2>
+          <p>${esc(today.resultText)}</p>
+          <h3>${esc(today.nextTitle)}</h3>
+          <p><a href="${esc(today.nextHref)}">${esc(today.nextText)}</a></p>
+        </div>`;
+}
+
+function weekHome(week) {
+  const cards = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
+  return `<p class="section-intro">${esc(week.range)}. ${esc(week.hoursNote)}</p>
+        <div class="card-grid">
+${cards}
+        </div>
+        <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a></p>`;
+}
+
+function weekPage(week) {
+  const url = `${SITE}/semana.html`;
+  const current = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
+  const later = week.later.map((event) => tournamentCard(event, '')).join('\n');
+  const events = [...week.tournaments, ...week.later];
+  const main = `  <main class="section page-section" id="contenido">
+    <div class="container">
+      <p class="news-meta"><a href="index.html">Inicio</a> · Esta semana</p>
+      <div class="section-header">
+        <span class="section-tag">Calendario</span>
+        <h1>Qué ver esta semana</h1>
+        <p>${esc(week.range)}. ${esc(week.hoursNote)} Actualizado el ${esc(longDay(week.updated))}.</p>
+      </div>
+      <div class="card-grid">
+${current}
+      </div>
+      <h2>Después</h2>
+      <div class="card-grid">
+${later}
+      </div>
+    </div>
+  </main>`;
+  return page({
+    title: 'Qué ver esta semana | AceArena',
+    description: `ATP y WTA del ${week.range}: sede, superficie y enlace a la ficha oficial. Sin horarios que la fuente no publique.`,
+    canonical: url,
+    depth: 0,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Qué ver esta semana',
+        url,
+        inLanguage: 'es',
+        dateModified: week.updated,
+        isPartOf: { '@type': 'WebSite', name: 'AceArena', url: `${SITE}/` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Torneos de la semana y la cita siguiente',
+        numberOfItems: events.length,
+        itemListElement: events.map((event, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: event.name,
+          url: event.officialUrl,
+        })),
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Qué ver esta semana', item: url },
+        ],
+      },
+    ],
+    main,
+  });
+}
+
+const RACE_PAGES = {
+  'Carlos Alcaraz': 'jugadores/carlos-alcaraz.html',
+  'Rafael Jódar': 'jugadores/rafael-jodar.html',
+};
+
+function racePlayer(name) {
+  const href = RACE_PAGES[name];
+  if (!href) return esc(name);
+  return `<a href="${esc(href)}">${esc(name)}</a>`;
+}
+
+function racePage(race) {
+  const url = `${SITE}/race.html`;
+  const rows = race.rows.map((row) => `            <tr>
+              <td>${esc(row.position)}</td>
+              <td>${racePlayer(row.player)}</td>
+              <td>${esc(row.points)}</td>
+            </tr>`).join('\n');
+  const main = `  <main class="section page-section" id="contenido">
+    <div class="container">
+      <p class="news-meta"><a href="index.html">Inicio</a> · Race</p>
+      <div class="section-header">
+        <span class="section-tag">ATP</span>
+        <h1>${esc(race.name)}</h1>
+        <p>Top 10 consultado el ${esc(longDay(race.asOf))}. Fuente: <a href="${esc(race.source.url)}" target="_blank" rel="noopener noreferrer">${esc(race.source.name)}</a>.</p>
+      </div>
+      <p>${esc(race.context)}</p>
+      <div class="results-table-wrap">
+        <table class="rank-table">
+          <caption>${esc(race.name)} · ${esc(longDay(race.asOf))}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Puesto</th>
+              <th scope="col">Jugador</th>
+              <th scope="col">Puntos</th>
+            </tr>
+          </thead>
+          <tbody>
+${rows}
+          </tbody>
+        </table>
+      </div>
+      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas, a 12 de octubre de 2026, sigue en la <a href="index.html#rankings">portada</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
+    </div>
+  </main>`;
+  return page({
+    title: 'Race a Turín | AceArena',
+    description: `Top 10 de la ${race.name} a ${longDay(race.asOf)}, con la fuente de la ATP.`,
+    canonical: url,
+    depth: 0,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: race.name,
+        url,
+        inLanguage: 'es',
+        dateModified: race.updated,
+        citation: race.source.url,
+        isPartOf: { '@type': 'WebSite', name: 'AceArena', url: `${SITE}/` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: race.name,
+        numberOfItems: race.rows.length,
+        itemListElement: race.rows.map((row) => ({
+          '@type': 'ListItem',
+          position: Number(row.position),
+          name: `${row.player} · ${row.points}`,
+        })),
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Race a Turín', item: url },
+        ],
+      },
+    ],
+    main,
+  });
+}
+
+function aboutPage() {
+  const url = `${SITE}/sobre.html`;
+  const description = 'Quién hace AceArena, cómo se contrasta cada dato, cómo se corrige un error y cómo se señala el contenido patrocinado.';
+  const main = `  <main class="section page-section" id="contenido">
+    <article class="container article-wrap">
+      <p class="news-meta"><a href="index.html">Inicio</a> · Sobre AceArena</p>
+      <h1>Sobre AceArena</h1>
+      <p class="article-summary">Medio digital de tenis en español. Cada resultado lleva su fuente y cada ranking su fecha.</p>
+      <h2>Quiénes somos</h2>
+      <p>AceArena es un medio digital independiente de tenis en español, nacido en 2026. Cubrimos el circuito ATP y el WTA para quien sigue cada punto y para quien acaba de descubrir este deporte.</p>
+      <h2>Quién está detrás</h2>
+      <p>Lo fundó Angel Cebria Morales. El aviso legal publica el titular, el NIF y el domicilio.</p>
+      <h2>Cómo trabajamos</h2>
+      <p>Las noticias y las fichas salen de fuentes oficiales: <a href="https://www.atptour.com/" target="_blank" rel="noopener noreferrer">ATP</a>, <a href="https://www.wtatennis.com/" target="_blank" rel="noopener noreferrer">WTA</a> y las páginas de los torneos. Los marcadores en vivo de la portada llegan de <a href="https://sportscore.com/" target="_blank" rel="noopener noreferrer">SportScore</a>. Si una cifra no está en la fuente, no entra en la página.</p>
+      <h2>Correcciones</h2>
+      <p>Si ves un error, escribe a <a href="mailto:hola@acearena.io">hola@acearena.io</a>. Lo corregimos y dejamos la fecha de la corrección en la pieza.</p>
+      <h2>Contenido patrocinado</h2>
+      <p>El contenido de pago va señalado como tal. Los precios públicos están en <a href="agencias.html">Anúnciate</a>. No publicamos cifras de audiencia hasta cerrar el primer trimestre medido.</p>
+      <p class="results-more"><a href="agencias.html">Patrocinio</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="mailto:hola@acearena.io">hola@acearena.io</a></p>
+    </article>
+  </main>`;
+  return page({
+    title: 'Sobre AceArena',
+    description,
+    canonical: url,
+    depth: 0,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        name: 'Sobre AceArena',
+        description,
+        url,
+        inLanguage: 'es',
+        isPartOf: { '@type': 'WebSite', name: 'AceArena', url: `${SITE}/` },
+        about: {
+          '@type': 'Organization',
+          name: 'AceArena',
+          url: `${SITE}/`,
+          email: 'hola@acearena.io',
+          founder: { '@type': 'Person', name: 'Angel Cebria Morales' },
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Sobre AceArena', item: url },
+        ],
+      },
+    ],
+    main,
+  });
+}
+
 function editionLabel(iso, today) {
   const [year, month, day] = iso.slice(0, 10).split('-').map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
@@ -561,7 +872,7 @@ function editionLabel(iso, today) {
   return `${long} · ${tag}`;
 }
 
-function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc) {
+function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc, week, race) {
   const lines = articles.slice(0, LLMS_LATEST).map((article) => {
     const title = article.title.replace(/[\[\]]/g, '');
     const summary = article.summary.replace(/\s+/g, ' ').trim();
@@ -572,6 +883,7 @@ function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc) {
   return `# AceArena
 
 > Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
+> Ficha larga: ${SITE}/llms-full.txt
 
 ## Noticias
 
@@ -583,9 +895,19 @@ ${lines.join('\n')}
 - Datos de noticias: ${SITE}/data/news.json
 - Datos de resultados: ${SITE}/data/results.json
 
+## Esta semana
+
+- [Qué ver esta semana](${SITE}/semana.html): ${week.range}. ${week.hoursNote}
+- Datos de la semana: ${SITE}/data/week.json
+
+## Race a Turín
+
+- [${race.name}](${SITE}/race.html): top 10 consultado el ${race.asOf}. ${race.source.url}
+- Datos de la Race: ${SITE}/data/race.json
+
 ## Jugadores
 
-- [Jugadores españoles](${SITE}/jugadores/): fichas con ranking fechado y enlace a la ficha oficial.
+- [Jugadores en español](${SITE}/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
 ${playerLines.join('\n')}
 
 ## Calendario
@@ -600,8 +922,56 @@ ${guideLines.join('\n')}
 ## El sitio
 
 - [Portada](${SITE}/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
+- [Sobre AceArena](${SITE}/sobre.html): quiénes somos, cómo trabajamos, correcciones y contenido patrocinado.
 - [Agencias](${SITE}/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
 `;
+}
+
+function collectAssetHashes() {
+  const hashes = new Map();
+  const walk = (dir, rel) => {
+    for (const name of readdirSync(dir)) {
+      const full = join(dir, name);
+      const next = rel ? `${rel}/${name}` : name;
+      if (statSync(full).isDirectory()) walk(full, next);
+      else hashes.set(next, createHash('sha256').update(readFileSync(full)).digest('hex').slice(0, 10));
+    }
+  };
+  walk(join(publicDir, 'assets'), '');
+  return hashes;
+}
+
+function stampAssetRefs(text, hashes) {
+  return text.replace(
+    /(^|["'(=\s])((?:\.\.\/)*\/?)assets\/([A-Za-z0-9_./-]+\.[A-Za-z0-9]+)(?:\?v=[A-Za-z0-9]+)?/g,
+    (full, lead, prefix, file) => {
+      const hash = hashes.get(file);
+      if (!hash) return full;
+      return `${lead}${prefix}assets/${file}?v=${hash}`;
+    },
+  );
+}
+
+function walkFiles(dir, out = []) {
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    if (statSync(full).isDirectory()) walkFiles(full, out);
+    else out.push(full);
+  }
+  return out;
+}
+
+function stampPublishedAssets() {
+  const hashes = collectAssetHashes();
+  const targets = walkFiles(publicDir).filter((file) => {
+    const name = file.slice(publicDir.length + 1);
+    return name.endsWith('.html') || name === 'styles.css' || name === 'site.webmanifest';
+  });
+  for (const file of targets) {
+    const current = readFileSync(file, 'utf8');
+    const next = stampAssetRefs(current, hashes);
+    if (next !== current) writeFileSync(file, next);
+  }
 }
 
 function maxDay(values) {
@@ -615,9 +985,13 @@ async function build() {
   const calendarDoc = readJson('calendar.json');
   const guidesDoc = readJson('guides.json');
   const indexnow = readJson('indexnow.json');
+  const week = readJson('week.json');
+  const race = readJson('race.json');
   const errors = [
     ...validatePayload(news, resultsDoc),
     ...validateEvergreen({ players: playersDoc, calendar: calendarDoc, guides: guidesDoc, indexnow }),
+    ...validateWeek(week),
+    ...validateRace(race),
   ];
   if (errors.length) {
     console.error(errors.join('\n'));
@@ -639,9 +1013,15 @@ async function build() {
 
   let home = readFileSync(join(publicDir, 'index.html'), 'utf8');
   home = fillRegion(home, 'EDITION', editionLabel(contentDay, today));
+  home = fillRegion(home, 'WEEKLINE', linkParts(week.hero));
+  home = fillRegion(home, 'TODAY', todayCard(week.today));
+  home = fillRegion(home, 'WEEK', weekHome(week));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));
   writeHtml('index.html', home);
+  writeHtml('semana.html', weekPage(week));
+  writeHtml('race.html', racePage(race));
+  writeHtml('sobre.html', aboutPage());
 
   writeHtml('noticias/index.html', newsIndex(articles));
   for (const article of articles) {
@@ -760,6 +1140,8 @@ async function build() {
   copyFileSync(join(root, 'data', 'players.json'), join(publicDir, 'data', 'players.json'));
   copyFileSync(join(root, 'data', 'calendar.json'), join(publicDir, 'data', 'calendar.json'));
   copyFileSync(join(root, 'data', 'guides.json'), join(publicDir, 'data', 'guides.json'));
+  copyFileSync(join(root, 'data', 'week.json'), join(publicDir, 'data', 'week.json'));
+  copyFileSync(join(root, 'data', 'race.json'), join(publicDir, 'data', 'race.json'));
   writeText(`${indexnow.key}.txt`, `${indexnow.key}\n`);
 
   const llmsFull = readFileSync(join(publicDir, 'llms-full.txt'), 'utf8');
@@ -769,6 +1151,9 @@ async function build() {
 
   const urls = [
     { loc: `${SITE}/`, lastmod: contentDay },
+    { loc: `${SITE}/sobre.html`, lastmod: contentDay },
+    { loc: `${SITE}/semana.html`, lastmod: week.updated },
+    { loc: `${SITE}/race.html`, lastmod: race.updated },
     { loc: `${SITE}/noticias/`, lastmod: contentDay },
     { loc: `${SITE}/resultados.html`, lastmod: resultsDoc.updated.slice(0, 10) },
     { loc: `${SITE}/agencias.html`, lastmod: contentDay },
@@ -793,8 +1178,9 @@ async function build() {
   ];
   writeText('sitemap.xml', sitemap(urls));
   writeText('feed.xml', rss(articles));
-  writeText('llms.txt', llmsTxt(articles, resultsDoc.updated, playersDoc, guidesDoc));
+  writeText('llms.txt', llmsTxt(articles, resultsDoc.updated, playersDoc, guidesDoc, week, race));
   await writeSocialCards(articles, { root, publicDir });
+  stampPublishedAssets();
 
   console.log(`Build OK: ${articles.length} artículos (${homeArticles.length} en portada), ${matches.length} resultados (${homeMatches.length} en portada), ${playersDoc.players.length} jugadores, ${guidesDoc.guides.length} guías`);
 }

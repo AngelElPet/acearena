@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Pista indoor">
+  <rect width="64" height="64" rx="12" fill="#121820"/>
+  <path d="M10 30 L32 12 L54 30" fill="none" stroke="#c6ff00" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="14" y="30" width="36" height="20" rx="2" fill="#243044" stroke="#c6ff00" stroke-width="2"/>
+  <path d="M32 34v12" stroke="#c6ff00" stroke-width="1.4"/>
+</svg>

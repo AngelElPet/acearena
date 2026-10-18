@@ -85,23 +85,23 @@
     return status === "live" || status === "inprogress" || status === "in_progress";
   }
 
-  async function loadLiveMatches() {
+  var LIVE_FALLBACK = "Mientras tanto: Maja Chwalińska ganó a Sonay Kartal por 2-6, 6-4, 6-2 en la final de Wuhan. Esta semana, del 19 al 25 de octubre: Almaty, Bruselas, Lyon, Ningbo y Osaka. Próxima cita de equipo: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.";
+
+  async function loadLiveMatches(options) {
     var box = document.getElementById("liveMatches");
     var button = document.getElementById("refreshLive");
     if (!box) return;
     if (button) button.disabled = true;
-    showEmpty(box, "Consultando SportScore…", "Buscamos los partidos que se están jugando.");
+    if (options && options.announce) {
+      showEmpty(box, "Consultando SportScore…", "Buscamos los partidos que se están jugando.");
+    }
     try {
       var response = await fetch("https://sportscore.com/api/v1/matches/?sport=tennis&status=live&limit=8");
       if (!response.ok) throw new Error("HTTP " + response.status);
       var data = await response.json();
       var matches = Array.isArray(data.matches) ? data.matches.filter(isLive).slice(0, 6) : [];
       if (!matches.length) {
-        showEmpty(
-          box,
-          "Ahora mismo no hay partidos en pista.",
-          "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero."
-        );
+        showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_FALLBACK);
         return;
       }
       clear(box);
@@ -109,11 +109,7 @@
         box.appendChild(renderMatch(match));
       });
     } catch (error) {
-      showEmpty(
-        box,
-        "Ahora mismo no hay partidos en pista.",
-        "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero."
-      );
+      showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_FALLBACK);
     } finally {
       if (button) button.disabled = false;
     }
@@ -121,9 +117,19 @@
 
   var refresh = document.getElementById("refreshLive");
   if (refresh) {
-    refresh.addEventListener("click", loadLiveMatches);
+    refresh.addEventListener("click", function () {
+      loadLiveMatches({ announce: true });
+    });
   }
-  if (document.getElementById("liveMatches")) loadLiveMatches();
+  if (document.getElementById("liveMatches")) {
+    var startLive = function () {
+      var run = function () { loadLiveMatches(); };
+      if (typeof requestIdleCallback === "function") requestIdleCallback(run, { timeout: 2500 });
+      else setTimeout(run, 1);
+    };
+    if (document.readyState === "complete") startLive();
+    else window.addEventListener("load", startLive, { once: true });
+  }
 
   document.querySelectorAll("form[data-netlify]").forEach(function (form) {
     form.addEventListener("submit", async function (event) {

@@ -11,8 +11,15 @@
       "Jódar, de 20 años y cabeza de serie número 12, se llevó el primer set. Davidovich Fokina, de 27 años, llegó a ir por detrás de un set y un break, 1-6 y 2-3, antes de igualar el segundo y cerrar en el tercero. Al anunciar el emparejamiento, la ATP contó esta final como la novena de un Masters 1000 entre dos españoles.",
       "En las semifinales del sábado 17 de octubre, Jódar derrotó a Daniil Medvedev por 6-3 y 6-4. Con esa victoria alcanzó su primera final de Masters 1000 y, según la ATP, pasó a ser el finalista más joven en la historia del torneo de Shanghái. Davidovich Fokina eliminó al primer cabeza de serie, Alexander Zverev, por 5-7, 6-4 y 6-3. Durante la semana salvó un punto de partido ante Frances Tiafoe en tercera ronda y remontó un set ante Hubert Hurkacz y ante Zverev."
     ],
-    "tags": ["ATP", "Masters 1000", "Shanghái"],
-    "players": ["Alejandro Davidovich Fokina", "Rafael Jódar"],
+    "tags": [
+      "ATP",
+      "Masters 1000",
+      "Shanghái"
+    ],
+    "players": [
+      "Alejandro Davidovich Fokina",
+      "Rafael Jódar"
+    ],
     "tournament": "Rolex Shanghai Masters",
     "sources": [
       {
@@ -31,33 +38,55 @@
         "name": "Associated Press",
         "url": "https://apnews.com/article/shanghai-masters-tennis-jodar-davidovich-fokina-b7528232e022bfd8717cb0c66e240c2b"
       }
+    ],
+    "brief": [
+      "Davidovich Fokina ganó la final a Jódar por 1-6, 7-6(5) y 6-4.",
+      "Es su primer Masters 1000 y su tercer título ATP, después de Mallorca y Chengdu.",
+      "Jódar, de 20 años, se llevó el primer set y había eliminado a Medvedev en semifinales."
     ]
   },
   {
     "slug": "final-de-wuhan-chwalinska-y-kartal",
-    "title": "Wuhan: Chwalińska y Kartal llegan a la final",
-    "date": "2026-10-17",
+    "title": "Chwalińska gana el Wuhan Open",
+    "date": "2026-10-18",
     "updated": "2026-10-18",
-    "summary": "Maja Chwalińska, número 22, eliminó a Iga Świątek por 7-5 y 6-1. Sonay Kartal venció a Ostapenko en la otra semifinal y las dos juegan la final.",
+    "summary": "Maja Chwalińska remontó a Sonay Kartal por 2-6, 6-4 y 6-2 y ganó el Dongfeng Voyah Wuhan Open. Es su primer título en el circuito WTA.",
     "body": [
-      "Maja Chwalińska y Sonay Kartal disputan el domingo 18 de octubre de 2026 la final del Dongfeng Voyah Wuhan Open, torneo WTA 1000. La WTA confirmó el emparejamiento el 17 de octubre: Chwalińska es la cabeza de serie número 16 y la número 22 del ranking; Kartal es la número 170.",
-      "Iga Świątek sí jugó el torneo. Chwalińska la eliminó en semifinales por 7-5 y 6-1. Kartal alcanzó la final al superar a Jelena Ostapenko por 7-6(9) y 7-6(5). Antes, Chwalińska había vencido a Mayar Sherif, Marie Bouzkova, Iva Jovic y Maria Sakkari. Kartal hizo lo propio con Anhelina Kalinina, Belinda Bencic, Jasmine Paolini y Elina Svitolina.",
-      "La WTA señala que, desde la primera edición de Wuhan en 2014, es la primera vez que dos jugadoras fuera del top 20 se citan en la final. Chwalińska busca el primer título de su carrera en el circuito. Kartal busca el segundo: el anterior fue el WTA 250 de Monastir en 2024. Entre las jugadoras con ranking, la WTA la describe como la peor clasificada en llegar a una final de nivel WTA 1000 o Tier I desde 1990.",
-      "El cuadro reparte 1.000 puntos a la campeona y 650 a la finalista. El premio de la ganadora es de 665.000 dólares y el de la finalista, de 385.001, dentro de un bote de 4.088.211 dólares. La final de individuales estaba programada en la pista central, no antes de las 18:30 hora local, después de la final de dobles.",
-      "Kartal volvió al circuito tras seis meses de baja por lesión después de Indian Wells. La WTA le atribuye un balance de 7-1 en partidos de nivel tour desde ese regreso."
+      "Maja Chwalińska ganó el Dongfeng Voyah Wuhan Open el domingo 18 de octubre de 2026. La WTA informa de que la cabeza de serie número 16 remontó ante Sonay Kartal, número 170 del ranking, por 2-6, 6-4 y 6-2, en 2 horas y 43 minutos. Es el primer título de Chwalińska en el circuito.",
+      "La WTA describe la remontada: iba un set y un break por debajo, llegó al 4-4 en el segundo set y se llevó los cuatro juegos finales. Salvó tres bolas de break al sacar para partido.",
+      "En semifinales, Chwalińska eliminó a Iga Świątek por 7-5 y 6-1. Kartal alcanzó la final al superar a Jelena Ostapenko por 7-6(9) y 7-6(5). Antes, Chwalińska había vencido a Mayar Sherif, Marie Bouzkova, Iva Jovic y Maria Sakkari. Kartal hizo lo propio con Anhelina Kalinina, Belinda Bencic, Jasmine Paolini y Elina Svitolina.",
+      "La WTA señala que, desde la primera edición de Wuhan en 2014, es la primera vez que dos jugadoras fuera del top 20 se citan en la final. En la previa, Chwalińska era la número 22 y Kartal la número 170. El cuadro reparte 1.000 puntos a la campeona y 650 a la finalista. El premio de la ganadora es de 665.000 dólares, dentro de un bote de 4.088.211 dólares.",
+      "La WTA también cuenta a Chwalińska como la cuarta jugadora, desde el formato de 2009, que gana su primer título en un WTA 1000, después de Naomi Osaka (Indian Wells 2018), Bianca Andreescu (Indian Wells 2019) y Victoria Mboko (Montreal 2025)."
     ],
-    "tags": ["WTA", "WTA 1000", "Wuhan"],
-    "players": ["Maja Chwalińska", "Sonay Kartal", "Iga Świątek"],
+    "tags": [
+      "WTA",
+      "WTA 1000",
+      "Wuhan"
+    ],
+    "players": [
+      "Maja Chwalińska",
+      "Sonay Kartal",
+      "Iga Świątek"
+    ],
     "tournament": "Dongfeng Voyah Wuhan Open",
     "sources": [
       {
-        "name": "WTA",
+        "name": "WTA, crónica de la final",
+        "url": "https://www.wtatennis.com/news/4593967/chwalinska-rallies-past-kartal-for-first-wta-title-in-wuhan"
+      },
+      {
+        "name": "WTA, previa de la final",
         "url": "https://www.wtatennis.com/news/4593447/maja-chwalinska-sonay-kartal-wuhan-open-final-2026-everything-to-know"
       },
       {
         "name": "WTA, notas del partido",
         "url": "https://wtafiles.wtatennis.com/pdf/matchnotes/2026/1075_F.pdf"
       }
+    ],
+    "brief": [
+      "Chwalińska ganó la final a Kartal por 2-6, 6-4 y 6-2.",
+      "Es su primer título WTA, y lo logra en un WTA 1000.",
+      "En semifinales eliminó a Iga Świątek por 7-5 y 6-1."
     ]
   },
   {
@@ -65,15 +94,23 @@
     "title": "Zverev cierra 2026 como número 1 de la ATP",
     "date": "2026-10-12",
     "updated": "2026-10-12",
-    "summary": "Alexander Zverev será el número 1 al cierre de 2026, el primero alemán en lograrlo. En la lista vigente del 12 de octubre, Sinner sigue primero con 11.000 puntos y Zverev segundo con 9.720.",
+    "summary": "Alexander Zverev será el número 1 al cierre de 2026, el primer alemán en lograrlo. En la lista vigente del 12 de octubre, Sinner sigue primero con 11.000 puntos y Zverev segundo con 9.720.",
     "body": [
       "Alexander Zverev aseguró el número uno de final de año del circuito ATP el lunes 12 de octubre de 2026. La ATP confirmó que será el primer alemán en cerrar una temporada en lo más alto de la clasificación y el jugador de más edad que logra ese puesto por primera vez. El 23 de noviembre de 2026, fecha del ranking de cierre, tendrá 29 años y 217 días.",
       "Sinner sigue primero en la clasificación publicada el 12 de octubre de 2026: 11.000 puntos, por 9.720 de Zverev y 5.560 de Carlos Alcaraz. Detrás figuran Ben Shelton, con 4.680, y Félix Auger-Aliassime, con 3.890. La BBC indica que Zverev no puede adelantar a Sinner en esa lista hasta el 2 de noviembre como muy pronto.",
       "La plaza de cierre quedó decidida cuando Alcaraz perdió en tercera ronda de Shanghái contra Zizou Bergs por 7-5 y 7-6(7-4). Hasta ese partido, Alcaraz mantenía una opción matemática. La ATP y la BBC coinciden en que la baja de Sinner por lesión y esa derrota dejaron a Zverev sin rivales para el puesto de final de año.",
       "Zverev llega a ese cierre después de ganar Roland Garros y el US Open en 2026, sus dos primeros títulos de Grand Slam, según la ATP. El anuncio no cambia el ranking de la semana: el número uno vigente, mientras la lista no se actualice, sigue siendo Sinner."
     ],
-    "tags": ["ATP", "Ranking", "Zverev"],
-    "players": ["Alexander Zverev", "Jannik Sinner", "Carlos Alcaraz"],
+    "tags": [
+      "ATP",
+      "Ranking",
+      "Zverev"
+    ],
+    "players": [
+      "Alexander Zverev",
+      "Jannik Sinner",
+      "Carlos Alcaraz"
+    ],
     "tournament": "ATP",
     "sources": [
       {
@@ -92,6 +129,11 @@
         "name": "Clasificación ATP del 12 de octubre de 2026",
         "url": "https://www.tennis-x.com/rankings.php"
       }
+    ],
+    "brief": [
+      "Zverev será el número 1 al cierre de 2026, el primer alemán en lograrlo.",
+      "En la lista del 12 de octubre, Sinner sigue primero (11.000) y Zverev segundo (9.720).",
+      "La plaza se cerró cuando Alcaraz perdió en Shanghái contra Zizou Bergs."
     ]
   },
   {
@@ -106,8 +148,15 @@
       "Andreeva figura con 19 años en la ficha de la WTA y ocupa la tercera plaza de esa lista. Pegula y Gauff completan las cinco primeras. Iga Świątek aparece novena, con 3.999 puntos, por detrás también de Elina Svitolina, Karolina Muchova y Linda Noskova, según la misma lista numérica del 12 de octubre.",
       "La lista del 12 de octubre recoge los puntos ya computados por la WTA. Los partidos de Wuhan y del resto de esa semana quedan para la publicación siguiente."
     ],
-    "tags": ["WTA", "Ranking"],
-    "players": ["Elena Rybakina", "Aryna Sabalenka", "Mirra Andreeva"],
+    "tags": [
+      "WTA",
+      "Ranking"
+    ],
+    "players": [
+      "Elena Rybakina",
+      "Aryna Sabalenka",
+      "Mirra Andreeva"
+    ],
     "tournament": "WTA",
     "sources": [
       {
@@ -122,6 +171,11 @@
         "name": "Tennis365",
         "url": "https://www.tennis365.com/tennis-features/how-aryna-sabalenka-wuhan-open-exit-affects-wta-rankings-mirra-andreeva-boost"
       }
+    ],
+    "brief": [
+      "Rybakina lidera la WTA a 12 de octubre de 2026, con 9.696 puntos.",
+      "Detrás van Sabalenka (7.550), Andreeva (6.371), Pegula (6.225) y Gauff (5.974).",
+      "Świątek figura novena en esa lista, con 3.999 puntos."
     ]
   },
   {
@@ -136,8 +190,14 @@
       "La ATP recuerda que esta temporada ganó cinco Masters 1000 seguidos: Indian Wells, Miami, Montecarlo, Madrid y Roma. En ese tramo firmó su mejor racha, de 30 victorias, cortada por Juan Manuel Cerúndolo en segunda ronda de Roland Garros. La BBC cifró su curso, antes del cierre anticipado, en 44 victorias y 3 derrotas, y lo describió como el hombre más joven en completar el Career Golden Masters.",
       "En el mensaje difundido por la ATP, Sinner explicó que la decisión la tomó con sus médicos para proteger la carrera a largo plazo y que haría lo posible por volver al cien por cien. Ese comunicado no incluye una fecha de regreso. Mientras siga sin sumar puntos, el liderato queda expuesto: el ranking ATP de octubre coloca a Zverev segundo, con 9.720 puntos, frente a los 11.000 de Sinner. Zverev ya tiene asegurado el número uno de final de año."
     ],
-    "tags": ["ATP", "Sinner", "Lesiones"],
-    "players": ["Jannik Sinner"],
+    "tags": [
+      "ATP",
+      "Sinner",
+      "Lesiones"
+    ],
+    "players": [
+      "Jannik Sinner"
+    ],
     "tournament": "ATP",
     "sources": [
       {
@@ -152,6 +212,11 @@
         "name": "Ranking ATP",
         "url": "https://www.atptour.com/en/rankings/singles/"
       }
+    ],
+    "brief": [
+      "El 6 de octubre anunció que no volverá a competir en 2026 por la rodilla derecha.",
+      "No defenderá las Nitto ATP Finals, que ganó en 2024 y 2025.",
+      "En la lista del 12 de octubre sigue primero, con 11.000 puntos."
     ]
   },
   {
@@ -165,8 +230,15 @@
       "Es el séptimo título de Djokovic en Pekín y extiende su balance en el torneo a 34-0, según la ATP. El serbio, de 39 años, volvía al China Open por primera vez desde 2015, cuando ganó la sexta corona ante Rafael Nadal. En el cuadro de 2026 eliminó a Alexander Zverev en cuartos. En semifinales, Daniil Medvedev fue descalificado cuando Djokovic sacaba para cerrar el partido.",
       "El título deja a Djokovic a uno de las 103 coronas de Roger Federer y a siete de las 109 de Jimmy Connors, las dos cifras más altas de la Era Open que publica la ATP. También es el primer hombre con al menos un título de circuito en 21 temporadas consecutivas. La organización del China Open confirmó la retirada de De Minaur, el mismo registro de 34-0 y que Pekín es su primer título de la temporada 2026."
     ],
-    "tags": ["ATP", "Pekín", "Djokovic"],
-    "players": ["Novak Djokovic", "Alex de Minaur"],
+    "tags": [
+      "ATP",
+      "Pekín",
+      "Djokovic"
+    ],
+    "players": [
+      "Novak Djokovic",
+      "Alex de Minaur"
+    ],
     "tournament": "China Open",
     "sources": [
       {
@@ -185,6 +257,11 @@
         "name": "BBC Sport",
         "url": "https://www.bbc.com/sport/tennis/articles/crkg7d815e59o"
       }
+    ],
+    "brief": [
+      "El 6 de octubre ganó el China Open tras la retirada de De Minaur: 7-6(3) y 0-1.",
+      "Es el título 102 de su carrera y el séptimo en Pekín, a los 39 años.",
+      "La ATP le da un balance de 34-0 en el torneo."
     ]
   }
 ]
