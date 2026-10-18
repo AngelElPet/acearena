@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hierba">
+  <rect width="64" height="64" rx="12" fill="#121820"/>
+  <rect x="8" y="14" width="48" height="36" rx="3" fill="#2f6b45" stroke="#c6ff00" stroke-width="2"/>
+  <path d="M18 22v8M26 20v10M34 23v7M42 21v9M48 24v6" stroke="#d7f5c4" stroke-width="1.4" stroke-linecap="round"/>
+</svg>

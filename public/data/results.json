@@ -1,6 +1,15 @@
 {
-  "updated": "2026-10-18T00:00:00.000Z",
+  "updated": "2026-10-18T15:00:00.000Z",
   "results": [
+    {
+      "tournament": "Dongfeng Voyah Wuhan Open",
+      "round": "Final",
+      "date": "2026-10-18",
+      "winner": "Maja Chwalińska",
+      "loser": "Sonay Kartal",
+      "score": "2-6 6-4 6-2",
+      "source": "https://www.wtatennis.com/news/4593967/chwalinska-rallies-past-kartal-for-first-wta-title-in-wuhan"
+    },
     {
       "tournament": "Rolex Shanghai Masters",
       "round": "Final",

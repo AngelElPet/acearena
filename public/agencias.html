@@ -10,8 +10,8 @@
   <meta name="theme-color" content="#070B16">
   <link rel="canonical" href="https://acearena.io/agencias.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" href="assets/favicon-32.png?v=16fd30e39f" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=9e8b6d1e0b">
   <link rel="manifest" href="site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
@@ -51,7 +51,7 @@
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="header scrolled" id="header">
     <div class="header-inner">
-      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="AceArena" width="162" height="46"></a>
+      <a class="logo" href="index.html"><img src="assets/logo.svg?v=0f5879f7d7" alt="AceArena" width="162" height="46"></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -109,7 +109,28 @@
       </div>
     </section>
 
-    <section class="section" id="paquetes" aria-labelledby="packages-title">
+    <section class="section" id="por-que-ahora" aria-labelledby="why-title">
+      <div class="container">
+        <p class="kicker">Lanzamiento</p>
+        <h2 id="why-title">Por qué ahora</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Exclusividad de categoría</h3>
+            <p>En Gold y Platinum, la primera marca de cada sector se queda la categoría. El resto de categorías sigue libre.</p>
+          </article>
+          <article class="card">
+            <h3>Informe mensual</h3>
+            <p>Visitas, páginas vistas y clics, medidos con Cloudflare Web Analytics. El primer informe llega a los 30 días.</p>
+          </article>
+          <article class="card">
+            <h3>Cifras de audiencia</h3>
+            <p>Las publicaremos cuando cierre el primer trimestre medido. Hasta entonces no damos una cifra de lectores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="paquetes" aria-labelledby="packages-title">
       <div class="container">
         <p class="kicker">Patrocinio</p>
         <h2 id="packages-title">Sé marca fundadora de AceArena</h2>
@@ -165,6 +186,34 @@
       </div>
     </section>
 
+    <section class="section" id="formatos" aria-labelledby="formats-title">
+      <div class="container">
+        <p class="kicker">Formatos</p>
+        <h2 id="formats-title">Cómo quedaría tu marca</h2>
+        <p class="section-intro">Tres formatos propios, marcados como ejemplo. La marca del dibujo es genérica: no es un cliente ni un acuerdo.</p>
+        <div class="mock-grid">
+          <article class="mock">
+            <p class="mock-label">Ejemplo</p>
+            <p class="kicker">Guía</p>
+            <h3>Los cuatro grandes</h3>
+            <p class="surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36"> Guía de Grand Slams presentada por <span class="mock-brand">Tu marca</span>.</p>
+          </article>
+          <article class="mock">
+            <p class="mock-label">Ejemplo</p>
+            <p class="kicker">Resumen del lunes</p>
+            <h3>Lo importante de la semana</h3>
+            <p>Una línea de <span class="mock-brand">Tu marca</span> en el correo del lunes, junto al resumen del circuito.</p>
+          </article>
+          <article class="mock">
+            <p class="mock-label">Ejemplo</p>
+            <p class="kicker">Contenido patrocinado</p>
+            <h3>Una pieza señalada como tal</h3>
+            <p>Patrocinado por <span class="mock-brand">Tu marca</span>. El aviso va en la propia pieza, no escondido.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <p class="kicker">Preguntas</p>
@@ -191,7 +240,7 @@
         <div>
           <p class="kicker">Contacto</p>
           <h2 id="contact-title">Hablemos de tu marca</h2>
-          <p class="section-intro">Cuéntanos qué buscas y te enviamos una propuesta en menos de 48 horas laborables. Patrocinio: <a href="mailto:sponsors@acearena.io">sponsors@acearena.io</a>. Todo lo demás: <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
+          <p class="section-intro">Cuéntanos qué buscas y te enviamos una propuesta en menos de 48 horas laborables. Te responde Angel Cebria Morales, fundador. Patrocinio: <a href="mailto:sponsors@acearena.io">sponsors@acearena.io</a>. Todo lo demás: <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
         </div>
         <form name="agencias" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="agencias">
@@ -232,7 +281,7 @@
           <div class="form-thanks" hidden tabindex="-1" role="status">
             <h3>¡Brief recibido!</h3>
             <p>Te respondemos en menos de 48 horas laborables.</p>
-            <p class="form-thanks-fallback">Si esta página no confirma el envío, escribe a <a href="mailto:sponsors@acearena.io">sponsors@acearena.io</a>.</p>
+            <p class="form-thanks-fallback">¿No te ha llegado nada? Escríbenos a <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
           </div>
         </form>
       </div>
@@ -241,21 +290,24 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="logo" href="index.html"><img src="assets/logo.svg" alt="AceArena" width="140" height="40" loading="lazy"></a>
+        <a class="logo" href="index.html"><img src="assets/logo.svg?v=0f5879f7d7" alt="AceArena" width="140" height="40" loading="lazy"></a>
         <p>AceArena para agencias: tenis en español, con datos y sin ruido.</p>
       </div>
       <div class="footer-links">
         <div>
           <h2>El circuito</h2>
           <a href="index.html#hoy">Hoy</a>
+          <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
           <a href="jugadores/index.html">Rankings</a>
+          <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
           <a href="aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>Agencias</h2>
+          <a href="sobre.html">Sobre AceArena</a>
           <a href="#paquetes">Paquetes</a>
           <a href="#contacto">Contacto</a>
           <a href="mailto:sponsors@acearena.io">sponsors@acearena.io</a>
