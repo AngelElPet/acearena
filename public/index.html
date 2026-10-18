@@ -29,7 +29,19 @@
   <meta name="twitter:description" content="Resultados, rankings y las historias del circuito ATP y WTA, contadas en español y con datos.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <link rel="preconnect" href="https://sportscore.com" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <style>
+    body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+    .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+    .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+    .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+    @media (max-width:800px){.hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}}
+  </style>
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,7 +102,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="#hoy">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
-        <a href="jugadores/index.html">Rankings</a>
+        <a href="rankings.html">Rankings</a>
         <a href="calendario-2027.html">Calendario</a>
         <a href="aprende/index.html">Aprende tenis</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
@@ -108,6 +120,10 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
 <!-- /AUTO:EDITION --></p>
         <h1>El tenis, contado en español <span>y con datos</span></h1>
         <p class="lede">ATP y WTA, con Alcaraz, Jódar y los españoles en primer plano. Resultados con fuente, rankings con fecha y explicaciones claras para que no se te escape nada del circuito.</p>
+        <figure class="photo-figure hero-photo">
+          <img src="photos/pista-tierra.webp" srcset="photos/pista-tierra-800.webp 800w, photos/pista-tierra.webp 1200w" sizes="(max-width: 800px) 100vw, 640px" alt="Pista de tierra vacía, vista desde el fondo." width="1200" height="640">
+          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
         <p class="week-line"><!-- AUTO:WEEKLINE -->
 Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty</a>, <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">Bruselas</a> y <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Lyon</a> (ATP 250), y <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">Ningbo</a> y <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Osaka</a> (WTA), del 19 al 25 de octubre. Después, <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">Basilea</a> y <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">Viena</a> (ATP 500), del 26 de octubre al 1 de noviembre, y el <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">Rolex Paris Masters</a>, del 2 al 8 de noviembre.
 <!-- /AUTO:WEEKLINE --></p>
@@ -165,47 +181,50 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
         <p class="kicker">Esta semana</p>
         <h2 id="week-title">Qué ver esta semana</h2>
         <!-- AUTO:WEEK -->
-<p class="section-intro">19–25 de octubre de 2026. No hay horas en Madrid, Buenos Aires ni Ciudad de México: el orden de juego oficial de estos torneos no las publica en esas zonas.</p>
+<p class="section-intro">Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.</p>
         <div class="card-grid">
         <article class="card">
           <p class="kicker">ATP · ATP 250</p>
           <h3><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a></h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">19–25 de octubre de 2026 · Almaty, Kazajistán · pista dura indoor</p>
-          <p>El calendario ATP marca la semana del 19 de octubre y la superficie IH (indoor hard). La ficha del torneo da las fechas 19–25 de octubre en Almaty.</p>
+          <p>ATP 250 bajo techo en Almaty (Kazajistán).</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Almaty Open</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </article>
         <article class="card">
           <p class="kicker">ATP · ATP 250</p>
           <h3><a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a></h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">19–25 de octubre de 2026 · Bruselas, Bélgica · pista dura indoor</p>
-          <p>La ATP lo sitúa en el Brussels Expo (Palais 12 / Palais 5). El calendario marca superficie IH.</p>
-          <p>La previa de la ATP del 14 de octubre incluye, entre otros, a Alejandro Davidovich Fokina y a Francisco Cerúndolo.</p>
+          <p>ATP 250 bajo techo en el Brussels Expo. En el cuadro: Alejandro Davidovich Fokina, recién campeón en Shanghái, y Francisco Cerúndolo.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a> · <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Bruselas</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </article>
         <article class="card">
           <p class="kicker">ATP · ATP 250</p>
           <h3><a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a></h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">19–25 de octubre de 2026 · Lyon, Francia · pista dura indoor</p>
-          <p>Se juega en el LDLC Arena, un pabellón cubierto. El calendario ATP marca superficie IH.</p>
-          <p>La previa de la ATP del 14 de octubre nombra a Flavio Cobolli, Taylor Fritz, Ugo Humbert, Valentin Vacherot, Tommy Paul, Brandon Nakashima y Stan Wawrinka. En ese listado no hay españoles ni latinoamericanos.</p>
+          <p>ATP 250 bajo techo en el LDLC Arena. Nombres destacados de la previa ATP: Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa de Lyon 2026</a> · <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Lyon</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </article>
         <article class="card">
           <p class="kicker">WTA · WTA 500</p>
           <h3><a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a></h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">19–25 de octubre de 2026 · Ningbo, China · pista dura</p>
-          <p>La WTA lo describe como un WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center. El calendario WTA, a 2 de octubre de 2026, lo pone en la semana del 19 de octubre.</p>
+          <p>WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Ningbo Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
         </article>
         <article class="card">
           <p class="kicker">WTA · WTA 250</p>
           <h3><a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a></h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">19–25 de octubre de 2026 · Osaka, Japón · pista dura</p>
-          <p>La WTA lo describe como un WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center. El calendario WTA lo pone en la misma semana que Ningbo.</p>
+          <p>WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Japan Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
         </article>
         </div>
-        <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a></p>
+      <h2>Españoles y latinoamericanos esta semana</h2>
+      <ul>
+          <li><a href="jugadores/alejandro-davidovich-fokina.html">Alejandro Davidovich Fokina</a>. En el cuadro del European Open, del 19 al 25 de octubre. <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a>.</li>
+          <li><a href="jugadores/francisco-cerundolo.html">Francisco Cerúndolo</a>. En el cuadro del European Open, del 19 al 25 de octubre. <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a>.</li>
+      </ul>
+        <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a> · <a href="rankings.html">Rankings</a></p>
 <!-- /AUTO:WEEK -->
       </div>
     </section>
@@ -219,43 +238,43 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
           <!-- AUTO:NEWS -->
 <article class="news-card">
           <a class="news-card-media" href="noticias/davidovich-fokina-gana-el-masters-de-shanghai.html" tabindex="-1" aria-hidden="true"><img src="og/davidovich-fokina-gana-el-masters-de-shanghai.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">ATP</span> Por el equipo de AceArena · 18 oct 2026 · Fuente: ATP Tour</div>
+          <div class="news-meta"><span class="tour-badge">ATP</span> Redacción AceArena · 18 oct 2026 · Fuente: ATP Tour</div>
           <h3><a href="noticias/davidovich-fokina-gana-el-masters-de-shanghai.html">Davidovich remonta a Jódar y se corona en Shanghái</a></h3>
           <p>Final española de Masters 1000: Jódar ganó el primer set 6-1 y Alejandro Davidovich Fokina cerró por 7-6(5) y 6-4. Es su primer título de ese nivel.</p>
         </article>
         <article class="news-card">
           <a class="news-card-media" href="noticias/final-de-wuhan-chwalinska-y-kartal.html" tabindex="-1" aria-hidden="true"><img src="og/final-de-wuhan-chwalinska-y-kartal.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">WTA</span> Por el equipo de AceArena · 18 oct 2026 · Fuente: WTA, crónica de la final</div>
+          <div class="news-meta"><span class="tour-badge">WTA</span> Redacción AceArena · 18 oct 2026 · Fuente: WTA, crónica de la final</div>
           <h3><a href="noticias/final-de-wuhan-chwalinska-y-kartal.html">Chwalińska remonta a Kartal y gana en Wuhan su primer título</a></h3>
           <p>Maja Chwalińska remontó el 18 de octubre ante Sonay Kartal por 2-6, 6-4 y 6-2 y ganó el Wuhan Open, su primer título WTA. La WTA la proyecta en el puesto 11.</p>
         </article>
         <article class="news-card">
           <a class="news-card-media" href="noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html" tabindex="-1" aria-hidden="true"><img src="og/jodar-noveno-en-la-race-a-turin-tras-shanghai.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">ATP</span> Por el equipo de AceArena · 18 oct 2026 · Fuente: ATP Tour</div>
+          <div class="news-meta"><span class="tour-badge">ATP</span> Redacción AceArena · 18 oct 2026 · Fuente: ATP Tour</div>
           <h3><a href="noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html">Jódar, noveno en la Race a Turín tras Shanghái</a></h3>
           <p>Tras su primera final de Masters 1000, la PIF ATP Live Race sitúa a Rafael Jódar noveno, con 3.159 puntos. El ranking oficial del lunes 19 de octubre lo proyecta 11º; Alejandro Davidovich Fokina, 13º.</p>
         </article>
         <article class="news-card">
           <a class="news-card-media" href="noticias/zverev-asegura-el-numero-uno-de-final-de-ano.html" tabindex="-1" aria-hidden="true"><img src="og/zverev-asegura-el-numero-uno-de-final-de-ano.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">ATP</span> Por el equipo de AceArena · 12 oct 2026 · Fuente: ATP Tour</div>
+          <div class="news-meta"><span class="tour-badge">ATP</span> Redacción AceArena · 12 oct 2026 · Fuente: ATP Tour</div>
           <h3><a href="noticias/zverev-asegura-el-numero-uno-de-final-de-ano.html">Zverev cierra 2026 como número 1 de la ATP</a></h3>
           <p>Alexander Zverev será el número 1 al cierre de 2026, el primer alemán en lograrlo. En la lista vigente del 12 de octubre, Sinner sigue primero con 11.000 puntos y Zverev segundo con 9.720.</p>
         </article>
         <article class="news-card">
           <a class="news-card-media" href="noticias/rybakina-encabeza-el-ranking-wta.html" tabindex="-1" aria-hidden="true"><img src="og/rybakina-encabeza-el-ranking-wta.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">WTA</span> Por el equipo de AceArena · 12 oct 2026 · Fuente: Ranking WTA</div>
+          <div class="news-meta"><span class="tour-badge">WTA</span> Redacción AceArena · 12 oct 2026 · Fuente: Ranking WTA</div>
           <h3><a href="noticias/rybakina-encabeza-el-ranking-wta.html">Rybakina, número 1 del ranking WTA</a></h3>
           <p>Elena Rybakina lidera el ranking WTA a 12 de octubre de 2026, con 9.696 puntos, por delante de Aryna Sabalenka y Mirra Andreeva.</p>
         </article>
         <article class="news-card">
           <a class="news-card-media" href="noticias/sinner-cierra-la-temporada-por-lesion-de-rodilla.html" tabindex="-1" aria-hidden="true"><img src="og/sinner-cierra-la-temporada-por-lesion-de-rodilla.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">ATP</span> Por el equipo de AceArena · 6 oct 2026 · Fuente: ATP Tour</div>
+          <div class="news-meta"><span class="tour-badge">ATP</span> Redacción AceArena · 6 oct 2026 · Fuente: ATP Tour</div>
           <h3><a href="noticias/sinner-cierra-la-temporada-por-lesion-de-rodilla.html">Sinner dice adiós a 2026 y se queda fuera de Turín</a></h3>
           <p>Jannik Sinner anunció el 6 de octubre que se trata la rodilla derecha y no volverá a competir en 2026. El número 1 vigente se queda fuera de las ATP Finals.</p>
         </article>
         <article class="news-card">
           <a class="news-card-media" href="noticias/djokovic-suma-102-titulos-en-pekin.html" tabindex="-1" aria-hidden="true"><img src="og/djokovic-suma-102-titulos-en-pekin.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta"><span class="tour-badge">ATP</span> Por el equipo de AceArena · 6 oct 2026 · Fuente: ATP Tour</div>
+          <div class="news-meta"><span class="tour-badge">ATP</span> Redacción AceArena · 6 oct 2026 · Fuente: ATP Tour</div>
           <h3><a href="noticias/djokovic-suma-102-titulos-en-pekin.html">Djokovic, 39 años y 102 títulos: campeón en Pekín</a></h3>
           <p>El 6 de octubre, Novak Djokovic ganó el China Open tras la retirada de Alex de Minaur (7-6(3), 0-1). Es el título 102 de su carrera, a los 39 años, y el séptimo en Pekín.</p>
         </article>
@@ -385,7 +404,7 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
             </tbody>
           </table>
         </div>
-        <p class="as-of">Ranking oficial a 12 de octubre de 2026. Fuentes: <a href="https://www.atptour.com/en/rankings/singles/">ATP Tour</a> y <a href="https://www.wtatennis.com/rankings/singles/">WTA</a>. <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores en español</a> · <a href="aprende/como-funciona-el-ranking-atp.html">Cómo funciona el ranking ATP</a> · <a href="aprende/como-funciona-el-ranking-wta.html">y el WTA</a>.</p>
+        <p class="as-of">Ranking oficial a 12 de octubre de 2026. Fuentes: <a href="https://www.atptour.com/en/rankings/singles/">ATP Tour</a> y <a href="https://www.wtatennis.com/rankings/singles/">WTA</a>. <a href="rankings.html">Top 20 ATP y WTA</a> · <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores en español</a> · <a href="aprende/como-funciona-el-ranking-atp.html">Cómo funciona el ranking ATP</a> · <a href="aprende/como-funciona-el-ranking-wta.html">y el WTA</a>.</p>
       </div>
     </section>
 
@@ -414,7 +433,7 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
       <div class="container">
         <p class="kicker">Aprende tenis</p>
         <h2 id="guide-title">Los cuatro grandes: guía rápida de los Grand Slams</h2>
-        <p class="section-intro">Cuatro torneos, cuatro superficies, cuatro maneras de jugar. Lo básico para seguir la temporada desde el primer día. <a href="aprende/index.html">Aprende tenis</a> · <a href="aprende/reglas-del-tenis-basicas.html">Reglas del marcador</a>.</p>
+        <p class="section-intro">Cuatro torneos, cuatro superficies, cuatro maneras de jugar. Lo básico para seguir la temporada desde el primer día. <a href="aprende/grand-slams.html">La guía completa</a> · <a href="aprende/index.html">Aprende tenis</a> · <a href="aprende/reglas-del-tenis-basicas.html">Reglas del marcador</a>.</p>
         <div class="card-grid">
           <article class="card">
             <p class="surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"> Pista dura</p>
@@ -444,7 +463,7 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
       <div class="container">
         <p class="kicker">Glosario</p>
         <h2 id="glossary-title">Habla tenis en 2 minutos</h2>
-        <p class="section-intro">¿Vienes del pádel o acabas de engancharte? Estas son las palabras que vas a oír en cada retransmisión.</p>
+        <p class="section-intro">¿Vienes del pádel o acabas de engancharte? Estas son las palabras que vas a oír en cada retransmisión. <a href="aprende/glosario.html">Glosario completo</a>.</p>
         <div class="faq-list">
           <article class="faq-item"><h3>ATP / WTA</h3><p>La ATP organiza el circuito profesional masculino y la WTA el femenino. De ahí salen los rankings y el calendario.</p></article>
           <article class="faq-item"><h3>Masters 1000</h3><p>El escalón justo por debajo de un Grand Slam en la ATP. El campeón suma 1.000 puntos y el cuadro reúne a casi todo el top.</p></article>
@@ -527,7 +546,7 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
           <a href="#hoy">Hoy</a>
           <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
-          <a href="jugadores/index.html">Rankings</a>
+          <a href="rankings.html">Rankings</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
@@ -547,11 +566,12 @@ Esta semana: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overvie
           <a href="aviso-legal.html">Aviso legal</a>
           <a href="privacidad.html">Privacidad</a>
           <a href="cookies.html">Cookies</a>
+          <a href="creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

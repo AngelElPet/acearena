@@ -25,9 +25,23 @@
   <meta name="twitter:title" content="Reglas del tenis básicas | AceArena">
   <meta name="twitter:description" content="Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="../styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se puntúa un juego?","acceptedAnswer":{"@type":"Answer","text":"Se cuenta 0, 15, 30, 40 y juego. El 0 se llama love."}},{"@type":"Question","name":"¿Qué es la ventaja?","acceptedAnswer":{"@type":"Answer","text":"A 40-40 el siguiente punto da la ventaja. Hay que ganar dos puntos seguidos para llevarse el juego."}},{"@type":"Question","name":"¿Qué es un tie-break?","acceptedAnswer":{"@type":"Answer","text":"Es el desempate a 7 puntos con diferencia de 2. Se cuenta con números."}},{"@type":"Question","name":"¿Cómo se gana un set?","acceptedAnswer":{"@type":"Answer","text":"Con 6 juegos y una diferencia de 2. Si hay tie-break, se juega al llegar a 6-6."}},{"@type":"Question","name":"¿Cuántos sets dura un partido?","acceptedAnswer":{"@type":"Answer","text":"Al mejor de 3 sets gana quien se lleva 2. Al mejor de 5 gana quien se lleva 3."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se puntúa un juego?","acceptedAnswer":{"@type":"Answer","text":"Se cuenta 0, 15, 30, 40 y juego. Al 0 se le llama «nada» (en inglés, love)."}},{"@type":"Question","name":"¿Qué es la ventaja?","acceptedAnswer":{"@type":"Answer","text":"A 40-40 el siguiente punto da la ventaja. Hay que ganar dos puntos seguidos para llevarse el juego."}},{"@type":"Question","name":"¿Qué es un tie-break?","acceptedAnswer":{"@type":"Answer","text":"Es el desempate a 7 puntos con diferencia de 2. Se cuenta con números."}},{"@type":"Question","name":"¿Cómo se gana un set?","acceptedAnswer":{"@type":"Answer","text":"Con 6 juegos y una diferencia de 2. Si hay tie-break, se juega al llegar a 6-6."}},{"@type":"Question","name":"¿Cuántos sets dura un partido?","acceptedAnswer":{"@type":"Answer","text":"Al mejor de 3 sets gana quien se lleva 2. Al mejor de 5 gana quien se lleva 3."}}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://acearena.io/"},{"@type":"ListItem","position":2,"name":"Aprende tenis","item":"https://acearena.io/aprende/"},{"@type":"ListItem","position":3,"name":"Reglas del tenis básicas","item":"https://acearena.io/aprende/reglas-del-tenis-basicas.html"}]}
@@ -47,7 +61,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
-        <a href="../jugadores/index.html">Rankings</a>
+        <a href="../rankings.html">Rankings</a>
         <a href="../calendario-2027.html">Calendario</a>
         <a href="../aprende/index.html">Aprende tenis</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
@@ -59,19 +73,19 @@
       <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Aprende tenis</a></p>
       <p class="kicker">Reglas</p>
       <h1>Reglas del tenis básicas</h1>
-      <p class="article-summary">Estas son las reglas de marcador que la ITF publica para un partido estándar. El resumen no sustituye al reglamento: el texto completo está en los enlaces del final.</p>
+      <p class="article-summary">Cómo se cuenta un partido de tenis, en dos minutos. Basado en el reglamento de la ITF (enlace al final).</p>
       <div class="diagram-grid">
         <figure class="diagram">
           <img src="../assets/diagrams/court.svg?v=5c991e64bd" alt="Esquema de una pista: dos fondos, la red en el centro y los cuadros de saque." width="320" height="180">
-          <figcaption>Esquema de la pista. No es un partido real.</figcaption>
+          <figcaption>La pista, vista desde arriba.</figcaption>
         </figure>
         <figure class="diagram">
           <img src="../assets/diagrams/score.svg?v=a8b821c047" alt="Esquema de un juego: 0, 15, 30, 40 y juego." width="360" height="120">
-          <figcaption>Esquema del marcador de un juego, el orden que explica esta guía.</figcaption>
+          <figcaption>Cómo avanza el marcador de un juego.</figcaption>
         </figure>
       </div>
       <h2>El juego y la ventaja</h2>
-        <p>Un juego se cuenta 0, 15, 30, 40 y juego. El 0 se llama love.</p>
+        <p>Un juego se cuenta 0, 15, 30, 40 y juego. Al 0 se le llama «nada» (en inglés, love).</p>
         <p>Si ambos llegan a 40 hay igualdad. El siguiente punto da la ventaja y hace falta ganar dos puntos seguidos para cerrar el juego.</p>
       <h2>El set y el partido</h2>
         <p>Un set se gana con 6 juegos y una diferencia de 2. Si el set prevé tie-break, se juega al llegar a 6-6. El set con ventaja, sin tie-break, tiene que anunciarse antes.</p>
@@ -80,7 +94,7 @@
         <p>Jugar sin ventaja es una alternativa aprobada en un apéndice del reglamento. No es la forma estándar.</p>
       <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
-        <article class="faq-item"><h3>¿Cómo se puntúa un juego?</h3><p>Se cuenta 0, 15, 30, 40 y juego. El 0 se llama love.</p></article>
+        <article class="faq-item"><h3>¿Cómo se puntúa un juego?</h3><p>Se cuenta 0, 15, 30, 40 y juego. Al 0 se le llama «nada» (en inglés, love).</p></article>
         <article class="faq-item"><h3>¿Qué es la ventaja?</h3><p>A 40-40 el siguiente punto da la ventaja. Hay que ganar dos puntos seguidos para llevarse el juego.</p></article>
         <article class="faq-item"><h3>¿Qué es un tie-break?</h3><p>Es el desempate a 7 puntos con diferencia de 2. Se cuenta con números.</p></article>
         <article class="faq-item"><h3>¿Cómo se gana un set?</h3><p>Con 6 juegos y una diferencia de 2. Si hay tie-break, se juega al llegar a 6-6.</p></article>
@@ -110,7 +124,8 @@
           <a href="../index.html#hoy">Hoy</a>
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
-          <a href="../jugadores/index.html">Rankings</a>
+          <a href="../rankings.html">Rankings</a>
+          <a href="../jugadores/index.html">Jugadores en español</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -130,11 +145,12 @@
           <a href="../aviso-legal.html">Aviso legal</a>
           <a href="../privacidad.html">Privacidad</a>
           <a href="../cookies.html">Cookies</a>
+          <a href="../creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

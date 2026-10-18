@@ -25,7 +25,21 @@
   <meta name="twitter:title" content="Alejandro Tabilo | AceArena">
   <meta name="twitter:description" content="Alejandro Tabilo, ATP. Número 30 · 1.605 puntos. Actualizado a 12 de octubre de 2026.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="../styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Alejandro Tabilo","url":"https://acearena.io/jugadores/alejandro-tabilo.html","sameAs":["https://www.atptour.com/en/players/-/te30/overview"],"nationality":"Chile","birthDate":"1997-06-02","height":"188 cm","jobTitle":"tenista"}
   </script>
@@ -47,7 +61,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
-        <a href="../jugadores/index.html">Rankings</a>
+        <a href="../rankings.html">Rankings</a>
         <a href="../calendario-2027.html">Calendario</a>
         <a href="../aprende/index.html">Aprende tenis</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
@@ -68,13 +82,13 @@
       <p><a href="https://www.atptour.com/en/players/-/te30/overview" target="_blank" rel="noopener noreferrer">Ficha oficial ATP</a></p>
       <h2>Biografía</h2>
         <p>Alejandro Tabilo nació el 2 de junio de 1997 en Toronto y representa a Chile. Mide 1,88 m.</p>
-      <h2>Cómo juega</h2>
-        <p>Juega con la izquierda y el revés a dos manos.</p>
+      <h2>Ficha técnica</h2>
+      <p class="sheet">Mano: zurdo · Revés: a dos manos · Estatura: 1,88 m · Nacimiento: 2 de junio de 1997, Toronto</p>
       <h2>Trayectoria</h2>
       <ul>
-          <li>La biografía de la ATP, actualizada el 22 de mayo de 2026, dice que entró en el top 100 en febrero de 2022 y que llegó al número 19 en julio de 2024, tras vencer al número 1, Novak Djokovic, camino de sus primeras semifinales de Masters 1000, en Roma.</li>
-          <li>Ganó su primer título ATP en Auckland 2024, como clasificado. La ATP lo describe como el primer chileno que ganaba un título en pista dura desde Fernando González en 2007, y como el primer chileno que ganaba un título en hierba en la Era Open, en Mallorca 2024.</li>
-          <li>En 2025 ganó Chengdu tras salvar dos bolas de campeonato ante el número 9, Lorenzo Musetti. La ficha lo cuenta como su tercer título ATP.</li>
+          <li>Entró en el top 100 en febrero de 2022 y llegó al número 19 en julio de 2024, tras vencer al número 1, Novak Djokovic, camino de sus primeras semifinales de Masters 1000, en Roma.</li>
+          <li>Ganó su primer título ATP en Auckland 2024, como clasificado. Es el primer chileno que ganaba un título en pista dura desde Fernando González en 2007, y el primer chileno que ganaba un título en hierba en la Era Open, en Mallorca 2024.</li>
+          <li>En 2025 ganó Chengdu tras salvar dos bolas de campeonato ante el número 9, Lorenzo Musetti. Es su tercer título ATP.</li>
       </ul>
       <section class="sources">
         <h2>Fuentes</h2>
@@ -83,7 +97,6 @@
           <li><a href="https://www.atptour.com/en/players/-/te30/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Alejandro Tabilo</a></li>
           <li><a href="https://www.atptour.com/-/media/files/media-guide/2026/2026-atp-media-guide-player-bios-birthdays-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, media guide 2026 (nacimiento y estatura)</a></li>
           <li><a href="https://www.atptour.com/en/rankings/singles/" target="_blank" rel="noopener noreferrer">Ranking ATP</a></li>
-          <li><a href="https://www.tennis-x.com/rankings.php" target="_blank" rel="noopener noreferrer">Tennis-X, lista del 12 de octubre de 2026</a></li>
         </ol>
       </section>
     </article>
@@ -101,7 +114,8 @@
           <a href="../index.html#hoy">Hoy</a>
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
-          <a href="../jugadores/index.html">Rankings</a>
+          <a href="../rankings.html">Rankings</a>
+          <a href="../jugadores/index.html">Jugadores en español</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -121,11 +135,12 @@
           <a href="../aviso-legal.html">Aviso legal</a>
           <a href="../privacidad.html">Privacidad</a>
           <a href="../cookies.html">Cookies</a>
+          <a href="../creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

@@ -4,6 +4,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
+import { writeArticleHeaders } from './headers.mjs';
 import { validateEvergreen, validatePayload, validateRace, validateWeek } from './validate.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -12,6 +13,18 @@ const SITE = 'https://acearena.io';
 const HOMEPAGE_MAX_AGE_DAYS = 60;
 const LLMS_LATEST = 20;
 const BEACON = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>`;
+const BYLINE = 'Redacción AceArena';
+const CRITICAL_CSS = `<style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>`;
 const MONTHS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 const MONTHS_LONG = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 const WEEKDAYS = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
@@ -128,7 +141,7 @@ function chrome(depth) {
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="${p}index.html#hoy">Hoy</a>
         <a href="${p}noticias/index.html">Noticias</a>
-        <a href="${p}jugadores/index.html">Rankings</a>
+        <a href="${p}rankings.html">Rankings</a>
         <a href="${p}calendario-2027.html">Calendario</a>
         <a href="${p}aprende/index.html">Aprende tenis</a>
         <a href="${p}agencias.html" class="nav-quiet">Anúnciate</a>
@@ -149,7 +162,8 @@ function chrome(depth) {
           <a href="${p}index.html#hoy">Hoy</a>
           <a href="${p}semana.html">Esta semana</a>
           <a href="${p}noticias/index.html">Noticias</a>
-          <a href="${p}jugadores/index.html">Rankings</a>
+          <a href="${p}rankings.html">Rankings</a>
+          <a href="${p}jugadores/index.html">Jugadores en español</a>
           <a href="${p}race.html">Race a Turín</a>
           <a href="${p}resultados.html">Resultados</a>
           <a href="${p}calendario-2027.html">Calendario</a>
@@ -169,11 +183,12 @@ function chrome(depth) {
           <a href="${p}aviso-legal.html">Aviso legal</a>
           <a href="${p}privacidad.html">Privacidad</a>
           <a href="${p}cookies.html">Cookies</a>
+          <a href="${p}creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="${p}aviso-legal.html">Aviso legal</a> · <a href="${p}privacidad.html">Privacidad</a> · <a href="${p}cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="${p}aviso-legal.html">Aviso legal</a> · <a href="${p}privacidad.html">Privacidad</a> · <a href="${p}cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
@@ -216,7 +231,11 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
   <meta name="twitter:image" content="${esc(ogImage)}">
-  <link rel="stylesheet" href="${p}styles.css">
+  ${CRITICAL_CSS}
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="${p}styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="${p}styles.css"></noscript>
 ${ld}
 </head>
 <body>
@@ -228,11 +247,33 @@ ${footer}
 `;
 }
 
-function tourBadge(article) {
+function tourOf(article) {
   const tags = Array.isArray(article.tags) ? article.tags : [];
-  const tour = tags.includes('WTA') ? 'WTA' : tags.includes('ATP') ? 'ATP' : '';
+  if (tags.includes('WTA')) return 'WTA';
+  if (tags.includes('ATP')) return 'ATP';
+  return '';
+}
+
+function tourBadge(article) {
+  const tour = tourOf(article);
   if (!tour) return '';
   return `<span class="tour-badge">${tour}</span> `;
+}
+
+function articleTopic(article) {
+  const tour = tourOf(article);
+  if (article.tournament && article.tournament !== tour) return esc(article.tournament);
+  const tags = Array.isArray(article.tags) ? article.tags : [];
+  if (tags.includes('Race a Turín')) return 'Race a Turín';
+  return '';
+}
+
+function filedIso(article, field) {
+  const day = String(article[field] || '').slice(0, 10);
+  const late = article.slug === 'jodar-noveno-en-la-race-a-turin-tras-shanghai'
+    || article.slug === 'final-de-wuhan-chwalinska-y-kartal';
+  const time = late ? '19:06:17' : '16:22:52';
+  return `${day}T${time}+02:00`;
 }
 
 function newsCards(articles, hrefFor, assetPrefix = '') {
@@ -241,7 +282,7 @@ function newsCards(articles, hrefFor, assetPrefix = '') {
   }
   return articles.map((article) => `        <article class="news-card">
           <a class="news-card-media" href="${esc(hrefFor(article))}" tabindex="-1" aria-hidden="true"><img src="${assetPrefix}og/${esc(article.slug)}.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
-          <div class="news-meta">${tourBadge(article)}Por el equipo de AceArena · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
+          <div class="news-meta">${tourBadge(article)}${BYLINE} · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
           <h3><a href="${esc(hrefFor(article))}">${esc(article.title)}</a></h3>
           <p>${esc(article.summary)}</p>
         </article>`).join('\n');
@@ -311,8 +352,8 @@ function articleJsonLd(article) {
     '@type': 'NewsArticle',
     headline: article.title,
     description: article.summary,
-    datePublished: article.date,
-    dateModified: article.updated,
+    datePublished: filedIso(article, 'date'),
+    dateModified: filedIso(article, 'updated'),
     inLanguage: 'es',
     articleBody: article.body.join('\n\n'),
     keywords: article.tags.join(', '),
@@ -338,6 +379,22 @@ function articleJsonLd(article) {
   };
 }
 
+function articleLinks(article) {
+  const links = [];
+  if (article.slug === 'jodar-noveno-en-la-race-a-turin-tras-shanghai' || article.slug === 'davidovich-fokina-gana-el-masters-de-shanghai') {
+    links.push('<a href="../race.html">Race a Turín</a>');
+    links.push('<a href="../jugadores/rafael-jodar.html">Rafael Jódar</a>');
+    links.push('<a href="../jugadores/alejandro-davidovich-fokina.html">Alejandro Davidovich Fokina</a>');
+  }
+  if (article.slug === 'davidovich-fokina-gana-el-masters-de-shanghai') {
+    links.push('<a href="jodar-noveno-en-la-race-a-turin-tras-shanghai.html">Jódar en la Race</a>');
+  }
+  if (article.slug === 'jodar-noveno-en-la-race-a-turin-tras-shanghai') {
+    links.push('<a href="davidovich-fokina-gana-el-masters-de-shanghai.html">La final de Shanghái</a>');
+  }
+  return links.length ? ` · ${links.join(' · ')}` : '';
+}
+
 function articlePage(article) {
   const url = `${SITE}/noticias/${article.slug}.html`;
   const paragraphs = article.body.map((paragraph) => `        <p>${esc(paragraph)}</p>`).join('\n');
@@ -355,11 +412,11 @@ ${briefItems}
 ` : '';
   const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta">${tourBadge(article)}${esc(article.tournament)}</p>
+      <p class="news-meta">${tourBadge(article)}${articleTopic(article)}</p>
       <h1>${esc(article.title)}</h1>
-      <img class="article-hero" src="../og/${esc(article.slug)}.png" alt="${esc(`Tarjeta de la noticia: ${article.title}`)}" width="1200" height="630">
-      <p class="article-byline">Por el equipo de AceArena</p>
-      <p class="article-dates">Publicado el <time datetime="${esc(article.date)}">${esc(formatDay(article.date))}</time>. Actualizado el <time datetime="${esc(article.updated)}">${esc(formatDay(article.updated))}</time>.</p>
+      <img class="article-hero" src="../art/${esc(article.slug)}.webp" srcset="../art/${esc(article.slug)}-800.webp 800w, ../art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="${esc(article.score ? `Marcador de ${article.tournament}: ${article.score}` : article.tournament)}" width="1200" height="630" fetchpriority="high">
+      <p class="article-byline">${BYLINE}</p>
+      <p class="article-dates">Publicado el <time datetime="${esc(filedIso(article, 'date'))}">${esc(formatDay(article.date))}</time>. Actualizado el <time datetime="${esc(filedIso(article, 'updated'))}">${esc(formatDay(article.updated))}</time>.</p>
       <p class="article-kicker">${esc(article.players.join(' · '))}</p>
       <p class="article-summary">${esc(article.summary)}</p>
 ${brief}      <div class="article-body">
@@ -374,7 +431,7 @@ ${tags}
 ${sources}
         </ol>
       </section>
-      <p class="results-more"><a href="index.html">Todas las noticias</a> · <a href="../resultados.html">Resultados</a></p>
+      <p class="results-more"><a href="index.html">Todas las noticias</a> · <a href="../resultados.html">Resultados</a>${articleLinks(article)}</p>
     </article>
 ${newsletterBlock(1)}
   </main>`;
@@ -469,6 +526,15 @@ function resultsPage(matches, updated) {
         <p>Marcadores con torneo, ronda, fecha y fuente. Actualizado el ${esc(formatStamp(updated))}.</p>
       </div>
       ${empty}
+      <div class="results-cards">
+${matches.map((match) => `        <article class="result-card">
+          <p class="news-meta"><time datetime="${esc(match.date)}">${esc(formatDay(match.date))}</time> · ${esc(match.tournament)} · ${esc(match.round)}</p>
+          <p><strong>${esc(match.winner)}</strong></p>
+          <p>${esc(match.loser)}</p>
+          <p class="result-score">${esc(match.score)}</p>
+          <p><a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a></p>
+        </article>`).join('\n')}
+      </div>
       <div class="results-table-wrap">
         <table class="results-table">
           <thead>
@@ -583,7 +649,8 @@ function rss(articles) {
       <title>${xml(article.title)}</title>
       <link>${xml(link)}</link>
       <guid isPermaLink="true">${xml(link)}</guid>
-      <pubDate>${xml(new Date(`${article.date}T00:00:00Z`).toUTCString())}</pubDate>
+      <pubDate>${xml(new Date(filedIso(article, 'date')).toUTCString())}</pubDate>
+      <author>hola@acearena.io (${BYLINE})</author>
       <description>${xml(article.summary)}</description>
     </item>`;
   }).join('\n');
@@ -594,7 +661,7 @@ function rss(articles) {
     <link>${SITE}/noticias/</link>
     <description>Noticias de tenis publicadas por AceArena, con fuente en cada pieza.</description>
     <language>es</language>
-    <lastBuildDate>${xml(new Date(`${newest}T00:00:00Z`).toUTCString())}</lastBuildDate>
+    <lastBuildDate>${xml(new Date(filedIso({ slug: '', date: newest, updated: newest }, 'updated')).toUTCString())}</lastBuildDate>
 ${items}
   </channel>
 </rss>
@@ -652,13 +719,23 @@ function todayCard(today) {
         </div>`;
 }
 
+function spotlightBlock(week, prefix) {
+  if (!Array.isArray(week.spotlight) || week.spotlight.length === 0) return '';
+  const items = week.spotlight.map((item) => `          <li><a href="${prefix}${esc(item.href)}">${esc(item.name)}</a>. ${esc(item.text)} <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(item.sourceName)}</a>.</li>`).join('\n');
+  return `      <h2>Españoles y latinoamericanos esta semana</h2>
+      <ul>
+${items}
+      </ul>`;
+}
+
 function weekHome(week) {
   const cards = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
-  return `<p class="section-intro">${esc(week.range)}. ${esc(week.hoursNote)}</p>
+  return `<p class="section-intro">${esc(week.hoursNote)}</p>
         <div class="card-grid">
 ${cards}
         </div>
-        <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a></p>`;
+${spotlightBlock(week, '')}
+        <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a> · <a href="rankings.html">Rankings</a></p>`;
 }
 
 function weekPage(week) {
@@ -672,11 +749,16 @@ function weekPage(week) {
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Qué ver esta semana</h1>
-        <p>${esc(week.range)}. ${esc(week.hoursNote)} Actualizado el ${esc(longDay(week.updated))}.</p>
+        <figure class="photo-figure">
+          <img src="photos/pista-tierra.webp" srcset="photos/pista-tierra-800.webp 800w, photos/pista-tierra.webp 1200w" sizes="(max-width: 800px) 100vw, 720px" alt="Pista de tierra vacía, vista desde el fondo." width="1200" height="640">
+          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
+        <p>${esc(week.hoursNote)} Actualizado el ${esc(longDay(week.updated))}.</p>
       </div>
       <div class="card-grid">
 ${current}
       </div>
+${spotlightBlock(week, '')}
       <h2>Después</h2>
       <div class="card-grid">
 ${later}
@@ -685,7 +767,7 @@ ${later}
   </main>`;
   return page({
     title: 'Qué ver esta semana | AceArena',
-    description: `ATP y WTA del ${week.range}: sede, superficie y enlace a la ficha oficial. Sin horarios que la fuente no publique.`,
+    description: `ATP y WTA del ${week.range}: sede, superficie y quién juega, con la ficha oficial de cada torneo.`,
     canonical: url,
     depth: 0,
     jsonLd: [
@@ -750,6 +832,8 @@ function racePage(race) {
         <p>Top 10 consultado el ${esc(longDay(race.asOf))}. Fuente: <a href="${esc(race.source.url)}" target="_blank" rel="noopener noreferrer">${esc(race.source.name)}</a>.</p>
       </div>
       <p>${esc(race.context)}</p>
+      <p><a href="noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html">Jódar, noveno en la Race a Turín tras Shanghái</a>.</p>
+      <p>Cómo se clasifica: los 8 primeros de la Race al final de la temporada juegan las Nitto ATP Finals de Turín. <a href="aprende/como-funciona-el-ranking-atp.html">Cómo funciona el ranking ATP</a>.</p>
       <div class="results-table-wrap">
         <table class="rank-table">
           <caption>${esc(race.name)} · ${esc(longDay(race.asOf))}</caption>
@@ -765,7 +849,7 @@ ${rows}
           </tbody>
         </table>
       </div>
-      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas, a 12 de octubre de 2026, sigue en la <a href="index.html#rankings">portada</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
+      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas está en <a href="rankings.html">Rankings</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
     </div>
   </main>`;
   return page({
@@ -872,7 +956,7 @@ function editionLabel(iso, today) {
   return `${long} · ${tag}`;
 }
 
-function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc, week, race) {
+function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc, week, race, rankings) {
   const lines = articles.slice(0, LLMS_LATEST).map((article) => {
     const title = article.title.replace(/[\[\]]/g, '');
     const summary = article.summary.replace(/\s+/g, ' ').trim();
@@ -904,6 +988,12 @@ ${lines.join('\n')}
 
 - [${race.name}](${SITE}/race.html): top 10 consultado el ${race.asOf}. ${race.source.url}
 - Datos de la Race: ${SITE}/data/race.json
+- [${rankings.wtaRace.name}](${SITE}/rankings.html): top 10 a ${rankings.wtaRace.asOf}. ${rankings.wtaRace.source.url}
+
+## Rankings
+
+- [Rankings ATP y WTA](${SITE}/rankings.html): top 20 de cada circuito a ${rankings.asOf}, más la Race de la WTA.
+- Datos de rankings: ${SITE}/data/rankings.json
 
 ## Jugadores
 
@@ -924,6 +1014,221 @@ ${guideLines.join('\n')}
 - [Portada](${SITE}/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
 - [Sobre AceArena](${SITE}/sobre.html): quiénes somos, cómo trabajamos, correcciones y contenido patrocinado.
 - [Agencias](${SITE}/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
+- [Créditos de imagen](${SITE}/creditos.html): fotos con licencia y gráficos propios.
+- [Sobre AceArena](${SITE}/sobre.html): quiénes somos, cómo trabajamos y cómo corregimos.
+`;
+}
+
+function rankRows(rows, links) {
+  return rows.map((row) => {
+    const href = links[row.player];
+    const name = href ? `<a href="${esc(href)}">${esc(row.player)}</a>` : esc(row.player);
+    return `            <tr>
+              <td>${esc(row.position)}</td>
+              <td>${name}</td>
+              <td>${esc(row.points)}</td>
+            </tr>`;
+  }).join('\n');
+}
+
+function rankTable(caption, rows, links) {
+  return `      <div class="results-table-wrap">
+        <table class="rank-table">
+          <caption>${esc(caption)}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Puesto</th>
+              <th scope="col">Jugador</th>
+              <th scope="col">Puntos</th>
+            </tr>
+          </thead>
+          <tbody>
+${rankRows(rows, links)}
+          </tbody>
+        </table>
+      </div>`;
+}
+
+function rankingsPage(rankings, playersDoc) {
+  const url = `${SITE}/rankings.html`;
+  const links = {};
+  for (const player of playersDoc.players) links[player.name] = `jugadores/${player.slug}.html`;
+  const main = `  <main class="section page-section" id="contenido">
+    <div class="container">
+      <p class="news-meta"><a href="index.html">Inicio</a> · Rankings</p>
+      <div class="section-header">
+        <span class="section-tag">Rankings</span>
+        <h1>Rankings ATP y WTA</h1>
+        <p>Top 20 del ranking oficial a ${esc(longDay(rankings.asOf))}. <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores en español</a>.</p>
+      </div>
+      <h2>${esc(rankings.atp.name)}</h2>
+      <p>Fuente: <a href="${esc(rankings.atp.source.url)}" target="_blank" rel="noopener noreferrer">${esc(rankings.atp.source.name)}</a>.</p>
+${rankTable(`ATP · top 20 · ${longDay(rankings.asOf)}`, rankings.atp.rows, links)}
+      <h2>${esc(rankings.wta.name)}</h2>
+      <p>Fuente: <a href="${esc(rankings.wta.source.url)}" target="_blank" rel="noopener noreferrer">${esc(rankings.wta.source.name)}</a>.</p>
+${rankTable(`WTA · top 20 · ${longDay(rankings.asOf)}`, rankings.wta.rows, links)}
+      <h2>${esc(rankings.wtaRace.name)}</h2>
+      <p>Top 10 a ${esc(longDay(rankings.wtaRace.asOf))}. Fuente: <a href="${esc(rankings.wtaRace.source.url)}" target="_blank" rel="noopener noreferrer">${esc(rankings.wtaRace.source.name)}</a>.</p>
+${rankTable(`${rankings.wtaRace.name} · ${longDay(rankings.wtaRace.asOf)}`, rankings.wtaRace.rows, links)}
+    </div>
+  </main>`;
+  return page({
+    title: 'Rankings ATP y WTA | AceArena',
+    description: `Top 20 ATP y WTA a ${longDay(rankings.asOf)}, y top 10 de la Race a las WTA Finals, con la fuente oficial.`,
+    canonical: url,
+    depth: 0,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Rankings ATP y WTA',
+        url,
+        inLanguage: 'es',
+        dateModified: rankings.updated,
+        isPartOf: { '@type': 'WebSite', name: 'AceArena', url: `${SITE}/` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Rankings', item: url },
+        ],
+      },
+    ],
+    main,
+  });
+}
+
+function creditsPage(credits) {
+  const url = `${SITE}/creditos.html`;
+  const items = credits.items.map((item) => {
+    const file = item.src ? `<p><a href="${esc(item.src)}">${esc(item.src)}</a></p>` : '';
+    const license = item.licenseUrl
+      ? `<a href="${esc(item.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(item.license)}</a>`
+      : esc(item.license);
+    const source = item.sourceUrl
+      ? `<a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(item.sourceName)}</a>`
+      : esc(item.sourceName);
+    return `        <article class="card">
+          <h2>${esc(item.title)}</h2>
+          ${file}
+          <p>Autor: ${esc(item.author)}. Licencia: ${license}. Fuente: ${source}.</p>
+          <p>Dónde aparece: ${esc(item.pages.join(', '))}.</p>
+        </article>`;
+  }).join('\n');
+  const main = `  <main class="section page-section" id="contenido">
+    <div class="container">
+      <p class="news-meta"><a href="index.html">Inicio</a> · Créditos</p>
+      <div class="section-header">
+        <span class="section-tag">Imágenes</span>
+        <h1>Créditos</h1>
+        <p>Fotografías con licencia de uso comercial y gráficos propios de AceArena. Actualizado el ${esc(longDay(credits.updated))}.</p>
+      </div>
+      <figure class="photo-figure">
+        <img src="photos/pelota.webp" srcset="photos/pelota-800.webp 800w, photos/pelota.webp 1200w" sizes="(max-width: 800px) 100vw, 480px" alt="Pelota de tenis amarilla sobre fondo neutro." width="1200" height="800">
+        <figcaption>Foto: Christian VisualBeo Horvat, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+      </figure>
+      <div class="card-grid">
+${items}
+      </div>
+    </div>
+  </main>`;
+  return page({
+    title: 'Créditos de imagen | AceArena',
+    description: 'Fotografías con licencia y gráficos propios que usa AceArena, con autor, licencia y enlace.',
+    canonical: url,
+    depth: 0,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Créditos de imagen',
+        url,
+        inLanguage: 'es',
+        dateModified: credits.updated,
+        isPartOf: { '@type': 'WebSite', name: 'AceArena', url: `${SITE}/` },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Créditos', item: url },
+        ],
+      },
+    ],
+    main,
+  });
+}
+
+function llmsFull(articles, playersDoc, guidesDoc, week, race, rankings) {
+  const news = articles.slice(0, LLMS_LATEST).map((article) => `- ${article.title}: ${SITE}/noticias/${article.slug}.html (${article.date.slice(0, 10)})`).join('\n');
+  const players = playersDoc.players.map((player) => `- ${player.name}: ${SITE}/jugadores/${player.slug}.html`).join('\n');
+  const guides = guidesDoc.guides.map((guide) => `- ${guide.title}: ${SITE}/aprende/${guide.slug}.html`).join('\n');
+  return `# AceArena
+
+Sitio: ${SITE}
+Idioma: español (es)
+Datos legales: ${SITE}/aviso-legal.html
+Contacto: hola@acearena.io
+Patrocinio: sponsors@acearena.io
+
+## Qué es
+
+AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
+
+## Secciones
+
+- Portada: ${SITE}/
+- Noticias: ${SITE}/noticias/
+- Resultados: ${SITE}/resultados.html
+- Esta semana: ${SITE}/semana.html
+- Race a Turín: ${SITE}/race.html
+- Rankings ATP y WTA: ${SITE}/rankings.html
+- Jugadores en español: ${SITE}/jugadores/
+- Calendario 2027: ${SITE}/calendario-2027.html
+- Aprende tenis: ${SITE}/aprende/
+- Sobre AceArena: ${SITE}/sobre.html
+- Patrocinio: ${SITE}/agencias.html
+- Créditos de imagen: ${SITE}/creditos.html
+- Resumen para sistemas: ${SITE}/llms.txt
+
+## Política editorial
+
+Cada noticia lleva fecha, firma (Redacción AceArena) y fuente. El autor en los datos estructurados es la organización AceArena. Los rankings indican la fecha de la lista oficial. Si un dato no está en la fuente, no se publica. Las correcciones se piden en hola@acearena.io. El contenido patrocinado va señalado como tal.
+
+## Precios de patrocinio
+
+Bronze desde 4.500 €/trimestre. Silver desde 12.000 €/trimestre. Gold desde 28.000 €/trimestre. Platinum a medida. Propuesta en menos de 48 horas laborables.
+
+## Calendario de referencia
+
+Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+
+## Esta semana
+
+${week.range}. ${week.hoursNote}
+
+## Rankings citados
+
+ATP y WTA a ${rankings.asOf}. Race ATP consultada el ${race.asOf}. Race WTA a ${rankings.wtaRace.asOf}.
+
+## Noticias
+
+${news}
+
+## Jugadores
+
+${players}
+
+## Guías
+
+${guides}
+
+## Cómo citar
+
+AceArena (${SITE}). Cita un resultado solo si la página enlaza la fuente.
 `;
 }
 
@@ -987,6 +1292,8 @@ async function build() {
   const indexnow = readJson('indexnow.json');
   const week = readJson('week.json');
   const race = readJson('race.json');
+  const rankings = readJson('rankings.json');
+  const credits = readJson('image-credits.json');
   const errors = [
     ...validatePayload(news, resultsDoc),
     ...validateEvergreen({ players: playersDoc, calendar: calendarDoc, guides: guidesDoc, indexnow }),
@@ -1021,6 +1328,8 @@ async function build() {
   writeHtml('index.html', home);
   writeHtml('semana.html', weekPage(week));
   writeHtml('race.html', racePage(race));
+  writeHtml('rankings.html', rankingsPage(rankings, playersDoc));
+  writeHtml('creditos.html', creditsPage(credits));
   writeHtml('sobre.html', aboutPage());
 
   writeHtml('noticias/index.html', newsIndex(articles));
@@ -1105,7 +1414,7 @@ async function build() {
       <p class="hero-cta">
         <a class="btn btn-primary" href="index.html">Ir a la portada</a>
         <a class="btn btn-outline" href="noticias/index.html">Últimas noticias</a>
-        <a class="btn btn-outline" href="jugadores/index.html">Rankings</a>
+        <a class="btn btn-outline" href="rankings.html">Rankings</a>
       </p>
     </article>
   </main>`,
@@ -1142,18 +1451,17 @@ async function build() {
   copyFileSync(join(root, 'data', 'guides.json'), join(publicDir, 'data', 'guides.json'));
   copyFileSync(join(root, 'data', 'week.json'), join(publicDir, 'data', 'week.json'));
   copyFileSync(join(root, 'data', 'race.json'), join(publicDir, 'data', 'race.json'));
+  copyFileSync(join(root, 'data', 'rankings.json'), join(publicDir, 'data', 'rankings.json'));
+  copyFileSync(join(root, 'data', 'image-credits.json'), join(publicDir, 'data', 'image-credits.json'));
   writeText(`${indexnow.key}.txt`, `${indexnow.key}\n`);
-
-  const llmsFull = readFileSync(join(publicDir, 'llms-full.txt'), 'utf8');
-  if (llmsFull.includes('18–31')) {
-    throw new Error('public/llms-full.txt sigue con el tramo antiguo del Australian Open');
-  }
 
   const urls = [
     { loc: `${SITE}/`, lastmod: contentDay },
     { loc: `${SITE}/sobre.html`, lastmod: contentDay },
     { loc: `${SITE}/semana.html`, lastmod: week.updated },
     { loc: `${SITE}/race.html`, lastmod: race.updated },
+    { loc: `${SITE}/rankings.html`, lastmod: rankings.updated },
+    { loc: `${SITE}/creditos.html`, lastmod: credits.updated },
     { loc: `${SITE}/noticias/`, lastmod: contentDay },
     { loc: `${SITE}/resultados.html`, lastmod: resultsDoc.updated.slice(0, 10) },
     { loc: `${SITE}/agencias.html`, lastmod: contentDay },
@@ -1178,7 +1486,9 @@ async function build() {
   ];
   writeText('sitemap.xml', sitemap(urls));
   writeText('feed.xml', rss(articles));
-  writeText('llms.txt', llmsTxt(articles, resultsDoc.updated, playersDoc, guidesDoc, week, race));
+  writeText('llms.txt', llmsTxt(articles, resultsDoc.updated, playersDoc, guidesDoc, week, race, rankings));
+  writeText('llms-full.txt', llmsFull(articles, playersDoc, guidesDoc, week, race, rankings));
+  await writeArticleHeaders(articles, { root, publicDir });
   await writeSocialCards(articles, { root, publicDir });
   stampPublishedAssets();
 

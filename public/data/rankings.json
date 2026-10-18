@@ -1,0 +1,82 @@
+{
+  "updated": "2026-10-18",
+  "asOf": "2026-10-12",
+  "atp": {
+    "name": "PIF ATP Rankings",
+    "source": {
+      "name": "ATP, ranking de individuales",
+      "url": "https://www.atptour.com/en/rankings/singles"
+    },
+    "rows": [
+      { "position": "1", "player": "Jannik Sinner", "points": "11.000" },
+      { "position": "2", "player": "Alexander Zverev", "points": "9.720" },
+      { "position": "3", "player": "Carlos Alcaraz", "points": "5.560" },
+      { "position": "4", "player": "Ben Shelton", "points": "4.680" },
+      { "position": "5", "player": "Félix Auger-Aliassime", "points": "3.890" },
+      { "position": "6", "player": "Daniil Medvedev", "points": "3.860" },
+      { "position": "7", "player": "Flavio Cobolli", "points": "3.680" },
+      { "position": "8", "player": "Novak Djokovic", "points": "3.480" },
+      { "position": "9", "player": "Alex de Minaur", "points": "3.430" },
+      { "position": "10", "player": "Frances Tiafoe", "points": "3.380" },
+      { "position": "11", "player": "Arthur Fils", "points": "3.275" },
+      { "position": "12", "player": "Taylor Fritz", "points": "2.880" },
+      { "position": "13", "player": "Rafael Jódar", "points": "2.659" },
+      { "position": "14", "player": "Valentin Vacherot", "points": "2.450" },
+      { "position": "15", "player": "Jakub Menšík", "points": "2.445" },
+      { "position": "16", "player": "Jiří Lehečka", "points": "2.440" },
+      { "position": "17", "player": "Learner Tien", "points": "2.395" },
+      { "position": "18", "player": "Tommy Paul", "points": "2.375" },
+      { "position": "19", "player": "Brandon Nakashima", "points": "2.335" },
+      { "position": "20", "player": "Francisco Cerúndolo", "points": "2.220" }
+    ]
+  },
+  "wta": {
+    "name": "WTA Singles Rankings",
+    "source": {
+      "name": "WTA, lista numérica del 12 de octubre de 2026",
+      "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+    },
+    "rows": [
+      { "position": "1", "player": "Elena Rybakina", "points": "9.696" },
+      { "position": "2", "player": "Aryna Sabalenka", "points": "7.550" },
+      { "position": "3", "player": "Mirra Andreeva", "points": "6.371" },
+      { "position": "4", "player": "Jessica Pegula", "points": "6.225" },
+      { "position": "5", "player": "Coco Gauff", "points": "5.974" },
+      { "position": "6", "player": "Elina Svitolina", "points": "5.024" },
+      { "position": "7", "player": "Karolína Muchová", "points": "4.773" },
+      { "position": "8", "player": "Linda Nosková", "points": "4.679" },
+      { "position": "9", "player": "Iga Świątek", "points": "3.999" },
+      { "position": "10", "player": "Marta Kostyuk", "points": "3.910" },
+      { "position": "11", "player": "Iva Jović", "points": "2.860" },
+      { "position": "12", "player": "Belinda Bencic", "points": "2.760" },
+      { "position": "13", "player": "Diana Shnaider", "points": "2.643" },
+      { "position": "14", "player": "Elise Mertens", "points": "2.540" },
+      { "position": "15", "player": "Victoria Mboko", "points": "2.502" },
+      { "position": "16", "player": "Sorana Cîrstea", "points": "2.424" },
+      { "position": "17", "player": "Amanda Anisimova", "points": "2.363" },
+      { "position": "18", "player": "Naomi Osaka", "points": "2.351" },
+      { "position": "19", "player": "Alexandra Eala", "points": "2.241" },
+      { "position": "20", "player": "Madison Keys", "points": "2.110" }
+    ]
+  },
+  "wtaRace": {
+    "name": "Race to the WTA Finals",
+    "asOf": "2026-10-12",
+    "source": {
+      "name": "WTA, Race de individuales a las Finals",
+      "url": "https://www.wtatennis.com/rankings/race-singles"
+    },
+    "rows": [
+      { "position": "1", "player": "Elena Rybakina", "points": "7.502" },
+      { "position": "2", "player": "Aryna Sabalenka", "points": "6.550" },
+      { "position": "3", "player": "Mirra Andreeva", "points": "6.371" },
+      { "position": "4", "player": "Jessica Pegula", "points": "5.825" },
+      { "position": "5", "player": "Coco Gauff", "points": "5.774" },
+      { "position": "6", "player": "Elina Svitolina", "points": "5.024" },
+      { "position": "7", "player": "Karolína Muchová", "points": "4.615" },
+      { "position": "8", "player": "Linda Nosková", "points": "4.354" },
+      { "position": "9", "player": "Marta Kostyuk", "points": "3.910" },
+      { "position": "10", "player": "Iga Świątek", "points": "3.799" }
+    ]
+  }
+}

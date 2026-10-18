@@ -13,12 +13,12 @@
         "Carlos Alcaraz nació el 5 de mayo de 2003 en El Palmar (Murcia). Mide 1,83 m."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos. La ficha de la ATP, actualizada el 26 de agosto de 2026, señala el drive como su golpe favorito y la tierra batida como su superficie favorita."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,83 m · Nacimiento: 5 de mayo de 2003, El Palmar (Murcia). Golpe favorito: drive. Superficie favorita: tierra batida."
       ],
       "highlights": [
         "En septiembre de 2022, con 19 años, fue el número 1 más joven y el primer adolescente que cerró un año en lo más alto. A finales de 2021 estaba en el puesto 32.",
         "Tras el Australian Open de 2026 completó el Career Grand Slam con 22 años, el hombre más joven en lograrlo, y fue el primero en ganar una final de ese torneo a Novak Djokovic, diez veces campeón allí.",
-        "La ficha lo cuenta como siete veces campeón de Grand Slam, con un balance de 7-1 en finales, y como uno de los cuatro hombres con más de un grande en cada una de las tres superficies.",
+        "Siete veces campeón de Grand Slam, con 7-1 en finales. Es uno de los cuatro hombres con más de un grande en cada una de las tres superficies.",
         "Ganó el US Open de 2022 ante Casper Ruud y llegó al número 1. Es el campeón masculino más joven de ese torneo desde Pete Sampras en 1990.",
         "En Roland Garros 2024 fue el hombre más joven en ganar un Grand Slam en las tres superficies. En 2025 defendió el título ante Jannik Sinner: remontó dos sets, salvó tres puntos de campeonato y la final duró 5 horas y 29 minutos, la más larga de Roland Garros.",
         "Ganó las finales de Wimbledon de 2023 y 2024 ante Djokovic. Fue el segundo hombre de la Era Open en ganar sus cuatro primeras finales de Grand Slam. Llegó a Wimbledon 2025 con 20 victorias seguidas y perdió allí su primera final de grande. Es el tercer español campeón masculino en Wimbledon, después de Rafael Nadal y Manuel Santana.",
@@ -46,7 +46,11 @@
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
         }
-      ]
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "El Palmar (Murcia)",
+      "favorites": "Golpe favorito: drive. Superficie favorita: tierra batida."
     },
     {
       "slug": "rafael-jodar",
@@ -60,19 +64,19 @@
         "Rafael Jódar nació el 17 de septiembre de 2006 en Madrid. Mide 1,91 m."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,91 m · Nacimiento: 17 de septiembre de 2006, Madrid."
       ],
       "highlights": [
-        "La biografía de la ATP, actualizada el 27 de agosto de 2026, dice que empezó el año como número 168, entró en el top 100 en marzo, en el top 50 en abril y en el top 20 en agosto, y que logró el puesto 11, su mejor ranking, ese mismo mes. Lo cuenta como el primer hombre nacido en 2006 que llegó a una semifinal de Masters 1000, en Montreal.",
-        "Ganó su primer título ATP en Marrakech 2026, en su primer torneo de ese nivel sobre tierra. Esa temporada llegó a semifinales en Barcelona y a cuartos en Madrid. La ATP lo agrupa con Rafael Nadal y Carlos Alcaraz como los únicos adolescentes españoles que han llegado a cuartos de ambos en una misma temporada.",
+        "Empezó 2026 como número 168. Entró en el top 100 en marzo, en el top 50 en abril y en el top 20 en agosto, cuando alcanzó el 11, su mejor puesto. Es el primer hombre nacido en 2006 que llegó a una semifinal de Masters 1000, en Montreal.",
+        "Ganó su primer título ATP en Marrakech 2026, en su primer torneo de ese nivel sobre tierra. Esa temporada llegó a semifinales en Barcelona y a cuartos en Madrid. Con Rafael Nadal y Carlos Alcaraz, es de los únicos adolescentes españoles que han llegado a cuartos de ambos en una misma temporada.",
         "Debutó en un cuadro principal de Grand Slam en el Australian Open 2026, como clasificado, y ganó a Rei Sakamoto en primera ronda. En Roland Garros 2026 entró como cabeza de serie número 27 y alcanzó sus primeros cuartos de Grand Slam.",
-        "El 18 de octubre de 2026 perdió la final de Shanghái con Alejandro Davidovich Fokina por 1-6, 7-6(5) y 6-4. En semifinales había eliminado a Daniil Medvedev por 6-3 y 6-4. La ATP lo describió, al llegar a esa final, como el finalista más joven en la historia del torneo de Shanghái."
+        "El 18 de octubre de 2026 perdió la final de Shanghái con Alejandro Davidovich Fokina por 1-6, 7-6(5) y 6-4. En semifinales había eliminado a Daniil Medvedev por 6-3 y 6-4. Al llegar a esa final era el finalista más joven en la historia del torneo de Shanghái."
       ],
       "ranking": {
         "position": "13",
         "points": "2.659",
         "asOf": "2026-10-12",
-        "note": "Ese puesto es el de la lista del 12 de octubre de 2026. El 11 es el mejor ranking que la ATP sitúa en agosto de 2026, no el de esta lista."
+        "note": "Ranking del 12 de octubre. Su mejor puesto es el 11 (agosto de 2026)."
       },
       "sources": [
         {
@@ -98,10 +102,23 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
+        }
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "Madrid",
+      "related": [
+        {
+          "href": "../noticias/davidovich-fokina-gana-el-masters-de-shanghai.html",
+          "label": "La final de Shanghái"
         },
         {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
+          "href": "../noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html",
+          "label": "Noveno en la Race a Turín"
+        },
+        {
+          "href": "../race.html",
+          "label": "Race a Turín"
         }
       ]
     },
@@ -117,7 +134,7 @@
         "Alejandro Davidovich Fokina nació el 5 de junio de 1999 en Málaga. Mide 1,83 m."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,83 m · Nacimiento: 5 de junio de 1999, Málaga."
       ],
       "highlights": [
         "El 18 de octubre de 2026 ganó el Rolex Shanghai Masters a Rafael Jódar por 1-6, 7-6(5) y 6-4, en 2 horas y 28 minutos. Es su primer Masters 1000 y su tercer título ATP, después de Mallorca y Chengdu.",
@@ -128,7 +145,7 @@
         "position": "26",
         "points": "1.930",
         "asOf": "2026-10-12",
-        "note": "Ese puesto es el de la lista publicada el 12 de octubre de 2026. La subida al 13 es la que anunció la ATP para el lunes siguiente."
+        "note": "Ranking del 12 de octubre. Tras ganar Shanghái, la ATP lo sitúa 13.º en la lista del lunes 19, el mejor puesto de su carrera."
       },
       "sources": [
         {
@@ -146,10 +163,28 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
+        }
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "Málaga",
+      "nextEvent": {
+        "name": "BNP Paribas Fortis European Open",
+        "text": "Próximo torneo: European Open de Bruselas, del 19 al 25 de octubre.",
+        "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
+      },
+      "related": [
+        {
+          "href": "../noticias/davidovich-fokina-gana-el-masters-de-shanghai.html",
+          "label": "Campeón en Shanghái"
         },
         {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
+          "href": "../noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html",
+          "label": "La Race tras Shanghái"
+        },
+        {
+          "href": "../race.html",
+          "label": "Race a Turín"
         }
       ]
     },
@@ -165,7 +200,7 @@
         "Jaume Munar nació el 5 de mayo de 1997 en Santanyí (Mallorca). Mide 1,83 m. Entrena en la Rafa Nadal Academy de Mallorca."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos. En la ficha actualizada el 27 de agosto de 2026, su superficie favorita es la tierra, su golpe favorito el saque y su torneo favorito el Australian Open."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,83 m · Nacimiento: 5 de mayo de 1997, Santanyí (Mallorca). Superficie favorita: tierra. Golpe favorito: saque. Torneo favorito: Australian Open."
       ],
       "highlights": [
         "Fue número 3 del mundo júnior. En 2018 llegó a semifinales de las Next Gen ATP Finals.",
@@ -173,7 +208,7 @@
         "Su primera final ATP fue Marbella 2021: ganó a Carlos Alcaraz y perdió con Pablo Carreño Busta.",
         "En 2025 sumó 31 victorias, su mejor marca, llegó a tercera ronda de Wimbledon tras ganar al 31, Alexander Bublik, y a cuarta ronda del US Open.",
         "Tiene victorias ante un número 3: Alexander Zverev en Marrakech 2019 y Casper Ruud en Tokio 2022.",
-        "En el circuito Challenger, la ficha le da un balance de 142-73."
+        "En el circuito Challenger su balance es 142-73."
       ],
       "ranking": {
         "position": "49",
@@ -196,12 +231,12 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
-        },
-        {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
         }
-      ]
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "Santanyí (Mallorca)",
+      "favorites": "Superficie favorita: tierra. Golpe favorito: saque. Torneo favorito: Australian Open."
     },
     {
       "slug": "roberto-bautista-agut",
@@ -215,7 +250,7 @@
         "Roberto Bautista Agut nació el 14 de abril de 1988 en Castellón de la Plana. Mide 1,83 m. Empezó a jugar a los 5 años."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,83 m · Nacimiento: 14 de abril de 1988, Castellón de la Plana."
       ],
       "highlights": [
         "En 2024 ganó su título ATP número 12, en Amberes, y sumó la victoria número 400.",
@@ -227,7 +262,7 @@
         "position": "243",
         "points": "233",
         "asOf": "2026-10-06",
-        "note": "La lista de entrada de la ATP, con fecha 6 de octubre de 2026, lo sitúa en el puesto 243 con 233 puntos. En la foto del top 120 del 12 de octubre de 2026 no aparece."
+        "note": "Lista de entrada de la ATP del 6 de octubre: puesto 243, con 233 puntos."
       },
       "sources": [
         {
@@ -245,12 +280,11 @@
         {
           "name": "ATP, lista de entrada a 6 de octubre de 2026",
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_alpha.pdf"
-        },
-        {
-          "name": "Tennis-X, top 120 del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
         }
-      ]
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "Castellón de la Plana"
     },
     {
       "slug": "paula-badosa",
@@ -264,7 +298,7 @@
         "Paula Badosa nació el 15 de noviembre de 1997 en Nueva York. Mide 1,80 m."
       ],
       "style": [
-        "Juega con la derecha. La WTA la describe como agresiva desde el fondo y señala el saque como su golpe favorito."
+        "Mano: diestra · Estatura: 1,80 m · Nacimiento: 15 de noviembre de 1997, Nueva York. Golpe favorito: saque."
       ],
       "highlights": [
         "Su mejor ranking es el 2, del 25 de abril de 2022.",
@@ -286,7 +320,10 @@
           "name": "WTA, lista numérica del 12 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
-      ]
+      ],
+      "hand": "diestra",
+      "birthPlace": "Nueva York",
+      "favorites": "Golpe favorito: saque. Juega agresiva desde el fondo."
     },
     {
       "slug": "jessica-bouzas-maneiro",
@@ -300,7 +337,7 @@
         "Jessica Bouzas Maneiro nació el 24 de septiembre de 2002 en Galicia. Mide 1,70 m."
       ],
       "style": [
-        "Juega con la derecha."
+        "Mano: diestra · Estatura: 1,70 m · Nacimiento: 24 de septiembre de 2002, Galicia."
       ],
       "highlights": [
         "Alcanzó el puesto 40 el 18 de agosto de 2025, su mejor ranking, y cerró 2025 en el puesto 42.",
@@ -322,7 +359,9 @@
           "name": "WTA, lista numérica del 12 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
-      ]
+      ],
+      "hand": "diestra",
+      "birthPlace": "Galicia"
     },
     {
       "slug": "francisco-cerundolo",
@@ -336,13 +375,12 @@
         "Francisco Cerúndolo nació el 13 de agosto de 1998 en Buenos Aires. Mide 1,85 m."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,85 m · Nacimiento: 13 de agosto de 1998, Buenos Aires."
       ],
       "highlights": [
-        "La biografía de la ATP, actualizada el 27 de agosto de 2026, sitúa su mejor ranking en el 18, en mayo de 2025, tras igualar su mejor victoria ante el número 2, Alexander Zverev, camino de las semifinales de Madrid.",
-        "Ganó su primer título ATP en Bastad 2022, después de vencer al número 5, Casper Ruud. En 2023 ganó Eastbourne: la ATP lo describe como el primer argentino campeón en hierba desde Javier Frana en 1995.",
-        "En 2026 ganó el Queen's Club, el primer título argentino en la historia de ese torneo, según la misma biografía. También ganó Buenos Aires por primera vez, sin ceder un set. En 2021 había llegado a su primera final ATP en esa ciudad, como número 137 salido de la clasificación.",
-        "La previa de la ATP del European Open de Bruselas, del 14 de octubre de 2026, lo incluye en el cuadro."
+        "Su mejor ranking es el 18, en mayo de 2025, tras igualar su mejor victoria ante el número 2, Alexander Zverev, camino de las semifinales de Madrid.",
+        "Ganó su primer título ATP en Bastad 2022, después de vencer al número 5, Casper Ruud. En 2023 ganó Eastbourne: el primer argentino campeón en hierba desde Javier Frana en 1995.",
+        "En 2026 ganó el Queen's Club, el primer título argentino en la historia de ese torneo. También ganó Buenos Aires por primera vez, sin ceder un set. En 2021 había llegado a su primera final ATP en esa ciudad, como número 137 salido de la clasificación."
       ],
       "ranking": {
         "position": "20",
@@ -369,12 +407,16 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
-        },
-        {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
         }
-      ]
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "Buenos Aires",
+      "nextEvent": {
+        "name": "BNP Paribas Fortis European Open",
+        "text": "Próximo torneo: European Open de Bruselas, del 19 al 25 de octubre.",
+        "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
+      }
     },
     {
       "slug": "tomas-martin-etcheverry",
@@ -388,11 +430,11 @@
         "Tomás Martín Etcheverry nació el 18 de julio de 1999 en La Plata. Mide 1,96 m."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,96 m · Nacimiento: 18 de julio de 1999, La Plata."
       ],
       "highlights": [
-        "La media guide de la ATP de 2026 sitúa su mejor ranking en el 27, el 12 de febrero de 2024, y no le cuenta títulos ATP.",
-        "Su mayor victoria en esa ficha es ante el número 14, Andrey Rublev, en Halle 2025.",
+        "Su mejor ranking es el 27, el 12 de febrero de 2024. No tiene títulos ATP.",
+        "Su mayor victoria es ante el número 14, Andrey Rublev, en Halle 2025.",
         "Cerró 2025 en el puesto 60, con un balance de 26-30 esa temporada."
       ],
       "ranking": {
@@ -412,12 +454,11 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
-        },
-        {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
         }
-      ]
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "La Plata"
     },
     {
       "slug": "sebastian-baez",
@@ -431,12 +472,12 @@
         "Sebastián Báez nació el 28 de diciembre de 2000 en Buenos Aires. Mide 1,70 m."
       ],
       "style": [
-        "Juega con la derecha y el revés a dos manos."
+        "Mano: diestro · Revés: a dos manos · Estatura: 1,70 m · Nacimiento: 28 de diciembre de 2000, Buenos Aires."
       ],
       "highlights": [
-        "La ficha de la ATP le cuenta 7 títulos. La biografía actualizada el 22 de mayo de 2026 dice que entró en el top 20 en marzo de 2024, tras ganar Río de Janeiro y Santiago seguidos, y que alcanzó el número 18 en junio de 2024.",
+        "Siete títulos ATP. Entró en el top 20 en marzo de 2024, tras ganar Río de Janeiro y Santiago seguidos, y alcanzó el número 18 en junio de 2024.",
         "En 2023 firmó una racha de 12 victorias, con títulos en Kitzbühel y Winston-Salem, y llegó por primera vez a tercera ronda de un Grand Slam, en el US Open. Su primer título ATP fue Estoril 2022.",
-        "Empezó 2026 con un balance de 7-0. La ATP dice que cortó una racha de 15 derrotas ante el top 10, con victorias ante el número 9, Taylor Fritz, en la United Cup, y ante el número 8, Ben Shelton, camino de la final de Auckland.",
+        "Empezó 2026 con un balance de 7-0. Cortó una racha de 15 derrotas ante el top 10, con victorias ante el número 9, Taylor Fritz, en la United Cup, y ante el número 8, Ben Shelton, camino de la final de Auckland.",
         "Fue número 1 júnior en marzo de 2018."
       ],
       "ranking": {
@@ -460,12 +501,11 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
-        },
-        {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
         }
-      ]
+      ],
+      "hand": "diestro",
+      "backhand": "a dos manos",
+      "birthPlace": "Buenos Aires"
     },
     {
       "slug": "alejandro-tabilo",
@@ -479,12 +519,12 @@
         "Alejandro Tabilo nació el 2 de junio de 1997 en Toronto y representa a Chile. Mide 1,88 m."
       ],
       "style": [
-        "Juega con la izquierda y el revés a dos manos."
+        "Mano: zurdo · Revés: a dos manos · Estatura: 1,88 m · Nacimiento: 2 de junio de 1997, Toronto."
       ],
       "highlights": [
-        "La biografía de la ATP, actualizada el 22 de mayo de 2026, dice que entró en el top 100 en febrero de 2022 y que llegó al número 19 en julio de 2024, tras vencer al número 1, Novak Djokovic, camino de sus primeras semifinales de Masters 1000, en Roma.",
-        "Ganó su primer título ATP en Auckland 2024, como clasificado. La ATP lo describe como el primer chileno que ganaba un título en pista dura desde Fernando González en 2007, y como el primer chileno que ganaba un título en hierba en la Era Open, en Mallorca 2024.",
-        "En 2025 ganó Chengdu tras salvar dos bolas de campeonato ante el número 9, Lorenzo Musetti. La ficha lo cuenta como su tercer título ATP."
+        "Entró en el top 100 en febrero de 2022 y llegó al número 19 en julio de 2024, tras vencer al número 1, Novak Djokovic, camino de sus primeras semifinales de Masters 1000, en Roma.",
+        "Ganó su primer título ATP en Auckland 2024, como clasificado. Es el primer chileno que ganaba un título en pista dura desde Fernando González en 2007, y el primer chileno que ganaba un título en hierba en la Era Open, en Mallorca 2024.",
+        "En 2025 ganó Chengdu tras salvar dos bolas de campeonato ante el número 9, Lorenzo Musetti. Es su tercer título ATP."
       ],
       "ranking": {
         "position": "30",
@@ -507,12 +547,11 @@
         {
           "name": "Ranking ATP",
           "url": "https://www.atptour.com/en/rankings/singles/"
-        },
-        {
-          "name": "Tennis-X, lista del 12 de octubre de 2026",
-          "url": "https://www.tennis-x.com/rankings.php"
         }
-      ]
+      ],
+      "hand": "zurdo",
+      "backhand": "a dos manos",
+      "birthPlace": "Toronto"
     },
     {
       "slug": "camila-osorio",
@@ -526,12 +565,12 @@
         "Camila Osorio nació el 22 de diciembre de 2001 en Cúcuta (Colombia). Mide 1,70 m."
       ],
       "style": [
-        "Juega con la derecha."
+        "Mano: diestra · Estatura: 1,70 m · Nacimiento: 22 de diciembre de 2001, Cúcuta."
       ],
       "highlights": [
-        "La ficha de la WTA sitúa su mejor ranking en el 33.",
-        "Le cuenta tres títulos de individuales del circuito: Bogotá 2021, Bogotá 2024 y Bogotá 2025. En 2026 ganó el WTA 125 de Manila.",
-        "En la lista numérica del 12 de octubre de 2026 es la única colombiana del top 100."
+        "Su mejor ranking es el 33.",
+        "Tres títulos de individuales del circuito: Bogotá 2021, Bogotá 2024 y Bogotá 2025. En 2026 ganó el WTA 125 de Manila.",
+        "En la lista del 12 de octubre de 2026 es la única colombiana del top 100."
       ],
       "ranking": {
         "position": "67",
@@ -547,7 +586,9 @@
           "name": "WTA, lista numérica del 12 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
-      ]
+      ],
+      "hand": "diestra",
+      "birthPlace": "Cúcuta"
     },
     {
       "slug": "renata-zarazua",
@@ -561,13 +602,13 @@
         "Renata Zarazúa nació el 30 de septiembre de 1997 en Ciudad de México. Mide 1,60 m."
       ],
       "style": [
-        "Juega con la derecha."
+        "Mano: diestra · Estatura: 1,60 m · Nacimiento: 30 de septiembre de 1997, Ciudad de México."
       ],
       "highlights": [
-        "La ficha de la WTA sitúa su mejor ranking en el 51, en noviembre de 2024, después de ganar el WTA 125 de Charleston.",
-        "Sus títulos WTA 125 son Austin 2025, Charleston 2024 y Montevideo 2023. La misma ficha le cuenta 0 títulos del circuito WTA.",
+        "Su mejor ranking es el 51, en noviembre de 2024, después de ganar el WTA 125 de Charleston.",
+        "Sus títulos WTA 125 son Austin 2025, Charleston 2024 y Montevideo 2023. En el circuito WTA suma 0 títulos.",
         "En 2025 llegó a semifinales en São Paulo y ganó a la número 6, Madison Keys, en el US Open: su primera victoria ante una top 10.",
-        "En la lista numérica del 12 de octubre de 2026 es la mexicana mejor clasificada del top 100."
+        "En la lista del 12 de octubre de 2026 es la mexicana mejor clasificada del top 100."
       ],
       "ranking": {
         "position": "85",
@@ -583,7 +624,9 @@
           "name": "WTA, lista numérica del 12 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
-      ]
+      ],
+      "hand": "diestra",
+      "birthPlace": "Ciudad de México"
     }
   ]
 }

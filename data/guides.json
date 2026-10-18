@@ -47,9 +47,18 @@
         }
       ],
       "sources": [
-        { "name": "ATP, preguntas sobre el ranking", "url": "https://www.atptour.com/en/rankings/rankings-faq" },
-        { "name": "ATP, capítulo 9 del reglamento 2026", "url": "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-9_pif-atp-rankings_31mar26.pdf" },
-        { "name": "ATP, el ranking explicado", "url": "https://www.atptour.com/en/news/tennis-explained-atp-" }
+        {
+          "name": "ATP, preguntas sobre el ranking",
+          "url": "https://www.atptour.com/en/rankings/rankings-faq"
+        },
+        {
+          "name": "ATP, capítulo 9 del reglamento 2026",
+          "url": "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-9_pif-atp-rankings_31mar26.pdf"
+        },
+        {
+          "name": "ATP, el ranking explicado",
+          "url": "https://www.atptour.com/en/news/tennis-explained-atp-"
+        }
       ]
     },
     {
@@ -93,7 +102,10 @@
         }
       ],
       "sources": [
-        { "name": "WTA, el ranking explicado", "url": "https://www.wtatennis.com/rankings-explained" }
+        {
+          "name": "WTA, el ranking explicado",
+          "url": "https://www.wtatennis.com/rankings-explained"
+        }
       ]
     },
     {
@@ -101,12 +113,12 @@
       "title": "Reglas del tenis básicas",
       "description": "Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.",
       "kicker": "Reglas",
-      "intro": "Estas son las reglas de marcador que la ITF publica para un partido estándar. El resumen no sustituye al reglamento: el texto completo está en los enlaces del final.",
+      "intro": "Cómo se cuenta un partido de tenis, en dos minutos. Basado en el reglamento de la ITF (enlace al final).",
       "sections": [
         {
           "heading": "El juego y la ventaja",
           "paragraphs": [
-            "Un juego se cuenta 0, 15, 30, 40 y juego. El 0 se llama love.",
+            "Un juego se cuenta 0, 15, 30, 40 y juego. Al 0 se le llama «nada» (en inglés, love).",
             "Si ambos llegan a 40 hay igualdad. El siguiente punto da la ventaja y hace falta ganar dos puntos seguidos para cerrar el juego."
           ]
         },
@@ -123,7 +135,7 @@
       "faqs": [
         {
           "q": "¿Cómo se puntúa un juego?",
-          "a": "Se cuenta 0, 15, 30, 40 y juego. El 0 se llama love."
+          "a": "Se cuenta 0, 15, 30, 40 y juego. Al 0 se le llama «nada» (en inglés, love)."
         },
         {
           "q": "¿Qué es la ventaja?",
@@ -143,10 +155,265 @@
         }
       ],
       "sources": [
-        { "name": "ITF, reglas del tenis 2026 en inglés", "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf" },
-        { "name": "ITF, reglas del tenis 2026 en español", "url": "https://www.itftennis.com/media/7223/2026-rules-of-tennis-spanish.pdf" },
-        { "name": "ITF, normas y reglamentos", "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/" },
-        { "name": "ITF, glosario", "url": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/" }
+        {
+          "name": "ITF, reglas del tenis 2026 en inglés",
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+        },
+        {
+          "name": "ITF, reglas del tenis 2026 en español",
+          "url": "https://www.itftennis.com/media/7223/2026-rules-of-tennis-spanish.pdf"
+        },
+        {
+          "name": "ITF, normas y reglamentos",
+          "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/"
+        },
+        {
+          "name": "ITF, glosario",
+          "url": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+        }
+      ]
+    },
+    {
+      "slug": "grand-slams",
+      "title": "Los cuatro Grand Slams",
+      "description": "Australian Open, Roland Garros, Wimbledon y US Open: superficie y fechas de 2027 con la fuente oficial.",
+      "kicker": "Grand Slams",
+      "intro": "Cuatro torneos, cuatro superficies. Aquí están las fechas de 2027 que ya publicó cada fuente.",
+      "sections": [
+        {
+          "heading": "Australian Open",
+          "paragraphs": [
+            "Melbourne Park, pista dura. En 2027 el torneo va del 11 al 31 de enero. El cuadro principal se juega del 17 al 31 de enero. Las finales de individuales son el 30 y el 31 de enero."
+          ]
+        },
+        {
+          "heading": "Roland Garros",
+          "paragraphs": [
+            "París, tierra batida. En 2027 va del 23 de mayo al 6 de junio."
+          ]
+        },
+        {
+          "heading": "Wimbledon",
+          "paragraphs": [
+            "Wimbledon, hierba. En 2027 va del 28 de junio al 11 de julio."
+          ]
+        },
+        {
+          "heading": "US Open",
+          "paragraphs": [
+            "Nueva York, pista dura. En 2027 empieza el 29 de agosto. El día de cierre sigue por confirmar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuál es el primer Grand Slam de 2027?",
+          "a": "El Australian Open, en Melbourne Park, del 11 al 31 de enero de 2027. El cuadro principal empieza el 17 de enero."
+        },
+        {
+          "q": "¿En qué superficie se juega cada uno?",
+          "a": "Australian Open y US Open en pista dura, Roland Garros en tierra batida y Wimbledon en hierba."
+        },
+        {
+          "q": "¿Cuándo cierra el US Open de 2027?",
+          "a": "Empieza el 29 de agosto de 2027. El día de cierre sigue por confirmar."
+        }
+      ],
+      "sources": [
+        {
+          "name": "Australian Open",
+          "url": "https://ausopen.com/articles/news/australian-open-2027-dates-announced"
+        },
+        {
+          "name": "WTA, Roland Garros 2027",
+          "url": "https://www.wtatennis.com/tournaments/903/roland-garros/2027"
+        },
+        {
+          "name": "WTA, Wimbledon 2027",
+          "url": "https://www.wtatennis.com/tournaments/904/wimbledon/2027"
+        },
+        {
+          "name": "ATP, calendario 2027",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf"
+        },
+        {
+          "name": "WTA, calendario 2027 a 1 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "glosario",
+      "title": "Glosario de tenis",
+      "description": "Trece palabras para seguir un partido y el circuito: del break al wild card, con la fuente de la ITF.",
+      "kicker": "Glosario",
+      "intro": "Trece palabras que vas a oír en cada retransmisión. El reglamento completo está en la guía de reglas.",
+      "terms": [
+        {
+          "name": "ATP / WTA",
+          "description": "La ATP organiza el circuito profesional masculino y la WTA el femenino. De ahí salen los rankings y el calendario."
+        },
+        {
+          "name": "Masters 1000",
+          "description": "El escalón justo por debajo de un Grand Slam en la ATP. El campeón suma 1.000 puntos y el cuadro reúne a casi todo el top."
+        },
+        {
+          "name": "ATP 500 y ATP 250",
+          "description": "Torneos del mismo circuito, con menos puntos: 500 o 250 para el campeón. Sirven para sumar en el ranking y para ver a jugadores que luego llegan a los grandes."
+        },
+        {
+          "name": "Challenger",
+          "description": "El circuito de paso hacia la ATP. Ahí se ganan los primeros puntos y se entra en los cuadros grandes."
+        },
+        {
+          "name": "Race",
+          "description": "La clasificación que solo cuenta los puntos de este año y decide las ATP Finals de Turín. En la WTA existe la Race a las Finals."
+        },
+        {
+          "name": "Ranking",
+          "description": "La lista oficial de puntos de las últimas 52 semanas. En AceArena el top 20 lleva la fecha de la lista y el enlace a ATP o WTA."
+        },
+        {
+          "name": "Break y hold",
+          "description": "Break es ganar el juego al saque del rival. Hold es conservar el tuyo. El partido suele girar ahí."
+        },
+        {
+          "name": "Tie-break",
+          "description": "El juego de desempate, normalmente a 7 puntos con diferencia de 2, cuando el set llega a 6-6."
+        },
+        {
+          "name": "Ventaja",
+          "description": "A 40-40 el siguiente punto da la ventaja. Hay que ganar dos puntos seguidos para llevarse el juego."
+        },
+        {
+          "name": "Qualy",
+          "description": "La fase de clasificación. Quien la supera entra en el cuadro principal."
+        },
+        {
+          "name": "Lucky loser",
+          "description": "Alguien que cae en la qualy y aun así entra en el cuadro principal porque se abre un hueco."
+        },
+        {
+          "name": "Wild card",
+          "description": "Una invitación directa al cuadro. Los torneos se la dan a un local, a una promesa o a un regreso."
+        },
+        {
+          "name": "Bagel",
+          "description": "Un set ganado por 6-0."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "El circuito",
+          "paragraphs": [
+            "ATP, WTA, Masters 1000, ATP 500, ATP 250, Challenger, Race y ranking ordenan la temporada."
+          ]
+        },
+        {
+          "heading": "El marcador",
+          "paragraphs": [
+            "Break, hold, tie-break, ventaja, qualy, lucky loser, wild card y bagel salen en cualquier partido."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es un break?",
+          "a": "Ganar el juego al saque del rival. Hold es conservar el propio."
+        },
+        {
+          "q": "¿Qué es la Race?",
+          "a": "La clasificación del año. En la ATP decide las ocho plazas de las Finals de Turín. La WTA publica la suya hacia las WTA Finals."
+        },
+        {
+          "q": "¿Qué es un bagel?",
+          "a": "Un set ganado por 6-0."
+        }
+      ],
+      "sources": [
+        {
+          "name": "ITF, glosario",
+          "url": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+        },
+        {
+          "name": "ATP, el ranking explicado",
+          "url": "https://www.atptour.com/en/news/tennis-explained-atp-"
+        },
+        {
+          "name": "WTA, el ranking explicado",
+          "url": "https://www.wtatennis.com/rankings-explained"
+        }
+      ]
+    },
+    {
+      "slug": "como-se-llega-al-circuito",
+      "title": "Cómo se llega al circuito",
+      "description": "Del circuito júnior de la ITF al ITF World Tennis Tour, al Challenger o al WTA 125, y de ahí a la ATP y la WTA.",
+      "kicker": "Circuito",
+      "intro": "El camino habitual hasta un cuadro ATP o WTA, con lo que cada circuito cuenta para el ranking.",
+      "sections": [
+        {
+          "heading": "Júnior",
+          "paragraphs": [
+            "El primer escalón internacional es el circuito júnior de la ITF, el World Tennis Tour Juniors. Ahí se juega antes de dar el salto a los torneos profesionales de entrada."
+          ]
+        },
+        {
+          "heading": "ITF World Tennis Tour",
+          "paragraphs": [
+            "El ITF World Tennis Tour es el circuito profesional de acceso. En el ranking ATP, los resultados ITF pueden entrar entre los seis mejores del resto, junto a la United Cup, Montecarlo, los ATP 500, los ATP 250 y los Challenger.",
+            "En el ranking WTA, los torneos ITF pueden entrar entre los siete mejores siguientes, con los WTA 1000 que no ocupan otra plaza, los 500, los 250 y los 125."
+          ]
+        },
+        {
+          "heading": "Challenger y WTA 125",
+          "paragraphs": [
+            "El ATP Challenger Tour es el circuito de paso hacia los cuadros ATP. Esos resultados también pueden contar entre los seis mejores del resto del ranking masculino.",
+            "En el circuito femenino, el escalón equivalente de acceso que la WTA incluye en esa cuenta es el WTA 125."
+          ]
+        },
+        {
+          "heading": "ATP y WTA",
+          "paragraphs": [
+            "Por encima quedan los torneos ATP y WTA: 250, 500, Masters 1000 o WTA 1000, y los cuatro Grand Slams. El ranking de 52 semanas, y no la edad, decide la entrada en la mayoría de los cuadros."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué hay entre el júnior y un cuadro ATP?",
+          "a": "El ITF World Tennis Tour y el ATP Challenger Tour. Sus resultados pueden contar en el ranking ATP entre los seis mejores del resto."
+        },
+        {
+          "q": "¿Y en el circuito femenino?",
+          "a": "El ITF World Tennis Tour y los WTA 125 pueden entrar en la cuenta del ranking WTA, dentro de los siete mejores siguientes."
+        },
+        {
+          "q": "¿Los Grand Slams cuentan siempre?",
+          "a": "Sí. En la ATP entran los 4 Grand Slams y 8 Masters 1000 obligatorios. En la WTA entran los 4 Grand Slams y los mejores WTA 1000 de la fórmula oficial."
+        }
+      ],
+      "sources": [
+        {
+          "name": "ITF, World Tennis Tour Juniors",
+          "url": "https://www.itftennis.com/en/itf-tours/world-tennis-tour-juniors/"
+        },
+        {
+          "name": "ATP, el ranking explicado",
+          "url": "https://www.atptour.com/en/news/tennis-explained-atp-"
+        },
+        {
+          "name": "ATP, preguntas sobre el ranking",
+          "url": "https://www.atptour.com/en/rankings/rankings-faq"
+        },
+        {
+          "name": "WTA, el ranking explicado",
+          "url": "https://www.wtatennis.com/rankings-explained"
+        },
+        {
+          "name": "WTA 125",
+          "url": "https://www.wtatennis.com/tournaments/wta-125"
+        }
       ]
     }
   ]

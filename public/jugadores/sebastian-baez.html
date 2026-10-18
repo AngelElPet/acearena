@@ -25,7 +25,21 @@
   <meta name="twitter:title" content="Sebastián Báez | AceArena">
   <meta name="twitter:description" content="Sebastián Báez, ATP. Número 53 · 1.044 puntos. Actualizado a 12 de octubre de 2026.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="../styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Sebastián Báez","url":"https://acearena.io/jugadores/sebastian-baez.html","sameAs":["https://www.atptour.com/en/players/-/B0BI/overview"],"nationality":"Argentina","birthDate":"2000-12-28","height":"170 cm","jobTitle":"tenista"}
   </script>
@@ -47,7 +61,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
-        <a href="../jugadores/index.html">Rankings</a>
+        <a href="../rankings.html">Rankings</a>
         <a href="../calendario-2027.html">Calendario</a>
         <a href="../aprende/index.html">Aprende tenis</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
@@ -68,13 +82,13 @@
       <p><a href="https://www.atptour.com/en/players/-/B0BI/overview" target="_blank" rel="noopener noreferrer">Ficha oficial ATP</a></p>
       <h2>Biografía</h2>
         <p>Sebastián Báez nació el 28 de diciembre de 2000 en Buenos Aires. Mide 1,70 m.</p>
-      <h2>Cómo juega</h2>
-        <p>Juega con la derecha y el revés a dos manos.</p>
+      <h2>Ficha técnica</h2>
+      <p class="sheet">Mano: diestro · Revés: a dos manos · Estatura: 1,70 m · Nacimiento: 28 de diciembre de 2000, Buenos Aires</p>
       <h2>Trayectoria</h2>
       <ul>
-          <li>La ficha de la ATP le cuenta 7 títulos. La biografía actualizada el 22 de mayo de 2026 dice que entró en el top 20 en marzo de 2024, tras ganar Río de Janeiro y Santiago seguidos, y que alcanzó el número 18 en junio de 2024.</li>
+          <li>Siete títulos ATP. Entró en el top 20 en marzo de 2024, tras ganar Río de Janeiro y Santiago seguidos, y alcanzó el número 18 en junio de 2024.</li>
           <li>En 2023 firmó una racha de 12 victorias, con títulos en Kitzbühel y Winston-Salem, y llegó por primera vez a tercera ronda de un Grand Slam, en el US Open. Su primer título ATP fue Estoril 2022.</li>
-          <li>Empezó 2026 con un balance de 7-0. La ATP dice que cortó una racha de 15 derrotas ante el top 10, con victorias ante el número 9, Taylor Fritz, en la United Cup, y ante el número 8, Ben Shelton, camino de la final de Auckland.</li>
+          <li>Empezó 2026 con un balance de 7-0. Cortó una racha de 15 derrotas ante el top 10, con victorias ante el número 9, Taylor Fritz, en la United Cup, y ante el número 8, Ben Shelton, camino de la final de Auckland.</li>
           <li>Fue número 1 júnior en marzo de 2018.</li>
       </ul>
       <section class="sources">
@@ -84,7 +98,6 @@
           <li><a href="https://www.atptour.com/en/players/-/B0BI/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Sebastián Báez</a></li>
           <li><a href="https://www.atptour.com/-/media/files/media-guide/2026/2026-atp-media-guide-player-bios-birthdays-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, media guide 2026 (nacimiento, estatura y títulos)</a></li>
           <li><a href="https://www.atptour.com/en/rankings/singles/" target="_blank" rel="noopener noreferrer">Ranking ATP</a></li>
-          <li><a href="https://www.tennis-x.com/rankings.php" target="_blank" rel="noopener noreferrer">Tennis-X, lista del 12 de octubre de 2026</a></li>
         </ol>
       </section>
     </article>
@@ -102,7 +115,8 @@
           <a href="../index.html#hoy">Hoy</a>
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
-          <a href="../jugadores/index.html">Rankings</a>
+          <a href="../rankings.html">Rankings</a>
+          <a href="../jugadores/index.html">Jugadores en español</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -122,11 +136,12 @@
           <a href="../aviso-legal.html">Aviso legal</a>
           <a href="../privacidad.html">Privacidad</a>
           <a href="../cookies.html">Cookies</a>
+          <a href="../creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

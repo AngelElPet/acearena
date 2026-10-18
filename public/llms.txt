@@ -21,13 +21,19 @@
 
 ## Esta semana
 
-- [Qué ver esta semana](https://acearena.io/semana.html): 19–25 de octubre de 2026. No hay horas en Madrid, Buenos Aires ni Ciudad de México: el orden de juego oficial de estos torneos no las publica en esas zonas.
+- [Qué ver esta semana](https://acearena.io/semana.html): 19–25 de octubre de 2026. Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.
 - Datos de la semana: https://acearena.io/data/week.json
 
 ## Race a Turín
 
 - [PIF ATP Live Race to Turin](https://acearena.io/race.html): top 10 consultado el 2026-10-18. https://www.atptour.com/en/rankings/singles-race-to-turin
 - Datos de la Race: https://acearena.io/data/race.json
+- [Race to the WTA Finals](https://acearena.io/rankings.html): top 10 a 2026-10-12. https://www.wtatennis.com/rankings/race-singles
+
+## Rankings
+
+- [Rankings ATP y WTA](https://acearena.io/rankings.html): top 20 de cada circuito a 2026-10-12, más la Race de la WTA.
+- Datos de rankings: https://acearena.io/data/rankings.json
 
 ## Jugadores
 
@@ -56,9 +62,14 @@
 - [Cómo funciona el ranking ATP](https://acearena.io/aprende/como-funciona-el-ranking-atp.html): Qué cuenta el PIF ATP Rankings, cada cuánto se publica, cuántos torneos entran y qué es la Race to Turin.
 - [Cómo funciona el ranking WTA](https://acearena.io/aprende/como-funciona-el-ranking-wta.html): Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.
 - [Reglas del tenis básicas](https://acearena.io/aprende/reglas-del-tenis-basicas.html): Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.
+- [Los cuatro Grand Slams](https://acearena.io/aprende/grand-slams.html): Australian Open, Roland Garros, Wimbledon y US Open: superficie y fechas de 2027 con la fuente oficial.
+- [Glosario de tenis](https://acearena.io/aprende/glosario.html): Trece palabras para seguir un partido y el circuito: del break al wild card, con la fuente de la ITF.
+- [Cómo se llega al circuito](https://acearena.io/aprende/como-se-llega-al-circuito.html): Del circuito júnior de la ITF al ITF World Tennis Tour, al Challenger o al WTA 125, y de ahí a la ATP y la WTA.
 
 ## El sitio
 
 - [Portada](https://acearena.io/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
 - [Sobre AceArena](https://acearena.io/sobre.html): quiénes somos, cómo trabajamos, correcciones y contenido patrocinado.
 - [Agencias](https://acearena.io/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
+- [Créditos de imagen](https://acearena.io/creditos.html): fotos con licencia y gráficos propios.
+- [Sobre AceArena](https://acearena.io/sobre.html): quiénes somos, cómo trabajamos y cómo corregimos.

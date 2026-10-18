@@ -98,7 +98,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, 
       <div class="section-header">
         <span class="section-tag">Rankings</span>
         <h1>Jugadores en español</h1>
-        <p>Fichas de España y de América Latina, con el ranking fechado y el enlace a la página oficial. El avatar es un dibujo con las iniciales: no es una foto. La portada sigue mostrando el top 5 de cada circuito. <a href="../race.html">Race a Turín</a>.</p>
+        <p>Fichas de tenistas de España y de América Latina, con su ranking y el enlace a la ficha oficial. <a href="../rankings.html">Top 20 ATP y WTA</a> · <a href="../race.html">Race a Turín</a>.</p>
       </div>
       <div class="card-grid">
 ${playerCards}
@@ -112,6 +112,22 @@ ${playerCards}
     const url = `${site}/jugadores/${player.slug}.html`;
     const ranking = `Número ${player.ranking.position} · ${player.ranking.points} puntos. Actualizado a ${longDate(player.ranking.asOf)}.`;
     const note = player.ranking.note ? `\n        <p>${esc(player.ranking.note)}</p>` : '';
+    const sheetParts = [
+      player.hand ? `Mano: ${player.hand}` : '',
+      player.backhand ? `Revés: ${player.backhand}` : '',
+      player.height ? `Estatura: ${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m` : '',
+      player.birthDate ? `Nacimiento: ${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}` : '',
+    ].filter(Boolean);
+    const sheet = sheetParts.length
+      ? `\n      <h2>Ficha técnica</h2>\n      <p class="sheet">${esc(sheetParts.join(' · '))}</p>`
+      : `\n      <h2>Ficha técnica</h2>\n${paragraphs(player.style, esc)}`;
+    const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
+    const nextEvent = player.nextEvent
+      ? `\n      <p><strong>${esc(player.nextEvent.text)}</strong> <a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a></p>`
+      : '';
+    const related = Array.isArray(player.related) && player.related.length
+      ? `\n      <p class="results-more">${player.related.map((item) => `<a href="${esc(item.href)}">${esc(item.label)}</a>`).join(' · ')}</p>`
+      : '';
     const highlights = player.highlights.map((item) => `          <li>${esc(item)}</li>`).join('\n');
     entries.push({
       file: `jugadores/${player.slug}.html`,
@@ -147,11 +163,9 @@ ${playerCards}
         <h1>${esc(player.name)}</h1>
       </div>
       <p class="article-summary">${esc(ranking)}</p>${note}
-      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>
+      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${nextEvent}
       <h2>Biografía</h2>
-${paragraphs(player.bio, esc)}
-      <h2>Cómo juega</h2>
-${paragraphs(player.style, esc)}
+${paragraphs(player.bio, esc)}${sheet}${favorites}
       <h2>Trayectoria</h2>
       <ul>
 ${highlights}
@@ -161,7 +175,7 @@ ${highlights}
         <ol>
 ${sourceList(player.sources, esc)}
         </ol>
-      </section>
+      </section>${related}
     </article>
   </main>`,
       },
@@ -206,7 +220,7 @@ ${cards}
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Calendario 2027</h1>
-        <p>Grand Slams, finales y torneos de mil puntos. Si el cierre no está publicado, la ficha dice fecha por confirmar. Cada fecha enlaza la página de donde sale.</p>
+        <p>Las grandes citas de 2027, con la fuente oficial de cada fecha.</p>
       </div>
 ${calendarBlocks}
     </div>
@@ -239,7 +253,11 @@ ${calendarBlocks}
       <div class="section-header">
         <span class="section-tag">Guías</span>
         <h1>Aprende tenis</h1>
-        <p>Tres explicaciones cortas para seguir el circuito: el ranking ATP, el ranking WTA y el marcador.</p>
+        <figure class="photo-figure">
+          <img src="../photos/raquetas.webp" srcset="../photos/raquetas-800.webp 640w, ../photos/raquetas.webp 960w" sizes="(max-width: 800px) 100vw, 720px" alt="Raquetas y pelotas sobre una pista de tierra." width="960" height="640">
+          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
+        <p>Guías cortas para seguir el circuito: rankings, marcador, Grand Slams, glosario y el camino hasta la ATP y la WTA.</p>
       </div>
       <div class="card-grid">
 ${guideCards}
@@ -254,17 +272,51 @@ ${guideCards}
     const diagrams = guide.slug === 'reglas-del-tenis-basicas' ? `      <div class="diagram-grid">
         <figure class="diagram">
           <img src="../assets/diagrams/court.svg" alt="Esquema de una pista: dos fondos, la red en el centro y los cuadros de saque." width="320" height="180">
-          <figcaption>Esquema de la pista. No es un partido real.</figcaption>
+          <figcaption>La pista, vista desde arriba.</figcaption>
         </figure>
         <figure class="diagram">
           <img src="../assets/diagrams/score.svg" alt="Esquema de un juego: 0, 15, 30, 40 y juego." width="360" height="120">
-          <figcaption>Esquema del marcador de un juego, el orden que explica esta guía.</figcaption>
+          <figcaption>Cómo avanza el marcador de un juego.</figcaption>
         </figure>
       </div>
 ` : '';
     const sections = guide.sections.map((section) => `      <h2>${esc(section.heading)}</h2>
 ${paragraphs(section.paragraphs, esc)}`).join('\n');
+    const terms = Array.isArray(guide.terms) ? `      <div class="faq-list">
+${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.name)}</h2><p>${esc(term.description)}</p></article>`).join('\n')}
+      </div>
+` : '';
     const faqs = guide.faqs.map((faq) => `        <article class="faq-item"><h3>${esc(faq.q)}</h3><p>${esc(faq.a)}</p></article>`).join('\n');
+    const jsonLd = [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: guide.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: { '@type': 'Answer', text: faq.a },
+        })),
+      },
+    ];
+    if (Array.isArray(guide.terms)) {
+      jsonLd.push({
+        '@context': 'https://schema.org',
+        '@type': 'DefinedTermSet',
+        name: guide.title,
+        url,
+        inLanguage: 'es',
+        hasDefinedTerm: guide.terms.map((term) => ({
+          '@type': 'DefinedTerm',
+          name: term.name,
+          description: term.description,
+        })),
+      });
+    }
+    jsonLd.push(breadcrumb([
+      { name: 'Inicio', url: `${site}/` },
+      { name: 'Aprende tenis', url: `${site}/aprende/` },
+      { name: guide.title, url },
+    ]));
     entries.push({
       file: `aprende/${guide.slug}.html`,
       lastmod: guidesDoc.updated,
@@ -273,29 +325,14 @@ ${paragraphs(section.paragraphs, esc)}`).join('\n');
         description: guide.description,
         canonical: url,
         depth: 1,
-        jsonLd: [
-          {
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: guide.faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.q,
-              acceptedAnswer: { '@type': 'Answer', text: faq.a },
-            })),
-          },
-          breadcrumb([
-            { name: 'Inicio', url: `${site}/` },
-            { name: 'Aprende tenis', url: `${site}/aprende/` },
-            { name: guide.title, url },
-          ]),
-        ],
+        jsonLd,
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Aprende tenis</a></p>
       <p class="kicker">${esc(guide.kicker)}</p>
       <h1>${esc(guide.title)}</h1>
       <p class="article-summary">${esc(guide.intro)}</p>
-${diagrams}${sections}
+${diagrams}${terms}${sections}
       <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
 ${faqs}

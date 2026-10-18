@@ -27,7 +27,10 @@
   <meta name="twitter:title" content="Publicidad en tenis para agencias | AceArena">
   <meta name="twitter:description" content="Patrocinio y publicidad en un medio de tenis en español. Precios públicos, propuesta en 48 h laborables e informe mensual con datos reales.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +61,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
-        <a href="jugadores/index.html">Rankings</a>
+        <a href="rankings.html">Rankings</a>
         <a href="#paquetes">Paquetes</a>
         <a href="#contacto" class="nav-quiet">Anúnciate</a>
       </nav>
@@ -68,9 +71,13 @@
     <section class="hero page-hero">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container">
-        <p class="kicker">Para agencias de medios, marketing y deporte</p>
-        <h1>Tenis en español <span>para tus clientes</span></h1>
-        <p class="lede">Precios públicos, propuesta en 48 h laborables y un informe con datos reales. Estamos en lanzamiento: las primeras agencias que nos traigan un cliente tendrán condiciones de fundador.</p>
+        <p class="kicker">Para marcas y agencias</p>
+        <h1>Tu marca, en el tenis <span>en español</span></h1>
+        <p class="lede">Precios públicos, propuesta en 48 horas laborables e informe mensual con datos medidos. Estamos en lanzamiento: en Gold y Platinum, la primera marca de cada sector se queda la categoría.</p>
+        <figure class="photo-figure hero-photo">
+          <img src="photos/pista-silla.webp" srcset="photos/pista-silla-800.webp 800w, photos/pista-silla.webp 1100w" sizes="(max-width: 800px) 100vw, 720px" alt="Pista de tenis vacía, con la silla del juez detrás de la red." width="1100" height="734">
+          <figcaption>Foto: Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contacto">Pedir propuesta</a>
           <a class="btn btn-ghost" href="media-kit-acearena.pdf">Descargar media kit</a>
@@ -133,8 +140,8 @@
     <section class="section section-alt" id="paquetes" aria-labelledby="packages-title">
       <div class="container">
         <p class="kicker">Patrocinio</p>
-        <h2 id="packages-title">Sé marca fundadora de AceArena</h2>
-        <p class="section-intro">AceArena está en lanzamiento, y eso es una oportunidad: las primeras marcas que nos acompañen tendrán exclusividad en su categoría, condiciones de fundador y un informe mensual con datos reales de Cloudflare Web Analytics desde el primer día. Precios públicos, sin letra pequeña.</p>
+        <h2 id="packages-title">Paquetes de patrocinio</h2>
+        <p class="section-intro">Precios públicos, sin letra pequeña. En Gold y Platinum, la primera marca de cada sector se queda la categoría. El informe mensual sale de Cloudflare Web Analytics desde el primer día.</p>
         <div class="package-grid">
           <article class="package">
             <p class="kicker">Bronze</p>
@@ -194,23 +201,68 @@
         <div class="mock-grid">
           <article class="mock">
             <p class="mock-label">Ejemplo</p>
-            <p class="kicker">Guía</p>
+            <div class="mock-bar">
+              <span class="mock-logo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c6ff00"/><text x="16" y="21" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">TM</text></svg> Tu marca</span>
+              <span class="kicker">Guía</span>
+            </div>
             <h3>Los cuatro grandes</h3>
             <p class="surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36"> Guía de Grand Slams presentada por <span class="mock-brand">Tu marca</span>.</p>
           </article>
           <article class="mock">
             <p class="mock-label">Ejemplo</p>
-            <p class="kicker">Resumen del lunes</p>
-            <h3>Lo importante de la semana</h3>
-            <p>Una línea de <span class="mock-brand">Tu marca</span> en el correo del lunes, junto al resumen del circuito.</p>
+            <div class="mock-mail">
+              <p class="kicker">Resumen del lunes</p>
+              <h3>Lo importante de la semana</h3>
+              <p>Una línea de <span class="mock-brand">Tu marca</span> en el correo, junto al resumen del circuito.</p>
+            </div>
           </article>
           <article class="mock">
             <p class="mock-label">Ejemplo</p>
-            <p class="kicker">Contenido patrocinado</p>
+            <p class="mock-sponsored">Patrocinado</p>
+            <div class="mock-logo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c6ff00"/><text x="16" y="21" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">TM</text></svg> Tu marca</div>
             <h3>Una pieza señalada como tal</h3>
-            <p>Patrocinado por <span class="mock-brand">Tu marca</span>. El aviso va en la propia pieza, no escondido.</p>
+            <p>El aviso «Patrocinado» va en la propia pieza, junto al logo de <span class="mock-brand">Tu marca</span>.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="medimos" aria-labelledby="measure-title">
+      <div class="container">
+        <p class="kicker">Informe</p>
+        <h2 id="measure-title">Qué medimos desde el primer día</h2>
+        <p class="section-intro">Cloudflare Web Analytics, sin cifras hasta que existan. El informe mensual incluye:</p>
+        <div class="card-grid">
+          <article class="card"><h3>Visitas a la pieza</h3><p>Cuánta gente abre la página donde está tu marca.</p></article>
+          <article class="card"><h3>Páginas vistas</h3><p>Las páginas del sitio que recorre esa visita.</p></article>
+          <article class="card"><h3>Clics hacia tu web</h3><p>Quién sigue el enlace hasta tu sitio.</p></article>
+          <article class="card"><h3>País</h3><p>España y Latinoamérica, por separado.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="momentos" aria-labelledby="moments-title">
+      <div class="container">
+        <p class="kicker">Calendario</p>
+        <h2 id="moments-title">Momentos para tu marca</h2>
+        <div class="card-grid">
+          <article class="card">
+            <p class="kicker">2–8 de noviembre de 2026</p>
+            <h3>Rolex Paris Masters</h3>
+            <p>El último Masters 1000 del año, bajo techo en París. Encaja una pieza patrocinada de esa semana.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">24–29 de noviembre de 2026</p>
+            <h3>Davis Cup Final 8</h3>
+            <p>Bolonia. España juega los cuartos ante Austria el 26; la final es el 29. Encaja la mención en el resumen del lunes.</p>
+          </article>
+          <article class="card">
+            <p class="kicker">11–31 de enero de 2027</p>
+            <h3>Australian Open</h3>
+            <p>Melbourne Park. El cuadro principal va del 17 al 31 de enero. Encaja la guía presentada por la marca.</p>
+          </article>
+        </div>
+        <p class="as-of">Fuentes: <a href="https://www.atptour.com/en/tournaments/-/352/overview">ATP, Rolex Paris Masters</a>, <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf">calendario ATP 2026</a>, <a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup</a> y <a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>.</p>
       </div>
     </section>
 
@@ -299,7 +351,7 @@
           <a href="index.html#hoy">Hoy</a>
           <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
-          <a href="jugadores/index.html">Rankings</a>
+          <a href="rankings.html">Rankings</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
@@ -320,15 +372,16 @@
           <a href="aviso-legal.html">Aviso legal</a>
           <a href="privacidad.html">Privacidad</a>
           <a href="cookies.html">Cookies</a>
+          <a href="creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
-    <p>¿Tu marca y el tenis? Hay plazas de marca fundadora.</p>
+    <p>¿Tu marca y el tenis? Precios públicos.</p>
     <a class="btn btn-primary btn-sm" href="#paquetes">Ver condiciones</a>
   </div>
   <script src="script.js" defer></script>
