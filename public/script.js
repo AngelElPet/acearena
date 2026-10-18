@@ -100,7 +100,7 @@
         showEmpty(
           box,
           "Ahora mismo no hay partidos en pista.",
-          "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Australian Open 2027, Melbourne, 18–31 de enero."
+          "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero."
         );
         return;
       }
@@ -112,7 +112,7 @@
       showEmpty(
         box,
         "Ahora mismo no hay partidos en pista.",
-        "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Australian Open 2027, Melbourne, 18–31 de enero."
+        "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero."
       );
     } finally {
       if (button) button.disabled = false;
