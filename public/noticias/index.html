@@ -44,9 +44,9 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
-        <a href="../index.html#rankings">Rankings</a>
-        <a href="../index.html#calendario">Calendario</a>
-        <a href="../index.html#guia">Aprende tenis</a>
+        <a href="../jugadores/index.html">Rankings</a>
+        <a href="../calendario-2027.html">Calendario</a>
+        <a href="../aprende/index.html">Aprende tenis</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -92,6 +92,35 @@
       </div>
       <p class="results-more"><a href="../resultados.html">Resultados</a> · <a href="/data/news.json">Datos JSON</a></p>
     </div>
+  <section class="section section-alt" id="newsletter" aria-labelledby="news-form-title">
+    <div class="container newsletter">
+      <div>
+        <p class="kicker">Cada lunes</p>
+        <h2 id="news-form-title">El resumen del lunes: lo importante de la semana en el tenis, en 3 minutos</h2>
+        <p class="section-intro">Resultados, rankings y la historia de la semana, en tu correo. Para darte de baja, escribe a hola@acearena.io.</p>
+      </div>
+      <form name="newsletter" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="honeypot" aria-hidden="true"><label>No rellenes este campo <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-fields">
+          <div class="form-group">
+            <label for="newsletter-email">Email</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="privacidad" value="acepto" required>
+            <span>He leído la <a href="../privacidad.html">política de privacidad</a> y acepto que AceArena use este email para enviarme el resumen del lunes.</span>
+          </label>
+          <button class="btn btn-primary" type="submit">Quiero el resumen</button>
+        </div>
+        <div class="form-thanks" hidden tabindex="-1" role="status">
+          <h3>¡Dentro!</h3>
+          <p>Te escribiremos con el resumen del lunes.</p>
+          <p class="form-thanks-fallback">Si esta página no confirma el envío, escríbenos a <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
   </main>
 
   <footer class="footer">
@@ -105,15 +134,15 @@
           <h2>El circuito</h2>
           <a href="../index.html#hoy">Hoy</a>
           <a href="../noticias/index.html">Noticias</a>
-          <a href="../index.html#rankings">Rankings</a>
+          <a href="../jugadores/index.html">Rankings</a>
           <a href="../resultados.html">Resultados</a>
-          <a href="../index.html#calendario">Calendario</a>
-          <a href="../index.html#guia">Aprende tenis</a>
+          <a href="../calendario-2027.html">Calendario</a>
+          <a href="../aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>AceArena</h2>
           <a href="../index.html#sobre">Sobre AceArena</a>
-          <a href="../index.html#newsletter">Briefing</a>
+          <a href="../index.html#newsletter">Resumen del lunes</a>
           <a href="../agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
           <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a>
@@ -132,8 +161,8 @@
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
-    <p>El tenis de la semana, en 3 minutos</p>
-    <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el briefing</a>
+    <p>El resumen del lunes, en 3 minutos</p>
+    <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>

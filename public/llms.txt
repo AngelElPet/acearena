@@ -17,6 +17,27 @@
 - Datos de noticias: https://acearena.io/data/news.json
 - Datos de resultados: https://acearena.io/data/results.json
 
+## Jugadores
+
+- [Jugadores españoles](https://acearena.io/jugadores/): fichas con ranking fechado y enlace a la ficha oficial.
+- [Carlos Alcaraz](https://acearena.io/jugadores/carlos-alcaraz.html): ATP, número 3 actualizado a 2026-10-12.
+- [Alejandro Davidovich Fokina](https://acearena.io/jugadores/alejandro-davidovich-fokina.html): ATP, número 26 actualizado a 2026-10-12.
+- [Jaume Munar](https://acearena.io/jugadores/jaume-munar.html): ATP, número 49 actualizado a 2026-10-12.
+- [Roberto Bautista Agut](https://acearena.io/jugadores/roberto-bautista-agut.html): ATP, número 243 actualizado a 2026-10-06.
+- [Paula Badosa](https://acearena.io/jugadores/paula-badosa.html): WTA, número 58 actualizado a 2026-10-12.
+- [Jessica Bouzas Maneiro](https://acearena.io/jugadores/jessica-bouzas-maneiro.html): WTA, número 99 actualizado a 2026-10-12.
+
+## Calendario
+
+- [Calendario 2027](https://acearena.io/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada. Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+
+## Aprende tenis
+
+- [Guías](https://acearena.io/aprende/): rankings ATP y WTA, y reglas básicas del marcador.
+- [Cómo funciona el ranking ATP](https://acearena.io/aprende/como-funciona-el-ranking-atp.html): Qué cuenta el PIF ATP Rankings, cada cuánto se publica, cuántos torneos entran y qué es la Race to Turin.
+- [Cómo funciona el ranking WTA](https://acearena.io/aprende/como-funciona-el-ranking-wta.html): Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.
+- [Reglas del tenis básicas](https://acearena.io/aprende/reglas-del-tenis-basicas.html): Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.
+
 ## El sitio
 
 - [Portada](https://acearena.io/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.

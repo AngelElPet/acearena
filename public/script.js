@@ -163,7 +163,7 @@
   var thanksCopy = document.getElementById("thanksCopy");
   if (thanksTitle && thanksCopy && /(?:^|[?&])origen=briefing(?:&|$)/.test(window.location.search)) {
     thanksTitle.textContent = "¡Dentro!";
-    thanksCopy.textContent = "Te escribiremos con la primera edición del briefing. Si quieres escribir antes, hola@acearena.io.";
+    thanksCopy.textContent = "Te escribiremos con el resumen del lunes. Para darte de baja, escribe a hola@acearena.io.";
   }
 
   var share = document.getElementById("sharePage");

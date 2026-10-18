@@ -1,0 +1,202 @@
+{
+  "updated": "2026-10-18",
+  "players": [
+    {
+      "slug": "carlos-alcaraz",
+      "name": "Carlos Alcaraz",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/carlos-alcaraz/a0e2/overview",
+      "birthDate": "2003-05-05",
+      "height": "183 cm",
+      "nationality": "España",
+      "bio": [
+        "Carlos Alcaraz nació el 5 de mayo de 2003 en El Palmar (Murcia). Mide 1,83 m."
+      ],
+      "style": [
+        "Juega con la derecha y el revés a dos manos. La ficha de la ATP, actualizada el 26 de agosto de 2026, señala el drive como su golpe favorito y la tierra batida como su superficie favorita."
+      ],
+      "highlights": [
+        "En septiembre de 2022, con 19 años, fue el número 1 más joven y el primer adolescente que cerró un año en lo más alto. A finales de 2021 estaba en el puesto 32.",
+        "Tras el Australian Open de 2026 completó el Career Grand Slam con 22 años, el hombre más joven en lograrlo, y fue el primero en ganar una final de ese torneo a Novak Djokovic, diez veces campeón allí.",
+        "La ficha lo cuenta como siete veces campeón de Grand Slam, con un balance de 7-1 en finales, y como uno de los cuatro hombres con más de un grande en cada una de las tres superficies.",
+        "Ganó el US Open de 2022 ante Casper Ruud y llegó al número 1. Es el campeón masculino más joven de ese torneo desde Pete Sampras en 1990.",
+        "En Roland Garros 2024 fue el hombre más joven en ganar un Grand Slam en las tres superficies. En 2025 defendió el título ante Jannik Sinner: remontó dos sets, salvó tres puntos de campeonato y la final duró 5 horas y 29 minutos, la más larga de Roland Garros.",
+        "Ganó las finales de Wimbledon de 2023 y 2024 ante Djokovic. Fue el segundo hombre de la Era Open en ganar sus cuatro primeras finales de Grand Slam. Llegó a Wimbledon 2025 con 20 victorias seguidas y perdió allí su primera final de grande. Es el tercer español campeón masculino en Wimbledon, después de Rafael Nadal y Manuel Santana.",
+        "En los Juegos de 2024 fue plata, tras perder con Djokovic, y el hombre más joven en una final olímpica de la Era Open."
+      ],
+      "ranking": {
+        "position": "3",
+        "points": "5.560",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        { "name": "ATP, ficha de Carlos Alcaraz", "url": "https://www.atptour.com/en/players/carlos-alcaraz/a0e2/overview" },
+        { "name": "ATP, biografía actualizada el 26 de agosto de 2026", "url": "https://www.atptour.com/en/players/-/a0e2/bio" },
+        { "name": "ATP, media guide 2025 (nacimiento, estatura y golpe)", "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf" },
+        { "name": "Ranking ATP", "url": "https://www.atptour.com/en/rankings/singles/" }
+      ]
+    },
+    {
+      "slug": "alejandro-davidovich-fokina",
+      "name": "Alejandro Davidovich Fokina",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/alejandro-/dh50/overview",
+      "birthDate": "1999-06-05",
+      "height": "183 cm",
+      "nationality": "España",
+      "bio": [
+        "Alejandro Davidovich Fokina nació el 5 de junio de 1999 en Málaga. Mide 1,83 m."
+      ],
+      "style": [
+        "Juega con la derecha y el revés a dos manos."
+      ],
+      "highlights": [
+        "El 18 de octubre de 2026 ganó el Rolex Shanghai Masters a Rafael Jódar por 1-6, 7-6(5) y 6-4, en 2 horas y 28 minutos. Es su primer Masters 1000 y su tercer título ATP, después de Mallorca y Chengdu.",
+        "En esa semana salvó un punto de partido ante Frances Tiafoe y remontó un set ante Hubert Hurkacz y ante Alexander Zverev.",
+        "La ATP dijo ese día que el lunes siguiente subiría 13 puestos, hasta el 13, el mejor de su carrera."
+      ],
+      "ranking": {
+        "position": "26",
+        "points": "1.930",
+        "asOf": "2026-10-12",
+        "note": "Ese puesto es el de la lista publicada el 12 de octubre de 2026. La subida al 13 es la que anunció la ATP para el lunes siguiente."
+      },
+      "sources": [
+        { "name": "ATP, ficha de Alejandro Davidovich Fokina", "url": "https://www.atptour.com/en/players/alejandro-/dh50/overview" },
+        { "name": "ATP, final de Shanghái 2026", "url": "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final" },
+        { "name": "ATP, media guide 2025 (nacimiento y estatura)", "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf" },
+        { "name": "Ranking ATP", "url": "https://www.atptour.com/en/rankings/singles/" },
+        { "name": "Tennis-X, lista del 12 de octubre de 2026", "url": "https://www.tennis-x.com/rankings.php" }
+      ]
+    },
+    {
+      "slug": "jaume-munar",
+      "name": "Jaume Munar",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/Jaume-Munar/MU94/overview",
+      "birthDate": "1997-05-05",
+      "height": "183 cm",
+      "nationality": "España",
+      "bio": [
+        "Jaume Munar nació el 5 de mayo de 1997 en Santanyí (Mallorca). Mide 1,83 m. Entrena en la Rafa Nadal Academy de Mallorca."
+      ],
+      "style": [
+        "Juega con la derecha y el revés a dos manos. En la ficha actualizada el 27 de agosto de 2026, su superficie favorita es la tierra, su golpe favorito el saque y su torneo favorito el Australian Open."
+      ],
+      "highlights": [
+        "Fue número 3 del mundo júnior. En 2018 llegó a semifinales de las Next Gen ATP Finals.",
+        "Alcanzó el puesto 52 en 2019, volvió al top 50 en julio de 2025 y llegó al 33 en diciembre de 2025, su mejor ranking.",
+        "Su primera final ATP fue Marbella 2021: ganó a Carlos Alcaraz y perdió con Pablo Carreño Busta.",
+        "En 2025 sumó 31 victorias, su mejor marca, llegó a tercera ronda de Wimbledon tras ganar al 31, Alexander Bublik, y a cuarta ronda del US Open.",
+        "Tiene victorias ante un número 3: Alexander Zverev en Marrakech 2019 y Casper Ruud en Tokio 2022.",
+        "En el circuito Challenger, la ficha le da un balance de 142-73."
+      ],
+      "ranking": {
+        "position": "49",
+        "points": "1.100",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        { "name": "ATP, ficha de Jaume Munar", "url": "https://www.atptour.com/en/players/Jaume-Munar/MU94/overview" },
+        { "name": "ATP, biografía actualizada el 27 de agosto de 2026", "url": "https://www.atptour.com/en/players/jaume-munar/mu94/bio" },
+        { "name": "ATP, media guide 2025 (nacimiento y estatura)", "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf" },
+        { "name": "Ranking ATP", "url": "https://www.atptour.com/en/rankings/singles/" },
+        { "name": "Tennis-X, lista del 12 de octubre de 2026", "url": "https://www.tennis-x.com/rankings.php" }
+      ]
+    },
+    {
+      "slug": "roberto-bautista-agut",
+      "name": "Roberto Bautista Agut",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/-/bd06/overview",
+      "birthDate": "1988-04-14",
+      "height": "183 cm",
+      "nationality": "España",
+      "bio": [
+        "Roberto Bautista Agut nació el 14 de abril de 1988 en Castellón de la Plana. Mide 1,83 m. Empezó a jugar a los 5 años."
+      ],
+      "style": [
+        "Juega con la derecha y el revés a dos manos."
+      ],
+      "highlights": [
+        "En 2024 ganó su título ATP número 12, en Amberes, y sumó la victoria número 400.",
+        "Cerró 2019 como número 9, su mejor ranking. Ese año llegó a sus primeros cuartos de Grand Slam, en el Australian Open, y a su primera semifinal, en Wimbledon.",
+        "Ganó a un número 1 en cuatro ocasiones: a Novak Djokovic en las semifinales de Shanghái 2016, en las semifinales de Doha 2019 y en cuarta ronda de Miami 2019, y a Daniil Medvedev en cuartos de Mallorca 2022.",
+        "En la ATP Cup acabó 4-1 en 2022 y 6-0 en 2020. Ayudó a España a ganar la Davis Cup de 2019."
+      ],
+      "ranking": {
+        "position": "243",
+        "points": "233",
+        "asOf": "2026-10-06",
+        "note": "La lista de entrada de la ATP, con fecha 6 de octubre de 2026, lo sitúa en el puesto 243 con 233 puntos. En la foto del top 120 del 12 de octubre de 2026 no aparece."
+      },
+      "sources": [
+        { "name": "ATP, ficha de Roberto Bautista Agut", "url": "https://www.atptour.com/en/players/-/bd06/overview" },
+        { "name": "ATP, biografía actualizada el 22 de mayo de 2026", "url": "https://www.atptour.com/en/players/roberto-bautista/bd06/bio" },
+        { "name": "ATP, media guide 2025 (nacimiento y estatura)", "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf" },
+        { "name": "ATP, lista de entrada a 6 de octubre de 2026", "url": "http://www.protennislive.com/posting/ramr/singles_entry_alpha.pdf" },
+        { "name": "Tennis-X, top 120 del 12 de octubre de 2026", "url": "https://www.tennis-x.com/rankings.php" }
+      ]
+    },
+    {
+      "slug": "paula-badosa",
+      "name": "Paula Badosa",
+      "tour": "WTA",
+      "profileUrl": "https://www.wtatennis.com/players/320124/paula-badosa",
+      "birthDate": "1997-11-15",
+      "height": "180 cm",
+      "nationality": "España",
+      "bio": [
+        "Paula Badosa nació el 15 de noviembre de 1997 en Nueva York. Mide 1,80 m."
+      ],
+      "style": [
+        "Juega con la derecha. La WTA la describe como agresiva desde el fondo y señala el saque como su golpe favorito."
+      ],
+      "highlights": [
+        "Su mejor ranking es el 2, del 25 de abril de 2022.",
+        "Sus títulos WTA son Washington 2024, Sídney 2022, Indian Wells 2021 y Belgrado 2021. En 2026 ganó el WTA 125 de Bastad.",
+        "En 2025 llegó a su primera semifinal de Grand Slam, en el Australian Open, y perdió con Aryna Sabalenka.",
+        "En 2024 fue Comeback Player of the Year y cerró el año en el puesto 12."
+      ],
+      "ranking": {
+        "position": "58",
+        "points": "1.023",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        { "name": "WTA, ficha de Paula Badosa", "url": "https://www.wtatennis.com/players/320124/paula-badosa" },
+        { "name": "WTA, lista numérica del 12 de octubre de 2026", "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf" }
+      ]
+    },
+    {
+      "slug": "jessica-bouzas-maneiro",
+      "name": "Jessica Bouzas Maneiro",
+      "tour": "WTA",
+      "profileUrl": "https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/",
+      "birthDate": "2002-09-24",
+      "height": "170 cm",
+      "nationality": "España",
+      "bio": [
+        "Jessica Bouzas Maneiro nació el 24 de septiembre de 2002 en Galicia. Mide 1,70 m."
+      ],
+      "style": [
+        "Juega con la derecha."
+      ],
+      "highlights": [
+        "Alcanzó el puesto 40 el 18 de agosto de 2025, su mejor ranking, y cerró 2025 en el puesto 42.",
+        "En 2024 ganó el WTA 125 de Antalya ante Irina-Camelia Begu. En 2026 fue finalista en Jingshan.",
+        "En 2025 llegó a dieciseisavos de Wimbledon, su primera ronda de ese nivel en un Grand Slam, y cayó con Liudmila Samsonova. También alcanzó cuartos en el WTA 1000 de Montreal, donde perdió con Victoria Mboko, y cuartos en Rabat y Rouen.",
+        "En 2024 llegó a dieciseisavos de Wimbledon y del US Open. En Wimbledon ganó a Markéta Vondroušová en Centre Court, su primera victoria ante una top 10, y se retiró ante Barbora Krejcíková."
+      ],
+      "ranking": {
+        "position": "99",
+        "points": "750",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        { "name": "WTA, ficha de Jessica Bouzas Maneiro", "url": "https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/" },
+        { "name": "WTA, lista numérica del 12 de octubre de 2026", "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf" }
+      ]
+    }
+  ]
+}

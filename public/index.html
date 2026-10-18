@@ -90,9 +90,9 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="#hoy">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
-        <a href="#rankings">Rankings</a>
-        <a href="#calendario">Calendario</a>
-        <a href="#guia">Aprende tenis</a>
+        <a href="jugadores/index.html">Rankings</a>
+        <a href="calendario-2027.html">Calendario</a>
+        <a href="aprende/index.html">Aprende tenis</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -109,7 +109,7 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
         <p class="lede">ATP y WTA, con Alcaraz, Jódar y los españoles en primer plano. Resultados con fuente, rankings con fecha y explicaciones claras para que no se te escape nada del circuito.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#noticias">Lo último del circuito</a>
-          <a class="btn btn-ghost" href="#newsletter">Recibe el briefing</a>
+          <a class="btn btn-ghost" href="#newsletter">Recibe el resumen del lunes</a>
           <button class="btn btn-ghost" id="sharePage" type="button" data-label="Compartir AceArena">Compartir AceArena</button>
         </div>
         <a class="hero-feature" href="noticias/davidovich-fokina-gana-el-masters-de-shanghai.html">
@@ -291,7 +291,7 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
             </tbody>
           </table>
         </div>
-        <p class="as-of">Ranking oficial a 12 de octubre de 2026. Fuentes: <a href="https://www.atptour.com/en/rankings/singles/">ATP Tour</a> y <a href="https://www.wtatennis.com/rankings/singles/">WTA</a>. <a href="#glosario">¿Cómo funciona el ranking?</a></p>
+        <p class="as-of">Ranking oficial a 12 de octubre de 2026. Fuentes: <a href="https://www.atptour.com/en/rankings/singles/">ATP Tour</a> y <a href="https://www.wtatennis.com/rankings/singles/">WTA</a>. <a href="jugadores/index.html">Fichas de jugadores</a> · <a href="aprende/como-funciona-el-ranking-atp.html">Cómo funciona el ranking ATP</a> · <a href="aprende/como-funciona-el-ranking-wta.html">y el WTA</a>.</p>
       </div>
     </section>
 
@@ -312,7 +312,7 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
             <p>Melbourne Park · 11–31 de enero de 2027. El cuadro principal se juega del 17 al 31 de enero. El primer grande del año, en pleno verano austral.</p>
           </article>
         </div>
-        <p class="as-of">Fuentes: <a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup, entradas del Final 8</a>, <a href="https://www.daviscup.com/en/davis-cup-final-8-all-you-need-to-know">sede en Bolonia</a>, <a href="https://www.daviscup.com/en/teams/5255f60d-f9a3-40d1-9009-e4acf3f6a942">España–Austria</a> y <a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>.</p>
+        <p class="as-of">Fuentes: <a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup, entradas del Final 8</a>, <a href="https://www.daviscup.com/en/davis-cup-final-8-all-you-need-to-know">sede en Bolonia</a>, <a href="https://www.daviscup.com/en/teams/5255f60d-f9a3-40d1-9009-e4acf3f6a942">España–Austria</a> y <a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>. <a href="calendario-2027.html">Calendario 2027</a>.</p>
       </div>
     </section>
 
@@ -320,7 +320,7 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
       <div class="container">
         <p class="kicker">Aprende tenis</p>
         <h2 id="guide-title">Los cuatro grandes: guía rápida de los Grand Slams</h2>
-        <p class="section-intro">Cuatro torneos, cuatro superficies, cuatro maneras de jugar. Lo básico para seguir la temporada desde el primer día.</p>
+        <p class="section-intro">Cuatro torneos, cuatro superficies, cuatro maneras de jugar. Lo básico para seguir la temporada desde el primer día. <a href="aprende/index.html">Aprende tenis</a> · <a href="aprende/reglas-del-tenis-basicas.html">Reglas del marcador</a>.</p>
         <div class="card-grid">
           <article class="card">
             <h3>Australian Open</h3>
@@ -391,26 +391,26 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
       <div class="container newsletter">
         <div>
           <p class="kicker">Newsletter gratuita</p>
-          <h2 id="news-form-title">El briefing de AceArena: el tenis de la semana en 3 minutos</h2>
-          <p class="section-intro">Resultados, rankings y la historia que no te puedes perder, directo a tu correo. Estamos arrancando: apúntate y sé de los primeros en recibirlo. Gratis y con baja en un clic.</p>
+          <h2 id="news-form-title">El resumen del lunes: lo importante de la semana en el tenis, en 3 minutos</h2>
+          <p class="section-intro">Resultados, rankings y la historia de la semana, en tu correo. Para darte de baja, escribe a hola@acearena.io.</p>
         </div>
-        <form name="newsletter" method="POST" action="/gracias.html?origen=briefing" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="newsletter" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="newsletter">
           <p class="honeypot" aria-hidden="true"><label>No rellenes este campo <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="form-fields">
             <div class="form-group">
               <label for="newsletter-email">Email</label>
-              <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="Tu email">
+              <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
             </div>
             <label class="consent">
               <input type="checkbox" name="privacidad" value="acepto" required>
-              <span>He leído la <a href="privacidad.html">política de privacidad</a> y acepto que AceArena use este email para el briefing.</span>
+              <span>He leído la <a href="privacidad.html">política de privacidad</a> y acepto que AceArena use este email para enviarme el resumen del lunes.</span>
             </label>
-            <button class="btn btn-primary" type="submit">Quiero el briefing</button>
+            <button class="btn btn-primary" type="submit">Quiero el resumen</button>
           </div>
           <div class="form-thanks" hidden tabindex="-1" role="status">
             <h3>¡Dentro!</h3>
-            <p>Te escribiremos con la primera edición del briefing.</p>
+            <p>Te escribiremos con el resumen del lunes.</p>
             <p class="form-thanks-fallback">Si esta página no confirma el envío, escríbenos a <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
           </div>
         </form>
@@ -429,15 +429,15 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
           <h2>El circuito</h2>
           <a href="#hoy">Hoy</a>
           <a href="noticias/index.html">Noticias</a>
-          <a href="#rankings">Rankings</a>
+          <a href="jugadores/index.html">Rankings</a>
           <a href="resultados.html">Resultados</a>
-          <a href="#calendario">Calendario</a>
-          <a href="#guia">Aprende tenis</a>
+          <a href="calendario-2027.html">Calendario</a>
+          <a href="aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>AceArena</h2>
           <a href="#sobre">Sobre AceArena</a>
-          <a href="#newsletter">Briefing</a>
+          <a href="#newsletter">Resumen del lunes</a>
           <a href="agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
           <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a>
@@ -456,8 +456,8 @@ Domingo, 18 de octubre de 2026 · Edición de hoy
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
-    <p>El tenis de la semana, en 3 minutos</p>
-    <a class="btn btn-primary btn-sm" href="#newsletter">Quiero el briefing</a>
+    <p>El resumen del lunes, en 3 minutos</p>
+    <a class="btn btn-primary btn-sm" href="#newsletter">Quiero el resumen</a>
   </div>
   <script src="script.js" defer></script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>

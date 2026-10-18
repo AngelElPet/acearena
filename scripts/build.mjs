@@ -1,7 +1,9 @@
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { validatePayload } from './validate.mjs';
+import { writeSocialCards } from './cards.mjs';
+import { evergreenEntries } from './evergreen.mjs';
+import { validateEvergreen, validatePayload } from './validate.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const publicDir = join(root, 'public');
@@ -125,9 +127,9 @@ function chrome(depth) {
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="${p}index.html#hoy">Hoy</a>
         <a href="${p}noticias/index.html">Noticias</a>
-        <a href="${p}index.html#rankings">Rankings</a>
-        <a href="${p}index.html#calendario">Calendario</a>
-        <a href="${p}index.html#guia">Aprende tenis</a>
+        <a href="${p}jugadores/index.html">Rankings</a>
+        <a href="${p}calendario-2027.html">Calendario</a>
+        <a href="${p}aprende/index.html">Aprende tenis</a>
         <a href="${p}agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -145,15 +147,15 @@ function chrome(depth) {
           <h2>El circuito</h2>
           <a href="${p}index.html#hoy">Hoy</a>
           <a href="${p}noticias/index.html">Noticias</a>
-          <a href="${p}index.html#rankings">Rankings</a>
+          <a href="${p}jugadores/index.html">Rankings</a>
           <a href="${p}resultados.html">Resultados</a>
-          <a href="${p}index.html#calendario">Calendario</a>
-          <a href="${p}index.html#guia">Aprende tenis</a>
+          <a href="${p}calendario-2027.html">Calendario</a>
+          <a href="${p}aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>AceArena</h2>
           <a href="${p}index.html#sobre">Sobre AceArena</a>
-          <a href="${p}index.html#newsletter">Briefing</a>
+          <a href="${p}index.html#newsletter">Resumen del lunes</a>
           <a href="${p}agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
           <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a>
@@ -172,15 +174,15 @@ function chrome(depth) {
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
-    <p>El tenis de la semana, en 3 minutos</p>
-    <a class="btn btn-primary btn-sm" href="${p}index.html#newsletter">Quiero el briefing</a>
+    <p>El resumen del lunes, en 3 minutos</p>
+    <a class="btn btn-primary btn-sm" href="${p}index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="${p}script.js" defer></script>`;
 
   return { header, footer };
 }
 
-function page({ title, description, canonical, depth, jsonLd = [], main, ogType = 'website', robots = 'index, follow' }) {
+function page({ title, description, canonical, depth, jsonLd = [], main, ogType = 'website', robots = 'index, follow', ogImage = `${SITE}/assets/og-image.png` }) {
   const p = prefixFor(depth);
   const { header, footer } = chrome(depth);
   const ld = jsonLd.map((block) => `  <script type="application/ld+json">\n  ${safeJson(block)}\n  </script>`).join('\n');
@@ -204,13 +206,13 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${esc(canonical)}">
-  <meta property="og:image" content="${SITE}/assets/og-image.png">
+  <meta property="og:image" content="${esc(ogImage)}">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="AceArena">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
-  <meta name="twitter:image" content="${SITE}/assets/og-image.png">
+  <meta name="twitter:image" content="${esc(ogImage)}">
   <link rel="stylesheet" href="${p}styles.css">
 ${ld}
 </head>
@@ -256,6 +258,39 @@ ${resultRows(matches)}
       </div>
       <p class="results-more"><a href="noticias/index.html">Archivo de noticias</a> · <a href="resultados.html">Todos los resultados</a></p>
     </div>`;
+}
+
+function newsletterBlock(depth) {
+  const p = prefixFor(depth);
+  return `  <section class="section section-alt" id="newsletter" aria-labelledby="news-form-title">
+    <div class="container newsletter">
+      <div>
+        <p class="kicker">Cada lunes</p>
+        <h2 id="news-form-title">El resumen del lunes: lo importante de la semana en el tenis, en 3 minutos</h2>
+        <p class="section-intro">Resultados, rankings y la historia de la semana, en tu correo. Para darte de baja, escribe a hola@acearena.io.</p>
+      </div>
+      <form name="newsletter" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p class="honeypot" aria-hidden="true"><label>No rellenes este campo <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-fields">
+          <div class="form-group">
+            <label for="newsletter-email">Email</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="privacidad" value="acepto" required>
+            <span>He leído la <a href="${p}privacidad.html">política de privacidad</a> y acepto que AceArena use este email para enviarme el resumen del lunes.</span>
+          </label>
+          <button class="btn btn-primary" type="submit">Quiero el resumen</button>
+        </div>
+        <div class="form-thanks" hidden tabindex="-1" role="status">
+          <h3>¡Dentro!</h3>
+          <p>Te escribiremos con el resumen del lunes.</p>
+          <p class="form-thanks-fallback">Si esta página no confirma el envío, escríbenos a <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>`;
 }
 
 function articleJsonLd(article) {
@@ -313,6 +348,7 @@ ${sources}
       </section>
       <p class="results-more"><a href="index.html">Todas las noticias</a> · <a href="../resultados.html">Resultados</a></p>
     </article>
+${newsletterBlock(1)}
   </main>`;
   return page({
     title: `${article.title} | AceArena`,
@@ -320,6 +356,7 @@ ${sources}
     canonical: url,
     depth: 1,
     ogType: 'article',
+    ogImage: `${SITE}/og/${article.slug}.png`,
     jsonLd: [
       articleJsonLd(article),
       {
@@ -350,6 +387,7 @@ ${newsCards(articles, (article) => `${article.slug}.html`)}
       </div>
       <p class="results-more"><a href="../resultados.html">Resultados</a> · <a href="/data/news.json">Datos JSON</a></p>
     </div>
+${newsletterBlock(1)}
   </main>`;
   return page({
     title: 'Noticias de tenis | AceArena',
@@ -523,12 +561,14 @@ function editionLabel(iso, today) {
   return `${long} · ${tag}`;
 }
 
-function llmsTxt(articles, resultsUpdated) {
+function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc) {
   const lines = articles.slice(0, LLMS_LATEST).map((article) => {
     const title = article.title.replace(/[\[\]]/g, '');
     const summary = article.summary.replace(/\s+/g, ' ').trim();
     return `- [${title}](${SITE}/noticias/${article.slug}.html): ${summary}`;
   });
+  const playerLines = playersDoc.players.map((player) => `- [${player.name}](${SITE}/jugadores/${player.slug}.html): ${player.tour}, número ${player.ranking.position} actualizado a ${player.ranking.asOf}.`);
+  const guideLines = guidesDoc.guides.map((guide) => `- [${guide.title}](${SITE}/aprende/${guide.slug}.html): ${guide.description}`);
   return `# AceArena
 
 > Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
@@ -543,6 +583,20 @@ ${lines.join('\n')}
 - Datos de noticias: ${SITE}/data/news.json
 - Datos de resultados: ${SITE}/data/results.json
 
+## Jugadores
+
+- [Jugadores españoles](${SITE}/jugadores/): fichas con ranking fechado y enlace a la ficha oficial.
+${playerLines.join('\n')}
+
+## Calendario
+
+- [Calendario 2027](${SITE}/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada. Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+
+## Aprende tenis
+
+- [Guías](${SITE}/aprende/): rankings ATP y WTA, y reglas básicas del marcador.
+${guideLines.join('\n')}
+
 ## El sitio
 
 - [Portada](${SITE}/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
@@ -554,10 +608,17 @@ function maxDay(values) {
   return values.filter(Boolean).sort().at(-1) ?? '2026-01-01';
 }
 
-function build() {
+async function build() {
   const news = readJson('news.json');
   const resultsDoc = readJson('results.json');
-  const errors = validatePayload(news, resultsDoc);
+  const playersDoc = readJson('players.json');
+  const calendarDoc = readJson('calendar.json');
+  const guidesDoc = readJson('guides.json');
+  const indexnow = readJson('indexnow.json');
+  const errors = [
+    ...validatePayload(news, resultsDoc),
+    ...validateEvergreen({ players: playersDoc, calendar: calendarDoc, guides: guidesDoc, indexnow }),
+  ];
   if (errors.length) {
     console.error(errors.join('\n'));
     process.exit(1);
@@ -585,6 +646,10 @@ function build() {
   writeHtml('noticias/index.html', newsIndex(articles));
   for (const article of articles) {
     writeHtml(`noticias/${article.slug}.html`, articlePage(article));
+  }
+  const evergreen = evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, site: SITE });
+  for (const entry of evergreen) {
+    writeHtml(entry.file, page(entry.page));
   }
   writeHtml('resultados.html', resultsPage(matches, resultsDoc.updated));
 
@@ -626,7 +691,9 @@ function build() {
       `Domicilio: ${ownerAddress}.`,
       `Contacto: ${ownerEmail}.`,
       analyticsNote,
-      'El briefing y el formulario de agencias se envían con Netlify Forms. Usamos el email y el mensaje para responderte o para enviarte el briefing. Puedes pedir la baja cuando quieras escribiendo a hola@acearena.io.',
+      'El formulario newsletter sirve para enviarte el resumen del lunes: lo importante de la semana en el tenis, en unos 3 minutos. La finalidad es ese envío. La base legal es tu consentimiento, que das al marcar la casilla.',
+      'Puedes darte de baja en cualquier momento escribiendo a hola@acearena.io.',
+      'El formulario de agencias se envía con Netlify Forms. Usamos el email y el mensaje para responder la consulta de patrocinio.',
       'AceArena no vende datos personales ni los cede para publicidad. Para acceder, rectificar, suprimir, oponerte o limitar un tratamiento, o para pedir la portabilidad, escribe a hola@acearena.io.',
       legalLinks,
     ],
@@ -658,7 +725,7 @@ function build() {
       <p class="hero-cta">
         <a class="btn btn-primary" href="index.html">Ir a la portada</a>
         <a class="btn btn-outline" href="noticias/index.html">Últimas noticias</a>
-        <a class="btn btn-outline" href="index.html#rankings">Rankings</a>
+        <a class="btn btn-outline" href="jugadores/index.html">Rankings</a>
       </p>
     </article>
   </main>`,
@@ -673,10 +740,10 @@ function build() {
     <article class="container article-wrap">
       <p class="news-meta">AceArena</p>
       <h1 id="thanksTitle">¡Gracias! Lo tenemos.</h1>
-      <p id="thanksCopy">Te respondemos en menos de 48 horas laborables. Si es urgente, escríbenos a sponsors@acearena.io (patrocinio) o hola@acearena.io (todo lo demás).</p>
+      <p id="thanksCopy">Si te has apuntado al resumen del lunes, te escribiremos a ese correo. Para darte de baja, escribe a hola@acearena.io. Si era una consulta de patrocinio, respondemos en menos de 48 horas laborables.</p>
       <p class="hero-cta">
         <a class="btn btn-primary" href="index.html#noticias">Ver lo último del circuito</a>
-        <a class="btn btn-outline" href="index.html#newsletter">Apúntate al briefing</a>
+        <a class="btn btn-outline" href="index.html#newsletter">Apúntate al resumen</a>
       </p>
     </article>
   </main>`,
@@ -690,6 +757,15 @@ function build() {
   mkdirSync(join(publicDir, 'data'), { recursive: true });
   copyFileSync(join(root, 'data', 'news.json'), join(publicDir, 'data', 'news.json'));
   copyFileSync(join(root, 'data', 'results.json'), join(publicDir, 'data', 'results.json'));
+  copyFileSync(join(root, 'data', 'players.json'), join(publicDir, 'data', 'players.json'));
+  copyFileSync(join(root, 'data', 'calendar.json'), join(publicDir, 'data', 'calendar.json'));
+  copyFileSync(join(root, 'data', 'guides.json'), join(publicDir, 'data', 'guides.json'));
+  writeText(`${indexnow.key}.txt`, `${indexnow.key}\n`);
+
+  const llmsFull = readFileSync(join(publicDir, 'llms-full.txt'), 'utf8');
+  if (llmsFull.includes('18–31')) {
+    throw new Error('public/llms-full.txt sigue con el tramo antiguo del Australian Open');
+  }
 
   const urls = [
     { loc: `${SITE}/`, lastmod: contentDay },
@@ -699,16 +775,31 @@ function build() {
     { loc: `${SITE}/aviso-legal.html`, lastmod: contentDay },
     { loc: `${SITE}/privacidad.html`, lastmod: contentDay },
     { loc: `${SITE}/cookies.html`, lastmod: contentDay },
+    { loc: `${SITE}/jugadores/`, lastmod: playersDoc.updated },
+    { loc: `${SITE}/calendario-2027.html`, lastmod: calendarDoc.updated },
+    { loc: `${SITE}/aprende/`, lastmod: guidesDoc.updated },
     ...articles.map((article) => ({
       loc: `${SITE}/noticias/${article.slug}.html`,
       lastmod: article.updated,
     })),
+    ...playersDoc.players.map((player) => ({
+      loc: `${SITE}/jugadores/${player.slug}.html`,
+      lastmod: playersDoc.updated,
+    })),
+    ...guidesDoc.guides.map((guide) => ({
+      loc: `${SITE}/aprende/${guide.slug}.html`,
+      lastmod: guidesDoc.updated,
+    })),
   ];
   writeText('sitemap.xml', sitemap(urls));
   writeText('feed.xml', rss(articles));
-  writeText('llms.txt', llmsTxt(articles, resultsDoc.updated));
+  writeText('llms.txt', llmsTxt(articles, resultsDoc.updated, playersDoc, guidesDoc));
+  await writeSocialCards(articles, { root, publicDir });
 
-  console.log(`Build OK: ${articles.length} artículos (${homeArticles.length} en portada), ${matches.length} resultados (${homeMatches.length} en portada)`);
+  console.log(`Build OK: ${articles.length} artículos (${homeArticles.length} en portada), ${matches.length} resultados (${homeMatches.length} en portada), ${playersDoc.players.length} jugadores, ${guidesDoc.guides.length} guías`);
 }
 
-build();
+build().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

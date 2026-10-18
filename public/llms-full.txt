@@ -15,18 +15,18 @@ AceArena es un medio digital independiente de tenis en español, nacido en 2026.
 
 Secciones, en este orden:
 
-1. Presentación: «El tenis, contado en español y con datos». El menú lleva a Hoy, Noticias, Rankings, Calendario y Aprende tenis. El enlace de patrocinio es «Anúnciate» y apunta a /agencias.html.
-2. En directo. Al cargar, el navegador consulta https://sportscore.com/api/v1/matches/?sport=tennis&status=live&limit=8. Solo se pintan partidos cuyo status es live, inprogress o in_progress. Los nombres y los marcadores se insertan con textContent. Si no hay partidos o la fuente falla, se muestra el último resultado (Davidovich Fokina a Jódar, 1-6 7-6(5) 6-4 en Shanghái) y la próxima cita (Australian Open 2027, Melbourne, 18–31 de enero).
+1. Presentación: «El tenis, contado en español y con datos». El menú lleva a Hoy, Noticias, Rankings (/jugadores/), Calendario (/calendario-2027.html) y Aprende tenis (/aprende/). El enlace de patrocinio es «Anúnciate» y apunta a /agencias.html.
+2. En directo. Al cargar, el navegador consulta https://sportscore.com/api/v1/matches/?sport=tennis&status=live&limit=8. Solo se pintan partidos cuyo status es live, inprogress o in_progress. Los nombres y los marcadores se insertan con textContent. Si no hay partidos o la fuente falla, se muestra el último resultado (Davidovich Fokina a Jódar, 1-6 7-6(5) 6-4 en Shanghái), la Davis Cup Final 8 en Bolonia (24–29 de noviembre de 2026; España–Austria, cuartos el 26; final el 29) y el Australian Open 2027 en Melbourne Park, 11–31 de enero, con el cuadro principal del 17 al 31.
 3. Noticias generadas desde data/news.json, firmadas por el equipo de AceArena, con fecha y fuente. Cada pieza vive en /noticias/<slug>.html.
-4. Rankings ATP y WTA del 12 de octubre de 2026. ATP: Sinner 11.000, Zverev 9.720, Alcaraz 5.560, Shelton 4.680, Auger-Aliassime 3.890. WTA: Rybakina 9.696, Sabalenka 7.550, Andreeva 6.371, Pegula 6.225, Gauff 5.974. Fuentes: ATP Tour y WTA.
-5. Calendario: Australian Open 2027, Melbourne, 18–31 de enero.
-6. Guía de los cuatro Grand Slams y glosario.
+4. Rankings ATP y WTA del 12 de octubre de 2026. ATP: Sinner 11.000, Zverev 9.720, Alcaraz 5.560, Shelton 4.680, Auger-Aliassime 3.890. WTA: Rybakina 9.696, Sabalenka 7.550, Andreeva 6.371, Pegula 6.225, Gauff 5.974. Fuentes: ATP Tour y WTA. Las fichas de jugadores españoles están en /jugadores/.
+5. Calendario: /calendario-2027.html. Davis Cup Final 8, Bolonia, 24–29 de noviembre de 2026. Australian Open 2027, Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+6. Guía de los cuatro Grand Slams, glosario y las explicaciones de /aprende/.
 7. Sobre AceArena: medio independiente fundado por Angel Cebria Morales. Correcciones a hola@acearena.io.
-8. Briefing por email, formulario Netlify «newsletter».
+8. Resumen del lunes por email, formulario Netlify «newsletter». El texto del bloque es: «El resumen del lunes: lo importante de la semana en el tenis, en 3 minutos».
 
 ## Agencias
 
-https://acearena.io/agencias.html reúne el patrocinio. Precios públicos: Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida. Propuesta en menos de 48 horas laborables. Formulario Netlify «agencias». Contacto: sponsors@acearena.io.
+https://acearena.io/agencias.html reúne el patrocinio. Precios públicos: Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida. Propuesta en menos de 48 horas laborables. Formulario Netlify «agencias». Contacto: sponsors@acearena.io. El dossier está en https://acearena.io/dossier/acearena-patrocinio.pdf y lleva cabecera noindex.
 
 ## Legal
 
@@ -43,6 +43,8 @@ La portada incluye JSON-LD de Organization y WebSite. Cada noticia incluye NewsA
 ## Rastreo
 
 https://acearena.io/robots.txt permite el rastreo general y nombra de forma explícita a GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Google-Extended, CCBot, Applebot-Extended, Amazonbot, Bytespider, Meta-ExternalAgent y cohere-ai. El sitemap es https://acearena.io/sitemap.xml.
+
+Esta ficha se mantiene a mano. El build no la regenera. El Australian Open 2027 es en Melbourne Park, del 11 al 31 de enero, y el cuadro principal va del 17 al 31.
 
 ## Cómo citar
 

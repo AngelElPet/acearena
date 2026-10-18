@@ -27,12 +27,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Validate data
         run: node scripts/validate.mjs
 
       - name: Build public
         run: node scripts/build.mjs
+
+      - name: Validate built site
+        run: node scripts/validate.mjs --site
 
       - name: Check public is up to date
         if: github.event_name == 'pull_request'
@@ -56,3 +63,12 @@ jobs:
             git commit -m "Regenerate public content [skip ci]"
             git push
           fi
+
+      # IndexNow corre después del commit de contenido. No sabe cuándo
+      # Netlify termina el deploy: si la clave aún no está en acearena.io,
+      # el script sale sin error y el siguiente push a main reintenta.
+      - name: Notify IndexNow
+        if: github.event_name != 'pull_request'
+        env:
+          INDEXNOW_BEFORE: ${{ github.event.before }}
+        run: node scripts/indexnow.mjs

@@ -37,6 +37,12 @@ La primera URL será del tipo `https://algo-random.netlify.app`. Sirve para revi
 - Una ruta inventada, por ejemplo https://acearena.io/no-existe, muestra la página 404.
 - Los formularios de contacto, newsletter y agencias llegan a Netlify Forms. Llevan casilla de privacidad.
 
+## IndexNow
+
+`scripts/indexnow.mjs` avisa a `https://api.indexnow.org/indexnow` con las URLs HTML que cambian en un push a `main`. La clave vive en `data/indexnow.json` y el build la publica en `public/<clave>.txt`.
+
+La acción de GitHub no puede ver cuándo Netlify termina el deploy. El script comprueba `https://acearena.io/<clave>.txt`. Si esa URL todavía no devuelve la clave, escribe el motivo y sale sin error. El siguiente push a `main` vuelve a intentarlo. En un pull request no se envía el ping.
+
 ## Correo
 
 - sponsors@acearena.io — sponsorship
