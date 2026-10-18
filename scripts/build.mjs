@@ -693,7 +693,7 @@ async function build() {
       analyticsNote,
       'El formulario newsletter sirve para enviarte el resumen del lunes: lo importante de la semana en el tenis, en unos 3 minutos. La finalidad es ese envío. La base legal es tu consentimiento, que das al marcar la casilla.',
       'Puedes darte de baja en cualquier momento escribiendo a hola@acearena.io.',
-      'El formulario de agencias se envía con Netlify Forms. Usamos el email y el mensaje para responder la consulta de patrocinio.',
+      'Los formularios de newsletter y de agencias se envían con Netlify Forms. En el de agencias usamos el email y el mensaje para responder la consulta de patrocinio.',
       'AceArena no vende datos personales ni los cede para publicidad. Para acceder, rectificar, suprimir, oponerte o limitar un tratamiento, o para pedir la portabilidad, escribe a hola@acearena.io.',
       legalLinks,
     ],

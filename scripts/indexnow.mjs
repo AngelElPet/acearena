@@ -25,9 +25,14 @@ function changedFiles() {
       .map((line) => line.trim())
       .filter(Boolean);
   } catch (error) {
-    console.log(`IndexNow: no se pudo leer el diff (${error.message}). No se envía el ping.`);
+    console.log(`IndexNow: no se pudo leer el diff (${error.message}). Se enviará el sitemap completo.`);
     return null;
   }
+}
+
+function sitemapUrls() {
+  const xml = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8');
+  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim()).filter(Boolean);
 }
 
 function toUrl(file) {
@@ -59,10 +64,13 @@ async function main() {
     return;
   }
   const files = changedFiles();
-  if (!files) return;
-  const urlList = [...new Set(files.map(toUrl).filter(Boolean))];
+  const urlList = files
+    ? [...new Set(files.map(toUrl).filter(Boolean))]
+    : sitemapUrls();
   if (urlList.length === 0) {
-    console.log('IndexNow: el diff no trae URLs nuevas. No se envía el ping.');
+    console.log(files
+      ? 'IndexNow: el diff no trae URLs nuevas. No se envía el ping.'
+      : 'IndexNow: el sitemap no tiene URLs. No se envía el ping.');
     return;
   }
   try {
