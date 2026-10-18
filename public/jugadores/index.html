@@ -25,27 +25,11 @@
   <meta name="twitter:title" content="Jugadores en español | AceArena">
   <meta name="twitter:description" content="Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <style>
-html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
-input,select,textarea{font-size:16px}
-.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
-.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
-@media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
-}
-</style>
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://acearena.io/"},{"@type":"ListItem","position":2,"name":"Jugadores","item":"https://acearena.io/jugadores/"}]}
   </script>
@@ -66,10 +50,11 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
+        <a href="../semana.html">Esta semana</a>
         <a href="../noticias/index.html">Noticias</a>
         <a href="../rankings.html">Rankings</a>
-        <a href="../calendario-2027.html">Calendario</a>
-        <a href="../aprende/index.html">Aprende tenis</a>
+        <a href="../jugadores/index.html">Jugadores</a>
+        <a href="../aprende/index.html">Aprende</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>

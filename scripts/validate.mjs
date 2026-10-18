@@ -642,6 +642,12 @@ export function validateSite(rootDir) {
     if (!canonicalTag || !canonicalTag.href || !canonicalTag.href.startsWith('https://acearena.io')) {
       errors.push(`${label} no tiene canonical en https://acearena.io`);
     }
+    if (/<link\b[^>]*\bhref=["'][^"']*styles\.css[^"']*["'][^>]*>/i.test(html)) {
+      const styleLinks = [...html.matchAll(/<link\b[^>]*>/gi)].map((match) => match[0]).filter((tag) => /styles\.css/i.test(tag));
+      if (styleLinks.some((tag) => /media\s*=\s*["']print["']/i.test(tag))) {
+        errors.push(`${label} carga styles.css con media="print"`);
+      }
+    }
     const visible = visibleHtml(html);
     for (const rule of PLACEHOLDERS) {
       if (rule.re.test(visible)) errors.push(`${label} contiene texto de relleno (${rule.label})`);
@@ -764,6 +770,12 @@ function selfTest() {
   }
   if (hasPendingMarker('Angel Cebria Morales')) {
     failures.push('falso positivo en el marcador PENDIENTE');
+  }
+  const printSample = '<link rel="stylesheet" href="styles.css" media="print" onload="this.media=\'all\'">';
+  if (!/media\s*=\s*["']print["']/i.test(printSample)) failures.push('el patrón de media=print no detecta el caso');
+  const blockingSample = '<link rel="stylesheet" href="../styles.css">';
+  if (/<link\b[^>]*styles\.css[^>]*media\s*=\s*["']print["']/i.test(blockingSample)) {
+    failures.push('falso positivo en styles.css bloqueante');
   }
   if (failures.length) {
     console.error(failures.join('\n'));

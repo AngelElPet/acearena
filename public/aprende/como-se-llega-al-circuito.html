@@ -25,27 +25,11 @@
   <meta name="twitter:title" content="Cómo se llega al circuito | AceArena">
   <meta name="twitter:description" content="Del circuito júnior de la ITF al ITF World Tennis Tour, al Challenger o al WTA 125, y de ahí a la ATP y la WTA.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <style>
-html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
-input,select,textarea{font-size:16px}
-.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
-.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
-@media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
-}
-</style>
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué hay entre el júnior y un cuadro ATP?","acceptedAnswer":{"@type":"Answer","text":"El ITF World Tennis Tour y el ATP Challenger Tour. Sus resultados pueden contar en el ranking ATP entre los seis mejores del resto."}},{"@type":"Question","name":"¿Y en el circuito femenino?","acceptedAnswer":{"@type":"Answer","text":"El ITF World Tennis Tour y los WTA 125 pueden entrar en la cuenta del ranking WTA, dentro de los siete mejores siguientes."}},{"@type":"Question","name":"¿Los Grand Slams cuentan siempre?","acceptedAnswer":{"@type":"Answer","text":"Sí. En la ATP entran los 4 Grand Slams y 8 Masters 1000 obligatorios. En la WTA entran los 4 Grand Slams y los mejores WTA 1000 de la fórmula oficial."}}]}
   </script>
@@ -66,10 +50,11 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
+        <a href="../semana.html">Esta semana</a>
         <a href="../noticias/index.html">Noticias</a>
         <a href="../rankings.html">Rankings</a>
-        <a href="../calendario-2027.html">Calendario</a>
-        <a href="../aprende/index.html">Aprende tenis</a>
+        <a href="../jugadores/index.html">Jugadores</a>
+        <a href="../aprende/index.html">Aprende</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -80,6 +65,11 @@ input,select,textarea{font-size:16px}
       <p class="kicker">Circuito</p>
       <h1>Cómo se llega al circuito</h1>
       <p class="article-summary">El camino habitual hasta un cuadro ATP o WTA, con lo que cada circuito cuenta para el ranking.</p>
+      <figure class="diagram">
+        <img src="../assets/diagrams/escalones.svg?v=d084aba8e0" alt="Cuatro escalones: júnior, ITF, Challenger o WTA 125, y ATP o WTA." width="720" height="200">
+        <figcaption>Los cuatro escalones, de la base al circuito.</figcaption>
+      </figure>
+      <p><a href="../jugadores/rafael-jodar.html">Rafael Jódar</a> empezó 2026 como número 168 y en agosto alcanzó el 11.</p>
       <h2>Júnior</h2>
         <p>El primer escalón internacional es el circuito júnior de la ITF, el World Tennis Tour Juniors. Ahí se juega antes de dar el salto a los torneos profesionales de entrada.</p>
       <h2>ITF World Tennis Tour</h2>

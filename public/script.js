@@ -54,19 +54,19 @@
     while (node.firstChild) node.removeChild(node.firstChild);
   }
 
-  var upcomingTemplate = null;
-  var liveBox = document.getElementById("liveMatches");
-  if (liveBox) {
-    var existingList = liveBox.querySelector(".event-list");
-    if (existingList) upcomingTemplate = existingList.cloneNode(true);
-  }
-
-  function showEmpty(box, title, message, withList) {
+  function showEmpty(box, title, message, link) {
     clear(box);
     var wrap = text("div", "live-empty");
     wrap.appendChild(text("p", "live-empty-title", title));
     if (message) wrap.appendChild(text("p", null, message));
-    if (withList && upcomingTemplate) wrap.appendChild(upcomingTemplate.cloneNode(true));
+    if (link) {
+      var more = document.createElement("p");
+      var anchor = document.createElement("a");
+      anchor.href = link.href;
+      anchor.textContent = link.label;
+      more.appendChild(anchor);
+      wrap.appendChild(more);
+    }
     box.appendChild(wrap);
   }
 
@@ -93,7 +93,8 @@
     return status === "live" || status === "inprogress" || status === "in_progress";
   }
 
-  var LIVE_RESULT = "Mientras tanto: Maja Chwalińska ganó a Sonay Kartal por 2-6, 6-4, 6-2 en la final de Wuhan.";
+  var LIVE_RESULT = "Último resultado: Chwalińska gana a Kartal 2-6, 6-4 y 6-2 en la final de Wuhan.";
+  var LIVE_LINK = { href: "resultados.html", label: "Resultados" };
 
   async function loadLiveMatches(options) {
     var box = document.getElementById("liveMatches");
@@ -109,7 +110,7 @@
       var data = await response.json();
       var matches = Array.isArray(data.matches) ? data.matches.filter(isLive).slice(0, 6) : [];
       if (!matches.length) {
-        showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, true);
+        showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, LIVE_LINK);
         return;
       }
       clear(box);
@@ -117,7 +118,7 @@
         box.appendChild(renderMatch(match));
       });
     } catch (error) {
-      showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, true);
+      showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, LIVE_LINK);
     } finally {
       if (button) button.disabled = false;
     }

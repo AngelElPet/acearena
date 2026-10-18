@@ -63,7 +63,7 @@
 
 ## Aprende tenis
 
-- [Guías](https://acearena.io/aprende/): rankings ATP y WTA, y reglas básicas del marcador.
+- [Guías](https://acearena.io/aprende/): rankings ATP y WTA, reglas, Grand Slams, glosario y cómo se llega al circuito.
 - [Cómo funciona el ranking ATP](https://acearena.io/aprende/como-funciona-el-ranking-atp.html): Qué cuenta el PIF ATP Rankings, cada cuánto se publica, cuántos torneos entran y qué es la Race to Turin.
 - [Cómo funciona el ranking WTA](https://acearena.io/aprende/como-funciona-el-ranking-wta.html): Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.
 - [Reglas del tenis básicas](https://acearena.io/aprende/reglas-del-tenis-basicas.html): Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.
@@ -75,6 +75,5 @@
 
 - [Portada](https://acearena.io/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
 - [Sobre AceArena](https://acearena.io/sobre.html): quiénes somos, cómo trabajamos, correcciones y contenido patrocinado.
-- [Agencias](https://acearena.io/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
+- [Patrocinio](https://acearena.io/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
 - [Créditos de imagen](https://acearena.io/creditos.html): fotos con licencia y gráficos propios.
-- [Sobre AceArena](https://acearena.io/sobre.html): quiénes somos, cómo trabajamos y cómo corregimos.

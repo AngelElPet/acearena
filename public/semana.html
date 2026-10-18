@@ -25,27 +25,11 @@
   <meta name="twitter:title" content="Qué ver esta semana | AceArena">
   <meta name="twitter:description" content="ATP y WTA del 19–25 de octubre de 2026: sede, superficie y quién juega, con la ficha oficial de cada torneo.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <style>
-html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
-input,select,textarea{font-size:16px}
-.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
-.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
-@media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
-}
-</style>
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","name":"Qué ver esta semana","url":"https://acearena.io/semana.html","inLanguage":"es","dateModified":"2026-10-18","isPartOf":{"@type":"WebSite","name":"AceArena","url":"https://acearena.io/"}}
   </script>
@@ -69,56 +53,64 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
+        <a href="semana.html">Esta semana</a>
         <a href="noticias/index.html">Noticias</a>
         <a href="rankings.html">Rankings</a>
-        <a href="calendario-2027.html">Calendario</a>
-        <a href="aprende/index.html">Aprende tenis</a>
+        <a href="jugadores/index.html">Jugadores</a>
+        <a href="aprende/index.html">Aprende</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
   </header>
   <main class="section page-section" id="contenido">
-    <figure class="photo-figure hero-banner">
-          <img src="photos/pelota.webp" srcset="photos/pelota-800.webp 800w, photos/pelota.webp 1200w" sizes="100vw" alt="Pelota de tenis amarilla sobre fondo neutro." width="1200" height="800" fetchpriority="high">
-          <figcaption>Foto: Christian VisualBeo Horvat, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
-        </figure>
     <div class="container">
+    <figure class="photo-figure hero-banner">
+          <img src="photos/pelota.webp?v=26e8bcace5" srcset="photos/pelota-400.webp?v=6770b4e3a9 400w, photos/pelota-800.webp?v=07456999e7 800w, photos/pelota.webp?v=26e8bcace5 1200w" sizes="(max-width: 1120px) 100vw, 1120px" alt="Primer plano del fieltro de una pelota de tenis." width="1200" height="800" fetchpriority="high">
+          <figcaption>Foto: Horia Varlan, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_Ball_Felt_Zoom-In_View.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
       <p class="news-meta"><a href="index.html">Inicio</a> · Esta semana</p>
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Qué ver esta semana</h1>
         <p>Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego. Actualizado el 18 de octubre de 2026.</p>
       </div>
-      <ul class="event-list">
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
-          <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a>, Almaty, Kazajistán, 19–25 de octubre de 2026
-          <p>ATP 250 bajo techo en Almaty (Kazajistán).</p>
-          <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Almaty Open</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
+      <ul class="event-cards">
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 250</span></p>
+          <h3><a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a></h3>
+          <p class="event-where">Almaty, Kazajistán · 19–25 de octubre de 2026</p>
+          <p>ATP 250 bajo techo.</p>
+          <p class="event-sources">Fuentes: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Almaty Open</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
-          <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a>, Bruselas, Bélgica, 19–25 de octubre de 2026
-          <p>ATP 250 bajo techo en el Brussels Expo. En el cuadro: Alejandro Davidovich Fokina, recién campeón en Shanghái, y Francisco Cerúndolo.</p>
-          <p>Fuentes: <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a> · <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Bruselas</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 250</span></p>
+          <h3><a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a></h3>
+          <p class="event-where">Bruselas, Bélgica · 19–25 de octubre de 2026</p>
+          <p>ATP 250 bajo techo en el Brussels Expo.</p>
+          <p><strong>A quién ver.</strong> Alejandro Davidovich Fokina, campeón en Shanghái, y Francisco Cerúndolo.</p>
+          <p class="event-sources">Fuentes: <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a> · <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Bruselas</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
-          <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a>, Lyon, Francia, 19–25 de octubre de 2026
-          <p>ATP 250 bajo techo en el LDLC Arena. Nombres destacados de la previa ATP: Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.</p>
-          <p>Fuentes: <a href="https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa de Lyon 2026</a> · <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Lyon</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 250</span></p>
+          <h3><a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a></h3>
+          <p class="event-where">Lyon, Francia · 19–25 de octubre de 2026</p>
+          <p>ATP 250 bajo techo en el LDLC Arena.</p>
+          <p><strong>A quién ver.</strong> Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.</p>
+          <p class="event-sources">Fuentes: <a href="https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa de Lyon 2026</a> · <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Lyon</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">WTA · WTA 500 · pista dura</p>
-          <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a>, Ningbo, China, 19–25 de octubre de 2026
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"><span>WTA · WTA 500</span></p>
+          <h3><a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a></h3>
+          <p class="event-where">Ningbo, China · 19–25 de octubre de 2026</p>
           <p>WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center.</p>
-          <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Ningbo Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
+          <p class="event-sources">Fuentes: <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Ningbo Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
         </li>
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">WTA · WTA 250 · pista dura</p>
-          <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a>, Osaka, Japón, 19–25 de octubre de 2026
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"><span>WTA · WTA 250</span></p>
+          <h3><a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a></h3>
+          <p class="event-where">Osaka, Japón · 19–25 de octubre de 2026</p>
           <p>WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center.</p>
-          <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Japan Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
+          <p class="event-sources">Fuentes: <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Japan Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
         </li>
       </ul>
       <h2>Españoles y latinoamericanos esta semana</h2>
@@ -127,24 +119,27 @@ input,select,textarea{font-size:16px}
           <li><a href="jugadores/francisco-cerundolo.html">Francisco Cerúndolo</a>. BNP Paribas Fortis European Open, Bruselas, Bélgica, 19–25 de octubre de 2026. <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a>.</li>
       </ul>
       <h2>Después</h2>
-      <ul class="event-list">
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 500 · pista dura indoor</p>
-          <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">Swiss Indoors Basel</a>, Basilea, Suiza, 26 de octubre–1 de noviembre de 2026
+      <ul class="event-cards">
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 500</span></p>
+          <h3><a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">Swiss Indoors Basel</a></h3>
+          <p class="event-where">Basilea, Suiza · 26 de octubre–1 de noviembre de 2026</p>
           <p>ATP 500 bajo techo.</p>
-          <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Basilea</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
+          <p class="event-sources">Fuentes: <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Basilea</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 500 · pista dura indoor</p>
-          <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">Erste Bank Open</a>, Viena, Austria, 26 de octubre–1 de noviembre de 2026
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 500</span></p>
+          <h3><a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">Erste Bank Open</a></h3>
+          <p class="event-where">Viena, Austria · 26 de octubre–1 de noviembre de 2026</p>
           <p>ATP 500 bajo techo.</p>
-          <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Viena</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
+          <p class="event-sources">Fuentes: <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Viena</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
-        <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP Masters 1000 · pista dura indoor</p>
-          <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">Rolex Paris Masters</a>, París, Francia, 2–8 de noviembre de 2026
+        <li class="event-card">
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP Masters 1000</span></p>
+          <h3><a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">Rolex Paris Masters</a></h3>
+          <p class="event-where">París, Francia · 2–8 de noviembre de 2026</p>
           <p>ATP Masters 1000 bajo techo. El último 1000 del año.</p>
-          <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Rolex Paris Masters</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
+          <p class="event-sources">Fuentes: <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Rolex Paris Masters</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
       </ul>
     </div>

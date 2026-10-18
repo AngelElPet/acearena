@@ -25,27 +25,11 @@
   <meta name="twitter:title" content="Cómo funciona el ranking WTA | AceArena">
   <meta name="twitter:description" content="Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <style>
-html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
-input,select,textarea{font-size:16px}
-.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
-.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
-@media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
-}
-</style>
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Para qué sirve el ranking WTA?","acceptedAnswer":{"@type":"Answer","text":"Ordena a las jugadoras y se usa para la entrada en los cuadros y para las cabezas de serie."}},{"@type":"Question","name":"¿Cuántos torneos cuentan?","acceptedAnswer":{"@type":"Answer","text":"En individuales caben como máximo 18: 4 Grand Slams, los 6 mejores WTA 1000 combinados, el mejor no combinado y los 7 mejores siguientes. Las WTA Finals pueden ser el 19.º."}},{"@type":"Question","name":"¿Qué diferencia hay entre un WTA 1000 combinado y uno no combinado?","acceptedAnswer":{"@type":"Answer","text":"Los combinados de la cuenta son Indian Wells, Miami, Madrid, Roma, Toronto o Montreal, Cincinnati y Pekín. Los no combinados son Doha, Dubái y Wuhan."}},{"@type":"Question","name":"¿Cuándo entra una jugadora en la lista?","acceptedAnswer":{"@type":"Answer","text":"Hace falta tener puntos en al menos 3 torneos, o al menos 10 puntos de individuales en un solo torneo."}}]}
   </script>
@@ -66,10 +50,11 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
+        <a href="../semana.html">Esta semana</a>
         <a href="../noticias/index.html">Noticias</a>
         <a href="../rankings.html">Rankings</a>
-        <a href="../calendario-2027.html">Calendario</a>
-        <a href="../aprende/index.html">Aprende tenis</a>
+        <a href="../jugadores/index.html">Jugadores</a>
+        <a href="../aprende/index.html">Aprende</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
