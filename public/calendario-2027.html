@@ -25,7 +25,21 @@
   <meta name="twitter:title" content="Calendario 2027 de tenis | AceArena">
   <meta name="twitter:description" content="Grand Slams, finales de temporada y torneos 1000 de 2027 con las fechas ya publicadas. La Copa Davis de 2026, en Bolonia, abre la página.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://acearena.io/"},{"@type":"ListItem","position":2,"name":"Calendario 2027","item":"https://acearena.io/calendario-2027.html"}]}
   </script>
@@ -44,7 +58,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
-        <a href="jugadores/index.html">Rankings</a>
+        <a href="rankings.html">Rankings</a>
         <a href="calendario-2027.html">Calendario</a>
         <a href="aprende/index.html">Aprende tenis</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
@@ -57,7 +71,7 @@
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Calendario 2027</h1>
-        <p>Grand Slams, finales y torneos de mil puntos. Si el cierre no está publicado, la ficha dice fecha por confirmar. Cada fecha enlaza la página de donde sale.</p>
+        <p>Las grandes citas de 2027, con la fuente oficial de cada fecha.</p>
       </div>
       <h2>Lo que queda de 2026</h2>
       <div class="card-grid">
@@ -82,21 +96,18 @@
           <h3>Roland Garros</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36">París · tierra batida</p>
           <p>23 de mayo–6 de junio de 2027</p>
-          <p>La ficha de la WTA da esa duración. El calendario ATP marca el inicio el 23 de mayo.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/903/roland-garros/2027" target="_blank" rel="noopener noreferrer">WTA, Roland Garros 2027</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
         </article>
         <article class="card">
           <h3>Wimbledon</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-grass.svg?v=3326d922fe" alt="" width="36" height="36">Wimbledon · hierba</p>
           <p>28 de junio–11 de julio de 2027</p>
-          <p>La ficha de la WTA da esa duración. El calendario ATP marca el inicio el 28 de junio.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/904/wimbledon/2027" target="_blank" rel="noopener noreferrer">WTA, Wimbledon 2027</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a></p>
         </article>
         <article class="card">
           <h3>US Open</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Nueva York · pista dura</p>
           <p>Empieza el 29 de agosto de 2027. Fecha de cierre por confirmar.</p>
-          <p>El calendario ATP marca el inicio el 29 de agosto y ocupa dos semanas. La WTA lo sitúa en la semana del 30 de agosto. Ninguna de las dos publica aquí el día de cierre.</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
         </article>
       </div>
@@ -106,7 +117,7 @@
           <h3>Nitto ATP Finals</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">Italia · pista dura indoor</p>
           <p>Empieza el 14 de noviembre de 2027. Fecha de cierre por confirmar.</p>
-          <p>El calendario ATP marca el 14 de noviembre en Italia. El comunicado del 14 de enero de 2026 describe la final de temporada en Turín y anuncia una séptima edición en Italia.</p>
+          <p>Séptima edición en Italia.</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2027</a> · <a href="https://www.atptour.com/-/media/sites/atp-tour/press/press-releases/2027-atp-tour-calendar-announced.pdf" target="_blank" rel="noopener noreferrer">ATP, comunicado del calendario 2027</a></p>
         </article>
         <article class="card">
@@ -119,12 +130,11 @@
         <article class="card">
           <h3>Next Gen ATP Finals</h3>
           <p>Sede y fechas por confirmar.</p>
-          <p>El comunicado de la ATP del 14 de enero de 2026 dice que la ciudad anfitriona se confirmaría en 2026.</p>
+          <p>La sede se confirmará durante 2026.</p>
           <p>Fuentes: <a href="https://www.atptour.com/-/media/sites/atp-tour/press/press-releases/2027-atp-tour-calendar-announced.pdf" target="_blank" rel="noopener noreferrer">ATP, comunicado del calendario 2027</a></p>
         </article>
       </div>
       <h2>ATP Masters 1000</h2>
-      <p class="section-intro">El calendario ATP publica el día de inicio. La fecha de cierre no figura en esa fila, así que queda por confirmar.</p>
       <div class="card-grid">
         <article class="card">
           <h3>BNP Paribas Open</h3>
@@ -206,7 +216,6 @@
           <h3>Miami Open presented by Itaú</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Miami · pista dura</p>
           <p>16–28 de marzo de 2027</p>
-          <p>El calendario ATP marca el inicio del torneo masculino el 17 de marzo. Aquí figura el tramo que publica la WTA.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/902/miami/2027" target="_blank" rel="noopener noreferrer">WTA, Miami 2027</a></p>
         </article>
         <article class="card">
@@ -237,7 +246,7 @@
           <h3>China Open</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Pekín · pista dura</p>
           <p>29 de septiembre–10 de octubre de 2027</p>
-          <p>La ficha de la WTA lo clasifica como WTA 1000.</p>
+          <p>WTA 1000 en pista dura.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/1020/beijing/2027" target="_blank" rel="noopener noreferrer">WTA, Pekín 2027</a></p>
         </article>
         <article class="card">
@@ -262,7 +271,8 @@
           <a href="index.html#hoy">Hoy</a>
           <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
-          <a href="jugadores/index.html">Rankings</a>
+          <a href="rankings.html">Rankings</a>
+          <a href="jugadores/index.html">Jugadores en español</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
@@ -282,11 +292,12 @@
           <a href="aviso-legal.html">Aviso legal</a>
           <a href="privacidad.html">Privacidad</a>
           <a href="cookies.html">Cookies</a>
+          <a href="creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

@@ -1,0 +1,89 @@
+{
+  "updated": "2026-10-18",
+  "items": [
+    {
+      "id": "pista-tierra",
+      "kind": "photo",
+      "title": "Pista de tierra vacía en Melbourne",
+      "src": "/photos/pista-tierra.webp",
+      "author": "KeepActive Australia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg",
+      "pages": ["Portada", "Qué ver esta semana"]
+    },
+    {
+      "id": "pista-silla",
+      "kind": "photo",
+      "title": "Pista vacía con silla de juez",
+      "src": "/photos/pista-silla.webp",
+      "author": "Shixart1985",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg",
+      "pages": ["Anúnciate"]
+    },
+    {
+      "id": "raquetas",
+      "kind": "photo",
+      "title": "Raquetas y pelotas sobre tierra batida",
+      "src": "/photos/raquetas.webp",
+      "author": "KeepActive Australia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg",
+      "pages": ["Aprende tenis"]
+    },
+    {
+      "id": "pelota",
+      "kind": "photo",
+      "title": "Pelota de tenis",
+      "src": "/photos/pelota.webp",
+      "author": "Christian VisualBeo Horvat",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennisball.jpg",
+      "pages": ["Créditos"]
+    },
+    {
+      "id": "diagramas",
+      "kind": "illustration",
+      "title": "Iconos de superficie, pista y marcador",
+      "src": "/assets/diagrams/court.svg",
+      "author": "AceArena",
+      "license": "Ilustración propia",
+      "licenseUrl": "",
+      "sourceName": "AceArena",
+      "sourceUrl": "https://acearena.io/",
+      "pages": ["Reglas", "Semana", "Calendario", "Fichas"]
+    },
+    {
+      "id": "avatares",
+      "kind": "illustration",
+      "title": "Avatares con iniciales",
+      "src": "",
+      "author": "AceArena",
+      "license": "Ilustración propia",
+      "licenseUrl": "",
+      "sourceName": "AceArena",
+      "sourceUrl": "https://acearena.io/jugadores/",
+      "pages": ["Jugadores"]
+    },
+    {
+      "id": "cabeceras",
+      "kind": "illustration",
+      "title": "Cabeceras de noticia",
+      "src": "/art/davidovich-fokina-gana-el-masters-de-shanghai.webp",
+      "author": "AceArena",
+      "license": "Gráfico propio",
+      "licenseUrl": "",
+      "sourceName": "AceArena",
+      "sourceUrl": "https://acearena.io/noticias/",
+      "pages": ["Noticias"]
+    }
+  ]
+}

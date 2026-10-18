@@ -36,7 +36,7 @@
           "when": "23 de mayo–6 de junio de 2027",
           "place": "París",
           "surface": "tierra batida",
-          "detail": "La ficha de la WTA da esa duración. El calendario ATP marca el inicio el 23 de mayo.",
+          "detail": "",
           "sources": [
             { "name": "WTA, Roland Garros 2027", "url": "https://www.wtatennis.com/tournaments/903/roland-garros/2027" },
             { "name": "ATP, calendario 2027", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" }
@@ -47,7 +47,7 @@
           "when": "28 de junio–11 de julio de 2027",
           "place": "Wimbledon",
           "surface": "hierba",
-          "detail": "La ficha de la WTA da esa duración. El calendario ATP marca el inicio el 28 de junio.",
+          "detail": "",
           "sources": [
             { "name": "WTA, Wimbledon 2027", "url": "https://www.wtatennis.com/tournaments/904/wimbledon/2027" },
             { "name": "ATP, calendario 2027", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" }
@@ -58,7 +58,7 @@
           "when": "Empieza el 29 de agosto de 2027. Fecha de cierre por confirmar.",
           "place": "Nueva York",
           "surface": "pista dura",
-          "detail": "El calendario ATP marca el inicio el 29 de agosto y ocupa dos semanas. La WTA lo sitúa en la semana del 30 de agosto. Ninguna de las dos publica aquí el día de cierre.",
+          "detail": "",
           "sources": [
             { "name": "ATP, calendario 2027", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" },
             { "name": "WTA, calendario 2027 a 1 de octubre de 2026", "url": "https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" }
@@ -74,7 +74,7 @@
           "when": "Empieza el 14 de noviembre de 2027. Fecha de cierre por confirmar.",
           "place": "Italia",
           "surface": "pista dura indoor",
-          "detail": "El calendario ATP marca el 14 de noviembre en Italia. El comunicado del 14 de enero de 2026 describe la final de temporada en Turín y anuncia una séptima edición en Italia.",
+          "detail": "Séptima edición en Italia.",
           "sources": [
             { "name": "ATP, calendario 2027", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2026/2027-atp-tour-calendar-14-january-2026-updated.pdf" },
             { "name": "ATP, comunicado del calendario 2027", "url": "https://www.atptour.com/-/media/sites/atp-tour/press/press-releases/2027-atp-tour-calendar-announced.pdf" }
@@ -96,7 +96,7 @@
           "when": "Sede y fechas por confirmar.",
           "place": "",
           "surface": "",
-          "detail": "El comunicado de la ATP del 14 de enero de 2026 dice que la ciudad anfitriona se confirmaría en 2026.",
+          "detail": "La sede se confirmará durante 2026.",
           "sources": [
             { "name": "ATP, comunicado del calendario 2027", "url": "https://www.atptour.com/-/media/sites/atp-tour/press/press-releases/2027-atp-tour-calendar-announced.pdf" }
           ]
@@ -105,7 +105,7 @@
     },
     {
       "title": "ATP Masters 1000",
-      "intro": "El calendario ATP publica el día de inicio. La fecha de cierre no figura en esa fila, así que queda por confirmar.",
+      "intro": "",
       "events": [
         {
           "name": "BNP Paribas Open",
@@ -238,7 +238,7 @@
           "when": "16–28 de marzo de 2027",
           "place": "Miami",
           "surface": "pista dura",
-          "detail": "El calendario ATP marca el inicio del torneo masculino el 17 de marzo. Aquí figura el tramo que publica la WTA.",
+          "detail": "",
           "sources": [
             { "name": "WTA, Miami 2027", "url": "https://www.wtatennis.com/tournaments/902/miami/2027" }
           ]
@@ -288,7 +288,7 @@
           "when": "29 de septiembre–10 de octubre de 2027",
           "place": "Pekín",
           "surface": "pista dura",
-          "detail": "La ficha de la WTA lo clasifica como WTA 1000.",
+          "detail": "WTA 1000 en pista dura.",
           "sources": [
             { "name": "WTA, Pekín 2027", "url": "https://www.wtatennis.com/tournaments/1020/beijing/2027" }
           ]

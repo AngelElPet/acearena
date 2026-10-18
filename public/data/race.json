@@ -6,11 +6,19 @@
     "name": "ATP, PIF ATP Live Race to Turin",
     "url": "https://www.atptour.com/en/rankings/singles-race-to-turin"
   },
-  "context": "Lista consultada el 18 de octubre de 2026, ya con la final de Shanghái. Jannik Sinner figura segundo. La ATP informó el 6 de octubre de que no volverá a competir en 2026 y no defenderá el título de las Nitto ATP Finals. Esa página de la Race no publica una plaza extra ni dice que el noveno puesto entre por la baja.",
+  "context": "Sinner, segundo, no jugará las Finals: anunció su baja el 6 de octubre. Según Mundo Deportivo, eso deja el corte en el noveno puesto, el que ocupa hoy Rafael Jódar. La ATP todavía no lo dice en esta página.",
   "contextSources": [
     {
       "name": "ATP, baja de Sinner el 6 de octubre de 2026",
       "url": "https://www.atptour.com/en/news/sinner-2026-injury-announcement-october"
+    },
+    {
+      "name": "Mundo Deportivo",
+      "url": "https://www.mundodeportivo.com/tenis/20261018/1004240128/jodar-nuevo-top-10-mundial-record-ganar-shanghai-asi-queda-ranking-atp.html"
+    },
+    {
+      "name": "ATP, el ranking explicado",
+      "url": "https://www.atptour.com/en/news/tennis-explained-atp-"
     }
   ],
   "rows": [

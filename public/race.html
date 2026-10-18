@@ -25,7 +25,21 @@
   <meta name="twitter:title" content="Race a Turín | AceArena">
   <meta name="twitter:description" content="Top 10 de la PIF ATP Live Race to Turin a 18 de octubre de 2026, con la fuente de la ATP.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","name":"PIF ATP Live Race to Turin","url":"https://acearena.io/race.html","inLanguage":"es","dateModified":"2026-10-18","citation":"https://www.atptour.com/en/rankings/singles-race-to-turin","isPartOf":{"@type":"WebSite","name":"AceArena","url":"https://acearena.io/"}}
   </script>
@@ -50,7 +64,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
-        <a href="jugadores/index.html">Rankings</a>
+        <a href="rankings.html">Rankings</a>
         <a href="calendario-2027.html">Calendario</a>
         <a href="aprende/index.html">Aprende tenis</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
@@ -65,7 +79,9 @@
         <h1>PIF ATP Live Race to Turin</h1>
         <p>Top 10 consultado el 18 de octubre de 2026. Fuente: <a href="https://www.atptour.com/en/rankings/singles-race-to-turin" target="_blank" rel="noopener noreferrer">ATP, PIF ATP Live Race to Turin</a>.</p>
       </div>
-      <p>Lista consultada el 18 de octubre de 2026, ya con la final de Shanghái. Jannik Sinner figura segundo. La ATP informó el 6 de octubre de que no volverá a competir en 2026 y no defenderá el título de las Nitto ATP Finals. Esa página de la Race no publica una plaza extra ni dice que el noveno puesto entre por la baja.</p>
+      <p>Sinner, segundo, no jugará las Finals: anunció su baja el 6 de octubre. Según Mundo Deportivo, eso deja el corte en el noveno puesto, el que ocupa hoy Rafael Jódar. La ATP todavía no lo dice en esta página.</p>
+      <p><a href="noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html">Jódar, noveno en la Race a Turín tras Shanghái</a>.</p>
+      <p>Cómo se clasifica: los 8 primeros de la Race al final de la temporada juegan las Nitto ATP Finals de Turín. <a href="aprende/como-funciona-el-ranking-atp.html">Cómo funciona el ranking ATP</a>.</p>
       <div class="results-table-wrap">
         <table class="rank-table">
           <caption>PIF ATP Live Race to Turin · 18 de octubre de 2026</caption>
@@ -130,7 +146,7 @@
           </tbody>
         </table>
       </div>
-      <p class="as-of">Contexto: <a href="https://www.atptour.com/en/news/sinner-2026-injury-announcement-october" target="_blank" rel="noopener noreferrer">ATP, baja de Sinner el 6 de octubre de 2026</a>. El ranking de 52 semanas, a 12 de octubre de 2026, sigue en la <a href="index.html#rankings">portada</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
+      <p class="as-of">Contexto: <a href="https://www.atptour.com/en/news/sinner-2026-injury-announcement-october" target="_blank" rel="noopener noreferrer">ATP, baja de Sinner el 6 de octubre de 2026</a> · <a href="https://www.mundodeportivo.com/tenis/20261018/1004240128/jodar-nuevo-top-10-mundial-record-ganar-shanghai-asi-queda-ranking-atp.html" target="_blank" rel="noopener noreferrer">Mundo Deportivo</a> · <a href="https://www.atptour.com/en/news/tennis-explained-atp-" target="_blank" rel="noopener noreferrer">ATP, el ranking explicado</a>. El ranking de 52 semanas está en <a href="rankings.html">Rankings</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
     </div>
   </main>
 
@@ -146,7 +162,8 @@
           <a href="index.html#hoy">Hoy</a>
           <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
-          <a href="jugadores/index.html">Rankings</a>
+          <a href="rankings.html">Rankings</a>
+          <a href="jugadores/index.html">Jugadores en español</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
@@ -166,11 +183,12 @@
           <a href="aviso-legal.html">Aviso legal</a>
           <a href="privacidad.html">Privacidad</a>
           <a href="cookies.html">Cookies</a>
+          <a href="creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

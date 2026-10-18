@@ -25,7 +25,21 @@
   <meta name="twitter:title" content="Jessica Bouzas Maneiro | AceArena">
   <meta name="twitter:description" content="Jessica Bouzas Maneiro, WTA. Número 99 · 750 puntos. Actualizado a 12 de octubre de 2026.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="../styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Jessica Bouzas Maneiro","url":"https://acearena.io/jugadores/jessica-bouzas-maneiro.html","sameAs":["https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/"],"nationality":"España","birthDate":"2002-09-24","height":"170 cm","jobTitle":"tenista"}
   </script>
@@ -47,7 +61,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
-        <a href="../jugadores/index.html">Rankings</a>
+        <a href="../rankings.html">Rankings</a>
         <a href="../calendario-2027.html">Calendario</a>
         <a href="../aprende/index.html">Aprende tenis</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
@@ -68,8 +82,8 @@
       <p><a href="https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/" target="_blank" rel="noopener noreferrer">Ficha oficial WTA</a></p>
       <h2>Biografía</h2>
         <p>Jessica Bouzas Maneiro nació el 24 de septiembre de 2002 en Galicia. Mide 1,70 m.</p>
-      <h2>Cómo juega</h2>
-        <p>Juega con la derecha.</p>
+      <h2>Ficha técnica</h2>
+      <p class="sheet">Mano: diestra · Estatura: 1,70 m · Nacimiento: 24 de septiembre de 2002, Galicia</p>
       <h2>Trayectoria</h2>
       <ul>
           <li>Alcanzó el puesto 40 el 18 de agosto de 2025, su mejor ranking, y cerró 2025 en el puesto 42.</li>
@@ -99,7 +113,8 @@
           <a href="../index.html#hoy">Hoy</a>
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
-          <a href="../jugadores/index.html">Rankings</a>
+          <a href="../rankings.html">Rankings</a>
+          <a href="../jugadores/index.html">Jugadores en español</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -119,11 +134,12 @@
           <a href="../aviso-legal.html">Aviso legal</a>
           <a href="../privacidad.html">Privacidad</a>
           <a href="../cookies.html">Cookies</a>
+          <a href="../creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

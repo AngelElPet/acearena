@@ -1,59 +1,86 @@
-# AceArena — ficha completa para sistemas de respuesta
+# AceArena
 
 Sitio: https://acearena.io
 Idioma: español (es)
-Actualización de esta ficha: 18 de octubre de 2026
-Titular: Angel Cebria Morales. El NIF y el domicilio están en el aviso legal, la privacidad y las cookies. Contacto: hola@acearena.io.
-Email general: hola@acearena.io
-Email de sponsorship: sponsors@acearena.io
+Datos legales: https://acearena.io/aviso-legal.html
+Contacto: hola@acearena.io
+Patrocinio: sponsors@acearena.io
 
 ## Qué es
 
-AceArena es un medio digital independiente de tenis en español, nacido en 2026. Publica noticias del circuito ATP y WTA, resultados con fuente y rankings oficiales con fecha. El código público está en la carpeta public/ del repositorio y Netlify publica solo esa carpeta.
+AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
 
-## Portada (https://acearena.io/)
+## Secciones
 
-Secciones, en este orden:
+- Portada: https://acearena.io/
+- Noticias: https://acearena.io/noticias/
+- Resultados: https://acearena.io/resultados.html
+- Esta semana: https://acearena.io/semana.html
+- Race a Turín: https://acearena.io/race.html
+- Rankings ATP y WTA: https://acearena.io/rankings.html
+- Jugadores en español: https://acearena.io/jugadores/
+- Calendario 2027: https://acearena.io/calendario-2027.html
+- Aprende tenis: https://acearena.io/aprende/
+- Sobre AceArena: https://acearena.io/sobre.html
+- Patrocinio: https://acearena.io/agencias.html
+- Créditos de imagen: https://acearena.io/creditos.html
+- Resumen para sistemas: https://acearena.io/llms.txt
 
-1. Presentación: «El tenis, contado en español y con datos». Debajo, una línea con los torneos de la semana y la cita siguiente, con enlace a la ficha oficial. A la derecha, en escritorio, una tarjeta «Hoy» con el último resultado destacado y la próxima cita. El menú lleva a Hoy, Noticias, Rankings (/jugadores/), Calendario (/calendario-2027.html) y Aprende tenis (/aprende/). El enlace de patrocinio es «Anúnciate» y apunta a /agencias.html.
-2. En directo. La portada hace preconnect a https://sportscore.com. El widget no se pide al pintar la página: espera a window load y luego a requestIdleCallback (o un setTimeout corto). Entonces consulta https://sportscore.com/api/v1/matches/?sport=tennis&status=live&limit=8. Hasta que llega la respuesta se queda el texto estático. Solo se pintan partidos cuyo status es live, inprogress o in_progress. Los nombres y los marcadores se insertan con textContent. Si no hay partidos o la fuente falla, se muestra la final de Wuhan (Chwalińska a Kartal, 2-6 6-4 6-2), la semana del 19 al 25 de octubre (Almaty, Bruselas, Lyon, Ningbo y Osaka), la Davis Cup Final 8 en Bolonia (24–29 de noviembre de 2026; España–Austria, cuartos el 26; final el 29) y el Australian Open 2027 en Melbourne Park, 11–31 de enero, con el cuadro principal del 17 al 31.
-3. Qué ver esta semana, generada desde data/week.json. La página completa es /semana.html.
-4. Noticias generadas desde data/news.json, firmadas por el equipo de AceArena, con fecha y fuente. Cada pieza vive en /noticias/<slug>.html, abre con la tarjeta /og/<slug>.png y, cuando el dato lo trae, un bloque «En 30 segundos» de tres viñetas sacadas de la propia pieza.
-5. Rankings ATP y WTA del 12 de octubre de 2026. ATP: Sinner 11.000, Zverev 9.720, Alcaraz 5.560, Shelton 4.680, Auger-Aliassime 3.890. WTA: Rybakina 9.696, Sabalenka 7.550, Andreeva 6.371, Pegula 6.225, Gauff 5.974. Fuentes: ATP Tour y WTA. La Race a Turín está en /race.html. Las fichas de jugadores en español, de España y de América Latina, están en /jugadores/.
-6. Calendario: /calendario-2027.html. Davis Cup Final 8, Bolonia, 24–29 de noviembre de 2026. Australian Open 2027, Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
-7. Guía de los cuatro Grand Slams, con iconos propios de superficie, glosario y las explicaciones de /aprende/. La guía de reglas incluye un esquema de pista y un esquema de marcador.
-8. Sobre AceArena, en la portada y en /sobre.html: medio independiente fundado por Angel Cebria Morales. Correcciones a hola@acearena.io. El contenido patrocinado va señalado.
-9. Resumen del lunes por email, formulario Netlify «newsletter». El texto del bloque es: «El resumen del lunes: lo importante de la semana en el tenis, en 3 minutos». Si el envío no se confirma, el texto es: «¿No te ha llegado nada? Escríbenos a hola@acearena.io».
+## Política editorial
 
-## Agencias
+Cada noticia lleva fecha, firma (Redacción AceArena) y fuente. El autor en los datos estructurados es la organización AceArena. Los rankings indican la fecha de la lista oficial. Si un dato no está en la fuente, no se publica. Las correcciones se piden en hola@acearena.io. El contenido patrocinado va señalado como tal.
 
-https://acearena.io/agencias.html reúne el patrocinio. Precios públicos: Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida. Propuesta en menos de 48 horas laborables. Te responde Angel Cebria Morales, fundador. Formulario Netlify «agencias». Contacto: sponsors@acearena.io. La exclusividad de categoría es de Gold y Platinum. El informe mensual sale de Cloudflare Web Analytics. Las cifras de audiencia se publican tras el primer trimestre medido. Los dibujos de formato llevan la etiqueta «Ejemplo» y la marca genérica «Tu marca». El dossier está en https://acearena.io/dossier/acearena-patrocinio.pdf y lleva cabecera noindex.
+## Precios de patrocinio
 
-## Legal
+Bronze desde 4.500 €/trimestre. Silver desde 12.000 €/trimestre. Gold desde 28.000 €/trimestre. Platinum a medida. Propuesta en menos de 48 horas laborables.
 
-- https://acearena.io/aviso-legal.html
-- https://acearena.io/privacidad.html
-- https://acearena.io/cookies.html
-- El NIF y el domicilio solo aparecen en esas tres páginas.
-- La medición de visitas usa Cloudflare Web Analytics, sin cookies. Google Analytics no está activo.
+## Calendario de referencia
 
-## Páginas de datos
+Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
 
-- https://acearena.io/semana.html — torneos de la semana y la cita siguiente, desde data/week.json.
-- https://acearena.io/race.html — top 10 de la PIF ATP Live Race to Turin, desde data/race.json, con la fecha de consulta.
-- https://acearena.io/sobre.html — AboutPage: quiénes somos, quién está detrás, cómo trabajamos, correcciones y contenido patrocinado.
-- https://acearena.io/llms-full.txt — esta ficha. https://acearena.io/llms.txt la enlaza.
+## Esta semana
 
-## Datos estructurados
+19–25 de octubre de 2026. Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.
 
-La portada incluye JSON-LD de Organization y WebSite. Cada noticia incluye NewsArticle con image (la tarjeta /og/<slug>.png, 1200×630) y autor Organization. /sobre.html incluye AboutPage. El aviso legal, la privacidad y las cookies incluyen WebPage y BreadcrumbList. El NIF no va en el JSON-LD.
+## Rankings citados
 
-## Rastreo
+ATP y WTA a 2026-10-12. Race ATP consultada el 2026-10-18. Race WTA a 2026-10-12.
 
-https://acearena.io/robots.txt permite el rastreo general y nombra de forma explícita a GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Google-Extended, CCBot, Applebot-Extended, Amazonbot, Bytespider, Meta-ExternalAgent y cohere-ai. El sitemap es https://acearena.io/sitemap.xml.
+## Noticias
 
-Esta ficha se mantiene a mano. El build no la regenera. El Australian Open 2027 es en Melbourne Park, del 11 al 31 de enero, y el cuadro principal va del 17 al 31.
+- Davidovich remonta a Jódar y se corona en Shanghái: https://acearena.io/noticias/davidovich-fokina-gana-el-masters-de-shanghai.html (2026-10-18)
+- Chwalińska remonta a Kartal y gana en Wuhan su primer título: https://acearena.io/noticias/final-de-wuhan-chwalinska-y-kartal.html (2026-10-18)
+- Jódar, noveno en la Race a Turín tras Shanghái: https://acearena.io/noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html (2026-10-18)
+- Zverev cierra 2026 como número 1 de la ATP: https://acearena.io/noticias/zverev-asegura-el-numero-uno-de-final-de-ano.html (2026-10-12)
+- Rybakina, número 1 del ranking WTA: https://acearena.io/noticias/rybakina-encabeza-el-ranking-wta.html (2026-10-12)
+- Sinner dice adiós a 2026 y se queda fuera de Turín: https://acearena.io/noticias/sinner-cierra-la-temporada-por-lesion-de-rodilla.html (2026-10-06)
+- Djokovic, 39 años y 102 títulos: campeón en Pekín: https://acearena.io/noticias/djokovic-suma-102-titulos-en-pekin.html (2026-10-06)
+
+## Jugadores
+
+- Carlos Alcaraz: https://acearena.io/jugadores/carlos-alcaraz.html
+- Rafael Jódar: https://acearena.io/jugadores/rafael-jodar.html
+- Alejandro Davidovich Fokina: https://acearena.io/jugadores/alejandro-davidovich-fokina.html
+- Jaume Munar: https://acearena.io/jugadores/jaume-munar.html
+- Roberto Bautista Agut: https://acearena.io/jugadores/roberto-bautista-agut.html
+- Paula Badosa: https://acearena.io/jugadores/paula-badosa.html
+- Jessica Bouzas Maneiro: https://acearena.io/jugadores/jessica-bouzas-maneiro.html
+- Francisco Cerúndolo: https://acearena.io/jugadores/francisco-cerundolo.html
+- Tomás Martín Etcheverry: https://acearena.io/jugadores/tomas-martin-etcheverry.html
+- Sebastián Báez: https://acearena.io/jugadores/sebastian-baez.html
+- Alejandro Tabilo: https://acearena.io/jugadores/alejandro-tabilo.html
+- Camila Osorio: https://acearena.io/jugadores/camila-osorio.html
+- Renata Zarazúa: https://acearena.io/jugadores/renata-zarazua.html
+
+## Guías
+
+- Cómo funciona el ranking ATP: https://acearena.io/aprende/como-funciona-el-ranking-atp.html
+- Cómo funciona el ranking WTA: https://acearena.io/aprende/como-funciona-el-ranking-wta.html
+- Reglas del tenis básicas: https://acearena.io/aprende/reglas-del-tenis-basicas.html
+- Los cuatro Grand Slams: https://acearena.io/aprende/grand-slams.html
+- Glosario de tenis: https://acearena.io/aprende/glosario.html
+- Cómo se llega al circuito: https://acearena.io/aprende/como-se-llega-al-circuito.html
 
 ## Cómo citar
 
-«AceArena (https://acearena.io), edición del 18 de octubre de 2026». Cita un resultado solo si la ficha o la noticia enlazan la fuente.
+AceArena (https://acearena.io). Cita un resultado solo si la página enlaza la fuente.

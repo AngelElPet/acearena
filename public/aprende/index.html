@@ -25,7 +25,21 @@
   <meta name="twitter:title" content="Aprende tenis | AceArena">
   <meta name="twitter:description" content="Cómo funcionan los rankings ATP y WTA, y las reglas básicas del marcador, con enlace a la fuente oficial.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="stylesheet" href="../styles.css">
+  <style>
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
+.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+@media (max-width:800px){
+  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+}
+</style>
+  <link rel="preconnect" href="https://cloudflareinsights.com">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://acearena.io/"},{"@type":"ListItem","position":2,"name":"Aprende tenis","item":"https://acearena.io/aprende/"}]}
   </script>
@@ -44,7 +58,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
-        <a href="../jugadores/index.html">Rankings</a>
+        <a href="../rankings.html">Rankings</a>
         <a href="../calendario-2027.html">Calendario</a>
         <a href="../aprende/index.html">Aprende tenis</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
@@ -57,7 +71,11 @@
       <div class="section-header">
         <span class="section-tag">Guías</span>
         <h1>Aprende tenis</h1>
-        <p>Tres explicaciones cortas para seguir el circuito: el ranking ATP, el ranking WTA y el marcador.</p>
+        <figure class="photo-figure">
+          <img src="../photos/raquetas.webp" srcset="../photos/raquetas-800.webp 640w, ../photos/raquetas.webp 960w" sizes="(max-width: 800px) 100vw, 720px" alt="Raquetas y pelotas sobre una pista de tierra." width="960" height="640">
+          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
+        <p>Guías cortas para seguir el circuito: rankings, marcador, Grand Slams, glosario y el camino hasta la ATP y la WTA.</p>
       </div>
       <div class="card-grid">
         <article class="card">
@@ -75,6 +93,21 @@
           <h2><a href="reglas-del-tenis-basicas.html">Reglas del tenis básicas</a></h2>
           <p>Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.</p>
         </article>
+        <article class="card">
+          <p class="kicker">Grand Slams</p>
+          <h2><a href="grand-slams.html">Los cuatro Grand Slams</a></h2>
+          <p>Australian Open, Roland Garros, Wimbledon y US Open: superficie y fechas de 2027 con la fuente oficial.</p>
+        </article>
+        <article class="card">
+          <p class="kicker">Glosario</p>
+          <h2><a href="glosario.html">Glosario de tenis</a></h2>
+          <p>Trece palabras para seguir un partido y el circuito: del break al wild card, con la fuente de la ITF.</p>
+        </article>
+        <article class="card">
+          <p class="kicker">Circuito</p>
+          <h2><a href="como-se-llega-al-circuito.html">Cómo se llega al circuito</a></h2>
+          <p>Del circuito júnior de la ITF al ITF World Tennis Tour, al Challenger o al WTA 125, y de ahí a la ATP y la WTA.</p>
+        </article>
       </div>
     </div>
   </main>
@@ -91,7 +124,8 @@
           <a href="../index.html#hoy">Hoy</a>
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
-          <a href="../jugadores/index.html">Rankings</a>
+          <a href="../rankings.html">Rankings</a>
+          <a href="../jugadores/index.html">Jugadores en español</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -111,11 +145,12 @@
           <a href="../aviso-legal.html">Aviso legal</a>
           <a href="../privacidad.html">Privacidad</a>
           <a href="../cookies.html">Cookies</a>
+          <a href="../creditos.html">Créditos</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

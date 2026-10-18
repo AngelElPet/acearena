@@ -525,6 +525,90 @@ function classifyLink(fromFile, raw, publicDir) {
   return { file: filePath, hash, raw: value };
 }
 
+function cssSelectors(block) {
+  const selectors = [];
+  let depth = 0;
+  let buffer = '';
+  for (const char of block) {
+    if (char === '{') {
+      if (depth === 0) {
+        selectors.push(buffer);
+        buffer = '';
+      }
+      depth += 1;
+    } else if (char === '}') {
+      depth = Math.max(0, depth - 1);
+    } else if (depth === 0) {
+      buffer += char;
+    }
+  }
+  return selectors.flatMap((selector) => selector.split(',')).map((part) => part.trim().replace(/\s+/g, ' ')).filter((part) => part && !part.startsWith('@') && !part.includes(':'));
+}
+
+function splitSelectors(header) {
+  return header.split(',').map((part) => part.trim().replace(/\s+/g, ' ')).filter((part) => part && !part.startsWith('@') && !part.includes(':'));
+}
+
+export function cssCascadeErrors(css) {
+  const clean = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const errors = [];
+  const media = [];
+  const at = /@media[^{]*\(\s*max-width\s*:[^{]*\{/g;
+  let match;
+  while ((match = at.exec(clean))) {
+    const open = match.index + match[0].length - 1;
+    let depth = 0;
+    let end = open;
+    for (let index = open; index < clean.length; index += 1) {
+      if (clean[index] === '{') depth += 1;
+      else if (clean[index] === '}') {
+        depth -= 1;
+        if (depth === 0) {
+          end = index + 1;
+          break;
+        }
+      }
+    }
+    media.push({
+      end,
+      selectors: new Set(cssSelectors(clean.slice(open + 1, end - 1))),
+    });
+  }
+  if (media.length === 0) return errors;
+  const base = [];
+  let depth = 0;
+  let buffer = '';
+  let ruleStart = 0;
+  for (let index = 0; index < clean.length; index += 1) {
+    const char = clean[index];
+    if (char === '{') {
+      if (depth === 0) {
+        const header = buffer;
+        if (!header.includes('@')) base.push({ at: ruleStart, selectors: splitSelectors(header) });
+        buffer = '';
+      }
+      depth += 1;
+    } else if (char === '}') {
+      depth = Math.max(0, depth - 1);
+      if (depth === 0) ruleStart = index + 1;
+    } else if (depth === 0) {
+      if (!buffer.trim()) ruleStart = index;
+      buffer += char;
+    }
+  }
+  for (const block of media) {
+    for (const rule of base) {
+      if (rule.at < block.end) continue;
+      for (const selector of rule.selectors) {
+        if (block.selectors.has(selector)) {
+          errors.push(`styles.css: la regla base «${selector}» aparece después de un @media (max-width) que también la define`);
+        }
+      }
+    }
+  }
+  return errors;
+}
+
 export function validateSite(rootDir) {
   const errors = [];
   const publicDir = join(rootDir, 'public');
@@ -598,6 +682,8 @@ export function validateSite(rootDir) {
   for (const required of ['/jugadores/', '/calendario-2027.html', '/aprende/como-funciona-el-ranking-atp.html']) {
     if (!sitemap.includes(`https://acearena.io${required}`)) errors.push(`falta en el sitemap: ${required}`);
   }
+  const cssOrder = cssCascadeErrors(readFileSync(join(publicDir, 'styles.css'), 'utf8'));
+  errors.push(...cssOrder);
   const llmsFull = readFileSync(join(publicDir, 'llms-full.txt'), 'utf8');
   if (llmsFull.includes('18–31')) errors.push('public/llms-full.txt sigue con el tramo antiguo del Australian Open');
   if (!llmsFull.includes('11–31 de enero') || !llmsFull.includes('17–31')) {
@@ -698,6 +784,6 @@ function main() {
   console.log(`OK: ${news.length} artículos, ${results.results.length} resultados${siteNote}`);
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main();
 }

@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-18",
   "range": "19–25 de octubre de 2026",
-  "hoursNote": "No hay horas en Madrid, Buenos Aires ni Ciudad de México: el orden de juego oficial de estos torneos no las publica en esas zonas.",
+  "hoursNote": "Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.",
   "hero": [
     { "text": "Esta semana: " },
     { "text": "Almaty", "href": "https://www.atptour.com/en/tournaments/almaty/9410/overview" },
@@ -39,7 +39,7 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/almaty/9410/overview",
-      "detail": "El calendario ATP marca la semana del 19 de octubre y la superficie IH (indoor hard). La ficha del torneo da las fechas 19–25 de octubre en Almaty.",
+      "detail": "ATP 250 bajo techo en Almaty (Kazajistán).",
       "entries": "",
       "sources": [
         { "name": "ATP, ficha del Almaty Open", "url": "https://www.atptour.com/en/tournaments/almaty/9410/overview" },
@@ -55,8 +55,8 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/brussels/7485/overview",
-      "detail": "La ATP lo sitúa en el Brussels Expo (Palais 12 / Palais 5). El calendario marca superficie IH.",
-      "entries": "La previa de la ATP del 14 de octubre incluye, entre otros, a Alejandro Davidovich Fokina y a Francisco Cerúndolo.",
+      "detail": "ATP 250 bajo techo en el Brussels Expo. En el cuadro: Alejandro Davidovich Fokina, recién campeón en Shanghái, y Francisco Cerúndolo.",
+      "entries": "",
       "sources": [
         { "name": "ATP, previa del European Open 2026", "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" },
         { "name": "ATP, ficha de Bruselas", "url": "https://www.atptour.com/en/tournaments/brussels/7485/overview" },
@@ -72,8 +72,8 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/lyon/496/overview",
-      "detail": "Se juega en el LDLC Arena, un pabellón cubierto. El calendario ATP marca superficie IH.",
-      "entries": "La previa de la ATP del 14 de octubre nombra a Flavio Cobolli, Taylor Fritz, Ugo Humbert, Valentin Vacherot, Tommy Paul, Brandon Nakashima y Stan Wawrinka. En ese listado no hay españoles ni latinoamericanos.",
+      "detail": "ATP 250 bajo techo en el LDLC Arena. Nombres destacados de la previa ATP: Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.",
+      "entries": "",
       "sources": [
         { "name": "ATP, previa de Lyon 2026", "url": "https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" },
         { "name": "ATP, ficha de Lyon", "url": "https://www.atptour.com/en/tournaments/lyon/496/overview" },
@@ -89,7 +89,7 @@
       "surface": "hard",
       "surfaceLabel": "pista dura",
       "officialUrl": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
-      "detail": "La WTA lo describe como un WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center. El calendario WTA, a 2 de octubre de 2026, lo pone en la semana del 19 de octubre.",
+      "detail": "WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center.",
       "entries": "",
       "sources": [
         { "name": "WTA, ficha del Ningbo Open 2026", "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026" },
@@ -105,7 +105,7 @@
       "surface": "hard",
       "surfaceLabel": "pista dura",
       "officialUrl": "https://www.wtatennis.com/tournaments/405/osaka/2026",
-      "detail": "La WTA lo describe como un WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center. El calendario WTA lo pone en la misma semana que Ningbo.",
+      "detail": "WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center.",
       "entries": "",
       "sources": [
         { "name": "WTA, ficha del Japan Open 2026", "url": "https://www.wtatennis.com/tournaments/405/osaka/2026" },
@@ -123,7 +123,7 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/-/328/overview",
-      "detail": "La ficha ATP da esas fechas en Basilea. El calendario marca la semana del 26 de octubre y superficie IH.",
+      "detail": "ATP 500 bajo techo.",
       "entries": "",
       "sources": [
         { "name": "ATP, ficha de Basilea", "url": "https://www.atptour.com/en/tournaments/-/328/overview" },
@@ -139,7 +139,7 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/viena/337/overview",
-      "detail": "La ficha ATP da esas fechas en Viena. El calendario marca la misma semana que Basilea y superficie IH.",
+      "detail": "ATP 500 bajo techo.",
       "entries": "",
       "sources": [
         { "name": "ATP, ficha de Viena", "url": "https://www.atptour.com/en/tournaments/viena/337/overview" },
@@ -155,12 +155,30 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/-/352/overview",
-      "detail": "La ficha ATP da esas fechas en París. El calendario marca la semana del 2 de noviembre, Masters 1000 y superficie IH.",
+      "detail": "ATP Masters 1000 bajo techo. El último 1000 del año.",
       "entries": "",
       "sources": [
         { "name": "ATP, ficha del Rolex Paris Masters", "url": "https://www.atptour.com/en/tournaments/-/352/overview" },
         { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
       ]
+    }
+  ],
+  "spotlight": [
+    {
+      "name": "Alejandro Davidovich Fokina",
+      "href": "jugadores/alejandro-davidovich-fokina.html",
+      "tournament": "European Open de Bruselas",
+      "text": "En el cuadro del European Open, del 19 al 25 de octubre.",
+      "sourceName": "ATP, previa del European Open 2026",
+      "sourceUrl": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
+    },
+    {
+      "name": "Francisco Cerúndolo",
+      "href": "jugadores/francisco-cerundolo.html",
+      "tournament": "European Open de Bruselas",
+      "text": "En el cuadro del European Open, del 19 al 25 de octubre.",
+      "sourceName": "ATP, previa del European Open 2026",
+      "sourceUrl": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
     }
   ]
 }
