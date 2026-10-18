@@ -37,7 +37,7 @@
 
 ## Jugadores
 
-- [Jugadores en español](https://acearena.io/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
+- [Jugadores](https://acearena.io/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
 - [Carlos Alcaraz](https://acearena.io/jugadores/carlos-alcaraz.html): ATP, número 3 actualizado a 2026-10-12.
 - [Rafael Jódar](https://acearena.io/jugadores/rafael-jodar.html): ATP, número 13 actualizado a 2026-10-12.
 - [Alejandro Davidovich Fokina](https://acearena.io/jugadores/alejandro-davidovich-fokina.html): ATP, número 26 actualizado a 2026-10-12.
@@ -63,7 +63,7 @@
 
 ## Aprende tenis
 
-- [Guías](https://acearena.io/aprende/): rankings ATP y WTA, y reglas básicas del marcador.
+- [Guías](https://acearena.io/aprende/): rankings ATP y WTA, reglas, Grand Slams, glosario y cómo se llega al circuito.
 - [Cómo funciona el ranking ATP](https://acearena.io/aprende/como-funciona-el-ranking-atp.html): Qué cuenta el PIF ATP Rankings, cada cuánto se publica, cuántos torneos entran y qué es la Race to Turin.
 - [Cómo funciona el ranking WTA](https://acearena.io/aprende/como-funciona-el-ranking-wta.html): Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.
 - [Reglas del tenis básicas](https://acearena.io/aprende/reglas-del-tenis-basicas.html): Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.

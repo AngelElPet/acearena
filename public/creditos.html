@@ -27,11 +27,15 @@
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <style>
 html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+@font-face{font-family:"Space Grotesk Fallback";src:local("Arial");size-adjust:96%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif;font-size:1rem;line-height:1.6}
+.header{height:76px}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero,.page-section{padding-top:1.1rem}
 .hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1,.article-wrap h1,.scoreboard-score{font-family:"Space Grotesk","Space Grotesk Fallback",Arial,sans-serif}
+.article-wrap h1{margin:0 0 .8rem;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
 .hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
@@ -39,6 +43,7 @@ input,select,textarea{font-size:16px}
 .hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
 .scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
 .scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
+.article-summary{font-size:1.05rem}
 @media (max-width:800px){
   .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
   .hero-photo{display:none}
@@ -69,10 +74,11 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
+        <a href="semana.html">Esta semana</a>
         <a href="noticias/index.html">Noticias</a>
         <a href="rankings.html">Rankings</a>
-        <a href="calendario-2027.html">Calendario</a>
-        <a href="aprende/index.html">Aprende tenis</a>
+        <a href="jugadores/index.html">Jugadores</a>
+        <a href="aprende/index.html">Aprende</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -86,31 +92,31 @@ input,select,textarea{font-size:16px}
         <p>Fotografías con licencia de uso comercial y gráficos propios de AceArena. Actualizado el 18 de octubre de 2026.</p>
       </div>
       <figure class="photo-figure">
-        <img src="photos/pelota.webp" srcset="photos/pelota-800.webp 800w, photos/pelota.webp 1200w" sizes="(max-width: 800px) 100vw, 480px" alt="Pelota de tenis amarilla sobre fondo neutro." width="1200" height="800">
+        <img src="photos/pelota.webp?v=399821dd86" srcset="photos/pelota-800.webp?v=9329cc7164 800w, photos/pelota.webp?v=399821dd86 1200w" sizes="(max-width: 800px) 100vw, 480px" alt="Pelota de tenis amarilla sobre fondo neutro." width="1200" height="800">
         <figcaption>Foto: Christian VisualBeo Horvat, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
       </figure>
       <div class="card-grid">
         <article class="card">
           <h2>Pista de tierra vacía en Melbourne</h2>
-          <p><a href="/photos/pista-tierra.webp">/photos/pista-tierra.webp</a></p>
+          <p><a href="/photos/pista-tierra.webp?v=1f732a75b0">/photos/pista-tierra.webp</a></p>
           <p>Autor: KeepActive Australia. Licencia: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
           <p>Dónde aparece: Portada.</p>
         </article>
         <article class="card">
           <h2>Pista vacía con silla de juez</h2>
-          <p><a href="/photos/pista-silla.webp">/photos/pista-silla.webp</a></p>
+          <p><a href="/photos/pista-silla.webp?v=f7de016b9a">/photos/pista-silla.webp</a></p>
           <p>Autor: Shixart1985. Licencia: <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
           <p>Dónde aparece: Anúnciate.</p>
         </article>
         <article class="card">
           <h2>Raquetas y pelotas sobre tierra batida</h2>
-          <p><a href="/photos/raquetas.webp">/photos/raquetas.webp</a></p>
+          <p><a href="/photos/raquetas.webp?v=467379bf01">/photos/raquetas.webp</a></p>
           <p>Autor: KeepActive Australia. Licencia: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
           <p>Dónde aparece: Rybakina, número 1 de la WTA.</p>
         </article>
         <article class="card">
           <h2>Pelota de tenis</h2>
-          <p><a href="/photos/pelota.webp">/photos/pelota.webp</a></p>
+          <p><a href="/photos/pelota.webp?v=399821dd86">/photos/pelota.webp</a></p>
           <p>Autor: Christian VisualBeo Horvat. Licencia: <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
           <p>Dónde aparece: Sinner cierra la temporada, Créditos.</p>
         </article>
@@ -128,7 +134,7 @@ input,select,textarea{font-size:16px}
         </article>
         <article class="card">
           <h2>Cabeceras de noticia</h2>
-          <p><a href="/art/davidovich-fokina-gana-el-masters-de-shanghai.webp">/art/davidovich-fokina-gana-el-masters-de-shanghai.webp</a></p>
+          <p><a href="/art/davidovich-fokina-gana-el-masters-de-shanghai.webp?v=7a09187530">/art/davidovich-fokina-gana-el-masters-de-shanghai.webp</a></p>
           <p>Autor: AceArena. Licencia: Gráfico propio. Fuente: <a href="https://acearena.io/noticias/" target="_blank" rel="noopener noreferrer">AceArena</a>.</p>
           <p>Dónde aparece: Noticias.</p>
         </article>
@@ -161,7 +167,7 @@ input,select,textarea{font-size:16px}
           <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
           <a href="rankings.html">Rankings</a>
-          <a href="jugadores/index.html">Jugadores en español</a>
+          <a href="jugadores/index.html">Jugadores</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
@@ -194,6 +200,16 @@ input,select,textarea{font-size:16px}
     <a class="btn btn-primary btn-sm" href="index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

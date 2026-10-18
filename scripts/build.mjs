@@ -13,15 +13,30 @@ const publicDir = join(root, 'public');
 const SITE = 'https://acearena.io';
 const HOMEPAGE_MAX_AGE_DAYS = 60;
 const LLMS_LATEST = 20;
-const BEACON = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>`;
+const BEACON_TOKEN = 'd21dd5ee912c4c80b8c8a4232ec883fc';
+const BEACON = `<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "${BEACON_TOKEN}"}');
+  document.body.appendChild(s);
+})();
+</script>`;
 const BYLINE = 'Redacción AceArena';
 const CRITICAL_CSS = `<style>
 html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+@font-face{font-family:"Space Grotesk Fallback";src:local("Arial");size-adjust:96%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif;font-size:1rem;line-height:1.6}
+.header{height:76px}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero,.page-section{padding-top:1.1rem}
 .hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1,.article-wrap h1,.scoreboard-score{font-family:"Space Grotesk","Space Grotesk Fallback",Arial,sans-serif}
+.article-wrap h1{margin:0 0 .8rem;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
 .hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
@@ -29,6 +44,7 @@ input,select,textarea{font-size:16px}
 .hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
 .scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
 .scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
+.article-summary{font-size:1.05rem}
 @media (max-width:800px){
   .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
   .hero-photo{display:none}
@@ -106,7 +122,9 @@ function fillRegion(html, name, inner) {
 }
 
 function injectBeacon(html) {
-  const stripped = html.replace(/\n?<script defer src='https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js' data-cf-beacon='\{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"\}'><\/script>\n?/g, '\n');
+  const stripped = html
+    .replace(/\n?<script defer src='https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js' data-cf-beacon='\{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"\}'><\/script>\n?/g, '\n')
+    .replace(/\n?<script>\n\(function \(\) \{\n  var host = location\.hostname;\n  if \(host !== "acearena\.io" && host !== "www\.acearena\.io"\) return;\n  var s = document\.createElement\("script"\);\n  s\.src = "https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js";\n  s\.defer = true;\n  s\.setAttribute\("data-cf-beacon", '\{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"\}'\);\n  document\.body\.appendChild\(s\);\n\}\)\(\);\n<\/script>\n?/g, '\n');
   const at = stripped.lastIndexOf('</body>');
   if (at === -1) throw new Error('HTML sin </body>');
   const next = `${stripped.slice(0, at)}${BEACON}\n${stripped.slice(at)}`;
@@ -149,10 +167,11 @@ function chrome(depth) {
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="${p}index.html#hoy">Hoy</a>
+        <a href="${p}semana.html">Esta semana</a>
         <a href="${p}noticias/index.html">Noticias</a>
         <a href="${p}rankings.html">Rankings</a>
-        <a href="${p}calendario-2027.html">Calendario</a>
-        <a href="${p}aprende/index.html">Aprende tenis</a>
+        <a href="${p}jugadores/index.html">Jugadores</a>
+        <a href="${p}aprende/index.html">Aprende</a>
         <a href="${p}agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -172,7 +191,7 @@ function chrome(depth) {
           <a href="${p}semana.html">Esta semana</a>
           <a href="${p}noticias/index.html">Noticias</a>
           <a href="${p}rankings.html">Rankings</a>
-          <a href="${p}jugadores/index.html">Jugadores en español</a>
+          <a href="${p}jugadores/index.html">Jugadores</a>
           <a href="${p}race.html">Race a Turín</a>
           <a href="${p}resultados.html">Resultados</a>
           <a href="${p}calendario-2027.html">Calendario</a>
@@ -769,6 +788,7 @@ ${rows}
 function legalPage({ file, title, description, blocks }) {
   const body = blocks.map((block) => {
     if (typeof block === 'string') return `        <p>${esc(block)}</p>`;
+    if (typeof block.html === 'string') return `        <p>${block.html}</p>`;
     const links = block.links.map((link) => `<a href="${esc(link.href)}">${esc(link.label)}</a>`).join(' · ');
     return `        <p>${links}</p>`;
   }).join('\n');
@@ -874,15 +894,16 @@ const SURFACE_FILES = {
 function surfaceIcon(surface, prefix) {
   const file = SURFACE_FILES[surface];
   if (!file) return '';
-  return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="36" height="36">`;
+  return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="30" height="30">`;
 }
 
 function tournamentItem(event, prefix) {
   const entries = event.entries ? `\n          <p>${esc(event.entries)}</p>` : '';
+  const watch = event.watch ? `\n          <p><strong>A quién ver.</strong> ${esc(event.watch)}</p>` : '';
   return `        <li>
           <p class="kicker">${surfaceIcon(event.surface, prefix)}${esc(event.tour)} · ${esc(event.level)} · ${esc(event.surfaceLabel)}</p>
           <a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}
-          <p>${esc(event.detail)}</p>${entries}
+          <p>${esc(event.detail)}</p>${watch}${entries}
           <p>Fuentes: ${sourceLinks(event.sources)}</p>
         </li>`;
 }
@@ -1023,7 +1044,7 @@ ${rows}
           </tbody>
         </table>
       </div>
-      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas está en <a href="rankings.html">Rankings</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
+      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas está en <a href="rankings.html">Rankings</a>. <a href="jugadores/index.html">Jugadores</a>.</p>
     </div>
   </main>`;
   return page({
@@ -1171,7 +1192,7 @@ ${lines.join('\n')}
 
 ## Jugadores
 
-- [Jugadores en español](${SITE}/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
+- [Jugadores](${SITE}/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
 ${playerLines.join('\n')}
 
 ## Calendario
@@ -1182,7 +1203,7 @@ ${playerLines.join('\n')}
 
 ## Aprende tenis
 
-- [Guías](${SITE}/aprende/): rankings ATP y WTA, y reglas básicas del marcador.
+- [Guías](${SITE}/aprende/): rankings ATP y WTA, reglas, Grand Slams, glosario y cómo se llega al circuito.
 ${guideLines.join('\n')}
 
 ## El sitio
@@ -1235,7 +1256,7 @@ function rankingsPage(rankings, playersDoc) {
       <div class="section-header">
         <span class="section-tag">Rankings</span>
         <h1>Rankings ATP y WTA</h1>
-        <p>Top 20 del ranking oficial a ${esc(longDay(rankings.asOf))}. <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores en español</a>.</p>
+        <p>Top 20 del ranking oficial a ${esc(longDay(rankings.asOf))}. <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores</a>.</p>
       </div>
       <h2>${esc(rankings.atp.name)}</h2>
       <p>Fuente: <a href="${esc(rankings.atp.source.url)}" target="_blank" rel="noopener noreferrer">${esc(rankings.atp.source.name)}</a>.</p>
@@ -1362,7 +1383,7 @@ AceArena es un medio digital de tenis profesional. Cubre el circuito ATP y el WT
 - Esta semana: ${SITE}/semana.html
 - Race a Turín: ${SITE}/race.html
 - Rankings ATP y WTA: ${SITE}/rankings.html
-- Jugadores en español: ${SITE}/jugadores/
+- Jugadores: ${SITE}/jugadores/
 - Calendario 2027: ${SITE}/calendario-2027.html
 - Aprende tenis: ${SITE}/aprende/
 - Sobre AceArena: ${SITE}/sobre.html
@@ -1421,17 +1442,24 @@ function collectAssetHashes() {
       else hashes.set(next, createHash('sha256').update(readFileSync(full)).digest('hex').slice(0, 10));
     }
   };
-  walk(join(publicDir, 'assets'), '');
+  for (const folder of ['assets', 'photos', 'art']) {
+    const dir = join(publicDir, folder);
+    try {
+      if (statSync(dir).isDirectory()) walk(dir, folder);
+    } catch {
+      /* la carpeta se crea durante el build */
+    }
+  }
   return hashes;
 }
 
 function stampAssetRefs(text, hashes) {
   return text.replace(
-    /(^|["'(=\s])((?:\.\.\/)*\/?)assets\/([A-Za-z0-9_./-]+\.[A-Za-z0-9]+)(?:\?v=[A-Za-z0-9]+)?/g,
-    (full, lead, prefix, file) => {
-      const hash = hashes.get(file);
+    /(^|["'(=\s])((?:\.\.\/)*)(\/?)(assets|photos|art)\/([A-Za-z0-9_./-]+\.[A-Za-z0-9]+)(?:\?v=[A-Za-z0-9]+)?/g,
+    (full, lead, rel, slash, folder, file) => {
+      const hash = hashes.get(`${folder}/${file}`);
       if (!hash) return full;
-      return `${lead}${prefix}assets/${file}?v=${hash}`;
+      return `${lead}${rel}${slash}${folder}/${file}?v=${hash}`;
     },
   );
 }
@@ -1484,15 +1512,17 @@ async function build() {
     process.exit(1);
   }
 
-  const today = new Date().toISOString().slice(0, 10);
   const articles = byDateDesc(news, (article) => article.date);
   const matches = byDateDesc(resultsDoc.results, (match) => match.date);
-  const homeArticles = articles.filter((article) => onHomepage(article.date, today));
-  const homeMatches = matches.filter((match) => onHomepage(match.date, today));
   const contentDay = maxDay([
     ...articles.map((article) => article.updated),
     resultsDoc.updated.slice(0, 10),
   ]);
+  // The window and the edition follow the newest content day, not the wall clock,
+  // so a rebuild of the same data leaves public/ unchanged.
+  const today = contentDay;
+  const homeArticles = articles.filter((article) => onHomepage(article.date, today));
+  const homeMatches = matches.filter((match) => onHomepage(match.date, today));
 
   mkdirSync(publicDir, { recursive: true });
   rmSync(join(publicDir, 'noticias'), { recursive: true, force: true });
@@ -1545,7 +1575,9 @@ async function build() {
       `Contacto: ${ownerEmail}.`,
       'AceArena es un medio digital de tenis profesional. Las noticias y los resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, con sus propias condiciones.',
       'Los marcadores en vivo proceden de SportScore y los rankings de las fuentes oficiales indicadas en cada tabla. Hacemos lo posible por mantenerlos exactos; ante cualquier discrepancia prevalece la fuente oficial.',
-      'El diseño, el código y los textos propios de AceArena pertenecen a su titular. Las marcas de jugadores, torneos y anunciantes mencionadas pertenecen a sus dueños.',
+      {
+        html: 'El diseño, el código y los textos propios de AceArena pertenecen a su titular. Las fotografías de terceros se usan con la licencia indicada en <a href="creditos.html">Créditos</a>. Las marcas de jugadores, torneos y anunciantes mencionadas pertenecen a sus dueños.',
+      },
       legalLinks,
     ],
   }));

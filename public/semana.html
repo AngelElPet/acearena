@@ -27,11 +27,15 @@
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <style>
 html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+@font-face{font-family:"Space Grotesk Fallback";src:local("Arial");size-adjust:96%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif;font-size:1rem;line-height:1.6}
+.header{height:76px}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero,.page-section{padding-top:1.1rem}
 .hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1,.article-wrap h1,.scoreboard-score{font-family:"Space Grotesk","Space Grotesk Fallback",Arial,sans-serif}
+.article-wrap h1{margin:0 0 .8rem;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
 .hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
@@ -39,6 +43,7 @@ input,select,textarea{font-size:16px}
 .hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
 .scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
 .scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
+.article-summary{font-size:1.05rem}
 @media (max-width:800px){
   .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
   .hero-photo{display:none}
@@ -72,10 +77,11 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
+        <a href="semana.html">Esta semana</a>
         <a href="noticias/index.html">Noticias</a>
         <a href="rankings.html">Rankings</a>
-        <a href="calendario-2027.html">Calendario</a>
-        <a href="aprende/index.html">Aprende tenis</a>
+        <a href="jugadores/index.html">Jugadores</a>
+        <a href="aprende/index.html">Aprende</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -93,31 +99,33 @@ input,select,textarea{font-size:16px}
       </figure>
       <ul class="event-list">
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="30" height="30">ATP · ATP 250 · pista dura indoor</p>
           <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">Almaty Open</a>, Almaty, Kazajistán, 19–25 de octubre de 2026
-          <p>ATP 250 bajo techo en Almaty (Kazajistán).</p>
+          <p>ATP 250 bajo techo.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/almaty/9410/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Almaty Open</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="30" height="30">ATP · ATP 250 · pista dura indoor</p>
           <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">BNP Paribas Fortis European Open</a>, Bruselas, Bélgica, 19–25 de octubre de 2026
-          <p>ATP 250 bajo techo en el Brussels Expo. En el cuadro: Alejandro Davidovich Fokina, recién campeón en Shanghái, y Francisco Cerúndolo.</p>
+          <p>ATP 250 bajo techo en el Brussels Expo.</p>
+          <p><strong>A quién ver.</strong> Alejandro Davidovich Fokina, campeón en Shanghái, y Francisco Cerúndolo.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa del European Open 2026</a> · <a href="https://www.atptour.com/en/tournaments/brussels/7485/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Bruselas</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 250 · pista dura indoor</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="30" height="30">ATP · ATP 250 · pista dura indoor</p>
           <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">Grand Prix Auvergne-Rhône-Alpes</a>, Lyon, Francia, 19–25 de octubre de 2026
-          <p>ATP 250 bajo techo en el LDLC Arena. Nombres destacados de la previa ATP: Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.</p>
+          <p>ATP 250 bajo techo en el LDLC Arena.</p>
+          <p><strong>A quién ver.</strong> Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" target="_blank" rel="noopener noreferrer">ATP, previa de Lyon 2026</a> · <a href="https://www.atptour.com/en/tournaments/lyon/496/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Lyon</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">WTA · WTA 500 · pista dura</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="30" height="30">WTA · WTA 500 · pista dura</p>
           <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">BNB Ningbo Open</a>, Ningbo, China, 19–25 de octubre de 2026
           <p>WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/2092/ningbo/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Ningbo Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
         </li>
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">WTA · WTA 250 · pista dura</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="30" height="30">WTA · WTA 250 · pista dura</p>
           <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">Kinoshita Group Japan Open</a>, Osaka, Japón, 19–25 de octubre de 2026
           <p>WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/405/osaka/2026" target="_blank" rel="noopener noreferrer">WTA, ficha del Japan Open 2026</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2026 a 2 de octubre</a></p>
@@ -131,19 +139,19 @@ input,select,textarea{font-size:16px}
       <h2>Después</h2>
       <ul class="event-list">
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 500 · pista dura indoor</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="30" height="30">ATP · ATP 500 · pista dura indoor</p>
           <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">Swiss Indoors Basel</a>, Basilea, Suiza, 26 de octubre–1 de noviembre de 2026
           <p>ATP 500 bajo techo.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/-/328/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Basilea</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP 500 · pista dura indoor</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="30" height="30">ATP · ATP 500 · pista dura indoor</p>
           <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">Erste Bank Open</a>, Viena, Austria, 26 de octubre–1 de noviembre de 2026
           <p>ATP 500 bajo techo.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/viena/337/overview" target="_blank" rel="noopener noreferrer">ATP, ficha de Viena</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
         </li>
         <li>
-          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36">ATP · ATP Masters 1000 · pista dura indoor</p>
+          <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="30" height="30">ATP · ATP Masters 1000 · pista dura indoor</p>
           <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">Rolex Paris Masters</a>, París, Francia, 2–8 de noviembre de 2026
           <p>ATP Masters 1000 bajo techo. El último 1000 del año.</p>
           <p>Fuentes: <a href="https://www.atptour.com/en/tournaments/-/352/overview" target="_blank" rel="noopener noreferrer">ATP, ficha del Rolex Paris Masters</a> · <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" target="_blank" rel="noopener noreferrer">ATP, calendario 2026</a></p>
@@ -165,7 +173,7 @@ input,select,textarea{font-size:16px}
           <a href="semana.html">Esta semana</a>
           <a href="noticias/index.html">Noticias</a>
           <a href="rankings.html">Rankings</a>
-          <a href="jugadores/index.html">Jugadores en español</a>
+          <a href="jugadores/index.html">Jugadores</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
           <a href="calendario-2027.html">Calendario</a>
@@ -198,6 +206,16 @@ input,select,textarea{font-size:16px}
     <a class="btn btn-primary btn-sm" href="index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

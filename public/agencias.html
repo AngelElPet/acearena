@@ -29,7 +29,7 @@
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <link rel="preload" as="image" type="image/avif" href="photos/pista-silla-800.avif" imagesrcset="photos/pista-silla-800.avif 800w, photos/pista-silla.avif 1100w" imagesizes="(min-width: 801px) 420px" fetchpriority="high" media="(min-width: 801px)">
+  <link rel="preload" as="image" type="image/avif" href="photos/pista-silla-800.avif?v=262a781b46" imagesrcset="photos/pista-silla-800.avif?v=262a781b46 800w, photos/pista-silla.avif?v=cc4f613d2a 1100w" imagesizes="(min-width: 801px) 420px" fetchpriority="high" media="(min-width: 801px)">
   <link rel="preload" href="assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
   <style>
     html{font-size:15px}
@@ -77,9 +77,11 @@
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
+        <a href="semana.html">Esta semana</a>
         <a href="noticias/index.html">Noticias</a>
         <a href="rankings.html">Rankings</a>
-        <a href="#paquetes">Paquetes</a>
+        <a href="jugadores/index.html">Jugadores</a>
+        <a href="aprende/index.html">Aprende</a>
         <a href="#contacto" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -100,8 +102,8 @@
         </div>
         <figure class="photo-figure hero-photo">
           <picture>
-            <source type="image/avif" srcset="photos/pista-silla-800.avif 800w, photos/pista-silla.avif 1100w" sizes="(max-width: 800px) 100vw, 420px">
-            <img src="photos/pista-silla.webp" srcset="photos/pista-silla-800.webp 800w, photos/pista-silla.webp 1100w" sizes="(max-width: 800px) 100vw, 420px" alt="Pista de tenis vacía, con la silla del juez detrás de la red." width="1100" height="734" fetchpriority="high">
+            <source type="image/avif" srcset="photos/pista-silla-800.avif?v=262a781b46 800w, photos/pista-silla.avif?v=cc4f613d2a 1100w" sizes="(max-width: 800px) 100vw, 420px">
+            <img src="photos/pista-silla.webp?v=f7de016b9a" srcset="photos/pista-silla-800.webp?v=43b49ea424 800w, photos/pista-silla.webp?v=f7de016b9a 1100w" sizes="(max-width: 800px) 100vw, 420px" alt="Pista de tenis vacía, con la silla del juez detrás de la red." width="1100" height="734" fetchpriority="high">
           </picture>
           <figcaption>Foto: Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
         </figure>
@@ -406,6 +408,16 @@
     <a class="btn btn-primary btn-sm" href="#paquetes">Ver condiciones</a>
   </div>
   <script src="script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

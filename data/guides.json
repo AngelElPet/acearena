@@ -194,15 +194,15 @@
         },
         {
           "name": "Wimbledon",
-          "place": "Wimbledon",
+          "place": "Londres",
           "dates": "28 de junio–11 de julio de 2027",
           "detail": "Hierba."
         },
         {
           "name": "US Open",
           "place": "Nueva York",
-          "dates": "Empieza el 29 de agosto de 2027",
-          "detail": "El día de cierre sigue por confirmar. Pista dura."
+          "dates": "Empieza el 29 de agosto de 2027; fecha de cierre por confirmar.",
+          "detail": "Pista dura."
         }
       ],
       "sections": [],

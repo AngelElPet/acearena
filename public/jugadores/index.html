@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jugadores en español | AceArena</title>
+  <title>Jugadores | AceArena</title>
   <meta name="description" content="Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.">
   <meta name="author" content="AceArena">
   <meta name="robots" content="index, follow">
@@ -15,23 +15,27 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="alternate" type="application/rss+xml" title="AceArena" href="/feed.xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Jugadores en español | AceArena">
+  <meta property="og:title" content="Jugadores | AceArena">
   <meta property="og:description" content="Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.">
   <meta property="og:url" content="https://acearena.io/jugadores/">
   <meta property="og:image" content="https://acearena.io/assets/og-image.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="AceArena">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jugadores en español | AceArena">
+  <meta name="twitter:title" content="Jugadores | AceArena">
   <meta name="twitter:description" content="Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <style>
 html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+@font-face{font-family:"Space Grotesk Fallback";src:local("Arial");size-adjust:96%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif;font-size:1rem;line-height:1.6}
+.header{height:76px}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero,.page-section{padding-top:1.1rem}
 .hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1,.article-wrap h1,.scoreboard-score{font-family:"Space Grotesk","Space Grotesk Fallback",Arial,sans-serif}
+.article-wrap h1{margin:0 0 .8rem;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
 .hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
@@ -39,6 +43,7 @@ input,select,textarea{font-size:16px}
 .hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
 .scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
 .scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
+.article-summary{font-size:1.05rem}
 @media (max-width:800px){
   .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
   .hero-photo{display:none}
@@ -53,7 +58,7 @@ input,select,textarea{font-size:16px}
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://acearena.io/"},{"@type":"ListItem","position":2,"name":"Jugadores","item":"https://acearena.io/jugadores/"}]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Jugadores en español","url":"https://acearena.io/jugadores/","inLanguage":"es","isPartOf":{"@type":"WebSite","name":"AceArena","url":"https://acearena.io"}}
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Jugadores","url":"https://acearena.io/jugadores/","inLanguage":"es","isPartOf":{"@type":"WebSite","name":"AceArena","url":"https://acearena.io"}}
   </script>
 </head>
 <body>
@@ -69,10 +74,11 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
+        <a href="../semana.html">Esta semana</a>
         <a href="../noticias/index.html">Noticias</a>
         <a href="../rankings.html">Rankings</a>
-        <a href="../calendario-2027.html">Calendario</a>
-        <a href="../aprende/index.html">Aprende tenis</a>
+        <a href="../jugadores/index.html">Jugadores</a>
+        <a href="../aprende/index.html">Aprende</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
@@ -82,7 +88,7 @@ input,select,textarea{font-size:16px}
       <p class="news-meta"><a href="../index.html">Inicio</a> · Jugadores</p>
       <div class="section-header">
         <span class="section-tag">Rankings</span>
-        <h1>Jugadores en español</h1>
+        <h1>Jugadores</h1>
         <p>Fichas de tenistas de España y de América Latina, con su ranking y el enlace a la ficha oficial. <a href="../rankings.html">Top 20 ATP y WTA</a> · <a href="../race.html">Race a Turín</a>.</p>
       </div>
       <div class="card-grid">
@@ -279,7 +285,7 @@ input,select,textarea{font-size:16px}
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
           <a href="../rankings.html">Rankings</a>
-          <a href="../jugadores/index.html">Jugadores en español</a>
+          <a href="../jugadores/index.html">Jugadores</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -312,6 +318,16 @@ input,select,textarea{font-size:16px}
     <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

@@ -14,7 +14,7 @@ function surfaceFile(surface) {
 function surfaceMark(surface, prefix) {
   const file = surfaceFile(surface);
   if (!file) return '';
-  return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="36" height="36">`;
+  return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="30" height="30">`;
 }
 
 function initials(name) {
@@ -76,7 +76,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, results =
     file: 'jugadores/index.html',
     lastmod: playersDoc.updated,
     page: {
-      title: 'Jugadores en español | AceArena',
+      title: 'Jugadores | AceArena',
       description: 'Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.',
       canonical: `${site}/jugadores/`,
       depth: 1,
@@ -88,7 +88,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, results =
         {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          name: 'Jugadores en español',
+          name: 'Jugadores',
           url: `${site}/jugadores/`,
           inLanguage: 'es',
           isPartOf: { '@type': 'WebSite', name: 'AceArena', url: site },
@@ -99,7 +99,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, results =
       <p class="news-meta"><a href="../index.html">Inicio</a> · Jugadores</p>
       <div class="section-header">
         <span class="section-tag">Rankings</span>
-        <h1>Jugadores en español</h1>
+        <h1>Jugadores</h1>
         <p>Fichas de tenistas de España y de América Latina, con su ranking y el enlace a la ficha oficial. <a href="../rankings.html">Top 20 ATP y WTA</a> · <a href="../race.html">Race a Turín</a>.</p>
       </div>
       <div class="card-grid">
@@ -130,7 +130,13 @@ ${playerCards}
       ? `\n      <h2>Último resultado</h2>\n      <p>${esc(resultSentence(player.name, match))} <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>.</p>`
       : '';
     const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
-    const nextEvent = player.nextEvent
+    const upcoming = Array.isArray(player.nextEvents)
+      ? player.nextEvents.filter((event) => event && event.name && event.url)
+      : [];
+    const nextEvents = upcoming.length
+      ? `\n      <h2>Próximos torneos</h2>\n      <ul class="event-list">\n${upcoming.map((event) => `        <li><a href="${esc(event.url)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>${event.dates ? `, ${esc(event.dates)}` : ''}</li>`).join('\n')}\n      </ul>`
+      : '';
+    const nextEvent = !nextEvents && player.nextEvent
       ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
       : '';
     const related = Array.isArray(player.related) && player.related.length
@@ -165,13 +171,13 @@ ${playerCards}
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores en español</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
+      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
       <div class="player-head">
         ${avatar(player.name, esc)}
         <h1>${esc(player.name)}</h1>
       </div>
       <p class="article-summary">${esc(ranking)}</p>${note}
-      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${nextEvent}${bio}${sheet}${latest}${favorites}
+      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${nextEvents}${nextEvent}${bio}${sheet}${latest}${favorites}
       <h2>Trayectoria</h2>
       <ul>
 ${highlights}
