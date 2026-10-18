@@ -2,13 +2,13 @@
 
 Esta guía es la instrucción de la rutina que actualiza el sitio. La rutina edita solo ficheros de datos. No reescribe el diseño y no inventa cifras de audiencia.
 
-El sitio publicado es `public/`. Netlify lo sirve tal cual, sin comando de build. `scripts/build.mjs` regenera `public/` a partir de `data/` y de las plantillas de la raíz (`index.html`, `agencias.html`, `styles.css`, `script.js`).
+El sitio publicado es `public/`. Netlify lo sirve tal cual, sin comando de build. `scripts/build.mjs` regenera las páginas de datos dentro de `public/` a partir de `data/`. No borra `public/`: conserva estilos, script, imágenes, el PDF y `robots.txt`. La portada y `agencias.html` se editan a mano; el build solo rellena las regiones `AUTO` de la portada y vuelve a colocar el beacon.
 
 ## Qué se edita
 
 - Una noticia nueva o corregida: `data/news.json` (un array).
 - Un resultado nuevo o corregido: `data/results.json`.
-- No edites a mano `public/`. El build lo borra y lo vuelve a crear.
+- No edites a mano las páginas generadas de `public/noticias/`, `public/jugadores/`, `public/aprende/`, `public/calendario-2027.html`, `public/sitemap.xml` ni `public/llms.txt`. El build las vuelve a escribir.
 
 ## Artículo
 
@@ -82,11 +82,13 @@ Al cambiar resultados, pon `updated` a la hora real de la revisión.
 
 ## Cómo comprobar y regenerar
 
-Desde la raíz del repositorio, con Node y sin instalar dependencias:
+Desde la raíz del repositorio, con Node. Las tarjetas sociales necesitan las dependencias del repositorio (`satori` y `@resvg/resvg-js`):
 
 ```bash
+npm ci
 node scripts/validate.mjs
 node scripts/build.mjs
+node scripts/validate.mjs --site
 ```
 
 `validate.mjs` falla si falta una fuente, si una URL no es http(s), si hay una fecha futura, si un slug está repetido o si queda texto de relleno (`TODO`, `TBD`, `FIXME`, `lorem ipsum`, `placeholder`, `example.com`, `ejemplo.com`, `XXXXX`, `{{`, `[insert`).
@@ -101,7 +103,12 @@ python3 -m http.server 8080 --directory public
 
 ## Qué genera el build
 
-- `public/noticias/<slug>.html` — una página por artículo, con SEO, JSON-LD `NewsArticle`, fechas y fuentes visibles.
+- `public/noticias/<slug>.html` — una página por artículo, con SEO, JSON-LD `NewsArticle` y `BreadcrumbList`, fechas, fuentes y el formulario del resumen del lunes. `og:image` y `twitter:image` apuntan a `public/og/<slug>.png`.
+- `public/social/<slug>.png` (1080×1350) y `public/og/<slug>.png` (1200×630), una pareja por artículo. Fondo `#0A0C10`, lima `#BEE628`, texto blanco, fecha, `acearena.io` y el logotipo de `public/social/perfil.png`. Las fuentes del render son `assets/fonts/*.ttf`, instancias estáticas de las woff2 del sitio. `perfil.png` y `lanzamiento.png` no se regeneran y no entran en el sitemap.
+- `public/jugadores/` — índice y una ficha por jugador de `data/players.json`, con JSON-LD `Person`.
+- `public/calendario-2027.html` — fechas de `data/calendar.json`. Si el cierre no está publicado, el texto dice «fecha por confirmar».
+- `public/aprende/` — índice y las guías de `data/guides.json`, con JSON-LD `FAQPage`.
+- `public/<clave>.txt` — clave IndexNow de `data/indexnow.json`. No entra en el sitemap.
 - `public/noticias/index.html` — el archivo completo.
 - `public/resultados.html` — resultados, con JSON-LD `ItemList` / `SportsEvent`.
 - Portada con los bloques de noticias y resultados de los últimos 60 días.

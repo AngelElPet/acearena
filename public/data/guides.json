@@ -1,0 +1,153 @@
+{
+  "updated": "2026-10-18",
+  "guides": [
+    {
+      "slug": "como-funciona-el-ranking-atp",
+      "title": "Cómo funciona el ranking ATP",
+      "description": "Qué cuenta el PIF ATP Rankings, cada cuánto se publica, cuántos torneos entran y qué es la Race to Turin.",
+      "kicker": "ATP",
+      "intro": "El PIF ATP Rankings es la lista que ordena a los jugadores del circuito masculino. Sirve para entrar en los cuadros y para colocar las cabezas de serie.",
+      "sections": [
+        {
+          "heading": "Una lista de 52 semanas",
+          "paragraphs": [
+            "El ranking es móvil: recoge cerca de 52 semanas y se publica alrededor de cada lunes, unas 45 veces al año.",
+            "Los puntos se defienden porque el resultado sale de la cuenta cuando se cumple ese plazo."
+          ]
+        },
+        {
+          "heading": "Qué torneos entran",
+          "paragraphs": [
+            "Para quien juega todos los torneos de entrada automática, cuentan 4 Grand Slams, 8 Masters 1000 obligatorios y los 6 mejores resultados del resto: United Cup, Montecarlo, ATP 500, ATP 250, Challenger e ITF.",
+            "Las Nitto ATP Finals pueden sumar como un torneo más, el número 19.",
+            "El campeón de un Grand Slam suma 2.000 puntos. Los nombres ATP 250, ATP 500 y Masters 1000 indican los puntos del campeón."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Para qué sirve el ranking ATP?",
+          "a": "El PIF ATP Rankings ordena a los jugadores y se usa para la entrada en los cuadros y para las cabezas de serie."
+        },
+        {
+          "q": "¿Cada cuánto se actualiza?",
+          "a": "La lista es móvil, de unas 52 semanas, y se publica alrededor de cada lunes, unas 45 veces al año."
+        },
+        {
+          "q": "¿Cuántos torneos cuentan en individuales?",
+          "a": "Cuentan 4 Grand Slams, 8 Masters 1000 obligatorios y los 6 mejores resultados del resto. Las Nitto ATP Finals pueden sumar como un 19.º torneo."
+        },
+        {
+          "q": "¿Cuántos puntos da ganar un Grand Slam?",
+          "a": "El campeón de un Grand Slam suma 2.000 puntos."
+        },
+        {
+          "q": "¿Qué es la Race to Turin?",
+          "a": "Es la clasificación del año natural. Los 8 primeros juegan las Nitto ATP Finals en Turín."
+        }
+      ],
+      "sources": [
+        { "name": "ATP, preguntas sobre el ranking", "url": "https://www.atptour.com/en/rankings/rankings-faq" },
+        { "name": "ATP, capítulo 9 del reglamento 2026", "url": "https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-9_pif-atp-rankings_31mar26.pdf" },
+        { "name": "ATP, el ranking explicado", "url": "https://www.atptour.com/en/news/tennis-explained-atp-" }
+      ]
+    },
+    {
+      "slug": "como-funciona-el-ranking-wta",
+      "title": "Cómo funciona el ranking WTA",
+      "description": "Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.",
+      "kicker": "WTA",
+      "intro": "El ranking WTA ordena a las jugadoras y se usa para la entrada en los cuadros y para las cabezas de serie. Es una lista móvil de 52 semanas. La WTA la usa desde el 3 de noviembre de 1975.",
+      "sections": [
+        {
+          "heading": "El máximo de 18 torneos",
+          "paragraphs": [
+            "En individuales caben como máximo 18 resultados: los 4 Grand Slams, los 6 mejores WTA 1000 combinados, el mejor WTA 1000 no combinado y los 7 mejores siguientes entre WTA 1000, 500, 250, 125 e ITF.",
+            "Los WTA 1000 combinados de esa cuenta son Indian Wells, Miami, Madrid, Roma, Toronto o Montreal, Cincinnati y Pekín. Los no combinados son Doha, Dubái y Wuhan.",
+            "Las WTA Finals pueden contar como un 19.º torneo. En dobles se toman los 12 mejores resultados."
+          ]
+        },
+        {
+          "heading": "Cuándo aparece una jugadora",
+          "paragraphs": [
+            "Para figurar en la lista hace falta tener puntos en al menos 3 torneos, o al menos 10 puntos de individuales en un solo torneo."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Para qué sirve el ranking WTA?",
+          "a": "Ordena a las jugadoras y se usa para la entrada en los cuadros y para las cabezas de serie."
+        },
+        {
+          "q": "¿Cuántos torneos cuentan?",
+          "a": "En individuales caben como máximo 18: 4 Grand Slams, los 6 mejores WTA 1000 combinados, el mejor no combinado y los 7 mejores siguientes. Las WTA Finals pueden ser el 19.º."
+        },
+        {
+          "q": "¿Qué diferencia hay entre un WTA 1000 combinado y uno no combinado?",
+          "a": "Los combinados de la cuenta son Indian Wells, Miami, Madrid, Roma, Toronto o Montreal, Cincinnati y Pekín. Los no combinados son Doha, Dubái y Wuhan."
+        },
+        {
+          "q": "¿Cuándo entra una jugadora en la lista?",
+          "a": "Hace falta tener puntos en al menos 3 torneos, o al menos 10 puntos de individuales en un solo torneo."
+        }
+      ],
+      "sources": [
+        { "name": "WTA, el ranking explicado", "url": "https://www.wtatennis.com/rankings-explained" }
+      ]
+    },
+    {
+      "slug": "reglas-del-tenis-basicas",
+      "title": "Reglas del tenis básicas",
+      "description": "Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.",
+      "kicker": "Reglas",
+      "intro": "Estas son las reglas de marcador que la ITF publica para un partido estándar. El resumen no sustituye al reglamento: el texto completo está en los enlaces del final.",
+      "sections": [
+        {
+          "heading": "El juego y la ventaja",
+          "paragraphs": [
+            "Un juego se cuenta 0, 15, 30, 40 y juego. El 0 se llama love.",
+            "Si ambos llegan a 40 hay igualdad. El siguiente punto da la ventaja y hace falta ganar dos puntos seguidos para cerrar el juego."
+          ]
+        },
+        {
+          "heading": "El set y el partido",
+          "paragraphs": [
+            "Un set se gana con 6 juegos y una diferencia de 2. Si el set prevé tie-break, se juega al llegar a 6-6. El set con ventaja, sin tie-break, tiene que anunciarse antes.",
+            "El tie-break se juega a 7 puntos con diferencia de 2 y se cuenta con números, no con 15, 30 y 40.",
+            "Un partido es al mejor de 3 sets, y gana quien se lleva 2, o al mejor de 5, y gana quien se lleva 3.",
+            "Jugar sin ventaja es una alternativa aprobada en un apéndice del reglamento. No es la forma estándar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cómo se puntúa un juego?",
+          "a": "Se cuenta 0, 15, 30, 40 y juego. El 0 se llama love."
+        },
+        {
+          "q": "¿Qué es la ventaja?",
+          "a": "A 40-40 el siguiente punto da la ventaja. Hay que ganar dos puntos seguidos para llevarse el juego."
+        },
+        {
+          "q": "¿Qué es un tie-break?",
+          "a": "Es el desempate a 7 puntos con diferencia de 2. Se cuenta con números."
+        },
+        {
+          "q": "¿Cómo se gana un set?",
+          "a": "Con 6 juegos y una diferencia de 2. Si hay tie-break, se juega al llegar a 6-6."
+        },
+        {
+          "q": "¿Cuántos sets dura un partido?",
+          "a": "Al mejor de 3 sets gana quien se lleva 2. Al mejor de 5 gana quien se lleva 3."
+        }
+      ],
+      "sources": [
+        { "name": "ITF, reglas del tenis 2026 en inglés", "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf" },
+        { "name": "ITF, reglas del tenis 2026 en español", "url": "https://www.itftennis.com/media/7223/2026-rules-of-tennis-spanish.pdf" },
+        { "name": "ITF, normas y reglamentos", "url": "https://www.itftennis.com/en/about-us/governance/rules-and-regulations/" },
+        { "name": "ITF, glosario", "url": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/" }
+      ]
+    }
+  ]
+}

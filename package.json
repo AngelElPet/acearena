@@ -1,0 +1,12 @@
+{
+  "name": "acearena",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.62.0"
+  }
+}

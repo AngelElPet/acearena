@@ -1,5 +1,5 @@
-import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { dirname, join, normalize, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -249,6 +249,277 @@ export function validatePayload(news, resultsDoc, now = new Date()) {
   return errors;
 }
 
+function requireSources(sources, path, errors) {
+  if (!Array.isArray(sources) || sources.length === 0) {
+    errors.push(`${path} necesita al menos una fuente`);
+    return;
+  }
+  sources.forEach((source, index) => {
+    const sourcePath = `${path}[${index}]`;
+    if (!source || typeof source !== 'object' || Array.isArray(source)) {
+      errors.push(`${sourcePath} debe ser un objeto {name, url}`);
+      return;
+    }
+    requireText(source.name, `${sourcePath}.name`, errors);
+    if (!isHttpUrl(source.url)) errors.push(`${sourcePath}.url no es una URL http(s) válida`);
+    else if (isPlaceholderUrl(source.url)) errors.push(`${sourcePath}.url es una URL de ejemplo o de relleno`);
+  });
+}
+
+export function validateEvergreen({ players, calendar, guides, indexnow }, now = new Date()) {
+  const errors = [];
+  const today = todayUtc(now);
+  if (!indexnow || typeof indexnow.key !== 'string' || !/^[A-Za-z0-9-]{8,128}$/.test(indexnow.key)) {
+    errors.push('data/indexnow.json necesita una clave de 8 a 128 caracteres [A-Za-z0-9-]');
+  }
+  const checkUpdated = (doc, path) => {
+    if (!doc || typeof doc !== 'object' || Array.isArray(doc)) {
+      errors.push(`${path} debe ser un objeto`);
+      return false;
+    }
+    if (!parseDay(doc.updated)) errors.push(`${path}.updated debe ser YYYY-MM-DD`);
+    else if (doc.updated > today) errors.push(`${path}.updated está en el futuro`);
+    return true;
+  };
+  if (checkUpdated(players, 'players') && Array.isArray(players.players)) {
+    const slugs = new Set();
+    players.players.forEach((player, index) => {
+      const path = `players[${index}]`;
+      if (!player || typeof player !== 'object') {
+        errors.push(`${path} debe ser un objeto`);
+        return;
+      }
+      for (const field of ['slug', 'name', 'tour', 'profileUrl', 'birthDate', 'nationality']) {
+        requireText(player[field], `${path}.${field}`, errors);
+      }
+      if (typeof player.slug === 'string' && !SLUG_RE.test(player.slug)) errors.push(`${path}.slug no es válido`);
+      if (typeof player.slug === 'string' && slugs.has(player.slug)) errors.push(`slug de jugador duplicado: ${player.slug}`);
+      slugs.add(player.slug);
+      if (player.tour !== 'ATP' && player.tour !== 'WTA') errors.push(`${path}.tour debe ser ATP o WTA`);
+      if (!isHttpUrl(player.profileUrl)) errors.push(`${path}.profileUrl no es una URL http(s) válida`);
+      else if (isPlaceholderUrl(player.profileUrl)) errors.push(`${path}.profileUrl es una URL de ejemplo`);
+      if (!parseDay(player.birthDate)) errors.push(`${path}.birthDate debe ser YYYY-MM-DD`);
+      for (const field of ['bio', 'style', 'highlights']) {
+        if (!Array.isArray(player[field]) || player[field].length === 0) errors.push(`${path}.${field} necesita texto`);
+        else player[field].forEach((item, itemIndex) => requireText(item, `${path}.${field}[${itemIndex}]`, errors));
+      }
+      const ranking = player.ranking;
+      if (!ranking || typeof ranking !== 'object') errors.push(`${path}.ranking es obligatorio`);
+      else {
+        requireText(ranking.position, `${path}.ranking.position`, errors);
+        requireText(ranking.points, `${path}.ranking.points`, errors);
+        if (!parseDay(ranking.asOf)) errors.push(`${path}.ranking.asOf debe ser YYYY-MM-DD`);
+        else if (ranking.asOf > today) errors.push(`${path}.ranking.asOf está en el futuro`);
+        if (ranking.note != null) requireText(ranking.note, `${path}.ranking.note`, errors);
+      }
+      requireSources(player.sources, `${path}.sources`, errors);
+    });
+  } else if (players && typeof players === 'object') {
+    errors.push('players.players debe ser un array');
+  }
+  if (checkUpdated(calendar, 'calendar') && Array.isArray(calendar.sections)) {
+    calendar.sections.forEach((section, index) => {
+      const path = `calendar.sections[${index}]`;
+      requireText(section?.title, `${path}.title`, errors);
+      if (!Array.isArray(section?.events) || section.events.length === 0) {
+        errors.push(`${path}.events necesita citas`);
+        return;
+      }
+      section.events.forEach((event, eventIndex) => {
+        const eventPath = `${path}.events[${eventIndex}]`;
+        requireText(event?.name, `${eventPath}.name`, errors);
+        requireText(event?.when, `${eventPath}.when`, errors);
+        requireSources(event?.sources, `${eventPath}.sources`, errors);
+      });
+    });
+  } else if (calendar && typeof calendar === 'object') {
+    errors.push('calendar.sections debe ser un array');
+  }
+  if (checkUpdated(guides, 'guides') && Array.isArray(guides.guides)) {
+    const slugs = new Set();
+    guides.guides.forEach((guide, index) => {
+      const path = `guides[${index}]`;
+      for (const field of ['slug', 'title', 'description', 'intro']) requireText(guide?.[field], `${path}.${field}`, errors);
+      if (typeof guide?.slug === 'string' && slugs.has(guide.slug)) errors.push(`slug de guía duplicado: ${guide.slug}`);
+      if (guide?.slug) slugs.add(guide.slug);
+      if (!Array.isArray(guide?.faqs) || guide.faqs.length === 0) errors.push(`${path}.faqs es obligatorio`);
+      else guide.faqs.forEach((faq, faqIndex) => {
+        requireText(faq?.q, `${path}.faqs[${faqIndex}].q`, errors);
+        requireText(faq?.a, `${path}.faqs[${faqIndex}].a`, errors);
+      });
+      requireSources(guide?.sources, `${path}.sources`, errors);
+    });
+  } else if (guides && typeof guides === 'object') {
+    errors.push('guides.guides debe ser un array');
+  }
+  scanPlaceholders({ players, calendar, guides, indexnow }, 'evergreen', errors);
+  return errors;
+}
+
+function visibleHtml(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/\splaceholder\s*=\s*(?:"[^"]*"|'[^']*')/gi, ' ');
+}
+
+function pngSize(buffer) {
+  if (buffer.length < 24 || buffer.toString('ascii', 1, 4) !== 'PNG') return null;
+  return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+}
+
+function walkHtml(dir, out = []) {
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    if (statSync(full).isDirectory()) walkHtml(full, out);
+    else if (name.endsWith('.html')) out.push(full);
+  }
+  return out;
+}
+
+function tagAttrs(tag) {
+  const found = {};
+  const re = /([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g;
+  let match;
+  while ((match = re.exec(tag))) found[match[1].toLowerCase()] = match[2] ?? match[3] ?? '';
+  return found;
+}
+
+function hasId(html, id) {
+  return html.includes(`id="${id}"`) || html.includes(`id='${id}'`);
+}
+
+function materialize(file) {
+  if (existsSync(file)) {
+    if (statSync(file).isDirectory()) {
+      const index = join(file, 'index.html');
+      return existsSync(index) ? index : null;
+    }
+    return file;
+  }
+  if (existsSync(`${file}.html`)) return `${file}.html`;
+  const index = join(file, 'index.html');
+  return existsSync(index) ? index : null;
+}
+
+function classifyLink(fromFile, raw, publicDir) {
+  const value = String(raw || '').trim();
+  if (!value || /^(mailto:|tel:|javascript:|data:)/i.test(value)) return { skip: true };
+  if (isHttpUrl(value) && isPlaceholderUrl(value)) return { error: `URL de ejemplo: ${value}` };
+  if (value.startsWith('#')) return { file: fromFile, hash: decodeURIComponent(value.slice(1)) };
+  let path = value;
+  let hash = '';
+  if (/^https?:\/\//i.test(value)) {
+    let url;
+    try { url = new URL(value); } catch { return { error: `URL inválida: ${value}` }; }
+    const host = url.hostname.toLowerCase();
+    if (host !== 'acearena.io' && host !== 'www.acearena.io') return { skip: true };
+    path = url.pathname;
+    hash = url.hash ? decodeURIComponent(url.hash.slice(1)) : '';
+  } else {
+    const hashAt = path.indexOf('#');
+    if (hashAt !== -1) {
+      hash = decodeURIComponent(path.slice(hashAt + 1));
+      path = path.slice(0, hashAt);
+    }
+    const queryAt = path.indexOf('?');
+    if (queryAt !== -1) path = path.slice(0, queryAt);
+    if (path === '') return { file: fromFile, hash };
+  }
+  let filePath;
+  try {
+    filePath = path.startsWith('/')
+      ? join(publicDir, decodeURIComponent(path))
+      : join(dirname(fromFile), decodeURIComponent(path));
+  } catch {
+    return { error: `enlace ilegible: ${value}` };
+  }
+  filePath = normalize(filePath);
+  const rel = relative(publicDir, filePath);
+  if (rel.startsWith('..') || rel.split(sep).includes('..')) return { error: `enlace fuera del sitio: ${value}` };
+  return { file: filePath, hash, raw: value };
+}
+
+export function validateSite(rootDir) {
+  const errors = [];
+  const publicDir = join(rootDir, 'public');
+  const pages = walkHtml(publicDir);
+  const htmlByFile = new Map(pages.map((file) => [file, readFileSync(file, 'utf8')]));
+  for (const [file, html] of htmlByFile) {
+    const label = relative(publicDir, file);
+    const title = html.match(/<title>([^<]*)<\/title>/);
+    if (!title || title[1].trim() === '') errors.push(`${label} no tiene title`);
+    const metas = [...html.matchAll(/<meta\b[^>]*>/gi)].map((match) => tagAttrs(match[0]));
+    const description = metas.find((meta) => meta.name === 'description');
+    if (!description || !description.content || description.content.trim() === '') errors.push(`${label} no tiene meta description`);
+    const canonicalTag = [...html.matchAll(/<link\b[^>]*>/gi)].map((match) => tagAttrs(match[0])).find((link) => link.rel === 'canonical');
+    if (!canonicalTag || !canonicalTag.href || !canonicalTag.href.startsWith('https://acearena.io')) {
+      errors.push(`${label} no tiene canonical en https://acearena.io`);
+    }
+    const visible = visibleHtml(html);
+    for (const rule of PLACEHOLDERS) {
+      if (rule.re.test(visible)) errors.push(`${label} contiene texto de relleno (${rule.label})`);
+    }
+    const tags = [...html.matchAll(/<(?:a|link|script|img|form|source)\b[^>]*>/gi)];
+    const targets = [];
+    for (const match of tags) {
+      const attrs = tagAttrs(match[0]);
+      for (const key of ['href', 'src', 'action']) {
+        if (attrs[key]) targets.push(attrs[key]);
+      }
+    }
+    for (const meta of metas) {
+      if ((meta.property === 'og:image' || meta.name === 'twitter:image') && meta.content) targets.push(meta.content);
+    }
+    for (const target of targets) {
+      const resolved = classifyLink(file, target, publicDir);
+      if (resolved.skip) continue;
+      if (resolved.error) {
+        errors.push(`${label}: ${resolved.error}`);
+        continue;
+      }
+      const dest = materialize(resolved.file);
+      if (!dest) {
+        errors.push(`${label}: el enlace no resuelve (${target})`);
+        continue;
+      }
+      if (resolved.hash) {
+        const destHtml = htmlByFile.get(dest) || (dest.endsWith('.html') && existsSync(dest) ? readFileSync(dest, 'utf8') : '');
+        if (!destHtml || !hasId(destHtml, resolved.hash)) errors.push(`${label}: no existe #${resolved.hash} en ${relative(publicDir, dest)}`);
+      }
+    }
+  }
+  const news = JSON.parse(readFileSync(join(rootDir, 'data', 'news.json'), 'utf8'));
+  for (const article of news) {
+    const social = join(publicDir, 'social', `${article.slug}.png`);
+    const og = join(publicDir, 'og', `${article.slug}.png`);
+    const socialSize = existsSync(social) ? pngSize(readFileSync(social)) : null;
+    const ogSize = existsSync(og) ? pngSize(readFileSync(og)) : null;
+    if (!socialSize || socialSize.width !== 1080 || socialSize.height !== 1350) errors.push(`public/social/${article.slug}.png debe medir 1080x1350`);
+    if (!ogSize || ogSize.width !== 1200 || ogSize.height !== 630) errors.push(`public/og/${article.slug}.png debe medir 1200x630`);
+  }
+  const indexnow = JSON.parse(readFileSync(join(rootDir, 'data', 'indexnow.json'), 'utf8'));
+  const keyFile = join(publicDir, `${indexnow.key}.txt`);
+  if (!existsSync(keyFile) || readFileSync(keyFile, 'utf8').trim() !== indexnow.key) {
+    errors.push(`public/${indexnow.key}.txt debe contener la clave IndexNow`);
+  }
+  const robots = readFileSync(join(publicDir, 'robots.txt'), 'utf8');
+  if (!robots.includes('Sitemap: https://acearena.io/sitemap.xml')) errors.push('robots.txt no referencia el sitemap');
+  const sitemap = readFileSync(join(publicDir, 'sitemap.xml'), 'utf8');
+  if (!sitemap.includes('<lastmod>')) errors.push('el sitemap no tiene lastmod');
+  for (const forbidden of ['/social/', '/og/', 'acearena-patrocinio.pdf', `${indexnow.key}.txt`, '18–31']) {
+    if (sitemap.includes(forbidden)) errors.push(`el sitemap no debe incluir ${forbidden}`);
+  }
+  for (const required of ['/jugadores/', '/calendario-2027.html', '/aprende/como-funciona-el-ranking-atp.html']) {
+    if (!sitemap.includes(`https://acearena.io${required}`)) errors.push(`falta en el sitemap: ${required}`);
+  }
+  const llmsFull = readFileSync(join(publicDir, 'llms-full.txt'), 'utf8');
+  if (llmsFull.includes('18–31')) errors.push('public/llms-full.txt sigue con el tramo antiguo del Australian Open');
+  if (!llmsFull.includes('11–31 de enero') || !llmsFull.includes('17–31')) {
+    errors.push('public/llms-full.txt debe decir 11–31 de enero y cuadro principal 17–31');
+  }
+  return errors;
+}
+
 function readJson(path) {
   try {
     return JSON.parse(readFileSync(path, 'utf8'));
@@ -319,15 +590,22 @@ function main() {
   }
   const news = readJson(join(root, 'data', 'news.json'));
   const results = readJson(join(root, 'data', 'results.json'));
+  const players = readJson(join(root, 'data', 'players.json'));
+  const calendar = readJson(join(root, 'data', 'calendar.json'));
+  const guides = readJson(join(root, 'data', 'guides.json'));
+  const indexnow = readJson(join(root, 'data', 'indexnow.json'));
   const errors = [
     ...validatePayload(news, results),
+    ...validateEvergreen({ players, calendar, guides, indexnow }),
     ...pendingPlaceholderErrors(root),
   ];
+  if (process.argv.includes('--site')) errors.push(...validateSite(root));
   if (errors.length) {
     console.error(errors.join('\n'));
     process.exit(1);
   }
-  console.log(`OK: ${news.length} artículos, ${results.results.length} resultados`);
+  const siteNote = process.argv.includes('--site') ? ', sitio comprobado' : '';
+  console.log(`OK: ${news.length} artículos, ${results.results.length} resultados${siteNote}`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
