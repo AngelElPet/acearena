@@ -1,4 +1,4 @@
-# Sitio estático. El comando de build se deja vacío a propósito.
+# Sitio estático. GitHub Actions regenera public/ y lo commitea. Netlify no ejecuta build.
 [build]
   publish = "public"
   command = ""
@@ -9,6 +9,9 @@
   to = "https://acearena.io/:splat"
   status = 301
   force = true
+
+# Las páginas de noticias, resultados y legales son ficheros reales.
+# No reescribir todas las rutas a index.html.
 
 [[headers]]
   for = "/*"

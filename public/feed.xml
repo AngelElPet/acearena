@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AceArena — Noticias de tenis</title>
+    <link>https://acearena.io/noticias/</link>
+    <description>Noticias de tenis publicadas por AceArena, con fuente en cada pieza.</description>
+    <language>es</language>
+    <lastBuildDate>Sun, 18 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Davidovich Fokina remonta ante Jódar y gana el Masters de Shanghái</title>
+      <link>https://acearena.io/noticias/davidovich-fokina-gana-el-masters-de-shanghai.html</link>
+      <guid isPermaLink="true">https://acearena.io/noticias/davidovich-fokina-gana-el-masters-de-shanghai.html</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Alejandro Davidovich Fokina venció a Rafael Jódar por 1-6, 7-6(5) y 6-4 y conquistó en Shanghái su primer título Masters 1000.</description>
+    </item>
+    <item>
+      <title>Chwalińska y Kartal juegan la final del WTA 1000 de Wuhan</title>
+      <link>https://acearena.io/noticias/final-de-wuhan-chwalinska-y-kartal.html</link>
+      <guid isPermaLink="true">https://acearena.io/noticias/final-de-wuhan-chwalinska-y-kartal.html</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Maja Chwalińska, número 22, y Sonay Kartal, número 170, disputan la final de Wuhan. Chwalińska eliminó a Świątek en semifinales.</description>
+    </item>
+    <item>
+      <title>Zverev asegura el número uno de final de año</title>
+      <link>https://acearena.io/noticias/zverev-asegura-el-numero-uno-de-final-de-ano.html</link>
+      <guid isPermaLink="true">https://acearena.io/noticias/zverev-asegura-el-numero-uno-de-final-de-ano.html</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Alexander Zverev cerrará 2026 como número uno de la ATP. Sinner sigue líder de la lista vigente, con 11.000 puntos frente a 9.720.</description>
+    </item>
+    <item>
+      <title>Rybakina encabeza el ranking WTA de octubre</title>
+      <link>https://acearena.io/noticias/rybakina-encabeza-el-ranking-wta.html</link>
+      <guid isPermaLink="true">https://acearena.io/noticias/rybakina-encabeza-el-ranking-wta.html</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>La lista WTA del 12 de octubre sitúa a Elena Rybakina primera con 9.696 puntos, 2.146 por delante de Aryna Sabalenka.</description>
+    </item>
+    <item>
+      <title>Sinner cierra la temporada 2026 por una lesión de rodilla</title>
+      <link>https://acearena.io/noticias/sinner-cierra-la-temporada-por-lesion-de-rodilla.html</link>
+      <guid isPermaLink="true">https://acearena.io/noticias/sinner-cierra-la-temporada-por-lesion-de-rodilla.html</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Jannik Sinner anunció el 6 de octubre que se trata la rodilla y no volverá a competir en 2026. No juega desde la final de Wimbledon.</description>
+    </item>
+    <item>
+      <title>Djokovic conquista Pekín y suma 102 títulos</title>
+      <link>https://acearena.io/noticias/djokovic-suma-102-titulos-en-pekin.html</link>
+      <guid isPermaLink="true">https://acearena.io/noticias/djokovic-suma-102-titulos-en-pekin.html</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Novak Djokovic ganó su séptimo China Open después de la retirada de Alex de Minaur. Es el título número 102 de su carrera y deja su balance en Pekín en 34-0.</description>
+    </item>
+  </channel>
+</rss>

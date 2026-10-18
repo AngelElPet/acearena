@@ -2,45 +2,111 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookies | AceArena</title>
-  <meta name="description" content="AceArena no instala cookies de analítica ni de publicidad. Esta página explica lo que sí puede registrar el alojamiento.">
+  <meta name="description" content="AceArena utiliza Cloudflare Web Analytics para medir las visitas de forma agregada. Esta herramienta no usa cookies ni almacena datos personales.">
+  <meta name="author" content="AceArena">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://acearena.io/cookies.html">
-  <meta name="theme-color" content="#070B16">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="AceArena" href="/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cookies | AceArena">
+  <meta property="og:description" content="AceArena utiliza Cloudflare Web Analytics para medir las visitas de forma agregada. Esta herramienta no usa cookies ni almacena datos personales.">
+  <meta property="og:url" content="https://acearena.io/cookies.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="AceArena">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cookies | AceArena">
+  <meta name="twitter:description" content="AceArena utiliza Cloudflare Web Analytics para medir las visitas de forma agregada. Esta herramienta no usa cookies ni almacena datos personales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
   <header class="header scrolled" id="header">
-    <div class="header-inner">
-      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="AceArena" width="162" height="46"></a>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-      <nav class="nav" id="nav" aria-label="Principal">
-        <a href="index.html">Inicio</a>
-        <a href="privacidad.html">Privacidad</a>
-        <a href="aviso-legal.html">Aviso legal</a>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">AceArena</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#en-directo">En Directo</a>
+        <a href="index.html#rankings">Rankings</a>
+        <a href="noticias/index.html">Noticias</a>
+        <a href="resultados.html">Resultados</a>
+        <a href="index.html#guia">Guía</a>
+        <a href="agencias.html">Agencias</a>
+        <a href="index.html#contacto" class="btn btn-primary btn-sm">Ser Sponsor</a>
       </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
-  <main id="contenido" class="section">
-    <div class="container prose">
-      <p class="kicker">Legal</p>
+  <main class="section page-section">
+    <article class="container article-wrap">
+      <p class="news-meta">AceArena</p>
       <h1>Cookies</h1>
-      <p>AceArena no instala cookies propias de analítica ni de publicidad. El bloque de Google Analytics del proyecto antiguo está fuera de esta versión. Las fuentes se sirven desde el propio sitio, no desde Google Fonts.</p>
-      <h2>Qué puede ocurrir igual</h2>
-      <ul>
-        <li>Netlify, que aloja acearena.io, puede registrar datos técnicos de la petición (IP, navegador) en sus logs. No los usamos para hacer un perfil publicitario.</li>
-        <li>Si envías un formulario, Netlify Forms guarda los campos que escribes. Eso es un tratamiento de datos, descrito en la <a href="privacidad.html">privacidad</a>, no una cookie de seguimiento del sitio.</li>
-        <li>La sección En directo pide datos a sportscore.com desde tu navegador. Esa petición no instala una cookie de AceArena. SportScore puede aplicar su propia política en su dominio.</li>
-      </ul>
-      <h2>Si más adelante hay analítica</h2>
-      <p>No se activará sin actualizar esta página y, si la cookie no es técnica, sin un aviso previo. Responsable: <span class="marker">[PENDIENTE: nombre]</span> · <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
-    </div>
+      <div class="article-body">
+        <p>Responsable: Angel Cebria Morales. NIF: 54140612S. Domicilio: C/ Victoria Kent, 16 A, 12590 Almenara (Castellón), España. Contacto: hola@acearena.io.</p>
+        <p>AceArena utiliza Cloudflare Web Analytics para medir las visitas de forma agregada. Esta herramienta no usa cookies ni almacena datos personales.</p>
+        <p>No hace falta aceptar un banner para esa medición. Cloudflare Web Analytics no instala cookies ni guarda datos personales: las visitas se cuentan de forma agregada.</p>
+        <p>Si más adelante una herramienta del sitio usara cookies, esta página lo dirá antes de activarla.</p>
+        <p><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+      </div>
+    </article>
   </main>
+
   <footer class="footer">
-    <div class="container footer-bottom"><p>© 2026 AceArena · <a href="privacidad.html">Privacidad</a></p></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">AceArena</span>
+        </a>
+        <p>La plataforma de inteligencia de tenis construida para marcas que buscan impacto premium.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Plataforma</h4>
+          <a href="index.html#torneos">Torneos</a>
+          <a href="index.html#rankings">Rankings</a>
+          <a href="noticias/index.html">Noticias</a>
+          <a href="resultados.html">Resultados</a>
+          <a href="index.html#guia">Guía</a>
+          <a href="agencias.html">Agencias</a>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <a href="index.html#sponsors">Sponsors</a>
+          <a href="index.html#faq">FAQ Sponsors</a>
+          <a href="index.html#contacto">Contacto</a>
+          <a href="media-kit-acearena.pdf" target="_blank">Media Kit PDF</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="aviso-legal.html">Aviso legal</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a></p>
+      </div>
+    </div>
   </footer>
-  <script src="script.js" defer></script>
+  <div class="sticky-cta" id="stickyCta">
+    <div class="sticky-inner">
+      <span>¿Marca o agencia? Habla con nosotros</span>
+      <a href="index.html#contacto" class="btn btn-primary btn-sm">Ser Sponsor</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
 </body>
 </html>

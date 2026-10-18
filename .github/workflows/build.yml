@@ -1,0 +1,58 @@
+name: Build content
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerate-public-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate data
+        run: node scripts/validate.mjs
+
+      - name: Build public
+        run: node scripts/build.mjs
+
+      - name: Check public is up to date
+        if: github.event_name == 'pull_request'
+        run: |
+          git add -A public
+          if ! git diff --cached --quiet; then
+            echo "public/ no coincide con data/. Ejecuta node scripts/build.mjs y haz commit."
+            git diff --cached --stat
+            exit 1
+          fi
+
+      - name: Commit regenerated public
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public
+          if git diff --cached --quiet; then
+            echo "public/ already up to date"
+          else
+            git commit -m "Regenerate public content [skip ci]"
+            git push
+          fi
