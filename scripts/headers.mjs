@@ -11,23 +11,39 @@ function xml(value) {
     .replace(/"/g, '&quot;');
 }
 
+function headerTitle(article) {
+  if (typeof article.score === 'string' && article.score) return article.tournament || 'AceArena';
+  const tags = Array.isArray(article.tags) ? article.tags : [];
+  if (tags.includes('Race a Turín')) return 'Race a Turín';
+  if (tags.includes('Ranking')) return 'Ranking';
+  if (tags.includes('Lesiones')) return 'Temporada';
+  return article.tournament || 'AceArena';
+}
+
 function headerSvg({ tournament, score, width, height }) {
   const scoreSize = score && score.length > 22 ? 64 : 84;
+  const titleY = score ? 188 : height / 2 + 12;
   const scoreBlock = score
     ? `<text x="72" y="${height - 150}" fill="#ffffff" font-family="Space Grotesk" font-size="${scoreSize}" font-weight="700">${xml(score)}</text>`
     : '';
+  const courtTop = 40;
+  const courtHeight = height - 80;
+  const midY = courtTop + courtHeight / 2;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <rect width="${width}" height="${height}" fill="#07090d"/>
-  <g fill="none" stroke="#c6ff00" stroke-opacity="0.28" stroke-width="3">
-    <rect x="48" y="40" width="${width - 96}" height="${height - 80}" rx="18"/>
-    <line x1="${width / 2}" y1="40" x2="${width / 2}" y2="${height - 40}"/>
-    <line x1="48" y1="${height / 2}" x2="${width - 48}" y2="${height / 2}" stroke-opacity="0.16"/>
-    <rect x="${width / 2 - 90}" y="${height / 2 - 54}" width="180" height="108"/>
+  <rect x="48" y="${courtTop}" width="${width - 96}" height="${courtHeight}" rx="18" fill="#121a16"/>
+  <g fill="none" stroke="#c6ff00" stroke-opacity="0.34" stroke-width="3">
+    <rect x="48" y="${courtTop}" width="${width - 96}" height="${courtHeight}" rx="18"/>
+    <line x1="${width / 2}" y1="${courtTop}" x2="${width / 2}" y2="${height - 40}"/>
+    <line x1="48" y1="${midY}" x2="${width - 48}" y2="${midY}" stroke-opacity="0.2"/>
+    <rect x="${width / 2 - 110}" y="${midY - 62}" width="220" height="124"/>
+    <line x1="${width / 2 - 110}" y1="${midY - 20}" x2="${width / 2 + 110}" y2="${midY - 20}" stroke-opacity="0.16"/>
+    <line x1="${width / 2 - 110}" y1="${midY + 20}" x2="${width / 2 + 110}" y2="${midY + 20}" stroke-opacity="0.16"/>
   </g>
   <rect x="72" y="72" width="92" height="8" fill="#c6ff00"/>
   <text x="72" y="128" fill="#c6ff00" font-family="Space Grotesk" font-size="22" font-weight="700" letter-spacing="2">ACEARENA</text>
-  <text x="72" y="188" fill="#ffffff" font-family="Space Grotesk" font-size="36" font-weight="700">${xml(tournament)}</text>
+  <text x="72" y="${titleY}" fill="#ffffff" font-family="Space Grotesk" font-size="36" font-weight="700">${xml(tournament)}</text>
   ${scoreBlock}
   <text x="72" y="${height - 72}" fill="#c6ff00" font-family="Inter" font-size="22" font-weight="700">acearena.io</text>
 </svg>`;
@@ -49,7 +65,7 @@ export async function writeArticleHeaders(articles, { root, publicDir }) {
   const dir = join(publicDir, 'art');
   mkdirSync(dir, { recursive: true });
   for (const article of articles) {
-    const tournament = article.tournament || 'AceArena';
+    const tournament = headerTitle(article);
     const score = typeof article.score === 'string' ? article.score : '';
     const large = await raster(headerSvg({ tournament, score, width: 1200, height: 630 }), 1200, fonts);
     const small = await raster(headerSvg({ tournament, score, width: 800, height: 420 }), 800, fonts);

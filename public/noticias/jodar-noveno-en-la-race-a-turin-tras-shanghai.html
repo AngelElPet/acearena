@@ -32,6 +32,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -72,7 +76,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
     <article class="container article-wrap">
       <p class="news-meta"><span class="tour-badge">ATP</span> Race a Turín</p>
       <h1>Jódar, noveno en la Race a Turín tras Shanghái</h1>
-      <img class="article-hero" src="../art/jodar-noveno-en-la-race-a-turin-tras-shanghai.webp" srcset="../art/jodar-noveno-en-la-race-a-turin-tras-shanghai-800.webp 800w, ../art/jodar-noveno-en-la-race-a-turin-tras-shanghai.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="ATP" width="1200" height="630" fetchpriority="high">
+      <figure class="photo-figure article-photo">
+          <img src="../photos/pelota.webp" srcset="../photos/pelota-800.webp 800w, ../photos/pelota.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="Pelota de tenis amarilla sobre fondo neutro." width="1200" height="800" fetchpriority="high">
+          <figcaption>Foto: Christian VisualBeo Horvat, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
       <p class="article-byline">Redacción AceArena</p>
       <p class="article-dates">Publicado el <time datetime="2026-10-18T19:06:17+02:00">18 oct 2026</time>. Actualizado el <time datetime="2026-10-18T19:06:17+02:00">18 oct 2026</time>.</p>
       <p class="article-kicker">Rafael Jódar · Alejandro Davidovich Fokina</p>

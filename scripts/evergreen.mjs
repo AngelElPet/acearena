@@ -119,7 +119,7 @@ ${playerCards}
       player.birthDate ? `Nacimiento: ${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}` : '',
     ].filter(Boolean);
     const sheet = sheetParts.length
-      ? `\n      <h2>Ficha técnica</h2>\n      <p class="sheet">${esc(sheetParts.join(' · '))}</p>`
+      ? `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${esc(part)}</li>`).join('\n')}\n      </ul>`
       : `\n      <h2>Ficha técnica</h2>\n${paragraphs(player.style, esc)}`;
     const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
     const nextEvent = player.nextEvent

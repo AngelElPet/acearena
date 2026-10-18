@@ -32,6 +32,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -72,15 +76,15 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
     </div>
   </header>
   <main class="section page-section" id="contenido">
+    <figure class="photo-figure hero-banner">
+          <img src="photos/pelota.webp" srcset="photos/pelota-800.webp 800w, photos/pelota.webp 1200w" sizes="100vw" alt="Pelota de tenis amarilla sobre fondo neutro." width="1200" height="800" fetchpriority="high">
+          <figcaption>Foto: Christian VisualBeo Horvat, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
     <div class="container">
       <p class="news-meta"><a href="index.html">Inicio</a> · Esta semana</p>
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Qué ver esta semana</h1>
-        <figure class="photo-figure">
-          <img src="photos/pista-tierra.webp" srcset="photos/pista-tierra-800.webp 800w, photos/pista-tierra.webp 1200w" sizes="(max-width: 800px) 100vw, 720px" alt="Pista de tierra vacía, vista desde el fondo." width="1200" height="640">
-          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
-        </figure>
         <p>Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego. Actualizado el 18 de octubre de 2026.</p>
       </div>
       <div class="card-grid">

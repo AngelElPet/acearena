@@ -32,6 +32,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -124,7 +128,6 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
           <h3>WTA Finals</h3>
           <p class="news-meta surface-line"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36">Charlotte, Estados Unidos · pista dura</p>
           <p>10–14 de noviembre de 2027</p>
-          <p>La ficha del torneo da esa duración y esa sede. El calendario WTA, a 1 de octubre de 2026, la sitúa en la semana del 8 de noviembre en Charlotte.</p>
           <p>Fuentes: <a href="https://www.wtatennis.com/tournaments/808/wta-finals/2027" target="_blank" rel="noopener noreferrer">WTA Finals 2027</a> · <a href="https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" target="_blank" rel="noopener noreferrer">WTA, calendario 2027 a 1 de octubre de 2026</a></p>
         </article>
         <article class="card">
@@ -192,7 +195,7 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
         </article>
       </div>
       <h2>WTA 1000</h2>
-      <p class="section-intro">Donde la ficha del torneo publica el tramo completo, se usa ese tramo. Donde el calendario WTA solo da la semana, las fechas exactas quedan por confirmar.</p>
+      <p class="section-intro">Los WTA 1000 de 2027.</p>
       <div class="card-grid">
         <article class="card">
           <h3>Qatar Ladies Open</h3>

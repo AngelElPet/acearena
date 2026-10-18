@@ -32,6 +32,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -72,7 +76,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
     <article class="container article-wrap">
       <p class="news-meta"><span class="tour-badge">WTA</span> </p>
       <h1>Rybakina, número 1 del ranking WTA</h1>
-      <img class="article-hero" src="../art/rybakina-encabeza-el-ranking-wta.webp" srcset="../art/rybakina-encabeza-el-ranking-wta-800.webp 800w, ../art/rybakina-encabeza-el-ranking-wta.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="WTA" width="1200" height="630" fetchpriority="high">
+      <figure class="photo-figure article-photo">
+          <img src="../photos/raquetas.webp" srcset="../photos/raquetas-800.webp 640w, ../photos/raquetas.webp 960w" sizes="(max-width: 800px) 100vw, 736px" alt="Raquetas y pelotas sobre una pista de tierra." width="960" height="640" fetchpriority="high">
+          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
       <p class="article-byline">Redacción AceArena</p>
       <p class="article-dates">Publicado el <time datetime="2026-10-12T16:22:52+02:00">12 oct 2026</time>. Actualizado el <time datetime="2026-10-12T16:22:52+02:00">12 oct 2026</time>.</p>
       <p class="article-kicker">Elena Rybakina · Aryna Sabalenka · Mirra Andreeva</p>

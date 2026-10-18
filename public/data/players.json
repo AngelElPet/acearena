@@ -364,6 +364,118 @@
       "birthPlace": "Galicia"
     },
     {
+      "slug": "cristina-bucsa",
+      "name": "Cristina Bucsa",
+      "tour": "WTA",
+      "profileUrl": "https://www.wtatennis.com/players/321158/cristina-bucsa",
+      "birthDate": "1998-01-01",
+      "height": "176 cm",
+      "nationality": "España",
+      "bio": [
+        "Cristina Bucsa nació el 1 de enero de 1998 en Chisináu (Moldavia). Mide 1,76 m. Compite por España."
+      ],
+      "style": [
+        "Mano: diestra · Estatura: 1,76 m · Nacimiento: 1 de enero de 1998, Chisináu (Moldavia)."
+      ],
+      "highlights": [
+        "Su mejor ranking es el 30.",
+        "En 2026 ganó el título de Mérida, el primero de individuales en el circuito WTA.",
+        "En 2025 fue finalista en Hong Kong, llegó a octavos del US Open y cerró el año en el puesto 54."
+      ],
+      "ranking": {
+        "position": "38",
+        "points": "1.294",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        {
+          "name": "WTA, ficha de Cristina Bucsa",
+          "url": "https://www.wtatennis.com/players/321158/cristina-bucsa"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ],
+      "hand": "diestra",
+      "birthPlace": "Chisináu (Moldavia)",
+      "favorites": "Superficie favorita: hierba."
+    },
+    {
+      "slug": "kaitlin-quevedo",
+      "name": "Kaitlin Quevedo",
+      "tour": "WTA",
+      "profileUrl": "https://www.wtatennis.com/players/331742/kaitlin-quevedo",
+      "birthDate": "2006-02-13",
+      "height": "167 cm",
+      "nationality": "España",
+      "bio": [
+        "Kaitlin Quevedo nació el 13 de febrero de 2006. Mide 1,67 m. Compite por España."
+      ],
+      "style": [
+        "Mano: diestra · Estatura: 1,67 m · Nacimiento: 13 de febrero de 2006."
+      ],
+      "highlights": [
+        "Su mejor ranking es el 73.",
+        "En 2026 fue finalista del WTA 125 de Targu Mures.",
+        "En 2025 jugó sus primeros cuadros principales de WTA 125, con semifinales en Caldas da Rainha, y la previa del WTA 1000 de Madrid. Cerró el año en el puesto 144, desde el 317."
+      ],
+      "ranking": {
+        "position": "76",
+        "points": "908",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        {
+          "name": "WTA, ficha de Kaitlin Quevedo",
+          "url": "https://www.wtatennis.com/players/331742/kaitlin-quevedo"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ],
+      "hand": "diestra"
+    },
+    {
+      "slug": "oksana-selekhmeteva",
+      "name": "Oksana Selekhmeteva",
+      "tour": "WTA",
+      "profileUrl": "https://www.wtatennis.com/players/329199/oksana-selekhmeteva",
+      "birthDate": "2003-01-13",
+      "height": "172 cm",
+      "nationality": "España",
+      "bio": [
+        "Oksana Selekhmeteva nació el 13 de enero de 2003 en Kamenka (Rusia). Mide 1,72 m. Compite por España."
+      ],
+      "style": [
+        "Mano: zurda · Estatura: 1,72 m · Nacimiento: 13 de enero de 2003, Kamenka (Rusia)."
+      ],
+      "highlights": [
+        "Su mejor ranking es el 71.",
+        "En 2025 ganó los WTA 125 de San Sebastián y Rovereto, y fue finalista en Roma.",
+        "Ese año entró en Roland Garros y en el US Open como clasificada, y perdió en primera ronda con Markéta Vondroušová. En noviembre entró por primera vez en el top 100."
+      ],
+      "ranking": {
+        "position": "100",
+        "points": "743",
+        "asOf": "2026-10-12"
+      },
+      "sources": [
+        {
+          "name": "WTA, ficha de Oksana Selekhmeteva",
+          "url": "https://www.wtatennis.com/players/329199/oksana-selekhmeteva"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ],
+      "hand": "zurda",
+      "birthPlace": "Kamenka (Rusia)",
+      "favorites": "Superficie favorita: tierra batida."
+    },
+    {
       "slug": "francisco-cerundolo",
       "name": "Francisco Cerúndolo",
       "tour": "ATP",
