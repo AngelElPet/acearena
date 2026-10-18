@@ -156,6 +156,8 @@ function chrome(depth) {
           <a href="${p}index.html#newsletter">Briefing</a>
           <a href="${p}agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
+          <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a>
+          <a href="https://www.instagram.com/acearenaes/" rel="noopener noreferrer">Instagram</a>
         </div>
         <div>
           <h2>Legal</h2>
