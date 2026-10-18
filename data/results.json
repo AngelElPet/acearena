@@ -1,24 +1,6 @@
 {
-  "updated": "2026-10-18T16:10:24.000Z",
+  "updated": "2026-10-18T16:33:38.000Z",
   "results": [
-    {
-      "tournament": "Rolex Shanghai Masters",
-      "round": "Final",
-      "date": "2026-10-18",
-      "winner": "Alejandro Davidovich Fokina",
-      "loser": "Rafael Jódar",
-      "score": "1-6 7-6(5) 6-4",
-      "source": "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final"
-    },
-    {
-      "tournament": "Rolex Shanghai Masters",
-      "round": "Final de dobles",
-      "date": "2026-10-18",
-      "winner": "L. Miedler / N. Oberleitner",
-      "loser": "F. Cabral / J. Tracy",
-      "score": "6-3 6-4",
-      "source": "https://en.rolexshanghaimasters.com/en/scores/results"
-    },
     {
       "tournament": "Dongfeng Voyah Wuhan Open",
       "round": "Final",
@@ -36,6 +18,24 @@
       "loser": "S. Hunter / K. Siniakova",
       "score": "7-5 6-4",
       "source": "https://tennistourcalendar.com/2026-wuhan-open-final-results/"
+    },
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Final",
+      "date": "2026-10-18",
+      "winner": "Alejandro Davidovich Fokina",
+      "loser": "Rafael Jódar",
+      "score": "1-6 7-6(5) 6-4",
+      "source": "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final"
+    },
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Final de dobles",
+      "date": "2026-10-18",
+      "winner": "L. Miedler / N. Oberleitner",
+      "loser": "F. Cabral / J. Tracy",
+      "score": "6-3 6-4",
+      "source": "https://en.rolexshanghaimasters.com/en/scores/results"
     },
     {
       "tournament": "Rolex Shanghai Masters",

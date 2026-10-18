@@ -11,8 +11,15 @@
       "Jódar, de 20 años y cabeza de serie número 12, se llevó el primer set. Davidovich Fokina, de 27 años, llegó a ir por detrás de un set y un break, 1-6 y 2-3, antes de igualar el segundo y cerrar en el tercero. Al anunciar el emparejamiento, la ATP contó esta final como la novena de un Masters 1000 entre dos españoles.",
       "En las semifinales del sábado 17 de octubre, Jódar derrotó a Daniil Medvedev por 6-3 y 6-4. Con esa victoria alcanzó su primera final de Masters 1000 y, según la ATP, pasó a ser el finalista más joven en la historia del torneo de Shanghái. Davidovich Fokina eliminó al primer cabeza de serie, Alexander Zverev, por 5-7, 6-4 y 6-3. Durante la semana salvó un punto de partido ante Frances Tiafoe en tercera ronda y remontó un set ante Hubert Hurkacz y ante Zverev."
     ],
-    "tags": ["ATP", "Masters 1000", "Shanghái"],
-    "players": ["Alejandro Davidovich Fokina", "Rafael Jódar"],
+    "tags": [
+      "ATP",
+      "Masters 1000",
+      "Shanghái"
+    ],
+    "players": [
+      "Alejandro Davidovich Fokina",
+      "Rafael Jódar"
+    ],
     "tournament": "Rolex Shanghai Masters",
     "sources": [
       {
@@ -31,6 +38,11 @@
         "name": "Associated Press",
         "url": "https://apnews.com/article/shanghai-masters-tennis-jodar-davidovich-fokina-b7528232e022bfd8717cb0c66e240c2b"
       }
+    ],
+    "brief": [
+      "Davidovich Fokina ganó la final a Jódar por 1-6, 7-6(5) y 6-4.",
+      "Es su primer Masters 1000 y su tercer título ATP, después de Mallorca y Chengdu.",
+      "Jódar, de 20 años, se llevó el primer set y había eliminado a Medvedev en semifinales."
     ]
   },
   {
@@ -46,13 +58,25 @@
       "La WTA proyecta a Chwalińska en el puesto 11, el mejor de su carrera, desde el 22, y a Kartal 120 puestos más arriba, del 170 al 50, después de seis meses de baja por una lesión de espalda. Las notas del partido de la WTA asignan a la campeona 665.000 dólares y 1.000 puntos, y a la finalista 385.001 dólares y 650 puntos.",
       "En la final de dobles, Gabriela Dabrowski y Luisa Stefani vencieron por 7-5 y 6-4 a las campeonas defensoras, Storm Hunter y Kateřina Siniaková, según Tennis Tour Calendar."
     ],
-    "tags": ["WTA", "WTA 1000", "Wuhan"],
-    "players": ["Maja Chwalińska", "Sonay Kartal", "Iga Świątek"],
+    "tags": [
+      "WTA",
+      "WTA 1000",
+      "Wuhan"
+    ],
+    "players": [
+      "Maja Chwalińska",
+      "Sonay Kartal",
+      "Iga Świątek"
+    ],
     "tournament": "Dongfeng Voyah Wuhan Open",
     "sources": [
       {
-        "name": "WTA",
+        "name": "WTA, crónica de la final",
         "url": "https://www.wtatennis.com/news/4593967/chwalinska-rallies-past-kartal-for-first-wta-title-in-wuhan"
+      },
+      {
+        "name": "WTA, previa de la final",
+        "url": "https://www.wtatennis.com/news/4593447/maja-chwalinska-sonay-kartal-wuhan-open-final-2026-everything-to-know"
       },
       {
         "name": "WTA, notas del partido",
@@ -65,11 +89,12 @@
       {
         "name": "Tennis Tour Calendar",
         "url": "https://tennistourcalendar.com/2026-wuhan-open-final-results/"
-      },
-      {
-        "name": "WTA, previa de la final",
-        "url": "https://www.wtatennis.com/news/4593447/maja-chwalinska-sonay-kartal-wuhan-open-final-2026-everything-to-know"
       }
+    ],
+    "brief": [
+      "Chwalińska ganó la final a Kartal por 2-6, 6-4 y 6-2.",
+      "Es su primer título WTA, y lo logra en un WTA 1000.",
+      "La WTA la proyecta en el puesto 11, desde el 22."
     ]
   },
   {
@@ -80,12 +105,19 @@
     "summary": "Tras su primera final de Masters 1000, la PIF ATP Live Race sitúa a Rafael Jódar noveno, con 3.159 puntos. El ranking oficial del lunes 19 de octubre lo proyecta 11º; Alejandro Davidovich Fokina, 13º.",
     "body": [
       "Rafael Jódar, de 20 años, alcanzó en Shanghái su primera final de Masters 1000. Con esa semana, la ATP lo sube dos puestos hasta el noveno de la PIF ATP Live Race a Turín y refuerza su opción de clasificarse por primera vez para las Nitto ATP Finals. El Infosys ATP Win/Loss Index le atribuye un balance de 43 victorias y 17 derrotas en partidos de nivel tour en 2026. En el cuadro venció a Casper Ruud en cuartos y a Daniil Medvedev en semifinales. En la crónica de la ATP, Jódar describió el torneo como una gran semana en la que disputó muchos partidos.",
-      "La lista en vivo de la Race, con Shanghái ya sumado, queda así en la ATP: Alexander Zverev, 9.150 puntos; Jannik Sinner, 7.950; Carlos Alcaraz, 4.600; Ben Shelton, 4.480; Cobolli, 3.540; Daniil Medvedev, 3.420; Frances Tiafoe, 3.380; Arthur Fils, 3.325; Jódar, 3.159; Alex de Minaur, 2.880, y Novak Djokovic, 2.840. Alejandro Davidovich Fokina ocupa el puesto 16, con 2.450 puntos, trece plazas más arriba.",
+      "La lista en vivo de la Race, con Shanghái ya sumado, queda así en la ATP: Alexander Zverev, 9.150 puntos; Jannik Sinner, 7.950; Carlos Alcaraz, 4.600; Ben Shelton, 4.480; Flavio Cobolli, 3.540; Daniil Medvedev, 3.420; Frances Tiafoe, 3.380; Arthur Fils, 3.325; Jódar, 3.159; Alex de Minaur, 2.880, y Novak Djokovic, 2.840. Alejandro Davidovich Fokina ocupa el puesto 16, con 2.450 puntos, trece plazas más arriba.",
       "Mundo Deportivo señala que, como Sinner ya cerró la temporada, el corte de Turín queda en la novena plaza, justo la que Jódar ocupa en la lista en vivo. Para cerrar el billete tiene previsto jugar dos torneos más: el ATP 500 de Basilea y el Masters 1000 de París. En el ranking ATP, la misma crónica lo lleva del puesto 13 al 11, igualando su mejor posición. Davidovich Fokina subiría al 13, el mejor registro de su carrera: nunca había ocupado un puesto mejor que el 14. Llegaba desde el 26 después de dos meses fuera por una lesión de espalda.",
       "Yahoo Sports y Tennis365 coinciden en la subida de trece puestos de Davidovich Fokina hasta el número 13 y en el 11 de Jódar, a 101 puntos de Arthur Fils, décimo. Si Jódar hubiera ganado la final, habría entrado en el top 10 por primera vez. Con Alcaraz tercero, hay tres españoles en el top 15: Alcaraz, Jódar y Davidovich Fokina. Estas cifras son en vivo o proyectadas: el ranking oficial de la ATP se publica el lunes 19 de octubre de 2026."
     ],
-    "tags": ["ATP", "Ranking", "Race a Turín"],
-    "players": ["Rafael Jódar", "Alejandro Davidovich Fokina"],
+    "tags": [
+      "ATP",
+      "Ranking",
+      "Race a Turín"
+    ],
+    "players": [
+      "Rafael Jódar",
+      "Alejandro Davidovich Fokina"
+    ],
     "tournament": "ATP",
     "sources": [
       {
@@ -108,6 +140,11 @@
         "name": "Tennis365",
         "url": "https://www.tennis365.com/tennis-news/alejandro-davidovich-fokina-ranking-points-prize-money-shanghai-masters"
       }
+    ],
+    "brief": [
+      "Jódar es noveno de la PIF ATP Live Race a Turín, con 3.159 puntos.",
+      "El ranking oficial del lunes 19 de octubre lo proyecta en el puesto 11.",
+      "Davidovich Fokina quedaría 13º, el mejor puesto de su carrera."
     ]
   },
   {
@@ -115,15 +152,23 @@
     "title": "Zverev cierra 2026 como número 1 de la ATP",
     "date": "2026-10-12",
     "updated": "2026-10-12",
-    "summary": "Alexander Zverev será el número 1 al cierre de 2026, el primero alemán en lograrlo. En la lista vigente del 12 de octubre, Sinner sigue primero con 11.000 puntos y Zverev segundo con 9.720.",
+    "summary": "Alexander Zverev será el número 1 al cierre de 2026, el primer alemán en lograrlo. En la lista vigente del 12 de octubre, Sinner sigue primero con 11.000 puntos y Zverev segundo con 9.720.",
     "body": [
       "Alexander Zverev aseguró el número uno de final de año del circuito ATP el lunes 12 de octubre de 2026. La ATP confirmó que será el primer alemán en cerrar una temporada en lo más alto de la clasificación y el jugador de más edad que logra ese puesto por primera vez. El 23 de noviembre de 2026, fecha del ranking de cierre, tendrá 29 años y 217 días.",
       "Sinner sigue primero en la clasificación publicada el 12 de octubre de 2026: 11.000 puntos, por 9.720 de Zverev y 5.560 de Carlos Alcaraz. Detrás figuran Ben Shelton, con 4.680, y Félix Auger-Aliassime, con 3.890. La BBC indica que Zverev no puede adelantar a Sinner en esa lista hasta el 2 de noviembre como muy pronto.",
       "La plaza de cierre quedó decidida cuando Alcaraz perdió en tercera ronda de Shanghái contra Zizou Bergs por 7-5 y 7-6(7-4). Hasta ese partido, Alcaraz mantenía una opción matemática. La ATP y la BBC coinciden en que la baja de Sinner por lesión y esa derrota dejaron a Zverev sin rivales para el puesto de final de año.",
       "Zverev llega a ese cierre después de ganar Roland Garros y el US Open en 2026, sus dos primeros títulos de Grand Slam, según la ATP. El anuncio no cambia el ranking de la semana: el número uno vigente, mientras la lista no se actualice, sigue siendo Sinner."
     ],
-    "tags": ["ATP", "Ranking", "Zverev"],
-    "players": ["Alexander Zverev", "Jannik Sinner", "Carlos Alcaraz"],
+    "tags": [
+      "ATP",
+      "Ranking",
+      "Zverev"
+    ],
+    "players": [
+      "Alexander Zverev",
+      "Jannik Sinner",
+      "Carlos Alcaraz"
+    ],
     "tournament": "ATP",
     "sources": [
       {
@@ -142,6 +187,11 @@
         "name": "Clasificación ATP del 12 de octubre de 2026",
         "url": "https://www.tennis-x.com/rankings.php"
       }
+    ],
+    "brief": [
+      "Zverev será el número 1 al cierre de 2026, el primer alemán en lograrlo.",
+      "En la lista del 12 de octubre, Sinner sigue primero (11.000) y Zverev segundo (9.720).",
+      "La plaza se cerró cuando Alcaraz perdió en Shanghái contra Zizou Bergs."
     ]
   },
   {
@@ -156,8 +206,15 @@
       "Andreeva figura con 19 años en la ficha de la WTA y ocupa la tercera plaza de esa lista. Pegula y Gauff completan las cinco primeras. Iga Świątek aparece novena, con 3.999 puntos, por detrás también de Elina Svitolina, Karolina Muchova y Linda Noskova, según la misma lista numérica del 12 de octubre.",
       "La lista del 12 de octubre recoge los puntos ya computados por la WTA. Los partidos de Wuhan y del resto de esa semana quedan para la publicación siguiente."
     ],
-    "tags": ["WTA", "Ranking"],
-    "players": ["Elena Rybakina", "Aryna Sabalenka", "Mirra Andreeva"],
+    "tags": [
+      "WTA",
+      "Ranking"
+    ],
+    "players": [
+      "Elena Rybakina",
+      "Aryna Sabalenka",
+      "Mirra Andreeva"
+    ],
     "tournament": "WTA",
     "sources": [
       {
@@ -172,6 +229,11 @@
         "name": "Tennis365",
         "url": "https://www.tennis365.com/tennis-features/how-aryna-sabalenka-wuhan-open-exit-affects-wta-rankings-mirra-andreeva-boost"
       }
+    ],
+    "brief": [
+      "Rybakina lidera la WTA a 12 de octubre de 2026, con 9.696 puntos.",
+      "Detrás van Sabalenka (7.550), Andreeva (6.371), Pegula (6.225) y Gauff (5.974).",
+      "Świątek figura novena en esa lista, con 3.999 puntos."
     ]
   },
   {
@@ -186,8 +248,14 @@
       "La ATP recuerda que esta temporada ganó cinco Masters 1000 seguidos: Indian Wells, Miami, Montecarlo, Madrid y Roma. En ese tramo firmó su mejor racha, de 30 victorias, cortada por Juan Manuel Cerúndolo en segunda ronda de Roland Garros. La BBC cifró su curso, antes del cierre anticipado, en 44 victorias y 3 derrotas, y lo describió como el hombre más joven en completar el Career Golden Masters.",
       "En el mensaje difundido por la ATP, Sinner explicó que la decisión la tomó con sus médicos para proteger la carrera a largo plazo y que haría lo posible por volver al cien por cien. Ese comunicado no incluye una fecha de regreso. Mientras siga sin sumar puntos, el liderato queda expuesto: el ranking ATP de octubre coloca a Zverev segundo, con 9.720 puntos, frente a los 11.000 de Sinner. Zverev ya tiene asegurado el número uno de final de año."
     ],
-    "tags": ["ATP", "Sinner", "Lesiones"],
-    "players": ["Jannik Sinner"],
+    "tags": [
+      "ATP",
+      "Sinner",
+      "Lesiones"
+    ],
+    "players": [
+      "Jannik Sinner"
+    ],
     "tournament": "ATP",
     "sources": [
       {
@@ -202,6 +270,11 @@
         "name": "Ranking ATP",
         "url": "https://www.atptour.com/en/rankings/singles/"
       }
+    ],
+    "brief": [
+      "El 6 de octubre anunció que no volverá a competir en 2026 por la rodilla derecha.",
+      "No defenderá las Nitto ATP Finals, que ganó en 2024 y 2025.",
+      "En la lista del 12 de octubre sigue primero, con 11.000 puntos."
     ]
   },
   {
@@ -215,8 +288,15 @@
       "Es el séptimo título de Djokovic en Pekín y extiende su balance en el torneo a 34-0, según la ATP. El serbio, de 39 años, volvía al China Open por primera vez desde 2015, cuando ganó la sexta corona ante Rafael Nadal. En el cuadro de 2026 eliminó a Alexander Zverev en cuartos. En semifinales, Daniil Medvedev fue descalificado cuando Djokovic sacaba para cerrar el partido.",
       "El título deja a Djokovic a uno de las 103 coronas de Roger Federer y a siete de las 109 de Jimmy Connors, las dos cifras más altas de la Era Open que publica la ATP. También es el primer hombre con al menos un título de circuito en 21 temporadas consecutivas. La organización del China Open confirmó la retirada de De Minaur, el mismo registro de 34-0 y que Pekín es su primer título de la temporada 2026."
     ],
-    "tags": ["ATP", "Pekín", "Djokovic"],
-    "players": ["Novak Djokovic", "Alex de Minaur"],
+    "tags": [
+      "ATP",
+      "Pekín",
+      "Djokovic"
+    ],
+    "players": [
+      "Novak Djokovic",
+      "Alex de Minaur"
+    ],
     "tournament": "China Open",
     "sources": [
       {
@@ -235,6 +315,11 @@
         "name": "BBC Sport",
         "url": "https://www.bbc.com/sport/tennis/articles/crkg7d815e59o"
       }
+    ],
+    "brief": [
+      "El 6 de octubre ganó el China Open tras la retirada de De Minaur: 7-6(3) y 0-1.",
+      "Es el título 102 de su carrera y el séptimo en Pekín, a los 39 años.",
+      "La ATP le da un balance de 34-0 en el torneo."
     ]
   }
 ]

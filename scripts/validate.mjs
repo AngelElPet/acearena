@@ -178,6 +178,14 @@ export function validatePayload(news, resultsDoc, now = new Date()) {
         });
       }
 
+      if (article.brief != null) {
+        if (!Array.isArray(article.brief) || article.brief.length !== 3) {
+          errors.push(`${path}.brief debe tener 3 viñetas`);
+        } else {
+          article.brief.forEach((item, itemIndex) => requireText(item, `${path}.brief[${itemIndex}]`, errors));
+        }
+      }
+
       for (const field of ['tags', 'players']) {
         if (!Array.isArray(article[field])) {
           errors.push(`${path}.${field} debe ser un array`);
@@ -353,6 +361,84 @@ export function validateEvergreen({ players, calendar, guides, indexnow }, now =
     errors.push('guides.guides debe ser un array');
   }
   scanPlaceholders({ players, calendar, guides, indexnow }, 'evergreen', errors);
+  return errors;
+}
+
+const SURFACES = new Set(['hard', 'clay', 'grass', 'indoor', '']);
+
+function validateTournament(event, path, errors) {
+  if (!event || typeof event !== 'object' || Array.isArray(event)) {
+    errors.push(`${path} debe ser un objeto`);
+    return;
+  }
+  for (const field of ['name', 'level', 'dates', 'place', 'surfaceLabel', 'officialUrl', 'detail']) {
+    requireText(event[field], `${path}.${field}`, errors);
+  }
+  if (event.tour !== 'ATP' && event.tour !== 'WTA') errors.push(`${path}.tour debe ser ATP o WTA`);
+  if (!SURFACES.has(event.surface)) errors.push(`${path}.surface no es válida`);
+  if (!isHttpUrl(event.officialUrl)) errors.push(`${path}.officialUrl no es una URL http(s) válida`);
+  else if (isPlaceholderUrl(event.officialUrl)) errors.push(`${path}.officialUrl es una URL de ejemplo`);
+  if (event.entries != null && event.entries !== '') requireText(event.entries, `${path}.entries`, errors);
+  requireSources(event.sources, `${path}.sources`, errors);
+}
+
+export function validateWeek(week, now = new Date()) {
+  const errors = [];
+  const today = todayUtc(now);
+  if (!week || typeof week !== 'object' || Array.isArray(week)) {
+    errors.push('week debe ser un objeto');
+    return errors;
+  }
+  if (!parseDay(week.updated)) errors.push('week.updated debe ser YYYY-MM-DD');
+  else if (week.updated > today) errors.push('week.updated está en el futuro');
+  requireText(week.range, 'week.range', errors);
+  requireText(week.hoursNote, 'week.hoursNote', errors);
+  if (!Array.isArray(week.hero) || week.hero.length === 0) errors.push('week.hero necesita fragmentos');
+  else week.hero.forEach((part, index) => {
+    requireText(part?.text, `week.hero[${index}].text`, errors);
+    if (part?.href != null) {
+      if (!isHttpUrl(part.href)) errors.push(`week.hero[${index}].href no es una URL http(s) válida`);
+      else if (isPlaceholderUrl(part.href)) errors.push(`week.hero[${index}].href es una URL de ejemplo`);
+    }
+  });
+  const todayCard = week.today;
+  if (!todayCard || typeof todayCard !== 'object') errors.push('week.today es obligatorio');
+  else {
+    for (const field of ['resultTitle', 'resultText', 'resultHref', 'nextTitle', 'nextText', 'nextHref']) {
+      requireText(todayCard[field], `week.today.${field}`, errors);
+    }
+  }
+  if (!Array.isArray(week.tournaments) || week.tournaments.length === 0) errors.push('week.tournaments necesita torneos');
+  else week.tournaments.forEach((event, index) => validateTournament(event, `week.tournaments[${index}]`, errors));
+  if (!Array.isArray(week.later) || week.later.length === 0) errors.push('week.later necesita la cita siguiente');
+  else week.later.forEach((event, index) => validateTournament(event, `week.later[${index}]`, errors));
+  scanPlaceholders(week, 'week', errors);
+  return errors;
+}
+
+export function validateRace(race, now = new Date()) {
+  const errors = [];
+  const today = todayUtc(now);
+  if (!race || typeof race !== 'object' || Array.isArray(race)) {
+    errors.push('race debe ser un objeto');
+    return errors;
+  }
+  if (!parseDay(race.updated)) errors.push('race.updated debe ser YYYY-MM-DD');
+  else if (race.updated > today) errors.push('race.updated está en el futuro');
+  if (!parseDay(race.asOf)) errors.push('race.asOf debe ser YYYY-MM-DD');
+  else if (race.asOf > today) errors.push('race.asOf está en el futuro');
+  requireText(race.name, 'race.name', errors);
+  requireText(race.context, 'race.context', errors);
+  requireSources([race.source], 'race.source', errors);
+  requireSources(race.contextSources, 'race.contextSources', errors);
+  if (!Array.isArray(race.rows) || race.rows.length !== 10) errors.push('race.rows debe tener el top 10');
+  else race.rows.forEach((row, index) => {
+    requireText(row?.position, `race.rows[${index}].position`, errors);
+    requireText(row?.player, `race.rows[${index}].player`, errors);
+    requireText(row?.points, `race.rows[${index}].points`, errors);
+    if (row?.position !== String(index + 1)) errors.push(`race.rows[${index}].position debe ser ${index + 1}`);
+  });
+  scanPlaceholders(race, 'race', errors);
   return errors;
 }
 
@@ -594,9 +680,13 @@ function main() {
   const calendar = readJson(join(root, 'data', 'calendar.json'));
   const guides = readJson(join(root, 'data', 'guides.json'));
   const indexnow = readJson(join(root, 'data', 'indexnow.json'));
+  const week = readJson(join(root, 'data', 'week.json'));
+  const race = readJson(join(root, 'data', 'race.json'));
   const errors = [
     ...validatePayload(news, results),
     ...validateEvergreen({ players, calendar, guides, indexnow }),
+    ...validateWeek(week),
+    ...validateRace(race),
     ...pendingPlaceholderErrors(root),
   ];
   if (process.argv.includes('--site')) errors.push(...validateSite(root));

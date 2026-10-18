@@ -1,0 +1,166 @@
+{
+  "updated": "2026-10-18",
+  "range": "19–25 de octubre de 2026",
+  "hoursNote": "No hay horas en Madrid, Buenos Aires ni Ciudad de México: el orden de juego oficial de estos torneos no las publica en esas zonas.",
+  "hero": [
+    { "text": "Esta semana: " },
+    { "text": "Almaty", "href": "https://www.atptour.com/en/tournaments/almaty/9410/overview" },
+    { "text": ", " },
+    { "text": "Bruselas", "href": "https://www.atptour.com/en/tournaments/brussels/7485/overview" },
+    { "text": " y " },
+    { "text": "Lyon", "href": "https://www.atptour.com/en/tournaments/lyon/496/overview" },
+    { "text": " (ATP 250), y " },
+    { "text": "Ningbo", "href": "https://www.wtatennis.com/tournaments/2092/ningbo/2026" },
+    { "text": " y " },
+    { "text": "Osaka", "href": "https://www.wtatennis.com/tournaments/405/osaka/2026" },
+    { "text": " (WTA), del 19 al 25 de octubre. Después, " },
+    { "text": "Basilea", "href": "https://www.atptour.com/en/tournaments/-/328/overview" },
+    { "text": " y " },
+    { "text": "Viena", "href": "https://www.atptour.com/en/tournaments/viena/337/overview" },
+    { "text": " (ATP 500), del 26 de octubre al 1 de noviembre, y el " },
+    { "text": "Rolex Paris Masters", "href": "https://www.atptour.com/en/tournaments/-/352/overview" },
+    { "text": ", del 2 al 8 de noviembre." }
+  ],
+  "today": {
+    "resultTitle": "Chwalińska gana el Wuhan Open",
+    "resultText": "Remontó a Sonay Kartal por 2-6, 6-4 y 6-2. Es su primer título en el circuito WTA.",
+    "resultHref": "noticias/final-de-wuhan-chwalinska-y-kartal.html",
+    "nextTitle": "Próxima cita",
+    "nextText": "Del 19 al 25 de octubre: Almaty, Bruselas y Lyon en la ATP, y Ningbo y Osaka en la WTA.",
+    "nextHref": "semana.html"
+  },
+  "tournaments": [
+    {
+      "name": "Almaty Open",
+      "tour": "ATP",
+      "level": "ATP 250",
+      "dates": "19–25 de octubre de 2026",
+      "place": "Almaty, Kazajistán",
+      "surface": "indoor",
+      "surfaceLabel": "pista dura indoor",
+      "officialUrl": "https://www.atptour.com/en/tournaments/almaty/9410/overview",
+      "detail": "El calendario ATP marca la semana del 19 de octubre y la superficie IH (indoor hard). La ficha del torneo da las fechas 19–25 de octubre en Almaty.",
+      "entries": "",
+      "sources": [
+        { "name": "ATP, ficha del Almaty Open", "url": "https://www.atptour.com/en/tournaments/almaty/9410/overview" },
+        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+      ]
+    },
+    {
+      "name": "BNP Paribas Fortis European Open",
+      "tour": "ATP",
+      "level": "ATP 250",
+      "dates": "19–25 de octubre de 2026",
+      "place": "Bruselas, Bélgica",
+      "surface": "indoor",
+      "surfaceLabel": "pista dura indoor",
+      "officialUrl": "https://www.atptour.com/en/tournaments/brussels/7485/overview",
+      "detail": "La ATP lo sitúa en el Brussels Expo (Palais 12 / Palais 5). El calendario marca superficie IH.",
+      "entries": "La previa de la ATP del 14 de octubre incluye, entre otros, a Alejandro Davidovich Fokina y a Francisco Cerúndolo.",
+      "sources": [
+        { "name": "ATP, previa del European Open 2026", "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" },
+        { "name": "ATP, ficha de Bruselas", "url": "https://www.atptour.com/en/tournaments/brussels/7485/overview" },
+        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+      ]
+    },
+    {
+      "name": "Grand Prix Auvergne-Rhône-Alpes",
+      "tour": "ATP",
+      "level": "ATP 250",
+      "dates": "19–25 de octubre de 2026",
+      "place": "Lyon, Francia",
+      "surface": "indoor",
+      "surfaceLabel": "pista dura indoor",
+      "officialUrl": "https://www.atptour.com/en/tournaments/lyon/496/overview",
+      "detail": "Se juega en el LDLC Arena, un pabellón cubierto. El calendario ATP marca superficie IH.",
+      "entries": "La previa de la ATP del 14 de octubre nombra a Flavio Cobolli, Taylor Fritz, Ugo Humbert, Valentin Vacherot, Tommy Paul, Brandon Nakashima y Stan Wawrinka. En ese listado no hay españoles ni latinoamericanos.",
+      "sources": [
+        { "name": "ATP, previa de Lyon 2026", "url": "https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" },
+        { "name": "ATP, ficha de Lyon", "url": "https://www.atptour.com/en/tournaments/lyon/496/overview" },
+        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+      ]
+    },
+    {
+      "name": "BNB Ningbo Open",
+      "tour": "WTA",
+      "level": "WTA 500",
+      "dates": "19–25 de octubre de 2026",
+      "place": "Ningbo, China",
+      "surface": "hard",
+      "surfaceLabel": "pista dura",
+      "officialUrl": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
+      "detail": "La WTA lo describe como un WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center. El calendario WTA, a 2 de octubre de 2026, lo pone en la semana del 19 de octubre.",
+      "entries": "",
+      "sources": [
+        { "name": "WTA, ficha del Ningbo Open 2026", "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026" },
+        { "name": "WTA, calendario 2026 a 2 de octubre", "url": "https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" }
+      ]
+    },
+    {
+      "name": "Kinoshita Group Japan Open",
+      "tour": "WTA",
+      "level": "WTA 250",
+      "dates": "19–25 de octubre de 2026",
+      "place": "Osaka, Japón",
+      "surface": "hard",
+      "surfaceLabel": "pista dura",
+      "officialUrl": "https://www.wtatennis.com/tournaments/405/osaka/2026",
+      "detail": "La WTA lo describe como un WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center. El calendario WTA lo pone en la misma semana que Ningbo.",
+      "entries": "",
+      "sources": [
+        { "name": "WTA, ficha del Japan Open 2026", "url": "https://www.wtatennis.com/tournaments/405/osaka/2026" },
+        { "name": "WTA, calendario 2026 a 2 de octubre", "url": "https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" }
+      ]
+    }
+  ],
+  "later": [
+    {
+      "name": "Swiss Indoors Basel",
+      "tour": "ATP",
+      "level": "ATP 500",
+      "dates": "26 de octubre–1 de noviembre de 2026",
+      "place": "Basilea, Suiza",
+      "surface": "indoor",
+      "surfaceLabel": "pista dura indoor",
+      "officialUrl": "https://www.atptour.com/en/tournaments/-/328/overview",
+      "detail": "La ficha ATP da esas fechas en Basilea. El calendario marca la semana del 26 de octubre y superficie IH.",
+      "entries": "",
+      "sources": [
+        { "name": "ATP, ficha de Basilea", "url": "https://www.atptour.com/en/tournaments/-/328/overview" },
+        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+      ]
+    },
+    {
+      "name": "Erste Bank Open",
+      "tour": "ATP",
+      "level": "ATP 500",
+      "dates": "26 de octubre–1 de noviembre de 2026",
+      "place": "Viena, Austria",
+      "surface": "indoor",
+      "surfaceLabel": "pista dura indoor",
+      "officialUrl": "https://www.atptour.com/en/tournaments/viena/337/overview",
+      "detail": "La ficha ATP da esas fechas en Viena. El calendario marca la misma semana que Basilea y superficie IH.",
+      "entries": "",
+      "sources": [
+        { "name": "ATP, ficha de Viena", "url": "https://www.atptour.com/en/tournaments/viena/337/overview" },
+        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+      ]
+    },
+    {
+      "name": "Rolex Paris Masters",
+      "tour": "ATP",
+      "level": "ATP Masters 1000",
+      "dates": "2–8 de noviembre de 2026",
+      "place": "París, Francia",
+      "surface": "indoor",
+      "surfaceLabel": "pista dura indoor",
+      "officialUrl": "https://www.atptour.com/en/tournaments/-/352/overview",
+      "detail": "La ficha ATP da esas fechas en París. El calendario marca la semana del 2 de noviembre, Masters 1000 y superficie IH.",
+      "entries": "",
+      "sources": [
+        { "name": "ATP, ficha del Rolex Paris Masters", "url": "https://www.atptour.com/en/tournaments/-/352/overview" },
+        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+      ]
+    }
+  ]
+}
