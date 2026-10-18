@@ -15,12 +15,18 @@ const LLMS_LATEST = 20;
 const BEACON = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>`;
 const BYLINE = 'Redacción AceArena';
 const CRITICAL_CSS = `<style>
+html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -281,7 +287,7 @@ function newsCards(articles, hrefFor, assetPrefix = '') {
     return '<p class="rankings-note">No hay noticias de los últimos 60 días.</p>';
   }
   return articles.map((article) => `        <article class="news-card">
-          <a class="news-card-media" href="${esc(hrefFor(article))}" tabindex="-1" aria-hidden="true"><img src="${assetPrefix}og/${esc(article.slug)}.png" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
+          <a class="news-card-media" href="${esc(hrefFor(article))}" tabindex="-1" aria-hidden="true"><img src="${assetPrefix}art/${esc(article.slug)}-800.webp" srcset="${assetPrefix}art/${esc(article.slug)}-800.webp 800w, ${assetPrefix}art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 700px) 100vw, 360px" alt="" width="1200" height="630" loading="lazy" decoding="async"></a>
           <div class="news-meta">${tourBadge(article)}${BYLINE} · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
           <h3><a href="${esc(hrefFor(article))}">${esc(article.title)}</a></h3>
           <p>${esc(article.summary)}</p>
@@ -395,6 +401,76 @@ function articleLinks(article) {
   return links.length ? ` · ${links.join(' · ')}` : '';
 }
 
+const LICENSED_PHOTOS = {
+  'pista-tierra': {
+    file: 'pista-tierra',
+    width: 1200,
+    height: 640,
+    small: 800,
+    alt: 'Pista de tierra vacía, vista desde el fondo.',
+    author: 'KeepActive Australia',
+    license: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg',
+  },
+  'pista-silla': {
+    file: 'pista-silla',
+    width: 1100,
+    height: 734,
+    small: 800,
+    alt: 'Pista de tenis vacía, con la silla del juez detrás de la red.',
+    author: 'Shixart1985',
+    license: 'CC BY 2.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg',
+  },
+  raquetas: {
+    file: 'raquetas',
+    width: 960,
+    height: 640,
+    small: 640,
+    alt: 'Raquetas y pelotas sobre una pista de tierra.',
+    author: 'KeepActive Australia',
+    license: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg',
+  },
+  pelota: {
+    file: 'pelota',
+    width: 1200,
+    height: 800,
+    small: 800,
+    alt: 'Pelota de tenis amarilla sobre fondo neutro.',
+    author: 'Christian VisualBeo Horvat',
+    license: 'CC BY-SA 3.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tennisball.jpg',
+  },
+};
+
+const ARTICLE_PHOTO = {
+  'jodar-noveno-en-la-race-a-turin-tras-shanghai': 'pelota',
+  'zverev-asegura-el-numero-uno-de-final-de-ano': 'pista-silla',
+  'rybakina-encabeza-el-ranking-wta': 'raquetas',
+  'sinner-cierra-la-temporada-por-lesion-de-rodilla': 'pista-tierra',
+};
+
+function photoFigure(id, prefix, { priority = false, sizes = '(max-width: 800px) 100vw, 720px', className = 'photo-figure' } = {}) {
+  const photo = LICENSED_PHOTOS[id];
+  const loading = priority ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"';
+  return `<figure class="${className}">
+          <img src="${prefix}photos/${photo.file}.webp" srcset="${prefix}photos/${photo.file}-800.webp ${photo.small}w, ${prefix}photos/${photo.file}.webp ${photo.width}w" sizes="${sizes}" alt="${esc(photo.alt)}" width="${photo.width}" height="${photo.height}"${loading}>
+          <figcaption>Foto: ${esc(photo.author)}, <a href="${esc(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a>, vía <a href="${esc(photo.sourceUrl)}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>`;
+}
+
+function articleHero(article) {
+  const photoId = !article.score ? ARTICLE_PHOTO[article.slug] : '';
+  if (photoId) return photoFigure(photoId, '../', { priority: true, sizes: '(max-width: 800px) 100vw, 736px', className: 'photo-figure article-photo' });
+  const alt = article.score ? `Marcador de ${article.tournament}: ${article.score}` : (article.tournament || 'AceArena');
+  return `<img class="article-hero" src="../art/${esc(article.slug)}.webp" srcset="../art/${esc(article.slug)}-800.webp 800w, ../art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="${esc(alt)}" width="1200" height="630" fetchpriority="high">`;
+}
+
 function articlePage(article) {
   const url = `${SITE}/noticias/${article.slug}.html`;
   const paragraphs = article.body.map((paragraph) => `        <p>${esc(paragraph)}</p>`).join('\n');
@@ -410,11 +486,19 @@ ${briefItems}
         </ul>
       </section>
 ` : '';
+  const upcomingItems = Array.isArray(article.upcoming)
+    ? article.upcoming.map((event) => `          <li><a href="${esc(event.url)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}</li>`).join('\n')
+    : '';
+  const upcoming = upcomingItems ? `      <h2>Próximos torneos</h2>
+      <ul class="event-list">
+${upcomingItems}
+      </ul>
+` : '';
   const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">${tourBadge(article)}${articleTopic(article)}</p>
       <h1>${esc(article.title)}</h1>
-      <img class="article-hero" src="../art/${esc(article.slug)}.webp" srcset="../art/${esc(article.slug)}-800.webp 800w, ../art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="${esc(article.score ? `Marcador de ${article.tournament}: ${article.score}` : article.tournament)}" width="1200" height="630" fetchpriority="high">
+      ${articleHero(article)}
       <p class="article-byline">${BYLINE}</p>
       <p class="article-dates">Publicado el <time datetime="${esc(filedIso(article, 'date'))}">${esc(formatDay(article.date))}</time>. Actualizado el <time datetime="${esc(filedIso(article, 'updated'))}">${esc(formatDay(article.updated))}</time>.</p>
       <p class="article-kicker">${esc(article.players.join(' · '))}</p>
@@ -422,7 +506,7 @@ ${briefItems}
 ${brief}      <div class="article-body">
 ${paragraphs}
       </div>
-      <ul class="tag-list">
+${upcoming}      <ul class="tag-list">
 ${tags}
       </ul>
       <section class="sources">
@@ -673,12 +757,9 @@ function longDay(iso) {
   return `${day} de ${MONTHS_LONG[month - 1]} de ${year}`;
 }
 
-function linkParts(parts) {
-  return parts.map((part) => (
-    part.href
-      ? `<a href="${esc(part.href)}" target="_blank" rel="noopener noreferrer">${esc(part.text)}</a>`
-      : esc(part.text)
-  )).join('');
+function upcomingList(events) {
+  const items = events.map((event) => `          <li><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}</li>`).join('\n');
+  return `<ul class="event-list">\n${items}\n        </ul>`;
 }
 
 function sourceLinks(sources) {
@@ -698,24 +779,24 @@ function surfaceIcon(surface, prefix) {
   return `<img class="surface-icon" src="${prefix}assets/diagrams/${file}" alt="" width="36" height="36">`;
 }
 
-function tournamentCard(event, prefix) {
+function tournamentItem(event, prefix) {
   const entries = event.entries ? `\n          <p>${esc(event.entries)}</p>` : '';
-  return `        <article class="card">
-          <p class="kicker">${esc(event.tour)} · ${esc(event.level)}</p>
-          <h3><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a></h3>
-          <p class="news-meta surface-line">${surfaceIcon(event.surface, prefix)}${esc(event.dates)} · ${esc(event.place)} · ${esc(event.surfaceLabel)}</p>
+  return `        <li>
+          <p class="kicker">${surfaceIcon(event.surface, prefix)}${esc(event.tour)} · ${esc(event.level)} · ${esc(event.surfaceLabel)}</p>
+          <a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(event.place)}, ${esc(event.dates)}
           <p>${esc(event.detail)}</p>${entries}
           <p>Fuentes: ${sourceLinks(event.sources)}</p>
-        </article>`;
+        </li>`;
 }
 
-function todayCard(today) {
+function todayCard(today, events) {
   return `<div class="today-card">
           <p class="kicker">Hoy</p>
           <h2><a href="${esc(today.resultHref)}">${esc(today.resultTitle)}</a></h2>
           <p>${esc(today.resultText)}</p>
           <h3>${esc(today.nextTitle)}</h3>
-          <p><a href="${esc(today.nextHref)}">${esc(today.nextText)}</a></p>
+          ${upcomingList(events)}
+          <p><a href="${esc(today.nextHref)}">Toda la semana</a></p>
         </div>`;
 }
 
@@ -729,40 +810,37 @@ ${items}
 }
 
 function weekHome(week) {
-  const cards = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
+  const items = week.tournaments.map((event) => tournamentItem(event, '')).join('\n');
   return `<p class="section-intro">${esc(week.hoursNote)}</p>
-        <div class="card-grid">
-${cards}
-        </div>
+        <ul class="event-list">
+${items}
+        </ul>
 ${spotlightBlock(week, '')}
         <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a> · <a href="rankings.html">Rankings</a></p>`;
 }
 
 function weekPage(week) {
   const url = `${SITE}/semana.html`;
-  const current = week.tournaments.map((event) => tournamentCard(event, '')).join('\n');
-  const later = week.later.map((event) => tournamentCard(event, '')).join('\n');
+  const current = week.tournaments.map((event) => tournamentItem(event, '')).join('\n');
+  const later = week.later.map((event) => tournamentItem(event, '')).join('\n');
   const events = [...week.tournaments, ...week.later];
   const main = `  <main class="section page-section" id="contenido">
+    ${photoFigure('pelota', '', { priority: true, sizes: '100vw', className: 'photo-figure hero-banner' })}
     <div class="container">
       <p class="news-meta"><a href="index.html">Inicio</a> · Esta semana</p>
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Qué ver esta semana</h1>
-        <figure class="photo-figure">
-          <img src="photos/pista-tierra.webp" srcset="photos/pista-tierra-800.webp 800w, photos/pista-tierra.webp 1200w" sizes="(max-width: 800px) 100vw, 720px" alt="Pista de tierra vacía, vista desde el fondo." width="1200" height="640">
-          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
-        </figure>
         <p>${esc(week.hoursNote)} Actualizado el ${esc(longDay(week.updated))}.</p>
       </div>
-      <div class="card-grid">
+      <ul class="event-list">
 ${current}
-      </div>
+      </ul>
 ${spotlightBlock(week, '')}
       <h2>Después</h2>
-      <div class="card-grid">
+      <ul class="event-list">
 ${later}
-      </div>
+      </ul>
     </div>
   </main>`;
   return page({
@@ -1002,7 +1080,9 @@ ${playerLines.join('\n')}
 
 ## Calendario
 
-- [Calendario 2027](${SITE}/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada. Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+- [Calendario 2027](${SITE}/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada.
+- Davis Cup Final 8, Bolonia, 24–29 de noviembre de 2026.
+- Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero.
 
 ## Aprende tenis
 
@@ -1204,11 +1284,14 @@ Bronze desde 4.500 €/trimestre. Silver desde 12.000 €/trimestre. Gold desde 
 
 ## Calendario de referencia
 
-Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+- Davis Cup Final 8, Bolonia, 24–29 de noviembre de 2026.
+- Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero.
 
 ## Esta semana
 
 ${week.range}. ${week.hoursNote}
+
+${[...week.tournaments, ...week.later].map((event) => `- ${event.name}, ${event.place}, ${event.dates}`).join('\n')}
 
 ## Rankings citados
 
@@ -1320,8 +1403,8 @@ async function build() {
 
   let home = readFileSync(join(publicDir, 'index.html'), 'utf8');
   home = fillRegion(home, 'EDITION', editionLabel(contentDay, today));
-  home = fillRegion(home, 'WEEKLINE', linkParts(week.hero));
-  home = fillRegion(home, 'TODAY', todayCard(week.today));
+  home = fillRegion(home, 'WEEKLINE', upcomingList([...week.tournaments, ...week.later]));
+  home = fillRegion(home, 'TODAY', todayCard(week.today, week.tournaments));
   home = fillRegion(home, 'WEEK', weekHome(week));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));

@@ -179,32 +179,33 @@
       "description": "Australian Open, Roland Garros, Wimbledon y US Open: superficie y fechas de 2027 con la fuente oficial.",
       "kicker": "Grand Slams",
       "intro": "Cuatro torneos, cuatro superficies. Aquí están las fechas de 2027 que ya publicó cada fuente.",
-      "sections": [
+      "events": [
         {
-          "heading": "Australian Open",
-          "paragraphs": [
-            "Melbourne Park, pista dura. En 2027 el torneo va del 11 al 31 de enero. El cuadro principal se juega del 17 al 31 de enero. Las finales de individuales son el 30 y el 31 de enero."
-          ]
+          "name": "Australian Open",
+          "place": "Melbourne Park",
+          "dates": "11–31 de enero de 2027",
+          "detail": "Cuadro principal: 17–31 de enero. Finales de individuales: 30 y 31 de enero. Pista dura."
         },
         {
-          "heading": "Roland Garros",
-          "paragraphs": [
-            "París, tierra batida. En 2027 va del 23 de mayo al 6 de junio."
-          ]
+          "name": "Roland Garros",
+          "place": "París",
+          "dates": "23 de mayo–6 de junio de 2027",
+          "detail": "Tierra batida."
         },
         {
-          "heading": "Wimbledon",
-          "paragraphs": [
-            "Wimbledon, hierba. En 2027 va del 28 de junio al 11 de julio."
-          ]
+          "name": "Wimbledon",
+          "place": "Wimbledon",
+          "dates": "28 de junio–11 de julio de 2027",
+          "detail": "Hierba."
         },
         {
-          "heading": "US Open",
-          "paragraphs": [
-            "Nueva York, pista dura. En 2027 empieza el 29 de agosto. El día de cierre sigue por confirmar."
-          ]
+          "name": "US Open",
+          "place": "Nueva York",
+          "dates": "Empieza el 29 de agosto de 2027",
+          "detail": "El día de cierre sigue por confirmar. Pista dura."
         }
       ],
+      "sections": [],
       "faqs": [
         {
           "q": "¿Cuál es el primer Grand Slam de 2027?",

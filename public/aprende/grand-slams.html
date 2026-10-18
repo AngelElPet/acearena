@@ -26,12 +26,18 @@
   <meta name="twitter:description" content="Australian Open, Roland Garros, Wimbledon y US Open: superficie y fechas de 2027 con la fuente oficial.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <style>
+html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -74,14 +80,13 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
       <p class="kicker">Grand Slams</p>
       <h1>Los cuatro Grand Slams</h1>
       <p class="article-summary">Cuatro torneos, cuatro superficies. Aquí están las fechas de 2027 que ya publicó cada fuente.</p>
-      <h2>Australian Open</h2>
-        <p>Melbourne Park, pista dura. En 2027 el torneo va del 11 al 31 de enero. El cuadro principal se juega del 17 al 31 de enero. Las finales de individuales son el 30 y el 31 de enero.</p>
-      <h2>Roland Garros</h2>
-        <p>París, tierra batida. En 2027 va del 23 de mayo al 6 de junio.</p>
-      <h2>Wimbledon</h2>
-        <p>Wimbledon, hierba. En 2027 va del 28 de junio al 11 de julio.</p>
-      <h2>US Open</h2>
-        <p>Nueva York, pista dura. En 2027 empieza el 29 de agosto. El día de cierre sigue por confirmar.</p>
+      <ul class="event-list">
+        <li>Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero. Finales de individuales: 30 y 31 de enero. Pista dura.</li>
+        <li>Roland Garros, París, 23 de mayo–6 de junio de 2027. Tierra batida.</li>
+        <li>Wimbledon, Wimbledon, 28 de junio–11 de julio de 2027. Hierba.</li>
+        <li>US Open, Nueva York, Empieza el 29 de agosto de 2027. El día de cierre sigue por confirmar. Pista dura.</li>
+      </ul>
+
       <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
         <article class="faq-item"><h3>¿Cuál es el primer Grand Slam de 2027?</h3><p>El Australian Open, en Melbourne Park, del 11 al 31 de enero de 2027. El cuadro principal empieza el 17 de enero.</p></article>

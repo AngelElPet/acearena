@@ -26,12 +26,18 @@
   <meta name="twitter:description" content="Tomás Martín Etcheverry, ATP. Número 31 · 1.590 puntos. Actualizado a 12 de octubre de 2026.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <style>
+html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -83,7 +89,12 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
       <h2>Biografía</h2>
         <p>Tomás Martín Etcheverry nació el 18 de julio de 1999 en La Plata. Mide 1,96 m.</p>
       <h2>Ficha técnica</h2>
-      <p class="sheet">Mano: diestro · Revés: a dos manos · Estatura: 1,96 m · Nacimiento: 18 de julio de 1999, La Plata</p>
+      <ul class="sheet">
+        <li>Mano: diestro</li>
+        <li>Revés: a dos manos</li>
+        <li>Estatura: 1,96 m</li>
+        <li>Nacimiento: 18 de julio de 1999, La Plata</li>
+      </ul>
       <h2>Trayectoria</h2>
       <ul>
           <li>Su mejor ranking es el 27, el 12 de febrero de 2024. No tiene títulos ATP.</li>

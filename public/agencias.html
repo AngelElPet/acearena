@@ -148,7 +148,7 @@
             <h3>Presencia</h3>
             <p class="price">Desde 4.500 €/trimestre</p>
             <ul>
-              <li>Tu logo en el pie de todas las páginas y en la página de marcas fundadoras</li>
+              <li>Tu logo en el pie de todas las páginas</li>
               <li>Mención en cada edición de la newsletter del trimestre</li>
               <li>Informe mensual: visitas, páginas vistas y clics a tu web</li>
             </ul>
@@ -201,27 +201,38 @@
         <div class="mock-grid">
           <article class="mock">
             <p class="mock-label">Ejemplo</p>
-            <div class="mock-bar">
-              <span class="mock-logo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c6ff00"/><text x="16" y="21" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">TM</text></svg> Tu marca</span>
-              <span class="kicker">Guía</span>
+            <div class="mock-frame">
+              <div class="mock-chrome">
+                <span class="mock-logo"><svg viewBox="0 0 88 28" role="img" aria-label="Tu marca"><rect width="88" height="28" rx="6" fill="#c6ff00"/><text x="44" y="18" text-anchor="middle" font-size="12" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">Tu marca</text></svg></span>
+                <span class="kicker">Guía</span>
+              </div>
+              <p class="kicker">Presentada por Tu marca</p>
+              <h3>Los cuatro grandes</h3>
+              <p class="surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36"> Guía de Grand Slams presentada por <span class="mock-brand">Tu marca</span>.</p>
             </div>
-            <h3>Los cuatro grandes</h3>
-            <p class="surface-line"><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36"> Guía de Grand Slams presentada por <span class="mock-brand">Tu marca</span>.</p>
           </article>
           <article class="mock">
             <p class="mock-label">Ejemplo</p>
             <div class="mock-mail">
-              <p class="kicker">Resumen del lunes</p>
-              <h3>Lo importante de la semana</h3>
-              <p>Una línea de <span class="mock-brand">Tu marca</span> en el correo, junto al resumen del circuito.</p>
+              <div class="mock-mail-bar">
+                <p class="kicker">Resumen del lunes</p>
+                <span class="mock-logo"><svg viewBox="0 0 88 28" role="img" aria-label="Tu marca"><rect width="88" height="28" rx="6" fill="#c6ff00"/><text x="44" y="18" text-anchor="middle" font-size="12" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">Tu marca</text></svg></span>
+              </div>
+              <div class="mock-mail-body">
+                <h3>Lo importante de la semana</h3>
+                <p>Resultados, rankings y la historia de la semana, en el correo.</p>
+                <p class="mock-mail-line">Una línea de <span class="mock-brand">Tu marca</span> junto al resumen.</p>
+              </div>
             </div>
           </article>
           <article class="mock">
             <p class="mock-label">Ejemplo</p>
-            <p class="mock-sponsored">Patrocinado</p>
-            <div class="mock-logo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c6ff00"/><text x="16" y="21" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">TM</text></svg> Tu marca</div>
-            <h3>Una pieza señalada como tal</h3>
-            <p>El aviso «Patrocinado» va en la propia pieza, junto al logo de <span class="mock-brand">Tu marca</span>.</p>
+            <div class="mock-piece">
+              <p class="mock-sponsored">Patrocinado</p>
+              <div class="mock-logo"><svg viewBox="0 0 88 28" role="img" aria-label="Tu marca"><rect width="88" height="28" rx="6" fill="#c6ff00"/><text x="44" y="18" text-anchor="middle" font-size="12" font-family="Inter, sans-serif" font-weight="700" fill="#12160a">Tu marca</text></svg></div>
+              <h3>Pieza patrocinada</h3>
+              <p>El aviso «Patrocinado» va en la propia pieza, junto al logo de <span class="mock-brand">Tu marca</span>.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -245,23 +256,11 @@
       <div class="container">
         <p class="kicker">Calendario</p>
         <h2 id="moments-title">Momentos para tu marca</h2>
-        <div class="card-grid">
-          <article class="card">
-            <p class="kicker">2–8 de noviembre de 2026</p>
-            <h3>Rolex Paris Masters</h3>
-            <p>El último Masters 1000 del año, bajo techo en París. Encaja una pieza patrocinada de esa semana.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">24–29 de noviembre de 2026</p>
-            <h3>Davis Cup Final 8</h3>
-            <p>Bolonia. España juega los cuartos ante Austria el 26; la final es el 29. Encaja la mención en el resumen del lunes.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">11–31 de enero de 2027</p>
-            <h3>Australian Open</h3>
-            <p>Melbourne Park. El cuadro principal va del 17 al 31 de enero. Encaja la guía presentada por la marca.</p>
-          </article>
-        </div>
+        <ul class="event-list">
+          <li><a href="https://www.atptour.com/en/tournaments/-/352/overview">Rolex Paris Masters</a>, París, Francia, 2–8 de noviembre de 2026. El último Masters 1000 del año, bajo techo. Encaja una pieza patrocinada de esa semana.</li>
+          <li><a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup Final 8</a>, Bolonia, Italia, 24–29 de noviembre de 2026. España juega los cuartos ante Austria el 26; la final es el 29. Encaja la mención en el resumen del lunes.</li>
+          <li><a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>, Melbourne Park, 11–31 de enero de 2027. El cuadro principal va del 17 al 31 de enero. Encaja la guía presentada por la marca.</li>
+        </ul>
         <p class="as-of">Fuentes: <a href="https://www.atptour.com/en/tournaments/-/352/overview">ATP, Rolex Paris Masters</a>, <a href="https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf">calendario ATP 2026</a>, <a href="https://www.daviscup.com/en/final-8-tickets">Davis Cup</a> y <a href="https://ausopen.com/articles/news/australian-open-2027-dates-announced">Australian Open</a>.</p>
       </div>
     </section>

@@ -85,7 +85,7 @@
           "when": "10–14 de noviembre de 2027",
           "place": "Charlotte, Estados Unidos",
           "surface": "pista dura",
-          "detail": "La ficha del torneo da esa duración y esa sede. El calendario WTA, a 1 de octubre de 2026, la sitúa en la semana del 8 de noviembre en Charlotte.",
+          "detail": "",
           "sources": [
             { "name": "WTA Finals 2027", "url": "https://www.wtatennis.com/tournaments/808/wta-finals/2027" },
             { "name": "WTA, calendario 2027 a 1 de octubre de 2026", "url": "https://wtafiles.wtatennis.com/pdf/calendar/WTA_Calendar_2027.pdf" }
@@ -201,7 +201,7 @@
     },
     {
       "title": "WTA 1000",
-      "intro": "Donde la ficha del torneo publica el tramo completo, se usa ese tramo. Donde el calendario WTA solo da la semana, las fechas exactas quedan por confirmar.",
+      "intro": "Los WTA 1000 de 2027.",
       "events": [
         {
           "name": "Qatar Ladies Open",

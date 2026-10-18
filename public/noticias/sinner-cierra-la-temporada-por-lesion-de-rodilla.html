@@ -26,12 +26,18 @@
   <meta name="twitter:description" content="Jannik Sinner anunció el 6 de octubre que se trata la rodilla derecha y no volverá a competir en 2026. El número 1 vigente se queda fuera de las ATP Finals.">
   <meta name="twitter:image" content="https://acearena.io/og/sinner-cierra-la-temporada-por-lesion-de-rodilla.png">
   <style>
+html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
+input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
 .hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
 .hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.hero:has(.hero-banner){padding-top:0}
+.hero-banner{margin:0 0 1.4rem}
+.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
+.page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
@@ -72,7 +78,10 @@ body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-
     <article class="container article-wrap">
       <p class="news-meta"><span class="tour-badge">ATP</span> </p>
       <h1>Sinner dice adiós a 2026 y se queda fuera de Turín</h1>
-      <img class="article-hero" src="../art/sinner-cierra-la-temporada-por-lesion-de-rodilla.webp" srcset="../art/sinner-cierra-la-temporada-por-lesion-de-rodilla-800.webp 800w, ../art/sinner-cierra-la-temporada-por-lesion-de-rodilla.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="ATP" width="1200" height="630" fetchpriority="high">
+      <figure class="photo-figure article-photo">
+          <img src="../photos/pista-tierra.webp" srcset="../photos/pista-tierra-800.webp 800w, ../photos/pista-tierra.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="Pista de tierra vacía, vista desde el fondo." width="1200" height="640" fetchpriority="high">
+          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        </figure>
       <p class="article-byline">Redacción AceArena</p>
       <p class="article-dates">Publicado el <time datetime="2026-10-06T16:22:52+02:00">6 oct 2026</time>. Actualizado el <time datetime="2026-10-06T16:22:52+02:00">6 oct 2026</time>.</p>
       <p class="article-kicker">Jannik Sinner</p>

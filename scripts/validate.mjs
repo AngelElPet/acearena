@@ -186,6 +186,19 @@ export function validatePayload(news, resultsDoc, now = new Date()) {
         }
       }
 
+      if (article.upcoming != null) {
+        if (!Array.isArray(article.upcoming) || article.upcoming.length === 0) {
+          errors.push(`${path}.upcoming necesita torneos`);
+        } else {
+          article.upcoming.forEach((event, eventIndex) => {
+            const eventPath = `${path}.upcoming[${eventIndex}]`;
+            for (const field of ['name', 'place', 'dates']) requireText(event?.[field], `${eventPath}.${field}`, errors);
+            if (!isHttpUrl(event?.url)) errors.push(`${eventPath}.url no es una URL http(s) válida`);
+            else if (isPlaceholderUrl(event.url)) errors.push(`${eventPath}.url es una URL de ejemplo`);
+          });
+        }
+      }
+
       for (const field of ['tags', 'players']) {
         if (!Array.isArray(article[field])) {
           errors.push(`${path}.${field} debe ser un array`);
@@ -321,6 +334,10 @@ export function validateEvergreen({ players, calendar, guides, indexnow }, now =
         if (ranking.note != null) requireText(ranking.note, `${path}.ranking.note`, errors);
       }
       requireSources(player.sources, `${path}.sources`, errors);
+      if (player.nextEvent != null) {
+        for (const field of ['name', 'place', 'dates']) requireText(player.nextEvent[field], `${path}.nextEvent.${field}`, errors);
+        if (!isHttpUrl(player.nextEvent.url)) errors.push(`${path}.nextEvent.url no es una URL http(s) válida`);
+      }
     });
   } else if (players && typeof players === 'object') {
     errors.push('players.players debe ser un array');
