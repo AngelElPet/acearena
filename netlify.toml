@@ -30,3 +30,8 @@
   for = "/*.pdf"
   [headers.values]
     Content-Disposition = "inline"
+
+[[headers]]
+  for = "/dossier/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
