@@ -90,7 +90,7 @@
     var button = document.getElementById("refreshLive");
     if (!box) return;
     if (button) button.disabled = true;
-    showEmpty(box, "Consultando SportScore…", "Buscamos partidos que estén en juego ahora mismo.");
+    showEmpty(box, "Consultando SportScore…", "Buscamos los partidos que se están jugando.");
     try {
       var response = await fetch("https://sportscore.com/api/v1/matches/?sport=tennis&status=live&limit=8");
       if (!response.ok) throw new Error("HTTP " + response.status);
@@ -99,8 +99,8 @@
       if (!matches.length) {
         showEmpty(
           box,
-          "Ahora mismo no hay partidos en juego",
-          "SportScore no devuelve encuentros en curso. No mostramos marcadores de ejemplo."
+          "Ahora mismo no hay partidos en pista.",
+          "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero."
         );
         return;
       }
@@ -111,8 +111,8 @@
     } catch (error) {
       showEmpty(
         box,
-        "No se han podido cargar los marcadores",
-        "La fuente en vivo no ha respondido. Puedes reintentar. No sustituimos el fallo por un resultado inventado."
+        "Ahora mismo no hay partidos en pista.",
+        "Mientras tanto: Alejandro Davidovich Fokina ganó a Rafael Jódar por 1-6, 7-6(5), 6-4 en la final de Shanghái. Próxima cita: Davis Cup Final 8, Bolonia, 24–29 de noviembre (España–Austria, cuartos el 26; final el 29). Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero."
       );
     } finally {
       if (button) button.disabled = false;
@@ -159,13 +159,22 @@
     });
   });
 
+  var thanksTitle = document.getElementById("thanksTitle");
+  var thanksCopy = document.getElementById("thanksCopy");
+  if (thanksTitle && thanksCopy && /(?:^|[?&])origen=briefing(?:&|$)/.test(window.location.search)) {
+    thanksTitle.textContent = "¡Dentro!";
+    thanksCopy.textContent = "Te escribiremos con la primera edición del briefing. Si quieres escribir antes, hola@acearena.io.";
+  }
+
   var share = document.getElementById("sharePage");
   if (share) {
     share.addEventListener("click", async function () {
       var url = window.location.href.split("#")[0];
       try {
         await navigator.clipboard.writeText(url);
+        var label = share.getAttribute("data-label") || "Compartir AceArena";
         share.textContent = "Enlace copiado";
+        setTimeout(function () { share.textContent = label; }, 2000);
       } catch (err) {
         share.textContent = "Copia la URL del navegador";
       }

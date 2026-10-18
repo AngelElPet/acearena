@@ -2,28 +2,107 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mensaje enviado | AceArena</title>
-  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Recibido! | AceArena</title>
+  <meta name="description" content="Mensaje recibido. AceArena te responde en menos de 48 horas laborables.">
+  <meta name="author" content="AceArena">
+  <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#070B16">
+  <link rel="canonical" href="https://acearena.io/gracias.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="AceArena" href="/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="¡Recibido! | AceArena">
+  <meta property="og:description" content="Mensaje recibido. AceArena te responde en menos de 48 horas laborables.">
+  <meta property="og:url" content="https://acearena.io/gracias.html">
+  <meta property="og:image" content="https://acearena.io/assets/og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="AceArena">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¡Recibido! | AceArena">
+  <meta name="twitter:description" content="Mensaje recibido. AceArena te responde en menos de 48 horas laborables.">
+  <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="header scrolled" id="header">
     <div class="header-inner">
-      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="AceArena" width="162" height="46"></a>
-      <a class="btn btn-ghost btn-sm" href="index.html">Inicio</a>
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="AceArena" width="162" height="46">
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="index.html#hoy">Hoy</a>
+        <a href="noticias/index.html">Noticias</a>
+        <a href="index.html#rankings">Rankings</a>
+        <a href="index.html#calendario">Calendario</a>
+        <a href="index.html#guia">Aprende tenis</a>
+        <a href="agencias.html" class="nav-quiet">Anúnciate</a>
+      </nav>
     </div>
   </header>
-  <main id="contenido" class="center-card">
-    <div class="panel">
-      <p class="kicker">Contacto</p>
-      <h1>Gracias</h1>
-      <p class="lede">Si el formulario llegó a Netlify, lo tenemos. Respondemos en menos de 48 horas laborables. Sponsorship: <a href="mailto:sponsors@acearena.io">sponsors@acearena.io</a>. General: <a href="mailto:hola@acearena.io">hola@acearena.io</a>.</p>
-      <a class="btn btn-primary" href="index.html">Volver al inicio</a>
-    </div>
+  <main class="section page-section" id="contenido">
+    <article class="container article-wrap">
+      <p class="news-meta">AceArena</p>
+      <h1 id="thanksTitle">¡Gracias! Lo tenemos.</h1>
+      <p id="thanksCopy">Te respondemos en menos de 48 horas laborables. Si es urgente, escríbenos a sponsors@acearena.io (patrocinio) o hola@acearena.io (todo lo demás).</p>
+      <p class="hero-cta">
+        <a class="btn btn-primary" href="index.html#noticias">Ver lo último del circuito</a>
+        <a class="btn btn-outline" href="index.html#newsletter">Apúntate al briefing</a>
+      </p>
+    </article>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><img src="assets/logo.svg" alt="AceArena" width="140" height="40" loading="lazy"></a>
+        <p>AceArena: tenis en español, con datos y sin ruido.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h2>El circuito</h2>
+          <a href="index.html#hoy">Hoy</a>
+          <a href="noticias/index.html">Noticias</a>
+          <a href="index.html#rankings">Rankings</a>
+          <a href="resultados.html">Resultados</a>
+          <a href="index.html#calendario">Calendario</a>
+          <a href="index.html#guia">Aprende tenis</a>
+        </div>
+        <div>
+          <h2>AceArena</h2>
+          <a href="index.html#sobre">Sobre AceArena</a>
+          <a href="index.html#newsletter">Briefing</a>
+          <a href="agencias.html">Anúnciate</a>
+          <a href="mailto:hola@acearena.io">Contacto</a>
+          <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a>
+          <a href="https://www.instagram.com/acearenaes/" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <a href="aviso-legal.html">Aviso legal</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+    </div>
+  </footer>
+  <div class="sticky-cta" id="stickyCta">
+    <p>El tenis de la semana, en 3 minutos</p>
+    <a class="btn btn-primary btn-sm" href="index.html#newsletter">Quiero el briefing</a>
+  </div>
+  <script src="script.js" defer></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
 </body>
 </html>

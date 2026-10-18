@@ -42,4 +42,4 @@ La primera URL será del tipo `https://algo-random.netlify.app`. Sirve para revi
 - sponsors@acearena.io — sponsorship
 - hola@acearena.io — contacto general
 
-Los dos reenvían al titular. El aviso legal sigue con el nombre, el NIF y la dirección pendientes.
+Los dos reenvían al titular.

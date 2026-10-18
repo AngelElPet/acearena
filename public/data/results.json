@@ -1,0 +1,77 @@
+{
+  "updated": "2026-10-18T00:00:00.000Z",
+  "results": [
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Final",
+      "date": "2026-10-18",
+      "winner": "Alejandro Davidovich Fokina",
+      "loser": "Rafael Jódar",
+      "score": "1-6 7-6(5) 6-4",
+      "source": "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final"
+    },
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Final de dobles",
+      "date": "2026-10-18",
+      "winner": "L. Miedler / N. Oberleitner",
+      "loser": "F. Cabral / J. Tracy",
+      "score": "6-3 6-4",
+      "source": "https://en.rolexshanghaimasters.com/en/scores/results"
+    },
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Semifinal",
+      "date": "2026-10-17",
+      "winner": "Rafael Jódar",
+      "loser": "Daniil Medvedev",
+      "score": "6-3 6-4",
+      "source": "https://www.atptour.com/en/news/medvedev-jodar-shanghai-2026-saturday"
+    },
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Semifinal",
+      "date": "2026-10-17",
+      "winner": "Alejandro Davidovich Fokina",
+      "loser": "Alexander Zverev",
+      "score": "5-7 6-4 6-3",
+      "source": "https://www.atptour.com/en/news/shanghai-2026-results"
+    },
+    {
+      "tournament": "Dongfeng Voyah Wuhan Open",
+      "round": "Semifinal",
+      "date": "2026-10-17",
+      "winner": "Maja Chwalińska",
+      "loser": "Iga Świątek",
+      "score": "7-5 6-1",
+      "source": "https://www.wtatennis.com/news/4593447/maja-chwalinska-sonay-kartal-wuhan-open-final-2026-everything-to-know"
+    },
+    {
+      "tournament": "Dongfeng Voyah Wuhan Open",
+      "round": "Semifinal",
+      "date": "2026-10-17",
+      "winner": "Sonay Kartal",
+      "loser": "Jelena Ostapenko",
+      "score": "7-6(9) 7-6(5)",
+      "source": "https://www.wtatennis.com/news/4593447/maja-chwalinska-sonay-kartal-wuhan-open-final-2026-everything-to-know"
+    },
+    {
+      "tournament": "Rolex Shanghai Masters",
+      "round": "Tercera ronda",
+      "date": "2026-10-12",
+      "winner": "Zizou Bergs",
+      "loser": "Carlos Alcaraz",
+      "score": "7-5 7-6(7-4)",
+      "source": "https://www.bbc.com/sport/tennis/articles/cw3dj8jr8xj2o"
+    },
+    {
+      "tournament": "China Open",
+      "round": "Final",
+      "date": "2026-10-06",
+      "winner": "Novak Djokovic",
+      "loser": "Alex de Minaur",
+      "score": "7-6(3) 0-1 ret.",
+      "source": "https://www.atptour.com/en/news/djokovic-de-minaur-beijing-2026-final"
+    }
+  ]
+}
