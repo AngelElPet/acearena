@@ -10,6 +10,8 @@ const HOMEPAGE_MAX_AGE_DAYS = 60;
 const LLMS_LATEST = 20;
 const BEACON = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>`;
 const MONTHS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const MONTHS_LONG = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+const WEEKDAYS = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
 function readJson(name) {
   return JSON.parse(readFileSync(join(root, 'data', name), 'utf8'));
@@ -118,15 +120,14 @@ function chrome(depth) {
         <span class="logo-text">AceArena</span>
       </a>
       <nav class="nav" id="nav">
-        <a href="${p}index.html#en-directo">En Directo</a>
-        <a href="${p}index.html#rankings">Rankings</a>
+        <a href="${p}index.html#hoy">Hoy</a>
         <a href="${p}noticias/index.html">Noticias</a>
-        <a href="${p}resultados.html">Resultados</a>
-        <a href="${p}index.html#guia">Guía</a>
-        <a href="${p}agencias.html">Agencias</a>
-        <a href="${p}index.html#contacto" class="btn btn-primary btn-sm">Ser Sponsor</a>
+        <a href="${p}index.html#rankings">Rankings</a>
+        <a href="${p}index.html#calendario">Calendario</a>
+        <a href="${p}index.html#guia">Aprende tenis</a>
+        <a href="${p}agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -140,24 +141,24 @@ function chrome(depth) {
           <span class="logo-mark">A</span>
           <span class="logo-text">AceArena</span>
         </a>
-        <p>La plataforma de inteligencia de tenis construida para marcas que buscan impacto premium.</p>
+        <p>AceArena: tenis en español, con datos y sin ruido.</p>
       </div>
       <div class="footer-links">
         <div>
-          <h4>Plataforma</h4>
-          <a href="${p}index.html#torneos">Torneos</a>
-          <a href="${p}index.html#rankings">Rankings</a>
+          <h4>El circuito</h4>
+          <a href="${p}index.html#hoy">Hoy</a>
           <a href="${p}noticias/index.html">Noticias</a>
+          <a href="${p}index.html#rankings">Rankings</a>
           <a href="${p}resultados.html">Resultados</a>
-          <a href="${p}index.html#guia">Guía</a>
-          <a href="${p}agencias.html">Agencias</a>
+          <a href="${p}index.html#calendario">Calendario</a>
+          <a href="${p}index.html#guia">Aprende tenis</a>
         </div>
         <div>
-          <h4>Business</h4>
-          <a href="${p}index.html#sponsors">Sponsors</a>
-          <a href="${p}index.html#faq">FAQ Sponsors</a>
-          <a href="${p}index.html#contacto">Contacto</a>
-          <a href="${p}media-kit-acearena.pdf" target="_blank">Media Kit PDF</a>
+          <h4>AceArena</h4>
+          <a href="${p}index.html#sobre">Sobre AceArena</a>
+          <a href="${p}index.html#newsletter">Briefing</a>
+          <a href="${p}agencias.html">Anúnciate</a>
+          <a href="mailto:hola@acearena.io">Contacto</a>
         </div>
         <div>
           <h4>Legal</h4>
@@ -169,14 +170,14 @@ function chrome(depth) {
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a></p>
+        <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="${p}aviso-legal.html">Aviso legal</a> · <a href="${p}privacidad.html">Privacidad</a> · <a href="${p}cookies.html">Cookies</a></p>
       </div>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
     <div class="sticky-inner">
-      <span>¿Marca o agencia? Habla con nosotros</span>
-      <a href="${p}index.html#contacto" class="btn btn-primary btn-sm">Ser Sponsor</a>
+      <span>El tenis de la semana, en 3 minutos</span>
+      <a href="${p}index.html#newsletter" class="btn btn-primary btn-sm">Quiero el briefing</a>
     </div>
   </div>
   <script src="${p}script.js"></script>`;
@@ -184,7 +185,7 @@ function chrome(depth) {
   return { header, footer };
 }
 
-function page({ title, description, canonical, depth, jsonLd = [], main, ogType = 'website' }) {
+function page({ title, description, canonical, depth, jsonLd = [], main, ogType = 'website', robots = 'index, follow' }) {
   const p = prefixFor(depth);
   const { header, footer } = chrome(depth);
   const ld = jsonLd.map((block) => `  <script type="application/ld+json">\n  ${safeJson(block)}\n  </script>`).join('\n');
@@ -196,7 +197,7 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <meta name="author" content="AceArena">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="${esc(robots)}">
   <link rel="canonical" href="${esc(canonical)}">
   <link rel="alternate" type="application/rss+xml" title="AceArena" href="/feed.xml">
   <meta property="og:type" content="${esc(ogType)}">
@@ -228,7 +229,7 @@ function newsCards(articles, hrefFor) {
     return '<p class="rankings-note">No hay noticias de los últimos 60 días.</p>';
   }
   return articles.map((article) => `        <article class="news-card">
-          <div class="news-meta">${esc(article.tournament)} · ${esc(formatDay(article.date))}</div>
+          <div class="news-meta">Por el equipo de AceArena · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
           <h3><a href="${esc(hrefFor(article))}">${esc(article.title)}</a></h3>
           <p>${esc(article.summary)}</p>
         </article>`).join('\n');
@@ -295,6 +296,7 @@ function articlePage(article) {
     <article class="container article-wrap">
       <p class="news-meta">${esc(article.tournament)}</p>
       <h1>${esc(article.title)}</h1>
+      <p class="article-byline">Por el equipo de AceArena</p>
       <p class="article-dates">Publicado el <time datetime="${esc(article.date)}">${esc(formatDay(article.date))}</time>. Actualizado el <time datetime="${esc(article.updated)}">${esc(formatDay(article.updated))}</time>.</p>
       <p class="article-kicker">${esc(article.players.join(' · '))}</p>
       <p class="article-summary">${esc(article.summary)}</p>
@@ -341,8 +343,8 @@ function newsIndex(articles) {
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Archivo</span>
-        <h1>Noticias del circuito</h1>
-        <p>Cada noticia enlaza la fuente del dato. La portada solo muestra las de los últimos 60 días.</p>
+        <h1>Lo que tienes que saber</h1>
+        <p>Lo más importante del circuito, con fecha, firma y fuente. La portada muestra las piezas de los últimos 60 días.</p>
       </div>
       <div class="news-grid">
 ${newsCards(articles, (article) => `${article.slug}.html`)}
@@ -399,7 +401,7 @@ function resultsPage(matches, updated) {
       <div class="section-header">
         <span class="section-tag">Resultados</span>
         <h1>Resultados recientes</h1>
-        <p>Actualizado el ${esc(formatStamp(updated))}. Cada marcador enlaza su fuente.</p>
+        <p>Marcadores con torneo, ronda, fecha y fuente. Actualizado el ${esc(formatStamp(updated))}.</p>
       </div>
       ${empty}
       <div class="results-table-wrap">
@@ -514,6 +516,14 @@ ${items}
 `;
 }
 
+function editionLabel(iso, today) {
+  const [year, month, day] = iso.slice(0, 10).split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  const long = `${WEEKDAYS[date.getUTCDay()]}, ${day} de ${MONTHS_LONG[month - 1]} de ${year}`;
+  const tag = iso.slice(0, 10) === today ? 'Edición de hoy' : 'Edición del día';
+  return `${long} · ${tag}`;
+}
+
 function llmsTxt(articles, resultsUpdated) {
   const lines = articles.slice(0, LLMS_LATEST).map((article) => {
     const title = article.title.replace(/[\[\]]/g, '');
@@ -522,7 +532,9 @@ function llmsTxt(articles, resultsUpdated) {
   });
   return `# AceArena
 
-> Sitio de tenis en español. Noticias y resultados con fuente. ${SITE}
+> Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
+
+AceArena no publica todavía cifras de audiencia.
 
 ## Noticias
 
@@ -533,6 +545,11 @@ ${lines.join('\n')}
 - [Resultados recientes](${SITE}/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el ${formatStamp(resultsUpdated)}.
 - Datos de noticias: ${SITE}/data/news.json
 - Datos de resultados: ${SITE}/data/results.json
+
+## El sitio
+
+- [Portada](${SITE}/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
+- [Agencias](${SITE}/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
 `;
 }
 
@@ -567,6 +584,7 @@ function build() {
   }
 
   let home = readFileSync(join(root, 'index.html'), 'utf8');
+  home = fillRegion(home, 'EDITION', editionLabel(contentDay, today));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));
   writeHtml('index.html', home);
@@ -592,44 +610,83 @@ function build() {
   writeHtml('aviso-legal.html', legalPage({
     file: 'aviso-legal.html',
     title: 'Aviso legal',
-    description: `Aviso legal de AceArena. Titular: ${ownerName}. Contacto: ${ownerEmail}.`,
+    description: 'Aviso legal de AceArena (acearena.io): titular, condiciones de uso y propiedad intelectual.',
     blocks: [
-      'AceArena (acearena.io) es un sitio de información sobre tenis y de propuestas para sponsors.',
+      'En cumplimiento de la Ley 34/2002 (LSSI), estos son los datos del titular de acearena.io:',
       `Titular: ${ownerName}.`,
       `NIF: ${ownerNif}.`,
       `Domicilio: ${ownerAddress}.`,
       `Contacto: ${ownerEmail}.`,
-      'Los textos de noticias y resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, que tienen sus propias condiciones.',
-      'El diseño, el código y los textos propios de AceArena pertenecen a su titular. Las marcas de jugadores, torneos y sponsors mencionadas pertenecen a sus dueños.',
+      'AceArena es un medio digital de tenis en español. Las noticias y los resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, con sus propias condiciones.',
+      'Los marcadores en vivo proceden de SportScore y los rankings de las fuentes oficiales indicadas en cada tabla. Hacemos lo posible por mantenerlos exactos; ante cualquier discrepancia prevalece la fuente oficial.',
+      'El diseño, el código y los textos propios de AceArena pertenecen a su titular. Las marcas de jugadores, torneos y anunciantes mencionadas pertenecen a sus dueños.',
       legalLinks,
     ],
   }));
   writeHtml('privacidad.html', legalPage({
     file: 'privacidad.html',
     title: 'Privacidad',
-    description: `Privacidad de AceArena. El responsable del tratamiento es ${ownerName}. ${analyticsNote}`,
+    description: 'Cómo trata AceArena tus datos en la newsletter y los formularios de contacto, y cómo ejercer tus derechos.',
     blocks: [
       `Responsable del tratamiento: ${ownerName}.`,
       `NIF: ${ownerNif}.`,
       `Domicilio: ${ownerAddress}.`,
       `Contacto: ${ownerEmail}.`,
       analyticsNote,
-      'AceArena no crea cuentas de usuario. Los formularios de contacto y de newsletter de la portada no envían los datos a un servidor: se quedan en el navegador.',
-      'No vendemos datos personales ni los cedemos para publicidad. Para acceder, rectificar, suprimir, oponerte o limitar un tratamiento, o para pedir la portabilidad, escribe a hola@acearena.io.',
+      'El briefing y el formulario de agencias se envían con Netlify Forms. Usamos el email y el mensaje para responderte o para enviarte el briefing. Puedes pedir la baja cuando quieras escribiendo a hola@acearena.io.',
+      'AceArena no vende datos personales ni los cede para publicidad. Para acceder, rectificar, suprimir, oponerte o limitar un tratamiento, o para pedir la portabilidad, escribe a hola@acearena.io.',
       legalLinks,
     ],
   }));
   writeHtml('cookies.html', legalPage({
     file: 'cookies.html',
     title: 'Cookies',
-    description: analyticsNote,
+    description: 'AceArena no usa cookies publicitarias. Medimos las visitas con Cloudflare Web Analytics, sin cookies.',
     blocks: [
       `Responsable: ${ownerName}. NIF: ${ownerNif}. Domicilio: ${ownerAddress}. Contacto: ${ownerEmail}.`,
+      'AceArena no usa cookies publicitarias. Medimos las visitas con Cloudflare Web Analytics, sin cookies.',
       analyticsNote,
-      'No hace falta aceptar un banner para esa medición. Cloudflare Web Analytics no instala cookies ni guarda datos personales: las visitas se cuentan de forma agregada.',
+      'No hace falta aceptar un banner para esa medición: las visitas se cuentan de forma agregada.',
       'Si más adelante una herramienta del sitio usara cookies, esta página lo dirá antes de activarla.',
       legalLinks,
     ],
+  }));
+  writeHtml('404.html', page({
+    title: 'Bola fuera | AceArena',
+    description: 'Esta página no existe o ha cambiado de sitio.',
+    canonical: `${SITE}/404.html`,
+    depth: 0,
+    robots: 'noindex, follow',
+    main: `  <main class="section page-section">
+    <article class="container article-wrap">
+      <p class="news-meta">404</p>
+      <h1>Bola fuera</h1>
+      <p>Esta página no existe o ha cambiado de sitio. Pero el partido sigue: vuelve a la portada para ver lo último del circuito.</p>
+      <p class="hero-cta">
+        <a class="btn btn-primary" href="index.html">Ir a la portada</a>
+        <a class="btn btn-outline" href="noticias/index.html">Últimas noticias</a>
+        <a class="btn btn-outline" href="index.html#rankings">Rankings</a>
+      </p>
+    </article>
+  </main>`,
+  }));
+  writeHtml('gracias.html', page({
+    title: '¡Recibido! | AceArena',
+    description: 'Mensaje recibido. AceArena te responde en menos de 48 horas laborables.',
+    canonical: `${SITE}/gracias.html`,
+    depth: 0,
+    robots: 'noindex, follow',
+    main: `  <main class="section page-section">
+    <article class="container article-wrap">
+      <p class="news-meta">AceArena</p>
+      <h1 id="thanksTitle">¡Gracias! Lo tenemos.</h1>
+      <p id="thanksCopy">Te respondemos en menos de 48 horas laborables. Si es urgente, escríbenos a sponsors@acearena.io (patrocinio) o hola@acearena.io (todo lo demás).</p>
+      <p class="hero-cta">
+        <a class="btn btn-primary" href="index.html#noticias">Ver lo último del circuito</a>
+        <a class="btn btn-outline" href="index.html#newsletter">Apúntate al briefing</a>
+      </p>
+    </article>
+  </main>`,
   }));
 
   const staticBeaconFiles = ['agencias.html'];

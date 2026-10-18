@@ -39,7 +39,7 @@ El cuerpo tiene entre 150 y 400 palabras.
 
 ### Tono
 
-- Español, neutro y factual.
+- Español, cercano y factual. Di el dato con su fecha y su fuente. Evita los descargos del tipo «esta nota no afirma» o «no prometemos».
 - Cada cifra, marcador, ranking y baja tiene que poder rastrearse a una fuente del array `sources`.
 - No inventes citas. Si reproduces una frase, tiene que figurar de forma literal en la fuente y atribuirse a esa fuente. Si no puedes citarla literal, parafrasea sin comillas.
 - No inventes estadísticas, premios, rachas ni “primeras veces”.
