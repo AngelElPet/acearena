@@ -7,32 +7,39 @@
   <meta name="description" content="Aviso legal de AceArena (acearena.io): titular, condiciones de uso y propiedad intelectual.">
   <meta name="author" content="AceArena">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070B16">
   <link rel="canonical" href="https://acearena.io/aviso-legal.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="alternate" type="application/rss+xml" title="AceArena" href="/feed.xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Aviso legal | AceArena">
   <meta property="og:description" content="Aviso legal de AceArena (acearena.io): titular, condiciones de uso y propiedad intelectual.">
   <meta property="og:url" content="https://acearena.io/aviso-legal.html">
+  <meta property="og:image" content="https://acearena.io/assets/og-image.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="AceArena">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aviso legal | AceArena">
   <meta name="twitter:description" content="Aviso legal de AceArena (acearena.io): titular, condiciones de uso y propiedad intelectual.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
   <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
 
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="header scrolled" id="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">A</span>
-        <span class="logo-text">AceArena</span>
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="AceArena" width="162" height="46">
       </a>
-      <nav class="nav" id="nav">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Principal">
         <a href="index.html#hoy">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
         <a href="index.html#rankings">Rankings</a>
@@ -40,12 +47,9 @@
         <a href="index.html#guia">Aprende tenis</a>
         <a href="agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
-  <main class="section page-section">
+  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">AceArena</p>
       <h1>Aviso legal</h1>
@@ -66,15 +70,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <span class="logo-mark">A</span>
-          <span class="logo-text">AceArena</span>
-        </a>
+        <a class="logo" href="index.html"><img src="assets/logo.svg" alt="AceArena" width="140" height="40" loading="lazy"></a>
         <p>AceArena: tenis en español, con datos y sin ruido.</p>
       </div>
       <div class="footer-links">
         <div>
-          <h4>El circuito</h4>
+          <h2>El circuito</h2>
           <a href="index.html#hoy">Hoy</a>
           <a href="noticias/index.html">Noticias</a>
           <a href="index.html#rankings">Rankings</a>
@@ -83,33 +84,29 @@
           <a href="index.html#guia">Aprende tenis</a>
         </div>
         <div>
-          <h4>AceArena</h4>
+          <h2>AceArena</h2>
           <a href="index.html#sobre">Sobre AceArena</a>
           <a href="index.html#newsletter">Briefing</a>
           <a href="agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h2>Legal</h2>
           <a href="aviso-legal.html">Aviso legal</a>
           <a href="privacidad.html">Privacidad</a>
           <a href="cookies.html">Cookies</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
-      </div>
+    <div class="container footer-bottom">
+      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
-    <div class="sticky-inner">
-      <span>El tenis de la semana, en 3 minutos</span>
-      <a href="index.html#newsletter" class="btn btn-primary btn-sm">Quiero el briefing</a>
-    </div>
+    <p>El tenis de la semana, en 3 minutos</p>
+    <a class="btn btn-primary btn-sm" href="index.html#newsletter">Quiero el briefing</a>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
 </body>
 </html>

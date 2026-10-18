@@ -57,6 +57,22 @@ function isHttpUrl(value) {
   }
 }
 
+function isPlaceholderUrl(value) {
+  if (!isHttpUrl(value)) return false;
+  const url = new URL(value);
+  const host = url.hostname.toLowerCase().replace(/\.$/, '');
+  if (
+    host === 'example.com' || host.endsWith('.example.com') ||
+    host === 'ejemplo.com' || host.endsWith('.ejemplo.com') ||
+    host === 'example.org' || host.endsWith('.example.org')
+  ) {
+    return true;
+  }
+  return url.pathname.toLowerCase().split('/').some((part) => (
+    part === 'example' || part === 'ejemplo' || part === 'placeholder'
+  ));
+}
+
 function parseDay(value) {
   if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
   const [year, month, day] = value.split('-').map(Number);
@@ -184,6 +200,8 @@ export function validatePayload(news, resultsDoc, now = new Date()) {
           requireText(source.name, `${sourcePath}.name`, errors);
           if (!isHttpUrl(source.url)) {
             errors.push(`${sourcePath}.url no es una URL http(s) válida`);
+          } else if (isPlaceholderUrl(source.url)) {
+            errors.push(`${sourcePath}.url es una URL de ejemplo o de relleno`);
           }
         });
       }
@@ -219,6 +237,8 @@ export function validatePayload(news, resultsDoc, now = new Date()) {
         }
         if (!isHttpUrl(match.source)) {
           errors.push(`${path}.source no es una URL http(s) válida`);
+        } else if (isPlaceholderUrl(match.source)) {
+          errors.push(`${path}.source es una URL de ejemplo o de relleno`);
         }
       });
     }
@@ -249,7 +269,7 @@ function selfTest() {
     tags: ['ATP'],
     players: ['Jugador'],
     tournament: 'Torneo',
-    sources: [{ name: 'ATP', url: 'https://www.atptour.com/en/news/example' }],
+    sources: [{ name: 'ATP', url: 'https://www.atptour.com/en/news/partido-de-prueba' }],
   };
   const results = {
     updated: '2026-10-18T00:00:00.000Z',
@@ -260,7 +280,7 @@ function selfTest() {
       winner: 'A',
       loser: 'B',
       score: '6-4 6-4',
-      source: 'https://www.atptour.com/en/news/example',
+      source: 'https://www.atptour.com/en/news/partido-de-prueba',
     }],
   };
   const cases = [
@@ -270,6 +290,8 @@ function selfTest() {
     ['fecha futura', [{ ...article, date: '2026-10-19' }], results, 1],
     ['slug duplicado', [article, { ...article }], results, 1],
     ['placeholder', [{ ...article, body: ['TODO: completar'] }], results, 1],
+    ['url de ejemplo', [{ ...article, sources: [{ name: 'ATP', url: 'https://www.atptour.com/en/news/example' }] }], results, 1],
+    ['url placeholder', [{ ...article, sources: [{ name: 'X', url: 'https://example.com/nota' }] }], results, 1],
   ];
   const failures = [];
   for (const [name, news, resultsDoc, minimum] of cases) {

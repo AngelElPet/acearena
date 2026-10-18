@@ -113,13 +113,16 @@ function prefixFor(depth) {
 function chrome(depth) {
   const p = prefixFor(depth);
   const header = `
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="header scrolled" id="header">
-    <div class="container header-inner">
-      <a href="${p}index.html" class="logo">
-        <span class="logo-mark">A</span>
-        <span class="logo-text">AceArena</span>
+    <div class="header-inner">
+      <a class="logo" href="${p}index.html">
+        <img src="${p}assets/logo.svg" alt="AceArena" width="162" height="46">
       </a>
-      <nav class="nav" id="nav">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Principal">
         <a href="${p}index.html#hoy">Hoy</a>
         <a href="${p}noticias/index.html">Noticias</a>
         <a href="${p}index.html#rankings">Rankings</a>
@@ -127,9 +130,6 @@ function chrome(depth) {
         <a href="${p}index.html#guia">Aprende tenis</a>
         <a href="${p}agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>`;
 
@@ -137,15 +137,12 @@ function chrome(depth) {
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="${p}index.html" class="logo">
-          <span class="logo-mark">A</span>
-          <span class="logo-text">AceArena</span>
-        </a>
+        <a class="logo" href="${p}index.html"><img src="${p}assets/logo.svg" alt="AceArena" width="140" height="40" loading="lazy"></a>
         <p>AceArena: tenis en español, con datos y sin ruido.</p>
       </div>
       <div class="footer-links">
         <div>
-          <h4>El circuito</h4>
+          <h2>El circuito</h2>
           <a href="${p}index.html#hoy">Hoy</a>
           <a href="${p}noticias/index.html">Noticias</a>
           <a href="${p}index.html#rankings">Rankings</a>
@@ -154,33 +151,29 @@ function chrome(depth) {
           <a href="${p}index.html#guia">Aprende tenis</a>
         </div>
         <div>
-          <h4>AceArena</h4>
+          <h2>AceArena</h2>
           <a href="${p}index.html#sobre">Sobre AceArena</a>
           <a href="${p}index.html#newsletter">Briefing</a>
           <a href="${p}agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h2>Legal</h2>
           <a href="${p}aviso-legal.html">Aviso legal</a>
           <a href="${p}privacidad.html">Privacidad</a>
           <a href="${p}cookies.html">Cookies</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="${p}aviso-legal.html">Aviso legal</a> · <a href="${p}privacidad.html">Privacidad</a> · <a href="${p}cookies.html">Cookies</a></p>
-      </div>
+    <div class="container footer-bottom">
+      <p>© 2026 AceArena · Titular: Angel Cebria Morales · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="${p}aviso-legal.html">Aviso legal</a> · <a href="${p}privacidad.html">Privacidad</a> · <a href="${p}cookies.html">Cookies</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">
-    <div class="sticky-inner">
-      <span>El tenis de la semana, en 3 minutos</span>
-      <a href="${p}index.html#newsletter" class="btn btn-primary btn-sm">Quiero el briefing</a>
-    </div>
+    <p>El tenis de la semana, en 3 minutos</p>
+    <a class="btn btn-primary btn-sm" href="${p}index.html#newsletter">Quiero el briefing</a>
   </div>
-  <script src="${p}script.js"></script>`;
+  <script src="${p}script.js" defer></script>`;
 
   return { header, footer };
 }
@@ -198,20 +191,24 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <meta name="description" content="${esc(description)}">
   <meta name="author" content="AceArena">
   <meta name="robots" content="${esc(robots)}">
+  <meta name="theme-color" content="#070B16">
   <link rel="canonical" href="${esc(canonical)}">
+  <link rel="icon" href="${p}favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="${p}assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="${p}assets/apple-touch-icon.png">
+  <link rel="manifest" href="${p}site.webmanifest">
   <link rel="alternate" type="application/rss+xml" title="AceArena" href="/feed.xml">
   <meta property="og:type" content="${esc(ogType)}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${esc(canonical)}">
+  <meta property="og:image" content="${SITE}/assets/og-image.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="AceArena">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta name="twitter:image" content="${SITE}/assets/og-image.png">
   <link rel="stylesheet" href="${p}styles.css">
 ${ld}
 </head>
@@ -292,7 +289,7 @@ function articlePage(article) {
   const paragraphs = article.body.map((paragraph) => `        <p>${esc(paragraph)}</p>`).join('\n');
   const tags = article.tags.map((tag) => `          <li>${esc(tag)}</li>`).join('\n');
   const sources = article.sources.map((source) => `          <li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a> <span class="source-url">${esc(source.url)}</span></li>`).join('\n');
-  const main = `  <main class="section page-section">
+  const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">${esc(article.tournament)}</p>
       <h1>${esc(article.title)}</h1>
@@ -339,7 +336,7 @@ ${sources}
 
 function newsIndex(articles) {
   const url = `${SITE}/noticias/`;
-  const main = `  <main class="section page-section">
+  const main = `  <main class="section page-section" id="contenido">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Archivo</span>
@@ -396,7 +393,7 @@ function resultsPage(matches, updated) {
   const empty = matches.length === 0
     ? '<p class="rankings-note">No hay resultados en el fichero.</p>'
     : '';
-  const main = `  <main class="section page-section">
+  const main = `  <main class="section page-section" id="contenido">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Resultados</span>
@@ -460,7 +457,7 @@ function legalPage({ file, title, description, blocks }) {
     const links = block.links.map((link) => `<a href="${esc(link.href)}">${esc(link.label)}</a>`).join(' · ');
     return `        <p>${links}</p>`;
   }).join('\n');
-  const main = `  <main class="section page-section">
+  const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">AceArena</p>
       <h1>${esc(title)}</h1>
@@ -534,8 +531,6 @@ function llmsTxt(articles, resultsUpdated) {
 
 > Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
 
-AceArena no publica todavía cifras de audiencia.
-
 ## Noticias
 
 ${lines.join('\n')}
@@ -576,14 +571,10 @@ function build() {
     resultsDoc.updated.slice(0, 10),
   ]);
 
-  rmSync(publicDir, { recursive: true, force: true });
   mkdirSync(publicDir, { recursive: true });
+  rmSync(join(publicDir, 'noticias'), { recursive: true, force: true });
 
-  for (const file of ['styles.css', 'script.js', 'agencias.html', 'media-kit-acearena.pdf']) {
-    copyFileSync(join(root, file), join(publicDir, file));
-  }
-
-  let home = readFileSync(join(root, 'index.html'), 'utf8');
+  let home = readFileSync(join(publicDir, 'index.html'), 'utf8');
   home = fillRegion(home, 'EDITION', editionLabel(contentDay, today));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));
@@ -657,7 +648,7 @@ function build() {
     canonical: `${SITE}/404.html`,
     depth: 0,
     robots: 'noindex, follow',
-    main: `  <main class="section page-section">
+    main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">404</p>
       <h1>Bola fuera</h1>
@@ -676,7 +667,7 @@ function build() {
     canonical: `${SITE}/gracias.html`,
     depth: 0,
     robots: 'noindex, follow',
-    main: `  <main class="section page-section">
+    main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta">AceArena</p>
       <h1 id="thanksTitle">¡Gracias! Lo tenemos.</h1>
@@ -714,7 +705,6 @@ function build() {
   writeText('sitemap.xml', sitemap(urls));
   writeText('feed.xml', rss(articles));
   writeText('llms.txt', llmsTxt(articles, resultsDoc.updated));
-  writeText('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
   console.log(`Build OK: ${articles.length} artículos (${homeArticles.length} en portada), ${matches.length} resultados (${homeMatches.length} en portada)`);
 }
