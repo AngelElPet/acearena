@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T15:00:00.000Z",
+  "updated": "2026-10-18T16:33:38.000Z",
   "results": [
     {
       "tournament": "Dongfeng Voyah Wuhan Open",
@@ -9,6 +9,15 @@
       "loser": "Sonay Kartal",
       "score": "2-6 6-4 6-2",
       "source": "https://www.wtatennis.com/news/4593967/chwalinska-rallies-past-kartal-for-first-wta-title-in-wuhan"
+    },
+    {
+      "tournament": "Dongfeng Voyah Wuhan Open",
+      "round": "Final de dobles",
+      "date": "2026-10-18",
+      "winner": "G. Dabrowski / L. Stefani",
+      "loser": "S. Hunter / K. Siniakova",
+      "score": "7-5 6-4",
+      "source": "https://tennistourcalendar.com/2026-wuhan-open-final-results/"
     },
     {
       "tournament": "Rolex Shanghai Masters",

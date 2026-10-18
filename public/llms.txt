@@ -6,7 +6,8 @@
 ## Noticias
 
 - [Davidovich remonta a Jódar y se corona en Shanghái](https://acearena.io/noticias/davidovich-fokina-gana-el-masters-de-shanghai.html): Final española de Masters 1000: Jódar ganó el primer set 6-1 y Alejandro Davidovich Fokina cerró por 7-6(5) y 6-4. Es su primer título de ese nivel.
-- [Chwalińska gana el Wuhan Open](https://acearena.io/noticias/final-de-wuhan-chwalinska-y-kartal.html): Maja Chwalińska remontó a Sonay Kartal por 2-6, 6-4 y 6-2 y ganó el Dongfeng Voyah Wuhan Open. Es su primer título en el circuito WTA.
+- [Chwalińska remonta a Kartal y gana en Wuhan su primer título](https://acearena.io/noticias/final-de-wuhan-chwalinska-y-kartal.html): Maja Chwalińska remontó el 18 de octubre ante Sonay Kartal por 2-6, 6-4 y 6-2 y ganó el Wuhan Open, su primer título WTA. La WTA la proyecta en el puesto 11.
+- [Jódar, noveno en la Race a Turín tras Shanghái](https://acearena.io/noticias/jodar-noveno-en-la-race-a-turin-tras-shanghai.html): Tras su primera final de Masters 1000, la PIF ATP Live Race sitúa a Rafael Jódar noveno, con 3.159 puntos. El ranking oficial del lunes 19 de octubre lo proyecta 11º; Alejandro Davidovich Fokina, 13º.
 - [Zverev cierra 2026 como número 1 de la ATP](https://acearena.io/noticias/zverev-asegura-el-numero-uno-de-final-de-ano.html): Alexander Zverev será el número 1 al cierre de 2026, el primer alemán en lograrlo. En la lista vigente del 12 de octubre, Sinner sigue primero con 11.000 puntos y Zverev segundo con 9.720.
 - [Rybakina, número 1 del ranking WTA](https://acearena.io/noticias/rybakina-encabeza-el-ranking-wta.html): Elena Rybakina lidera el ranking WTA a 12 de octubre de 2026, con 9.696 puntos, por delante de Aryna Sabalenka y Mirra Andreeva.
 - [Sinner dice adiós a 2026 y se queda fuera de Turín](https://acearena.io/noticias/sinner-cierra-la-temporada-por-lesion-de-rodilla.html): Jannik Sinner anunció el 6 de octubre que se trata la rodilla derecha y no volverá a competir en 2026. El número 1 vigente se queda fuera de las ATP Finals.
@@ -14,7 +15,7 @@
 
 ## Resultados
 
-- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 18 oct 2026, 15:00 UTC.
+- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 18 oct 2026, 16:33 UTC.
 - Datos de noticias: https://acearena.io/data/news.json
 - Datos de resultados: https://acearena.io/data/results.json
 
