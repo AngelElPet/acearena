@@ -1,6 +1,9 @@
+import { spawnSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, normalize, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { inflateSync } from 'node:zlib';
+import { sponsorPlainText } from './pdf.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -168,6 +171,14 @@ export function validatePayload(news, resultsDoc, now = new Date()) {
         errors.push(`${path}.updated está en el futuro (${article.updated})`);
       } else if (parseDay(article.date) && article.updated < article.date) {
         errors.push(`${path}.updated es anterior a date`);
+      }
+      for (const [stamp, day] of [['publishedAt', 'date'], ['modifiedAt', 'updated']]) {
+        if (article[stamp] == null) continue;
+        if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/.test(article[stamp])) {
+          errors.push(`${path}.${stamp} debe ser una fecha ISO con hora y zona`);
+        } else if (!String(article[stamp]).startsWith(String(article[day] || '').slice(0, 10))) {
+          errors.push(`${path}.${stamp} no coincide con ${day}`);
+        }
       }
 
       if (!Array.isArray(article.body) || article.body.length === 0) {
@@ -706,7 +717,88 @@ export function validateSite(rootDir) {
   if (!llmsFull.includes('11–31 de enero') || !llmsFull.includes('17–31')) {
     errors.push('public/llms-full.txt debe decir 11–31 de enero y cuadro principal 17–31');
   }
+  const pdfForbidden = ['en español y con datos', 'pendientes de completar', 'Qué no afirma', 'sponsorship'];
+  const plain = sponsorPlainText();
+  const plainHits = pdfForbidden.filter((phrase) => plain.includes(phrase));
+  if (/\bleads\b/i.test(plain)) plainHits.push('leads');
+  if (plainHits.length) errors.push(`el texto de los PDF incluye: ${plainHits.join(', ')}`);
+  for (const file of ['media-kit-acearena.pdf', 'dossier/acearena-patrocinio.pdf']) {
+    const full = join(publicDir, file);
+    if (!existsSync(full)) {
+      errors.push(`falta public/${file}`);
+      continue;
+    }
+    const text = pdfProbe(readFileSync(full));
+    const hits = pdfForbidden.filter((phrase) => text.includes(phrase));
+    if (/\bleads\b/i.test(text)) hits.push('leads');
+    if (hits.length) errors.push(`public/${file} incluye: ${hits.join(', ')}`);
+  }
   return errors;
+}
+
+function pdfLiterals(buffer) {
+  const parts = [];
+  const marker = Buffer.from('stream');
+  const endMarker = Buffer.from('endstream');
+  let cursor = 0;
+  while (cursor < buffer.length) {
+    const start = buffer.indexOf(marker, cursor);
+    if (start === -1) break;
+    let dataStart = start + marker.length;
+    if (buffer[dataStart] === 0x0d) dataStart += 1;
+    if (buffer[dataStart] === 0x0a) dataStart += 1;
+    const end = buffer.indexOf(endMarker, dataStart);
+    if (end === -1) break;
+    let dataEnd = end;
+    if (dataEnd > dataStart && buffer[dataEnd - 1] === 0x0a) dataEnd -= 1;
+    if (dataEnd > dataStart && buffer[dataEnd - 1] === 0x0d) dataEnd -= 1;
+    const raw = buffer.subarray(dataStart, dataEnd);
+    let inflated = raw;
+    try {
+      inflated = inflateSync(raw);
+    } catch {
+      inflated = raw;
+    }
+    parts.push(decodePdfLiterals(inflated.toString('latin1')));
+    cursor = end + endMarker.length;
+  }
+  return parts.join('\n');
+}
+
+function decodePdfLiterals(src) {
+  const parts = [];
+  for (let i = 0; i < src.length; i += 1) {
+    if (src[i] !== '(') continue;
+    let text = '';
+    i += 1;
+    while (i < src.length && src[i] !== ')') {
+      if (src[i] === '\\') {
+        const next = src[i + 1] || '';
+        if (next >= '0' && next <= '7') {
+          let oct = next;
+          i += 2;
+          for (let k = 0; k < 2 && i < src.length && src[i] >= '0' && src[i] <= '7'; k += 1, i += 1) oct += src[i];
+          text += String.fromCharCode(parseInt(oct, 8));
+          i -= 1;
+        } else {
+          text += next === 'n' ? '\n' : next === 'r' ? '\r' : next === 't' ? '\t' : next;
+          i += 1;
+        }
+      } else {
+        text += src[i];
+      }
+      i += 1;
+    }
+    if (text.trim()) parts.push(text);
+  }
+  return parts.join(' ');
+}
+
+function pdfProbe(buffer) {
+  const literals = pdfLiterals(buffer);
+  const tool = spawnSync('pdftotext', ['-', '-'], { input: buffer, encoding: 'utf8' });
+  const viaTool = tool.status === 0 && tool.stdout ? tool.stdout : '';
+  return `${literals}\n${viaTool}`;
 }
 
 function readJson(path) {

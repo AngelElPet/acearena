@@ -30,20 +30,23 @@ html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero,.page-section{padding-top:1.1rem}
+.hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
+.hero-photo{margin:1rem 0 0}
+.hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
+.scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
+.scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
 @media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+  .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+  .hero-photo{display:none}
 }
 </style>
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="../styles.css"></noscript>
   <script type="application/ld+json">
@@ -88,14 +91,14 @@ input,select,textarea{font-size:16px}
         <p>Lista de entrada de la ATP del 6 de octubre: puesto 243, con 233 puntos.</p>
       <p><a href="https://www.atptour.com/en/players/-/bd06/overview" target="_blank" rel="noopener noreferrer">Ficha oficial ATP</a></p>
       <h2>Biografía</h2>
-        <p>Roberto Bautista Agut nació el 14 de abril de 1988 en Castellón de la Plana. Mide 1,83 m. Empezó a jugar a los 5 años.</p>
+        <p>Empezó a jugar a los 5 años.</p>
       <h2>Ficha técnica</h2>
-      <ul class="sheet">
-        <li>Mano: diestro</li>
-        <li>Revés: a dos manos</li>
-        <li>Estatura: 1,83 m</li>
-        <li>Nacimiento: 14 de abril de 1988, Castellón de la Plana</li>
-      </ul>
+      <dl class="sheet">
+        <div><dt>Mano</dt><dd>diestro</dd></div>
+        <div><dt>Revés</dt><dd>a dos manos</dd></div>
+        <div><dt>Estatura</dt><dd>1,83 m</dd></div>
+        <div><dt>Nacimiento</dt><dd>14 de abril de 1988, Castellón de la Plana</dd></div>
+      </dl>
       <h2>Trayectoria</h2>
       <ul>
           <li>En 2024 ganó su título ATP número 12, en Amberes, y sumó la victoria número 400.</li>
@@ -119,7 +122,7 @@ input,select,textarea{font-size:16px}
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="../index.html"><img src="../assets/logo.svg?v=0f5879f7d7" alt="AceArena" width="140" height="40" loading="lazy"></a>
-        <p>AceArena: tenis en español, con datos y sin ruido.</p>
+        <p>El tenis, contado con datos.</p>
       </div>
       <div class="footer-links">
         <div>

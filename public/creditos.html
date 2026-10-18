@@ -30,20 +30,23 @@ html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero,.page-section{padding-top:1.1rem}
+.hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
+.hero-photo{margin:1rem 0 0}
+.hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
+.scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
+.scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
 @media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+  .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+  .hero-photo{display:none}
 }
 </style>
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <script type="application/ld+json">
@@ -91,31 +94,31 @@ input,select,textarea{font-size:16px}
           <h2>Pista de tierra vacía en Melbourne</h2>
           <p><a href="/photos/pista-tierra.webp">/photos/pista-tierra.webp</a></p>
           <p>Autor: KeepActive Australia. Licencia: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
-          <p>Dónde aparece: Portada, Sinner cierra la temporada.</p>
+          <p>Dónde aparece: Portada.</p>
         </article>
         <article class="card">
           <h2>Pista vacía con silla de juez</h2>
           <p><a href="/photos/pista-silla.webp">/photos/pista-silla.webp</a></p>
           <p>Autor: Shixart1985. Licencia: <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
-          <p>Dónde aparece: Anúnciate, Zverev, número 1 de final de año.</p>
+          <p>Dónde aparece: Anúnciate.</p>
         </article>
         <article class="card">
           <h2>Raquetas y pelotas sobre tierra batida</h2>
           <p><a href="/photos/raquetas.webp">/photos/raquetas.webp</a></p>
           <p>Autor: KeepActive Australia. Licencia: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
-          <p>Dónde aparece: Aprende tenis, Rybakina, número 1 de la WTA.</p>
+          <p>Dónde aparece: Rybakina, número 1 de la WTA.</p>
         </article>
         <article class="card">
           <h2>Pelota de tenis</h2>
           <p><a href="/photos/pelota.webp">/photos/pelota.webp</a></p>
           <p>Autor: Christian VisualBeo Horvat. Licencia: <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>. Fuente: <a href="https://commons.wikimedia.org/wiki/File:Tennisball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
-          <p>Dónde aparece: Qué ver esta semana, Jódar en la Race, Créditos.</p>
+          <p>Dónde aparece: Sinner cierra la temporada, Créditos.</p>
         </article>
         <article class="card">
           <h2>Iconos de superficie, pista y marcador</h2>
           <p><a href="/assets/diagrams/court.svg?v=5c991e64bd">/assets/diagrams/court.svg</a></p>
           <p>Autor: AceArena. Licencia: Ilustración propia. Fuente: <a href="https://acearena.io/" target="_blank" rel="noopener noreferrer">AceArena</a>.</p>
-          <p>Dónde aparece: Reglas, Semana, Calendario, Fichas.</p>
+          <p>Dónde aparece: Reglas, Semana, Calendario, Fichas, Cómo se llega al circuito, Jódar en la Race, Zverev, número 1 de final de año, Aprende tenis.</p>
         </article>
         <article class="card">
           <h2>Avatares con iniciales</h2>
@@ -149,7 +152,7 @@ input,select,textarea{font-size:16px}
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="index.html"><img src="assets/logo.svg?v=0f5879f7d7" alt="AceArena" width="140" height="40" loading="lazy"></a>
-        <p>AceArena: tenis en español, con datos y sin ruido.</p>
+        <p>El tenis, contado con datos.</p>
       </div>
       <div class="footer-links">
         <div>

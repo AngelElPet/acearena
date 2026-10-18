@@ -20,32 +20,32 @@ function headerTitle(article) {
   return article.tournament || 'AceArena';
 }
 
-function headerSvg({ tournament, score, width, height }) {
-  const scoreSize = score && score.length > 22 ? 64 : 84;
-  const titleY = score ? 188 : height / 2 + 12;
+function cardName(name) {
+  const parts = String(name).split(/\s+/).filter(Boolean);
+  if (parts.length >= 3) return parts.slice(-2).join(' ');
+  return parts[parts.length - 1] || name;
+}
+
+function headerSvg({ tournament, score, names, width, height }) {
+  const scoreSize = score && score.length > 18 ? 64 : 92;
+  const nameLine = names.length ? names.map(cardName).join('  ·  ') : tournament;
   const scoreBlock = score
-    ? `<text x="72" y="${height - 150}" fill="#ffffff" font-family="Space Grotesk" font-size="${scoreSize}" font-weight="700">${xml(score)}</text>`
+    ? `<text x="72" y="${height * 0.72}" fill="#ffffff" font-family="Space Grotesk" font-size="${scoreSize}" font-weight="700">${xml(score)}</text>`
     : '';
-  const courtTop = 40;
-  const courtHeight = height - 80;
-  const midY = courtTop + courtHeight / 2;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <rect width="${width}" height="${height}" fill="#07090d"/>
-  <rect x="48" y="${courtTop}" width="${width - 96}" height="${courtHeight}" rx="18" fill="#121a16"/>
-  <g fill="none" stroke="#c6ff00" stroke-opacity="0.34" stroke-width="3">
-    <rect x="48" y="${courtTop}" width="${width - 96}" height="${courtHeight}" rx="18"/>
-    <line x1="${width / 2}" y1="${courtTop}" x2="${width / 2}" y2="${height - 40}"/>
-    <line x1="48" y1="${midY}" x2="${width - 48}" y2="${midY}" stroke-opacity="0.2"/>
-    <rect x="${width / 2 - 110}" y="${midY - 62}" width="220" height="124"/>
-    <line x1="${width / 2 - 110}" y1="${midY - 20}" x2="${width / 2 + 110}" y2="${midY - 20}" stroke-opacity="0.16"/>
-    <line x1="${width / 2 - 110}" y1="${midY + 20}" x2="${width / 2 + 110}" y2="${midY + 20}" stroke-opacity="0.16"/>
+  <rect x="0" y="0" width="${width}" height="12" fill="#c6ff00"/>
+  <g fill="none" stroke="#c6ff00" stroke-opacity="0.28" stroke-width="3">
+    <rect x="${width - 280}" y="${height - 210}" width="200" height="130" rx="10"/>
+    <line x1="${width - 180}" y1="${height - 210}" x2="${width - 180}" y2="${height - 80}"/>
+    <line x1="${width - 280}" y1="${height - 145}" x2="${width - 80}" y2="${height - 145}"/>
   </g>
-  <rect x="72" y="72" width="92" height="8" fill="#c6ff00"/>
-  <text x="72" y="128" fill="#c6ff00" font-family="Space Grotesk" font-size="22" font-weight="700" letter-spacing="2">ACEARENA</text>
-  <text x="72" y="${titleY}" fill="#ffffff" font-family="Space Grotesk" font-size="36" font-weight="700">${xml(tournament)}</text>
+  <text x="72" y="92" fill="#c6ff00" font-family="Space Grotesk" font-size="24" font-weight="700" letter-spacing="2">ACEARENA</text>
+  <text x="72" y="168" fill="#c6ff00" font-family="Space Grotesk" font-size="36" font-weight="700">${xml(tournament)}</text>
+  <text x="72" y="${height * 0.5}" fill="#ffffff" font-family="Space Grotesk" font-size="56" font-weight="700">${xml(nameLine)}</text>
   ${scoreBlock}
-  <text x="72" y="${height - 72}" fill="#c6ff00" font-family="Inter" font-size="22" font-weight="700">acearena.io</text>
+  <text x="72" y="${height - 56}" fill="#c6ff00" font-family="Inter" font-size="24" font-weight="700">acearena.io</text>
 </svg>`;
 }
 
@@ -67,8 +67,9 @@ export async function writeArticleHeaders(articles, { root, publicDir }) {
   for (const article of articles) {
     const tournament = headerTitle(article);
     const score = typeof article.score === 'string' ? article.score : '';
-    const large = await raster(headerSvg({ tournament, score, width: 1200, height: 630 }), 1200, fonts);
-    const small = await raster(headerSvg({ tournament, score, width: 800, height: 420 }), 800, fonts);
+    const names = Array.isArray(article.players) ? article.players.slice(0, 2) : [];
+    const large = await raster(headerSvg({ tournament, score, names, width: 1200, height: 630 }), 1200, fonts);
+    const small = await raster(headerSvg({ tournament, score, names, width: 800, height: 420 }), 800, fonts);
     await sharp(large).webp({ quality: 72 }).toFile(join(dir, `${article.slug}.webp`));
     await sharp(small).webp({ quality: 70 }).toFile(join(dir, `${article.slug}-800.webp`));
   }

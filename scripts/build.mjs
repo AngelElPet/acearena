@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
 import { writeArticleHeaders } from './headers.mjs';
+import { writeSponsorPdfs } from './pdf.mjs';
 import { validateEvergreen, validatePayload, validateRace, validateWeek } from './validate.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,16 +20,18 @@ html{font-size:15px}
 body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
 input,select,textarea{font-size:16px}
 .container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
+.hero,.page-section{padding-top:1.1rem}
+.hero-layout,.hero-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.25rem;align-items:start}
+.hero h1{margin:0 0 .7rem;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;max-width:16ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
+.hero-photo{margin:1rem 0 0}
+.hero-photo img{display:block;width:100%;max-height:420px;aspect-ratio:16/9;object-fit:cover;height:auto}
+.scoreboard-names{margin:0;font-size:1.05rem;font-weight:700}
+.scoreboard-score{margin:.15rem 0 0;font-size:1.85rem;line-height:1.1}
 @media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+  .hero-layout,.hero-split,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
+  .hero-photo{display:none}
 }
 </style>`;
 const MONTHS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
@@ -160,7 +163,7 @@ function chrome(depth) {
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="${p}index.html"><img src="${p}assets/logo.svg" alt="AceArena" width="140" height="40" loading="lazy"></a>
-        <p>AceArena: tenis en español, con datos y sin ruido.</p>
+        <p>El tenis, contado con datos.</p>
       </div>
       <div class="footer-links">
         <div>
@@ -240,6 +243,7 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   ${CRITICAL_CSS}
   <link rel="preconnect" href="https://cloudflareinsights.com">
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="preload" href="${p}assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${p}styles.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="${p}styles.css"></noscript>
 ${ld}
@@ -274,12 +278,63 @@ function articleTopic(article) {
   return '';
 }
 
-function filedIso(article, field) {
-  const day = String(article[field] || '').slice(0, 10);
-  const late = article.slug === 'jodar-noveno-en-la-race-a-turin-tras-shanghai'
-    || article.slug === 'final-de-wuhan-chwalinska-y-kartal';
-  const time = late ? '19:06:17' : '16:22:52';
-  return `${day}T${time}+02:00`;
+function madridNoon(day) {
+  for (const offset of ['+01:00', '+02:00']) {
+    const date = new Date(`${day}T12:00:00${offset}`);
+    const hour = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Madrid',
+      hour: '2-digit',
+      hourCycle: 'h23',
+    }).format(date);
+    if (hour === '12') return date;
+  }
+  return new Date(`${day}T11:00:00Z`);
+}
+
+function stampOf(article, field) {
+  if (field === 'date' && article.publishedAt) return article.publishedAt;
+  if (field === 'updated' && article.modifiedAt) return article.modifiedAt;
+  return '';
+}
+
+function jsonLdDate(article, field) {
+  return stampOf(article, field) || String(article[field] || '').slice(0, 10);
+}
+
+function visibleWhen(article, field) {
+  const day = formatDay(article[field]);
+  const stamp = stampOf(article, field);
+  return stamp ? `${day}, ${stamp.slice(11, 16)}` : day;
+}
+
+function showUpdated(article) {
+  const published = article.publishedAt
+    ? Date.parse(article.publishedAt)
+    : madridNoon(String(article.date).slice(0, 10)).getTime();
+  const modified = article.modifiedAt
+    ? Date.parse(article.modifiedAt)
+    : madridNoon(String(article.updated).slice(0, 10)).getTime();
+  if (!article.publishedAt && !article.modifiedAt && String(article.date).slice(0, 10) === String(article.updated).slice(0, 10)) {
+    return false;
+  }
+  return Math.abs(modified - published) >= 3600000;
+}
+
+function rssInstant(article, field) {
+  const stamp = stampOf(article, field);
+  if (stamp) return new Date(stamp);
+  return madridNoon(String(article[field]).slice(0, 10));
+}
+
+function shortScoreName(name) {
+  const parts = String(name).split(/\s+/).filter(Boolean);
+  if (parts.length >= 3 && /^(de|del|da|di|van|von)$/i.test(parts[1])) {
+    const rest = parts.slice(1);
+    rest[0] = rest[0].charAt(0).toUpperCase() + rest[0].slice(1);
+    return rest.join(' ');
+  }
+  if (parts.length >= 3) return parts.slice(1).join(' ');
+  return parts[parts.length - 1] || name;
 }
 
 function newsCards(articles, hrefFor, assetPrefix = '') {
@@ -358,8 +413,8 @@ function articleJsonLd(article) {
     '@type': 'NewsArticle',
     headline: article.title,
     description: article.summary,
-    datePublished: filedIso(article, 'date'),
-    dateModified: filedIso(article, 'updated'),
+    datePublished: jsonLdDate(article, 'date'),
+    dateModified: jsonLdDate(article, 'updated'),
     inLanguage: 'es',
     articleBody: article.body.join('\n\n'),
     keywords: article.tags.join(', '),
@@ -449,26 +504,68 @@ const LICENSED_PHOTOS = {
 };
 
 const ARTICLE_PHOTO = {
-  'jodar-noveno-en-la-race-a-turin-tras-shanghai': 'pelota',
-  'zverev-asegura-el-numero-uno-de-final-de-ano': 'pista-silla',
   'rybakina-encabeza-el-ranking-wta': 'raquetas',
-  'sinner-cierra-la-temporada-por-lesion-de-rodilla': 'pista-tierra',
+  'sinner-cierra-la-temporada-por-lesion-de-rodilla': 'pelota',
+};
+
+const ARTICLE_DIAGRAM = {
+  'jodar-noveno-en-la-race-a-turin-tras-shanghai': {
+    file: 'court-rank.svg',
+    width: 960,
+    height: 420,
+    alt: 'Pista vista desde arriba, con la zona de fondo marcada.',
+  },
+  'zverev-asegura-el-numero-uno-de-final-de-ano': {
+    file: 'net.svg',
+    width: 960,
+    height: 420,
+    alt: 'Red de tenis sobre una pista vacía, en dibujo.',
+  },
 };
 
 function photoFigure(id, prefix, { priority = false, sizes = '(max-width: 800px) 100vw, 720px', className = 'photo-figure' } = {}) {
   const photo = LICENSED_PHOTOS[id];
   const loading = priority ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"';
   return `<figure class="${className}">
-          <img src="${prefix}photos/${photo.file}.webp" srcset="${prefix}photos/${photo.file}-800.webp ${photo.small}w, ${prefix}photos/${photo.file}.webp ${photo.width}w" sizes="${sizes}" alt="${esc(photo.alt)}" width="${photo.width}" height="${photo.height}"${loading}>
+          <picture>
+            <source type="image/avif" srcset="${prefix}photos/${photo.file}-800.avif ${photo.small}w, ${prefix}photos/${photo.file}.avif ${photo.width}w" sizes="${sizes}">
+            <img src="${prefix}photos/${photo.file}.webp" srcset="${prefix}photos/${photo.file}-800.webp ${photo.small}w, ${prefix}photos/${photo.file}.webp ${photo.width}w" sizes="${sizes}" alt="${esc(photo.alt)}" width="${photo.width}" height="${photo.height}"${loading}>
+          </picture>
           <figcaption>Foto: ${esc(photo.author)}, <a href="${esc(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a>, vía <a href="${esc(photo.sourceUrl)}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
         </figure>`;
 }
 
+function scoreboard(article) {
+  if (!article.score || !Array.isArray(article.players) || article.players.length < 2) return '';
+  const names = article.players.slice(0, 2).map((name) => shortScoreName(name)).join(' · ');
+  return `<div class="scoreboard">
+          <p class="scoreboard-names">${esc(names)}</p>
+          <p class="scoreboard-score">${esc(article.score)}</p>
+        </div>`;
+}
+
 function articleHero(article) {
-  const photoId = !article.score ? ARTICLE_PHOTO[article.slug] : '';
-  if (photoId) return photoFigure(photoId, '../', { priority: true, sizes: '(max-width: 800px) 100vw, 736px', className: 'photo-figure article-photo' });
-  const alt = article.score ? `Marcador de ${article.tournament}: ${article.score}` : (article.tournament || 'AceArena');
-  return `<img class="article-hero" src="../art/${esc(article.slug)}.webp" srcset="../art/${esc(article.slug)}-800.webp 800w, ../art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="${esc(alt)}" width="1200" height="630" fetchpriority="high">`;
+  const board = scoreboard(article);
+  const photoId = ARTICLE_PHOTO[article.slug];
+  const diagram = ARTICLE_DIAGRAM[article.slug];
+  let media = '';
+  if (photoId) {
+    media = photoFigure(photoId, '../', { priority: true, sizes: '(max-width: 800px) 100vw, 720px', className: 'photo-figure article-photo' });
+  } else if (diagram) {
+    media = `<figure class="diagram article-photo"><img src="../assets/diagrams/${diagram.file}" alt="${esc(diagram.alt)}" width="${diagram.width}" height="${diagram.height}"></figure>`;
+  } else if (!board) {
+    const alt = article.tournament || 'AceArena';
+    media = `<img class="article-hero" src="../art/${esc(article.slug)}.webp" srcset="../art/${esc(article.slug)}-800.webp 800w, ../art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 800px) 100vw, 720px" alt="${esc(alt)}" width="1200" height="630">`;
+  }
+  return `${board}${media}`;
+}
+
+function articleDates(article) {
+  const published = `<time datetime="${esc(jsonLdDate(article, 'date'))}">${esc(visibleWhen(article, 'date'))}</time>`;
+  const updated = showUpdated(article)
+    ? ` Actualizado el <time datetime="${esc(jsonLdDate(article, 'updated'))}">${esc(visibleWhen(article, 'updated'))}</time>.`
+    : '';
+  return `<p class="article-dates">Publicado el ${published}.${updated}</p>`;
 }
 
 function articlePage(article) {
@@ -500,7 +597,7 @@ ${upcomingItems}
       <h1>${esc(article.title)}</h1>
       ${articleHero(article)}
       <p class="article-byline">${BYLINE}</p>
-      <p class="article-dates">Publicado el <time datetime="${esc(filedIso(article, 'date'))}">${esc(formatDay(article.date))}</time>. Actualizado el <time datetime="${esc(filedIso(article, 'updated'))}">${esc(formatDay(article.updated))}</time>.</p>
+      ${articleDates(article)}
       <p class="article-kicker">${esc(article.players.join(' · '))}</p>
       <p class="article-summary">${esc(article.summary)}</p>
 ${brief}      <div class="article-body">
@@ -726,14 +823,15 @@ ${body}
 }
 
 function rss(articles) {
-  const newest = maxDay(articles.map((article) => article.updated));
+  const instants = articles.flatMap((article) => [rssInstant(article, 'date'), rssInstant(article, 'updated')]);
+  const newest = instants.reduce((best, instant) => (instant > best ? instant : best));
   const items = articles.map((article) => {
     const link = `${SITE}/noticias/${article.slug}.html`;
     return `    <item>
       <title>${xml(article.title)}</title>
       <link>${xml(link)}</link>
       <guid isPermaLink="true">${xml(link)}</guid>
-      <pubDate>${xml(new Date(filedIso(article, 'date')).toUTCString())}</pubDate>
+      <pubDate>${xml(rssInstant(article, 'date').toUTCString())}</pubDate>
       <author>hola@acearena.io (${BYLINE})</author>
       <description>${xml(article.summary)}</description>
     </item>`;
@@ -745,7 +843,7 @@ function rss(articles) {
     <link>${SITE}/noticias/</link>
     <description>Noticias de tenis publicadas por AceArena, con fuente en cada pieza.</description>
     <language>es</language>
-    <lastBuildDate>${xml(new Date(filedIso({ slug: '', date: newest, updated: newest }, 'updated')).toUTCString())}</lastBuildDate>
+    <lastBuildDate>${xml(newest.toUTCString())}</lastBuildDate>
 ${items}
   </channel>
 </rss>
@@ -789,34 +887,30 @@ function tournamentItem(event, prefix) {
         </li>`;
 }
 
-function todayCard(today, events) {
+function todayCard(today) {
   return `<div class="today-card">
           <p class="kicker">Hoy</p>
           <h2><a href="${esc(today.resultHref)}">${esc(today.resultTitle)}</a></h2>
           <p>${esc(today.resultText)}</p>
-          <h3>${esc(today.nextTitle)}</h3>
-          ${upcomingList(events)}
           <p><a href="${esc(today.nextHref)}">Toda la semana</a></p>
         </div>`;
 }
 
-function spotlightBlock(week, prefix) {
+function spotlightBlock(week, prefix, tag = 'h2') {
   if (!Array.isArray(week.spotlight) || week.spotlight.length === 0) return '';
   const items = week.spotlight.map((item) => `          <li><a href="${prefix}${esc(item.href)}">${esc(item.name)}</a>. ${esc(item.text)} <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(item.sourceName)}</a>.</li>`).join('\n');
-  return `      <h2>Españoles y latinoamericanos esta semana</h2>
-      <ul>
+  const more = tag === 'h3'
+    ? `\n      <p class="results-more"><a href="${prefix}semana.html">Sedes, superficies y el resto de la semana</a></p>`
+    : '';
+  return `      <${tag}>Españoles y latinoamericanos esta semana</${tag}>
+      <ul class="spotlight-list">
 ${items}
-      </ul>`;
+      </ul>${more}`;
 }
 
 function weekHome(week) {
-  const items = week.tournaments.map((event) => tournamentItem(event, '')).join('\n');
-  return `<p class="section-intro">${esc(week.hoursNote)}</p>
-        <ul class="event-list">
-${items}
-        </ul>
-${spotlightBlock(week, '')}
-        <p class="results-more"><a href="semana.html">Toda la semana, con fuentes</a> · <a href="race.html">Race a Turín</a> · <a href="rankings.html">Rankings</a></p>`;
+  return `<p class="section-intro"><a href="semana.html">Toda la semana, con sedes, superficies y a quién ver →</a></p>
+${spotlightBlock(week, '', 'h3')}`;
 }
 
 function weekPage(week) {
@@ -825,7 +919,6 @@ function weekPage(week) {
   const later = week.later.map((event) => tournamentItem(event, '')).join('\n');
   const events = [...week.tournaments, ...week.later];
   const main = `  <main class="section page-section" id="contenido">
-    ${photoFigure('pelota', '', { priority: true, sizes: '100vw', className: 'photo-figure hero-banner' })}
     <div class="container">
       <p class="news-meta"><a href="index.html">Inicio</a> · Esta semana</p>
       <div class="section-header">
@@ -833,6 +926,9 @@ function weekPage(week) {
         <h1>Qué ver esta semana</h1>
         <p>${esc(week.hoursNote)} Actualizado el ${esc(longDay(week.updated))}.</p>
       </div>
+      <figure class="week-art">
+        <img src="assets/diagrams/calendar-week.svg" alt="Semana de lunes a domingo. El lunes, día en que arrancan los cuadros, va marcado con una pelota." width="960" height="280">
+      </figure>
       <ul class="event-list">
 ${current}
       </ul>
@@ -977,9 +1073,9 @@ function aboutPage() {
     <article class="container article-wrap">
       <p class="news-meta"><a href="index.html">Inicio</a> · Sobre AceArena</p>
       <h1>Sobre AceArena</h1>
-      <p class="article-summary">Medio digital de tenis en español. Cada resultado lleva su fuente y cada ranking su fecha.</p>
+      <p class="article-summary">Medio digital de tenis. Cada resultado lleva su fuente y cada ranking su fecha.</p>
       <h2>Quiénes somos</h2>
-      <p>AceArena es un medio digital independiente de tenis en español, nacido en 2026. Cubrimos el circuito ATP y el WTA para quien sigue cada punto y para quien acaba de descubrir este deporte.</p>
+      <p>AceArena es un medio digital independiente de tenis, nacido en 2026. Cubrimos el circuito ATP y el WTA para quien sigue cada punto y para quien acaba de descubrir este deporte.</p>
       <h2>Quién está detrás</h2>
       <p>Lo fundó Angel Cebria Morales. El aviso legal publica el titular, el NIF y el domicilio.</p>
       <h2>Cómo trabajamos</h2>
@@ -987,7 +1083,7 @@ function aboutPage() {
       <h2>Correcciones</h2>
       <p>Si ves un error, escribe a <a href="mailto:hola@acearena.io">hola@acearena.io</a>. Lo corregimos y dejamos la fecha de la corrección en la pieza.</p>
       <h2>Contenido patrocinado</h2>
-      <p>El contenido de pago va señalado como tal. Los precios públicos están en <a href="agencias.html">Anúnciate</a>. No publicamos cifras de audiencia hasta cerrar el primer trimestre medido.</p>
+      <p>El contenido de pago va señalado como tal. Los precios públicos están en <a href="agencias.html">Anúnciate</a>. El informe de patrocinio mide visitas, páginas vistas, país, procedencia y dispositivo con Cloudflare Web Analytics.</p>
       <p class="results-more"><a href="agencias.html">Patrocinio</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="mailto:hola@acearena.io">hola@acearena.io</a></p>
     </article>
   </main>`;
@@ -1044,7 +1140,7 @@ function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc, week, race, ra
   const guideLines = guidesDoc.guides.map((guide) => `- [${guide.title}](${SITE}/aprende/${guide.slug}.html): ${guide.description}`);
   return `# AceArena
 
-> Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
+> Medio digital de tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
 > Ficha larga: ${SITE}/llms-full.txt
 
 ## Noticias
@@ -1256,7 +1352,7 @@ Patrocinio: sponsors@acearena.io
 
 ## Qué es
 
-AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
+AceArena es un medio digital de tenis profesional. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
 
 ## Secciones
 
@@ -1403,8 +1499,8 @@ async function build() {
 
   let home = readFileSync(join(publicDir, 'index.html'), 'utf8');
   home = fillRegion(home, 'EDITION', editionLabel(contentDay, today));
-  home = fillRegion(home, 'WEEKLINE', upcomingList([...week.tournaments, ...week.later]));
-  home = fillRegion(home, 'TODAY', todayCard(week.today, week.tournaments));
+  home = fillRegion(home, 'WEEKLINE', upcomingList(week.tournaments));
+  home = fillRegion(home, 'TODAY', todayCard(week.today));
   home = fillRegion(home, 'WEEK', weekHome(week));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));
@@ -1419,7 +1515,7 @@ async function build() {
   for (const article of articles) {
     writeHtml(`noticias/${article.slug}.html`, articlePage(article));
   }
-  const evergreen = evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, site: SITE });
+  const evergreen = evergreenEntries({ playersDoc, calendarDoc, guidesDoc, results: resultsDoc.results }, { esc, site: SITE });
   for (const entry of evergreen) {
     writeHtml(entry.file, page(entry.page));
   }
@@ -1447,7 +1543,7 @@ async function build() {
       `NIF: ${ownerNif}.`,
       `Domicilio: ${ownerAddress}.`,
       `Contacto: ${ownerEmail}.`,
-      'AceArena es un medio digital de tenis en español. Las noticias y los resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, con sus propias condiciones.',
+      'AceArena es un medio digital de tenis profesional. Las noticias y los resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, con sus propias condiciones.',
       'Los marcadores en vivo proceden de SportScore y los rankings de las fuentes oficiales indicadas en cada tabla. Hacemos lo posible por mantenerlos exactos; ante cualquier discrepancia prevalece la fuente oficial.',
       'El diseño, el código y los textos propios de AceArena pertenecen a su titular. Las marcas de jugadores, torneos y anunciantes mencionadas pertenecen a sus dueños.',
       legalLinks,
@@ -1573,6 +1669,7 @@ async function build() {
   writeText('llms-full.txt', llmsFull(articles, playersDoc, guidesDoc, week, race, rankings));
   await writeArticleHeaders(articles, { root, publicDir });
   await writeSocialCards(articles, { root, publicDir });
+  await writeSponsorPdfs(publicDir);
   stampPublishedAssets();
 
   console.log(`Build OK: ${articles.length} artículos (${homeArticles.length} en portada), ${matches.length} resultados (${homeMatches.length} en portada), ${playersDoc.players.length} jugadores, ${guidesDoc.guides.length} guías`);

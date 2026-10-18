@@ -1,3 +1,5 @@
+import { bioWithoutVitals, latestMatch, resultSentence } from './score.mjs';
+
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
 function surfaceFile(surface) {
@@ -57,7 +59,7 @@ function breadcrumb(items) {
   };
 }
 
-export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, site }) {
+export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, results = [] }, { esc, site }) {
   const entries = [];
   const players = playersDoc.players;
   const guides = guidesDoc.guides;
@@ -112,15 +114,21 @@ ${playerCards}
     const url = `${site}/jugadores/${player.slug}.html`;
     const ranking = `Número ${player.ranking.position} · ${player.ranking.points} puntos. Actualizado a ${longDate(player.ranking.asOf)}.`;
     const note = player.ranking.note ? `\n        <p>${esc(player.ranking.note)}</p>` : '';
-    const sheetParts = [
-      player.hand ? `Mano: ${player.hand}` : '',
-      player.backhand ? `Revés: ${player.backhand}` : '',
-      player.height ? `Estatura: ${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m` : '',
-      player.birthDate ? `Nacimiento: ${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}` : '',
+    const sheetRows = [
+      player.hand ? ['Mano', player.hand] : null,
+      player.backhand ? ['Revés', player.backhand] : null,
+      player.height ? ['Estatura', `${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m`] : null,
+      player.birthDate ? ['Nacimiento', `${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}`] : null,
     ].filter(Boolean);
-    const sheet = sheetParts.length
-      ? `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${esc(part)}</li>`).join('\n')}\n      </ul>`
+    const sheet = sheetRows.length
+      ? `\n      <h2>Ficha técnica</h2>\n      <dl class="sheet">\n${sheetRows.map(([label, value]) => `        <div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('\n')}\n      </dl>`
       : `\n      <h2>Ficha técnica</h2>\n${paragraphs(player.style, esc)}`;
+    const bioParas = bioWithoutVitals(player.bio);
+    const bio = bioParas.length ? `\n      <h2>Biografía</h2>\n${paragraphs(bioParas, esc)}` : '';
+    const match = latestMatch(player.name, results);
+    const latest = match
+      ? `\n      <h2>Último resultado</h2>\n      <p>${esc(resultSentence(player.name, match))} <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>.</p>`
+      : '';
     const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
     const nextEvent = player.nextEvent
       ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
@@ -163,9 +171,7 @@ ${playerCards}
         <h1>${esc(player.name)}</h1>
       </div>
       <p class="article-summary">${esc(ranking)}</p>${note}
-      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${nextEvent}
-      <h2>Biografía</h2>
-${paragraphs(player.bio, esc)}${sheet}${favorites}
+      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${nextEvent}${bio}${sheet}${latest}${favorites}
       <h2>Trayectoria</h2>
       <ul>
 ${highlights}
@@ -251,9 +257,9 @@ ${calendarBlocks}
       <div class="section-header">
         <span class="section-tag">Guías</span>
         <h1>Aprende tenis</h1>
-        <figure class="photo-figure">
-          <img src="../photos/raquetas.webp" srcset="../photos/raquetas-800.webp 640w, ../photos/raquetas.webp 960w" sizes="(max-width: 800px) 100vw, 720px" alt="Raquetas y pelotas sobre una pista de tierra." width="960" height="640">
-          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+        <figure class="diagram">
+          <img src="../assets/diagrams/court.svg" alt="Esquema de una pista: dos fondos, la red en el centro y los cuadros de saque." width="320" height="180">
+          <figcaption>Ilustración propia de AceArena.</figcaption>
         </figure>
         <p>Guías cortas para seguir el circuito: rankings, marcador, Grand Slams, glosario y el camino hasta la ATP y la WTA.</p>
       </div>
@@ -267,6 +273,11 @@ ${guideCards}
 
   for (const guide of guides) {
     const url = `${site}/aprende/${guide.slug}.html`;
+    const pathway = guide.slug === 'como-se-llega-al-circuito' ? `      <figure class="diagram">
+        <img src="../assets/diagrams/pathway.svg" alt="Cuatro pasos: ITF junior, ITF World Tennis Tour, Challenger o WTA 125, y el circuito ATP o WTA." width="880" height="220">
+        <figcaption>Del circuito júnior al circuito principal.</figcaption>
+      </figure>
+` : '';
     const diagrams = guide.slug === 'reglas-del-tenis-basicas' ? `      <div class="diagram-grid">
         <figure class="diagram">
           <img src="../assets/diagrams/court.svg" alt="Esquema de una pista: dos fondos, la red en el centro y los cuadros de saque." width="320" height="180">
@@ -336,7 +347,7 @@ ${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.na
       <p class="kicker">${esc(guide.kicker)}</p>
       <h1>${esc(guide.title)}</h1>
       <p class="article-summary">${esc(guide.intro)}</p>
-${diagrams}${terms}${eventList}${sections}
+${pathway}${diagrams}${terms}${eventList}${sections}
       <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
 ${faqs}

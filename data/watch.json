@@ -1,0 +1,14 @@
+{
+  "note": "La rutina de noticias publica la pieza solo con una fuente oficial. Sin marcador publicado, no hay pieza.",
+  "items": [
+    {
+      "player": "Francisco Cerúndolo",
+      "sheet": "jugadores/francisco-cerundolo.html",
+      "tournament": "BNP Paribas Fortis European Open",
+      "place": "Bruselas, Bélgica",
+      "dates": "19–25 de octubre de 2026",
+      "source": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule",
+      "when": "Si gana un partido de cuadro principal, abrir la noticia con el marcador y el enlace de la ATP."
+    }
+  ]
+}

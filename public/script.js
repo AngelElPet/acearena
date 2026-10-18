@@ -129,14 +129,27 @@
       loadLiveMatches({ announce: true });
     });
   }
-  if (document.getElementById("liveMatches")) {
+  var liveRoot = document.getElementById("liveMatches");
+  if (liveRoot) {
+    var liveStarted = false;
     var startLive = function () {
-      var run = function () { loadLiveMatches(); };
-      if (typeof requestIdleCallback === "function") requestIdleCallback(run, { timeout: 2500 });
-      else setTimeout(run, 1);
+      if (liveStarted) return;
+      liveStarted = true;
+      loadLiveMatches();
     };
-    if (document.readyState === "complete") startLive();
-    else window.addEventListener("load", startLive, { once: true });
+    if ("IntersectionObserver" in window) {
+      var liveObserver = new IntersectionObserver(function (entries) {
+        if (entries.some(function (entry) { return entry.isIntersecting; })) {
+          liveObserver.disconnect();
+          startLive();
+        }
+      }, { rootMargin: "180px" });
+      liveObserver.observe(liveRoot);
+    } else if (document.readyState === "complete") {
+      startLive();
+    } else {
+      window.addEventListener("load", startLive, { once: true });
+    }
   }
 
   document.querySelectorAll("form[data-netlify]").forEach(function (form) {
