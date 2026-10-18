@@ -1,20 +1,27 @@
+# Sitio estático. El comando de build se deja vacío a propósito.
 [build]
-  publish = "."
-  # No build command needed (static site)
+  publish = "public"
+  command = ""
 
+# www → apex. No afecta a la URL *.netlify.app.
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  # Only if you later add SPA routing. For now mostly for cleanliness.
+  from = "https://www.acearena.io/*"
+  to = "https://acearena.io/:splat"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
   for = "/*.pdf"

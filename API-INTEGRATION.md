@@ -1,5 +1,7 @@
 # Integración de APIs de Tenis – AceArena
 
+El sitio que ve el público está en `public/`. `public/script.js` pide los partidos a SportScore, pinta solo los que vienen como `live` o `inprogress`, y mete nombres y marcadores con `textContent`. Si no hay partidos, la sección se queda vacía. El enlace «Powered by SportScore» está en el HTML, no lo inyecta el script.
+
 ## Actual (en producción en el sitio)
 
 **SportScore** (gratuita, sin clave)
