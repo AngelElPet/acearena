@@ -44,6 +44,62 @@ function paragraphs(items, esc) {
   return items.map((paragraph) => `        <p>${esc(paragraph)}</p>`).join('\n');
 }
 
+function tiebreak(score) {
+  return String(score).replace(/(\d+-\d+)\(7-(\d+)\)/g, '$1($2)');
+}
+
+function spokenScore(score) {
+  const retired = /ret/i.test(score);
+  const sets = tiebreak(score).replace(/\s*ret\.?/i, '').trim().split(/\s+/).filter(Boolean);
+  const body = sets.length <= 1 ? (sets[0] || '') : `${sets.slice(0, -1).join(', ')} y ${sets[sets.length - 1]}`;
+  return retired ? `${body}, con retirada` : body;
+}
+
+function roundPhrase(round) {
+  const value = String(round || '').toLowerCase();
+  if (value === 'final') return 'la final';
+  if (value === 'semifinal') return 'semifinales';
+  return value;
+}
+
+function dayMonth(iso) {
+  const [year, month, day] = iso.slice(0, 10).split('-').map(Number);
+  return `${day} de ${MONTHS[month - 1]} de ${year}`;
+}
+
+function lastResultBlock(player, resultsDoc, esc) {
+  const matches = (resultsDoc?.results || [])
+    .filter((match) => match.winner === player.name || match.loser === player.name)
+    .sort((a, b) => b.date.localeCompare(a.date) || 0);
+  const match = matches[0];
+  if (!match) return '';
+  const score = spokenScore(match.score);
+  const when = dayMonth(match.date);
+  const round = roundPhrase(match.round);
+  const sentence = match.loser === player.name
+    ? `cayó en ${round} del ${match.tournament} ante ${match.winner}, ${score}, el ${when}`
+    : `${round.startsWith('la ') ? `ganó ${round}` : `ganó en ${round}`} del ${match.tournament} a ${match.loser}, ${score}, el ${when}`;
+  return `\n      <p><strong>Último resultado:</strong> ${esc(sentence)}. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>.</p>`;
+}
+
+function nextTournamentBlock(player, week, esc) {
+  const events = Array.isArray(player.nextEvents) ? player.nextEvents.filter((event) => event && event.name && event.url) : [];
+  if (events.length) {
+    const linked = events.map((event) => `<a href="${esc(event.url)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a> (${esc(event.dates)})`).join(' y ');
+    return `\n      <p><strong>Próximos torneos:</strong> ${linked}.</p>`;
+  }
+  const spot = (week?.spotlight || []).find((item) => item.name === player.name);
+  if (!spot) return '';
+  return `\n      <p><strong>Próximo torneo:</strong> ${esc(spot.text)} <a href="${esc(spot.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(spot.sourceName)}</a>.</p>`;
+}
+
+function datedLine(name, place, when) {
+  const where = place ? `, ${place}` : '';
+  if (!when) return `${name}${where}`;
+  if (when.startsWith('Empieza') || when.startsWith('Semana')) return `${name}${where}. ${when}`;
+  return `${name}${where}, ${when}`;
+}
+
 function breadcrumb(items) {
   return {
     '@context': 'https://schema.org',
@@ -57,7 +113,7 @@ function breadcrumb(items) {
   };
 }
 
-export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, site }) {
+export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDoc, week }, { esc, site }) {
   const entries = [];
   const players = playersDoc.players;
   const guides = guidesDoc.guides;
@@ -74,7 +130,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, 
     file: 'jugadores/index.html',
     lastmod: playersDoc.updated,
     page: {
-      title: 'Jugadores en español | AceArena',
+      title: 'Jugadores | AceArena',
       description: 'Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.',
       canonical: `${site}/jugadores/`,
       depth: 1,
@@ -86,7 +142,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, 
         {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          name: 'Jugadores en español',
+          name: 'Jugadores',
           url: `${site}/jugadores/`,
           inLanguage: 'es',
           isPartOf: { '@type': 'WebSite', name: 'AceArena', url: site },
@@ -97,7 +153,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc }, { esc, 
       <p class="news-meta"><a href="../index.html">Inicio</a> · Jugadores</p>
       <div class="section-header">
         <span class="section-tag">Rankings</span>
-        <h1>Jugadores en español</h1>
+        <h1>Jugadores</h1>
         <p>Fichas de tenistas de España y de América Latina, con su ranking y el enlace a la ficha oficial. <a href="../rankings.html">Top 20 ATP y WTA</a> · <a href="../race.html">Race a Turín</a>.</p>
       </div>
       <div class="card-grid">
@@ -122,7 +178,9 @@ ${playerCards}
       ? `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${esc(part)}</li>`).join('\n')}\n      </ul>`
       : `\n      <h2>Ficha técnica</h2>\n${paragraphs(player.style, esc)}`;
     const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
-    const nextEvent = player.nextEvent
+    const lastResult = lastResultBlock(player, resultsDoc, esc);
+    const nextTournament = nextTournamentBlock(player, week, esc);
+    const nextEvent = !nextTournament && player.nextEvent
       ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
       : '';
     const related = Array.isArray(player.related) && player.related.length
@@ -157,13 +215,13 @@ ${playerCards}
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores en español</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
+      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
       <div class="player-head">
         ${avatar(player.name, esc)}
         <h1>${esc(player.name)}</h1>
       </div>
       <p class="article-summary">${esc(ranking)}</p>${note}
-      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${nextEvent}
+      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${lastResult}${nextTournament}${nextEvent}
       <h2>Biografía</h2>
 ${paragraphs(player.bio, esc)}${sheet}${favorites}
       <h2>Trayectoria</h2>
@@ -184,12 +242,11 @@ ${sourceList(player.sources, esc)}
 
   const calendarBlocks = calendarDoc.sections.map((section) => {
     const items = section.events.map((event) => {
-      const where = [event.place, event.when].filter(Boolean).join(', ');
       const icon = surfaceMark(event.surface, '');
       const detail = event.detail ? `\n          <p>${esc(event.detail)}</p>` : '';
       const surface = event.surface ? `\n          <p class="event-where">${icon}${esc(event.surface)}</p>` : '';
       return `        <li>
-          ${esc(event.name)}, ${esc(where)}${surface}${detail}
+          ${esc(datedLine(event.name, event.place, event.when))}${surface}${detail}
           <p>Fuentes: ${event.sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a>`).join(' · ')}</p>
         </li>`;
     }).join('\n');
@@ -252,8 +309,8 @@ ${calendarBlocks}
         <span class="section-tag">Guías</span>
         <h1>Aprende tenis</h1>
         <figure class="photo-figure">
-          <img src="../photos/raquetas.webp" srcset="../photos/raquetas-800.webp 640w, ../photos/raquetas.webp 960w" sizes="(max-width: 800px) 100vw, 720px" alt="Raquetas y pelotas sobre una pista de tierra." width="960" height="640">
-          <figcaption>Foto: KeepActive Australia, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
+          <img src="../photos/pistas.webp" srcset="../photos/pistas-400.webp 400w, ../photos/pistas-800.webp 800w, ../photos/pistas.webp 1600w" sizes="(max-width: 1120px) 100vw, 720px" alt="Pistas de tenis vacías al aire libre, con árboles al fondo." width="1600" height="900">
+          <figcaption>Foto: Hameltion, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_courts_at_Chapel_Hill_High_School.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
         </figure>
         <p>Guías cortas para seguir el circuito: rankings, marcador, Grand Slams, glosario y el camino hasta la ATP y la WTA.</p>
       </div>
@@ -283,8 +340,18 @@ ${guideCards}
 ${paragraphs(section.paragraphs, esc)}`).join('\n')
       : '';
     const eventItems = Array.isArray(guide.events)
-      ? guide.events.map((event) => `        <li>${esc(event.name)}, ${esc(event.place)}, ${esc(event.dates)}${event.detail ? `. ${esc(event.detail)}` : ''}</li>`).join('\n')
+      ? guide.events.map((event) => {
+          const line = datedLine(event.name, event.place, event.dates);
+          const extra = event.detail ? `${line.endsWith('.') ? ' ' : '. '}${esc(event.detail)}` : '';
+          return `        <li>${esc(line)}${extra}</li>`;
+        }).join('\n')
       : '';
+    const pathway = guide.slug === 'como-se-llega-al-circuito' ? `      <figure class="diagram">
+        <img src="../assets/diagrams/escalones.svg" alt="Cuatro escalones: júnior, ITF, Challenger o WTA 125, y ATP o WTA." width="720" height="200">
+        <figcaption>Los cuatro escalones, de la base al circuito.</figcaption>
+      </figure>
+      <p><a href="../jugadores/rafael-jodar.html">Rafael Jódar</a> empezó 2026 como número 168 y en agosto alcanzó el 11.</p>
+` : '';
     const eventList = eventItems ? `      <ul class="event-list">\n${eventItems}\n      </ul>\n` : '';
     const terms = Array.isArray(guide.terms) ? `      <div class="faq-list">
 ${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.name)}</h2><p>${esc(term.description)}</p></article>`).join('\n')}
@@ -336,7 +403,7 @@ ${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.na
       <p class="kicker">${esc(guide.kicker)}</p>
       <h1>${esc(guide.title)}</h1>
       <p class="article-summary">${esc(guide.intro)}</p>
-${diagrams}${terms}${eventList}${sections}
+${diagrams}${pathway}${terms}${eventList}${sections}
       <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
 ${faqs}

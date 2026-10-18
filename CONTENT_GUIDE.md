@@ -124,7 +124,7 @@ python3 -m http.server 8080 --directory public
 
 - `public/noticias/<slug>.html` — una página por artículo, con SEO, JSON-LD `NewsArticle` (con `image`) y `BreadcrumbList`, la tarjeta `/og/<slug>.png` como cabecera, fechas, fuentes enlazadas por su nombre y el formulario del resumen del lunes. `og:image` y `twitter:image` apuntan a `public/og/<slug>.png`. El autor del JSON-LD sigue siendo la Organization.
 - `public/social/<slug>.png` (1080×1350) y `public/og/<slug>.png` (1200×630), una pareja por artículo. Fondo `#0A0C10`, lima `#BEE628`, texto blanco, fecha, `acearena.io` y el logotipo de `public/social/perfil.png`. Las fuentes del render son `assets/fonts/*.ttf`, instancias estáticas de las woff2 del sitio. `perfil.png` y `lanzamiento.png` no se regeneran y no entran en el sitemap.
-- `public/jugadores/` — índice «Jugadores en español» y una ficha por jugador de `data/players.json`, con avatar de iniciales (no es una foto) y JSON-LD `Person`.
+- `public/jugadores/` — índice «Jugadores» y una ficha por jugador de `data/players.json`, con avatar de iniciales (no es una foto) y JSON-LD `Person`.
 - `public/calendario-2027.html` — fechas de `data/calendar.json`. Si el cierre no está publicado, el texto dice «fecha por confirmar».
 - `public/aprende/` — índice y las guías de `data/guides.json`, con JSON-LD `FAQPage`.
 - `public/<clave>.txt` — clave IndexNow de `data/indexnow.json`. No entra en el sitemap.

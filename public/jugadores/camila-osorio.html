@@ -25,27 +25,11 @@
   <meta name="twitter:title" content="Camila Osorio | AceArena">
   <meta name="twitter:description" content="Camila Osorio, WTA. Número 67 · 963 puntos. Actualizado a 12 de octubre de 2026.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <style>
-html{font-size:15px}
-body{margin:0;background:#07090d;color:#f4f7fb;font-family:Inter,system-ui,sans-serif}
-input,select,textarea{font-size:16px}
-.container{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
-.hero-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(16rem,.8fr);gap:1.5rem;align-items:start}
-.hero h1{margin:0 0 1rem;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;max-width:18ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
-.fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-.hero:has(.hero-banner){padding-top:0}
-.hero-banner{margin:0 0 1.4rem}
-.hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
-.page-section>.hero-banner{margin:-2rem 0 1.4rem}
-@media (max-width:800px){
-  .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
-}
-</style>
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <link rel="stylesheet" href="../styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="../styles.css"></noscript>
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Camila Osorio","url":"https://acearena.io/jugadores/camila-osorio.html","sameAs":["https://www.wtatennis.com/players/325898/camila-osorio"],"nationality":"Colombia","birthDate":"2001-12-22","height":"170 cm","jobTitle":"tenista"}
   </script>
@@ -66,17 +50,18 @@ input,select,textarea{font-size:16px}
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="../index.html#hoy">Hoy</a>
+        <a href="../semana.html">Esta semana</a>
         <a href="../noticias/index.html">Noticias</a>
         <a href="../rankings.html">Rankings</a>
-        <a href="../calendario-2027.html">Calendario</a>
-        <a href="../aprende/index.html">Aprende tenis</a>
+        <a href="../jugadores/index.html">Jugadores</a>
+        <a href="../aprende/index.html">Aprende</a>
         <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
     </div>
   </header>
   <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores en español</a> · WTA · Colombia</p>
+      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores</a> · WTA · Colombia</p>
       <div class="player-head">
         <svg class="avatar" viewBox="0 0 72 72" role="img" aria-label="Iniciales de Camila Osorio">
             <circle cx="36" cy="36" r="36" fill="#c6ff00"/>
@@ -87,7 +72,7 @@ input,select,textarea{font-size:16px}
       <p class="article-summary">Número 67 · 963 puntos. Actualizado a 12 de octubre de 2026.</p>
       <p><a href="https://www.wtatennis.com/players/325898/camila-osorio" target="_blank" rel="noopener noreferrer">Ficha oficial WTA</a></p>
       <h2>Biografía</h2>
-        <p>Camila Osorio nació el 22 de diciembre de 2001 en Cúcuta (Colombia). Mide 1,70 m.</p>
+        <p>Nacida en Cúcuta (Colombia).</p>
       <h2>Ficha técnica</h2>
       <ul class="sheet">
         <li>Mano: diestra</li>
@@ -114,7 +99,7 @@ input,select,textarea{font-size:16px}
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="../index.html"><img src="../assets/logo.svg?v=0f5879f7d7" alt="AceArena" width="140" height="40" loading="lazy"></a>
-        <p>AceArena: tenis en español, con datos y sin ruido.</p>
+        <p>AceArena: tenis, con datos y sin ruido.</p>
       </div>
       <div class="footer-links">
         <div>
@@ -123,7 +108,7 @@ input,select,textarea{font-size:16px}
           <a href="../semana.html">Esta semana</a>
           <a href="../noticias/index.html">Noticias</a>
           <a href="../rankings.html">Rankings</a>
-          <a href="../jugadores/index.html">Jugadores en español</a>
+          <a href="../jugadores/index.html">Jugadores</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
           <a href="../calendario-2027.html">Calendario</a>
@@ -156,6 +141,16 @@ input,select,textarea{font-size:16px}
     <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

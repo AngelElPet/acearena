@@ -8,7 +8,7 @@ Patrocinio: sponsors@acearena.io
 
 ## Qué es
 
-AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
+AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
 
 ## Secciones
 
@@ -18,7 +18,7 @@ AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WT
 - Esta semana: https://acearena.io/semana.html
 - Race a Turín: https://acearena.io/race.html
 - Rankings ATP y WTA: https://acearena.io/rankings.html
-- Jugadores en español: https://acearena.io/jugadores/
+- Jugadores: https://acearena.io/jugadores/
 - Calendario 2027: https://acearena.io/calendario-2027.html
 - Aprende tenis: https://acearena.io/aprende/
 - Sobre AceArena: https://acearena.io/sobre.html
