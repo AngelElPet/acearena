@@ -54,20 +54,13 @@
     while (node.firstChild) node.removeChild(node.firstChild);
   }
 
-  function showEmpty(box, title, message, link) {
-    clear(box);
-    var wrap = text("div", "live-empty");
-    wrap.appendChild(text("p", "live-empty-title", title));
-    if (message) wrap.appendChild(text("p", null, message));
-    if (link) {
-      var more = document.createElement("p");
-      var anchor = document.createElement("a");
-      anchor.href = link.href;
-      anchor.textContent = link.label;
-      more.appendChild(anchor);
-      wrap.appendChild(more);
-    }
-    box.appendChild(wrap);
+  function setLiveMode(open) {
+    var section = document.getElementById("en-directo");
+    var compact = document.getElementById("liveCompact");
+    var full = document.getElementById("liveFull");
+    if (section) section.classList.toggle("is-empty", !open);
+    if (compact) compact.hidden = open;
+    if (full) full.hidden = !open;
   }
 
   function renderMatch(match) {
@@ -93,32 +86,29 @@
     return status === "live" || status === "inprogress" || status === "in_progress";
   }
 
-  var LIVE_RESULT = "Último resultado: Chwalińska gana a Kartal 2-6, 6-4 y 6-2 en la final de Wuhan.";
-  var LIVE_LINK = { href: "resultados.html", label: "Resultados" };
-
   async function loadLiveMatches(options) {
     var box = document.getElementById("liveMatches");
     var button = document.getElementById("refreshLive");
     if (!box) return;
     if (button) button.disabled = true;
-    if (options && options.announce) {
-      showEmpty(box, "Consultando SportScore…", "Buscamos los partidos que se están jugando.");
-    }
+    if (options && options.announce) setLiveMode(true);
     try {
       var response = await fetch("https://sportscore.com/api/v1/matches/?sport=tennis&status=live&limit=8");
       if (!response.ok) throw new Error("HTTP " + response.status);
       var data = await response.json();
       var matches = Array.isArray(data.matches) ? data.matches.filter(isLive).slice(0, 6) : [];
+      clear(box);
       if (!matches.length) {
-        showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, LIVE_LINK);
+        setLiveMode(false);
         return;
       }
-      clear(box);
       matches.forEach(function (match) {
         box.appendChild(renderMatch(match));
       });
+      setLiveMode(true);
     } catch (error) {
-      showEmpty(box, "Ahora mismo no hay partidos en pista.", LIVE_RESULT, LIVE_LINK);
+      clear(box);
+      setLiveMode(false);
     } finally {
       if (button) button.disabled = false;
     }

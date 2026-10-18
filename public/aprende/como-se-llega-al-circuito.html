@@ -25,10 +25,10 @@
   <meta name="twitter:title" content="Cómo se llega al circuito | AceArena">
   <meta name="twitter:description" content="Del circuito júnior de la ITF al ITF World Tennis Tour, al Challenger o al WTA 125, y de ahí a la ATP y la WTA.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué hay entre el júnior y un cuadro ATP?","acceptedAnswer":{"@type":"Answer","text":"El ITF World Tennis Tour y el ATP Challenger Tour. Sus resultados pueden contar en el ranking ATP entre los seis mejores del resto."}},{"@type":"Question","name":"¿Y en el circuito femenino?","acceptedAnswer":{"@type":"Answer","text":"El ITF World Tennis Tour y los WTA 125 pueden entrar en la cuenta del ranking WTA, dentro de los siete mejores siguientes."}},{"@type":"Question","name":"¿Los Grand Slams cuentan siempre?","acceptedAnswer":{"@type":"Answer","text":"Sí. En la ATP entran los 4 Grand Slams y 8 Masters 1000 obligatorios. En la WTA entran los 4 Grand Slams y los mejores WTA 1000 de la fórmula oficial."}}]}
@@ -145,6 +145,16 @@
     <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

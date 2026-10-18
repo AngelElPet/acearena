@@ -25,10 +25,10 @@
   <meta name="twitter:title" content="Cómo funciona el ranking ATP | AceArena">
   <meta name="twitter:description" content="Qué cuenta el PIF ATP Rankings, cada cuánto se publica, cuántos torneos entran y qué es la Race to Turin.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Para qué sirve el ranking ATP?","acceptedAnswer":{"@type":"Answer","text":"El PIF ATP Rankings ordena a los jugadores y se usa para la entrada en los cuadros y para las cabezas de serie."}},{"@type":"Question","name":"¿Cada cuánto se actualiza?","acceptedAnswer":{"@type":"Answer","text":"La lista es móvil, de unas 52 semanas, y se publica alrededor de cada lunes, unas 45 veces al año."}},{"@type":"Question","name":"¿Cuántos torneos cuentan en individuales?","acceptedAnswer":{"@type":"Answer","text":"Cuentan 4 Grand Slams, 8 Masters 1000 obligatorios y los 6 mejores resultados del resto. Las Nitto ATP Finals pueden sumar como un 19.º torneo."}},{"@type":"Question","name":"¿Cuántos puntos da ganar un Grand Slam?","acceptedAnswer":{"@type":"Answer","text":"El campeón de un Grand Slam suma 2.000 puntos."}},{"@type":"Question","name":"¿Qué es la Race to Turin?","acceptedAnswer":{"@type":"Answer","text":"Es la clasificación del año natural. Los 8 primeros juegan las Nitto ATP Finals en Turín."}}]}
@@ -137,6 +137,16 @@
     <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

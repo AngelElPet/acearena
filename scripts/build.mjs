@@ -1,7 +1,8 @@
 import { createHash } from 'node:crypto';
-import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
 import { writeArticleHeaders } from './headers.mjs';
@@ -12,7 +13,18 @@ const publicDir = join(root, 'public');
 const SITE = 'https://acearena.io';
 const HOMEPAGE_MAX_AGE_DAYS = 60;
 const LLMS_LATEST = 20;
-const BEACON = `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>`;
+const BEACON_TOKEN = 'd21dd5ee912c4c80b8c8a4232ec883fc';
+const BEACON = `<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "${BEACON_TOKEN}"}');
+  document.body.appendChild(s);
+})();
+</script>`;
 const BYLINE = 'Redacción AceArena';
 const MONTHS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 const MONTHS_LONG = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -86,7 +98,9 @@ function fillRegion(html, name, inner) {
 }
 
 function injectBeacon(html) {
-  const stripped = html.replace(/\n?<script defer src='https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js' data-cf-beacon='\{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"\}'><\/script>\n?/g, '\n');
+  const stripped = html
+    .replace(/\n?<script defer src='https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js' data-cf-beacon='\{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"\}'><\/script>\n?/g, '\n')
+    .replace(/\n?<script>\n\(function \(\) \{\n  var host = location\.hostname;\n  if \(host !== "acearena\.io" && host !== "www\.acearena\.io"\) return;\n  var s = document\.createElement\("script"\);\n  s\.src = "https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js";\n  s\.defer = true;\n  s\.setAttribute\("data-cf-beacon", '\{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"\}'\);\n  document\.body\.appendChild\(s\);\n\}\)\(\);\n<\/script>\n?/g, '\n');
   const at = stripped.lastIndexOf('</body>');
   if (at === -1) throw new Error('HTML sin </body>');
   const next = `${stripped.slice(0, at)}${BEACON}\n${stripped.slice(at)}`;
@@ -221,10 +235,10 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
   <meta name="twitter:image" content="${esc(ogImage)}">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="${p}assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${p}assets/fonts/inter-extra.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="${p}assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${p}assets/fonts/space-grotesk-extra.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${p}styles.css">
 ${ld}
 </head>
@@ -279,7 +293,8 @@ function cardImage(article, assetPrefix) {
     const photo = LICENSED_PHOTOS[photoId];
     return {
       src: `${assetPrefix}photos/${photo.file}-400.webp`,
-      srcset: `${assetPrefix}photos/${photo.file}-400.webp 400w, ${assetPrefix}photos/${photo.file}-800.webp 800w, ${assetPrefix}photos/${photo.file}.webp ${photo.width}w`,
+      srcset: photoSrcset(assetPrefix, photo, 'webp'),
+      avif: photoSrcset(assetPrefix, photo, 'avif'),
       width: photo.width,
       height: photo.height,
     };
@@ -287,6 +302,7 @@ function cardImage(article, assetPrefix) {
   return {
     src: `${assetPrefix}art/${article.slug}-400.webp`,
     srcset: `${assetPrefix}art/${article.slug}-400.webp 400w, ${assetPrefix}art/${article.slug}-800.webp 800w, ${assetPrefix}art/${article.slug}.webp 1200w`,
+    avif: '',
     width: 1200,
     height: 630,
   };
@@ -298,8 +314,10 @@ function newsCards(articles, hrefFor, assetPrefix = '') {
   }
   return articles.map((article) => {
     const image = cardImage(article, assetPrefix);
+    const sizes = '(max-width: 700px) calc(100vw - 4.4rem), 360px';
+    const source = image.avif ? `<source type="image/avif" srcset="${esc(image.avif)}" sizes="${sizes}">` : '';
     return `        <article class="news-card">
-          <a class="news-card-media" href="${esc(hrefFor(article))}" tabindex="-1" aria-hidden="true"><img src="${esc(image.src)}" srcset="${esc(image.srcset)}" sizes="(max-width: 700px) 92vw, 360px" alt="" width="${image.width}" height="${image.height}" loading="lazy" decoding="async"></a>
+          <a class="news-card-media" href="${esc(hrefFor(article))}" tabindex="-1" aria-hidden="true"><picture>${source}<img src="${esc(image.src)}" srcset="${esc(image.srcset)}" sizes="${sizes}" alt="" width="${image.width}" height="${image.height}" loading="lazy" decoding="async"></picture></a>
           <div class="news-meta">${tourBadge(article)}${BYLINE} · ${esc(formatDay(article.date))} · Fuente: ${esc(article.sources[0]?.name || article.tournament)}</div>
           <h3><a href="${esc(hrefFor(article))}">${esc(article.title)}</a></h3>
           <p>${esc(article.summary)}</p>
@@ -457,11 +475,26 @@ const ARTICLE_PHOTO = {
   'sinner-cierra-la-temporada-por-lesion-de-rodilla': 'pistas',
 };
 
-function photoFigure(id, prefix, { priority = false, sizes = '(max-width: 800px) 100vw, 720px', className = 'photo-figure' } = {}) {
+function photoWidths(photo) {
+  return [...new Set([400, 640, photo.small, photo.width])].sort((a, b) => a - b);
+}
+
+function photoFile(photo, width, ext) {
+  return width === photo.width ? `${photo.file}.${ext}` : `${photo.file}-${width}.${ext}`;
+}
+
+function photoSrcset(prefix, photo, ext) {
+  return photoWidths(photo).map((width) => `${prefix}photos/${photoFile(photo, width, ext)} ${width}w`).join(', ');
+}
+
+function photoFigure(id, prefix, { priority = false, sizes = '(max-width: 800px) calc(100vw - 2rem), 720px', className = 'photo-figure' } = {}) {
   const photo = LICENSED_PHOTOS[id];
   const loading = priority ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"';
   return `<figure class="${className}">
-          <img src="${prefix}photos/${photo.file}.webp" srcset="${prefix}photos/${photo.file}-400.webp 400w, ${prefix}photos/${photo.file}-800.webp ${photo.small}w, ${prefix}photos/${photo.file}.webp ${photo.width}w" sizes="${sizes}" alt="${esc(photo.alt)}" width="${photo.width}" height="${photo.height}"${loading}>
+          <picture>
+            <source type="image/avif" srcset="${photoSrcset(prefix, photo, 'avif')}" sizes="${sizes}">
+            <img src="${prefix}photos/${photo.file}.webp" srcset="${photoSrcset(prefix, photo, 'webp')}" sizes="${sizes}" alt="${esc(photo.alt)}" width="${photo.width}" height="${photo.height}"${loading}>
+          </picture>
           <figcaption>Foto: ${esc(photo.author)}, <a href="${esc(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a>, vía <a href="${esc(photo.sourceUrl)}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
         </figure>`;
 }
@@ -729,12 +762,13 @@ ${body}
 }
 
 function feedLastBuild(articles) {
-  const buildAt = new Date();
-  const latestPub = articles.reduce((latest, article) => {
-    const pub = new Date(pubInstant(article));
-    return pub > latest ? pub : latest;
+  // Deterministic: newest publish/modify instant among articles (never "now"),
+  // so a rebuild of unchanged data produces an identical feed.xml (CI check).
+  const instant = (a, f) => { const iso = filedIso(a, f); return new Date(iso.length === 10 ? `${iso}T00:00:00Z` : iso); };
+  return articles.reduce((latest, a) => {
+    for (const f of ['date', 'updated']) { const d = instant(a, f); if (!Number.isNaN(d.getTime()) && d > latest) latest = d; }
+    return latest;
   }, new Date(0));
-  return buildAt < latestPub ? latestPub : buildAt;
 }
 
 function rss(articles) {
@@ -814,14 +848,15 @@ function topTournament(events) {
   return [...events].sort((a, b) => (LEVEL_RANK[a.level] ?? 9) - (LEVEL_RANK[b.level] ?? 9))[0];
 }
 
-function spanishList(items) {
-  if (items.length <= 1) return items.join('');
-  return `${items.slice(0, -1).join(', ')} y ${items[items.length - 1]}`;
-}
-
 function heroWeekLine(week) {
-  const cities = week.tournaments.map((event) => event.place.split(',')[0].trim());
-  return `<p>Esta semana: ${esc(spanishList(cities))}. <a href="semana.html">Ver la semana →</a></p>`;
+  const items = week.tournaments.map((event) => {
+    const city = event.place.split(',')[0].trim();
+    return `          <li><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>, ${esc(city)}, ${esc(event.dates)}</li>`;
+  }).join('\n');
+  return `<ul class="event-list hero-week-list">
+${items}
+        </ul>
+        <p class="hero-week-more"><a href="semana.html">Ver la semana →</a></p>`;
 }
 
 function todayCard(today, events) {
@@ -1406,6 +1441,37 @@ function maxDay(values) {
   return values.filter(Boolean).sort().at(-1) ?? '2026-01-01';
 }
 
+async function ensurePhotoVariants() {
+  const dir = join(publicDir, 'photos');
+  mkdirSync(dir, { recursive: true });
+  const avifOpts = { quality: 42, effort: 6, chromaSubsampling: '4:2:0' };
+  for (const photo of Object.values(LICENSED_PHOTOS)) {
+    const master = join(dir, `${photo.file}.webp`);
+    for (const width of photoWidths(photo)) {
+      const webpPath = join(dir, photoFile(photo, width, 'webp'));
+      const avifPath = join(dir, photoFile(photo, width, 'avif'));
+      if (width !== photo.width && !existsSync(webpPath)) {
+        const webp = await sharp(master).resize({ width, withoutEnlargement: true }).webp({ quality: 68, effort: 6 }).toBuffer();
+        writeFileSync(webpPath, webp);
+      }
+      if (!existsSync(avifPath)) {
+        const avif = await sharp(webpPath).avif(avifOpts).toBuffer();
+        writeFileSync(avifPath, avif);
+      }
+    }
+  }
+  const mobileWebp = join(dir, 'pistas-mobile.webp');
+  const mobileAvif = join(dir, 'pistas-mobile.avif');
+  if (!existsSync(mobileWebp)) {
+    const webp = await sharp(join(dir, 'pistas.webp')).resize(800, 300, { fit: 'cover', position: 'centre' }).webp({ quality: 64, effort: 6 }).toBuffer();
+    writeFileSync(mobileWebp, webp);
+  }
+  if (!existsSync(mobileAvif)) {
+    const avif = await sharp(mobileWebp).avif({ quality: 38, effort: 6, chromaSubsampling: '4:2:0' }).toBuffer();
+    writeFileSync(mobileAvif, avif);
+  }
+}
+
 async function build() {
   const news = readJson('news.json');
   const resultsDoc = readJson('results.json');
@@ -1428,15 +1494,19 @@ async function build() {
     process.exit(1);
   }
 
-  const today = new Date().toISOString().slice(0, 10);
+  await ensurePhotoVariants();
+
   const articles = byDateDesc(news, (article) => article.date);
   const matches = byDateDesc(resultsDoc.results, (match) => match.date);
-  const homeArticles = articles.filter((article) => onHomepage(article.date, today)).slice(0, 4);
-  const homeMatches = matches.filter((match) => onHomepage(match.date, today)).slice(0, 4);
   const contentDay = maxDay([
     ...articles.map((article) => article.updated),
     resultsDoc.updated.slice(0, 10),
   ]);
+  // Window and edition follow the newest content day, not the wall clock,
+  // so a rebuild of the same data leaves public/ unchanged.
+  const today = contentDay;
+  const homeArticles = articles.filter((article) => onHomepage(article.date, today)).slice(0, 4);
+  const homeMatches = matches.filter((match) => onHomepage(match.date, today)).slice(0, 4);
 
   mkdirSync(publicDir, { recursive: true });
   rmSync(join(publicDir, 'noticias'), { recursive: true, force: true });

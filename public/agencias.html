@@ -27,10 +27,10 @@
   <meta name="twitter:title" content="Patrocinio y publicidad en tenis para marcas y agencias | AceArena">
   <meta name="twitter:description" content="Patrocinio y publicidad en un medio de tenis en español. Precios públicos, propuesta en 48 h laborables e informe mensual con datos reales.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -79,7 +79,10 @@
         <p class="lede">Precios públicos, propuesta en 48 horas laborables e informe mensual con datos medidos. Estamos en lanzamiento: en Gold y Platinum, la primera marca de cada sector se queda la categoría.</p>
         <p>Publicamos a diario ATP y WTA, con fuente y fecha, en web, <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a> e <a href="https://www.instagram.com/acearenaes/" rel="noopener noreferrer">Instagram</a>.</p>
         <figure class="photo-figure hero-banner">
-          <img src="photos/pistas.webp?v=ac3353f147" srcset="photos/pistas-400.webp?v=b4c733d399 400w, photos/pistas-800.webp?v=4a4dd3c1dc 800w, photos/pistas.webp?v=ac3353f147 1600w" sizes="(max-width: 1120px) 100vw, 1120px" alt="Pistas de tenis vacías al aire libre, con árboles al fondo." width="1600" height="900">
+          <picture>
+            <source type="image/avif" srcset="photos/pistas-400.avif?v=8be250a471 400w, photos/pistas-640.avif?v=a919b2ea87 640w, photos/pistas-800.avif?v=92f48ed82d 800w, photos/pistas.avif?v=fc7a0ce4ce 1600w" sizes="(max-width: 1152px) calc(100vw - 2rem), 1120px">
+            <img src="photos/pistas.webp?v=ac3353f147" srcset="photos/pistas-400.webp?v=b4c733d399 400w, photos/pistas-640.webp?v=098a524197 640w, photos/pistas-800.webp?v=4a4dd3c1dc 800w, photos/pistas.webp?v=ac3353f147 1600w" sizes="(max-width: 1152px) calc(100vw - 2rem), 1120px" alt="Pistas de tenis vacías al aire libre, con árboles al fondo." width="1600" height="900" fetchpriority="high">
+          </picture>
           <figcaption>Foto: Hameltion, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_courts_at_Chapel_Hill_High_School.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
         </figure>
         <div class="hero-actions">
@@ -388,6 +391,16 @@
     <a class="btn btn-primary btn-sm" href="#paquetes">Ver condiciones</a>
   </div>
   <script src="script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

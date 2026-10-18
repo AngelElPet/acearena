@@ -25,10 +25,10 @@
   <meta name="twitter:title" content="Cómo funciona el ranking WTA | AceArena">
   <meta name="twitter:description" content="Cómo cuenta la WTA las 52 semanas, qué torneos entran en el máximo de 18 y cuándo una jugadora aparece en la lista.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Para qué sirve el ranking WTA?","acceptedAnswer":{"@type":"Answer","text":"Ordena a las jugadoras y se usa para la entrada en los cuadros y para las cabezas de serie."}},{"@type":"Question","name":"¿Cuántos torneos cuentan?","acceptedAnswer":{"@type":"Answer","text":"En individuales caben como máximo 18: 4 Grand Slams, los 6 mejores WTA 1000 combinados, el mejor no combinado y los 7 mejores siguientes. Las WTA Finals pueden ser el 19.º."}},{"@type":"Question","name":"¿Qué diferencia hay entre un WTA 1000 combinado y uno no combinado?","acceptedAnswer":{"@type":"Answer","text":"Los combinados de la cuenta son Indian Wells, Miami, Madrid, Roma, Toronto o Montreal, Cincinnati y Pekín. Los no combinados son Doha, Dubái y Wuhan."}},{"@type":"Question","name":"¿Cuándo entra una jugadora en la lista?","acceptedAnswer":{"@type":"Answer","text":"Hace falta tener puntos en al menos 3 torneos, o al menos 10 puntos de individuales en un solo torneo."}}]}
@@ -133,6 +133,16 @@
     <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

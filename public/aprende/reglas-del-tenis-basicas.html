@@ -25,10 +25,10 @@
   <meta name="twitter:title" content="Reglas del tenis básicas | AceArena">
   <meta name="twitter:description" content="Cómo se cuenta un juego, qué es la ventaja, cómo funciona el tie-break y cuántos sets dura un partido.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se puntúa un juego?","acceptedAnswer":{"@type":"Answer","text":"Se cuenta 0, 15, 30, 40 y juego. Al 0 se le llama «nada» (en inglés, love)."}},{"@type":"Question","name":"¿Qué es la ventaja?","acceptedAnswer":{"@type":"Answer","text":"A 40-40 el siguiente punto da la ventaja. Hay que ganar dos puntos seguidos para llevarse el juego."}},{"@type":"Question","name":"¿Qué es un tie-break?","acceptedAnswer":{"@type":"Answer","text":"Es el desempate a 7 puntos con diferencia de 2. Se cuenta con números."}},{"@type":"Question","name":"¿Cómo se gana un set?","acceptedAnswer":{"@type":"Answer","text":"Con 6 juegos y una diferencia de 2. Si hay tie-break, se juega al llegar a 6-6."}},{"@type":"Question","name":"¿Cuántos sets dura un partido?","acceptedAnswer":{"@type":"Answer","text":"Al mejor de 3 sets gana quien se lleva 2. Al mejor de 5 gana quien se lleva 3."}}]}
@@ -149,6 +149,16 @@
     <a class="btn btn-primary btn-sm" href="../index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="../script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>

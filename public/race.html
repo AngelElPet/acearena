@@ -25,10 +25,10 @@
   <meta name="twitter:title" content="Race a Turín | AceArena">
   <meta name="twitter:description" content="Top 10 de la PIF ATP Live Race to Turin a 18 de octubre de 2026, con la fuente de la ATP.">
   <meta name="twitter:image" content="https://acearena.io/assets/og-image.png">
-  <link rel="preconnect" href="https://cloudflareinsights.com">
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin.woff2?v=3100e775e8" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-extra.woff2?v=ffc7a232b4" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2?v=0640890476" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-extra.woff2?v=78d0649a0f" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","name":"PIF ATP Live Race to Turin","url":"https://acearena.io/race.html","inLanguage":"es","dateModified":"2026-10-18","citation":"https://www.atptour.com/en/rankings/singles-race-to-turin","isPartOf":{"@type":"WebSite","name":"AceArena","url":"https://acearena.io/"}}
@@ -187,6 +187,16 @@
     <a class="btn btn-primary btn-sm" href="index.html#newsletter">Quiero el resumen</a>
   </div>
   <script src="script.js" defer></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}'></script>
+<script>
+(function () {
+  var host = location.hostname;
+  if (host !== "acearena.io" && host !== "www.acearena.io") return;
+  var s = document.createElement("script");
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.defer = true;
+  s.setAttribute("data-cf-beacon", '{"token": "d21dd5ee912c4c80b8c8a4232ec883fc"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>
