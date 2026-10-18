@@ -1,31 +1,33 @@
-# AceArena – Plataforma Premium de Tenis
+# AceArena
 
-Web orientada a maximizar visualizaciones y captar sponsors.
+Sitio editorial de tenis en español. El dominio público es [https://acearena.io](https://acearena.io).
 
-## Despliegue rápido
-Sigue el archivo **DESPLIEGUE.md** (método recomendado: GitHub + Netlify).
+Netlify publica solo la carpeta `public/` (sin comando de build). El resto del repositorio —esta guía, el plan de lanzamiento y las plantillas de outreach— no se despliega.
 
-## Estructura principal
-- `index.html` → Home
-- `agencias.html` → Landing para agencias
-- `media-kit-acearena.pdf` → Media Kit
-- `launch/` → Plan de lanzamiento, mensajes de outreach, posts, etc.
-- `outreach/` → Plantillas adicionales
-- `DESPLIEGUE.md` → Guía completa de publicación
-- `API-INTEGRATION.md` → Cómo conectar APIs de scores
+## Qué hay en `public/`
 
-## Features actuales
-- En Directo (API SportScore)
-- Rankings ATP/WTA
-- Noticias + automatización 2×/día
-- Newsletter + Sticky CTA
-- Paquetes de sponsorship
-- Landing Agencias
-- Contenido evergreen (Guía + Glosario)
-- SEO + JSON-LD
-- Media Kit PDF
+- `index.html` — portada
+- `agencias.html` — página para agencias
+- `aviso-legal.html`, `privacidad.html`, `cookies.html`
+- `404.html` y `gracias.html`
+- `media-kit-acearena.pdf`
+- `assets/` — logotipo SVG, JPG de referencia, favicon, imagen Open Graph y fuentes
+- `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`
 
-## Comando local
+## Contacto
+
+- Sponsorship: sponsors@acearena.io
+- General: hola@acearena.io
+
+## Local
+
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8080 --directory public
 ```
+
+## Documentos internos
+
+- `DESPLIEGUE.md` — GitHub y Netlify
+- `API-INTEGRATION.md` — fuente de marcadores
+- `launch/` — plan y mensajes internos
+- `outreach/` — plantillas de email
