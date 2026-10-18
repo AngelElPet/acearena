@@ -1,6 +1,6 @@
 # AceArena
 
-Sitio editorial de tenis en español. El dominio público es [https://acearena.io](https://acearena.io).
+Sitio editorial de tenis. El dominio público es [https://acearena.io](https://acearena.io).
 
 Netlify publica solo la carpeta `public/` (sin comando de build). El resto del repositorio —esta guía, el plan de lanzamiento y las plantillas de outreach— no se despliega.
 

@@ -130,7 +130,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDo
     file: 'jugadores/index.html',
     lastmod: playersDoc.updated,
     page: {
-      title: 'Jugadores en español | AceArena',
+      title: 'Jugadores | AceArena',
       description: 'Fichas de tenistas de España y de América Latina con ranking fechado, estilo de juego y palmarés, y enlace a la ficha oficial de la ATP o la WTA.',
       canonical: `${site}/jugadores/`,
       depth: 1,
@@ -142,7 +142,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDo
         {
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          name: 'Jugadores en español',
+          name: 'Jugadores',
           url: `${site}/jugadores/`,
           inLanguage: 'es',
           isPartOf: { '@type': 'WebSite', name: 'AceArena', url: site },
@@ -153,7 +153,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDo
       <p class="news-meta"><a href="../index.html">Inicio</a> · Jugadores</p>
       <div class="section-header">
         <span class="section-tag">Rankings</span>
-        <h1>Jugadores en español</h1>
+        <h1>Jugadores</h1>
         <p>Fichas de tenistas de España y de América Latina, con su ranking y el enlace a la ficha oficial. <a href="../rankings.html">Top 20 ATP y WTA</a> · <a href="../race.html">Race a Turín</a>.</p>
       </div>
       <div class="card-grid">
@@ -215,7 +215,7 @@ ${playerCards}
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores en español</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
+      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
       <div class="player-head">
         ${avatar(player.name, esc)}
         <h1>${esc(player.name)}</h1>

@@ -158,7 +158,7 @@ function chrome(depth) {
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="${p}index.html"><img src="${p}assets/logo.svg" alt="AceArena" width="140" height="40" loading="lazy"></a>
-        <p>AceArena: tenis en español, con datos y sin ruido.</p>
+        <p>AceArena: tenis, con datos y sin ruido.</p>
       </div>
       <div class="footer-links">
         <div>
@@ -167,7 +167,7 @@ function chrome(depth) {
           <a href="${p}semana.html">Esta semana</a>
           <a href="${p}noticias/index.html">Noticias</a>
           <a href="${p}rankings.html">Rankings</a>
-          <a href="${p}jugadores/index.html">Jugadores en español</a>
+          <a href="${p}jugadores/index.html">Jugadores</a>
           <a href="${p}race.html">Race a Turín</a>
           <a href="${p}resultados.html">Resultados</a>
           <a href="${p}calendario-2027.html">Calendario</a>
@@ -999,7 +999,7 @@ ${rows}
           </tbody>
         </table>
       </div>
-      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas está en <a href="rankings.html">Rankings</a>. <a href="jugadores/index.html">Jugadores en español</a>.</p>
+      <p class="as-of">Contexto: ${sourceLinks(race.contextSources)}. El ranking de 52 semanas está en <a href="rankings.html">Rankings</a>. <a href="jugadores/index.html">Jugadores</a>.</p>
     </div>
   </main>`;
   return page({
@@ -1049,9 +1049,9 @@ function aboutPage() {
     <article class="container article-wrap">
       <p class="news-meta"><a href="index.html">Inicio</a> · Sobre AceArena</p>
       <h1>Sobre AceArena</h1>
-      <p class="article-summary">Medio digital de tenis en español. Cada resultado lleva su fuente y cada ranking su fecha.</p>
+      <p class="article-summary">Medio digital de tenis. Cada resultado lleva su fuente y cada ranking su fecha.</p>
       <h2>Quiénes somos</h2>
-      <p>AceArena es un medio digital independiente de tenis en español, nacido en 2026. Cubrimos el circuito ATP y el WTA para quien sigue cada punto y para quien acaba de descubrir este deporte.</p>
+      <p>AceArena es un medio digital independiente de tenis, nacido en 2026. Cubrimos el circuito ATP y el WTA para quien sigue cada punto y para quien acaba de descubrir este deporte.</p>
       <h2>Quién está detrás</h2>
       <p>Lo fundó Angel Cebria Morales. El aviso legal publica el titular, el NIF y el domicilio.</p>
       <h2>Cómo trabajamos</h2>
@@ -1116,7 +1116,7 @@ function llmsTxt(articles, resultsUpdated, playersDoc, guidesDoc, week, race, ra
   const guideLines = guidesDoc.guides.map((guide) => `- [${guide.title}](${SITE}/aprende/${guide.slug}.html): ${guide.description}`);
   return `# AceArena
 
-> Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
+> Medio digital de tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. ${SITE}
 > Ficha larga: ${SITE}/llms-full.txt
 
 ## Noticias
@@ -1147,7 +1147,7 @@ ${lines.join('\n')}
 
 ## Jugadores
 
-- [Jugadores en español](${SITE}/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
+- [Jugadores](${SITE}/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
 ${playerLines.join('\n')}
 
 ## Calendario
@@ -1210,7 +1210,7 @@ function rankingsPage(rankings, playersDoc) {
       <div class="section-header">
         <span class="section-tag">Rankings</span>
         <h1>Rankings ATP y WTA</h1>
-        <p>Top 20 del ranking oficial a ${esc(longDay(rankings.asOf))}. <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores en español</a>.</p>
+        <p>Top 20 del ranking oficial a ${esc(longDay(rankings.asOf))}. <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores</a>.</p>
       </div>
       <h2>${esc(rankings.atp.name)}</h2>
       <p>Fuente: <a href="${esc(rankings.atp.source.url)}" target="_blank" rel="noopener noreferrer">${esc(rankings.atp.source.name)}</a>.</p>
@@ -1324,7 +1324,7 @@ Patrocinio: sponsors@acearena.io
 
 ## Qué es
 
-AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
+AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
 
 ## Secciones
 
@@ -1334,7 +1334,7 @@ AceArena es un medio digital de tenis en español. Cubre el circuito ATP y el WT
 - Esta semana: ${SITE}/semana.html
 - Race a Turín: ${SITE}/race.html
 - Rankings ATP y WTA: ${SITE}/rankings.html
-- Jugadores en español: ${SITE}/jugadores/
+- Jugadores: ${SITE}/jugadores/
 - Calendario 2027: ${SITE}/calendario-2027.html
 - Aprende tenis: ${SITE}/aprende/
 - Sobre AceArena: ${SITE}/sobre.html
@@ -1557,7 +1557,7 @@ async function build() {
       `NIF: ${ownerNif}.`,
       `Domicilio: ${ownerAddress}.`,
       `Contacto: ${ownerEmail}.`,
-      'AceArena es un medio digital de tenis en español. Las noticias y los resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, con sus propias condiciones.',
+      'AceArena es un medio digital de tenis. Las noticias y los resultados se publican con la fuente de cada dato. Los enlaces externos llevan a sitios de terceros, con sus propias condiciones.',
       'Los marcadores en vivo proceden de SportScore y los rankings de las fuentes oficiales indicadas en cada tabla. Hacemos lo posible por mantenerlos exactos; ante cualquier discrepancia prevalece la fuente oficial.',
       {
         html: 'El diseño, el código y los textos propios de AceArena pertenecen a su titular. Las fotografías de terceros se usan con la licencia indicada en <a href="creditos.html">Créditos</a>. Las marcas de jugadores, torneos y anunciantes mencionadas pertenecen a sus dueños.',

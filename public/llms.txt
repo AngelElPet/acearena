@@ -1,6 +1,6 @@
 # AceArena
 
-> Medio digital en español sobre tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. https://acearena.io
+> Medio digital de tenis profesional (ATP y WTA). Cada noticia lleva fecha, autor y fuente; los rankings indican la fecha oficial. https://acearena.io
 > Ficha larga: https://acearena.io/llms-full.txt
 
 ## Noticias
@@ -37,7 +37,7 @@
 
 ## Jugadores
 
-- [Jugadores en español](https://acearena.io/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
+- [Jugadores](https://acearena.io/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
 - [Carlos Alcaraz](https://acearena.io/jugadores/carlos-alcaraz.html): ATP, número 3 actualizado a 2026-10-12.
 - [Rafael Jódar](https://acearena.io/jugadores/rafael-jodar.html): ATP, número 13 actualizado a 2026-10-12.
 - [Alejandro Davidovich Fokina](https://acearena.io/jugadores/alejandro-davidovich-fokina.html): ATP, número 26 actualizado a 2026-10-12.
