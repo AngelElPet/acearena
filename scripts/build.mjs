@@ -28,7 +28,6 @@ input,select,textarea{font-size:16px}
 .hero-banner img{display:block;width:100%;height:clamp(11rem,28vw,18rem);object-fit:cover;object-position:center}
 .page-section>.hero-banner{margin:-2rem 0 1.4rem}
 @media (max-width:800px){
-  html{font-size:16px}
   .hero-layout,.fact-row,.diagram-grid,.mock-grid,.result-row{grid-template-columns:1fr}
 }
 </style>`;
@@ -1081,7 +1080,9 @@ ${playerLines.join('\n')}
 
 ## Calendario
 
-- [Calendario 2027](${SITE}/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada. Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+- [Calendario 2027](${SITE}/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada.
+- Davis Cup Final 8, Bolonia, 24–29 de noviembre de 2026.
+- Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero.
 
 ## Aprende tenis
 
@@ -1283,11 +1284,14 @@ Bronze desde 4.500 €/trimestre. Silver desde 12.000 €/trimestre. Gold desde 
 
 ## Calendario de referencia
 
-Davis Cup Final 8: Bolonia, 24–29 de noviembre de 2026. Australian Open 2027: Melbourne Park, 11–31 de enero; cuadro principal, 17–31 de enero.
+- Davis Cup Final 8, Bolonia, 24–29 de noviembre de 2026.
+- Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero.
 
 ## Esta semana
 
 ${week.range}. ${week.hoursNote}
+
+${[...week.tournaments, ...week.later].map((event) => `- ${event.name}, ${event.place}, ${event.dates}`).join('\n')}
 
 ## Rankings citados
 

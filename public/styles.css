@@ -679,7 +679,6 @@ ul.sheet li:not(:last-child)::after { content: " ·\00a0"; }
   .nav a { padding: 0.75rem 0.2rem; min-height: 44px; }
 }
 @media (max-width: 800px) {
-  html { font-size: 16px; }
   .hero { padding-top: 2.4rem; }
   .fact-row, .hero-layout, .diagram-grid, .mock-grid { grid-template-columns: 1fr; }
   .package-grid, .footer-links { grid-template-columns: 1fr; }

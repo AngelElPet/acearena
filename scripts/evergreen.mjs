@@ -278,8 +278,14 @@ ${guideCards}
         </figure>
       </div>
 ` : '';
-    const sections = guide.sections.map((section) => `      <h2>${esc(section.heading)}</h2>
-${paragraphs(section.paragraphs, esc)}`).join('\n');
+    const sections = Array.isArray(guide.sections)
+      ? guide.sections.map((section) => `      <h2>${esc(section.heading)}</h2>
+${paragraphs(section.paragraphs, esc)}`).join('\n')
+      : '';
+    const eventItems = Array.isArray(guide.events)
+      ? guide.events.map((event) => `        <li>${esc(event.name)}, ${esc(event.place)}, ${esc(event.dates)}${event.detail ? `. ${esc(event.detail)}` : ''}</li>`).join('\n')
+      : '';
+    const eventList = eventItems ? `      <ul class="event-list">\n${eventItems}\n      </ul>\n` : '';
     const terms = Array.isArray(guide.terms) ? `      <div class="faq-list">
 ${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.name)}</h2><p>${esc(term.description)}</p></article>`).join('\n')}
       </div>
@@ -330,7 +336,7 @@ ${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.na
       <p class="kicker">${esc(guide.kicker)}</p>
       <h1>${esc(guide.title)}</h1>
       <p class="article-summary">${esc(guide.intro)}</p>
-${diagrams}${terms}${sections}
+${diagrams}${terms}${eventList}${sections}
       <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
 ${faqs}
