@@ -2,16 +2,18 @@
   "updated": "2026-10-18",
   "items": [
     {
-      "id": "pistas",
+      "id": "pista-tierra",
       "kind": "photo",
-      "title": "Pistas de tenis vacías al aire libre",
-      "src": "/photos/pistas.webp",
-      "author": "Hameltion",
+      "title": "Pista de tierra vacía en Melbourne",
+      "src": "/photos/pista-tierra.webp",
+      "author": "KeepActive Australia",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "sourceName": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennis_courts_at_Chapel_Hill_High_School.jpg",
-      "pages": ["Portada", "Anúnciate", "Sinner cierra la temporada", "Aprende tenis"]
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Empty_clay_tennis_court_in_Melbourne_Australia_looking_down_the_middle.jpg",
+      "pages": [
+        "Portada"
+      ]
     },
     {
       "id": "pista-silla",
@@ -23,31 +25,59 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg",
-      "pages": ["Zverev, número 1 de final de año"]
+      "pages": [
+        "Anúnciate"
+      ]
+    },
+    {
+      "id": "raquetas",
+      "kind": "photo",
+      "title": "Raquetas y pelotas sobre tierra batida",
+      "src": "/photos/raquetas.webp",
+      "author": "KeepActive Australia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennis_Racquets_and_Balls_on_a_Clay_Court.jpg",
+      "pages": [
+        "Rybakina, número 1 de la WTA"
+      ]
     },
     {
       "id": "pelota",
       "kind": "photo",
-      "title": "Fieltro de una pelota de tenis",
+      "title": "Pelota de tenis",
       "src": "/photos/pelota.webp",
-      "author": "Horia Varlan",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "author": "Christian VisualBeo Horvat",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
       "sourceName": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennis_Ball_Felt_Zoom-In_View.jpg",
-      "pages": ["Qué ver esta semana", "Jódar en la Race", "Rybakina, número 1 de la WTA", "Créditos"]
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennisball.jpg",
+      "pages": [
+        "Sinner cierra la temporada",
+        "Créditos"
+      ]
     },
     {
       "id": "diagramas",
       "kind": "illustration",
-      "title": "Iconos de superficie, pista, marcador y escalones",
+      "title": "Iconos de superficie, pista y marcador",
       "src": "/assets/diagrams/court.svg",
       "author": "AceArena",
       "license": "Ilustración propia",
       "licenseUrl": "",
       "sourceName": "AceArena",
       "sourceUrl": "https://acearena.io/",
-      "pages": ["Reglas", "Semana", "Calendario", "Fichas", "Cómo se llega al circuito"]
+      "pages": [
+        "Reglas",
+        "Semana",
+        "Calendario",
+        "Fichas",
+        "Cómo se llega al circuito",
+        "Jódar en la Race",
+        "Zverev, número 1 de final de año",
+        "Aprende tenis"
+      ]
     },
     {
       "id": "avatares",
@@ -59,7 +89,9 @@
       "licenseUrl": "",
       "sourceName": "AceArena",
       "sourceUrl": "https://acearena.io/jugadores/",
-      "pages": ["Jugadores"]
+      "pages": [
+        "Jugadores"
+      ]
     },
     {
       "id": "cabeceras",
@@ -71,7 +103,9 @@
       "licenseUrl": "",
       "sourceName": "AceArena",
       "sourceUrl": "https://acearena.io/noticias/",
-      "pages": ["Noticias"]
+      "pages": [
+        "Noticias"
+      ]
     },
     {
       "id": "qizhong-stadium",
@@ -83,7 +117,9 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qizhong_Stadium.jpg",
-      "pages": ["Fondo de la tarjeta social de Shanghái, recortado y oscurecido"]
+      "pages": [
+        "Fondo de la tarjeta social de Shanghái, recortado y oscurecido"
+      ]
     },
     {
       "id": "wuhan-cns",
@@ -95,7 +131,9 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%91%E9%92%A6%E6%96%87%E6%99%8B%E7%BA%A7%E6%AD%A6%E7%BD%91%E5%85%AB%E5%BC%BA%EF%BC%9A%E9%80%86%E8%BD%AC%E8%8E%B7%E8%83%9C%E7%A6%BB%E4%B8%8D%E5%BC%80%E7%8E%B0%E5%9C%BA%E8%A7%82%E4%BC%97%E7%9A%84%E7%83%AD%E6%83%85%E6%94%AF%E6%8C%81.webm",
-      "pages": ["Fondo de la tarjeta social de Wuhan, recortado y oscurecido"]
+      "pages": [
+        "Fondo de la tarjeta social de Wuhan, recortado y oscurecido"
+      ]
     }
   ]
 }

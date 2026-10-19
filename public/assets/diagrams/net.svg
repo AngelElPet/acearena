@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="netTitle netDesc">
+  <title id="netTitle">Red de tenis</title>
+  <desc id="netDesc">Ilustración de una red entre dos postes, sin marcas comerciales.</desc>
+  <rect width="960" height="420" fill="#101610"/>
+  <rect x="0" y="300" width="960" height="120" fill="#1a2418"/>
+  <path d="M80 300 H880" stroke="#c6ff00" stroke-opacity="0.35" stroke-width="3"/>
+  <rect x="118" y="86" width="16" height="230" rx="3" fill="#d7dece"/>
+  <rect x="826" y="86" width="16" height="230" rx="3" fill="#d7dece"/>
+  <rect x="118" y="78" width="724" height="14" rx="3" fill="#f4f7fb"/>
+  <g stroke="#c9d2dc" stroke-opacity="0.55" stroke-width="1.4">
+    <path d="M134 92 V300 M190 92 V300 M246 92 V300 M302 92 V300 M358 92 V300 M414 92 V300 M470 92 V300 M526 92 V300 M582 92 V300 M638 92 V300 M694 92 V300 M750 92 V300 M806 92 V300"/>
+    <path d="M134 120 H826 M134 156 H826 M134 192 H826 M134 228 H826 M134 264 H826"/>
+  </g>
+  <path d="M134 92 Q480 150 826 92" fill="none" stroke="#c6ff00" stroke-width="3"/>
+</svg>

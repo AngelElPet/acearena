@@ -1,25 +1,67 @@
 {
   "updated": "2026-10-18",
   "range": "19–25 de octubre de 2026",
-  "hoursNote": "Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.",
+  "hoursNote": "Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega.",
   "hero": [
-    { "text": "Esta semana: " },
-    { "text": "Almaty", "href": "https://www.atptour.com/en/tournaments/almaty/9410/overview" },
-    { "text": ", " },
-    { "text": "Bruselas", "href": "https://www.atptour.com/en/tournaments/brussels/7485/overview" },
-    { "text": " y " },
-    { "text": "Lyon", "href": "https://www.atptour.com/en/tournaments/lyon/496/overview" },
-    { "text": " (ATP 250), y " },
-    { "text": "Ningbo", "href": "https://www.wtatennis.com/tournaments/2092/ningbo/2026" },
-    { "text": " y " },
-    { "text": "Osaka", "href": "https://www.wtatennis.com/tournaments/405/osaka/2026" },
-    { "text": " (WTA), del 19 al 25 de octubre. Después, " },
-    { "text": "Basilea", "href": "https://www.atptour.com/en/tournaments/-/328/overview" },
-    { "text": " y " },
-    { "text": "Viena", "href": "https://www.atptour.com/en/tournaments/viena/337/overview" },
-    { "text": " (ATP 500), del 26 de octubre al 1 de noviembre, y el " },
-    { "text": "Rolex Paris Masters", "href": "https://www.atptour.com/en/tournaments/-/352/overview" },
-    { "text": ", del 2 al 8 de noviembre." }
+    {
+      "text": "Esta semana: "
+    },
+    {
+      "text": "Almaty",
+      "href": "https://www.atptour.com/en/tournaments/almaty/9410/overview"
+    },
+    {
+      "text": ", "
+    },
+    {
+      "text": "Bruselas",
+      "href": "https://www.atptour.com/en/tournaments/brussels/7485/overview"
+    },
+    {
+      "text": " y "
+    },
+    {
+      "text": "Lyon",
+      "href": "https://www.atptour.com/en/tournaments/lyon/496/overview"
+    },
+    {
+      "text": " (ATP 250), y "
+    },
+    {
+      "text": "Ningbo",
+      "href": "https://www.wtatennis.com/tournaments/2092/ningbo/2026"
+    },
+    {
+      "text": " y "
+    },
+    {
+      "text": "Osaka",
+      "href": "https://www.wtatennis.com/tournaments/405/osaka/2026"
+    },
+    {
+      "text": " (WTA), del 19 al 25 de octubre. Después, "
+    },
+    {
+      "text": "Basilea",
+      "href": "https://www.atptour.com/en/tournaments/-/328/overview"
+    },
+    {
+      "text": " y "
+    },
+    {
+      "text": "Viena",
+      "href": "https://www.atptour.com/en/tournaments/viena/337/overview"
+    },
+    {
+      "text": " (ATP 500), del 26 de octubre al 1 de noviembre, y el "
+    },
+    {
+      "text": "Rolex Paris Masters",
+      "href": "https://www.atptour.com/en/tournaments/-/352/overview"
+    },
+    {
+      "text": ", del 2 al 8 de noviembre."
+    }
   ],
   "today": {
     "resultTitle": "Chwalińska gana el Wuhan Open",
@@ -42,8 +84,14 @@
       "detail": "ATP 250 bajo techo.",
       "entries": "",
       "sources": [
-        { "name": "ATP, ficha del Almaty Open", "url": "https://www.atptour.com/en/tournaments/almaty/9410/overview" },
-        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+        {
+          "name": "ATP, ficha del Almaty Open",
+          "url": "https://www.atptour.com/en/tournaments/almaty/9410/overview"
+        },
+        {
+          "name": "ATP, calendario 2026",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        }
       ]
     },
     {
@@ -59,9 +107,18 @@
       "watch": "Alejandro Davidovich Fokina, campeón en Shanghái, y Francisco Cerúndolo.",
       "entries": "",
       "sources": [
-        { "name": "ATP, previa del European Open 2026", "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule" },
-        { "name": "ATP, ficha de Bruselas", "url": "https://www.atptour.com/en/tournaments/brussels/7485/overview" },
-        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+        {
+          "name": "ATP, previa del European Open 2026",
+          "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
+        },
+        {
+          "name": "ATP, ficha de Bruselas",
+          "url": "https://www.atptour.com/en/tournaments/brussels/7485/overview"
+        },
+        {
+          "name": "ATP, calendario 2026",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        }
       ]
     },
     {
@@ -77,9 +134,18 @@
       "watch": "Taylor Fritz, Flavio Cobolli, Tommy Paul, Ugo Humbert y Stan Wawrinka.",
       "entries": "",
       "sources": [
-        { "name": "ATP, previa de Lyon 2026", "url": "https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule" },
-        { "name": "ATP, ficha de Lyon", "url": "https://www.atptour.com/en/tournaments/lyon/496/overview" },
-        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+        {
+          "name": "ATP, previa de Lyon 2026",
+          "url": "https://www.atptour.com/en/news/lyon-atp-250-2026-history-draw-schedule"
+        },
+        {
+          "name": "ATP, ficha de Lyon",
+          "url": "https://www.atptour.com/en/tournaments/lyon/496/overview"
+        },
+        {
+          "name": "ATP, calendario 2026",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        }
       ]
     },
     {
@@ -94,8 +160,14 @@
       "detail": "WTA 500 en pista dura al aire libre, en el Ningbo Tennis Center.",
       "entries": "",
       "sources": [
-        { "name": "WTA, ficha del Ningbo Open 2026", "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026" },
-        { "name": "WTA, calendario 2026 a 2 de octubre", "url": "https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" }
+        {
+          "name": "WTA, ficha del Ningbo Open 2026",
+          "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026"
+        },
+        {
+          "name": "WTA, calendario 2026 a 2 de octubre",
+          "url": "https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf"
+        }
       ]
     },
     {
@@ -110,8 +182,14 @@
       "detail": "WTA 250 en pista dura al aire libre, en el Utsubo Tennis Center.",
       "entries": "",
       "sources": [
-        { "name": "WTA, ficha del Japan Open 2026", "url": "https://www.wtatennis.com/tournaments/405/osaka/2026" },
-        { "name": "WTA, calendario 2026 a 2 de octubre", "url": "https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf" }
+        {
+          "name": "WTA, ficha del Japan Open 2026",
+          "url": "https://www.wtatennis.com/tournaments/405/osaka/2026"
+        },
+        {
+          "name": "WTA, calendario 2026 a 2 de octubre",
+          "url": "https://wtafiles.wtatennis.com/pdf/calendar/calendar.pdf"
+        }
       ]
     }
   ],
@@ -128,8 +206,14 @@
       "detail": "ATP 500 bajo techo.",
       "entries": "",
       "sources": [
-        { "name": "ATP, ficha de Basilea", "url": "https://www.atptour.com/en/tournaments/-/328/overview" },
-        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+        {
+          "name": "ATP, ficha de Basilea",
+          "url": "https://www.atptour.com/en/tournaments/-/328/overview"
+        },
+        {
+          "name": "ATP, calendario 2026",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        }
       ]
     },
     {
@@ -144,8 +228,14 @@
       "detail": "ATP 500 bajo techo.",
       "entries": "",
       "sources": [
-        { "name": "ATP, ficha de Viena", "url": "https://www.atptour.com/en/tournaments/viena/337/overview" },
-        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+        {
+          "name": "ATP, ficha de Viena",
+          "url": "https://www.atptour.com/en/tournaments/viena/337/overview"
+        },
+        {
+          "name": "ATP, calendario 2026",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        }
       ]
     },
     {
@@ -160,8 +250,14 @@
       "detail": "ATP Masters 1000 bajo techo. El último 1000 del año.",
       "entries": "",
       "sources": [
-        { "name": "ATP, ficha del Rolex Paris Masters", "url": "https://www.atptour.com/en/tournaments/-/352/overview" },
-        { "name": "ATP, calendario 2026", "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf" }
+        {
+          "name": "ATP, ficha del Rolex Paris Masters",
+          "url": "https://www.atptour.com/en/tournaments/-/352/overview"
+        },
+        {
+          "name": "ATP, calendario 2026",
+          "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        }
       ]
     }
   ],

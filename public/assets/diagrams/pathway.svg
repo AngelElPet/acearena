@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" width="880" height="220" role="img" aria-labelledby="pathwayTitle pathwayDesc">
+  <title id="pathwayTitle">Del júnior al circuito</title>
+  <desc id="pathwayDesc">Cuatro pasos: ITF júnior, ITF World Tennis Tour, Challenger o WTA 125, y el circuito ATP o WTA.</desc>
+  <rect width="880" height="220" rx="16" fill="#101610"/>
+  <g fill="none" stroke="#c6ff00" stroke-width="3" stroke-linecap="round">
+    <path d="M190 110 H250" opacity="0.7"/>
+    <path d="M410 110 H470" opacity="0.7"/>
+    <path d="M630 110 H690" opacity="0.7"/>
+  </g>
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="24" y="36" width="168" height="148" rx="14" fill="#182018" stroke="#c6ff00" stroke-opacity="0.45"/>
+      <text x="108" y="78" fill="#c6ff00" font-size="13" font-weight="700">1</text>
+      <text x="108" y="108" fill="#f4f7fb" font-size="15" font-weight="700">ITF júnior</text>
+      <text x="108" y="132" fill="#c9d2dc" font-size="12">World Tennis</text>
+      <text x="108" y="150" fill="#c9d2dc" font-size="12">Tour Juniors</text>
+    </g>
+    <g>
+      <rect x="252" y="36" width="168" height="148" rx="14" fill="#182018" stroke="#c6ff00" stroke-opacity="0.45"/>
+      <text x="336" y="78" fill="#c6ff00" font-size="13" font-weight="700">2</text>
+      <text x="336" y="108" fill="#f4f7fb" font-size="15" font-weight="700">ITF</text>
+      <text x="336" y="132" fill="#c9d2dc" font-size="12">World Tennis</text>
+      <text x="336" y="150" fill="#c9d2dc" font-size="12">Tour</text>
+    </g>
+    <g>
+      <rect x="472" y="36" width="168" height="148" rx="14" fill="#182018" stroke="#c6ff00" stroke-opacity="0.45"/>
+      <text x="556" y="78" fill="#c6ff00" font-size="13" font-weight="700">3</text>
+      <text x="556" y="108" fill="#f4f7fb" font-size="15" font-weight="700">Challenger</text>
+      <text x="556" y="132" fill="#c9d2dc" font-size="12">y WTA 125</text>
+    </g>
+    <g>
+      <rect x="692" y="36" width="164" height="148" rx="14" fill="#182018" stroke="#c6ff00"/>
+      <text x="774" y="78" fill="#c6ff00" font-size="13" font-weight="700">4</text>
+      <text x="774" y="108" fill="#f4f7fb" font-size="15" font-weight="700">ATP / WTA</text>
+      <text x="774" y="132" fill="#c9d2dc" font-size="12">250, 500,</text>
+      <text x="774" y="150" fill="#c9d2dc" font-size="12">1000 y Slams</text>
+    </g>
+  </g>
+</svg>

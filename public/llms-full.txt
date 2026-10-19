@@ -8,7 +8,7 @@ Patrocinio: sponsors@acearena.io
 
 ## Qué es
 
-AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
+AceArena es un medio digital de tenis profesional. Cubre el circuito ATP y el WTA: noticias, resultados con fuente, rankings con fecha y guías para seguir el deporte.
 
 ## Secciones
 
@@ -41,7 +41,7 @@ Bronze desde 4.500 €/trimestre. Silver desde 12.000 €/trimestre. Gold desde 
 
 ## Esta semana
 
-19–25 de octubre de 2026. Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.
+19–25 de octubre de 2026. Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega.
 
 - Almaty Open, Almaty, Kazajistán, 19–25 de octubre de 2026
 - BNP Paribas Fortis European Open, Bruselas, Bélgica, 19–25 de octubre de 2026
