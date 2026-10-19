@@ -22,55 +22,15 @@
     }
   ],
   "rows": [
-    {
-      "position": "1",
-      "player": "Alexander Zverev",
-      "points": "9.150"
-    },
-    {
-      "position": "2",
-      "player": "Jannik Sinner",
-      "points": "7.950"
-    },
-    {
-      "position": "3",
-      "player": "Carlos Alcaraz",
-      "points": "4.600"
-    },
-    {
-      "position": "4",
-      "player": "Ben Shelton",
-      "points": "4.480"
-    },
-    {
-      "position": "5",
-      "player": "Flavio Cobolli",
-      "points": "3.540"
-    },
-    {
-      "position": "6",
-      "player": "Daniil Medvedev",
-      "points": "3.420"
-    },
-    {
-      "position": "7",
-      "player": "Frances Tiafoe",
-      "points": "3.380"
-    },
-    {
-      "position": "8",
-      "player": "Arthur Fils",
-      "points": "3.325"
-    },
-    {
-      "position": "9",
-      "player": "Rafael Jódar",
-      "points": "3.159"
-    },
-    {
-      "position": "10",
-      "player": "Alex de Minaur",
-      "points": "2.880"
-    }
+    { "position": "1", "player": "Alexander Zverev", "points": "9.150" },
+    { "position": "2", "player": "Jannik Sinner", "points": "7.950" },
+    { "position": "3", "player": "Carlos Alcaraz", "points": "4.600" },
+    { "position": "4", "player": "Ben Shelton", "points": "4.480" },
+    { "position": "5", "player": "Flavio Cobolli", "points": "3.540" },
+    { "position": "6", "player": "Daniil Medvedev", "points": "3.420" },
+    { "position": "7", "player": "Frances Tiafoe", "points": "3.380" },
+    { "position": "8", "player": "Arthur Fils", "points": "3.325" },
+    { "position": "9", "player": "Rafael Jódar", "points": "3.159" },
+    { "position": "10", "player": "Alex de Minaur", "points": "2.880" }
   ]
 }
