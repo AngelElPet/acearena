@@ -1,6 +1,60 @@
 {
-  "updated": "2026-10-18T16:33:38.000Z",
+  "updated": "2026-10-20T07:03:45.000Z",
   "results": [
+    {
+      "tournament": "Almaty Open",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Nikoloz Basilashvili",
+      "loser": "Marin Cilic",
+      "score": "6-2 7-5",
+      "source": "https://www.atptour.com/en/scores/current/almaty/9410/results"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Primera ronda",
+      "date": "2026-10-19",
+      "winner": "Jaume Munar",
+      "loser": "Federico Cina",
+      "score": "6-4 6-3",
+      "source": "https://www.atptour.com/es/news/bruselas-2026-primera-ronda-munar-cina"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Primera ronda",
+      "date": "2026-10-19",
+      "winner": "Alex Michelsen",
+      "loser": "Andrea Guerrieri",
+      "score": "6-1 6-2",
+      "source": "https://www.atptour.com/en/scores/current/brussels/7485/results"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Primera ronda",
+      "date": "2026-10-19",
+      "winner": "Moise Kouame",
+      "loser": "Lorenzo Sonego",
+      "score": "7-6(2) 6-4",
+      "source": "https://www.atptour.com/en/scores/current/lyon/496/results"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Primera ronda",
+      "date": "2026-10-19",
+      "winner": "Felix Balshaw",
+      "loser": "Jaime Faria",
+      "score": "6-2 4-6 6-3",
+      "source": "https://www.atptour.com/en/scores/current/lyon/496/results"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Primera ronda",
+      "date": "2026-10-19",
+      "winner": "Alexandra Eala",
+      "loser": "Diane Parry",
+      "score": "6-3 6-1",
+      "source": "https://www.wtatennis.com/tournaments/2092/ningbo/2026/scores"
+    },
     {
       "tournament": "Dongfeng Voyah Wuhan Open",
       "round": "Final",
