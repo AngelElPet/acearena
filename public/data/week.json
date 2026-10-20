@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-20",
   "range": "19–25 de octubre de 2026",
   "hoursNote": "Torneos ATP y WTA del 19 al 25 de octubre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.",
   "hero": [
@@ -22,9 +22,9 @@
     { "text": ", del 2 al 8 de noviembre." }
   ],
   "today": {
-    "resultTitle": "Chwalińska gana el Wuhan Open",
-    "resultText": "Remontó a Sonay Kartal por 2-6, 6-4 y 6-2. Es su primer título en el circuito WTA.",
-    "resultHref": "noticias/final-de-wuhan-chwalinska-y-kartal.html",
+    "resultTitle": "Tres españoles en el top 15 ATP",
+    "resultText": "Alcaraz es 3º (5.610), Jódar 11º (3.234) y Davidovich Fokina 13º (2.880) en la lista del 19 de octubre.",
+    "resultHref": "noticias/tres-espanoles-en-el-top-15-del-ranking-atp.html",
     "nextTitle": "Próxima cita",
     "nextText": "Del 19 al 25 de octubre: Almaty, Bruselas y Lyon en la ATP, y Ningbo y Osaka en la WTA.",
     "nextHref": "semana.html"
