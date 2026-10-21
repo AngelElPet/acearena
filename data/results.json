@@ -1,6 +1,60 @@
 {
-  "updated": "2026-10-20T07:03:45.000Z",
+  "updated": "2026-10-21T06:59:46.000Z",
   "results": [
+    {
+      "tournament": "Kinoshita Group Japan Open",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Antonia Ružić",
+      "loser": "Paula Badosa",
+      "score": "3-6 6-4 6-3",
+      "source": "https://www.wtaschedule.com/matches/MTg1NTc4/antonia-ruzic-vs-paula-badosa"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Polina Kudermetova",
+      "loser": "Cristina Bucșa",
+      "score": "7-6(5) 6-2",
+      "source": "https://www.tennis.com/tournaments/ningbo-open/matches/c-bucsa-vs-p-kudermetova-2026-10-20"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Belinda Bencic",
+      "loser": "Jelena Ostapenko",
+      "score": "6-3 1-1 ret.",
+      "source": "https://tennis-db.com/wta/matches"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Stefanos Tsitsipas",
+      "loser": "Aleksandar Kovacevic",
+      "score": "7-6(9) 3-6 6-3",
+      "source": "https://www.atpschedule.com/results/2026-10-20"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Karen Khachanov",
+      "loser": "Rei Sakamoto",
+      "score": "6-2 6-4",
+      "source": "https://www.atpschedule.com/results/2026-10-20"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Primera ronda",
+      "date": "2026-10-20",
+      "winner": "Brandon Nakashima",
+      "loser": "Hamad Medjedovic",
+      "score": "7-6(4) 6-7(4) 6-2",
+      "source": "https://www.tennisexplorer.com/matches/?day=20&month=10&type=atp-single&year=2026"
+    },
     {
       "tournament": "Almaty Open",
       "round": "Primera ronda",

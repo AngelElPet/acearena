@@ -5,6 +5,8 @@
 
 ## Noticias
 
+- [Munar se retira de Bruselas por la espalda](https://acearena.io/noticias/munar-se-retira-de-bruselas-por-la-espalda.html): Jaume Munar fue baja el 20 de octubre, antes de la segunda ronda del ATP 250 de Bruselas ante Arthur Fils, por problemas de espalda. Fils pasa a cuartos por walkover, la décima vez que llega a esa ronda esta temporada.
+- [Badosa cae en Osaka en su estreno sin Pol Toledo](https://acearena.io/noticias/badosa-cae-en-osaka-en-su-estreno-sin-pol-toledo.html): Paula Badosa, número 61, perdió el 20 de octubre en la primera ronda del WTA 250 de Osaka ante Antonia Ružić, número 91, por 3-6, 6-4 y 6-3. Fue su primer partido tras separarse de Pol Toledo.
 - [Tres españoles en el top 15 del ranking ATP](https://acearena.io/noticias/tres-espanoles-en-el-top-15-del-ranking-atp.html): El ranking ATP del 19 de octubre de 2026 deja a Alcaraz 3º (5.610), a Jódar 11º (3.234) y a Davidovich Fokina 13º (2.880). Es el mejor puesto de Jódar y de Davidovich.
 - [Chwalińska, 11ª de la WTA; Kartal vuelve al top 50](https://acearena.io/noticias/chwalinska-11-del-ranking-wta-kartal-vuelve-al-top-50.html): La lista WTA del 19 de octubre de 2026 sube a Maja Chwalińska del 22 al 11, con 3.031 puntos, y a Sonay Kartal del 170 al 49. Ann Li alcanza el 25, su mejor puesto.
 - [Davidovich remonta a Jódar y se corona en Shanghái](https://acearena.io/noticias/davidovich-fokina-gana-el-masters-de-shanghai.html): Final española de Masters 1000: Jódar ganó el primer set 6-1 y Alejandro Davidovich Fokina cerró por 7-6(5) y 6-4. Es su primer título de ese nivel.
@@ -17,7 +19,7 @@
 
 ## Resultados
 
-- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 20 oct 2026, 07:03 UTC.
+- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 21 oct 2026, 06:59 UTC.
 - Datos de noticias: https://acearena.io/data/news.json
 - Datos de resultados: https://acearena.io/data/results.json
 
