@@ -1,6 +1,231 @@
 {
-  "updated": "2026-10-21T06:59:46.000Z",
+  "updated": "2026-10-22T07:10:07.000Z",
   "results": [
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Primera ronda",
+      "date": "2026-10-21",
+      "winner": "Stan Wawrinka",
+      "loser": "Martín Landaluce",
+      "score": "6-3 6-7(2) 7-6(5)",
+      "source": "https://www.flashscore.es/noticias/tenis-en-directo-lyon-martin-landaluce-debuta-stan-wawrinka/S8ZS4iDa/"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Primera ronda de dobles",
+      "date": "2026-10-21",
+      "winner": "Cristina Bucsa / Nicole Melichar-Martinez",
+      "loser": "Sara Errani / Jasmine Paolini",
+      "score": "7-5 6-3",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Ekaterina Alexandrova",
+      "loser": "Marta Kostyuk",
+      "score": "6-4 ret.",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Francisco Cerúndolo",
+      "loser": "Martin Damm",
+      "score": "6-4 7-6(4)",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Primera ronda",
+      "date": "2026-10-21",
+      "winner": "Mattia Bellucci",
+      "loser": "Tomás Martín Etcheverry",
+      "score": "7-6(5) 2-6 6-4",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Tallon Griekspoor",
+      "loser": "Mariano Navone",
+      "score": "7-6(4) 7-5",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Nikoloz Basilashvili",
+      "loser": "Facundo Díaz Acosta",
+      "score": "6-2 6-4",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Lorenzo Musetti",
+      "loser": "Moise Kouame",
+      "score": "6-4 6-4",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Tommy Paul",
+      "loser": "Benjamin Bonzi",
+      "score": "6-4 6-7 6-3",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Corentin Moutet",
+      "loser": "Felix Balshaw",
+      "score": "6-4 6-4",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Calvin Chidekh",
+      "loser": "Jacob Fearnley",
+      "score": "7-6(4) 6-2",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Jan-Lennard Struff",
+      "loser": "Gilles Onclin",
+      "score": "6-4 6-2",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Primera ronda",
+      "date": "2026-10-21",
+      "winner": "David Goffin",
+      "loser": "Remy Bertola",
+      "score": "3-6 6-3 6-4",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Primera ronda",
+      "date": "2026-10-21",
+      "winner": "Damir Džumhur",
+      "loser": "Dino Prizmic",
+      "score": "7-6(5) 2-6 6-2",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Stefanos Tsitsipas",
+      "loser": "Mikhail Kukushkin",
+      "score": "6-1 6-2",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Adrian Mannarino",
+      "loser": "Andrey Rublev",
+      "score": "6-4 3-6 6-3",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "James Duckworth",
+      "loser": "Luciano Darderi",
+      "score": "7-5 7-6",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Primera ronda",
+      "date": "2026-10-21",
+      "winner": "Tomáš Macháč",
+      "loser": "Zangar Nurlanuly",
+      "score": "6-2 6-0",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Leylah Fernandez",
+      "loser": "Aliaksandra Sasnovich",
+      "score": "7-5 6-7(3) 6-3",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Sara Bejlek",
+      "loser": "Sorana Cîrstea",
+      "score": "7-6(3) 6-4",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Marie Bouzková",
+      "loser": "Anastasia Zakharova",
+      "score": "7-5 6-2",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Kinoshita Group Japan Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Talia Gibson",
+      "loser": "Sinja Kraus",
+      "score": "6-2 6-1",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Kinoshita Group Japan Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Katie Boulter",
+      "loser": "Viktorija Golubic",
+      "score": "6-2 6-1",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Kinoshita Group Japan Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Lilli Tagger",
+      "loser": "Tereza Valentová",
+      "score": "7-5 6-3",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
+    {
+      "tournament": "Kinoshita Group Japan Open",
+      "round": "Segunda ronda",
+      "date": "2026-10-21",
+      "winner": "Ashlyn Krueger",
+      "loser": "Lanlana Tararudee",
+      "score": "6-3 6-1",
+      "source": "https://en.tennistemple.com/matches/2026-10-21"
+    },
     {
       "tournament": "Kinoshita Group Japan Open",
       "round": "Primera ronda",

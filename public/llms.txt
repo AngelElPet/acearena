@@ -5,6 +5,8 @@
 
 ## Noticias
 
+- [Muchova cierra el cuadro de las WTA Finals](https://acearena.io/noticias/muchova-cierra-el-cuadro-de-las-wta-finals.html): Karolina Muchova, de 30 años, ocupó el 21 de octubre la octava plaza de las WTA Finals de Indian Wells, del 8 al 15 de noviembre, sin jugar esa semana, tras la retirada de Marta Kostyuk en Ningbo.
+- [Wawrinka frena a Landaluce en Lyon](https://acearena.io/noticias/wawrinka-frena-a-landaluce-en-lyon.html): Stan Wawrinka, con invitación, ganó el 21 de octubre a Martín Landaluce en la primera ronda del ATP 250 de Lyon por 6-3, 6-7(2) y 7-6(5), en 2 horas y 46 minutos.
 - [Munar se retira de Bruselas por la espalda](https://acearena.io/noticias/munar-se-retira-de-bruselas-por-la-espalda.html): Jaume Munar fue baja el 20 de octubre, antes de la segunda ronda del ATP 250 de Bruselas ante Arthur Fils, por problemas de espalda. Fils pasa a cuartos por walkover, la décima vez que llega a esa ronda esta temporada.
 - [Badosa cae en Osaka en su estreno sin Pol Toledo](https://acearena.io/noticias/badosa-cae-en-osaka-en-su-estreno-sin-pol-toledo.html): Paula Badosa, número 61, perdió el 20 de octubre en la primera ronda del WTA 250 de Osaka ante Antonia Ružić, número 91, por 3-6, 6-4 y 6-3. Fue su primer partido tras separarse de Pol Toledo.
 - [Tres españoles en el top 15 del ranking ATP](https://acearena.io/noticias/tres-espanoles-en-el-top-15-del-ranking-atp.html): El ranking ATP del 19 de octubre de 2026 deja a Alcaraz 3º (5.610), a Jódar 11º (3.234) y a Davidovich Fokina 13º (2.880). Es el mejor puesto de Jódar y de Davidovich.
@@ -19,7 +21,7 @@
 
 ## Resultados
 
-- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 21 oct 2026, 06:59 UTC.
+- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 22 oct 2026, 07:10 UTC.
 - Datos de noticias: https://acearena.io/data/news.json
 - Datos de resultados: https://acearena.io/data/results.json
 
