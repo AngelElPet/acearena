@@ -140,7 +140,19 @@ node scripts/validate.mjs --site
 
 `validate.mjs` falla si falta una fuente, si una URL no es http(s), si hay una fecha futura, si un slug está repetido o si queda texto de relleno (`TODO`, `TBD`, `FIXME`, `lorem ipsum`, `placeholder`, `example.com`, `ejemplo.com`, `XXXXX`, `{{`, `[insert`).
 
-`build.mjs` es idempotente: dos ejecuciones seguidas, con los mismos datos y el mismo día de contenido, dejan `public/` igual. Escapa todo el texto. Sustituye las regiones `AUTO:EDITION`, `AUTO:WEEKLINE`, `AUTO:TODAY`, `AUTO:WEEK`, `AUTO:NEWS`, `AUTO:RESULTS` y `AUTO:RANKINGS` de la portada. Al final añade `?v=` con un hash corto a cada referencia de `/assets/`, también en `styles.css` y `site.webmanifest`.
+`build.mjs` es idempotente: dos ejecuciones seguidas, con los mismos datos y el mismo día de contenido, dejan `public/` igual. Escapa todo el texto. Sustituye las regiones `AUTO:NAV`, `AUTO:FOOTER`, `AUTO:EDITION`, `AUTO:HOY`, `AUTO:WEEK`, `AUTO:NEWS`, `AUTO:RESULTS` y `AUTO:RANKINGS` de la portada, y `AUTO:NAV`, `AUTO:FOOTER` y `AUTO:PUBSTATS` de `agencias.html`. Al final añade `?v=` con un hash corto a cada referencia de `/assets/`, también en `styles.css` y `site.webmanifest`.
+
+## Correcciones
+
+`data/corrections.json` tiene `updated` (`YYYY-MM-DD`) y `items`. Cada item lleva:
+
+- `date`: día de la corrección.
+- `slug`: slug de la noticia afectada.
+- `text`: frase que la página muestra después de «Corregido el <fecha>: ».
+- `before` y `after`: el dato anterior y el corregido.
+- `source`: `{ "name", "url" }` de la fuente que manda.
+
+El build añade el aviso en la pieza y genera `public/correcciones.html`. No hace falta repetir el aviso dentro de `body`.
 
 Para ver el sitio:
 
@@ -167,6 +179,8 @@ python3 -m http.server 8080 --directory public
 - `public/llms.txt` — las últimas noticias, la semana, la Race, los jugadores y un enlace a `llms-full.txt`.
 - `public/semana.html` y `public/race.html`.
 - `public/sobre.html` — AboutPage, con JSON-LD `AboutPage` y `BreadcrumbList`.
+- `public/metodologia.html`, `public/correcciones.html`, `public/calendario.html` y `public/guia-australian-open-2027.html`.
+- `public/_redirects` — redirecciones 301 de Netlify desde los slugs antiguos de torneos fusionados.
 - `public/data/news.json`, `public/data/results.json`, `public/data/players.json`, `public/data/calendar.json`, `public/data/guides.json`, `public/data/week.json` y `public/data/race.json`.
 - `public/aviso-legal.html`, `public/privacidad.html` y `public/cookies.html`, con JSON-LD `WebPage` y `BreadcrumbList`. El NIF y el domicilio del titular solo aparecen en esas tres páginas. El pie del resto del sitio lleva el nombre y el correo, sin NIF ni calle.
 - El beacon de Cloudflare Web Analytics justo antes de `</body>` en cada HTML.

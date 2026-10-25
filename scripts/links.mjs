@@ -57,6 +57,11 @@ export function createLinkIndex({ players, events }) {
     const href = `torneos/${event.slug}.html`;
     prose.push({ label: event.name, href });
     tournamentByNorm.push({ name: event.name, href, norm: normalizeName(event.name) });
+    for (const alias of event.aliases || []) {
+      if (!alias) continue;
+      prose.push({ label: alias, href });
+      tournamentByNorm.push({ name: event.name, href, norm: normalizeName(alias) });
+    }
   }
   return {
     prose,

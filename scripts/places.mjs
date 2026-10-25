@@ -30,11 +30,63 @@ const REPLACEMENTS = [
   ['Austria', 'Austria'],
 ];
 
+const COUNTRY_CODES = {
+  AUS: 'Australia',
+  AUT: 'Austria',
+  ARG: 'Argentina',
+  ANG: 'Angola',
+  BEL: 'Bélgica',
+  BLR: 'Bielorrusia',
+  BOL: 'Bolivia',
+  BRA: 'Brasil',
+  CAN: 'Canadá',
+  CHI: 'Chile',
+  CHN: 'China',
+  COL: 'Colombia',
+  CRO: 'Croacia',
+  CZE: 'Chequia',
+  ECU: 'Ecuador',
+  ESP: 'España',
+  FRA: 'Francia',
+  GBR: 'Reino Unido',
+  GER: 'Alemania',
+  GRE: 'Grecia',
+  HKG: 'Hong Kong',
+  IND: 'India',
+  ITA: 'Italia',
+  JPN: 'Japón',
+  KOR: 'Corea del Sur',
+  MAR: 'Marruecos',
+  MEX: 'México',
+  MON: 'Mónaco',
+  NED: 'Países Bajos',
+  NZL: 'Nueva Zelanda',
+  PHI: 'Filipinas',
+  POL: 'Polonia',
+  POR: 'Portugal',
+  QAT: 'Catar',
+  ROU: 'Rumanía',
+  RSA: 'Sudáfrica',
+  SGP: 'Singapur',
+  SUI: 'Suiza',
+  SVK: 'Eslovaquia',
+  SWE: 'Suecia',
+  THA: 'Tailandia',
+  TUN: 'Túnez',
+  TUR: 'Turquía',
+  UAE: 'Emiratos Árabes Unidos',
+  UKR: 'Ucrania',
+  URU: 'Uruguay',
+  USA: 'Estados Unidos',
+  UZB: 'Uzbekistán',
+};
+
 export function placeEs(value) {
   if (value == null) return value;
   let text = String(value);
   if (text === '' || text === 'sin dato') return text;
   for (const [from, to] of REPLACEMENTS) text = text.replaceAll(from, to);
+  text = text.replace(/, ([A-Z]{3})\b/g, (match, code) => (COUNTRY_CODES[code] ? `, ${COUNTRY_CODES[code]}` : match));
   if (/^[\p{Lu}0-9][\p{Lu}0-9 .'+-]{3,}$/u.test(text) && !/\b(?:ATP|WTA)\b/.test(text)) {
     text = text.toLocaleLowerCase('es').replace(/(^|[\s'-])(\p{L})/gu, (_match, boundary, letter) => boundary + letter.toLocaleUpperCase('es'));
   }

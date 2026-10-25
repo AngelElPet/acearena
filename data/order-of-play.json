@@ -1,33 +1,68 @@
 {
   "updated": "2026-10-25",
   "date": "2026-10-25",
+  "note": "Consulta del 25 de octubre de 2026. Aún no hay orden de juego oficial con horas.",
   "matches": [],
-  "note": "Consulta del 2026-10-25. No hay un orden de juego oficial con horas que se pueda publicar en Madrid, Buenos Aires y Ciudad de México. Esas horas quedan en sin dato.",
+  "sessions": [
+    {
+      "tournament": "Erste Bank Open",
+      "place": "Viena",
+      "source": {
+        "name": "Erste Bank Open, horarios del recinto",
+        "url": "https://www.erstebank-open.com/en/event/event-infos"
+      },
+      "items": [
+        { "label": "24 de octubre, clasificación", "local": "11:30", "madrid": "11:30", "buenosAires": "06:30", "mexicoCity": "03:30" },
+        { "label": "25 de octubre, clasificación", "local": "13:00", "madrid": "13:00", "buenosAires": "09:00", "mexicoCity": "06:00" },
+        { "label": "26 al 30 de octubre", "local": "13:30", "madrid": "13:30", "buenosAires": "09:30", "mexicoCity": "06:30" },
+        { "label": "31 de octubre", "local": "12:30", "madrid": "12:30", "buenosAires": "08:30", "mexicoCity": "05:30" },
+        { "label": "1 de noviembre", "local": "11:30", "madrid": "11:30", "buenosAires": "07:30", "mexicoCity": "04:30" }
+      ]
+    },
+    {
+      "tournament": "Swiss Indoors Basel",
+      "place": "Basilea",
+      "source": {
+        "name": "ATP, historia, cuadro y horarios de Basilea",
+        "url": "https://www.atptour.com/en/news/basel-atp-500-2026-history-draw-schedule"
+      },
+      "items": [
+        { "label": "24 de octubre, clasificación", "local": "11:00", "madrid": "11:00", "buenosAires": "06:00", "mexicoCity": "03:00" },
+        { "label": "25 de octubre, clasificación", "local": "13:00", "madrid": "13:00", "buenosAires": "09:00", "mexicoCity": "06:00" },
+        { "label": "26 al 30 de octubre, cuadro principal", "local": "12:00", "madrid": "12:00", "buenosAires": "08:00", "mexicoCity": "05:00" },
+        { "label": "31 de octubre", "local": "13:00", "madrid": "13:00", "buenosAires": "09:00", "mexicoCity": "06:00" },
+        { "label": "1 de noviembre, final de dobles", "local": "13:00", "madrid": "13:00", "buenosAires": "09:00", "mexicoCity": "06:00" },
+        { "label": "1 de noviembre, final de individuales", "local": "15:30", "madrid": "15:30", "buenosAires": "11:30", "mexicoCity": "08:30" }
+      ]
+    }
+  ],
+  "players": [
+    { "name": "Rafael Jódar", "tournament": "Swiss Indoors Basel", "round": "Primera ronda", "opponent": "Alejandro Tabilo" },
+    { "name": "Alejandro Davidovich Fokina", "tournament": "Swiss Indoors Basel", "round": "Primera ronda", "opponent": "Zizou Bergs" },
+    { "name": "Carlos Alcaraz", "tournament": "Erste Bank Open", "round": "Primera ronda", "opponent": "Karen Khachanov" },
+    { "name": "Martín Landaluce", "tournament": "Erste Bank Open", "round": "Primera ronda", "opponent": "Alexander Zverev" },
+    { "name": "Daniel Mérida", "tournament": "Erste Bank Open", "round": "Primera ronda", "opponent": "Daniil Medvedev" }
+  ],
   "attempts": [
+    {
+      "name": "Erste Bank Open, horarios del recinto",
+      "url": "https://www.erstebank-open.com/en/event/event-infos",
+      "result": "Publica el inicio de la jornada en pista central. No es la hora de un partido."
+    },
+    {
+      "name": "ATP, historia, cuadro y horarios de Basilea",
+      "url": "https://www.atptour.com/en/news/basel-atp-500-2026-history-draw-schedule",
+      "result": "Publica el inicio de cada sesión. El orden del lunes no incluye a Jódar ni a Davidovich."
+    },
+    {
+      "name": "ATP, orden del lunes en Basilea",
+      "url": "https://www.atptour.com/en/news/basel-2026-schedule",
+      "result": "La pista 1 abre a las 12:00 y la central a las 13:30. No figuran los españoles de primera ronda."
+    },
     {
       "name": "WTA, página de marcadores",
       "url": "https://www.wtatennis.com/scores",
-      "result": "No trae un orden de juego con horas."
-    },
-    {
-      "name": "ATP, Daily Media Notes",
-      "url": "https://edx.atptour.com/en/media/daily-media-notes",
-      "result": "No trae un orden de juego con horas."
-    },
-    {
-      "name": "BNB Ningbo Open - Ningbo, CHN",
-      "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
-      "result": "La ficha menciona el orden de juego, sin horas ligadas a un partido y a las tres ciudades."
-    },
-    {
-      "name": "Río Ladies Open by MundoTênis Tours  - Rio De Janeiro, BRA",
-      "url": "https://www.wtatennis.com/tournaments/1150/rio-de-janeiro-125/2026",
-      "result": "La ficha menciona el orden de juego, sin horas ligadas a un partido y a las tres ciudades."
-    },
-    {
-      "name": "Kinoshita Group Japan Open - Osaka, JPN",
-      "url": "https://www.wtatennis.com/tournaments/405/osaka/2026",
-      "result": "La ficha menciona el orden de juego, sin horas ligadas a un partido y a las tres ciudades."
+      "result": "No trae un orden de juego con horas para Tokio ni Guangzhou."
     }
   ],
   "zones": {

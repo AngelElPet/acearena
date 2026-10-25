@@ -1,3 +1,4 @@
+import { crumbNav, factsHtml, formatHeight, lastName, roundLower } from './facts.mjs';
 import { linkProse, prefixHref, proseEntries } from './links.mjs';
 import { sinDatoHtml } from './missing.mjs';
 import { formatPoints, normalizeName } from './ranking.mjs';
@@ -88,33 +89,94 @@ function lastResultSentence(player, resultsDoc) {
     : `${round.startsWith('la ') ? `Ganó ${round}` : `Ganó en ${round}`} del ${match.tournament} a ${match.loser}, ${score}, el ${when}`;
 }
 
-function hoyBlock(player, { week, resultsDoc, esc, ranking }) {
+function cityOf(tournament, week) {
+  const event = (week?.tournaments || []).find((item) => normalizeName(item.name) === normalizeName(tournament));
+  if (!event) return '';
+  const city = String(event.place || '').split(',')[0].trim();
+  return city;
+}
+
+function roundIn(round) {
+  const value = roundLower(round || 'primera ronda');
+  if (value === 'final') return 'la final';
+  if (value.startsWith('semi')) return 'las semifinales';
+  if (value.startsWith('cuartos')) return 'los cuartos de final';
+  if (value.endsWith('ronda')) return `la ${value}`;
+  return value;
+}
+
+function hoySentence(player, hoy, week) {
+  if (!hoy.opponent || !hoy.tournament) return '';
+  const city = cityOf(hoy.tournament, week);
+  const where = city ? ` de ${city}` : '';
+  return `${lastName(player.name)} abre ante ${lastName(hoy.opponent)} en ${roundIn(hoy.round)}${where}`;
+}
+
+function hoyBlock(player, { week, resultsDoc, esc, ranking, linkIndex }) {
   const hoy = player.hoy && typeof player.hoy === 'object' ? player.hoy : {};
   const spot = (week?.spotlight || []).find((item) => normalizeName(item.name) === normalizeName(player.name));
   const asOf = hoy.asOf || week?.updated || ranking.asOf;
   const tournament = hoy.tournament || spot?.tournament || '';
-  const scheduled = (player.nextEvents || []).find((event) => event?.name && (!tournament || normalizeName(event.name) === normalizeName(tournament)));
-  const eventName = tournament || scheduled?.name || '';
-  const dates = scheduled?.dates ? `, ${scheduled.dates}` : '';
-  const rival = hoy.opponent ? `${hoy.round ? `${hoy.round} ante` : 'ante'} ${hoy.opponent}` : (hoy.round || '');
-  const next = eventName
-    ? `${eventName}${rival ? `, ${rival}` : ''}${dates}`
-    : (spot?.text || '');
-  const source = spot?.sourceUrl || scheduled?.url || '';
-  const sourceHtml = source ? ` <a href="${esc(source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : '';
+  const sentence = hoySentence(player, { ...hoy, tournament }, week);
+  const hit = tournament && linkIndex ? linkIndex.tournament(tournament) : null;
+  const tourHtml = hit
+    ? `<a href="${esc(prefixHref(hit.href, 1))}">${esc(hit.name)}</a>`
+    : (tournament ? esc(tournament) : '');
+  const source = spot?.sourceUrl || '';
+  const sourceHtml = source ? `<a href="${esc(source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : '';
   const match = latestMatch(player, resultsDoc);
   const last = lastResultSentence(player, resultsDoc);
   const lastHtml = last
-    ? `${esc(last)}.${match?.source ? ` <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : ''}`
-    : sinDatoHtml();
+    ? `${esc(last)}${match?.source ? `. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : ''}`
+    : '';
+  const rows = [
+    { dt: 'Torneo', dd: tourHtml, missing: !tourHtml },
+    { dt: 'Ronda', dd: hoy.round ? esc(roundLower(hoy.round)) : '', missing: !hoy.round },
+    { dt: 'Rival', dd: hoy.opponent ? esc(hoy.opponent) : '', missing: !hoy.opponent },
+    { dt: 'Día', dd: hoy.day ? esc(hoy.day) : '', missing: !hoy.day },
+    { dt: 'Hora en Madrid', dd: hoy.startTimeMadrid ? esc(hoy.startTimeMadrid) : '', missing: !hoy.startTimeMadrid },
+    { dt: 'Último resultado', dd: lastHtml, missing: !lastHtml },
+  ];
   return `
       <h2>${esc(player.name)} hoy</h2>
-      <p class="as-of">Situación a ${esc(longDate(asOf))}.</p>
-      <ul class="event-list">
-        <li>Próximo partido o torneo: ${next ? `${esc(next)}.${sourceHtml}` : sinDatoHtml()}</li>
-        <li>Hora oficial en Madrid: ${hoy.startTimeMadrid ? esc(hoy.startTimeMadrid) : sinDatoHtml()}.</li>
-        <li>Último resultado: ${lastHtml}.</li>
-      </ul>`;
+      <p class="as-of">Actualizado el ${esc(longDate(asOf))}.</p>
+      ${sentence ? `<p>${esc(sentence)}.</p>` : ''}
+      ${factsHtml(rows)}
+      ${sourceHtml ? `<p class="source-line">Fuente: ${sourceHtml}</p>` : ''}`;
+}
+
+export function homeHoyHtml({ players, week, results, articles, linkIndex, contentDay, esc, longDay }) {
+  const lead = articles[0];
+  const leadHtml = lead
+    ? `<p class="hoy-lead"><a href="noticias/${esc(lead.slug)}.html">${esc(lead.title)}</a>. ${esc(lead.summary)}</p>`
+    : '';
+  const weekNames = new Set((week?.tournaments || []).map((event) => normalizeName(event.name)));
+  const spaniards = (players || []).filter((player) => {
+    if (player.nationality !== 'España') return false;
+    const tournament = player.hoy?.tournament;
+    return tournament && weekNames.has(normalizeName(tournament));
+  });
+  const items = spaniards.map((player) => {
+    const hoy = player.hoy || {};
+    const sentence = hoySentence(player, hoy, week);
+    const hit = linkIndex.tournament(hoy.tournament);
+    const href = hit ? hit.href : `jugadores/${player.slug}.html`;
+    const match = (results || []).find((item) => normalizeName(item.winner) === normalizeName(player.name) || normalizeName(item.loser) === normalizeName(player.name));
+    const when = match ? longDay(match.date).replace(/ de \d{4}$/, '') : '';
+    const last = match
+      ? `${normalizeName(match.loser) === normalizeName(player.name) ? 'Cayó' : 'Ganó'} el ${when}. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>`
+      : `Último resultado: ${sinDatoHtml()}`;
+    return `        <li><a href="${esc(href)}">${esc(sentence)}</a>. ${last}</li>`;
+  }).join('\n');
+  return `<section class="hoy-tenis" aria-labelledby="hoy-title">
+        <h2 id="hoy-title">Hoy en el tenis</h2>
+        <p class="as-of">Actualizado el ${esc(longDay(contentDay))}.</p>
+        ${leadHtml}
+        <h3>Los españoles esta semana</h3>
+        <ul class="event-list">
+${items}
+        </ul>
+      </section>`;
 }
 
 function playerPortrait(player, esc) {
@@ -229,9 +291,7 @@ ${playerCards}
     const url = `${site}/jugadores/${player.slug}.html`;
     const rankingLine = `Número ${row.position} · ${formatPoints(row.points)} puntos. Actualizado a ${longDate(ranking.asOf)}.`;
     const note = player.ranking.note ? `\n        <p>${esc(player.ranking.note)}</p>` : '';
-    const height = player.height
-      ? `${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m`
-      : '';
+    const height = formatHeight(player.height);
     const born = player.birthDate
       ? `${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}`
       : '';
@@ -242,9 +302,12 @@ ${playerCards}
       `Estatura: ${tech(height)}`,
       `Nacimiento: ${tech(born)}`,
     ];
-    const sheet = `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${part}</li>`).join('\n')}\n      </ul>`;
+    const sheet = `\n      <h2>Ficha técnica</h2>\n      ${factsHtml(sheetParts.map((part) => {
+      const split = part.split(': ');
+      return { dt: split[0], dd: split.slice(1).join(': '), missing: split[1] === sinDatoHtml() };
+    }))}`;
     const favorites = player.favorites ? `\n      <p>${linkProse(player.favorites, esc, prose)}</p>` : '';
-    const today = hoyBlock(player, { week, resultsDoc, esc, ranking });
+    const today = hoyBlock(player, { week, resultsDoc, esc, ranking, linkIndex });
     const extraEvents = (player.nextEvents || []).filter((event) => event?.name && event.url);
     const nextEvent = extraEvents.length
       ? `\n      <h2>Próximos torneos</h2>\n      <ul class="event-list">\n${extraEvents.map((event) => {
@@ -253,7 +316,7 @@ ${playerCards}
         const external = internal ? '' : ' target="_blank" rel="noopener noreferrer"';
         return `        <li><a href="${esc(href)}"${external}>${esc(event.name)}</a>${event.dates ? `, ${esc(event.dates)}` : ''}</li>`;
       }).join('\n')}\n      </ul>`
-      : (!extraEvents.length && player.nextEvent
+      : (!extraEvents.length && player.nextEvent && !player.hoy?.tournament
         ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
         : '');
     const aceLinks = [];
@@ -300,12 +363,18 @@ ${playerCards}
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
+      ${crumbNav([
+        { label: 'Inicio', href: '../index.html' },
+        { label: 'Jugadores', href: 'index.html' },
+        { label: esc(player.name) },
+      ])}
+      <p class="news-meta">${esc(player.tour)} · ${esc(player.nationality)}</p>
       <div class="player-head">
         ${playerPortrait(player, esc)}
         <h1>${esc(player.name)}</h1>
       </div>
-      <p class="article-summary">${esc(rankingLine)}</p>${note}
+      <p class="article-summary">${esc(rankingLine)}</p>
+      <p class="as-of">Actualizado el ${esc(longDate(playersDoc.updated))}.</p>${note}
       <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${today}${nextEvent}
       <h2>Biografía</h2>
 ${player.bio.map((paragraph) => `        <p>${linkProse(paragraph, esc, prose)}</p>`).join('\n')}${sheet}${favorites}

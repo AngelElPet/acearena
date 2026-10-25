@@ -4,7 +4,7 @@
   "wtaAsOf": "2026-10-19",
   "gaps": [
     "El calendario ITF masculino de 2026 en España no está en las fuentes usadas.",
-    "Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam. Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com.",
+    "Los Challenger de España no traen fecha de fin en el PDF de finales.",
     "La WTA y la ITF femenina salen de la API de torneos de la WTA, consultada el 2026-10-25."
   ],
   "tournaments": [
@@ -174,11 +174,11 @@
       ]
     },
     {
-      "name": "Barcelona, España",
+      "name": "Barcelona Open",
       "circuit": "ATP",
       "category": "ATP 500",
       "startDate": "2026-04-13",
-      "endDate": "sin dato",
+      "endDate": "2026-04-19",
       "city": "Barcelona, España",
       "surface": "tierra batida",
       "sources": [
@@ -189,21 +189,33 @@
         {
           "name": "ATP Tour, calendario 2026 (categoría)",
           "url": "https://www.atptour.com/en/tournaments"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
     {
-      "name": "ATP Masters 1000 Madrid, España",
+      "name": "Mutua Madrid Open",
       "circuit": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-04-20",
-      "endDate": "sin dato",
-      "city": "ATP Masters 1000 Madrid, España",
+      "endDate": "2026-05-03",
+      "city": "Madrid, España",
       "surface": "tierra batida",
       "sources": [
         {
           "name": "ATP, finales ATP y Grand Slam de 2026",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
+        },
+        {
+          "name": "WTA, Mutua Madrid Open",
+          "url": "https://www.wtatennis.com/tournaments/1038/madrid/2026"
         }
       ]
     },
@@ -388,12 +400,12 @@
       ]
     },
     {
-      "name": "Mallorca, España",
+      "name": "Mallorca Championships",
       "circuit": "ATP",
       "category": "ATP 250",
       "startDate": "2026-06-22",
-      "endDate": "sin dato",
-      "city": "Mallorca, España",
+      "endDate": "2026-06-28",
+      "city": "Santa Ponsa, España",
       "surface": "hierba",
       "sources": [
         {
@@ -403,6 +415,10 @@
         {
           "name": "ATP Tour, calendario 2026 (categoría)",
           "url": "https://www.atptour.com/en/tournaments"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -727,12 +743,16 @@
       "category": "WTA 125",
       "startDate": "2026-10-12",
       "endDate": "2026-10-18",
-      "city": "MALLORCA",
+      "city": "Mallorca, España",
       "surface": "tierra batida",
       "sources": [
         {
           "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
           "url": "https://api.wtatennis.com/tennis/tournaments"
+        },
+        {
+          "name": "WTA, Mallorca Women's Championships",
+          "url": "https://www.wtatennis.com/tournaments/1128/mallorca-125/2026"
         }
       ]
     }
@@ -782,7 +802,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -794,7 +814,7 @@
           "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
         },
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {
@@ -857,7 +877,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -869,7 +889,7 @@
           "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
         },
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {
@@ -933,7 +953,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -945,7 +965,7 @@
           "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
         },
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {
@@ -999,7 +1019,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1011,7 +1031,7 @@
           "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
         },
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         }
       ]
@@ -1047,7 +1067,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1107,7 +1127,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1151,7 +1171,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1195,7 +1215,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1239,7 +1259,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1283,7 +1303,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1336,7 +1356,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1380,7 +1400,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1433,7 +1453,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1486,7 +1506,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1526,7 +1546,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1575,7 +1595,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1615,7 +1635,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1671,7 +1691,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1711,7 +1731,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1751,7 +1771,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1791,7 +1811,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1831,7 +1851,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1871,7 +1891,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1911,7 +1931,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1951,7 +1971,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -1991,7 +2011,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2040,7 +2060,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2080,7 +2100,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2120,7 +2140,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2160,7 +2180,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2200,7 +2220,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2240,7 +2260,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2280,7 +2300,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2320,7 +2340,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2360,7 +2380,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2400,7 +2420,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2440,7 +2460,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2480,7 +2500,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2520,7 +2540,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2560,7 +2580,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2600,7 +2620,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2640,7 +2660,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2680,7 +2700,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2720,7 +2740,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2760,7 +2780,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2800,7 +2820,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2840,7 +2860,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2880,7 +2900,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2920,7 +2940,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {
@@ -2960,7 +2980,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
         },
         {
-          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "name": "ATP, rankings (Rankings & Media Reports)",
           "url": "https://edx.atptour.com/en/media/rankings-and-stats"
         },
         {

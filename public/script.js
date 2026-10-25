@@ -30,7 +30,30 @@
       });
     });
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") setMenu(false);
+      if (event.key === "Escape") {
+        setMenu(false);
+        setMore(false);
+      }
+    });
+  }
+
+  var moreToggle = document.getElementById("moreToggle");
+  var moreMenu = document.getElementById("moreMenu");
+  function setMore(open) {
+    if (!moreToggle || !moreMenu) return;
+    moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) moreMenu.removeAttribute("hidden");
+    else moreMenu.setAttribute("hidden", "");
+  }
+  if (moreToggle && moreMenu) {
+    moreToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+      setMore(moreToggle.getAttribute("aria-expanded") !== "true");
+    });
+    document.addEventListener("click", function (event) {
+      if (moreMenu.hasAttribute("hidden")) return;
+      if (event.target.closest && event.target.closest(".nav-more")) return;
+      setMore(false);
     });
   }
 
