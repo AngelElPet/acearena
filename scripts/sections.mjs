@@ -50,9 +50,8 @@ function portrait(player, esc, prefix) {
         <figcaption>Foto: ${esc(photo.author)}. Licencia: ${license}. Fuente: <a href="${esc(photo.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.sourceName)}</a>.</figcaption>
       </figure>`;
   }
-  return `<figure class="portrait-figure">
-      <img src="${prefix}assets/silueta-jugador.svg" alt="" width="160" height="200" loading="lazy">
-      <figcaption>Silueta de AceArena. No hay una foto de cara de ${esc(player.name)} con licencia libre en Wikimedia Commons.</figcaption>
+  return `<figure class="portrait-figure" aria-hidden="true">
+      <img src="${prefix}assets/silueta-jugador.svg" alt="" aria-hidden="true" width="160" height="200" loading="lazy">
     </figure>`;
 }
 
