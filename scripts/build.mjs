@@ -7,7 +7,7 @@ import { writeSocialCards } from './cards.mjs';
 import { footerHtml, navLinks } from './chrome.mjs';
 import { evergreenEntries, homeHoyHtml } from './evergreen.mjs';
 import { createLinkIndex, linkProse, prefixHref, proseEntries } from './links.mjs';
-import { crumbNav } from './facts.mjs';
+import { correctionSentence, crumbNav } from './facts.mjs';
 import { emptyBlock, isMissing, sinDatoHtml } from './missing.mjs';
 import { createRankingIndex, formatPoints, normalizeName, validateRankings } from './ranking.mjs';
 import { sectionEntries } from './sections.mjs';
@@ -237,6 +237,13 @@ function articleTopic(article) {
   const tags = Array.isArray(article.tags) ? article.tags : [];
   if (tags.includes('Race a Turín')) return 'Race a Turín';
   return '';
+}
+
+function articleMeta(article) {
+  const tour = tourOf(article);
+  const topic = article.tournament && article.tournament !== tour ? article.tournament : '';
+  const redundant = tour && new RegExp(`^${tour}\\b`, 'i').test(topic);
+  return `${redundant ? '' : tourBadge(article)}${articleTopic(article)}`;
 }
 
 function filedIso(article, field) {
@@ -503,7 +510,7 @@ function articlePage(article, linkIndex, extras = {}) {
     '<a href="../semana.html">Esta semana</a>',
   ];
   const fixes = (extras.corrections?.items || []).filter((item) => item.slug === article.slug);
-  const correction = fixes.map((item) => `      <p class="correction">Corregido el ${esc(longDay(item.date))}: ${esc(item.text)}</p>`).join('\n');
+  const correction = fixes.map((item) => `      <p class="correction">${esc(correctionSentence(longDay(item.date), item.text))}</p>`).join('\n');
   const tags = article.tags.map((tag) => `          <li>${linkProse(tag, esc, prose)}</li>`).join('\n');
   const sources = article.sources.map((source) => `          <li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a></li>`).join('\n');
   const briefItems = Array.isArray(article.brief)
@@ -531,7 +538,7 @@ ${upcomingItems}
         { label: 'Noticias', href: 'index.html' },
         { label: esc(article.title) },
       ])}
-      <p class="news-meta">${tourBadge(article)}${articleTopic(article)}</p>
+      <p class="news-meta">${articleMeta(article)}</p>
       <h1>${esc(article.title)}</h1>
       ${articleHero(article)}
       <p class="article-byline">${BYLINE}</p>
@@ -584,6 +591,7 @@ function newsIndex(articles) {
   const url = `${SITE}/noticias/`;
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
+      ${crumbNav([{ label: 'Inicio', href: '../index.html' }, { label: 'Noticias' }])}
       <div class="section-header">
         <span class="section-tag">Archivo</span>
         <h1>Lo que tienes que saber</h1>
@@ -602,6 +610,13 @@ ${newsletterBlock(1)}
     canonical: url,
     depth: 1,
     jsonLd: [{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Noticias', item: url },
+      ],
+    }, {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       name: 'Noticias de tenis',
@@ -645,6 +660,7 @@ function resultsPage(matches, updated) {
   const empty = matches.length === 0 ? emptyBlock() : '';
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Resultados' }])}
       <div class="section-header">
         <span class="section-tag">Resultados</span>
         <h1>Resultados recientes</h1>
@@ -688,6 +704,13 @@ ${rows}
     depth: 0,
     jsonLd: [{
       '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Resultados', item: url },
+      ],
+    }, {
+      '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Resultados recientes de tenis',
       url,
@@ -719,7 +742,7 @@ function legalPage({ file, title, description, blocks }) {
   }).join('\n');
   const main = `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta">AceArena</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: esc(title) }])}
       <h1>${esc(title)}</h1>
       <div class="article-body">
 ${body}
@@ -889,7 +912,7 @@ function tournamentCard(event, prefix, { compact = false, linkIndex = null } = {
   const href = hit ? prefixHref(hit.href, depth) : event.officialUrl;
   const external = hit ? '' : ' target="_blank" rel="noopener noreferrer"';
   return `        <li class="event-card">
-          <p class="kicker">${surfaceIcon(event.surface, prefix)}<span>${esc(event.tour)} · ${esc(event.level)}</span></p>
+          <p class="kicker">${surfaceIcon(event.surface, prefix)}<span>${esc(/^(ATP|WTA)\b/i.test(event.level || '') ? event.level : `${event.tour} · ${event.level}`)}</span></p>
           <h3><a href="${esc(href)}"${external}>${esc(event.name)}</a></h3>
           <p class="event-where">${esc(event.place)} · ${esc(event.dates)}</p>${detail}${watch}${sources}
         </li>`;
@@ -959,7 +982,7 @@ function weekPage(week, linkIndex) {
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
     ${photoFigure('pelota', '', { priority: true, sizes: '(max-width: 1120px) 100vw, 1120px', className: 'photo-figure hero-banner' })}
-      <p class="news-meta"><a href="index.html">Inicio</a> · Esta semana</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Esta semana' }])}
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Qué ver esta semana</h1>
@@ -1031,11 +1054,11 @@ function racePage(race) {
   const rows = race.rows.map((row) => `            <tr>
               ${dataCell(row.position)}
               <td${isMissing(row.player) ? ' class="is-missing"' : ''}>${isMissing(row.player) ? sinDatoHtml() : racePlayer(row.player)}</td>
-              ${dataCell(row.points)}
+              ${dataCell(formatPoints(row.points) || row.points)}
             </tr>`).join('\n');
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="index.html">Inicio</a> · Race</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Race' }])}
       <div class="section-header">
         <span class="section-tag">ATP</span>
         <h1>${esc(race.name)}</h1>
@@ -1282,7 +1305,7 @@ function rankingsPage(rankings, playersDoc) {
   }
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="index.html">Inicio</a> · Rankings</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Rankings' }])}
       <div class="section-header">
         <span class="section-tag">Rankings</span>
         <h1>Rankings ATP y WTA</h1>
@@ -1346,7 +1369,7 @@ function creditsPage(credits) {
   }).join('\n');
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="index.html">Inicio</a> · Créditos</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Créditos' }])}
       <div class="section-header">
         <span class="section-tag">Imágenes</span>
         <h1>Créditos</h1>
@@ -1770,7 +1793,7 @@ async function build() {
     robots: 'noindex, follow',
     main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta">AceArena</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Recibido' }])}
       <h1 id="thanksTitle">¡Gracias! Lo tenemos.</h1>
       <p id="thanksCopy">Si te has apuntado al resumen del lunes, te escribiremos a ese correo. Para darte de baja, escribe a hola@acearena.io. Si era una consulta de patrocinio, respondemos en menos de 48 horas laborables.</p>
       <p class="hero-cta">

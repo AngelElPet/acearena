@@ -1,6 +1,7 @@
 import { crumbNav, factsHtml, formatHeight, lastName, roundLower } from './facts.mjs';
 import { linkProse, prefixHref, proseEntries } from './links.mjs';
 import { sinDatoHtml } from './missing.mjs';
+import { placeEs } from './places.mjs';
 import { formatPoints, normalizeName } from './ranking.mjs';
 
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -72,21 +73,39 @@ function dayMonth(iso) {
   return `${day} de ${MONTHS[month - 1]} de ${year}`;
 }
 
+function matchList(resultsDoc) {
+  if (Array.isArray(resultsDoc)) return resultsDoc;
+  return resultsDoc?.results || [];
+}
+
 function latestMatch(player, resultsDoc) {
-  return (resultsDoc?.results || [])
-    .filter((match) => normalizeName(match.winner) === normalizeName(player.name) || normalizeName(match.loser) === normalizeName(player.name))
-    .sort((a, b) => b.date.localeCompare(a.date) || 0)[0] || null;
+  const hits = matchList(resultsDoc)
+    .filter((match) => normalizeName(match.winner) === normalizeName(player.name) || normalizeName(match.loser) === normalizeName(player.name));
+  const singles = hits.filter((match) => !/dobles/i.test(match.round || ''));
+  const pool = singles.length ? singles : hits;
+  return pool.sort((a, b) => b.date.localeCompare(a.date) || 0)[0] || null;
+}
+
+function roundBit(round) {
+  const value = roundPhrase(round);
+  if (value === 'la final' || value === 'semifinales') return value;
+  if (value.endsWith('ronda')) return `la ${value}`;
+  return value;
 }
 
 function lastResultSentence(player, resultsDoc) {
   const match = latestMatch(player, resultsDoc);
   if (!match) return '';
   const score = spokenScore(match.score);
-  const when = dayMonth(match.date);
-  const round = roundPhrase(match.round);
-  return match.loser && normalizeName(match.loser) === normalizeName(player.name)
-    ? `Cayó en ${round} del ${match.tournament} ante ${match.winner}, ${score}, el ${when}`
-    : `${round.startsWith('la ') ? `Ganó ${round}` : `Ganó en ${round}`} del ${match.tournament} a ${match.loser}, ${score}, el ${when}`;
+  const when = dayMonth(match.date).replace(/ de \d{4}$/, '');
+  const round = roundBit(match.round);
+  const who = lastName(player.name);
+  const tournament = placeEs(match.tournament);
+  const won = round === 'la final'
+    ? `${who} ganó la final del ${tournament} ante ${match.loser}`
+    : `${who} ganó en ${round} del ${tournament} ante ${match.loser}`;
+  const lost = `${who} cayó en ${round} del ${tournament} ante ${match.winner}`;
+  return match.loser && normalizeName(match.loser) === normalizeName(player.name) ? `${lost}, ${score}, el ${when}` : `${won}, ${score}, el ${when}`;
 }
 
 function cityOf(tournament, week) {
@@ -112,10 +131,9 @@ function hoySentence(player, hoy, week) {
   return `${lastName(player.name)} abre ante ${lastName(hoy.opponent)} en ${roundIn(hoy.round)}${where}`;
 }
 
-function hoyBlock(player, { week, resultsDoc, esc, ranking, linkIndex }) {
+function hoyBlock(player, { week, resultsDoc, esc, linkIndex }) {
   const hoy = player.hoy && typeof player.hoy === 'object' ? player.hoy : {};
   const spot = (week?.spotlight || []).find((item) => normalizeName(item.name) === normalizeName(player.name));
-  const asOf = hoy.asOf || week?.updated || ranking.asOf;
   const tournament = hoy.tournament || spot?.tournament || '';
   const sentence = hoySentence(player, { ...hoy, tournament }, week);
   const hit = tournament && linkIndex ? linkIndex.tournament(tournament) : null;
@@ -123,11 +141,14 @@ function hoyBlock(player, { week, resultsDoc, esc, ranking, linkIndex }) {
     ? `<a href="${esc(prefixHref(hit.href, 1))}">${esc(hit.name)}</a>`
     : (tournament ? esc(tournament) : '');
   const source = spot?.sourceUrl || '';
-  const sourceHtml = source ? `<a href="${esc(source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : '';
+  const sourceName = spot?.sourceName || '';
+  const sourceHtml = source && sourceName
+    ? `<a href="${esc(source)}" target="_blank" rel="noopener noreferrer">${esc(sourceName)}</a>`
+    : '';
   const match = latestMatch(player, resultsDoc);
   const last = lastResultSentence(player, resultsDoc);
   const lastHtml = last
-    ? `${esc(last)}${match?.source ? `. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : ''}`
+    ? `${esc(last)}${match?.source ? `. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Marcador</a>` : ''}`
     : '';
   const rows = [
     { dt: 'Torneo', dd: tourHtml, missing: !tourHtml },
@@ -139,7 +160,6 @@ function hoyBlock(player, { week, resultsDoc, esc, ranking, linkIndex }) {
   ];
   return `
       <h2>${esc(player.name)} hoy</h2>
-      <p class="as-of">Actualizado el ${esc(longDate(asOf))}.</p>
       ${sentence ? `<p>${esc(sentence)}.</p>` : ''}
       ${factsHtml(rows)}
       ${sourceHtml ? `<p class="source-line">Fuente: ${sourceHtml}</p>` : ''}`;
@@ -161,12 +181,13 @@ export function homeHoyHtml({ players, week, results, articles, linkIndex, conte
     const sentence = hoySentence(player, hoy, week);
     const hit = linkIndex.tournament(hoy.tournament);
     const href = hit ? hit.href : `jugadores/${player.slug}.html`;
-    const match = (results || []).find((item) => normalizeName(item.winner) === normalizeName(player.name) || normalizeName(item.loser) === normalizeName(player.name));
-    const when = match ? longDay(match.date).replace(/ de \d{4}$/, '') : '';
-    const last = match
-      ? `${normalizeName(match.loser) === normalizeName(player.name) ? 'Cayó' : 'Ganó'} el ${when}. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>`
+    const lastText = lastResultSentence(player, results);
+    const match = latestMatch(player, results);
+    const day = hoy.day ? esc(hoy.day) : sinDatoHtml();
+    const last = lastText
+      ? `${esc(lastText)}${match?.source ? `. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Marcador</a>` : ''}`
       : `Último resultado: ${sinDatoHtml()}`;
-    return `        <li><a href="${esc(href)}">${esc(sentence)}</a>. ${last}</li>`;
+    return `        <li><a href="${esc(href)}">${esc(sentence)}</a>. Día: ${day}. ${last}</li>`;
   }).join('\n');
   return `<section class="hoy-tenis" aria-labelledby="hoy-title">
         <h2 id="hoy-title">Hoy en el tenis</h2>
@@ -242,7 +263,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDo
           <div>
             <p class="kicker">${esc(player.tour)} · ${esc(player.nationality)}</p>
             <h2><a href="${esc(player.slug)}.html">${esc(player.name)}</a></h2>
-            <p>Número ${esc(row.position)} · ${esc(formatPoints(row.points))} puntos. Actualizado a ${esc(longDate(ranking.asOf))}.</p>
+            <p>Número ${esc(formatPoints(row.position))} · ${esc(formatPoints(row.points))} puntos. Lista del ${esc(longDate(ranking.asOf))}.</p>
           </div>
         </article>`;
   }).join('\n');
@@ -270,7 +291,7 @@ export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDo
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · Jugadores</p>
+      ${crumbNav([{ label: 'Inicio', href: '../index.html' }, { label: 'Jugadores' }])}
       <div class="section-header">
         <span class="section-tag">Rankings</span>
         <h1>Jugadores</h1>
@@ -289,7 +310,7 @@ ${playerCards}
     const row = ranking.lookup(player.tour, player.name);
     if (!row) throw new Error(`Sin ranking único para ${player.name}`);
     const url = `${site}/jugadores/${player.slug}.html`;
-    const rankingLine = `Número ${row.position} · ${formatPoints(row.points)} puntos. Actualizado a ${longDate(ranking.asOf)}.`;
+    const rankingLine = `Número ${formatPoints(row.position)} · ${formatPoints(row.points)} puntos. Lista del ${longDate(ranking.asOf)}.`;
     const note = player.ranking.note ? `\n        <p>${esc(player.ranking.note)}</p>` : '';
     const height = formatHeight(player.height);
     const born = player.birthDate
@@ -307,7 +328,7 @@ ${playerCards}
       return { dt: split[0], dd: split.slice(1).join(': '), missing: split[1] === sinDatoHtml() };
     }))}`;
     const favorites = player.favorites ? `\n      <p>${linkProse(player.favorites, esc, prose)}</p>` : '';
-    const today = hoyBlock(player, { week, resultsDoc, esc, ranking, linkIndex });
+    const today = hoyBlock(player, { week, resultsDoc, esc, linkIndex });
     const extraEvents = (player.nextEvents || []).filter((event) => event?.name && event.url);
     const nextEvent = extraEvents.length
       ? `\n      <h2>Próximos torneos</h2>\n      <ul class="event-list">\n${extraEvents.map((event) => {
@@ -425,7 +446,7 @@ ${items}
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="index.html">Inicio</a> · Calendario</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Calendario 2027' }])}
       <div class="section-header">
         <span class="section-tag">Calendario</span>
         <h1>Calendario 2027</h1>
@@ -458,7 +479,7 @@ ${calendarBlocks}
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · Aprende tenis</p>
+      ${crumbNav([{ label: 'Inicio', href: '../index.html' }, { label: 'Aprende tenis' }])}
       <div class="section-header">
         <span class="section-tag">Guías</span>
         <h1>Aprende tenis</h1>
@@ -553,7 +574,11 @@ ${guide.terms.map((term) => `        <article class="faq-item"><h2>${esc(term.na
         jsonLd,
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Aprende tenis</a></p>
+      ${crumbNav([
+        { label: 'Inicio', href: '../index.html' },
+        { label: 'Aprende tenis', href: 'index.html' },
+        { label: esc(guide.title) },
+      ])}
       <p class="kicker">${esc(guide.kicker)}</p>
       <h1>${esc(guide.title)}</h1>
       <p class="article-summary">${esc(guide.intro)}</p>

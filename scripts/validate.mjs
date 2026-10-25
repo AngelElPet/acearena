@@ -467,6 +467,52 @@ function visibleHtml(html) {
     .replace(/\splaceholder\s*=\s*(?:"[^"]*"|'[^']*')/gi, ' ');
 }
 
+function visibleText(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>');
+}
+
+const VISIBLE_STRINGS = [
+  { re: /WTA[ ]+WTA/i, label: 'WTA WTA' },
+  { re: /WTA[ ]*[·,][ ]*WTA/i, label: 'WTA, WTA' },
+  { re: /Curitiba\./, label: 'Curitiba.' },
+  { re: /(?<![\p{L}])Tokyo(?![\p{L}])/u, label: 'Tokyo' },
+  { re: /(?<![\p{L}])Queretaro(?![\p{L}])/u, label: 'Queretaro' },
+  { re: /(?<![\p{L}])Sopo(?![\p{L}])/u, label: 'Sopo' },
+  { re: /Hong Kong, Hong Kong/, label: 'Hong Kong, Hong Kong' },
+  { re: /ATP Grand Slam\s*[·y]\s*WTA Grand Slam/, label: 'ATP Grand Slam · WTA Grand Slam' },
+  { re: /Fuente:\s*Fuente\b/, label: 'Fuente: Fuente' },
+];
+
+function thousandsErrors(text) {
+  const errors = [];
+  const re = /\d{1,3}(?:\.\d{3})+|\d{4,}/g;
+  let match;
+  while ((match = re.exec(text))) {
+    const token = match[0];
+    if (/^\d{1,3}(?:\.\d{3})+$/.test(token)) continue;
+    const prev = text[match.index - 1] || '';
+    const next = text[match.index + token.length] || '';
+    if (/[\p{L}\d]/u.test(prev) || /[\p{L}\d]/u.test(next)) continue;
+    const before = text.slice(Math.max(0, match.index - 24), match.index);
+    if (token === '1000' && /(?:ATP|WTA|Masters)[ \t]+$/i.test(before)) continue;
+    const after = text.slice(match.index + token.length, match.index + token.length + 24);
+    if (/^\d{5}$/.test(token) && /^[ \t]+\p{Lu}/u.test(after)) continue;
+    if (/^(?:19|20)\d{2}$/.test(token) && !/^[ \t]*(?:puntos|us\$|dólares|dolares|euros)\b/i.test(after)) continue;
+    errors.push(token);
+  }
+  return errors;
+}
+
 function pngSize(buffer) {
   if (buffer.length < 24 || buffer.toString('ascii', 1, 4) !== 'PNG') return null;
   return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
@@ -653,6 +699,13 @@ export function validateSite(rootDir) {
     const visible = visibleHtml(html);
     for (const rule of PLACEHOLDERS) {
       if (rule.re.test(visible)) errors.push(`${label} contiene texto de relleno (${rule.label})`);
+    }
+    const text = visibleText(html);
+    for (const rule of VISIBLE_STRINGS) {
+      if (rule.re.test(text)) errors.push(`${label} contiene «${rule.label}» en el texto visible`);
+    }
+    for (const token of thousandsErrors(text)) {
+      errors.push(`${label} tiene el número ${token} sin separador de miles`);
     }
     const tags = [...html.matchAll(/<(?:a|link|script|img|form|source)\b[^>]*>/gi)];
     const targets = [];

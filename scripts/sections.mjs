@@ -1,7 +1,7 @@
-import { crumbNav, factsHtml, formatHeight, levelHtml, levelPlain, roundLower } from './facts.mjs';
+import { categoryLabel, crumbNav, factsHtml, formatHeight, levelPlain, levelShort, roundLower } from './facts.mjs';
 import { prefixHref } from './links.mjs';
 import { isMissing, proseHtml, showHtml, showText, sinDatoHtml } from './missing.mjs';
-import { placeEs, surfaceEs } from './places.mjs';
+import { cityIfNew, placeEs, surfaceEs } from './places.mjs';
 import { displayName, formatPoints, normalizeName } from './ranking.mjs';
 import { prepareTournaments, tournamentHasData } from './tournaments.mjs';
 
@@ -110,20 +110,21 @@ function factRow(label, value, esc) {
 function sheet(player, esc, ranking, sheets) {
   const data = overlayRow(player, sheets);
   const ranked = officialRank(data, ranking);
+  const slamIsCount = !isMissing(data.grandSlamBest) && /títulos de grand slam/i.test(String(data.grandSlamBest));
   const born = isMissing(data.birthDate) ? '' : longDate(data.birthDate);
   const age = isMissing(data.age) ? '' : `${data.age} años a ${longDate(data.ageAsOf)}`;
   return factsHtml([
     factRow('Nacimiento', born, esc),
     factRow('Edad', age, esc),
-    { dt: 'Ranking', dd: esc(String(ranked.position)), missing: false },
+    { dt: 'Ranking', dd: esc(formatPoints(ranked.position)), missing: false },
     { dt: 'Puntos', dd: esc(formatPoints(ranked.points)), missing: false },
     { dt: 'Lista', dd: esc(longDate(ranking.asOf)), missing: false },
     factRow('Mejor ranking de carrera', data.careerHigh, esc),
     factRow('Mano', data.hand, esc),
     factRow('Estatura', data.height, esc),
     factRow('Títulos en 2026', data.titlesSeason, esc),
-    factRow('Títulos de carrera', data.titlesCareer, esc),
-    factRow('Mejor Grand Slam', placeEs(data.grandSlamBest), esc),
+    slamIsCount && isMissing(data.titlesCareer) ? null : factRow('Títulos de carrera', data.titlesCareer, esc),
+    factRow(slamIsCount ? 'Títulos de Grand Slam' : 'Mejor Grand Slam', placeEs(data.grandSlamBest), esc),
     factRow('Grand Slam en 2026', placeEs(data.grandSlam2026), esc),
     factRow('Premios de la temporada', money(data.prizeSeason, data.prizeCurrency), esc),
     factRow('Premios de carrera', money(data.prizeCareer, data.prizeCurrency), esc),
@@ -142,7 +143,7 @@ function playerCard(player, esc, prefix, countryName, ranking, sheets) {
   return `        <article class="card player-card" id="${esc(id)}">
           ${portrait(player, esc, prefix)}
           <div>
-            <p class="kicker">${esc(player.tour)} · ${esc(countryName)} · ${esc(ranked.position)}</p>
+            <p class="kicker">${esc(player.tour)} · ${esc(countryName)} · ${esc(formatPoints(ranked.position))}</p>
             <h2>${esc(displayName(ranked.name))}</h2>
             ${sheet(player, esc, ranking, sheets)}
             ${links.length ? `<p>${links.join(' · ')}</p>` : ''}
@@ -249,7 +250,7 @@ export function sectionEntries({ countries, spain, tournaments, h2h, order, news
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · Jugadores por país</p>
+      ${crumbNav([{ label: 'Inicio', href: '../index.html' }, { label: 'Jugadores por país' }])}
       <div class="section-header">
         <span class="section-tag">Rankings</span>
         <h1>Jugadores por país</h1>
@@ -308,7 +309,11 @@ ${gapItems}
         ],
         main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores por país</a> · ${esc(country.name)}</p>
+      ${crumbNav([
+        { label: 'Inicio', href: '../index.html' },
+        { label: 'Jugadores por país', href: 'index.html' },
+        { label: esc(country.name) },
+      ])}
       <div class="section-header">
         <span class="section-tag">${esc(country.code)}</span>
         <h1>${esc(country.name)}</h1>
@@ -340,8 +345,8 @@ ${wtaBlock}
     }
     const items = events.map((event) => {
       const name = placeEs(event.name);
-      const cityRaw = placeEs(event.city);
-      const city = cityRaw && cityRaw !== name ? ` ${esc(cityRaw)}.` : '';
+      const cityRaw = cityIfNew(event.name, event.city);
+      const city = cityRaw ? ` ${esc(cityRaw)}.` : '';
       const internal = linkIndex.tournament(event.name);
       const title = internal ? `<a href="${esc(prefixHref(internal.href, 0))}">${esc(name)}</a>` : esc(name);
       return `        <li>
@@ -362,7 +367,7 @@ ${wtaBlock}
         : esc(shown);
       return `        <li class="rank-person">
           ${portrait(player, esc, '')}
-          <p>${esc(ranked.position)}. ${name}. ${esc(formatPoints(ranked.points))} puntos.</p>
+          <p>${esc(formatPoints(ranked.position))}. ${name}. ${esc(formatPoints(ranked.points))} puntos.</p>
         </li>`;
     }).join('\n');
     return `      <h2>${esc(label)}</h2>\n      <ul class="event-list">\n${items}\n      </ul>`;
@@ -373,7 +378,7 @@ ${wtaBlock}
     lastmod: spain.updated,
     page: {
       title: 'Tenis en España | AceArena',
-      description: 'Torneos ATP, Challenger, WTA, WTA 125 e ITF femenino en España, y el top 50 español de cada circuito con la fecha del ranking.',
+      description: 'Torneos ATP, Challenger y WTA en España, incluidos los WTA 125 y el ITF femenino, y el top 50 español de cada circuito con la fecha del ranking.',
       canonical: spainUrl,
       depth: 0,
       jsonLd: [
@@ -390,7 +395,7 @@ ${wtaBlock}
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="index.html">Inicio</a> · Tenis en España</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Tenis en España' }])}
       <div class="section-header">
         <span class="section-tag">España</span>
         <h1>Tenis en España</h1>
@@ -415,10 +420,8 @@ ${rankList(spain.wta, 'Top 50 WTA')}
   const tourUrl = `${site}/torneos/`;
   const visibleEvents = tourEvents.filter((event) => tournamentHasData(event));
   const tourItems = visibleEvents.map((event) => {
-    const category = event.combined
-      ? `${levelHtml('ATP', event.categoryAtp, esc)} · ${levelHtml('WTA', event.categoryWta, esc)}`
-      : levelHtml(event.tour === 'ATP y WTA' ? 'ATP' : event.tour, placeEs(event.category), esc);
-    return `        <li><a href="${esc(event.slug)}.html">${esc(placeEs(event.name))}</a>. ${esc(event.tour)}, ${category}. ${datedHtml(event, esc)}.</li>`;
+    const category = categoryLabel(event);
+    return `        <li><a href="${esc(event.slug)}.html">${esc(placeEs(event.name))}</a>. ${category ? esc(category) : sinDatoHtml()}. ${datedHtml(event, esc)}.</li>`;
   }).join('\n');
   entries.push({
     file: 'torneos/index.html',
@@ -436,7 +439,7 @@ ${rankList(spain.wta, 'Top 50 WTA')}
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · Torneos</p>
+      ${crumbNav([{ label: 'Inicio', href: '../index.html' }, { label: 'Torneos' }])}
       <div class="section-header">
         <span class="section-tag">2026</span>
         <h1>Torneos de la temporada</h1>
@@ -471,8 +474,8 @@ ${tourItems}
       : `<p>Enlace de la ficha del torneo: ${sinDatoHtml()}</p>`;
     const categoryRows = event.combined
       ? [
-        factRow('Categoría ATP', levelPlain('ATP', event.categoryAtp), esc),
-        factRow('Categoría WTA', levelPlain('WTA', event.categoryWta), esc),
+        factRow('Categoría ATP', levelShort('ATP', event.categoryAtp), esc),
+        factRow('Categoría WTA', levelShort('WTA', event.categoryWta), esc),
       ]
       : [factRow('Categoría', levelPlain(event.tour === 'ATP y WTA' ? 'ATP' : event.tour, placeEs(event.category)), esc)];
     const resultRows = event.combined
@@ -520,7 +523,7 @@ ${tourItems}
       noindex: !indexed,
       page: {
         title: `${title} | AceArena`,
-        description: `${title}, ${event.combined ? `${levelPlain('ATP', event.categoryAtp)} y ${levelPlain('WTA', event.categoryWta)}` : levelPlain(event.tour, placeEs(event.category))}, ${placeEs(event.city)}. ${datedPlain(event)}.`,
+        description: `${[title, categoryLabel(event), cityIfNew(event.name, event.city)].filter(Boolean).join(', ')}. ${datedPlain(event)}.`,
         canonical: url,
         depth: 1,
         robots: indexed ? undefined : 'noindex, follow',
@@ -586,7 +589,7 @@ ${ace.map((item) => `        <li>${item}</li>`).join('\n')}
       ],
       main: `  <main class="section page-section" id="contenido">
     <div class="container">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · Cara a cara</p>
+      ${crumbNav([{ label: 'Inicio', href: '../index.html' }, { label: 'Cara a cara' }])}
       <div class="section-header">
         <span class="section-tag">Semana</span>
         <h1>Cara a cara</h1>
@@ -634,7 +637,11 @@ ${h2hItems}
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Cara a cara</a> · <a href="../semana.html">Esta semana</a></p>
+      ${crumbNav([
+        { label: 'Inicio', href: '../index.html' },
+        { label: 'Cara a cara', href: 'index.html' },
+        { label: esc(`${left} – ${right}`) },
+      ])}
       <h1>${personLink(tie.playerA, 1)} – ${personLink(tie.playerB, 1)}</h1>
       <p class="article-byline">Redacción AceArena</p>
       ${factsHtml([
@@ -696,7 +703,7 @@ ${ace.map((item) => `        <li>${item}</li>`).join('\n')}
       ],
       main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="index.html">Inicio</a> · Lo de hoy en 30 segundos</p>
+      ${crumbNav([{ label: 'Inicio', href: 'index.html' }, { label: 'Lo de hoy en 30 segundos' }])}
       <h1>Lo de hoy en 30 segundos</h1>
       <p class="article-byline">Redacción AceArena</p>
       <p>${briefLead}</p>
@@ -727,8 +734,10 @@ ${rows}
   }).join('\n');
   const playerLines = (order.players || []).map((player) => {
     const found = linkIndex.player(player.name);
+    const sheet = (players || []).find((item) => normalizeName(item.name) === normalizeName(player.name));
+    const day = player.day || sheet?.hoy?.day || '';
     const name = found ? `<a href="${esc(prefixHref(found.href, 0))}">${esc(player.name)}</a>` : esc(player.name);
-    return `        <li>${name} abre ante ${esc(player.opponent)} en ${esc(roundLower(player.round))} de ${esc(player.tournament)}.</li>`;
+    return `        <li>${name} abre ante ${esc(player.opponent)} en ${esc(roundLower(player.round))} de ${esc(player.tournament)}. Día: ${day ? esc(day) : sinDatoHtml()}.</li>`;
   }).join('\n');
   const matchBlock = order.matches && order.matches.length
     ? factsHtml(order.matches.map((match) => ({
