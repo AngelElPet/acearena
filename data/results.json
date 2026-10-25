@@ -1,6 +1,141 @@
 {
-  "updated": "2026-10-22T07:10:07.000Z",
+  "updated": "2026-10-25T08:02:07.000Z",
   "results": [
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Taylor Fritz",
+      "loser": "Tommy Paul",
+      "score": "6-3 7-5",
+      "source": "https://www.atptour.com/en/news/fritz-paul-cobolli-musetti-lyon-2026-sfs"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Lorenzo Musetti",
+      "loser": "Flavio Cobolli",
+      "score": "4-6 6-2 7-5",
+      "source": "https://www.atptour.com/en/news/fritz-paul-cobolli-musetti-lyon-2026-sfs"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Tallon Griekspoor",
+      "loser": "Francisco Cerúndolo",
+      "score": "2-6 6-3 7-6(4)",
+      "source": "https://www.atptour.com/en/news/struff-fils-brussels-2026-saturday-sf"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Jan-Lennard Struff",
+      "loser": "Arthur Fils",
+      "score": "6-4 6-7(7) 7-6(5)",
+      "source": "https://www.atptour.com/en/news/struff-fils-brussels-2026-saturday-sf"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Daniil Medvedev",
+      "loser": "Alexander Bublik",
+      "score": "6-3 ret.",
+      "source": "https://www.livetennis.it/post/474257/atp-250-bruxelles-lione-almaty-e-atp-500-vienna-e-basilea-i-risultati-completi-con-il-dettaglio-delle-semifinali-e-del-primo-turno-di-quali-medvedev-basilashvili-per-il-titolo-ad-almaty-griekspoo/"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Nikoloz Basilashvili",
+      "loser": "Stefanos Tsitsipas",
+      "score": "6-4 6-7(5) 6-3",
+      "source": "https://www.livetennis.it/post/474257/atp-250-bruxelles-lione-almaty-e-atp-500-vienna-e-basilea-i-risultati-completi-con-il-dettaglio-delle-semifinali-e-del-primo-turno-di-quali-medvedev-basilashvili-per-il-titolo-ad-almaty-griekspoo/"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Elena Rybakina",
+      "loser": "Diana Shnaider",
+      "score": "6-3 7-5",
+      "source": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Semifinal",
+      "date": "2026-10-24",
+      "winner": "Leylah Fernandez",
+      "loser": "Marie Bouzkova",
+      "score": "6-3 7-5",
+      "source": "https://www.wtatennis.com/news/4598225/rybakina-survives-shnaider-test-sets-up-ningbo-final-with-fernandez"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Semifinal de dobles",
+      "date": "2026-10-24",
+      "winner": "Cristina Bucsa / Nicole Melichar-Martinez",
+      "loser": "Hanyu Guo / Kristina Mladenovic",
+      "score": "W.O.",
+      "source": "https://www.tennis.com/tournaments/ningbo-open/matches/bucsa-c-melichar-martinez-n-vs-guo-h-mladenovic-k-2026-10-24"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Semifinal de dobles",
+      "date": "2026-10-24",
+      "winner": "Krawczyk / Stollar",
+      "loser": "Eikeri / Gleason",
+      "score": "7-6(8) 7-6(5)",
+      "source": "https://www.tennisexplorer.com/ningbo-wta/2026/wta-women/?phase=main&type=double"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Cuartos de final",
+      "date": "2026-10-23",
+      "winner": "Elena Rybakina",
+      "loser": "Katarzyna Kawa",
+      "score": "6-1 3-6 6-1",
+      "source": "https://rallyher.com/wta-ningbo-open-2026-results-draw-schedule/"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Cuartos de final",
+      "date": "2026-10-23",
+      "winner": "Diana Shnaider",
+      "loser": "Iva Jovic",
+      "score": "6-3 4-6 6-1",
+      "source": "https://rallyher.com/wta-ningbo-open-2026-results-draw-schedule/"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Cuartos de final",
+      "date": "2026-10-23",
+      "winner": "Leylah Fernandez",
+      "loser": "Ekaterina Alexandrova",
+      "score": "4-6 6-2 6-1",
+      "source": "https://rallyher.com/wta-ningbo-open-2026-results-draw-schedule/"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Cuartos de final",
+      "date": "2026-10-23",
+      "winner": "Marie Bouzkova",
+      "loser": "Sara Bejlek",
+      "score": "6-3 6-4",
+      "source": "https://rallyher.com/wta-ningbo-open-2026-results-draw-schedule/"
+    },
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Segunda ronda",
+      "date": "2026-10-22",
+      "winner": "Flavio Cobolli",
+      "loser": "Stan Wawrinka",
+      "score": "6-2 6-4",
+      "source": "https://tennis.ch/2026/10/22/wawrinka-scheitert-in-lyon-jetzt-folgt-sein-abschied-in-basel/"
+    },
     {
       "tournament": "Grand Prix Auvergne-Rhône-Alpes",
       "round": "Primera ronda",
