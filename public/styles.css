@@ -377,6 +377,13 @@ h1, .display {
 }
 .rank-table th { color: var(--muted); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .rank-table td:last-child, .rank-table th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.sin-dato {
+  color: #8b949e;
+  font-weight: 500;
+}
+.sin-dato-block { margin: 0.35rem 0 1.2rem; }
+.rank-table td.is-missing,
+.results-table td.is-missing { text-align: center; }
 .as-of { color: var(--muted); margin: 0.8rem 0 0; font-size: 0.92rem; }
 
 .package-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; }
