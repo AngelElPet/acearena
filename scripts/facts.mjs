@@ -1,4 +1,5 @@
 import { isMissing, sinDatoHtml } from './missing.mjs';
+import { placeEs } from './places.mjs';
 import { normalizeName } from './ranking.mjs';
 
 export function formatHeight(value) {
@@ -60,6 +61,29 @@ export function levelPlain(prefix, category) {
 export function levelHtml(prefix, category, esc) {
   if (isMissing(category)) return `${esc(prefix)} ${sinDatoHtml()}`;
   return esc(levelPlain(prefix, category));
+}
+
+export function levelShort(prefix, category) {
+  const plain = levelPlain(prefix, category);
+  const rest = plain.replace(new RegExp(`^${prefix}\\s+`, 'i'), '');
+  return rest || plain;
+}
+
+export function categoryLabel(event) {
+  if (!event) return '';
+  if (event.combined) {
+    const atp = levelPlain('ATP', event.categoryAtp);
+    const wta = levelPlain('WTA', event.categoryWta);
+    if (/grand slam/i.test(atp) && /grand slam/i.test(wta)) return 'Grand Slam';
+    return [atp, wta].filter(Boolean).join(' · ');
+  }
+  const tour = event.tour === 'ATP y WTA' ? 'ATP' : (event.tour || '');
+  return levelPlain(tour, placeEs(event.category));
+}
+
+export function correctionSentence(when, text) {
+  const clause = String(text || '').trim().replace(/^(\p{Ll})/u, (letter) => letter.toLocaleUpperCase('es'));
+  return `Corregido el ${when}: ${clause}`;
 }
 
 export function lastName(name) {

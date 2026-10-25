@@ -57,7 +57,12 @@
     {
       "name": "ATP, orden del lunes en Basilea",
       "url": "https://www.atptour.com/en/news/basel-2026-schedule",
-      "result": "La pista 1 abre a las 12:00 y la central a las 13:30. No figuran los españoles de primera ronda."
+      "result": "La pista 1 abre a las 12:00 y la central a las 13:30. No figuran Jódar ni Davidovich."
+    },
+    {
+      "name": "ATP, orden del lunes en Viena",
+      "url": "https://www.atptour.com/en/scores/current/vienna/337/daily-schedule",
+      "result": "El lunes 26 de octubre publica partidos de primera ronda. No figuran Alcaraz, Landaluce ni Mérida."
     },
     {
       "name": "WTA, página de marcadores",

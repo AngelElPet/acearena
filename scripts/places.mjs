@@ -30,6 +30,13 @@ const REPLACEMENTS = [
   ['Austria', 'Austria'],
 ];
 
+const EXONYMS = [
+  [/(?<![\p{L}])Tokyo(?![\p{L}])/giu, 'Tokio'],
+  [/(?<![\p{L}])Shanghai(?![\p{L}])/giu, 'Shanghái'],
+  [/(?<![\p{L}])Queretaro(?![\p{L}])/giu, 'Querétaro'],
+  [/(?<![\p{L}])Sopo(?![\p{L}])/giu, 'Sopó'],
+];
+
 const COUNTRY_CODES = {
   AUS: 'Australia',
   AUT: 'Austria',
@@ -90,7 +97,22 @@ export function placeEs(value) {
   if (/^[\p{Lu}0-9][\p{Lu}0-9 .'+-]{3,}$/u.test(text) && !/\b(?:ATP|WTA)\b/.test(text)) {
     text = text.toLocaleLowerCase('es').replace(/(^|[\s'-])(\p{L})/gu, (_match, boundary, letter) => boundary + letter.toLocaleUpperCase('es'));
   }
+  for (const [pattern, to] of EXONYMS) text = text.replace(pattern, to);
+  text = text.replace(/^([^,]+),\s*\1$/iu, '$1');
   return text;
+}
+
+function foldPlace(value) {
+  return String(value || '').normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+}
+
+export function cityIfNew(name, city) {
+  const shown = placeEs(city);
+  const title = placeEs(name);
+  if (!shown || shown === 'sin dato') return '';
+  const core = foldPlace(String(shown).split(',')[0].trim());
+  if (core && foldPlace(title).includes(core)) return '';
+  return shown;
 }
 
 export function surfaceEs(value) {
