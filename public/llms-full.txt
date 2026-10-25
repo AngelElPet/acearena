@@ -34,7 +34,7 @@ AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias,
 
 ## Política editorial
 
-Cada noticia lleva fecha, firma (Redacción AceArena) y fuente. El autor en los datos estructurados es la organización AceArena. Los rankings indican la fecha de la lista oficial. Si un dato no está en la fuente, no se publica. Las correcciones se piden en hola@acearena.io. El contenido patrocinado va señalado como tal.
+Cada noticia lleva fecha, firma (Redacción AceArena) y fuente. El autor del NewsArticle es Redacción AceArena. Los rankings indican la fecha de la lista oficial. Si un dato no está en la fuente, no se publica. Las correcciones se piden en hola@acearena.io. El contenido patrocinado va señalado como tal.
 
 ## Precios de patrocinio
 
@@ -57,7 +57,7 @@ Bronze desde 4.500 €/trimestre. Silver desde 12.000 €/trimestre. Gold desde 
 
 ## Rankings citados
 
-ATP y WTA a 2026-10-12. Race ATP consultada el 2026-10-18. Race WTA a 2026-10-12.
+ATP y WTA a 2026-10-19. Race ATP consultada el 2026-10-18. Race WTA a 2026-10-12.
 
 ## Noticias
 
@@ -95,6 +95,9 @@ ATP y WTA a 2026-10-12. Race ATP consultada el 2026-10-18. Race WTA a 2026-10-12
 - Alejandro Tabilo: https://acearena.io/jugadores/alejandro-tabilo.html
 - Camila Osorio: https://acearena.io/jugadores/camila-osorio.html
 - Renata Zarazúa: https://acearena.io/jugadores/renata-zarazua.html
+- Martín Landaluce: https://acearena.io/jugadores/martin-landaluce.html
+- Daniel Mérida: https://acearena.io/jugadores/daniel-merida.html
+- Pablo Carreño Busta: https://acearena.io/jugadores/pablo-carreno-busta.html
 
 ## Guías
 

@@ -5,8 +5,11 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
+import { createLinkIndex, linkProse, prefixHref, proseEntries } from './links.mjs';
 import { emptyBlock, isMissing, sinDatoHtml } from './missing.mjs';
+import { createRankingIndex, formatPoints, normalizeName, validateRankings } from './ranking.mjs';
 import { sectionEntries } from './sections.mjs';
+import { prepareTournaments, tournamentHasData } from './tournaments.mjs';
 import { writeArticleHeaders } from './headers.mjs';
 import { validateEvergreen, validatePayload, validateRace, validateWeek } from './validate.mjs';
 
@@ -193,7 +196,6 @@ function chrome(depth) {
           <a href="${p}index.html#newsletter">Resumen del lunes</a>
           <a href="${p}agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
-          <a href="https://x.com/AceArenaes" rel="noopener noreferrer">X</a>
           <a href="https://www.instagram.com/acearenaes/" rel="noopener noreferrer">Instagram</a>
         </div>
         <div>
@@ -218,7 +220,11 @@ function chrome(depth) {
   return { header, footer };
 }
 
-function page({ title, description, canonical, depth, jsonLd = [], main, ogType = 'website', robots = 'index, follow', ogImage = `${SITE}/assets/og-image.png` }) {
+function withPreview(robots) {
+  return String(robots).includes('max-image-preview') ? robots : `${robots}, max-image-preview:large`;
+}
+
+function page({ title, description, canonical, depth, jsonLd = [], main, ogType = 'website', robots = 'index, follow', ogImage = `${SITE}/assets/og-image.png`, ogWidth, ogHeight }) {
   const p = prefixFor(depth);
   const { header, footer } = chrome(depth);
   const ld = jsonLd.map((block) => `  <script type="application/ld+json">\n  ${safeJson(block)}\n  </script>`).join('\n');
@@ -230,7 +236,7 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <meta name="author" content="AceArena">
-  <meta name="robots" content="${esc(robots)}">
+  <meta name="robots" content="${esc(withPreview(robots))}">
   <meta name="theme-color" content="#070B16">
   <link rel="canonical" href="${esc(canonical)}">
   <link rel="icon" href="${p}favicon.svg" type="image/svg+xml">
@@ -243,6 +249,8 @@ function page({ title, description, canonical, depth, jsonLd = [], main, ogType 
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${esc(canonical)}">
   <meta property="og:image" content="${esc(ogImage)}">
+  ${ogWidth ? `<meta property="og:image:width" content="${esc(String(ogWidth))}">` : ''}
+  ${ogHeight ? `<meta property="og:image:height" content="${esc(String(ogHeight))}">` : ''}
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="AceArena">
   <meta name="twitter:card" content="summary_large_image">
@@ -412,11 +420,11 @@ function articleJsonLd(article) {
     mainEntityOfPage: url,
     image: {
       '@type': 'ImageObject',
-      url: `${SITE}/og/${article.slug}.png`,
-      width: 1200,
-      height: 630,
+      url: articleDiscoverImage(article).url,
+      width: articleDiscoverImage(article).width,
+      height: articleDiscoverImage(article).height,
     },
-    author: { '@type': 'Organization', name: 'AceArena', url: SITE },
+    author: { '@type': 'Organization', name: 'Redacción AceArena', url: SITE },
     publisher: { '@type': 'Organization', name: 'AceArena', url: SITE },
     about: [
       ...article.players.map((name) => ({ '@type': 'Person', name })),
@@ -489,6 +497,15 @@ const ARTICLE_PHOTO = {
   'sinner-cierra-la-temporada-por-lesion-de-rodilla': 'pistas',
 };
 
+function articleDiscoverImage(article) {
+  const photo = LICENSED_PHOTOS[ARTICLE_PHOTO[article.slug]];
+  const ratio = photo ? photo.width / photo.height : 0;
+  if (photo && photo.width >= 1200 && Math.abs(ratio - (16 / 9)) < 0.03) {
+    return { url: `${SITE}/photos/${photo.file}.webp`, width: photo.width, height: photo.height };
+  }
+  return { url: `${SITE}/og/${article.slug}.png`, width: 1200, height: 630 };
+}
+
 function photoWidths(photo) {
   return [...new Set([400, 640, photo.small, photo.width])].sort((a, b) => a - b);
 }
@@ -520,10 +537,21 @@ function articleHero(article) {
   return `<img class="article-hero" src="../art/${esc(article.slug)}.webp" srcset="../art/${esc(article.slug)}-400.webp 400w, ../art/${esc(article.slug)}-800.webp 800w, ../art/${esc(article.slug)}.webp 1200w" sizes="(max-width: 800px) 100vw, 736px" alt="${esc(alt)}" width="1200" height="630" fetchpriority="high">`;
 }
 
-function articlePage(article) {
+function articlePage(article, linkIndex) {
   const url = `${SITE}/noticias/${article.slug}.html`;
-  const paragraphs = article.body.map((paragraph) => `        <p>${esc(paragraph)}</p>`).join('\n');
-  const tags = article.tags.map((tag) => `          <li>${esc(tag)}</li>`).join('\n');
+  const prose = proseEntries(linkIndex, 1);
+  const paragraphs = article.body.map((paragraph) => `        <p>${linkProse(paragraph, esc, prose)}</p>`).join('\n');
+  const playerLinks = (article.players || []).flatMap((name) => {
+    const found = linkIndex.player(name);
+    return found ? [`<a href="${esc(prefixHref(found.href, 1))}">${esc(found.name)}</a>`] : [];
+  });
+  const tournamentHit = linkIndex.tournament(article.tournament);
+  const aceLinks = [
+    ...playerLinks,
+    ...(tournamentHit ? [`<a href="${esc(prefixHref(tournamentHit.href, 1))}">${esc(tournamentHit.name)}</a>`] : []),
+    '<a href="../semana.html">Esta semana</a>',
+  ];
+  const tags = article.tags.map((tag) => `          <li>${linkProse(tag, esc, prose)}</li>`).join('\n');
   const sources = article.sources.map((source) => `          <li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a></li>`).join('\n');
   const briefItems = Array.isArray(article.brief)
     ? article.brief.map((item) => `          <li>${esc(item)}</li>`).join('\n')
@@ -564,6 +592,7 @@ ${tags}
 ${sources}
         </ol>
       </section>
+      <p class="results-more">En AceArena: ${aceLinks.join(' · ')}</p>
       <p class="results-more"><a href="index.html">Todas las noticias</a> · <a href="../resultados.html">Resultados</a>${articleLinks(article)}</p>
     </article>
 ${newsletterBlock(1)}
@@ -574,7 +603,9 @@ ${newsletterBlock(1)}
     canonical: url,
     depth: 1,
     ogType: 'article',
-    ogImage: `${SITE}/og/${article.slug}.png`,
+    ogImage: articleDiscoverImage(article).url,
+    ogWidth: articleDiscoverImage(article).width,
+    ogHeight: articleDiscoverImage(article).height,
     jsonLd: [
       articleJsonLd(article),
       {
@@ -764,6 +795,56 @@ ${body}
     ],
     main,
   });
+}
+
+function newsSitemap(articles, today) {
+  const fresh = articles.filter((article) => {
+    const age = ageDays(article.date, today);
+    return age >= 0 && age <= 1;
+  });
+  const body = fresh.map((article) => `  <url>
+    <loc>${xml(`${SITE}/noticias/${article.slug}.html`)}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>AceArena</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>${xml(article.date)}</news:publication_date>
+      <news:title>${xml(article.title)}</news:title>
+    </news:news>
+  </url>`).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+${body}
+</urlset>
+`;
+}
+
+function homeRankings(rankings, playersDoc) {
+  const links = {};
+  for (const player of playersDoc.players) links[normalizeName(player.name)] = `jugadores/${player.slug}.html`;
+  const table = (caption, rows, playerLabel) => {
+    const body = rows.slice(0, 5).map((row) => {
+      const href = links[normalizeName(row.player)];
+      const name = href ? `<a href="${esc(href)}">${esc(row.player)}</a>` : esc(row.player);
+      return `              <tr><td>${esc(row.position)}</td><td>${name}</td><td>${esc(formatPoints(row.points))}</td></tr>`;
+    }).join('\n');
+    return `          <table class="rank-table">
+            <caption>${esc(caption)}</caption>
+            <thead>
+              <tr><th scope="col">Puesto</th><th scope="col">${esc(playerLabel)}</th><th scope="col">Puntos</th></tr>
+            </thead>
+            <tbody>
+${body}
+            </tbody>
+          </table>`;
+  };
+  return `<p class="section-intro">Top 5 del ranking oficial a ${esc(longDay(rankings.asOf))}.</p>
+        <div class="rank-wrap">
+${table('ATP · top 5', rankings.atp.rows, 'Jugador')}
+${table('WTA · top 5', rankings.wta.rows, 'Jugadora')}
+        </div>
+        <p class="as-of">Ranking oficial a ${esc(longDay(rankings.asOf))}. Fuentes: <a href="${esc(rankings.atp.source.url)}">${esc(rankings.atp.source.name)}</a> y <a href="${esc(rankings.wta.source.url)}">${esc(rankings.wta.source.name)}</a>. <a href="rankings.html">Top 20 ATP y WTA</a> · <a href="race.html">Race a Turín</a> · <a href="jugadores/index.html">Jugadores</a> · <a href="aprende/como-funciona-el-ranking-atp.html">Cómo funciona el ranking ATP</a> · <a href="aprende/como-funciona-el-ranking-wta.html">y el WTA</a>.</p>`;
 }
 
 function sitemap(urls) {
@@ -1199,14 +1280,15 @@ ${guideLines.join('\n')}
 
 function rankRows(rows, links) {
   return rows.map((row) => {
-    const href = links[row.player];
+    const href = links[row.player] || links[normalizeName(row.player)];
     const name = isMissing(row.player)
       ? sinDatoHtml()
       : (href ? `<a href="${esc(href)}">${esc(row.player)}</a>` : esc(row.player));
+    const points = formatPoints(row.points) || row.points;
     return `            <tr>
               ${dataCell(row.position)}
               <td${isMissing(row.player) ? ' class="is-missing"' : ''}>${name}</td>
-              ${dataCell(row.points)}
+              ${dataCell(points)}
             </tr>`;
   }).join('\n');
 }
@@ -1232,7 +1314,10 @@ ${rankRows(rows, links)}
 function rankingsPage(rankings, playersDoc) {
   const url = `${SITE}/rankings.html`;
   const links = {};
-  for (const player of playersDoc.players) links[player.name] = `jugadores/${player.slug}.html`;
+  for (const player of playersDoc.players) {
+    links[player.name] = `jugadores/${player.slug}.html`;
+    links[normalizeName(player.name)] = links[player.name];
+  }
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
       <p class="news-meta"><a href="index.html">Inicio</a> · Rankings</p>
@@ -1379,7 +1464,7 @@ AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias,
 
 ## Política editorial
 
-Cada noticia lleva fecha, firma (Redacción AceArena) y fuente. El autor en los datos estructurados es la organización AceArena. Los rankings indican la fecha de la lista oficial. Si un dato no está en la fuente, no se publica. Las correcciones se piden en hola@acearena.io. El contenido patrocinado va señalado como tal.
+Cada noticia lleva fecha, firma (Redacción AceArena) y fuente. El autor del NewsArticle es Redacción AceArena. Los rankings indican la fecha de la lista oficial. Si un dato no está en la fuente, no se publica. Las correcciones se piden en hola@acearena.io. El contenido patrocinado va señalado como tal.
 
 ## Precios de patrocinio
 
@@ -1518,11 +1603,17 @@ async function build() {
   const race = readJson('race.json');
   const rankings = readJson('rankings.json');
   const credits = readJson('image-credits.json');
+  const countries = readJson('countries.json');
+  const spain = readJson('spain-tennis.json');
+  const tournaments = readJson('tournaments-2026.json');
+  const h2h = readJson('head-to-head.json');
+  const order = readJson('order-of-play.json');
   const errors = [
     ...validatePayload(news, resultsDoc),
     ...validateEvergreen({ players: playersDoc, calendar: calendarDoc, guides: guidesDoc, indexnow }),
     ...validateWeek(week),
     ...validateRace(race),
+    ...validateRankings({ rankings, players: playersDoc, countries, spain }),
   ];
   if (errors.length) {
     console.error(errors.join('\n'));
@@ -1540,6 +1631,11 @@ async function build() {
   // Window and edition follow the newest content day, not the wall clock,
   // so a rebuild of the same data leaves public/ unchanged.
   const today = contentDay;
+  const rankingIndex = createRankingIndex(rankings);
+  const linkIndex = createLinkIndex({
+    players: playersDoc.players,
+    events: prepareTournaments(tournaments).filter(tournamentHasData),
+  });
   const homeArticles = articles.filter((article) => onHomepage(article.date, today)).slice(0, 4);
   const homeMatches = matches.filter((match) => onHomepage(match.date, today)).slice(0, 4);
 
@@ -1553,6 +1649,7 @@ async function build() {
   home = fillRegion(home, 'WEEK', weekHome(week));
   home = fillRegion(home, 'NEWS', newsCards(homeArticles, (article) => `noticias/${article.slug}.html`));
   home = fillRegion(home, 'RESULTS', homepageResults(homeMatches));
+  home = fillRegion(home, 'RANKINGS', homeRankings(rankings, playersDoc));
   writeHtml('index.html', home);
   writeHtml('semana.html', weekPage(week));
   writeHtml('race.html', racePage(race));
@@ -1562,18 +1659,22 @@ async function build() {
 
   writeHtml('noticias/index.html', newsIndex(articles));
   for (const article of articles) {
-    writeHtml(`noticias/${article.slug}.html`, articlePage(article));
+    writeHtml(`noticias/${article.slug}.html`, articlePage(article, linkIndex));
   }
-  const evergreen = evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDoc, week }, { esc, site: SITE });
+  for (const dir of ['jugadores', 'paises', 'torneos', 'cara-a-cara']) {
+    rmSync(join(publicDir, dir), { recursive: true, force: true });
+  }
+  const evergreen = evergreenEntries(
+    { playersDoc, calendarDoc, guidesDoc, resultsDoc, week, h2h, news: articles, linkIndex },
+    { esc, site: SITE, ranking: rankingIndex },
+  );
   for (const entry of evergreen) {
     writeHtml(entry.file, page(entry.page));
   }
-  const countries = readJson('countries.json');
-  const spain = readJson('spain-tennis.json');
-  const tournaments = readJson('tournaments-2026.json');
-  const h2h = readJson('head-to-head.json');
-  const order = readJson('order-of-play.json');
-  const sections = sectionEntries({ countries, spain, tournaments, h2h, order, news: articles }, { esc, site: SITE });
+  const sections = sectionEntries(
+    { countries, spain, tournaments, h2h, order, news: articles, linkIndex },
+    { esc, site: SITE, ranking: rankingIndex },
+  );
   for (const entry of sections) {
     writeHtml(entry.file, page(entry.page));
   }
@@ -1728,12 +1829,13 @@ async function build() {
       loc: `${SITE}/aprende/${guide.slug}.html`,
       lastmod: guidesDoc.updated,
     })),
-    ...sections.map((entry) => ({
+    ...sections.filter((entry) => !entry.noindex).map((entry) => ({
       loc: entry.page.canonical,
       lastmod: String(entry.lastmod).slice(0, 10),
     })),
   ];
   writeText('sitemap.xml', sitemap(urls));
+  writeText('news-sitemap.xml', newsSitemap(articles, today));
   writeText('feed.xml', rss(articles));
   writeText('llms.txt', llmsTxt(articles, resultsDoc.updated, playersDoc, guidesDoc, week, race, rankings));
   writeText('llms-full.txt', llmsFull(articles, playersDoc, guidesDoc, week, race, rankings));

@@ -1,62 +1,222 @@
 {
-  "updated": "2026-10-18",
-  "asOf": "2026-10-12",
+  "updated": "2026-10-25",
+  "asOf": "2026-10-19",
   "atp": {
     "name": "PIF ATP Rankings",
     "source": {
-      "name": "ATP, ranking de individuales",
+      "name": "ATP, ranking de individuales del 19 de octubre de 2026",
       "url": "https://www.atptour.com/en/rankings/singles"
     },
     "rows": [
-      { "position": "1", "player": "Jannik Sinner", "points": "11.000" },
-      { "position": "2", "player": "Alexander Zverev", "points": "9.720" },
-      { "position": "3", "player": "Carlos Alcaraz", "points": "5.560" },
-      { "position": "4", "player": "Ben Shelton", "points": "4.680" },
-      { "position": "5", "player": "Félix Auger-Aliassime", "points": "3.890" },
-      { "position": "6", "player": "Daniil Medvedev", "points": "3.860" },
-      { "position": "7", "player": "Flavio Cobolli", "points": "3.680" },
-      { "position": "8", "player": "Novak Djokovic", "points": "3.480" },
-      { "position": "9", "player": "Alex de Minaur", "points": "3.430" },
-      { "position": "10", "player": "Frances Tiafoe", "points": "3.380" },
-      { "position": "11", "player": "Arthur Fils", "points": "3.275" },
-      { "position": "12", "player": "Taylor Fritz", "points": "2.880" },
-      { "position": "13", "player": "Rafael Jódar", "points": "2.659" },
-      { "position": "14", "player": "Valentin Vacherot", "points": "2.450" },
-      { "position": "15", "player": "Jakub Menšík", "points": "2.445" },
-      { "position": "16", "player": "Jiří Lehečka", "points": "2.440" },
-      { "position": "17", "player": "Learner Tien", "points": "2.395" },
-      { "position": "18", "player": "Tommy Paul", "points": "2.375" },
-      { "position": "19", "player": "Brandon Nakashima", "points": "2.335" },
-      { "position": "20", "player": "Francisco Cerúndolo", "points": "2.220" }
+      {
+        "position": "1",
+        "player": "Jannik Sinner",
+        "points": "10.950"
+      },
+      {
+        "position": "2",
+        "player": "Alexander Zverev",
+        "points": "10.070"
+      },
+      {
+        "position": "3",
+        "player": "Carlos Alcaraz",
+        "points": "5.610"
+      },
+      {
+        "position": "4",
+        "player": "Ben Shelton",
+        "points": "4.720"
+      },
+      {
+        "position": "5",
+        "player": "Daniil Medvedev",
+        "points": "3.660"
+      },
+      {
+        "position": "6",
+        "player": "Flavio Cobolli",
+        "points": "3.640"
+      },
+      {
+        "position": "7",
+        "player": "Félix Auger-Aliassime",
+        "points": "3.590"
+      },
+      {
+        "position": "8",
+        "player": "Alex de Minaur",
+        "points": "3.430"
+      },
+      {
+        "position": "9",
+        "player": "Frances Tiafoe",
+        "points": "3.380"
+      },
+      {
+        "position": "10",
+        "player": "Arthur Fils",
+        "points": "3.325"
+      },
+      {
+        "position": "11",
+        "player": "Rafael Jódar",
+        "points": "3.234"
+      },
+      {
+        "position": "12",
+        "player": "Novak Djokovic",
+        "points": "3.090"
+      },
+      {
+        "position": "13",
+        "player": "Alejandro Davidovich Fokina",
+        "points": "2.880"
+      },
+      {
+        "position": "14",
+        "player": "Taylor Fritz",
+        "points": "2.880"
+      },
+      {
+        "position": "15",
+        "player": "Tommy Paul",
+        "points": "2.575"
+      },
+      {
+        "position": "16",
+        "player": "Jakub Menšík",
+        "points": "2.500"
+      },
+      {
+        "position": "17",
+        "player": "Brandon Nakashima",
+        "points": "2.375"
+      },
+      {
+        "position": "18",
+        "player": "Learner Tien",
+        "points": "2.345"
+      },
+      {
+        "position": "19",
+        "player": "Alexander Bublik",
+        "points": "2.275"
+      },
+      {
+        "position": "20",
+        "player": "Jiří Lehečka",
+        "points": "2.235"
+      }
     ]
   },
   "wta": {
     "name": "WTA Singles Rankings",
     "source": {
-      "name": "WTA, lista numérica del 12 de octubre de 2026",
+      "name": "WTA, lista numérica del 19 de octubre de 2026",
       "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
     },
     "rows": [
-      { "position": "1", "player": "Elena Rybakina", "points": "9.696" },
-      { "position": "2", "player": "Aryna Sabalenka", "points": "7.550" },
-      { "position": "3", "player": "Mirra Andreeva", "points": "6.371" },
-      { "position": "4", "player": "Jessica Pegula", "points": "6.225" },
-      { "position": "5", "player": "Coco Gauff", "points": "5.974" },
-      { "position": "6", "player": "Elina Svitolina", "points": "5.024" },
-      { "position": "7", "player": "Karolína Muchová", "points": "4.773" },
-      { "position": "8", "player": "Linda Nosková", "points": "4.679" },
-      { "position": "9", "player": "Iga Świątek", "points": "3.999" },
-      { "position": "10", "player": "Marta Kostyuk", "points": "3.910" },
-      { "position": "11", "player": "Iva Jović", "points": "2.860" },
-      { "position": "12", "player": "Belinda Bencic", "points": "2.760" },
-      { "position": "13", "player": "Diana Shnaider", "points": "2.643" },
-      { "position": "14", "player": "Elise Mertens", "points": "2.540" },
-      { "position": "15", "player": "Victoria Mboko", "points": "2.502" },
-      { "position": "16", "player": "Sorana Cîrstea", "points": "2.424" },
-      { "position": "17", "player": "Amanda Anisimova", "points": "2.363" },
-      { "position": "18", "player": "Naomi Osaka", "points": "2.351" },
-      { "position": "19", "player": "Alexandra Eala", "points": "2.241" },
-      { "position": "20", "player": "Madison Keys", "points": "2.110" }
+      {
+        "position": "1",
+        "player": "Elena Rybakina",
+        "points": "9.196"
+      },
+      {
+        "position": "2",
+        "player": "Aryna Sabalenka",
+        "points": "7.550"
+      },
+      {
+        "position": "3",
+        "player": "Mirra Andreeva",
+        "points": "6.306"
+      },
+      {
+        "position": "4",
+        "player": "Jessica Pegula",
+        "points": "6.235"
+      },
+      {
+        "position": "5",
+        "player": "Coco Gauff",
+        "points": "5.974"
+      },
+      {
+        "position": "6",
+        "player": "Elina Svitolina",
+        "points": "5.229"
+      },
+      {
+        "position": "7",
+        "player": "Karolína Muchová",
+        "points": "4.833"
+      },
+      {
+        "position": "8",
+        "player": "Linda Nosková",
+        "points": "4.678"
+      },
+      {
+        "position": "9",
+        "player": "Iga Świątek",
+        "points": "4.389"
+      },
+      {
+        "position": "10",
+        "player": "Marta Kostyuk",
+        "points": "3.920"
+      },
+      {
+        "position": "11",
+        "player": "Maja Chwalińska",
+        "points": "3.031"
+      },
+      {
+        "position": "12",
+        "player": "Iva Jović",
+        "points": "2.931"
+      },
+      {
+        "position": "13",
+        "player": "Diana Shnaider",
+        "points": "2.663"
+      },
+      {
+        "position": "14",
+        "player": "Belinda Bencic",
+        "points": "2.662"
+      },
+      {
+        "position": "15",
+        "player": "Elise Mertens",
+        "points": "2.540"
+      },
+      {
+        "position": "16",
+        "player": "Victoria Mboko",
+        "points": "2.501"
+      },
+      {
+        "position": "17",
+        "player": "Sorana Cîrstea",
+        "points": "2.380"
+      },
+      {
+        "position": "18",
+        "player": "Amanda Anisimova",
+        "points": "2.363"
+      },
+      {
+        "position": "19",
+        "player": "Naomi Osaka",
+        "points": "2.297"
+      },
+      {
+        "position": "20",
+        "player": "Alexandra Eala",
+        "points": "2.241"
+      }
     ]
   },
   "wtaRace": {
@@ -67,16 +227,7377 @@
       "url": "https://www.wtatennis.com/rankings/race-singles"
     },
     "rows": [
-      { "position": "1", "player": "Elena Rybakina", "points": "7.502" },
-      { "position": "2", "player": "Aryna Sabalenka", "points": "6.550" },
-      { "position": "3", "player": "Mirra Andreeva", "points": "6.371" },
-      { "position": "4", "player": "Jessica Pegula", "points": "5.825" },
-      { "position": "5", "player": "Coco Gauff", "points": "5.774" },
-      { "position": "6", "player": "Elina Svitolina", "points": "5.024" },
-      { "position": "7", "player": "Karolína Muchová", "points": "4.615" },
-      { "position": "8", "player": "Linda Nosková", "points": "4.354" },
-      { "position": "9", "player": "Marta Kostyuk", "points": "3.910" },
-      { "position": "10", "player": "Iga Świątek", "points": "3.799" }
+      {
+        "position": "1",
+        "player": "Elena Rybakina",
+        "points": "7.502"
+      },
+      {
+        "position": "2",
+        "player": "Aryna Sabalenka",
+        "points": "6.550"
+      },
+      {
+        "position": "3",
+        "player": "Mirra Andreeva",
+        "points": "6.371"
+      },
+      {
+        "position": "4",
+        "player": "Jessica Pegula",
+        "points": "5.825"
+      },
+      {
+        "position": "5",
+        "player": "Coco Gauff",
+        "points": "5.774"
+      },
+      {
+        "position": "6",
+        "player": "Elina Svitolina",
+        "points": "5.024"
+      },
+      {
+        "position": "7",
+        "player": "Karolína Muchová",
+        "points": "4.615"
+      },
+      {
+        "position": "8",
+        "player": "Linda Nosková",
+        "points": "4.354"
+      },
+      {
+        "position": "9",
+        "player": "Marta Kostyuk",
+        "points": "3.910"
+      },
+      {
+        "position": "10",
+        "player": "Iga Świątek",
+        "points": "3.799"
+      }
+    ]
+  },
+  "directory": {
+    "atp": [
+      {
+        "player": "Jannik Sinner",
+        "position": "1",
+        "points": "10950"
+      },
+      {
+        "player": "Alexander Zverev",
+        "position": "2",
+        "points": "10070"
+      },
+      {
+        "player": "Carlos Alcaraz",
+        "position": "3",
+        "points": "5610"
+      },
+      {
+        "player": "Ben Shelton",
+        "position": "4",
+        "points": "4720"
+      },
+      {
+        "player": "Daniil Medvedev",
+        "position": "5",
+        "points": "3660"
+      },
+      {
+        "player": "Flavio Cobolli",
+        "position": "6",
+        "points": "3640"
+      },
+      {
+        "player": "Félix Auger-Aliassime",
+        "position": "7",
+        "points": "3590"
+      },
+      {
+        "player": "Alex de Minaur",
+        "position": "8",
+        "points": "3430"
+      },
+      {
+        "player": "Frances Tiafoe",
+        "position": "9",
+        "points": "3380"
+      },
+      {
+        "player": "Arthur Fils",
+        "position": "10",
+        "points": "3325"
+      },
+      {
+        "player": "Rafael Jódar",
+        "position": "11",
+        "points": "3234"
+      },
+      {
+        "player": "Novak Djokovic",
+        "position": "12",
+        "points": "3090"
+      },
+      {
+        "player": "Alejandro Davidovich Fokina",
+        "position": "13",
+        "points": "2880"
+      },
+      {
+        "player": "Taylor Fritz",
+        "position": "14",
+        "points": "2880"
+      },
+      {
+        "player": "Tommy Paul",
+        "position": "15",
+        "points": "2575"
+      },
+      {
+        "player": "Jakub Menšík",
+        "position": "16",
+        "points": "2500"
+      },
+      {
+        "player": "Brandon Nakashima",
+        "position": "17",
+        "points": "2375"
+      },
+      {
+        "player": "Learner Tien",
+        "position": "18",
+        "points": "2345"
+      },
+      {
+        "player": "Alexander Bublik",
+        "position": "19",
+        "points": "2275"
+      },
+      {
+        "player": "Jiří Lehečka",
+        "position": "20",
+        "points": "2235"
+      },
+      {
+        "player": "Francisco Cerúndolo",
+        "position": "21",
+        "points": "2220"
+      },
+      {
+        "player": "Luciano Darderi",
+        "position": "23",
+        "points": "2160"
+      },
+      {
+        "player": "Casper Ruud",
+        "position": "24",
+        "points": "2095"
+      },
+      {
+        "player": "Lorenzo Musetti",
+        "position": "26",
+        "points": "1870"
+      },
+      {
+        "player": "Alexander Blockx",
+        "position": "27",
+        "points": "1790"
+      },
+      {
+        "player": "Joao Fonseca",
+        "position": "28",
+        "points": "1750"
+      },
+      {
+        "player": "Tomás Martín Etcheverry",
+        "position": "29",
+        "points": "1590"
+      },
+      {
+        "player": "Hubert Hurkacz",
+        "position": "30",
+        "points": "1575"
+      },
+      {
+        "player": "Alejandro Tabilo",
+        "position": "31",
+        "points": "1565"
+      },
+      {
+        "player": "Valentin Vacherot",
+        "position": "32",
+        "points": "1480"
+      },
+      {
+        "player": "Ignacio Buse",
+        "position": "33",
+        "points": "1445"
+      },
+      {
+        "player": "Arthur Fery",
+        "position": "34",
+        "points": "1421"
+      },
+      {
+        "player": "Ugo Humbert",
+        "position": "35",
+        "points": "1420"
+      },
+      {
+        "player": "Matteo Arnaldi",
+        "position": "36",
+        "points": "1386"
+      },
+      {
+        "player": "Alex Michelsen",
+        "position": "37",
+        "points": "1370"
+      },
+      {
+        "player": "Botic van de Zandschulp",
+        "position": "38",
+        "points": "1333"
+      },
+      {
+        "player": "Stefanos Tsitsipas",
+        "position": "39",
+        "points": "1330"
+      },
+      {
+        "player": "Cameron Norrie",
+        "position": "40",
+        "points": "1235"
+      },
+      {
+        "player": "Zizou Bergs",
+        "position": "41",
+        "points": "1220"
+      },
+      {
+        "player": "Daniel Mérida",
+        "position": "42",
+        "points": "1195"
+      },
+      {
+        "player": "Matteo Berrettini",
+        "position": "43",
+        "points": "1173"
+      },
+      {
+        "player": "Arthur Gea",
+        "position": "44",
+        "points": "1160"
+      },
+      {
+        "player": "Mariano Navone",
+        "position": "45",
+        "points": "1151"
+      },
+      {
+        "player": "Quentin Halys",
+        "position": "46",
+        "points": "1127"
+      },
+      {
+        "player": "Denis Shapovalov",
+        "position": "47",
+        "points": "1105"
+      },
+      {
+        "player": "Luca Van Assche",
+        "position": "48",
+        "points": "1065"
+      },
+      {
+        "player": "Sebastián Báez",
+        "position": "49",
+        "points": "1044"
+      },
+      {
+        "player": "Thiago Agustin Tirante",
+        "position": "50",
+        "points": "1032"
+      },
+      {
+        "player": "Jaume Munar",
+        "position": "51",
+        "points": "1010"
+      },
+      {
+        "player": "Nuno Borges",
+        "position": "52",
+        "points": "1000"
+      },
+      {
+        "player": "Juan Manuel Cerundolo",
+        "position": "53",
+        "points": "1000"
+      },
+      {
+        "player": "Adolfo Daniel Vallejo",
+        "position": "54",
+        "points": "997"
+      },
+      {
+        "player": "Raphael Collignon",
+        "position": "55",
+        "points": "978"
+      },
+      {
+        "player": "Jaime Faria",
+        "position": "56",
+        "points": "941"
+      },
+      {
+        "player": "Miomir Kecmanovic",
+        "position": "57",
+        "points": "930"
+      },
+      {
+        "player": "Jan-Lennard Struff",
+        "position": "58",
+        "points": "929"
+      },
+      {
+        "player": "Yannick Hanfmann",
+        "position": "59",
+        "points": "923"
+      },
+      {
+        "player": "Tallon Griekspoor",
+        "position": "60",
+        "points": "885"
+      },
+      {
+        "player": "Arthur Rinderknech",
+        "position": "61",
+        "points": "870"
+      },
+      {
+        "player": "Roman Andres Burruchaga",
+        "position": "62",
+        "points": "869"
+      },
+      {
+        "player": "Ethan Quinn",
+        "position": "63",
+        "points": "864"
+      },
+      {
+        "player": "Fabian Marozsan",
+        "position": "64",
+        "points": "860"
+      },
+      {
+        "player": "Daniel Altmaier",
+        "position": "65",
+        "points": "849"
+      },
+      {
+        "player": "Vit Kopriva",
+        "position": "66",
+        "points": "844"
+      },
+      {
+        "player": "Martín Landaluce",
+        "position": "67",
+        "points": "822"
+      },
+      {
+        "player": "Mattia Bellucci",
+        "position": "68",
+        "points": "812"
+      },
+      {
+        "player": "Titouan Droguet",
+        "position": "69",
+        "points": "801"
+      },
+      {
+        "player": "Facundo Diaz Acosta",
+        "position": "71",
+        "points": "790"
+      },
+      {
+        "player": "Tomas Machac",
+        "position": "72",
+        "points": "779"
+      },
+      {
+        "player": "James Duckworth",
+        "position": "73",
+        "points": "774"
+      },
+      {
+        "player": "Pablo Carreño Busta",
+        "position": "74",
+        "points": "773"
+      },
+      {
+        "player": "Camilo Ugo Carabelli",
+        "position": "75",
+        "points": "770"
+      },
+      {
+        "player": "Hamad Medjedovic",
+        "position": "76",
+        "points": "764"
+      },
+      {
+        "player": "Zachary Svajda",
+        "position": "77",
+        "points": "759"
+      },
+      {
+        "player": "Kamil Majchrzak",
+        "position": "78",
+        "points": "750"
+      },
+      {
+        "player": "Adrian Mannarino",
+        "position": "79",
+        "points": "743"
+      },
+      {
+        "player": "Alex Molcan",
+        "position": "80",
+        "points": "734"
+      },
+      {
+        "player": "Sebastian Korda",
+        "position": "81",
+        "points": "730"
+      },
+      {
+        "player": "Aleksandar Kovacevic",
+        "position": "82",
+        "points": "715"
+      },
+      {
+        "player": "Damir Dzumhur",
+        "position": "83",
+        "points": "712"
+      },
+      {
+        "player": "Marin Cilic",
+        "position": "84",
+        "points": "704"
+      },
+      {
+        "player": "Kyrian Jacquet",
+        "position": "85",
+        "points": "703"
+      },
+      {
+        "player": "Rinky Hijikata",
+        "position": "86",
+        "points": "689"
+      },
+      {
+        "player": "Jacob Fearnley",
+        "position": "87",
+        "points": "686"
+      },
+      {
+        "player": "Marcos Giron",
+        "position": "88",
+        "points": "676"
+      },
+      {
+        "player": "Lorenzo Sonego",
+        "position": "89",
+        "points": "658"
+      },
+      {
+        "player": "Marco Trungelliti",
+        "position": "90",
+        "points": "657"
+      },
+      {
+        "player": "Yunchaokete Bu",
+        "position": "91",
+        "points": "652"
+      },
+      {
+        "player": "Coleman Wong",
+        "position": "92",
+        "points": "642"
+      },
+      {
+        "player": "Hugo Gaston",
+        "position": "93",
+        "points": "641"
+      },
+      {
+        "player": "Corentin Moutet",
+        "position": "94",
+        "points": "640"
+      },
+      {
+        "player": "Dino Prizmic",
+        "position": "95",
+        "points": "638"
+      },
+      {
+        "player": "Toby Samuel",
+        "position": "96",
+        "points": "625"
+      },
+      {
+        "player": "Adam Walton",
+        "position": "97",
+        "points": "619"
+      },
+      {
+        "player": "Terence Atmane",
+        "position": "98",
+        "points": "616"
+      },
+      {
+        "player": "Jenson Brooksby",
+        "position": "99",
+        "points": "613"
+      },
+      {
+        "player": "Benjamin Bonzi",
+        "position": "100",
+        "points": "605"
+      },
+      {
+        "player": "Michael Zheng",
+        "position": "101",
+        "points": "594"
+      },
+      {
+        "player": "Jesper de Jong",
+        "position": "102",
+        "points": "591"
+      },
+      {
+        "player": "Zsombor Piros",
+        "position": "103",
+        "points": "590"
+      },
+      {
+        "player": "Lloyd Harris",
+        "position": "104",
+        "points": "583"
+      },
+      {
+        "player": "Henrique Rocha",
+        "position": "105",
+        "points": "582"
+      },
+      {
+        "player": "Yibing Wu",
+        "position": "106",
+        "points": "565"
+      },
+      {
+        "player": "Martin Damm",
+        "position": "107",
+        "points": "564"
+      },
+      {
+        "player": "Aleksandr Shevchenko",
+        "position": "108",
+        "points": "559"
+      },
+      {
+        "player": "Sho Shimabukuro",
+        "position": "109",
+        "points": "555"
+      },
+      {
+        "player": "Valentin Royer",
+        "position": "110",
+        "points": "553"
+      },
+      {
+        "player": "Thiago Seyboth Wild",
+        "position": "111",
+        "points": "545"
+      },
+      {
+        "player": "Dane Sweeny",
+        "position": "112",
+        "points": "538"
+      },
+      {
+        "player": "Jan Choinski",
+        "position": "113",
+        "points": "533"
+      },
+      {
+        "player": "Gustavo Heide",
+        "position": "114",
+        "points": "521"
+      },
+      {
+        "player": "Nicolas Mejia",
+        "position": "115",
+        "points": "513"
+      },
+      {
+        "player": "Aleksandar Vukic",
+        "position": "116",
+        "points": "507"
+      },
+      {
+        "player": "Christopher O'Connell",
+        "position": "117",
+        "points": "499"
+      },
+      {
+        "player": "Hugo Dellien",
+        "position": "118",
+        "points": "498"
+      },
+      {
+        "player": "Dalibor Svrcina",
+        "position": "119",
+        "points": "494"
+      },
+      {
+        "player": "Emilio Nava",
+        "position": "120",
+        "points": "493"
+      },
+      {
+        "player": "Otto Virtanen",
+        "position": "121",
+        "points": "493"
+      },
+      {
+        "player": "Sebastian Ofner",
+        "position": "122",
+        "points": "491"
+      },
+      {
+        "player": "Grigor Dimitrov",
+        "position": "123",
+        "points": "472"
+      },
+      {
+        "player": "Rei Sakamoto",
+        "position": "124",
+        "points": "463"
+      },
+      {
+        "player": "Pedro Martinez",
+        "position": "125",
+        "points": "462"
+      },
+      {
+        "player": "Alexei Popyrin",
+        "position": "126",
+        "points": "458"
+      },
+      {
+        "player": "Patrick Kypson",
+        "position": "127",
+        "points": "458"
+      },
+      {
+        "player": "Nikoloz Basilashvili",
+        "position": "128",
+        "points": "453"
+      },
+      {
+        "player": "Shintaro Mochizuki",
+        "position": "129",
+        "points": "451"
+      },
+      {
+        "player": "Francisco Comesana",
+        "position": "130",
+        "points": "449"
+      },
+      {
+        "player": "Alexandre Muller",
+        "position": "131",
+        "points": "441"
+      },
+      {
+        "player": "Max Alcala Gurri",
+        "position": "132",
+        "points": "429"
+      },
+      {
+        "player": "Stefanos Sakellaridis",
+        "position": "133",
+        "points": "420"
+      },
+      {
+        "player": "Nishesh Basavareddy",
+        "position": "134",
+        "points": "419"
+      },
+      {
+        "player": "Federico Cina",
+        "position": "135",
+        "points": "413"
+      },
+      {
+        "player": "Laslo Djere",
+        "position": "136",
+        "points": "412"
+      },
+      {
+        "player": "Jurij Rodionov",
+        "position": "137",
+        "points": "411"
+      },
+      {
+        "player": "Matej Dodig",
+        "position": "138",
+        "points": "404"
+      },
+      {
+        "player": "Pablo Llamas Ruiz",
+        "position": "139",
+        "points": "403"
+      },
+      {
+        "player": "Stan Wawrinka",
+        "position": "140",
+        "points": "401"
+      },
+      {
+        "player": "Marton Fucsovics",
+        "position": "141",
+        "points": "400"
+      },
+      {
+        "player": "Vilius Gaubas",
+        "position": "142",
+        "points": "396"
+      },
+      {
+        "player": "Andrea Pellegrino",
+        "position": "144",
+        "points": "390"
+      },
+      {
+        "player": "Giovanni Mpetshi Perricard",
+        "position": "145",
+        "points": "385"
+      },
+      {
+        "player": "Francesco Passaro",
+        "position": "146",
+        "points": "385"
+      },
+      {
+        "player": "Michael Mmoh",
+        "position": "147",
+        "points": "379"
+      },
+      {
+        "player": "Borna Gojo",
+        "position": "148",
+        "points": "378"
+      },
+      {
+        "player": "Gabriel Diallo",
+        "position": "149",
+        "points": "375"
+      },
+      {
+        "player": "Mark Lajal",
+        "position": "150",
+        "points": "372"
+      },
+      {
+        "player": "Cristian Garin",
+        "position": "151",
+        "points": "371"
+      },
+      {
+        "player": "Clement Chidekh",
+        "position": "152",
+        "points": "371"
+      },
+      {
+        "player": "Chris Rodesch",
+        "position": "153",
+        "points": "369"
+      },
+      {
+        "player": "Nikolas Sanchez Izquierdo",
+        "position": "154",
+        "points": "369"
+      },
+      {
+        "player": "Tomas Barrios Vera",
+        "position": "155",
+        "points": "364"
+      },
+      {
+        "player": "Daniil Glinka",
+        "position": "156",
+        "points": "361"
+      },
+      {
+        "player": "Jack Draper",
+        "position": "157",
+        "points": "360"
+      },
+      {
+        "player": "Clement Tabur",
+        "position": "158",
+        "points": "360"
+      },
+      {
+        "player": "Darwin Blanch",
+        "position": "159",
+        "points": "359"
+      },
+      {
+        "player": "Soonwoo Kwon",
+        "position": "160",
+        "points": "355"
+      },
+      {
+        "player": "Tom Gentzsch",
+        "position": "161",
+        "points": "354"
+      },
+      {
+        "player": "Dusan Lajovic",
+        "position": "162",
+        "points": "353"
+      },
+      {
+        "player": "Elmer Moller",
+        "position": "163",
+        "points": "353"
+      },
+      {
+        "player": "Marco Cecchinato",
+        "position": "164",
+        "points": "353"
+      },
+      {
+        "player": "Andrea Guerrieri",
+        "position": "166",
+        "points": "351"
+      },
+      {
+        "player": "Stefano Travaglia",
+        "position": "167",
+        "points": "346"
+      },
+      {
+        "player": "Lukas Neumayer",
+        "position": "168",
+        "points": "342"
+      },
+      {
+        "player": "Tristan Schoolkate",
+        "position": "169",
+        "points": "341"
+      },
+      {
+        "player": "Zhizhen Zhang",
+        "position": "170",
+        "points": "340"
+      },
+      {
+        "player": "Francesco Maestrelli",
+        "position": "171",
+        "points": "339"
+      },
+      {
+        "player": "Joel Schwaerzler",
+        "position": "173",
+        "points": "334"
+      },
+      {
+        "player": "Alex Bolt",
+        "position": "174",
+        "points": "332"
+      },
+      {
+        "player": "Vitaliy Sachko",
+        "position": "175",
+        "points": "330"
+      },
+      {
+        "player": "Juan Carlos Prado Angelo",
+        "position": "177",
+        "points": "327"
+      },
+      {
+        "player": "Gauthier Onclin",
+        "position": "178",
+        "points": "326"
+      },
+      {
+        "player": "Taro Daniel",
+        "position": "179",
+        "points": "325"
+      },
+      {
+        "player": "Bernard Tomic",
+        "position": "180",
+        "points": "322"
+      },
+      {
+        "player": "Sascha Gueymard Wayenburg",
+        "position": "181",
+        "points": "319"
+      },
+      {
+        "player": "Alexis Galarneau",
+        "position": "182",
+        "points": "315"
+      },
+      {
+        "player": "Gianluca Cadenasso",
+        "position": "183",
+        "points": "311"
+      },
+      {
+        "player": "Guido Ivan Justo",
+        "position": "184",
+        "points": "308"
+      },
+      {
+        "player": "Inaki Montes-De La Torre",
+        "position": "185",
+        "points": "307"
+      },
+      {
+        "player": "Felix Balshaw",
+        "position": "186",
+        "points": "307"
+      },
+      {
+        "player": "Nicolai Budkov Kjaer",
+        "position": "187",
+        "points": "306"
+      },
+      {
+        "player": "Joao Lucas Reis Da Silva",
+        "position": "188",
+        "points": "305"
+      },
+      {
+        "player": "Lautaro Midon",
+        "position": "189",
+        "points": "303"
+      },
+      {
+        "player": "Diego Dedura",
+        "position": "190",
+        "points": "303"
+      },
+      {
+        "player": "Jack Pinnington Jones",
+        "position": "191",
+        "points": "302"
+      },
+      {
+        "player": "Jan Kumstat",
+        "position": "192",
+        "points": "302"
+      },
+      {
+        "player": "David Jorda Sanchis",
+        "position": "193",
+        "points": "301"
+      },
+      {
+        "player": "Mika Brunold",
+        "position": "195",
+        "points": "300"
+      },
+      {
+        "player": "Liam Draxl",
+        "position": "197",
+        "points": "298"
+      },
+      {
+        "player": "Facundo Mena",
+        "position": "198",
+        "points": "296"
+      },
+      {
+        "player": "Gonzalo Bueno",
+        "position": "199",
+        "points": "296"
+      },
+      {
+        "player": "Timofey Skatov",
+        "position": "201",
+        "points": "290"
+      },
+      {
+        "player": "Juan Pablo Varillas",
+        "position": "204",
+        "points": "285"
+      },
+      {
+        "player": "Max Houkes",
+        "position": "205",
+        "points": "282"
+      },
+      {
+        "player": "Zdenek Kolar",
+        "position": "206",
+        "points": "282"
+      },
+      {
+        "player": "Edas Butvilas",
+        "position": "209",
+        "points": "273"
+      },
+      {
+        "player": "Federico Agustin Gomez",
+        "position": "210",
+        "points": "272"
+      },
+      {
+        "player": "Pol Martin Tiffon",
+        "position": "211",
+        "points": "268"
+      },
+      {
+        "player": "Alex Barrena",
+        "position": "212",
+        "points": "266"
+      },
+      {
+        "player": "Harry Wendelken",
+        "position": "213",
+        "points": "264"
+      },
+      {
+        "player": "Maks Kasnikowski",
+        "position": "214",
+        "points": "264"
+      },
+      {
+        "player": "Rio Noguchi",
+        "position": "215",
+        "points": "263"
+      },
+      {
+        "player": "Chun-Hsin Tseng",
+        "position": "217",
+        "points": "258"
+      },
+      {
+        "player": "Remy Bertola",
+        "position": "219",
+        "points": "256"
+      },
+      {
+        "player": "Henry Searle",
+        "position": "220",
+        "points": "255"
+      },
+      {
+        "player": "Kimmer Coppejans",
+        "position": "222",
+        "points": "253"
+      },
+      {
+        "player": "Jerome Kym",
+        "position": "223",
+        "points": "253"
+      },
+      {
+        "player": "Marvin Moeller",
+        "position": "226",
+        "points": "252"
+      },
+      {
+        "player": "Felix Gill",
+        "position": "227",
+        "points": "252"
+      },
+      {
+        "player": "Raul Brancaccio",
+        "position": "230",
+        "points": "249"
+      },
+      {
+        "player": "Lorenzo Giustino",
+        "position": "231",
+        "points": "248"
+      },
+      {
+        "player": "Alejandro Moro Canas",
+        "position": "232",
+        "points": "248"
+      },
+      {
+        "player": "Liam Broady",
+        "position": "233",
+        "points": "247"
+      },
+      {
+        "player": "Maxim Mrva",
+        "position": "234",
+        "points": "246"
+      },
+      {
+        "player": "Daniel Rincon",
+        "position": "235",
+        "points": "244"
+      },
+      {
+        "player": "Thiago Monteiro",
+        "position": "236",
+        "points": "238"
+      },
+      {
+        "player": "Andrej Nedic",
+        "position": "237",
+        "points": "237"
+      },
+      {
+        "player": "Jay Clarke",
+        "position": "238",
+        "points": "234"
+      },
+      {
+        "player": "Roberto Bautista Agut",
+        "position": "239",
+        "points": "233"
+      },
+      {
+        "player": "Matheus Pucinelli De Almeida",
+        "position": "240",
+        "points": "232"
+      },
+      {
+        "player": "Luca Nardi",
+        "position": "241",
+        "points": "231"
+      },
+      {
+        "player": "Hayato Matsuoka",
+        "position": "242",
+        "points": "231"
+      },
+      {
+        "player": "Leandro Riedi",
+        "position": "244",
+        "points": "227"
+      },
+      {
+        "player": "Luka Mikrut",
+        "position": "245",
+        "points": "226"
+      },
+      {
+        "player": "Philip Henning",
+        "position": "246",
+        "points": "223"
+      },
+      {
+        "player": "James McCabe",
+        "position": "247",
+        "points": "222"
+      },
+      {
+        "player": "Juncheng Shang",
+        "position": "248",
+        "points": "220"
+      },
+      {
+        "player": "Billy Harris",
+        "position": "249",
+        "points": "218"
+      },
+      {
+        "player": "Matthew Dellavedova",
+        "position": "250",
+        "points": "218"
+      },
+      {
+        "player": "Dominic Stricker",
+        "position": "251",
+        "points": "217"
+      },
+      {
+        "player": "Dylan Dietrich",
+        "position": "252",
+        "points": "216"
+      },
+      {
+        "player": "Juan Manuel La Serna",
+        "position": "253",
+        "points": "216"
+      },
+      {
+        "player": "Buvaysar Gadamauri",
+        "position": "254",
+        "points": "215"
+      },
+      {
+        "player": "Genaro Alberto Olivieri",
+        "position": "255",
+        "points": "215"
+      },
+      {
+        "player": "Max Basing",
+        "position": "256",
+        "points": "214"
+      },
+      {
+        "player": "August Holmgren",
+        "position": "258",
+        "points": "214"
+      },
+      {
+        "player": "Roberto Carballes Baena",
+        "position": "259",
+        "points": "213"
+      },
+      {
+        "player": "Frederico Ferreira Silva",
+        "position": "260",
+        "points": "212"
+      },
+      {
+        "player": "Kilian Feldbausch",
+        "position": "261",
+        "points": "211"
+      },
+      {
+        "player": "Max Hans Rehberg",
+        "position": "262",
+        "points": "211"
+      },
+      {
+        "player": "Rodrigo Pacheco Mendez",
+        "position": "263",
+        "points": "210"
+      },
+      {
+        "player": "Charles Broom",
+        "position": "264",
+        "points": "209"
+      },
+      {
+        "player": "Matias Soto",
+        "position": "265",
+        "points": "208"
+      },
+      {
+        "player": "Igor Marcondes",
+        "position": "266",
+        "points": "207"
+      },
+      {
+        "player": "Yoshihito Nishioka",
+        "position": "267",
+        "points": "206"
+      },
+      {
+        "player": "Martin Krumich",
+        "position": "269",
+        "points": "200"
+      },
+      {
+        "player": "Mili Poljicak",
+        "position": "270",
+        "points": "199"
+      },
+      {
+        "player": "Hynek Barton",
+        "position": "271",
+        "points": "199"
+      },
+      {
+        "player": "Jay Friend",
+        "position": "272",
+        "points": "198"
+      },
+      {
+        "player": "Stefano Napolitano",
+        "position": "273",
+        "points": "198"
+      },
+      {
+        "player": "Radu Mihai Papoe",
+        "position": "274",
+        "points": "198"
+      },
+      {
+        "player": "Cezar Cretu",
+        "position": "275",
+        "points": "198"
+      },
+      {
+        "player": "Marc-Andrea Huesler",
+        "position": "277",
+        "points": "196"
+      },
+      {
+        "player": "Petr Nesterov",
+        "position": "279",
+        "points": "194"
+      },
+      {
+        "player": "Yi Zhou",
+        "position": "280",
+        "points": "193"
+      },
+      {
+        "player": "Pedro Boscardin Dias",
+        "position": "282",
+        "points": "193"
+      },
+      {
+        "player": "Alastair Gray",
+        "position": "283",
+        "points": "192"
+      },
+      {
+        "player": "Yanki Erel",
+        "position": "284",
+        "points": "191"
+      },
+      {
+        "player": "Georgii Kravchenko",
+        "position": "285",
+        "points": "191"
+      },
+      {
+        "player": "Filip Cristian Jianu",
+        "position": "286",
+        "points": "191"
+      },
+      {
+        "player": "Yu Hsiou Hsu",
+        "position": "287",
+        "points": "187"
+      },
+      {
+        "player": "Oliver Tarvet",
+        "position": "289",
+        "points": "186"
+      },
+      {
+        "player": "Carl Emil Overbeck",
+        "position": "291",
+        "points": "184"
+      },
+      {
+        "player": "Henri Squire",
+        "position": "292",
+        "points": "184"
+      },
+      {
+        "player": "Sergey Fomin",
+        "position": "294",
+        "points": "182"
+      },
+      {
+        "player": "Fajing Sun",
+        "position": "296",
+        "points": "181"
+      },
+      {
+        "player": "Juan Bautista Torres",
+        "position": "298",
+        "points": "180"
+      },
+      {
+        "player": "Jonas Forejtek",
+        "position": "299",
+        "points": "179"
+      },
+      {
+        "player": "Daniel Michalski",
+        "position": "300",
+        "points": "179"
+      },
+      {
+        "player": "Max Schoenhaus",
+        "position": "302",
+        "points": "178"
+      },
+      {
+        "player": "Oriol Roca Batalla",
+        "position": "304",
+        "points": "178"
+      },
+      {
+        "player": "Oliver Crawford",
+        "position": "305",
+        "points": "177"
+      },
+      {
+        "player": "Anton Matusevich",
+        "position": "307",
+        "points": "177"
+      },
+      {
+        "player": "Sandro Kopp",
+        "position": "308",
+        "points": "177"
+      },
+      {
+        "player": "Akira Santillan",
+        "position": "309",
+        "points": "177"
+      },
+      {
+        "player": "Mert Alkaya",
+        "position": "311",
+        "points": "175"
+      },
+      {
+        "player": "Guy Den Ouden",
+        "position": "313",
+        "points": "173"
+      },
+      {
+        "player": "Gonzalo Villanueva",
+        "position": "315",
+        "points": "172"
+      },
+      {
+        "player": "Tiago Pereira",
+        "position": "316",
+        "points": "171"
+      },
+      {
+        "player": "Florian Broska",
+        "position": "317",
+        "points": "170"
+      },
+      {
+        "player": "Giles Hussey",
+        "position": "322",
+        "points": "168"
+      },
+      {
+        "player": "Alejo Sanchez Quilez",
+        "position": "323",
+        "points": "167"
+      },
+      {
+        "player": "Cruz Hewitt",
+        "position": "324",
+        "points": "166"
+      },
+      {
+        "player": "Mees Rottgering",
+        "position": "331",
+        "points": "160"
+      },
+      {
+        "player": "Marko Topo",
+        "position": "337",
+        "points": "156"
+      },
+      {
+        "player": "Philip Sekulic",
+        "position": "339",
+        "points": "155"
+      },
+      {
+        "player": "Duje Ajdukovic",
+        "position": "341",
+        "points": "153"
+      },
+      {
+        "player": "Patrick Schoen",
+        "position": "343",
+        "points": "151"
+      },
+      {
+        "player": "Robert Strombachs",
+        "position": "346",
+        "points": "149"
+      },
+      {
+        "player": "Michael Geerts",
+        "position": "347",
+        "points": "147"
+      },
+      {
+        "player": "Tung-Lin Wu",
+        "position": "353",
+        "points": "144"
+      },
+      {
+        "player": "Eduardo Ribeiro",
+        "position": "355",
+        "points": "142"
+      },
+      {
+        "player": "Jake Delaney",
+        "position": "357",
+        "points": "142"
+      },
+      {
+        "player": "Andrej Martin",
+        "position": "358",
+        "points": "141"
+      },
+      {
+        "player": "Dimitar Kuzmanov",
+        "position": "360",
+        "points": "139"
+      },
+      {
+        "player": "Norbert Gombos",
+        "position": "362",
+        "points": "138"
+      },
+      {
+        "player": "Ognjen Milic",
+        "position": "363",
+        "points": "138"
+      },
+      {
+        "player": "Henry Bernet",
+        "position": "364",
+        "points": "138"
+      },
+      {
+        "player": "Daniel Masur",
+        "position": "367",
+        "points": "137"
+      },
+      {
+        "player": "Daniel Elahi Galan",
+        "position": "368",
+        "points": "137"
+      },
+      {
+        "player": "Sebastian Sorger",
+        "position": "372",
+        "points": "135"
+      },
+      {
+        "player": "Yosuke Watanuki",
+        "position": "375",
+        "points": "134"
+      },
+      {
+        "player": "Yuta Shimizu",
+        "position": "376",
+        "points": "134"
+      },
+      {
+        "player": "Tiago Torres",
+        "position": "377",
+        "points": "134"
+      },
+      {
+        "player": "Max Wiskandt",
+        "position": "378",
+        "points": "134"
+      },
+      {
+        "player": "Eric Vanshelboim",
+        "position": "381",
+        "points": "131"
+      },
+      {
+        "player": "Kasidit Samrej",
+        "position": "382",
+        "points": "131"
+      },
+      {
+        "player": "Ryan Nijboer",
+        "position": "383",
+        "points": "131"
+      },
+      {
+        "player": "Omar Jasika",
+        "position": "388",
+        "points": "128"
+      },
+      {
+        "player": "Mikhail Kukushkin",
+        "position": "389",
+        "points": "127"
+      },
+      {
+        "player": "Felipe Meligeni Alves",
+        "position": "396",
+        "points": "125"
+      },
+      {
+        "player": "Mateus Alves",
+        "position": "399",
+        "points": "122"
+      },
+      {
+        "player": "Vadym Ursu",
+        "position": "400",
+        "points": "122"
+      },
+      {
+        "player": "Edward Winter",
+        "position": "401",
+        "points": "121"
+      },
+      {
+        "player": "Johan Nikles",
+        "position": "407",
+        "points": "119"
+      },
+      {
+        "player": "Gilles Arnaud Bailly",
+        "position": "408",
+        "points": "119"
+      },
+      {
+        "player": "Thanasi Kokkinakis",
+        "position": "410",
+        "points": "118"
+      },
+      {
+        "player": "Niels Visker",
+        "position": "414",
+        "points": "117"
+      },
+      {
+        "player": "Justin Boulais",
+        "position": "415",
+        "points": "117"
+      },
+      {
+        "player": "Matthew William Donald",
+        "position": "416",
+        "points": "117"
+      },
+      {
+        "player": "Kaichi Uchida",
+        "position": "417",
+        "points": "116"
+      },
+      {
+        "player": "Marek Gengel",
+        "position": "419",
+        "points": "115"
+      },
+      {
+        "player": "Petr Brunclik",
+        "position": "422",
+        "points": "114"
+      },
+      {
+        "player": "Louis Wessels",
+        "position": "423",
+        "points": "114"
+      },
+      {
+        "player": "Mika Petkovic",
+        "position": "424",
+        "points": "114"
+      },
+      {
+        "player": "Luca Staeheli",
+        "position": "425",
+        "points": "113"
+      },
+      {
+        "player": "Paulo Andre Saraiva Dos Santos",
+        "position": "426",
+        "points": "113"
+      },
+      {
+        "player": "Masamichi Imamura",
+        "position": "427",
+        "points": "113"
+      },
+      {
+        "player": "Justin Engel",
+        "position": "428",
+        "points": "112"
+      },
+      {
+        "player": "Khumoyun Sultanov",
+        "position": "431",
+        "points": "111"
+      },
+      {
+        "player": "Enzo Aguiard",
+        "position": "435",
+        "points": "110"
+      },
+      {
+        "player": "Yannik Kelm",
+        "position": "438",
+        "points": "108"
+      },
+      {
+        "player": "Oleksii Krutykh",
+        "position": "439",
+        "points": "108"
+      },
+      {
+        "player": "Gerard Campana Lee",
+        "position": "440",
+        "points": "108"
+      },
+      {
+        "player": "Kenta Miyoshi",
+        "position": "441",
+        "points": "107"
+      },
+      {
+        "player": "Murkel Dellien",
+        "position": "444",
+        "points": "106"
+      },
+      {
+        "player": "Jie Cui",
+        "position": "448",
+        "points": "104"
+      },
+      {
+        "player": "Luca Castelnuovo",
+        "position": "449",
+        "points": "103"
+      },
+      {
+        "player": "Sander Jong",
+        "position": "451",
+        "points": "102"
+      },
+      {
+        "player": "Nikita Mashtakov",
+        "position": "453",
+        "points": "101"
+      },
+      {
+        "player": "Ivan Ivanov",
+        "position": "457",
+        "points": "100"
+      },
+      {
+        "player": "Adrian Boitan",
+        "position": "464",
+        "points": "99"
+      },
+      {
+        "player": "Miguel Tobon",
+        "position": "466",
+        "points": "99"
+      },
+      {
+        "player": "Denis Yevseyev",
+        "position": "470",
+        "points": "98"
+      },
+      {
+        "player": "Thijs Boogaard",
+        "position": "471",
+        "points": "97"
+      },
+      {
+        "player": "Duncan Chan",
+        "position": "472",
+        "points": "96"
+      },
+      {
+        "player": "Eero Vasa",
+        "position": "473",
+        "points": "96"
+      },
+      {
+        "player": "Koki Matsuda",
+        "position": "475",
+        "points": "95"
+      },
+      {
+        "player": "Niels McDonald",
+        "position": "477",
+        "points": "94"
+      },
+      {
+        "player": "Keisuke Saitoh",
+        "position": "478",
+        "points": "94"
+      },
+      {
+        "player": "Hiroki Moriya",
+        "position": "480",
+        "points": "94"
+      },
+      {
+        "player": "Alexander Ritschard",
+        "position": "483",
+        "points": "92"
+      },
+      {
+        "player": "Viktor Durasovic",
+        "position": "485",
+        "points": "92"
+      },
+      {
+        "player": "Maximus Jones",
+        "position": "488",
+        "points": "91"
+      },
+      {
+        "player": "Dusan Obradovic",
+        "position": "489",
+        "points": "91"
+      },
+      {
+        "player": "Sebastian Gima",
+        "position": "491",
+        "points": "91"
+      },
+      {
+        "player": "Romain Faucon",
+        "position": "493",
+        "points": "90"
+      },
+      {
+        "player": "Filip Misolic",
+        "position": "495",
+        "points": "88"
+      },
+      {
+        "player": "Daniel Siniakov",
+        "position": "496",
+        "points": "88"
+      },
+      {
+        "player": "Vladyslav Orlov",
+        "position": "498",
+        "points": "88"
+      },
+      {
+        "player": "Fares Zakaria",
+        "position": "499",
+        "points": "88"
+      },
+      {
+        "player": "Branko Djuric",
+        "position": "500",
+        "points": "87"
+      },
+      {
+        "player": "Alan Magadan",
+        "position": "504",
+        "points": "87"
+      },
+      {
+        "player": "Filip Jeff Planinsek",
+        "position": "505",
+        "points": "87"
+      },
+      {
+        "player": "Jack Loge",
+        "position": "506",
+        "points": "87"
+      },
+      {
+        "player": "Alex Hernandez",
+        "position": "507",
+        "points": "86"
+      },
+      {
+        "player": "Ioannis Xilas",
+        "position": "508",
+        "points": "86"
+      },
+      {
+        "player": "Dmitry Popko",
+        "position": "513",
+        "points": "85"
+      },
+      {
+        "player": "Alexander Donski",
+        "position": "517",
+        "points": "84"
+      },
+      {
+        "player": "Pedro Sakamoto",
+        "position": "518",
+        "points": "84"
+      },
+      {
+        "player": "Mats Rosenkranz",
+        "position": "520",
+        "points": "83"
+      },
+      {
+        "player": "Yasutaka Uchiyama",
+        "position": "525",
+        "points": "81"
+      },
+      {
+        "player": "Beibit Zhukayev",
+        "position": "526",
+        "points": "81"
+      },
+      {
+        "player": "Peter Makk",
+        "position": "533",
+        "points": "79"
+      },
+      {
+        "player": "M Rifki Fitriadi",
+        "position": "534",
+        "points": "79"
+      },
+      {
+        "player": "Yanaki Milev",
+        "position": "535",
+        "points": "79"
+      },
+      {
+        "player": "Alec Deckers",
+        "position": "536",
+        "points": "78"
+      },
+      {
+        "player": "Bor Artnak",
+        "position": "538",
+        "points": "77"
+      },
+      {
+        "player": "Tibo Colson",
+        "position": "540",
+        "points": "76"
+      },
+      {
+        "player": "Guto Miguel",
+        "position": "541",
+        "points": "76"
+      },
+      {
+        "player": "Tuncay Duran",
+        "position": "548",
+        "points": "75"
+      },
+      {
+        "player": "James Trotter",
+        "position": "551",
+        "points": "74"
+      },
+      {
+        "player": "Daniel Dutra da Silva",
+        "position": "553",
+        "points": "74"
+      },
+      {
+        "player": "Bruno Fernandez",
+        "position": "554",
+        "points": "74"
+      },
+      {
+        "player": "Dimitris Sakellaridis",
+        "position": "555",
+        "points": "74"
+      },
+      {
+        "player": "Sebastian Dominko",
+        "position": "556",
+        "points": "73"
+      },
+      {
+        "player": "Stefan Palosi",
+        "position": "557",
+        "points": "73"
+      },
+      {
+        "player": "Lukas Pokorny",
+        "position": "558",
+        "points": "73"
+      },
+      {
+        "player": "Alec Beckley",
+        "position": "561",
+        "points": "72"
+      },
+      {
+        "player": "Gabriel Ghetu",
+        "position": "566",
+        "points": "71"
+      },
+      {
+        "player": "Jelle Sels",
+        "position": "567",
+        "points": "71"
+      },
+      {
+        "player": "Milos Karol",
+        "position": "569",
+        "points": "70"
+      },
+      {
+        "player": "Iliyan Radulov",
+        "position": "570",
+        "points": "70"
+      },
+      {
+        "player": "Daniel De Jonge",
+        "position": "571",
+        "points": "70"
+      },
+      {
+        "player": "Saba Purtseladze",
+        "position": "575",
+        "points": "69"
+      },
+      {
+        "player": "Marcel Zielinski",
+        "position": "576",
+        "points": "69"
+      },
+      {
+        "player": "Hyeon Chung",
+        "position": "577",
+        "points": "68"
+      },
+      {
+        "player": "Joao Domingues",
+        "position": "578",
+        "points": "68"
+      },
+      {
+        "player": "Keegan Rice",
+        "position": "580",
+        "points": "67"
+      },
+      {
+        "player": "Goncalo Marques",
+        "position": "581",
+        "points": "67"
+      },
+      {
+        "player": "Nerman Fatic",
+        "position": "584",
+        "points": "66"
+      },
+      {
+        "player": "Martin Van Der Meerschen",
+        "position": "585",
+        "points": "66"
+      },
+      {
+        "player": "Shunsuke Mitsui",
+        "position": "589",
+        "points": "65"
+      },
+      {
+        "player": "Juan Sebastian Gomez",
+        "position": "594",
+        "points": "63"
+      },
+      {
+        "player": "Adrian Andreev",
+        "position": "601",
+        "points": "62"
+      },
+      {
+        "player": "Alexander Vasilev",
+        "position": "602",
+        "points": "62"
+      },
+      {
+        "player": "Andreja Petrovic",
+        "position": "604",
+        "points": "62"
+      },
+      {
+        "player": "Joao Eduardo Schiessl",
+        "position": "612",
+        "points": "60"
+      },
+      {
+        "player": "Amir Omarkhanov",
+        "position": "615",
+        "points": "59"
+      },
+      {
+        "player": "Oleksandr Ovcharenko",
+        "position": "616",
+        "points": "59"
+      },
+      {
+        "player": "Sanhui Shin",
+        "position": "619",
+        "points": "59"
+      },
+      {
+        "player": "Dominik Palan",
+        "position": "620",
+        "points": "59"
+      },
+      {
+        "player": "Matyas Fuele",
+        "position": "622",
+        "points": "58"
+      },
+      {
+        "player": "Pieter De Lange",
+        "position": "624",
+        "points": "58"
+      },
+      {
+        "player": "Tiago Cacao",
+        "position": "626",
+        "points": "58"
+      },
+      {
+        "player": "Samuel Heredia",
+        "position": "627",
+        "points": "58"
+      },
+      {
+        "player": "Conner Huertas del Pino",
+        "position": "629",
+        "points": "57"
+      },
+      {
+        "player": "Michael Bassem Sobhy",
+        "position": "637",
+        "points": "56"
+      },
+      {
+        "player": "Filip Peliwo",
+        "position": "641",
+        "points": "56"
+      },
+      {
+        "player": "Alan Fernando Rubio Fierros",
+        "position": "643",
+        "points": "55"
+      },
+      {
+        "player": "Tomasz Berkieta",
+        "position": "645",
+        "points": "55"
+      },
+      {
+        "player": "Ergi Kirkin",
+        "position": "646",
+        "points": "55"
+      },
+      {
+        "player": "Radu David Turcanu",
+        "position": "648",
+        "points": "55"
+      },
+      {
+        "player": "Dan Martin",
+        "position": "652",
+        "points": "54"
+      },
+      {
+        "player": "Stefan Adrian Andreescu",
+        "position": "653",
+        "points": "54"
+      },
+      {
+        "player": "Kuan-Yi Lee",
+        "position": "654",
+        "points": "54"
+      },
+      {
+        "player": "David Goffin",
+        "position": "657",
+        "points": "53"
+      },
+      {
+        "player": "Karol Filar",
+        "position": "659",
+        "points": "53"
+      },
+      {
+        "player": "Lucas Andrade Da Silva",
+        "position": "663",
+        "points": "52"
+      },
+      {
+        "player": "Nicolas Zanellato",
+        "position": "666",
+        "points": "52"
+      },
+      {
+        "player": "Michael Vrbensky",
+        "position": "668",
+        "points": "51"
+      },
+      {
+        "player": "Arklon Huertas Del Pino Cordova",
+        "position": "669",
+        "points": "51"
+      },
+      {
+        "player": "Herman Hoeyeraal",
+        "position": "670",
+        "points": "51"
+      },
+      {
+        "player": "Juan Sebastian Osorio",
+        "position": "672",
+        "points": "51"
+      },
+      {
+        "player": "Stefan Horia Haita",
+        "position": "677",
+        "points": "50"
+      },
+      {
+        "player": "Matyas Cerny",
+        "position": "678",
+        "points": "50"
+      },
+      {
+        "player": "Stefan Popovic",
+        "position": "680",
+        "points": "50"
+      },
+      {
+        "player": "Daniel Antonio Nunez",
+        "position": "687",
+        "points": "48"
+      },
+      {
+        "player": "Wilson Leite",
+        "position": "689",
+        "points": "48"
+      },
+      {
+        "player": "Daniel Salazar",
+        "position": "691",
+        "points": "48"
+      },
+      {
+        "player": "Karlis Ozolins",
+        "position": "703",
+        "points": "46"
+      },
+      {
+        "player": "Ziga Sesko",
+        "position": "704",
+        "points": "46"
+      },
+      {
+        "player": "Kristijan Juhas",
+        "position": "705",
+        "points": "46"
+      },
+      {
+        "player": "Thanapet Chanta",
+        "position": "711",
+        "points": "45"
+      },
+      {
+        "player": "Nicolas Villalon",
+        "position": "713",
+        "points": "45"
+      },
+      {
+        "player": "Dragos Cazacu",
+        "position": "715",
+        "points": "45"
+      },
+      {
+        "player": "Yurii Dzhavakian",
+        "position": "716",
+        "points": "45"
+      },
+      {
+        "player": "Khololwam Montsi",
+        "position": "718",
+        "points": "44"
+      },
+      {
+        "player": "Olaf Pieczkowski",
+        "position": "720",
+        "points": "44"
+      },
+      {
+        "player": "George Lazarov",
+        "position": "721",
+        "points": "44"
+      },
+      {
+        "player": "Oskar Brostrom Poulsen",
+        "position": "722",
+        "points": "44"
+      },
+      {
+        "player": "Peter Fajta",
+        "position": "728",
+        "points": "43"
+      },
+      {
+        "player": "Dong Ju Kim",
+        "position": "729",
+        "points": "43"
+      },
+      {
+        "player": "Noa Vukadin",
+        "position": "730",
+        "points": "42"
+      },
+      {
+        "player": "Rigele Te",
+        "position": "734",
+        "points": "42"
+      },
+      {
+        "player": "Michal Krajci",
+        "position": "736",
+        "points": "42"
+      },
+      {
+        "player": "Nico Hipfl",
+        "position": "737",
+        "points": "42"
+      },
+      {
+        "player": "Pawit Sornlaksup",
+        "position": "743",
+        "points": "41"
+      },
+      {
+        "player": "Kuan-Shou Chen",
+        "position": "747",
+        "points": "40"
+      },
+      {
+        "player": "Yun seong Chung",
+        "position": "752",
+        "points": "40"
+      },
+      {
+        "player": "Uisung Park",
+        "position": "753",
+        "points": "40"
+      },
+      {
+        "player": "Alex Knaff",
+        "position": "757",
+        "points": "39"
+      },
+      {
+        "player": "Amr Elsayed",
+        "position": "759",
+        "points": "39"
+      },
+      {
+        "player": "Emilien Demanet",
+        "position": "761",
+        "points": "39"
+      },
+      {
+        "player": "Jakub Nicod",
+        "position": "765",
+        "points": "38"
+      },
+      {
+        "player": "Rares Teodor Pieleanu",
+        "position": "769",
+        "points": "38"
+      },
+      {
+        "player": "Rodrigo Alujas",
+        "position": "771",
+        "points": "38"
+      },
+      {
+        "player": "Adria Soriano Barrera",
+        "position": "782",
+        "points": "36"
+      },
+      {
+        "player": "Fryderyk Lechno-Wasiutynski",
+        "position": "784",
+        "points": "36"
+      },
+      {
+        "player": "Viacheslav Bielinskyi",
+        "position": "786",
+        "points": "36"
+      },
+      {
+        "player": "Oskari Paldanius",
+        "position": "787",
+        "points": "36"
+      },
+      {
+        "player": "Tianhui Zhang",
+        "position": "788",
+        "points": "36"
+      },
+      {
+        "player": "Anas Mazdrashki",
+        "position": "789",
+        "points": "36"
+      },
+      {
+        "player": "Aleksandr Braynin",
+        "position": "794",
+        "points": "36"
+      },
+      {
+        "player": "Abel Forger",
+        "position": "798",
+        "points": "35"
+      },
+      {
+        "player": "Arda Azkara",
+        "position": "801",
+        "points": "35"
+      },
+      {
+        "player": "Tsung-Hao Huang",
+        "position": "803",
+        "points": "35"
+      },
+      {
+        "player": "Bastian Malla",
+        "position": "804",
+        "points": "35"
+      },
+      {
+        "player": "Dinko Dinev",
+        "position": "806",
+        "points": "35"
+      },
+      {
+        "player": "Michiel De Krom",
+        "position": "807",
+        "points": "35"
+      },
+      {
+        "player": "Johan Alexander Rodriguez",
+        "position": "810",
+        "points": "34"
+      },
+      {
+        "player": "Benjamin Torrealba",
+        "position": "816",
+        "points": "34"
+      },
+      {
+        "player": "Mert Naci Turker",
+        "position": "817",
+        "points": "34"
+      },
+      {
+        "player": "Alan Wazny",
+        "position": "818",
+        "points": "34"
+      },
+      {
+        "player": "JiSung Nam",
+        "position": "819",
+        "points": "33"
+      },
+      {
+        "player": "Hoyoung Roh",
+        "position": "820",
+        "points": "33"
+      },
+      {
+        "player": "Hanyi Liu",
+        "position": "822",
+        "points": "33"
+      },
+      {
+        "player": "Jakub Filip",
+        "position": "823",
+        "points": "33"
+      },
+      {
+        "player": "Lukas Klein",
+        "position": "828",
+        "points": "32"
+      },
+      {
+        "player": "Gian Luca Tanner",
+        "position": "830",
+        "points": "32"
+      },
+      {
+        "player": "Gijs Brouwer",
+        "position": "831",
+        "points": "32"
+      },
+      {
+        "player": "Attila Boros",
+        "position": "832",
+        "points": "32"
+      },
+      {
+        "player": "Dimitris Azoidis",
+        "position": "834",
+        "points": "32"
+      },
+      {
+        "player": "Nicholas David Ionel",
+        "position": "838",
+        "points": "32"
+      },
+      {
+        "player": "Linus Lagerbohm",
+        "position": "843",
+        "points": "31"
+      },
+      {
+        "player": "Josip Simundza",
+        "position": "845",
+        "points": "31"
+      },
+      {
+        "player": "Stijn Paardekooper",
+        "position": "846",
+        "points": "31"
+      },
+      {
+        "player": "Marko Miladinovic",
+        "position": "849",
+        "points": "31"
+      },
+      {
+        "player": "Grigoriy Lomakin",
+        "position": "851",
+        "points": "31"
+      },
+      {
+        "player": "Nicolas Jarry",
+        "position": "854",
+        "points": "30"
+      },
+      {
+        "player": "Jangjun Kim",
+        "position": "855",
+        "points": "30"
+      },
+      {
+        "player": "Neil Oberleitner",
+        "position": "856",
+        "points": "30"
+      },
+      {
+        "player": "Robert Guna",
+        "position": "858",
+        "points": "30"
+      },
+      {
+        "player": "Samuel Alejandro Linde Palacios",
+        "position": "862",
+        "points": "30"
+      },
+      {
+        "player": "Kerem Yilmaz",
+        "position": "866",
+        "points": "30"
+      },
+      {
+        "player": "Markus Molder",
+        "position": "868",
+        "points": "29"
+      },
+      {
+        "player": "Nikita Belozertsev",
+        "position": "873",
+        "points": "29"
+      },
+      {
+        "player": "Filip Pieczonka",
+        "position": "877",
+        "points": "28"
+      },
+      {
+        "player": "Alvin Nicholas Tudorica",
+        "position": "878",
+        "points": "28"
+      },
+      {
+        "player": "Qian Sun",
+        "position": "890",
+        "points": "27"
+      },
+      {
+        "player": "Francisco Rocha",
+        "position": "893",
+        "points": "27"
+      },
+      {
+        "player": "Daniil Sarksian",
+        "position": "904",
+        "points": "26"
+      },
+      {
+        "player": "Nicolas Barrientos",
+        "position": "908",
+        "points": "25"
+      },
+      {
+        "player": "Zsombor Velcz",
+        "position": "911",
+        "points": "25"
+      },
+      {
+        "player": "Mirza Basic",
+        "position": "916",
+        "points": "25"
+      },
+      {
+        "player": "Lars Goran Verwerft",
+        "position": "917",
+        "points": "25"
+      },
+      {
+        "player": "Geun Jun Kim",
+        "position": "919",
+        "points": "25"
+      },
+      {
+        "player": "Luis Carlos Alvarez",
+        "position": "923",
+        "points": "24"
+      },
+      {
+        "player": "Pierre Yves Bailly",
+        "position": "924",
+        "points": "24"
+      },
+      {
+        "player": "Christopher Li",
+        "position": "928",
+        "points": "24"
+      },
+      {
+        "player": "Flynn Thomas",
+        "position": "930",
+        "points": "24"
+      },
+      {
+        "player": "Iiro Vasa",
+        "position": "935",
+        "points": "24"
+      },
+      {
+        "player": "Mate Valkusz",
+        "position": "942",
+        "points": "23"
+      },
+      {
+        "player": "Vlad Cristian Breazu",
+        "position": "946",
+        "points": "23"
+      },
+      {
+        "player": "Aleksandre Bakshi",
+        "position": "948",
+        "points": "23"
+      },
+      {
+        "player": "Yan Cheng Chen",
+        "position": "950",
+        "points": "23"
+      },
+      {
+        "player": "Jeffrey Von Der Schulenburg",
+        "position": "959",
+        "points": "22"
+      },
+      {
+        "player": "Aleksa Ciric",
+        "position": "960",
+        "points": "22"
+      },
+      {
+        "player": "Marc Van Der Merwe",
+        "position": "961",
+        "points": "22"
+      },
+      {
+        "player": "Chanyeong Oh",
+        "position": "963",
+        "points": "22"
+      },
+      {
+        "player": "Yaojie Zeng",
+        "position": "967",
+        "points": "22"
+      },
+      {
+        "player": "Wishaya Trongcharoenchaikul",
+        "position": "970",
+        "points": "22"
+      },
+      {
+        "player": "Elgin Khoeblal",
+        "position": "973",
+        "points": "21"
+      },
+      {
+        "player": "Jan Kupcic",
+        "position": "974",
+        "points": "21"
+      },
+      {
+        "player": "Markus Malaszszak",
+        "position": "978",
+        "points": "21"
+      },
+      {
+        "player": "Kris Van Wyk",
+        "position": "979",
+        "points": "21"
+      },
+      {
+        "player": "Fanming Meng",
+        "position": "981",
+        "points": "21"
+      },
+      {
+        "player": "Alexander Rozin",
+        "position": "983",
+        "points": "20"
+      },
+      {
+        "player": "Jason Jung",
+        "position": "984",
+        "points": "20"
+      },
+      {
+        "player": "Luka Talan Lopatic",
+        "position": "987",
+        "points": "20"
+      },
+      {
+        "player": "Nicolas Parizzia",
+        "position": "988",
+        "points": "20"
+      },
+      {
+        "player": "Petros Tsitsipas",
+        "position": "990",
+        "points": "20"
+      },
+      {
+        "player": "Dimitar Kisimov",
+        "position": "992",
+        "points": "19"
+      },
+      {
+        "player": "Jakub Paul",
+        "position": "993",
+        "points": "19"
+      },
+      {
+        "player": "Cezar Gabriel Papoe",
+        "position": "997",
+        "points": "19"
+      },
+      {
+        "player": "Ye Cong Mo",
+        "position": "998",
+        "points": "19"
+      },
+      {
+        "player": "Pavlos Tsitsipas",
+        "position": "1004",
+        "points": "19"
+      },
+      {
+        "player": "Devin Badenhorst",
+        "position": "1009",
+        "points": "18"
+      },
+      {
+        "player": "Thanaphat Boosarawongse",
+        "position": "1010",
+        "points": "18"
+      },
+      {
+        "player": "Mikael Arseneault",
+        "position": "1014",
+        "points": "18"
+      },
+      {
+        "player": "Tudor Batin",
+        "position": "1020",
+        "points": "18"
+      },
+      {
+        "player": "Fons Van Sambeek",
+        "position": "1023",
+        "points": "18"
+      },
+      {
+        "player": "Nicolas Ifi",
+        "position": "1025",
+        "points": "18"
+      },
+      {
+        "player": "Volodymyr Iakubenko",
+        "position": "1026",
+        "points": "18"
+      },
+      {
+        "player": "Aljaz Jeran",
+        "position": "1027",
+        "points": "18"
+      },
+      {
+        "player": "Benjamin Thomas George",
+        "position": "1028",
+        "points": "18"
+      },
+      {
+        "player": "Matthias Ujvary",
+        "position": "1029",
+        "points": "18"
+      },
+      {
+        "player": "Nicolas Bruna",
+        "position": "1032",
+        "points": "18"
+      },
+      {
+        "player": "Aristotelis Thanos",
+        "position": "1034",
+        "points": "17"
+      },
+      {
+        "player": "Jonas Gundacker",
+        "position": "1039",
+        "points": "17"
+      },
+      {
+        "player": "Maximilian Neuchrist",
+        "position": "1042",
+        "points": "17"
+      },
+      {
+        "player": "Vladislav Melnic",
+        "position": "1055",
+        "points": "17"
+      },
+      {
+        "player": "Dan Alexandru Tomescu",
+        "position": "1057",
+        "points": "16"
+      },
+      {
+        "player": "Christian Sigsgaard",
+        "position": "1059",
+        "points": "16"
+      },
+      {
+        "player": "Salvador Price",
+        "position": "1063",
+        "points": "16"
+      },
+      {
+        "player": "Linang Xiao",
+        "position": "1064",
+        "points": "16"
+      },
+      {
+        "player": "Johan Oscar Lien",
+        "position": "1069",
+        "points": "16"
+      },
+      {
+        "player": "Melih Anavatan",
+        "position": "1073",
+        "points": "16"
+      },
+      {
+        "player": "Karim Ibrahim",
+        "position": "1074",
+        "points": "16"
+      },
+      {
+        "player": "Seongchan Hong",
+        "position": "1077",
+        "points": "15"
+      },
+      {
+        "player": "Emil Ruusuvuori",
+        "position": "1078",
+        "points": "15"
+      },
+      {
+        "player": "Damir Zhalgasbay",
+        "position": "1079",
+        "points": "15"
+      },
+      {
+        "player": "Alejandro Hayen",
+        "position": "1082",
+        "points": "15"
+      },
+      {
+        "player": "Zhao Zhao",
+        "position": "1084",
+        "points": "15"
+      },
+      {
+        "player": "Thantub Suksumrarn",
+        "position": "1089",
+        "points": "15"
+      },
+      {
+        "player": "Rafael De Alba",
+        "position": "1095",
+        "points": "15"
+      },
+      {
+        "player": "Leyton Rivera",
+        "position": "1102",
+        "points": "15"
+      },
+      {
+        "player": "Veljko Krstic",
+        "position": "1105",
+        "points": "14"
+      },
+      {
+        "player": "Kacper Szymkowiak",
+        "position": "1108",
+        "points": "14"
+      },
+      {
+        "player": "Kristjan Tamm",
+        "position": "1113",
+        "points": "14"
+      },
+      {
+        "player": "David Pichler",
+        "position": "1123",
+        "points": "13"
+      },
+      {
+        "player": "Oliver Ojakaar",
+        "position": "1126",
+        "points": "13"
+      },
+      {
+        "player": "Federico Zeballos",
+        "position": "1129",
+        "points": "13"
+      },
+      {
+        "player": "Rodrigo Fernandes",
+        "position": "1134",
+        "points": "13"
+      },
+      {
+        "player": "Gastao Elias",
+        "position": "1138",
+        "points": "13"
+      },
+      {
+        "player": "Matei Florin Breazu",
+        "position": "1139",
+        "points": "13"
+      },
+      {
+        "player": "Vlado Jankanj",
+        "position": "1143",
+        "points": "13"
+      },
+      {
+        "player": "Johannes Ingildsen",
+        "position": "1151",
+        "points": "12"
+      },
+      {
+        "player": "Vuk Radjenovic",
+        "position": "1157",
+        "points": "12"
+      },
+      {
+        "player": "Nicolas Arseneault",
+        "position": "1162",
+        "points": "12"
+      },
+      {
+        "player": "Pawel Juszczak",
+        "position": "1182",
+        "points": "11"
+      },
+      {
+        "player": "Heorhii Shylov",
+        "position": "1185",
+        "points": "11"
+      },
+      {
+        "player": "Marko Maksimovic",
+        "position": "1187",
+        "points": "11"
+      },
+      {
+        "player": "Jaesung Choe",
+        "position": "1190",
+        "points": "11"
+      },
+      {
+        "player": "Alexander Wagner",
+        "position": "1195",
+        "points": "11"
+      },
+      {
+        "player": "Tymur Bieldiugin",
+        "position": "1197",
+        "points": "11"
+      },
+      {
+        "player": "Leonid Sheyngezikht",
+        "position": "1199",
+        "points": "11"
+      },
+      {
+        "player": "Niklas Waldner",
+        "position": "1202",
+        "points": "11"
+      },
+      {
+        "player": "Holger Rune",
+        "position": "1205",
+        "points": "10"
+      },
+      {
+        "player": "Luc Koenig",
+        "position": "1209",
+        "points": "10"
+      },
+      {
+        "player": "Adam Jilly",
+        "position": "1216",
+        "points": "10"
+      },
+      {
+        "player": "Aoran Wang",
+        "position": "1219",
+        "points": "10"
+      },
+      {
+        "player": "James Van Herzeele",
+        "position": "1233",
+        "points": "10"
+      },
+      {
+        "player": "Joshua Peck",
+        "position": "1235",
+        "points": "10"
+      },
+      {
+        "player": "Wojciech Marek",
+        "position": "1249",
+        "points": "9"
+      },
+      {
+        "player": "Zura Tkemaladze",
+        "position": "1255",
+        "points": "9"
+      },
+      {
+        "player": "Maxim Shin",
+        "position": "1273",
+        "points": "9"
+      },
+      {
+        "player": "Boris Butulija",
+        "position": "1276",
+        "points": "9"
+      },
+      {
+        "player": "Niksa Arsic",
+        "position": "1282",
+        "points": "8"
+      },
+      {
+        "player": "Boris T Arias",
+        "position": "1284",
+        "points": "8"
+      },
+      {
+        "player": "Aleksa Pisaric",
+        "position": "1292",
+        "points": "8"
+      },
+      {
+        "player": "Bozo Barun",
+        "position": "1293",
+        "points": "8"
+      },
+      {
+        "player": "Diego Jarry Fillol",
+        "position": "1298",
+        "points": "8"
+      },
+      {
+        "player": "Bora Sengul",
+        "position": "1302",
+        "points": "8"
+      },
+      {
+        "player": "Marcel Kamrowski",
+        "position": "1307",
+        "points": "8"
+      },
+      {
+        "player": "Zangar Nurlanuly",
+        "position": "1308",
+        "points": "8"
+      },
+      {
+        "player": "Diogo Marques",
+        "position": "1309",
+        "points": "8"
+      },
+      {
+        "player": "Xirui T Han",
+        "position": "1313",
+        "points": "8"
+      },
+      {
+        "player": "Joao Silva",
+        "position": "1319",
+        "points": "8"
+      },
+      {
+        "player": "Kacper Knitter",
+        "position": "1321",
+        "points": "8"
+      },
+      {
+        "player": "Stefan Latinovic",
+        "position": "1327",
+        "points": "7"
+      },
+      {
+        "player": "Patrik T Niklas-Salminen",
+        "position": "1328",
+        "points": "7"
+      },
+      {
+        "player": "Aren Baybars",
+        "position": "1330",
+        "points": "7"
+      },
+      {
+        "player": "Sergio Luis T Hernandez Ramirez",
+        "position": "1331",
+        "points": "7"
+      },
+      {
+        "player": "Nemanja Malesevic",
+        "position": "1347",
+        "points": "7"
+      },
+      {
+        "player": "Achilles T Belkovics",
+        "position": "1348",
+        "points": "7"
+      },
+      {
+        "player": "Mauricio Echazu",
+        "position": "1350",
+        "points": "7"
+      },
+      {
+        "player": "Oswaldo Alejandro Reyes Tirado",
+        "position": "1351",
+        "points": "7"
+      },
+      {
+        "player": "Sheng Tang",
+        "position": "1352",
+        "points": "7"
+      },
+      {
+        "player": "Alessio T Basile",
+        "position": "1359",
+        "points": "7"
+      },
+      {
+        "player": "Matic Dimic",
+        "position": "1368",
+        "points": "7"
+      },
+      {
+        "player": "Thando T Longwe-Smit",
+        "position": "1369",
+        "points": "7"
+      },
+      {
+        "player": "Seongwoo T Cho",
+        "position": "1371",
+        "points": "7"
+      },
+      {
+        "player": "Drazen Petrovic",
+        "position": "1374",
+        "points": "7"
+      },
+      {
+        "player": "Michael Gloeckler",
+        "position": "1375",
+        "points": "7"
+      },
+      {
+        "player": "Nathan Anthony Barki",
+        "position": "1380",
+        "points": "6"
+      },
+      {
+        "player": "Jozef Kovalik",
+        "position": "1381",
+        "points": "6"
+      },
+      {
+        "player": "Jan Sadzik",
+        "position": "1386",
+        "points": "6"
+      },
+      {
+        "player": "Adam T Majchrzak",
+        "position": "1387",
+        "points": "6"
+      },
+      {
+        "player": "Juan Carlos Aguilar",
+        "position": "1392",
+        "points": "6"
+      },
+      {
+        "player": "Harold T Huens",
+        "position": "1393",
+        "points": "6"
+      },
+      {
+        "player": "Sebastian Grundtvig Jorgensen",
+        "position": "1407",
+        "points": "6"
+      },
+      {
+        "player": "Yuquan Jin",
+        "position": "1409",
+        "points": "6"
+      },
+      {
+        "player": "Ivan Biletic",
+        "position": "1416",
+        "points": "6"
+      },
+      {
+        "player": "Santiago Lora",
+        "position": "1431",
+        "points": "5"
+      },
+      {
+        "player": "Aleksandar Tolev",
+        "position": "1435",
+        "points": "5"
+      },
+      {
+        "player": "Diogo T Morais",
+        "position": "1465",
+        "points": "5"
+      },
+      {
+        "player": "Karlo Kajin",
+        "position": "1469",
+        "points": "5"
+      },
+      {
+        "player": "Ignacio Antonio T Becerra Otarola",
+        "position": "1472",
+        "points": "5"
+      },
+      {
+        "player": "Yuttana T Charoenphon",
+        "position": "1476",
+        "points": "5"
+      },
+      {
+        "player": "Bautista T De La Pena",
+        "position": "1479",
+        "points": "5"
+      },
+      {
+        "player": "Ioannis Kountourakis",
+        "position": "1501",
+        "points": "5"
+      },
+      {
+        "player": "Matas Vasiliauskas",
+        "position": "1502",
+        "points": "5"
+      },
+      {
+        "player": "Semen T Aginskiy",
+        "position": "1503",
+        "points": "4"
+      },
+      {
+        "player": "Szymon Kielan",
+        "position": "1513",
+        "points": "4"
+      },
+      {
+        "player": "Donghyun T Hwang",
+        "position": "1514",
+        "points": "4"
+      },
+      {
+        "player": "John T Bothma",
+        "position": "1522",
+        "points": "4"
+      },
+      {
+        "player": "Rafalentino Ali Da Costa",
+        "position": "1535",
+        "points": "4"
+      },
+      {
+        "player": "Gregor T Hausberger",
+        "position": "1550",
+        "points": "4"
+      },
+      {
+        "player": "Odysseas T Geladaris",
+        "position": "1559",
+        "points": "4"
+      },
+      {
+        "player": "Evangelos T Kypriotis",
+        "position": "1562",
+        "points": "4"
+      },
+      {
+        "player": "Oskari T Eerola",
+        "position": "1566",
+        "points": "4"
+      },
+      {
+        "player": "Piet Luis T Pinter",
+        "position": "1588",
+        "points": "4"
+      },
+      {
+        "player": "Duckhee Lee",
+        "position": "1596",
+        "points": "4"
+      },
+      {
+        "player": "Suk T Ann",
+        "position": "1657",
+        "points": "3"
+      },
+      {
+        "player": "Marko T Bekeni",
+        "position": "1664",
+        "points": "3"
+      },
+      {
+        "player": "Aleksandre T Shvangiradze",
+        "position": "1689",
+        "points": "3"
+      },
+      {
+        "player": "Vasco T Leote Prata",
+        "position": "1713",
+        "points": "3"
+      },
+      {
+        "player": "Radovan Michalik",
+        "position": "1719",
+        "points": "3"
+      },
+      {
+        "player": "Emiliano T Aguilera",
+        "position": "1751",
+        "points": "2"
+      },
+      {
+        "player": "Vesa T Ahti",
+        "position": "1809",
+        "points": "2"
+      },
+      {
+        "player": "Marco T Alvarez",
+        "position": "1836",
+        "points": "2"
+      },
+      {
+        "player": "Adam T Farag Cao",
+        "position": "1884",
+        "points": "2"
+      },
+      {
+        "player": "Matic T Hribar",
+        "position": "1893",
+        "points": "2"
+      },
+      {
+        "player": "Siwanat T Auytayakul",
+        "position": "1909",
+        "points": "1"
+      },
+      {
+        "player": "Erkut T Aydin",
+        "position": "2078",
+        "points": "1"
+      },
+      {
+        "player": "Emirhan T Bulut",
+        "position": "2282",
+        "points": "1"
+      },
+      {
+        "player": "Carlos Sanchez Jover",
+        "position": "325",
+        "points": "166"
+      },
+      {
+        "player": "Miguel Damas",
+        "position": "342",
+        "points": "152"
+      },
+      {
+        "player": "Alex Martinez",
+        "position": "384",
+        "points": "130"
+      },
+      {
+        "player": "Ivan Marrero Curbelo",
+        "position": "386",
+        "points": "129"
+      },
+      {
+        "player": "Izan Almazan Valiente",
+        "position": "409",
+        "points": "119"
+      },
+      {
+        "player": "Sergi Perez Contri",
+        "position": "429",
+        "points": "112"
+      },
+      {
+        "player": "Carlos Taberner",
+        "position": "447",
+        "points": "104"
+      },
+      {
+        "player": "Sergio Callejon Hernando",
+        "position": "479",
+        "points": "94"
+      },
+      {
+        "player": "Alex Marti Pujolras",
+        "position": "484",
+        "points": "92"
+      },
+      {
+        "player": "John Echeverria",
+        "position": "523",
+        "points": "82"
+      },
+      {
+        "player": "Pedro Vives Marcos",
+        "position": "546",
+        "points": "75"
+      },
+      {
+        "player": "Alejandro Juan Mano",
+        "position": "590",
+        "points": "65"
+      },
+      {
+        "player": "Javier Barranco Cosano",
+        "position": "610",
+        "points": "60"
+      },
+      {
+        "player": "Pedro Rodenas",
+        "position": "623",
+        "points": "58"
+      },
+      {
+        "player": "Imanol Lopez Morillo",
+        "position": "661",
+        "points": "53"
+      },
+      {
+        "player": "Carlos Lopez Montagud",
+        "position": "681",
+        "points": "49"
+      },
+      {
+        "player": "Pablo Martinez Gomez",
+        "position": "683",
+        "points": "48"
+      },
+      {
+        "player": "Roger Pascual Ferra",
+        "position": "684",
+        "points": "48"
+      },
+      {
+        "player": "Mario Gonzalez Fernandez",
+        "position": "699",
+        "points": "47"
+      },
+      {
+        "player": "Oscar Jose Gutierrez",
+        "position": "701",
+        "points": "47"
+      },
+      {
+        "player": "Alberto Barroso Campos",
+        "position": "710",
+        "points": "45"
+      },
+      {
+        "player": "Carles Hernandez",
+        "position": "755",
+        "points": "40"
+      },
+      {
+        "player": "Rafael Izquierdo Luque",
+        "position": "768",
+        "points": "38"
+      },
+      {
+        "player": "Andres Santamarta Roig",
+        "position": "774",
+        "points": "37"
+      },
+      {
+        "player": "Carles Cordoba",
+        "position": "780",
+        "points": "37"
+      },
+      {
+        "player": "Pablo Perez Ramos",
+        "position": "912",
+        "points": "25"
+      },
+      {
+        "player": "Nicolas Alvarez Varona",
+        "position": "926",
+        "points": "24"
+      },
+      {
+        "player": "Alejandro Turriziani Alvarez",
+        "position": "940",
+        "points": "24"
+      },
+      {
+        "player": "Tomas Curras Abasolo",
+        "position": "982",
+        "points": "21"
+      },
+      {
+        "player": "Jorge Plans",
+        "position": "1031",
+        "points": "18"
+      }
+    ],
+    "wta": [
+      {
+        "player": "Elena Rybakina",
+        "position": "1",
+        "points": "9196"
+      },
+      {
+        "player": "Aryna Sabalenka",
+        "position": "2",
+        "points": "7550"
+      },
+      {
+        "player": "Mirra Andreeva",
+        "position": "3",
+        "points": "6306"
+      },
+      {
+        "player": "Jessica Pegula",
+        "position": "4",
+        "points": "6235"
+      },
+      {
+        "player": "Coco Gauff",
+        "position": "5",
+        "points": "5974"
+      },
+      {
+        "player": "Elina Svitolina",
+        "position": "6",
+        "points": "5229"
+      },
+      {
+        "player": "Karolína Muchová",
+        "position": "7",
+        "points": "4833"
+      },
+      {
+        "player": "Linda Nosková",
+        "position": "8",
+        "points": "4678"
+      },
+      {
+        "player": "Iga Świątek",
+        "position": "9",
+        "points": "4389"
+      },
+      {
+        "player": "Marta Kostyuk",
+        "position": "10",
+        "points": "3920"
+      },
+      {
+        "player": "Maja Chwalińska",
+        "position": "11",
+        "points": "3031"
+      },
+      {
+        "player": "Iva Jović",
+        "position": "12",
+        "points": "2931"
+      },
+      {
+        "player": "Diana Shnaider",
+        "position": "13",
+        "points": "2663"
+      },
+      {
+        "player": "Belinda Bencic",
+        "position": "14",
+        "points": "2662"
+      },
+      {
+        "player": "Elise Mertens",
+        "position": "15",
+        "points": "2540"
+      },
+      {
+        "player": "Victoria Mboko",
+        "position": "16",
+        "points": "2501"
+      },
+      {
+        "player": "Sorana Cîrstea",
+        "position": "17",
+        "points": "2380"
+      },
+      {
+        "player": "Amanda Anisimova",
+        "position": "18",
+        "points": "2363"
+      },
+      {
+        "player": "Naomi Osaka",
+        "position": "19",
+        "points": "2297"
+      },
+      {
+        "player": "Alexandra Eala",
+        "position": "20",
+        "points": "2241"
+      },
+      {
+        "player": "Madison Keys",
+        "position": "21",
+        "points": "2029"
+      },
+      {
+        "player": "Qinwen Zheng",
+        "position": "22",
+        "points": "2018"
+      },
+      {
+        "player": "Anna Kalinskaya",
+        "position": "23",
+        "points": "1989"
+      },
+      {
+        "player": "Jelena Ostapenko",
+        "position": "24",
+        "points": "1916"
+      },
+      {
+        "player": "Ann Li",
+        "position": "25",
+        "points": "1833"
+      },
+      {
+        "player": "Marie Bouzkova",
+        "position": "26",
+        "points": "1818"
+      },
+      {
+        "player": "Anastasia Potapova",
+        "position": "27",
+        "points": "1814"
+      },
+      {
+        "player": "Emma Navarro",
+        "position": "28",
+        "points": "1794"
+      },
+      {
+        "player": "Nikola Bartunkova",
+        "position": "29",
+        "points": "1711"
+      },
+      {
+        "player": "Leylah Fernandez",
+        "position": "30",
+        "points": "1709"
+      },
+      {
+        "player": "Maria Sakkari",
+        "position": "31",
+        "points": "1706"
+      },
+      {
+        "player": "Sara Bejlek",
+        "position": "32",
+        "points": "1650"
+      },
+      {
+        "player": "Ekaterina Alexandrova",
+        "position": "33",
+        "points": "1591"
+      },
+      {
+        "player": "Diane Parry",
+        "position": "34",
+        "points": "1549"
+      },
+      {
+        "player": "Jasmine Paolini",
+        "position": "35",
+        "points": "1453"
+      },
+      {
+        "player": "Donna Vekic",
+        "position": "36",
+        "points": "1333"
+      },
+      {
+        "player": "Peyton Stearns",
+        "position": "37",
+        "points": "1316"
+      },
+      {
+        "player": "Cristina Bucsa",
+        "position": "38",
+        "points": "1294"
+      },
+      {
+        "player": "Xinyu Wang",
+        "position": "39",
+        "points": "1288"
+      },
+      {
+        "player": "Daria Snigur",
+        "position": "40",
+        "points": "1280"
+      },
+      {
+        "player": "Kimberly Birrell",
+        "position": "41",
+        "points": "1280"
+      },
+      {
+        "player": "Talia Gibson",
+        "position": "42",
+        "points": "1273"
+      },
+      {
+        "player": "Liudmila Samsonova",
+        "position": "43",
+        "points": "1234"
+      },
+      {
+        "player": "Hailey Baptiste",
+        "position": "44",
+        "points": "1154"
+      },
+      {
+        "player": "Barbora Krejcikova",
+        "position": "45",
+        "points": "1133"
+      },
+      {
+        "player": "Janice Tjen",
+        "position": "46",
+        "points": "1120"
+      },
+      {
+        "player": "Magdalena Frech",
+        "position": "47",
+        "points": "1110"
+      },
+      {
+        "player": "Karolina Pliskova",
+        "position": "48",
+        "points": "1105"
+      },
+      {
+        "player": "Sonay Kartal",
+        "position": "49",
+        "points": "1097"
+      },
+      {
+        "player": "Yuliia Starodubtseva",
+        "position": "50",
+        "points": "1090"
+      },
+      {
+        "player": "Anhelina Kalinina",
+        "position": "51",
+        "points": "1087"
+      },
+      {
+        "player": "Mayar Sherif",
+        "position": "52",
+        "points": "1085"
+      },
+      {
+        "player": "Lanlana Tararudee",
+        "position": "53",
+        "points": "1080"
+      },
+      {
+        "player": "Clara Tauson",
+        "position": "54",
+        "points": "1074"
+      },
+      {
+        "player": "Ashlyn Krueger",
+        "position": "55",
+        "points": "1072"
+      },
+      {
+        "player": "Tamara Korpatsch",
+        "position": "56",
+        "points": "1070"
+      },
+      {
+        "player": "Lilli Tagger",
+        "position": "57",
+        "points": "1052"
+      },
+      {
+        "player": "Katie Boulter",
+        "position": "58",
+        "points": "1042"
+      },
+      {
+        "player": "Caty Mcnally",
+        "position": "59",
+        "points": "1035"
+      },
+      {
+        "player": "Elena-Gabriela Ruse",
+        "position": "60",
+        "points": "1033"
+      },
+      {
+        "player": "Paula Badosa",
+        "position": "61",
+        "points": "1023"
+      },
+      {
+        "player": "Oleksandra Oliynykova",
+        "position": "62",
+        "points": "1022"
+      },
+      {
+        "player": "Zeynep Sonmez",
+        "position": "63",
+        "points": "987"
+      },
+      {
+        "player": "Alycia Parks",
+        "position": "64",
+        "points": "985"
+      },
+      {
+        "player": "Elisabetta Cocciaretto",
+        "position": "65",
+        "points": "975"
+      },
+      {
+        "player": "Yulia Putintseva",
+        "position": "66",
+        "points": "969"
+      },
+      {
+        "player": "Kamilla Rakhimova",
+        "position": "67",
+        "points": "966"
+      },
+      {
+        "player": "Camila Osorio",
+        "position": "68",
+        "points": "963"
+      },
+      {
+        "player": "Tatjana Maria",
+        "position": "69",
+        "points": "945"
+      },
+      {
+        "player": "Maria Timofeeva",
+        "position": "70",
+        "points": "931"
+      },
+      {
+        "player": "Jaqueline  Cristian",
+        "position": "71",
+        "points": "928"
+      },
+      {
+        "player": "Anna Blinkova",
+        "position": "72",
+        "points": "921"
+      },
+      {
+        "player": "Katie Volynets",
+        "position": "73",
+        "points": "919"
+      },
+      {
+        "player": "Daria Kasatkina",
+        "position": "74",
+        "points": "913"
+      },
+      {
+        "player": "Anna Bondar",
+        "position": "75",
+        "points": "913"
+      },
+      {
+        "player": "Sinja Kraus",
+        "position": "76",
+        "points": "910"
+      },
+      {
+        "player": "Magda Linette",
+        "position": "77",
+        "points": "908"
+      },
+      {
+        "player": "Petra Marcinko",
+        "position": "78",
+        "points": "905"
+      },
+      {
+        "player": "Kaitlin Quevedo",
+        "position": "79",
+        "points": "902"
+      },
+      {
+        "player": "Alina Korneeva",
+        "position": "80",
+        "points": "900"
+      },
+      {
+        "player": "Xiyu Wang",
+        "position": "81",
+        "points": "899"
+      },
+      {
+        "player": "Viktorija Golubic",
+        "position": "82",
+        "points": "899"
+      },
+      {
+        "player": "Panna Udvardy",
+        "position": "83",
+        "points": "899"
+      },
+      {
+        "player": "Mananchaya Sawangkaew",
+        "position": "84",
+        "points": "886"
+      },
+      {
+        "player": "Shuai Zhang",
+        "position": "85",
+        "points": "880"
+      },
+      {
+        "player": "Katerina Siniakova",
+        "position": "86",
+        "points": "865"
+      },
+      {
+        "player": "Taylah Preston",
+        "position": "87",
+        "points": "858"
+      },
+      {
+        "player": "Tereza Valentova",
+        "position": "88",
+        "points": "833"
+      },
+      {
+        "player": "Taylor Townsend",
+        "position": "89",
+        "points": "831"
+      },
+      {
+        "player": "Maya Joint",
+        "position": "90",
+        "points": "824"
+      },
+      {
+        "player": "Antonia Ruzic",
+        "position": "91",
+        "points": "823"
+      },
+      {
+        "player": "Leolia Jeanjean",
+        "position": "92",
+        "points": "816"
+      },
+      {
+        "player": "Darja Vidmanova",
+        "position": "93",
+        "points": "812"
+      },
+      {
+        "player": "Renata Zarazúa",
+        "position": "94",
+        "points": "801"
+      },
+      {
+        "player": "Claire Liu",
+        "position": "95",
+        "points": "789"
+      },
+      {
+        "player": "Jessica Bouzas Maneiro",
+        "position": "96",
+        "points": "769"
+      },
+      {
+        "player": "Alina Charaeva",
+        "position": "97",
+        "points": "759"
+      },
+      {
+        "player": "Hanne Vandewinkel",
+        "position": "98",
+        "points": "756"
+      },
+      {
+        "player": "Francesca Jones",
+        "position": "99",
+        "points": "752"
+      },
+      {
+        "player": "Fiona Ferro",
+        "position": "100",
+        "points": "748"
+      },
+      {
+        "player": "Oksana Selekhmeteva",
+        "position": "101",
+        "points": "743"
+      },
+      {
+        "player": "Julia Grabher",
+        "position": "102",
+        "points": "738"
+      },
+      {
+        "player": "Dayana Yastremska",
+        "position": "103",
+        "points": "732"
+      },
+      {
+        "player": "Solana Sierra",
+        "position": "104",
+        "points": "730"
+      },
+      {
+        "player": "Polina Kudermetova",
+        "position": "105",
+        "points": "730"
+      },
+      {
+        "player": "Mccartney Kessler",
+        "position": "106",
+        "points": "724"
+      },
+      {
+        "player": "Lucrezia Stefanini",
+        "position": "107",
+        "points": "723"
+      },
+      {
+        "player": "Lisa Pigato",
+        "position": "108",
+        "points": "719"
+      },
+      {
+        "player": "Emma Raducanu",
+        "position": "109",
+        "points": "709"
+      },
+      {
+        "player": "Kristina Liutova",
+        "position": "110",
+        "points": "708"
+      },
+      {
+        "player": "Anastasia Zakharova",
+        "position": "111",
+        "points": "704"
+      },
+      {
+        "player": "Dominika Salkova",
+        "position": "112",
+        "points": "693"
+      },
+      {
+        "player": "Elvina Kalieva",
+        "position": "113",
+        "points": "688"
+      },
+      {
+        "player": "Mary Stoiana",
+        "position": "114",
+        "points": "666"
+      },
+      {
+        "player": "Himeno Sakatsume",
+        "position": "115",
+        "points": "665"
+      },
+      {
+        "player": "Laura Samson",
+        "position": "116",
+        "points": "658"
+      },
+      {
+        "player": "Harriet Dart",
+        "position": "117",
+        "points": "654"
+      },
+      {
+        "player": "Sloane Stephens",
+        "position": "118",
+        "points": "650"
+      },
+      {
+        "player": "Kayla Day",
+        "position": "119",
+        "points": "614"
+      },
+      {
+        "player": "Tatiana Prozorova",
+        "position": "120",
+        "points": "614"
+      },
+      {
+        "player": "Moyuka Uchijima",
+        "position": "121",
+        "points": "604"
+      },
+      {
+        "player": "Aliaksandra Sasnovich",
+        "position": "122",
+        "points": "603"
+      },
+      {
+        "player": "Jeline Vandromme",
+        "position": "123",
+        "points": "601"
+      },
+      {
+        "player": "Veronika Podrez",
+        "position": "124",
+        "points": "596"
+      },
+      {
+        "player": "Simona Waltert",
+        "position": "125",
+        "points": "595"
+      },
+      {
+        "player": "Noma Noha Akugue",
+        "position": "127",
+        "points": "591"
+      },
+      {
+        "player": "Katarzyna Kawa",
+        "position": "128",
+        "points": "586"
+      },
+      {
+        "player": "Leyre Romero Gormaz",
+        "position": "129",
+        "points": "585"
+      },
+      {
+        "player": "Marina Bassols Ribera",
+        "position": "130",
+        "points": "581"
+      },
+      {
+        "player": "Ajla Tomljanovic",
+        "position": "131",
+        "points": "575"
+      },
+      {
+        "player": "Bianca Andreescu",
+        "position": "132",
+        "points": "573"
+      },
+      {
+        "player": "Maddison Inglis",
+        "position": "133",
+        "points": "571"
+      },
+      {
+        "player": "Emerson Jones",
+        "position": "134",
+        "points": "565"
+      },
+      {
+        "player": "Lucia Bronzetti",
+        "position": "135",
+        "points": "560"
+      },
+      {
+        "player": "Alexandra Shubladze",
+        "position": "136",
+        "points": "548"
+      },
+      {
+        "player": "Eva Lys",
+        "position": "137",
+        "points": "542"
+      },
+      {
+        "player": "Andrea Lazaro Garcia",
+        "position": "138",
+        "points": "525"
+      },
+      {
+        "player": "Susan Bandecchi",
+        "position": "139",
+        "points": "524"
+      },
+      {
+        "player": "Guiomar Maristany Zuleta De Reales",
+        "position": "140",
+        "points": "519"
+      },
+      {
+        "player": "Julia Riera",
+        "position": "141",
+        "points": "517"
+      },
+      {
+        "player": "Elizara Yaneva",
+        "position": "142",
+        "points": "517"
+      },
+      {
+        "player": "Tamara Zidansek",
+        "position": "143",
+        "points": "513"
+      },
+      {
+        "player": "Teodora Kostovic",
+        "position": "144",
+        "points": "506"
+      },
+      {
+        "player": "Mia Pohankova",
+        "position": "145",
+        "points": "504"
+      },
+      {
+        "player": "Rebecca Sramkova",
+        "position": "146",
+        "points": "499"
+      },
+      {
+        "player": "Martyna Kubka",
+        "position": "147",
+        "points": "498"
+      },
+      {
+        "player": "Elina Avanesyan",
+        "position": "148",
+        "points": "498"
+      },
+      {
+        "player": "Veronika Erjavec",
+        "position": "149",
+        "points": "495"
+      },
+      {
+        "player": "Jazmin Ortenzi",
+        "position": "150",
+        "points": "494"
+      },
+      {
+        "player": "Storm Hunter",
+        "position": "151",
+        "points": "492"
+      },
+      {
+        "player": "Tyra Caterina Grant",
+        "position": "152",
+        "points": "492"
+      },
+      {
+        "player": "Dalma Galfi",
+        "position": "153",
+        "points": "490"
+      },
+      {
+        "player": "Polina Iatcenko",
+        "position": "154",
+        "points": "490"
+      },
+      {
+        "player": "Clara Burel",
+        "position": "156",
+        "points": "483"
+      },
+      {
+        "player": "Elsa Jacquemot",
+        "position": "157",
+        "points": "481"
+      },
+      {
+        "player": "Linda Fruhvirtova",
+        "position": "158",
+        "points": "478"
+      },
+      {
+        "player": "Gabriela Knutson",
+        "position": "159",
+        "points": "478"
+      },
+      {
+        "player": "Joanna Garland",
+        "position": "160",
+        "points": "477"
+      },
+      {
+        "player": "Ayla Aksu",
+        "position": "162",
+        "points": "476"
+      },
+      {
+        "player": "Sofia Costoulas",
+        "position": "163",
+        "points": "471"
+      },
+      {
+        "player": "Emiliana Arango",
+        "position": "164",
+        "points": "470"
+      },
+      {
+        "player": "Rebeka Masarova",
+        "position": "165",
+        "points": "469"
+      },
+      {
+        "player": "Darja Semenistaja",
+        "position": "166",
+        "points": "465"
+      },
+      {
+        "player": "Vendula Valdmannova",
+        "position": "167",
+        "points": "464"
+      },
+      {
+        "player": "Mai Hontama",
+        "position": "168",
+        "points": "461"
+      },
+      {
+        "player": "Anastasiia Sobolieva",
+        "position": "169",
+        "points": "457"
+      },
+      {
+        "player": "Sara Sorribes Tormo",
+        "position": "170",
+        "points": "454"
+      },
+      {
+        "player": "Jil Teichmann",
+        "position": "171",
+        "points": "452"
+      },
+      {
+        "player": "Anna Siskova",
+        "position": "172",
+        "points": "451"
+      },
+      {
+        "player": "Yue Yuan",
+        "position": "173",
+        "points": "449"
+      },
+      {
+        "player": "Yeonwoo Ku",
+        "position": "174",
+        "points": "448"
+      },
+      {
+        "player": "Alevtina Ibragimova",
+        "position": "175",
+        "points": "448"
+      },
+      {
+        "player": "Han Shi",
+        "position": "177",
+        "points": "444"
+      },
+      {
+        "player": "Ekaterine Gorgodze",
+        "position": "178",
+        "points": "437"
+      },
+      {
+        "player": "Darya Astakhova",
+        "position": "179",
+        "points": "436"
+      },
+      {
+        "player": "Eva Vedder",
+        "position": "180",
+        "points": "426"
+      },
+      {
+        "player": "Lucie Havlickova",
+        "position": "181",
+        "points": "425"
+      },
+      {
+        "player": "Erika Andreeva",
+        "position": "182",
+        "points": "424"
+      },
+      {
+        "player": "Varvara Gracheva",
+        "position": "183",
+        "points": "422"
+      },
+      {
+        "player": "Mona Barthel",
+        "position": "184",
+        "points": "421"
+      },
+      {
+        "player": "Mia Ristic",
+        "position": "185",
+        "points": "418"
+      },
+      {
+        "player": "Kayla Cross",
+        "position": "186",
+        "points": "416"
+      },
+      {
+        "player": "Samira De Stefano",
+        "position": "188",
+        "points": "411"
+      },
+      {
+        "player": "Hanyu Guo",
+        "position": "189",
+        "points": "409"
+      },
+      {
+        "player": "Elena Pridankina",
+        "position": "190",
+        "points": "408"
+      },
+      {
+        "player": "Barbora Palicova",
+        "position": "191",
+        "points": "407"
+      },
+      {
+        "player": "Despina Papamichail",
+        "position": "193",
+        "points": "404"
+      },
+      {
+        "player": "Laura Siegemund",
+        "position": "194",
+        "points": "402"
+      },
+      {
+        "player": "Katie Swan",
+        "position": "195",
+        "points": "401"
+      },
+      {
+        "player": "Anastasia Gasanova",
+        "position": "196",
+        "points": "399"
+      },
+      {
+        "player": "Rositsa Dencheva",
+        "position": "197",
+        "points": "399"
+      },
+      {
+        "player": "Ella Seidel",
+        "position": "198",
+        "points": "397"
+      },
+      {
+        "player": "Nao Hibino",
+        "position": "199",
+        "points": "393"
+      },
+      {
+        "player": "Yexin Ma",
+        "position": "200",
+        "points": "392"
+      },
+      {
+        "player": "Aliona Falei",
+        "position": "201",
+        "points": "391"
+      },
+      {
+        "player": "Julia Avdeeva",
+        "position": "202",
+        "points": "389"
+      },
+      {
+        "player": "Zhuoxuan Bai",
+        "position": "203",
+        "points": "387"
+      },
+      {
+        "player": "Luisina Giovannini",
+        "position": "204",
+        "points": "387"
+      },
+      {
+        "player": "Nadia Podoroska",
+        "position": "205",
+        "points": "382"
+      },
+      {
+        "player": "Carole Monnet",
+        "position": "206",
+        "points": "382"
+      },
+      {
+        "player": "Viktoria Hruncakova",
+        "position": "207",
+        "points": "381"
+      },
+      {
+        "player": "Polona Hercog",
+        "position": "210",
+        "points": "370"
+      },
+      {
+        "player": "Xiaodi You",
+        "position": "212",
+        "points": "365"
+      },
+      {
+        "player": "Irene Burillo",
+        "position": "213",
+        "points": "364"
+      },
+      {
+        "player": "Iryna Shymanovich",
+        "position": "214",
+        "points": "360"
+      },
+      {
+        "player": "Harmony Tan",
+        "position": "215",
+        "points": "357"
+      },
+      {
+        "player": "Celine Naef",
+        "position": "216",
+        "points": "356"
+      },
+      {
+        "player": "Alicia Herrero Linana",
+        "position": "217",
+        "points": "356"
+      },
+      {
+        "player": "Francisca Jorge",
+        "position": "218",
+        "points": "354"
+      },
+      {
+        "player": "Alice Tubello",
+        "position": "219",
+        "points": "354"
+      },
+      {
+        "player": "Ane Mintegi Del Olmo",
+        "position": "220",
+        "points": "352"
+      },
+      {
+        "player": "Hayu Kinoshita",
+        "position": "221",
+        "points": "349"
+      },
+      {
+        "player": "Angela Fita Boluda",
+        "position": "222",
+        "points": "349"
+      },
+      {
+        "player": "Nuria Brancaccio",
+        "position": "227",
+        "points": "334"
+      },
+      {
+        "player": "Katherine Sebov",
+        "position": "229",
+        "points": "331"
+      },
+      {
+        "player": "Xinyu Gao",
+        "position": "231",
+        "points": "325"
+      },
+      {
+        "player": "Alicia Dudeney",
+        "position": "232",
+        "points": "324"
+      },
+      {
+        "player": "Berfu Cengiz",
+        "position": "234",
+        "points": "322"
+      },
+      {
+        "player": "Anouk Koevermans",
+        "position": "235",
+        "points": "321"
+      },
+      {
+        "player": "Julie Struplova",
+        "position": "236",
+        "points": "317"
+      },
+      {
+        "player": "Anna-Lena Friedsam",
+        "position": "237",
+        "points": "316"
+      },
+      {
+        "player": "Greet Minnen",
+        "position": "239",
+        "points": "315"
+      },
+      {
+        "player": "Maria Lourdes Carle",
+        "position": "240",
+        "points": "315"
+      },
+      {
+        "player": "Justina Mikulskyte",
+        "position": "241",
+        "points": "315"
+      },
+      {
+        "player": "Marina Stakusic",
+        "position": "242",
+        "points": "314"
+      },
+      {
+        "player": "Laura Pigossi",
+        "position": "243",
+        "points": "312"
+      },
+      {
+        "player": "Noemi Basiletti",
+        "position": "244",
+        "points": "310"
+      },
+      {
+        "player": "Suzan Lamens",
+        "position": "245",
+        "points": "309"
+      },
+      {
+        "player": "Kyoka Okamura",
+        "position": "246",
+        "points": "307"
+      },
+      {
+        "player": "Matilde Jorge",
+        "position": "247",
+        "points": "305"
+      },
+      {
+        "player": "Katarina Zavatska",
+        "position": "248",
+        "points": "304"
+      },
+      {
+        "player": "Fangran Tian",
+        "position": "249",
+        "points": "302"
+      },
+      {
+        "player": "Joelle Steur",
+        "position": "250",
+        "points": "294"
+      },
+      {
+        "player": "Valentina Ryser",
+        "position": "251",
+        "points": "294"
+      },
+      {
+        "player": "Jennifer Ruggeri",
+        "position": "252",
+        "points": "293"
+      },
+      {
+        "player": "Linda Klimovicova",
+        "position": "254",
+        "points": "289"
+      },
+      {
+        "player": "Lois Boisson",
+        "position": "255",
+        "points": "286"
+      },
+      {
+        "player": "Mei Yamaguchi",
+        "position": "256",
+        "points": "285"
+      },
+      {
+        "player": "Lin Zhu",
+        "position": "257",
+        "points": "284"
+      },
+      {
+        "player": "Dayeon Back",
+        "position": "259",
+        "points": "280"
+      },
+      {
+        "player": "Arantxa Rus",
+        "position": "260",
+        "points": "277"
+      },
+      {
+        "player": "Anastasia Tikhonova",
+        "position": "261",
+        "points": "276"
+      },
+      {
+        "player": "Sara Saito",
+        "position": "262",
+        "points": "276"
+      },
+      {
+        "player": "Elena Malygina",
+        "position": "263",
+        "points": "275"
+      },
+      {
+        "player": "Caroline Werner",
+        "position": "264",
+        "points": "274"
+      },
+      {
+        "player": "Sofya Lansere",
+        "position": "266",
+        "points": "272"
+      },
+      {
+        "player": "Martha Matoula",
+        "position": "267",
+        "points": "271"
+      },
+      {
+        "player": "Federica Urgesi",
+        "position": "268",
+        "points": "270"
+      },
+      {
+        "player": "Hiromi Abe",
+        "position": "269",
+        "points": "269"
+      },
+      {
+        "player": "Xinxin Yao",
+        "position": "270",
+        "points": "266"
+      },
+      {
+        "player": "Ipek Oz",
+        "position": "271",
+        "points": "264"
+      },
+      {
+        "player": "Aurora Zantedeschi",
+        "position": "272",
+        "points": "257"
+      },
+      {
+        "player": "Anastasia Zolotareva",
+        "position": "273",
+        "points": "256"
+      },
+      {
+        "player": "Darya Khamutsianskaya",
+        "position": "274",
+        "points": "256"
+      },
+      {
+        "player": "Britt Du Pree",
+        "position": "275",
+        "points": "254"
+      },
+      {
+        "player": "Giorgia Pedone",
+        "position": "277",
+        "points": "252"
+      },
+      {
+        "player": "Yuki Naito",
+        "position": "278",
+        "points": "252"
+      },
+      {
+        "player": "Eva Bennemann",
+        "position": "280",
+        "points": "251"
+      },
+      {
+        "player": "Martina Capurro Taborda",
+        "position": "281",
+        "points": "251"
+      },
+      {
+        "player": "Selena Janicijevic",
+        "position": "282",
+        "points": "250"
+      },
+      {
+        "player": "Francesca Pace",
+        "position": "283",
+        "points": "248"
+      },
+      {
+        "player": "Viktoria Morvayova",
+        "position": "285",
+        "points": "247"
+      },
+      {
+        "player": "Haruka Kaji",
+        "position": "286",
+        "points": "247"
+      },
+      {
+        "player": "Mina Hodzic",
+        "position": "288",
+        "points": "245"
+      },
+      {
+        "player": "Nastasja Schunk",
+        "position": "290",
+        "points": "245"
+      },
+      {
+        "player": "Katarina Kuzmova",
+        "position": "291",
+        "points": "245"
+      },
+      {
+        "player": "Lola Radivojevic",
+        "position": "292",
+        "points": "244"
+      },
+      {
+        "player": "Yufei Ren",
+        "position": "293",
+        "points": "244"
+      },
+      {
+        "player": "Weronika Falkowska",
+        "position": "294",
+        "points": "242"
+      },
+      {
+        "player": "Elena Micic",
+        "position": "296",
+        "points": "239"
+      },
+      {
+        "player": "Priscilla Hon",
+        "position": "297",
+        "points": "238"
+      },
+      {
+        "player": "Lea Boskovic",
+        "position": "298",
+        "points": "237"
+      },
+      {
+        "player": "Sohyun Park",
+        "position": "299",
+        "points": "237"
+      },
+      {
+        "player": "Zongyu Li",
+        "position": "300",
+        "points": "235"
+      },
+      {
+        "player": "Ariana Geerlings",
+        "position": "301",
+        "points": "235"
+      },
+      {
+        "player": "Martina Trevisan",
+        "position": "302",
+        "points": "234"
+      },
+      {
+        "player": "Victoria Bosio",
+        "position": "303",
+        "points": "234"
+      },
+      {
+        "player": "Mimi Xu",
+        "position": "305",
+        "points": "232"
+      },
+      {
+        "player": "Rina Saigo",
+        "position": "306",
+        "points": "230"
+      },
+      {
+        "player": "Alena Kovackova",
+        "position": "307",
+        "points": "230"
+      },
+      {
+        "player": "Mika Stojsavljevic",
+        "position": "308",
+        "points": "229"
+      },
+      {
+        "player": "Oceane Dodin",
+        "position": "309",
+        "points": "226"
+      },
+      {
+        "player": "Jessika Ponchet",
+        "position": "310",
+        "points": "225"
+      },
+      {
+        "player": "Carolina Alves",
+        "position": "312",
+        "points": "225"
+      },
+      {
+        "player": "Lizette Cabrera",
+        "position": "313",
+        "points": "224"
+      },
+      {
+        "player": "Aoi Ito",
+        "position": "314",
+        "points": "223"
+      },
+      {
+        "player": "Anastasia Kulikova",
+        "position": "315",
+        "points": "223"
+      },
+      {
+        "player": "Amandine Monnot",
+        "position": "316",
+        "points": "223"
+      },
+      {
+        "player": "Chloe Paquet",
+        "position": "318",
+        "points": "221"
+      },
+      {
+        "player": "Ena Koike",
+        "position": "320",
+        "points": "217"
+      },
+      {
+        "player": "Elena Ruxandra Bertea",
+        "position": "322",
+        "points": "214"
+      },
+      {
+        "player": "Lucciana Perez Alarcon",
+        "position": "324",
+        "points": "213"
+      },
+      {
+        "player": "Gina Feistel",
+        "position": "325",
+        "points": "212"
+      },
+      {
+        "player": "Anouck Vrancken Peeters",
+        "position": "326",
+        "points": "211"
+      },
+      {
+        "player": "Tessa Johanna Brockmann",
+        "position": "327",
+        "points": "210"
+      },
+      {
+        "player": "Sakura Hosogi",
+        "position": "328",
+        "points": "210"
+      },
+      {
+        "player": "Lidia Encheva",
+        "position": "329",
+        "points": "209"
+      },
+      {
+        "player": "Angelina Voloshchuk",
+        "position": "330",
+        "points": "208"
+      },
+      {
+        "player": "Cadence Brace",
+        "position": "331",
+        "points": "206"
+      },
+      {
+        "player": "Margaux Rouvroy",
+        "position": "335",
+        "points": "204"
+      },
+      {
+        "player": "En-Shuo Liang",
+        "position": "336",
+        "points": "204"
+      },
+      {
+        "player": "Zuzanna Pawlikowska",
+        "position": "338",
+        "points": "204"
+      },
+      {
+        "player": "Mariam Bolkvadze",
+        "position": "339",
+        "points": "200"
+      },
+      {
+        "player": "Deborah Chiesa",
+        "position": "340",
+        "points": "199"
+      },
+      {
+        "player": "Hannah Klugman",
+        "position": "341",
+        "points": "198"
+      },
+      {
+        "player": "Luna Vujovic",
+        "position": "343",
+        "points": "192"
+      },
+      {
+        "player": "Jenny Lim",
+        "position": "344",
+        "points": "190"
+      },
+      {
+        "player": "Miriam Bulgaru",
+        "position": "345",
+        "points": "188"
+      },
+      {
+        "player": "Alina Granwehr",
+        "position": "346",
+        "points": "187"
+      },
+      {
+        "player": "Ana Sofia Sánchez",
+        "position": "347",
+        "points": "186"
+      },
+      {
+        "player": "Martina Colmegna",
+        "position": "348",
+        "points": "186"
+      },
+      {
+        "player": "Gabriela Ce",
+        "position": "349",
+        "points": "186"
+      },
+      {
+        "player": "Jessica Pieri",
+        "position": "350",
+        "points": "185"
+      },
+      {
+        "player": "Radka Zelnickova",
+        "position": "351",
+        "points": "185"
+      },
+      {
+        "player": "Ariana Arseneault",
+        "position": "352",
+        "points": "184"
+      },
+      {
+        "player": "Ella Mcdonald",
+        "position": "353",
+        "points": "184"
+      },
+      {
+        "player": "Naiktha Bains",
+        "position": "358",
+        "points": "180"
+      },
+      {
+        "player": "Valentina  Steiner",
+        "position": "359",
+        "points": "180"
+      },
+      {
+        "player": "Eva Guerrero Alvarez",
+        "position": "360",
+        "points": "179"
+      },
+      {
+        "player": "Aran Teixido Garcia",
+        "position": "361",
+        "points": "179"
+      },
+      {
+        "player": "Alessandra Mazzola",
+        "position": "362",
+        "points": "179"
+      },
+      {
+        "player": "Yelyzaveta Kotliar",
+        "position": "363",
+        "points": "178"
+      },
+      {
+        "player": "Sofia Johnson",
+        "position": "364",
+        "points": "178"
+      },
+      {
+        "player": "Jia-Jing Lu",
+        "position": "368",
+        "points": "174"
+      },
+      {
+        "player": "Carlota Martinez Cirez",
+        "position": "369",
+        "points": "173"
+      },
+      {
+        "player": "Loes Ebeling Koning",
+        "position": "370",
+        "points": "173"
+      },
+      {
+        "player": "Kaja Juvan",
+        "position": "371",
+        "points": "172"
+      },
+      {
+        "player": "Lucie Nguyen Tan",
+        "position": "373",
+        "points": "170"
+      },
+      {
+        "player": "Miho Kuramochi",
+        "position": "374",
+        "points": "169"
+      },
+      {
+        "player": "Dalila Spiteri",
+        "position": "375",
+        "points": "169"
+      },
+      {
+        "player": "Tiantsoa Rakotomanga Rajaonah",
+        "position": "376",
+        "points": "167"
+      },
+      {
+        "player": "Sonja Zhiyenbayeva",
+        "position": "381",
+        "points": "166"
+      },
+      {
+        "player": "Amelia Rajecki",
+        "position": "382",
+        "points": "165"
+      },
+      {
+        "player": "Julia Stusek",
+        "position": "383",
+        "points": "165"
+      },
+      {
+        "player": "Heather Watson",
+        "position": "384",
+        "points": "163"
+      },
+      {
+        "player": "Momoko Kobori",
+        "position": "385",
+        "points": "163"
+      },
+      {
+        "player": "Lia Karatancheva",
+        "position": "387",
+        "points": "161"
+      },
+      {
+        "player": "Viktoria Tomova-Traycheva",
+        "position": "388",
+        "points": "160"
+      },
+      {
+        "player": "Dalila Jakupovic",
+        "position": "389",
+        "points": "160"
+      },
+      {
+        "player": "Jiaqi Wang",
+        "position": "391",
+        "points": "160"
+      },
+      {
+        "player": "Lucia Cortez Llorca",
+        "position": "392",
+        "points": "159"
+      },
+      {
+        "player": "Cagla Buyukakcay",
+        "position": "394",
+        "points": "157"
+      },
+      {
+        "player": "Yidi Yang",
+        "position": "395",
+        "points": "156"
+      },
+      {
+        "player": "Weronika Ewald",
+        "position": "396",
+        "points": "156"
+      },
+      {
+        "player": "Lucija Ciric Bagaric",
+        "position": "397",
+        "points": "155"
+      },
+      {
+        "player": "Stephanie Visscher",
+        "position": "398",
+        "points": "155"
+      },
+      {
+        "player": "Natalija Senic",
+        "position": "399",
+        "points": "155"
+      },
+      {
+        "player": "Olga Danilovic",
+        "position": "400",
+        "points": "154"
+      },
+      {
+        "player": "Naho Sato",
+        "position": "402",
+        "points": "154"
+      },
+      {
+        "player": "Sijia Wei",
+        "position": "405",
+        "points": "152"
+      },
+      {
+        "player": "Natsumi Kawaguchi",
+        "position": "407",
+        "points": "150"
+      },
+      {
+        "player": "Lamis Alhussein Abdel Aziz",
+        "position": "411",
+        "points": "147"
+      },
+      {
+        "player": "Iva Primorac Pavicic",
+        "position": "413",
+        "points": "146"
+      },
+      {
+        "player": "Nina Vargova",
+        "position": "414",
+        "points": "146"
+      },
+      {
+        "player": "Antonia Vergara Rivera",
+        "position": "416",
+        "points": "145"
+      },
+      {
+        "player": "Sandra Samir",
+        "position": "418",
+        "points": "144"
+      },
+      {
+        "player": "Elena Milovanovic",
+        "position": "422",
+        "points": "143"
+      },
+      {
+        "player": "Yuriko Lily Miyazaki",
+        "position": "424",
+        "points": "141"
+      },
+      {
+        "player": "Beatriz Haddad Maia",
+        "position": "425",
+        "points": "140"
+      },
+      {
+        "player": "Katerina Tsygourova",
+        "position": "427",
+        "points": "140"
+      },
+      {
+        "player": "Beatrise Zeltina",
+        "position": "431",
+        "points": "139"
+      },
+      {
+        "player": "Olivia Gadecki",
+        "position": "432",
+        "points": "138"
+      },
+      {
+        "player": "Justina Gonzalez Daniele",
+        "position": "433",
+        "points": "138"
+      },
+      {
+        "player": "Emily Appleton",
+        "position": "437",
+        "points": "136"
+      },
+      {
+        "player": "Tena Lukas",
+        "position": "439",
+        "points": "133"
+      },
+      {
+        "player": "Isabella Shinikova",
+        "position": "440",
+        "points": "133"
+      },
+      {
+        "player": "Adrienn Nagy",
+        "position": "441",
+        "points": "133"
+      },
+      {
+        "player": "Carmen Gallardo Guevara",
+        "position": "442",
+        "points": "133"
+      },
+      {
+        "player": "Esther Adeshina",
+        "position": "444",
+        "points": "130"
+      },
+      {
+        "player": "Amarissa Toth",
+        "position": "445",
+        "points": "130"
+      },
+      {
+        "player": "Sapfo Sakellaridi",
+        "position": "446",
+        "points": "130"
+      },
+      {
+        "player": "Marie Vogt",
+        "position": "448",
+        "points": "129"
+      },
+      {
+        "player": "Denislava Glushkova",
+        "position": "449",
+        "points": "129"
+      },
+      {
+        "player": "Irina-Camelia Begu",
+        "position": "452",
+        "points": "127"
+      },
+      {
+        "player": "Jule Niemeier",
+        "position": "453",
+        "points": "127"
+      },
+      {
+        "player": "Maria Urrutia",
+        "position": "454",
+        "points": "127"
+      },
+      {
+        "player": "Victoria Allen",
+        "position": "458",
+        "points": "125"
+      },
+      {
+        "player": "Ekaterina Perelygina",
+        "position": "460",
+        "points": "123"
+      },
+      {
+        "player": "Dana Guzman",
+        "position": "462",
+        "points": "123"
+      },
+      {
+        "player": "Jasmijn Gimbrere",
+        "position": "464",
+        "points": "122"
+      },
+      {
+        "player": "Anja Stankovic",
+        "position": "465",
+        "points": "122"
+      },
+      {
+        "player": "Mara Guth",
+        "position": "466",
+        "points": "122"
+      },
+      {
+        "player": "Jana Otzipka",
+        "position": "467",
+        "points": "122"
+      },
+      {
+        "player": "Carmen Andreea  Herea",
+        "position": "468",
+        "points": "121"
+      },
+      {
+        "player": "Priska Nugroho",
+        "position": "470",
+        "points": "121"
+      },
+      {
+        "player": "Tahlia Kokkinis",
+        "position": "473",
+        "points": "120"
+      },
+      {
+        "player": "Daria Yesypchuk",
+        "position": "475",
+        "points": "120"
+      },
+      {
+        "player": "Eunhye Lee",
+        "position": "476",
+        "points": "119"
+      },
+      {
+        "player": "Luiza Fullana",
+        "position": "477",
+        "points": "119"
+      },
+      {
+        "player": "Irina Balus",
+        "position": "478",
+        "points": "118"
+      },
+      {
+        "player": "Zhibek Kulambayeva",
+        "position": "479",
+        "points": "117"
+      },
+      {
+        "player": "Maria Sara Popa",
+        "position": "480",
+        "points": "117"
+      },
+      {
+        "player": "Fernanda Labrana",
+        "position": "484",
+        "points": "115"
+      },
+      {
+        "player": "Marie Mettraux",
+        "position": "485",
+        "points": "115"
+      },
+      {
+        "player": "Pia Lovric",
+        "position": "489",
+        "points": "114"
+      },
+      {
+        "player": "Aunchisa Chanta",
+        "position": "495",
+        "points": "112"
+      },
+      {
+        "player": "Laura Hietaranta",
+        "position": "496",
+        "points": "111"
+      },
+      {
+        "player": "Valeriya Strakhova",
+        "position": "499",
+        "points": "110"
+      },
+      {
+        "player": "Anna Kubareva",
+        "position": "504",
+        "points": "109"
+      },
+      {
+        "player": "Ana Grubor",
+        "position": "506",
+        "points": "106"
+      },
+      {
+        "player": "Ya Yi Yang",
+        "position": "507",
+        "points": "106"
+      },
+      {
+        "player": "Patcharin Cheapchandej",
+        "position": "508",
+        "points": "105"
+      },
+      {
+        "player": "Sofia Shapatava",
+        "position": "510",
+        "points": "104"
+      },
+      {
+        "player": "Boyoung Jeong",
+        "position": "512",
+        "points": "104"
+      },
+      {
+        "player": "Elena Korokozidi",
+        "position": "513",
+        "points": "104"
+      },
+      {
+        "player": "Margaux Maquet",
+        "position": "514",
+        "points": "104"
+      },
+      {
+        "player": "Josy Daems",
+        "position": "515",
+        "points": "104"
+      },
+      {
+        "player": "Alana Subasic",
+        "position": "516",
+        "points": "103"
+      },
+      {
+        "player": "Andreea Prisacariu",
+        "position": "518",
+        "points": "102"
+      },
+      {
+        "player": "Valentini Grammatikopoulou",
+        "position": "519",
+        "points": "102"
+      },
+      {
+        "player": "Adithya Karunaratne",
+        "position": "520",
+        "points": "102"
+      },
+      {
+        "player": "Andre Lukosiute",
+        "position": "523",
+        "points": "101"
+      },
+      {
+        "player": "Dunja Maric",
+        "position": "524",
+        "points": "101"
+      },
+      {
+        "player": "Isis Louise Van Den Broek",
+        "position": "529",
+        "points": "99"
+      },
+      {
+        "player": "Sarah Van Emst",
+        "position": "532",
+        "points": "97"
+      },
+      {
+        "player": "Gergana Topalova",
+        "position": "538",
+        "points": "95"
+      },
+      {
+        "player": "Arina Rodionova",
+        "position": "540",
+        "points": "94"
+      },
+      {
+        "player": "Yuliya Hatouka",
+        "position": "543",
+        "points": "93"
+      },
+      {
+        "player": "Iva Ivanova ",
+        "position": "544",
+        "points": "93"
+      },
+      {
+        "player": "Luciana Moyano",
+        "position": "545",
+        "points": "93"
+      },
+      {
+        "player": "Deniz Dilek",
+        "position": "547",
+        "points": "92"
+      },
+      {
+        "player": "Carla Markus",
+        "position": "548",
+        "points": "92"
+      },
+      {
+        "player": "Thasaporn Naklo",
+        "position": "549",
+        "points": "92"
+      },
+      {
+        "player": "Ana Candiotto",
+        "position": "550",
+        "points": "92"
+      },
+      {
+        "player": "Ilinca Amariei",
+        "position": "552",
+        "points": "91"
+      },
+      {
+        "player": "Briana Szabo",
+        "position": "565",
+        "points": "85"
+      },
+      {
+        "player": "Chelsea Fontenel",
+        "position": "572",
+        "points": "84"
+      },
+      {
+        "player": "Laima Vladson",
+        "position": "575",
+        "points": "82"
+      },
+      {
+        "player": "Astra Sharma",
+        "position": "576",
+        "points": "81"
+      },
+      {
+        "player": "Anastasija Cvetkovic",
+        "position": "577",
+        "points": "81"
+      },
+      {
+        "player": "Clara Vlasselaer",
+        "position": "578",
+        "points": "81"
+      },
+      {
+        "player": "Melisa Ercan",
+        "position": "581",
+        "points": "80"
+      },
+      {
+        "player": "Ha Eum Lee",
+        "position": "583",
+        "points": "80"
+      },
+      {
+        "player": "Anastasiia Firman",
+        "position": "584",
+        "points": "80"
+      },
+      {
+        "player": "Emma Kamper",
+        "position": "590",
+        "points": "78"
+      },
+      {
+        "player": "Antonia Stoyanov",
+        "position": "591",
+        "points": "78"
+      },
+      {
+        "player": "Victoria Rodriguez",
+        "position": "594",
+        "points": "77"
+      },
+      {
+        "player": "Kateryna Lazarenko",
+        "position": "598",
+        "points": "76"
+      },
+      {
+        "player": "Daria Kuczer",
+        "position": "602",
+        "points": "75"
+      },
+      {
+        "player": "Yasmin Ezzat",
+        "position": "605",
+        "points": "75"
+      },
+      {
+        "player": "Nauhany Vitoria Leme Da Silva",
+        "position": "607",
+        "points": "74"
+      },
+      {
+        "player": "Indianna Spink",
+        "position": "609",
+        "points": "74"
+      },
+      {
+        "player": "Carolina  Bohrer Martins",
+        "position": "610",
+        "points": "74"
+      },
+      {
+        "player": "Tara Wuerth",
+        "position": "614",
+        "points": "72"
+      },
+      {
+        "player": "Martina Okalova",
+        "position": "615",
+        "points": "72"
+      },
+      {
+        "player": "Tilwith Di Girolami",
+        "position": "617",
+        "points": "71"
+      },
+      {
+        "player": "Giulia Safina Popa",
+        "position": "619",
+        "points": "70"
+      },
+      {
+        "player": "Rebecca Marino",
+        "position": "620",
+        "points": "69"
+      },
+      {
+        "player": "Tamila Gadamauri",
+        "position": "626",
+        "points": "69"
+      },
+      {
+        "player": "Hong Yi Cody Wong",
+        "position": "627",
+        "points": "68"
+      },
+      {
+        "player": "Kamonwan Yodpetch",
+        "position": "629",
+        "points": "68"
+      },
+      {
+        "player": "Maria Lazarenko",
+        "position": "630",
+        "points": "68"
+      },
+      {
+        "player": "Marie Weckerle",
+        "position": "631",
+        "points": "68"
+      },
+      {
+        "player": "Luca Udvardy",
+        "position": "634",
+        "points": "67"
+      },
+      {
+        "player": "Cheuk Ying Shek",
+        "position": "635",
+        "points": "67"
+      },
+      {
+        "player": "Demi Tran",
+        "position": "636",
+        "points": "67"
+      },
+      {
+        "player": "Sarah Rokusek",
+        "position": "639",
+        "points": "66"
+      },
+      {
+        "player": "Berta Bonardi",
+        "position": "640",
+        "points": "66"
+      },
+      {
+        "player": "Evialina Laskevich",
+        "position": "641",
+        "points": "66"
+      },
+      {
+        "player": "Maria Fernanda Navarro Oliva",
+        "position": "644",
+        "points": "65"
+      },
+      {
+        "player": "Alja Senica",
+        "position": "645",
+        "points": "65"
+      },
+      {
+        "player": "Tina Smith",
+        "position": "649",
+        "points": "64"
+      },
+      {
+        "player": "Irem Kurt",
+        "position": "650",
+        "points": "64"
+      },
+      {
+        "player": "Alexandra Vagramov",
+        "position": "658",
+        "points": "62"
+      },
+      {
+        "player": "Rose Marie Nijkamp",
+        "position": "661",
+        "points": "62"
+      },
+      {
+        "player": "Julia Konishi Camargo Silva",
+        "position": "663",
+        "points": "61"
+      },
+      {
+        "player": "Yuliya Perapekhina",
+        "position": "664",
+        "points": "61"
+      },
+      {
+        "player": "Merel Hoedt",
+        "position": "668",
+        "points": "61"
+      },
+      {
+        "player": "Cristiana  Todoni",
+        "position": "672",
+        "points": "60"
+      },
+      {
+        "player": "Leyla Britez Risso",
+        "position": "673",
+        "points": "60"
+      },
+      {
+        "player": "Kristina Novak",
+        "position": "677",
+        "points": "59"
+      },
+      {
+        "player": "Aruzhan Sagandykova",
+        "position": "678",
+        "points": "59"
+      },
+      {
+        "player": "Amelie Van Impe",
+        "position": "680",
+        "points": "59"
+      },
+      {
+        "player": "Carson Branstine",
+        "position": "683",
+        "points": "58"
+      },
+      {
+        "player": "Ema Burgic",
+        "position": "685",
+        "points": "58"
+      },
+      {
+        "player": "Marianna Argyrokastriti",
+        "position": "688",
+        "points": "57"
+      },
+      {
+        "player": "Gyeong Seo Lee",
+        "position": "689",
+        "points": "57"
+      },
+      {
+        "player": "Elza Tomase",
+        "position": "690",
+        "points": "57"
+      },
+      {
+        "player": "Asylzhan Arystanbekova",
+        "position": "692",
+        "points": "57"
+      },
+      {
+        "player": "Gabriela Lee",
+        "position": "694",
+        "points": "56"
+      },
+      {
+        "player": "Teah Chavez",
+        "position": "696",
+        "points": "56"
+      },
+      {
+        "player": "Zuzanna  Bednarz",
+        "position": "698",
+        "points": "56"
+      },
+      {
+        "player": "Oana Georgeta Simion",
+        "position": "700",
+        "points": "56"
+      },
+      {
+        "player": "Katarina Jokic",
+        "position": "702",
+        "points": "55"
+      },
+      {
+        "player": "Karla Popovic",
+        "position": "704",
+        "points": "55"
+      },
+      {
+        "player": "Alesia Breaz",
+        "position": "706",
+        "points": "54"
+      },
+      {
+        "player": "Nada Fouad",
+        "position": "709",
+        "points": "54"
+      },
+      {
+        "player": "Jessica Hinojosa Gomez",
+        "position": "713",
+        "points": "53"
+      },
+      {
+        "player": "Luna Maria Cinalli",
+        "position": "715",
+        "points": "53"
+      },
+      {
+        "player": "Sabine Rutlauka",
+        "position": "717",
+        "points": "53"
+      },
+      {
+        "player": "Urszula Radwanska",
+        "position": "720",
+        "points": "52"
+      },
+      {
+        "player": "Diana-Ioana Simionescu",
+        "position": "723",
+        "points": "52"
+      },
+      {
+        "player": "Teodora Miron",
+        "position": "728",
+        "points": "51"
+      },
+      {
+        "player": "Jana Kolodynska",
+        "position": "737",
+        "points": "50"
+      },
+      {
+        "player": "Chia Yi Tsao",
+        "position": "741",
+        "points": "50"
+      },
+      {
+        "player": "Maria Herazo",
+        "position": "743",
+        "points": "49"
+      },
+      {
+        "player": "Su Jeong Jang",
+        "position": "744",
+        "points": "49"
+      },
+      {
+        "player": "Polina Kuharenko",
+        "position": "745",
+        "points": "49"
+      },
+      {
+        "player": "Bianca Barbulescu",
+        "position": "747",
+        "points": "49"
+      },
+      {
+        "player": "Carol Zhao",
+        "position": "748",
+        "points": "48"
+      },
+      {
+        "player": "Peangtarn Plipuech",
+        "position": "749",
+        "points": "48"
+      },
+      {
+        "player": "Ilay Yoruk",
+        "position": "750",
+        "points": "48"
+      },
+      {
+        "player": "Kallista Liu",
+        "position": "751",
+        "points": "48"
+      },
+      {
+        "player": "Raphaelle Lacasse",
+        "position": "758",
+        "points": "47"
+      },
+      {
+        "player": "Ulyana Hrabavets",
+        "position": "765",
+        "points": "46"
+      },
+      {
+        "player": "Francoise Abanda",
+        "position": "766",
+        "points": "46"
+      },
+      {
+        "player": "Rebecca Munk Mortensen",
+        "position": "767",
+        "points": "46"
+      },
+      {
+        "player": "Madelief Hageman",
+        "position": "768",
+        "points": "46"
+      },
+      {
+        "player": "Paula Cembranos",
+        "position": "769",
+        "points": "46"
+      },
+      {
+        "player": "Gaeul Jang",
+        "position": "770",
+        "points": "45"
+      },
+      {
+        "player": "Amelia Paszun",
+        "position": "771",
+        "points": "45"
+      },
+      {
+        "player": "Arianne Hartono",
+        "position": "774",
+        "points": "44"
+      },
+      {
+        "player": "Duru Soke",
+        "position": "775",
+        "points": "44"
+      },
+      {
+        "player": "Ani Amiraghyan",
+        "position": "776",
+        "points": "44"
+      },
+      {
+        "player": "Lisa Claeys",
+        "position": "780",
+        "points": "44"
+      },
+      {
+        "player": "Marjorie Souza",
+        "position": "781",
+        "points": "44"
+      },
+      {
+        "player": "Eszter Meri",
+        "position": "785",
+        "points": "43"
+      },
+      {
+        "player": "Darja Suvirdjonkova",
+        "position": "790",
+        "points": "43"
+      },
+      {
+        "player": "Zoziya Kardava",
+        "position": "793",
+        "points": "43"
+      },
+      {
+        "player": "Adelina Lacinova",
+        "position": "795",
+        "points": "42"
+      },
+      {
+        "player": "Anna Kmiecik",
+        "position": "797",
+        "points": "42"
+      },
+      {
+        "player": "Noelia Zeballos",
+        "position": "798",
+        "points": "41"
+      },
+      {
+        "player": "Josefina Estevez",
+        "position": "800",
+        "points": "41"
+      },
+      {
+        "player": "Stefania Bojica",
+        "position": "801",
+        "points": "41"
+      },
+      {
+        "player": "Sara Mikaca",
+        "position": "809",
+        "points": "40"
+      },
+      {
+        "player": "Wozuko Mdlulwa",
+        "position": "810",
+        "points": "40"
+      },
+      {
+        "player": "Lourdes Ayala",
+        "position": "814",
+        "points": "39"
+      },
+      {
+        "player": "Coco Bosman",
+        "position": "815",
+        "points": "39"
+      },
+      {
+        "player": "Francesca Mattioli",
+        "position": "817",
+        "points": "38"
+      },
+      {
+        "player": "Thaisa Grana Pedretti",
+        "position": "819",
+        "points": "38"
+      },
+      {
+        "player": "Maileen Nuudi",
+        "position": "820",
+        "points": "38"
+      },
+      {
+        "player": "Klara Veldman",
+        "position": "822",
+        "points": "38"
+      },
+      {
+        "player": "Elena Jamshidi",
+        "position": "824",
+        "points": "38"
+      },
+      {
+        "player": "Yuliana Lizarazo",
+        "position": "825",
+        "points": "37"
+      },
+      {
+        "player": "Jenny Duerst",
+        "position": "827",
+        "points": "37"
+      },
+      {
+        "player": "I Wen Wan",
+        "position": "828",
+        "points": "37"
+      },
+      {
+        "player": "Romane  Longueville",
+        "position": "829",
+        "points": "37"
+      },
+      {
+        "player": "Zarina Diyas",
+        "position": "830",
+        "points": "36"
+      },
+      {
+        "player": "Victoria Luiza Barros",
+        "position": "831",
+        "points": "36"
+      },
+      {
+        "player": "Kali Supova",
+        "position": "835",
+        "points": "36"
+      },
+      {
+        "player": "Dabin Kim",
+        "position": "836",
+        "points": "36"
+      },
+      {
+        "player": "Yujin Kim",
+        "position": "837",
+        "points": "36"
+      },
+      {
+        "player": "Rikke De Koning",
+        "position": "839",
+        "points": "36"
+      },
+      {
+        "player": "Anastasija Sevastova",
+        "position": "840",
+        "points": "35"
+      },
+      {
+        "player": "Isabella Marton",
+        "position": "842",
+        "points": "35"
+      },
+      {
+        "player": "Marilouise Van Zyl",
+        "position": "845",
+        "points": "35"
+      },
+      {
+        "player": "Jana Hossam Salah",
+        "position": "846",
+        "points": "35"
+      },
+      {
+        "player": "Anita Sahdiieva",
+        "position": "848",
+        "points": "35"
+      },
+      {
+        "player": "Valentina Mediorreal Arias",
+        "position": "850",
+        "points": "34"
+      },
+      {
+        "player": "Jahnie Van Zyl",
+        "position": "861",
+        "points": "33"
+      },
+      {
+        "player": "Fiona Ganz",
+        "position": "863",
+        "points": "33"
+      },
+      {
+        "player": "Emma Si Yu Dong",
+        "position": "866",
+        "points": "32"
+      },
+      {
+        "player": "Laura Svatikova",
+        "position": "871",
+        "points": "32"
+      },
+      {
+        "player": "Salma Drugdova",
+        "position": "872",
+        "points": "32"
+      },
+      {
+        "player": "Ella Haavisto",
+        "position": "874",
+        "points": "32"
+      },
+      {
+        "player": "Jimar Gerald Gonzalez",
+        "position": "881",
+        "points": "31"
+      },
+      {
+        "player": "Kristina Dmitruk",
+        "position": "883",
+        "points": "31"
+      },
+      {
+        "player": "Yekaterina Dmitrichenko",
+        "position": "884",
+        "points": "31"
+      },
+      {
+        "player": "Petra Konjikusic",
+        "position": "888",
+        "points": "31"
+      },
+      {
+        "player": "Eudice Chong",
+        "position": "891",
+        "points": "30"
+      },
+      {
+        "player": "Kateryna Diatlova",
+        "position": "895",
+        "points": "30"
+      },
+      {
+        "player": "Julia Stamatova",
+        "position": "896",
+        "points": "30"
+      },
+      {
+        "player": "Nika Radisic",
+        "position": "898",
+        "points": "29"
+      },
+      {
+        "player": "Elsa Bonelli",
+        "position": "899",
+        "points": "29"
+      },
+      {
+        "player": "Midori Castillo Meza",
+        "position": "900",
+        "points": "29"
+      },
+      {
+        "player": "Marcelina Podlinska",
+        "position": "901",
+        "points": "29"
+      },
+      {
+        "player": "Aya El Sayed",
+        "position": "903",
+        "points": "29"
+      },
+      {
+        "player": "Merna Refaat",
+        "position": "907",
+        "points": "28"
+      },
+      {
+        "player": "Emily Sartz-Lunde",
+        "position": "908",
+        "points": "28"
+      },
+      {
+        "player": "Clarissa Blomqvist",
+        "position": "913",
+        "points": "28"
+      },
+      {
+        "player": "Maria Jose Sanchez Uribe",
+        "position": "917",
+        "points": "27"
+      },
+      {
+        "player": "Sabastiani Leon",
+        "position": "918",
+        "points": "27"
+      },
+      {
+        "player": "Iveta Dapkute",
+        "position": "924",
+        "points": "27"
+      },
+      {
+        "player": "Astrid Brune Olsen",
+        "position": "925",
+        "points": "27"
+      },
+      {
+        "player": "Jana Fett",
+        "position": "930",
+        "points": "26"
+      },
+      {
+        "player": "Maria Torres Murcia",
+        "position": "932",
+        "points": "26"
+      },
+      {
+        "player": "Natalia Sousa Salazar",
+        "position": "937",
+        "points": "26"
+      },
+      {
+        "player": "Sevil Yuldasheva",
+        "position": "944",
+        "points": "26"
+      },
+      {
+        "player": "Aysegul Mert",
+        "position": "945",
+        "points": "25"
+      },
+      {
+        "player": "Daniela Vismane",
+        "position": "952",
+        "points": "25"
+      },
+      {
+        "player": "Lya Isabel Fernandez Olivares",
+        "position": "955",
+        "points": "24"
+      },
+      {
+        "player": "Agustina Chlpac",
+        "position": "956",
+        "points": "24"
+      },
+      {
+        "player": "Gala Ivanovic",
+        "position": "959",
+        "points": "24"
+      },
+      {
+        "player": "Antonina Sushkova",
+        "position": "965",
+        "points": "23"
+      },
+      {
+        "player": "Heerae  Im",
+        "position": "969",
+        "points": "23"
+      },
+      {
+        "player": "Kamilla Bartone",
+        "position": "970",
+        "points": "23"
+      },
+      {
+        "player": "Viktoria Veleva",
+        "position": "971",
+        "points": "23"
+      },
+      {
+        "player": "Dasha Plekhanova",
+        "position": "973",
+        "points": "22"
+      },
+      {
+        "player": "Leticia Garcia Vidal",
+        "position": "976",
+        "points": "22"
+      },
+      {
+        "player": "Katarina Kujovic",
+        "position": "979",
+        "points": "22"
+      },
+      {
+        "player": "Diana Marcinkevica",
+        "position": "980",
+        "points": "22"
+      },
+      {
+        "player": "Seo Yun Choi",
+        "position": "982",
+        "points": "22"
+      },
+      {
+        "player": "Romina Ccuno",
+        "position": "983",
+        "points": "22"
+      },
+      {
+        "player": "Polina Skliar",
+        "position": "986",
+        "points": "21"
+      },
+      {
+        "player": "Katja Wiersholm",
+        "position": "987",
+        "points": "21"
+      },
+      {
+        "player": "Ayline Samardzic",
+        "position": "989",
+        "points": "21"
+      },
+      {
+        "player": "Ya-Hsuan Lee",
+        "position": "991",
+        "points": "21"
+      },
+      {
+        "player": "Ziva Falkner",
+        "position": "993",
+        "points": "20"
+      },
+      {
+        "player": "Isabella Kruger",
+        "position": "994",
+        "points": "20"
+      },
+      {
+        "player": "Ellie Daniels",
+        "position": "995",
+        "points": "20"
+      },
+      {
+        "player": "Paula Ormaechea",
+        "position": "996",
+        "points": "20"
+      },
+      {
+        "player": "Selina Atay",
+        "position": "1003",
+        "points": "19"
+      },
+      {
+        "player": "Pietra Rivoli",
+        "position": "1004",
+        "points": "19"
+      },
+      {
+        "player": "Karolina Mrazikova",
+        "position": "1006",
+        "points": "19"
+      },
+      {
+        "player": "Oriana Gniewkowska",
+        "position": "1010",
+        "points": "19"
+      },
+      {
+        "player": "Stefaniya Pushkar",
+        "position": "1012",
+        "points": "19"
+      },
+      {
+        "player": "Polina Bakhmutkina",
+        "position": "1015",
+        "points": "19"
+      },
+      {
+        "player": "Nicole Gadient",
+        "position": "1017",
+        "points": "19"
+      },
+      {
+        "player": "Ada Kumru",
+        "position": "1019",
+        "points": "18"
+      },
+      {
+        "player": "Jennifer Dourado",
+        "position": "1031",
+        "points": "18"
+      },
+      {
+        "player": "Tea Kovacevic",
+        "position": "1036",
+        "points": "17"
+      },
+      {
+        "player": "Valeria Garnevska",
+        "position": "1044",
+        "points": "17"
+      },
+      {
+        "player": "Onyu Choi",
+        "position": "1046",
+        "points": "17"
+      },
+      {
+        "player": "Sarafina Hansen",
+        "position": "1047",
+        "points": "17"
+      },
+      {
+        "player": "Suha Lee",
+        "position": "1052",
+        "points": "16"
+      },
+      {
+        "player": "Johanne Svendsen",
+        "position": "1057",
+        "points": "16"
+      },
+      {
+        "player": "Dusica Popovski",
+        "position": "1060",
+        "points": "16"
+      },
+      {
+        "player": "Ela Plosnik",
+        "position": "1062",
+        "points": "16"
+      },
+      {
+        "player": "Beatris Spasova",
+        "position": "1063",
+        "points": "16"
+      },
+      {
+        "player": "Katarzyna Piter",
+        "position": "1065",
+        "points": "15"
+      },
+      {
+        "player": "Mirjana Jovanovic",
+        "position": "1071",
+        "points": "15"
+      },
+      {
+        "player": "Dominika Podhajecka",
+        "position": "1075",
+        "points": "15"
+      },
+      {
+        "player": "Eunji Lee",
+        "position": "1079",
+        "points": "15"
+      },
+      {
+        "player": "Defne Cirpanli",
+        "position": "1083",
+        "points": "14"
+      },
+      {
+        "player": "Ana Filipa Santos",
+        "position": "1084",
+        "points": "14"
+      },
+      {
+        "player": "Marina Bulbarella",
+        "position": "1087",
+        "points": "14"
+      },
+      {
+        "player": "Melinda Biro",
+        "position": "1090",
+        "points": "14"
+      },
+      {
+        "player": "Warona Mdlulwa",
+        "position": "1101",
+        "points": "14"
+      },
+      {
+        "player": "Anika Jaskova",
+        "position": "1103",
+        "points": "14"
+      },
+      {
+        "player": "Catarina Mellei Ibiaraba Melleiro",
+        "position": "1108",
+        "points": "14"
+      },
+      {
+        "player": "Fang An Lin",
+        "position": "1114",
+        "points": "14"
+      },
+      {
+        "player": "Marianne Angel",
+        "position": "1118",
+        "points": "13"
+      },
+      {
+        "player": "Julia Garcia Ruiz",
+        "position": "1120",
+        "points": "13"
+      },
+      {
+        "player": "Leonie Rabl",
+        "position": "1121",
+        "points": "13"
+      },
+      {
+        "player": "Ava Schueller",
+        "position": "1124",
+        "points": "13"
+      },
+      {
+        "player": "Elena Milutinovic",
+        "position": "1124",
+        "points": "13"
+      },
+      {
+        "player": "Ela Milic",
+        "position": "1126",
+        "points": "13"
+      },
+      {
+        "player": "Claudia Sofia Martinez Solis",
+        "position": "1138",
+        "points": "13"
+      },
+      {
+        "player": "Ana Konjuh",
+        "position": "1143",
+        "points": "12"
+      },
+      {
+        "player": "Malene Helgø",
+        "position": "1144",
+        "points": "12"
+      },
+      {
+        "player": "Draginja Vukovic",
+        "position": "1149",
+        "points": "12"
+      },
+      {
+        "player": "Sophie Luescher",
+        "position": "1156",
+        "points": "12"
+      },
+      {
+        "player": "Danielle Dai  Chapman",
+        "position": "1159",
+        "points": "12"
+      },
+      {
+        "player": "Hania Abouelsaad",
+        "position": "1159",
+        "points": "12"
+      },
+      {
+        "player": "Mariana Isabel Higuita Barraza",
+        "position": "1167",
+        "points": "11"
+      },
+      {
+        "player": "Sofia Da Cruz Mendonca",
+        "position": "1169",
+        "points": "11"
+      },
+      {
+        "player": "Briyana Ivanova",
+        "position": "1171",
+        "points": "11"
+      },
+      {
+        "player": "Yujin Ahn",
+        "position": "1176",
+        "points": "11"
+      },
+      {
+        "player": "Adela Polakovicova",
+        "position": "1177",
+        "points": "11"
+      },
+      {
+        "player": "Dora Miskovic",
+        "position": "1177",
+        "points": "11"
+      },
+      {
+        "player": "Eva Korysheva",
+        "position": "1177",
+        "points": "11"
+      },
+      {
+        "player": "Camila Rodero Contreras",
+        "position": "1184",
+        "points": "11"
+      },
+      {
+        "player": "Andrea Obradovic",
+        "position": "1191",
+        "points": "11"
+      },
+      {
+        "player": "Marian Gomez Pezuela Cano",
+        "position": "1195",
+        "points": "10"
+      },
+      {
+        "player": "Noelia Manta",
+        "position": "1197",
+        "points": "10"
+      },
+      {
+        "player": "Rebeca Pereira",
+        "position": "1199",
+        "points": "10"
+      },
+      {
+        "player": "Lujza Beviz",
+        "position": "1203",
+        "points": "10"
+      },
+      {
+        "player": "Doroteja Petrovic",
+        "position": "1204",
+        "points": "10"
+      },
+      {
+        "player": "Gio Jang",
+        "position": "1204",
+        "points": "10"
+      },
+      {
+        "player": "Sun Min Ha",
+        "position": "1206",
+        "points": "10"
+      },
+      {
+        "player": "Donna Le Roux",
+        "position": "1208",
+        "points": "10"
+      },
+      {
+        "player": "Eunchae Kim",
+        "position": "1211",
+        "points": "10"
+      },
+      {
+        "player": "Matylda Burylo",
+        "position": "1211",
+        "points": "10"
+      },
+      {
+        "player": "Giovana Schincariol Delatorre Barbosa",
+        "position": "1223",
+        "points": "10"
+      },
+      {
+        "player": "Ingrid Millan",
+        "position": "1229",
+        "points": "10"
+      },
+      {
+        "player": "Alexa  Karatancheva",
+        "position": "1234",
+        "points": "10"
+      },
+      {
+        "player": "Liel Marlies Rothensteiner",
+        "position": "1236",
+        "points": "10"
+      },
+      {
+        "player": "Kaat Coppez",
+        "position": "1238",
+        "points": "10"
+      },
+      {
+        "player": "Mavie Osterreicher",
+        "position": "1238",
+        "points": "10"
+      },
+      {
+        "player": "Amanda Nava Elkin",
+        "position": "1240",
+        "points": "10"
+      },
+      {
+        "player": "Darya Velikova",
+        "position": "1243",
+        "points": "10"
+      },
+      {
+        "player": "Milana Ivantsiv",
+        "position": "1247",
+        "points": "9"
+      },
+      {
+        "player": "Doga Turkmen",
+        "position": "1249",
+        "points": "9"
+      },
+      {
+        "player": "Ingkar Dyussebay",
+        "position": "1269",
+        "points": "9"
+      },
+      {
+        "player": "Melis Rasim",
+        "position": "1277",
+        "points": "9"
+      },
+      {
+        "player": "Teresa Franco Dias",
+        "position": "1280",
+        "points": "8"
+      },
+      {
+        "player": "Sara Lanca",
+        "position": "1281",
+        "points": "8"
+      },
+      {
+        "player": "Maria Eduarda Carbone Dos Santos",
+        "position": "1285",
+        "points": "8"
+      },
+      {
+        "player": "Panna Bartha",
+        "position": "1308",
+        "points": "8"
+      },
+      {
+        "player": "Mia Chudejova",
+        "position": "1311",
+        "points": "8"
+      },
+      {
+        "player": "Berrak Kocak",
+        "position": "1317",
+        "points": "7"
+      },
+      {
+        "player": "Madalena Matias",
+        "position": "1318",
+        "points": "7"
+      },
+      {
+        "player": "Dia Evtimova",
+        "position": "1321",
+        "points": "7"
+      },
+      {
+        "player": "Daniela Darta Feldmane",
+        "position": "1331",
+        "points": "7"
+      },
+      {
+        "player": "Milana Maslenkova",
+        "position": "1331",
+        "points": "7"
+      },
+      {
+        "player": "Vicky Van De Peer",
+        "position": "1331",
+        "points": "7"
+      },
+      {
+        "player": "Yleymi  Muelle Valdez",
+        "position": "1339",
+        "points": "7"
+      },
+      {
+        "player": "Joody Elkady",
+        "position": "1350",
+        "points": "7"
+      },
+      {
+        "player": "Carla Tomai",
+        "position": "1354",
+        "points": "6"
+      },
+      {
+        "player": "Stefanie Auer",
+        "position": "1358",
+        "points": "6"
+      },
+      {
+        "player": "Lidia Podgorichani",
+        "position": "1372",
+        "points": "6"
+      },
+      {
+        "player": "Sandugash Kenzhibayeva",
+        "position": "1372",
+        "points": "6"
+      },
+      {
+        "player": "Valentina Khrebtova",
+        "position": "1372",
+        "points": "6"
+      },
+      {
+        "player": "Natalia Krockova",
+        "position": "1387",
+        "points": "6"
+      },
+      {
+        "player": "Elizabeth Jurna",
+        "position": "1389",
+        "points": "6"
+      },
+      {
+        "player": "Galena Krastenova",
+        "position": "1389",
+        "points": "6"
+      },
+      {
+        "player": "Anna Lena Ebster",
+        "position": "1393",
+        "points": "6"
+      },
+      {
+        "player": "Analu Freitas",
+        "position": "1397",
+        "points": "5"
+      },
+      {
+        "player": "Gabriela Agra Amorim",
+        "position": "1398",
+        "points": "5"
+      },
+      {
+        "player": "Maria Portillo Ramirez",
+        "position": "1402",
+        "points": "5"
+      },
+      {
+        "player": "Semra Aksu",
+        "position": "1402",
+        "points": "5"
+      },
+      {
+        "player": "Aiya Nupbay",
+        "position": "1407",
+        "points": "5"
+      },
+      {
+        "player": "Anna Mihalka",
+        "position": "1407",
+        "points": "5"
+      },
+      {
+        "player": "Dimitra Pavlou",
+        "position": "1407",
+        "points": "5"
+      },
+      {
+        "player": "Fernanda Regalado Macias",
+        "position": "1407",
+        "points": "5"
+      },
+      {
+        "player": "Hala Fouad",
+        "position": "1407",
+        "points": "5"
+      },
+      {
+        "player": "Petja Drame",
+        "position": "1407",
+        "points": "5"
+      },
+      {
+        "player": "Dominika Pirohova",
+        "position": "1435",
+        "points": "5"
+      },
+      {
+        "player": "Tamara Sramkova",
+        "position": "1435",
+        "points": "5"
+      },
+      {
+        "player": "Tinatini Mtvarelishvili",
+        "position": "1435",
+        "points": "5"
+      },
+      {
+        "player": "Agustina Soto Neira",
+        "position": "1442",
+        "points": "5"
+      },
+      {
+        "player": "Milla Sequeira",
+        "position": "1442",
+        "points": "5"
+      },
+      {
+        "player": "Ulrikke Eikeri",
+        "position": "1452",
+        "points": "4"
+      },
+      {
+        "player": "Maria Paulina Perez Garcia",
+        "position": "1454",
+        "points": "4"
+      },
+      {
+        "player": "Sana Garakani",
+        "position": "1454",
+        "points": "4"
+      },
+      {
+        "player": "Anna Ozerova",
+        "position": "1468",
+        "points": "4"
+      },
+      {
+        "player": "Chrystal Lopez",
+        "position": "1468",
+        "points": "4"
+      },
+      {
+        "player": "Claudia Gasparovic",
+        "position": "1468",
+        "points": "4"
+      },
+      {
+        "player": "Daria Shubina",
+        "position": "1468",
+        "points": "4"
+      },
+      {
+        "player": "Eleni Tsetsou",
+        "position": "1497",
+        "points": "3"
+      },
+      {
+        "player": "Giulia Pereira De Aguiar",
+        "position": "1497",
+        "points": "3"
+      },
+      {
+        "player": "Kaja Najzer",
+        "position": "1497",
+        "points": "3"
+      },
+      {
+        "player": "Maria Rentoumi",
+        "position": "1497",
+        "points": "3"
+      },
+      {
+        "player": "Albina Kakenova",
+        "position": "1507",
+        "points": "3"
+      },
+      {
+        "player": "Greta Nemcsek",
+        "position": "1507",
+        "points": "3"
+      },
+      {
+        "player": "Ho Ching Wu",
+        "position": "1507",
+        "points": "3"
+      },
+      {
+        "player": "Kitti Molnar",
+        "position": "1507",
+        "points": "3"
+      },
+      {
+        "player": "Charo Esquiva Banuls",
+        "position": "447",
+        "points": "130"
+      },
+      {
+        "player": "Maria Garcia Cid",
+        "position": "471",
+        "points": "121"
+      },
+      {
+        "player": "Ruth Roura Llaverias",
+        "position": "483",
+        "points": "115"
+      },
+      {
+        "player": "Celia Cervino Ruiz",
+        "position": "490",
+        "points": "114"
+      },
+      {
+        "player": "Maria Martinez Vaquero",
+        "position": "500",
+        "points": "110"
+      },
+      {
+        "player": "Aliona Bolsova",
+        "position": "534",
+        "points": "96"
+      },
+      {
+        "player": "Sara Dols",
+        "position": "582",
+        "points": "80"
+      },
+      {
+        "player": "Neus Torner Sensano",
+        "position": "608",
+        "points": "74"
+      },
+      {
+        "player": "Marta Soriano Santiago",
+        "position": "701",
+        "points": "56"
+      },
+      {
+        "player": "Cristina Diaz Adrover",
+        "position": "724",
+        "points": "51"
+      },
+      {
+        "player": "Alba Rey Garcia",
+        "position": "731",
+        "points": "51"
+      },
+      {
+        "player": "Georgina Garcia Perez",
+        "position": "733",
+        "points": "50"
+      },
+      {
+        "player": "Nuria Parrizas Diaz",
+        "position": "742",
+        "points": "49"
+      },
+      {
+        "player": "Meritxell Teixido Garcia",
+        "position": "773",
+        "points": "45"
+      },
+      {
+        "player": "Berta Passola",
+        "position": "777",
+        "points": "44"
+      },
+      {
+        "player": "Juliana Giaccio",
+        "position": "791",
+        "points": "43"
+      },
+      {
+        "player": "Maria Oliver Sanchez",
+        "position": "799",
+        "points": "41"
+      },
+      {
+        "player": "Carmen Lopez Martinez",
+        "position": "878",
+        "points": "31"
+      },
+      {
+        "player": "Lorena Solar Donoso",
+        "position": "914",
+        "points": "28"
+      },
+      {
+        "player": "Didi Bredberg Canizares",
+        "position": "938",
+        "points": "26"
+      },
+      {
+        "player": "Esther Lopez Alcaraz",
+        "position": "1013",
+        "points": "19"
+      },
+      {
+        "player": "Carolina Gomez",
+        "position": "1093",
+        "points": "14"
+      },
+      {
+        "player": "Victoria Gomez",
+        "position": "1094",
+        "points": "14"
+      },
+      {
+        "player": "Claudia Ferrer Perez",
+        "position": "1105",
+        "points": "14"
+      },
+      {
+        "player": "Eugenia  Zozaya Menendez",
+        "position": "1140",
+        "points": "13"
+      },
+      {
+        "player": "Alba Maria Coromina Boluda",
+        "position": "1162",
+        "points": "12"
+      },
+      {
+        "player": "Raquel Gonzalez Vilar",
+        "position": "1183",
+        "points": "11"
+      },
+      {
+        "player": "Lucia Natal Gomez",
+        "position": "1226",
+        "points": "10"
+      },
+      {
+        "player": "Maria Berlanga Bandera",
+        "position": "1299",
+        "points": "8"
+      },
+      {
+        "player": "Alice  Ferlito",
+        "position": "1307",
+        "points": "8"
+      }
     ]
   }
 }

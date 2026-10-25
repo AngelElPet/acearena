@@ -1,4 +1,8 @@
+import { prefixHref } from './links.mjs';
 import { isMissing, proseHtml, showHtml, showText, sinDatoHtml } from './missing.mjs';
+import { placeEs, surfaceEs } from './places.mjs';
+import { displayName, formatPoints, normalizeName } from './ranking.mjs';
+import { prepareTournaments, tournamentHasData } from './tournaments.mjs';
 
 const MISSING = 'sin dato';
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -11,9 +15,8 @@ function longDate(iso) {
 
 function esNumber(value) {
   if (value == null || value === '' || value === MISSING) return MISSING;
-  const number = Number(String(value).replace(/\./g, '').replace(',', '.'));
-  if (!Number.isFinite(number)) return MISSING;
-  return new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0 }).format(number);
+  const formatted = formatPoints(value);
+  return formatted || MISSING;
 }
 
 function money(value, currency) {
@@ -67,7 +70,7 @@ function titlesLine(player, esc) {
   const count = showHtml(player.titlesSeason, esc);
   if (player.tour === 'ATP') {
     const names = Array.isArray(player.titlesSeasonNames) && player.titlesSeasonNames.length
-      ? ` ${esc(player.titlesSeasonNames.join(', '))}.`
+      ? ` ${esc(player.titlesSeasonNames.map((name) => placeEs(name)).join(', '))}.`
       : '';
     return `Títulos ATP y Grand Slam en 2026, hasta el 18 de octubre: ${count}.${names}`;
   }
@@ -80,17 +83,24 @@ function careerHighHtml(player, esc) {
   return `${esc(String(player.careerHigh))}${dated}`;
 }
 
-function sheet(player, esc) {
+function officialRank(player, ranking) {
+  const row = ranking.lookup(player.tour, player.name);
+  if (!row) throw new Error(`Sin ranking único para ${player.tour} ${player.name}`);
+  return row;
+}
+
+function sheet(player, esc, ranking) {
+  const ranked = officialRank(player, ranking);
   const rows = [
     birthLine(player, esc),
-    `Ranking: ${showHtml(player.rank, esc)}. Puntos: ${showHtml(esNumber(player.points), esc)}.`,
+    `Ranking: ${esc(ranked.position)}. Puntos: ${esc(formatPoints(ranked.points))}. Lista del ${esc(longDate(ranking.asOf))}.`,
     `Mejor ranking de carrera: ${careerHighHtml(player, esc)}.`,
     `Mano: ${showHtml(player.hand, esc)}.`,
     `Estatura: ${showHtml(player.height, esc)}.`,
     titlesLine(player, esc),
     `Títulos de carrera: ${showHtml(player.titlesCareer, esc)}.`,
-    `Mejor resultado de Grand Slam en la carrera: ${showHtml(player.grandSlamBest, esc)}.`,
-    `Grand Slam en 2026: ${showHtml(player.grandSlam2026, esc)}.`,
+    `Mejor resultado de Grand Slam en la carrera: ${showHtml(placeEs(player.grandSlamBest), esc)}.`,
+    `Grand Slam en 2026: ${showHtml(placeEs(player.grandSlam2026), esc)}.`,
     `Premios de la temporada: ${showHtml(money(player.prizeSeason, player.prizeCurrency), esc)}.`,
     `Premios de carrera: ${showHtml(money(player.prizeCareer, player.prizeCurrency), esc)}.`,
     `Torneos de la temporada: ${showHtml(player.tournamentsSeason, esc)}.`,
@@ -98,7 +108,8 @@ function sheet(player, esc) {
   return `<ul class="event-list">\n${rows.map((row) => `          <li>${row}</li>`).join('\n')}\n        </ul>`;
 }
 
-function playerCard(player, esc, prefix, countryName) {
+function playerCard(player, esc, prefix, countryName, ranking) {
+  const ranked = officialRank(player, ranking);
   const links = [];
   if (player.ficha) links.push(`<a href="${prefix}${esc(player.ficha)}">Ficha en AceArena</a>`);
   if (player.profileUrl) {
@@ -108,9 +119,9 @@ function playerCard(player, esc, prefix, countryName) {
   return `        <article class="card player-card" id="${esc(id)}">
           ${portrait(player, esc, prefix)}
           <div>
-            <p class="kicker">${esc(player.tour)} · ${esc(countryName)} · ${showHtml(player.rank, esc)}</p>
-            <h2>${esc(player.name)}</h2>
-            ${sheet(player, esc)}
+            <p class="kicker">${esc(player.tour)} · ${esc(countryName)} · ${esc(ranked.position)}</p>
+            <h2>${esc(displayName(ranked.name))}</h2>
+            ${sheet(player, esc, ranking)}
             ${links.length ? `<p>${links.join(' · ')}</p>` : ''}
           </div>
         </article>`;
@@ -172,7 +183,7 @@ function tieFact(label, value, note, esc) {
   return `<li>${esc(label)}: ${esc(String(value))}.${extra}</li>`;
 }
 
-export function sectionEntries({ countries, spain, tournaments, h2h, order, news }, { esc, site }) {
+export function sectionEntries({ countries, spain, tournaments, h2h, order, news, players, linkIndex }, { esc, site, ranking }) {
   const entries = [];
   const updated = countries.updated;
   const countryCards = new Map();
@@ -220,7 +231,7 @@ export function sectionEntries({ countries, spain, tournaments, h2h, order, news
         <h1>Jugadores por país</h1>
         <p class="article-byline">Redacción AceArena</p>
         <p>${esc(countries.criterion)}</p>
-        <p class="as-of">Ranking ATP del ${esc(longDate(countries.atpAsOf))}. Ranking WTA del ${esc(longDate(countries.wtaAsOf))}. Informe de finales ATP a ${esc(longDate(countries.atpReportAsOf))}.</p>
+        <p class="as-of">Ranking ATP y WTA del ${esc(longDate(ranking.asOf))}. Informe de finales ATP a ${esc(longDate(countries.atpReportAsOf))}.</p>
       </div>
       <ul class="event-list">
 ${countryItems}
@@ -240,10 +251,10 @@ ${gapItems}
     const url = `${site}/paises/${country.slug}.html`;
     const players = [...country.atp, ...country.wta];
     const atpBlock = country.atp.length
-      ? `      <h2>ATP</h2>\n      <div class="card-grid">\n${country.atp.map((player) => playerCard(player, esc, '../', country.name)).join('\n')}\n      </div>`
+      ? `      <h2>ATP</h2>\n      <div class="card-grid">\n${country.atp.map((player) => playerCard(player, esc, '../', country.name, ranking)).join('\n')}\n      </div>`
       : '      <h2>ATP</h2>\n      <p>Sin jugadores con código de este país en la lista consultada.</p>';
     const wtaBlock = country.wta.length
-      ? `      <h2>WTA</h2>\n      <div class="card-grid">\n${country.wta.map((player) => playerCard(player, esc, '../', country.name)).join('\n')}\n      </div>`
+      ? `      <h2>WTA</h2>\n      <div class="card-grid">\n${country.wta.map((player) => playerCard(player, esc, '../', country.name, ranking)).join('\n')}\n      </div>`
       : '      <h2>WTA</h2>\n      <p>Sin jugadoras con código de este país en la lista consultada.</p>';
     entries.push({
       file: `paises/${country.slug}.html`,
@@ -279,7 +290,7 @@ ${gapItems}
         <h1>${esc(country.name)}</h1>
         <p class="article-byline">Redacción AceArena</p>
         <p>Hasta 20 jugadores del ranking ATP y 20 jugadoras del ranking WTA. Si un campo no está en la fuente, aparece ${sinDatoHtml()}.</p>
-        <p class="as-of">Datos ATP del ${esc(longDate(countries.atpAsOf))} (finales a ${esc(longDate(countries.atpReportAsOf))}). Datos WTA del ${esc(longDate(countries.wtaAsOf))}.</p>
+        <p class="as-of">Ranking ATP y WTA del ${esc(longDate(ranking.asOf))}. Finales ATP a ${esc(longDate(countries.atpReportAsOf))}.</p>
       </div>
 ${atpBlock}
 ${wtaBlock}
@@ -305,10 +316,14 @@ ${wtaBlock}
       return `      <h2>${esc(title)}</h2>\n      <p>Sin torneos de este grupo en las fuentes consultadas.</p>`;
     }
     const items = events.map((event) => {
-      const city = event.city && event.city !== event.name ? ` ${esc(event.city)}.` : '';
+      const name = placeEs(event.name);
+      const cityRaw = placeEs(event.city);
+      const city = cityRaw && cityRaw !== name ? ` ${esc(cityRaw)}.` : '';
+      const internal = linkIndex.tournament(event.name);
+      const title = internal ? `<a href="${esc(prefixHref(internal.href, 0))}">${esc(name)}</a>` : esc(name);
       return `        <li>
-          <p class="kicker">${esc(event.category)}</p>
-          ${esc(event.name)}.${city} ${datedHtml(event, esc)}. Superficie: ${showHtml(event.surface, esc)}.
+          <p class="kicker">${esc(placeEs(event.category))}</p>
+          ${title}.${city} ${datedHtml(event, esc)}. Superficie: ${showHtml(surfaceEs(event.surface), esc)}.
           <p>Fuente: ${sourcesHtml(event.sources, esc)}</p>
         </li>`;
     }).join('\n');
@@ -316,13 +331,15 @@ ${wtaBlock}
   }).join('\n');
   const rankList = (players, label) => {
     const items = players.map((player) => {
+      const ranked = officialRank(player, ranking);
       const href = countryCards.get(`${player.tour}:${player.name}`);
+      const shown = displayName(ranked.name);
       const name = href
-        ? `<a href="${esc(href.replace(site, '').replace(/^\//, ''))}">${esc(player.name)}</a>`
-        : esc(player.name);
+        ? `<a href="${esc(href.replace(site, '').replace(/^\//, ''))}">${esc(shown)}</a>`
+        : esc(shown);
       return `        <li class="rank-person">
           ${portrait(player, esc, '')}
-          <p>${showHtml(player.rank, esc)}. ${name}. ${showHtml(esNumber(player.points), esc)} puntos.</p>
+          <p>${esc(ranked.position)}. ${name}. ${esc(formatPoints(ranked.points))} puntos.</p>
         </li>`;
     }).join('\n');
     return `      <h2>${esc(label)}</h2>\n      <ul class="event-list">\n${items}\n      </ul>`;
@@ -355,7 +372,7 @@ ${wtaBlock}
         <span class="section-tag">España</span>
         <h1>Tenis en España</h1>
         <p class="article-byline">Redacción AceArena</p>
-        <p>Torneos que las fuentes oficiales sitúan en España, y los 50 mejores del ranking ATP y del ranking WTA con código ESP. Ranking del ${esc(longDate(spain.atpAsOf))}.</p>
+        <p>Torneos que las fuentes oficiales sitúan en España, y los 50 mejores del ranking ATP y del ranking WTA con código ESP. Ranking del ${esc(longDate(ranking.asOf))}.</p>
       </div>
 ${tournamentLists}
       <h2>Qué no está en la lista</h2>
@@ -370,10 +387,15 @@ ${rankList(spain.wta, 'Top 50 WTA')}
     },
   });
 
+  const tourEvents = prepareTournaments(tournaments);
   const tourUrl = `${site}/torneos/`;
-  const tourItems = tournaments.events.map((event) => (
-    `        <li><a href="${esc(event.slug)}.html">${esc(event.name)}</a>. ${esc(event.tour)}, ${showHtml(event.category, esc)}. ${datedHtml(event, esc)}.</li>`
-  )).join('\n');
+  const visibleEvents = tourEvents.filter((event) => tournamentHasData(event));
+  const tourItems = visibleEvents.map((event) => {
+    const category = event.combined
+      ? `ATP ${showHtml(event.categoryAtp, esc)} · WTA ${showHtml(event.categoryWta, esc)}`
+      : showHtml(placeEs(event.category), esc);
+    return `        <li><a href="${esc(event.slug)}.html">${esc(placeEs(event.name))}</a>. ${esc(event.tour)}, ${category}. ${datedHtml(event, esc)}.</li>`;
+  }).join('\n');
   entries.push({
     file: 'torneos/index.html',
     lastmod: tournaments.updated,
@@ -404,51 +426,86 @@ ${tourItems}
   </main>`,
     },
   });
-  for (const event of tournaments.events) {
+  function personLink(name, depth) {
+    const found = linkIndex.player(name);
+    const label = displayName(name);
+    if (!found || isMissing(name)) return showHtml(label, esc);
+    return `<a href="${esc(prefixHref(found.href, depth))}">${esc(label)}</a>`;
+  }
+  for (const event of tourEvents) {
     const url = `${site}/torneos/${event.slug}.html`;
-    const official = event.officialUrl && !isMissing(event.officialUrl)
-      ? `<p><a href="${esc(event.officialUrl)}" target="_blank" rel="noopener noreferrer">Fuente oficial</a></p>`
+    const title = placeEs(event.name);
+    const indexed = tournamentHasData(event);
+    const officialLinks = [
+      ['ATP', event.officialUrlAtp || (event.tour === 'ATP' ? event.officialUrl : '')],
+      ['WTA', event.officialUrlWta || (event.tour === 'WTA' ? event.officialUrl : '')],
+      [event.tour, !event.combined ? event.officialUrl : ''],
+    ].filter(([, href], index, all) => href && !isMissing(href) && all.findIndex((item) => item[1] === href) === index);
+    const official = officialLinks.length
+      ? `<p>${officialLinks.map(([label, href]) => `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">Fuente oficial${event.combined ? ` ${esc(label)}` : ''}</a>`).join(' · ')}</p>`
       : `<p>Enlace de la ficha del torneo: ${sinDatoHtml()}</p>`;
+    const categoryItem = event.combined
+      ? `<li>Categoría ATP: ${showHtml(event.categoryAtp, esc)}. Categoría WTA: ${showHtml(event.categoryWta, esc)}.</li>`
+      : `<li>Categoría: ${showHtml(placeEs(event.category), esc)}.</li>`;
+    const resultItems = event.combined
+      ? `<li>Campeón ATP: ${personLink(event.championAtp, 1)}.</li>
+        <li>Finalista ATP: ${personLink(event.finalistAtp, 1)}.</li>
+        <li>Marcador de la final ATP: ${showHtml(event.scoreAtp, esc)}.</li>
+        <li>Campeona WTA: ${personLink(event.championWta, 1)}.</li>
+        <li>Finalista WTA: ${personLink(event.finalistWta, 1)}.</li>
+        <li>Marcador de la final WTA: ${showHtml(event.scoreWta, esc)}.</li>`
+      : `<li>Campeón: ${personLink(event.champion, 1)}.</li>
+        <li>Finalista: ${personLink(event.finalist, 1)}.</li>
+        <li>Marcador de la final: ${showHtml(event.score, esc)}.</li>`;
+    const relatedNews = (news || []).filter((article) => linkIndex.tournament(article.tournament)?.href === `torneos/${event.slug}.html`);
+    const ace = [
+      ...relatedNews.map((article) => `<a href="../noticias/${esc(article.slug)}.html">${esc(article.title)}</a>`),
+      '<a href="../semana.html">Esta semana</a>',
+    ];
     entries.push({
       file: `torneos/${event.slug}.html`,
       lastmod: tournaments.updated,
+      noindex: !indexed,
       page: {
-        title: `${event.name} | AceArena`,
-        description: `${event.name}, ${event.tour}. ${showText(event.category)}. ${datedPlain(event)}.`,
+        title: `${title} | AceArena`,
+        description: `${title}, ${event.tour}. ${event.combined ? `ATP ${showText(event.categoryAtp)}. WTA ${showText(event.categoryWta)}.` : showText(placeEs(event.category))}. ${datedPlain(event)}.`,
         canonical: url,
         depth: 1,
+        robots: indexed ? undefined : 'noindex, follow',
         jsonLd: [
           breadcrumb([
             { name: 'Inicio', url: `${site}/` },
             { name: 'Torneos', url: tourUrl },
-            { name: event.name, url },
+            { name: title, url },
           ]),
           {
             '@context': 'https://schema.org',
             '@type': 'SportsEvent',
-            name: event.name,
+            name: title,
             url,
             startDate: isMissing(event.startDate) ? undefined : event.startDate,
             endDate: isMissing(event.endDate) ? undefined : event.endDate,
             sport: 'Tennis',
-            location: isMissing(event.city) ? undefined : event.city,
+            location: isMissing(event.city) ? undefined : placeEs(event.city),
           },
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
       <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Torneos</a> · ${esc(event.tour)}</p>
-      <h1>${esc(event.name)}</h1>
+      <h1>${esc(title)}</h1>
       <p class="article-byline">Redacción AceArena</p>
       <ul class="event-list">
-        <li>Categoría: ${showHtml(event.category, esc)}.</li>
+        ${categoryItem}
         <li>Fechas: ${datedFieldHtml(event, esc)}.</li>
-        <li>Sede: ${showHtml(event.city, esc)}.</li>
-        <li>Superficie: ${showHtml(event.surface, esc)}.</li>
-        <li>Campeón: ${showHtml(event.champion, esc)}.</li>
-        <li>Finalista: ${showHtml(event.finalist, esc)}.</li>
-        <li>Marcador de la final: ${showHtml(event.score, esc)}.</li>
+        <li>Sede: ${showHtml(placeEs(event.city), esc)}.</li>
+        <li>Superficie: ${showHtml(surfaceEs(event.surface), esc)}.</li>
+        ${resultItems}
       </ul>
       ${official}
+      <h2>En AceArena</h2>
+      <ul class="event-list">
+${ace.map((item) => `        <li>${item}</li>`).join('\n')}
+      </ul>
       <section class="sources">
         <h2>Fuentes</h2>
         <p>${sourcesHtml(event.sources, esc)}</p>
@@ -461,7 +518,7 @@ ${tourItems}
 
   const h2hUrl = `${site}/cara-a-cara/`;
   const h2hItems = h2h.ties.map((tie) => (
-    `        <li><a href="${esc(tie.slug)}.html">${esc(tie.playerA)} – ${esc(tie.playerB)}</a>. ${esc(tie.tournament)}, ${esc(tie.round)}. ${esc(tie.surface)}.</li>`
+    `        <li><a href="${esc(tie.slug)}.html">${esc(displayName(tie.playerA))} – ${esc(displayName(tie.playerB))}</a>. ${esc(placeEs(tie.tournament))}, ${esc(tie.round)}. ${esc(surfaceEs(tie.surface))}.</li>`
   )).join('\n');
   entries.push({
     file: 'cara-a-cara/index.html',
@@ -495,34 +552,53 @@ ${h2hItems}
   });
   for (const tie of h2h.ties) {
     const url = `${site}/cara-a-cara/${tie.slug}.html`;
+    const left = displayName(tie.playerA);
+    const right = displayName(tie.playerB);
+    const tourHit = linkIndex.tournament(tie.tournament);
+    const tourLabel = tourHit
+      ? `<a href="${esc(prefixHref(tourHit.href, 1))}">${esc(placeEs(tie.tournament))}</a>`
+      : showHtml(placeEs(tie.tournament), esc);
+    const relatedNews = (news || []).filter((article) => (article.players || []).some((name) => (
+      normalizeName(name) === normalizeName(tie.playerA) || normalizeName(name) === normalizeName(tie.playerB)
+    )));
+    const ace = [
+      ...(linkIndex.player(tie.playerA) ? [`<a href="${esc(prefixHref(linkIndex.player(tie.playerA).href, 1))}">${esc(left)}</a>`] : []),
+      ...(linkIndex.player(tie.playerB) ? [`<a href="${esc(prefixHref(linkIndex.player(tie.playerB).href, 1))}">${esc(right)}</a>`] : []),
+      ...relatedNews.map((article) => `<a href="../noticias/${esc(article.slug)}.html">${esc(article.title)}</a>`),
+      '<a href="../semana.html">Esta semana</a>',
+    ];
     entries.push({
       file: `cara-a-cara/${tie.slug}.html`,
       lastmod: h2h.updated,
       page: {
-        title: `${tie.playerA} – ${tie.playerB} | AceArena`,
-        description: `${tie.playerA} contra ${tie.playerB} en ${tie.tournament}. ${tie.surface}. Sin cuotas.`,
+        title: `${left} – ${right} | AceArena`,
+        description: `${left} contra ${right} en ${placeEs(tie.tournament)}. ${surfaceEs(tie.surface)}. Sin cuotas.`,
         canonical: url,
         depth: 1,
         jsonLd: [
           breadcrumb([
             { name: 'Inicio', url: `${site}/` },
             { name: 'Cara a cara', url: h2hUrl },
-            { name: `${tie.playerA} – ${tie.playerB}`, url },
+            { name: `${left} – ${right}`, url },
           ]),
         ],
         main: `  <main class="section page-section" id="contenido">
     <article class="container article-wrap">
-      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Cara a cara</a></p>
-      <h1>${esc(tie.playerA)} – ${esc(tie.playerB)}</h1>
+      <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Cara a cara</a> · <a href="../semana.html">Esta semana</a></p>
+      <h1>${personLink(tie.playerA, 1)} – ${personLink(tie.playerB, 1)}</h1>
       <p class="article-byline">Redacción AceArena</p>
       <ul class="event-list">
-        <li>Torneo: ${showHtml(tie.tournament, esc)}.</li>
+        <li>Torneo: ${tourLabel}.</li>
         <li>Ronda: ${showHtml(tie.round, esc)}.</li>
         <li>Fechas: ${showHtml(tie.dates, esc)}.</li>
-        <li>Superficie: ${showHtml(tie.surface, esc)}.</li>
+        <li>Superficie: ${showHtml(surfaceEs(tie.surface), esc)}.</li>
         ${tieFact('Historial', tie.h2h, tie.h2hNote, esc)}
-        ${tieFact(`Últimos cinco de ${tie.playerA}`, tie.lastA, tie.lastNote, esc)}
-        ${tieFact(`Últimos cinco de ${tie.playerB}`, tie.lastB, '', esc)}
+        ${tieFact(`Últimos cinco de ${left}`, tie.lastA, tie.lastNote, esc)}
+        ${tieFact(`Últimos cinco de ${right}`, tie.lastB, '', esc)}
+      </ul>
+      <h2>En AceArena</h2>
+      <ul class="event-list">
+${ace.map((item) => `        <li>${item}</li>`).join('\n')}
       </ul>
       <section class="sources">
         <h2>Fuentes</h2>

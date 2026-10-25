@@ -1,4 +1,6 @@
+import { linkProse, prefixHref, proseEntries } from './links.mjs';
 import { sinDatoHtml } from './missing.mjs';
+import { formatPoints, normalizeName } from './ranking.mjs';
 
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
@@ -69,19 +71,69 @@ function dayMonth(iso) {
   return `${day} de ${MONTHS[month - 1]} de ${year}`;
 }
 
-function lastResultBlock(player, resultsDoc, esc) {
-  const matches = (resultsDoc?.results || [])
-    .filter((match) => match.winner === player.name || match.loser === player.name)
-    .sort((a, b) => b.date.localeCompare(a.date) || 0);
-  const match = matches[0];
+function latestMatch(player, resultsDoc) {
+  return (resultsDoc?.results || [])
+    .filter((match) => normalizeName(match.winner) === normalizeName(player.name) || normalizeName(match.loser) === normalizeName(player.name))
+    .sort((a, b) => b.date.localeCompare(a.date) || 0)[0] || null;
+}
+
+function lastResultSentence(player, resultsDoc) {
+  const match = latestMatch(player, resultsDoc);
   if (!match) return '';
   const score = spokenScore(match.score);
   const when = dayMonth(match.date);
   const round = roundPhrase(match.round);
-  const sentence = match.loser === player.name
-    ? `cayó en ${round} del ${match.tournament} ante ${match.winner}, ${score}, el ${when}`
-    : `${round.startsWith('la ') ? `ganó ${round}` : `ganó en ${round}`} del ${match.tournament} a ${match.loser}, ${score}, el ${when}`;
-  return `\n      <p><strong>Último resultado:</strong> ${esc(sentence)}. <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>.</p>`;
+  return match.loser && normalizeName(match.loser) === normalizeName(player.name)
+    ? `Cayó en ${round} del ${match.tournament} ante ${match.winner}, ${score}, el ${when}`
+    : `${round.startsWith('la ') ? `Ganó ${round}` : `Ganó en ${round}`} del ${match.tournament} a ${match.loser}, ${score}, el ${when}`;
+}
+
+function hoyBlock(player, { week, resultsDoc, esc, ranking }) {
+  const hoy = player.hoy && typeof player.hoy === 'object' ? player.hoy : {};
+  const spot = (week?.spotlight || []).find((item) => normalizeName(item.name) === normalizeName(player.name));
+  const asOf = hoy.asOf || week?.updated || ranking.asOf;
+  const tournament = hoy.tournament || spot?.tournament || '';
+  const scheduled = (player.nextEvents || []).find((event) => event?.name && (!tournament || normalizeName(event.name) === normalizeName(tournament)));
+  const eventName = tournament || scheduled?.name || '';
+  const dates = scheduled?.dates ? `, ${scheduled.dates}` : '';
+  const rival = hoy.opponent ? `${hoy.round ? `${hoy.round} ante` : 'ante'} ${hoy.opponent}` : (hoy.round || '');
+  const next = eventName
+    ? `${eventName}${rival ? `, ${rival}` : ''}${dates}`
+    : (spot?.text || '');
+  const source = spot?.sourceUrl || scheduled?.url || '';
+  const sourceHtml = source ? ` <a href="${esc(source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : '';
+  const match = latestMatch(player, resultsDoc);
+  const last = lastResultSentence(player, resultsDoc);
+  const lastHtml = last
+    ? `${esc(last)}.${match?.source ? ` <a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a>` : ''}`
+    : sinDatoHtml();
+  return `
+      <h2>${esc(player.name)} hoy</h2>
+      <p class="as-of">Situación a ${esc(longDate(asOf))}.</p>
+      <ul class="event-list">
+        <li>Próximo partido o torneo: ${next ? `${esc(next)}.${sourceHtml}` : sinDatoHtml()}</li>
+        <li>Hora oficial en Madrid: ${hoy.startTimeMadrid ? esc(hoy.startTimeMadrid) : sinDatoHtml()}.</li>
+        <li>Último resultado: ${lastHtml}.</li>
+      </ul>`;
+}
+
+function playerPortrait(player, esc) {
+  if (player.photo) {
+    const photo = player.photo;
+    const license = photo.licenseUrl
+      ? `<a href="${esc(photo.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.license)}</a>`
+      : esc(photo.license || '');
+    return `<figure class="portrait-figure">
+          <img src="..${esc(photo.src)}" alt="Foto de ${esc(player.name)}" width="${esc(String(photo.width))}" height="${esc(String(photo.height))}" loading="lazy">
+          <figcaption>Foto: ${esc(photo.author)}. Licencia: ${license}. Fuente: <a href="${esc(photo.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(photo.sourceName)}</a>.</figcaption>
+        </figure>`;
+  }
+  if (player.portrait === 'silhouette') {
+    return `<figure class="portrait-figure" aria-hidden="true">
+          <img src="../assets/silueta-jugador.svg" alt="" aria-hidden="true" width="160" height="200" loading="lazy">
+        </figure>`;
+  }
+  return avatar(player.name, esc);
 }
 
 function nextTournamentBlock(player, week, esc) {
@@ -115,19 +167,23 @@ function breadcrumb(items) {
   };
 }
 
-export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDoc, week }, { esc, site }) {
+export function evergreenEntries({ playersDoc, calendarDoc, guidesDoc, resultsDoc, week, h2h, news, linkIndex }, { esc, site, ranking }) {
   const entries = [];
   const players = playersDoc.players;
   const guides = guidesDoc.guides;
 
-  const playerCards = players.map((player) => `        <article class="card player-card">
-          ${avatar(player.name, esc)}
+  const playerCards = players.map((player) => {
+    const row = ranking.lookup(player.tour, player.name);
+    if (!row) throw new Error(`Sin ranking único para ${player.name}`);
+    return `        <article class="card player-card">
+          ${playerPortrait(player, esc)}
           <div>
             <p class="kicker">${esc(player.tour)} · ${esc(player.nationality)}</p>
             <h2><a href="${esc(player.slug)}.html">${esc(player.name)}</a></h2>
-            <p>Número ${esc(player.ranking.position)} · ${esc(player.ranking.points)} puntos. Actualizado a ${esc(longDate(player.ranking.asOf))}.</p>
+            <p>Número ${esc(row.position)} · ${esc(formatPoints(row.points))} puntos. Actualizado a ${esc(longDate(ranking.asOf))}.</p>
           </div>
-        </article>`).join('\n');
+        </article>`;
+  }).join('\n');
   entries.push({
     file: 'jugadores/index.html',
     lastmod: playersDoc.updated,
@@ -166,9 +222,12 @@ ${playerCards}
     },
   });
 
+  const prose = proseEntries(linkIndex, 1);
   for (const player of players) {
+    const row = ranking.lookup(player.tour, player.name);
+    if (!row) throw new Error(`Sin ranking único para ${player.name}`);
     const url = `${site}/jugadores/${player.slug}.html`;
-    const ranking = `Número ${player.ranking.position} · ${player.ranking.points} puntos. Actualizado a ${longDate(player.ranking.asOf)}.`;
+    const rankingLine = `Número ${row.position} · ${formatPoints(row.points)} puntos. Actualizado a ${longDate(ranking.asOf)}.`;
     const note = player.ranking.note ? `\n        <p>${esc(player.ranking.note)}</p>` : '';
     const height = player.height
       ? `${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m`
@@ -184,22 +243,41 @@ ${playerCards}
       `Nacimiento: ${tech(born)}`,
     ];
     const sheet = `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${part}</li>`).join('\n')}\n      </ul>`;
-    const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
-    const lastResult = lastResultBlock(player, resultsDoc, esc);
-    const nextTournament = nextTournamentBlock(player, week, esc);
-    const nextEvent = !nextTournament && player.nextEvent
-      ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
-      : '';
-    const related = Array.isArray(player.related) && player.related.length
-      ? `\n      <p class="results-more">${player.related.map((item) => `<a href="${esc(item.href)}">${esc(item.label)}</a>`).join(' · ')}</p>`
-      : '';
-    const highlights = player.highlights.map((item) => `          <li>${esc(item)}</li>`).join('\n');
+    const favorites = player.favorites ? `\n      <p>${linkProse(player.favorites, esc, prose)}</p>` : '';
+    const today = hoyBlock(player, { week, resultsDoc, esc, ranking });
+    const extraEvents = (player.nextEvents || []).filter((event) => event?.name && event.url);
+    const nextEvent = extraEvents.length
+      ? `\n      <h2>Próximos torneos</h2>\n      <ul class="event-list">\n${extraEvents.map((event) => {
+        const internal = linkIndex.tournament(event.name);
+        const href = internal ? prefixHref(internal.href, 1) : event.url;
+        const external = internal ? '' : ' target="_blank" rel="noopener noreferrer"';
+        return `        <li><a href="${esc(href)}"${external}>${esc(event.name)}</a>${event.dates ? `, ${esc(event.dates)}` : ''}</li>`;
+      }).join('\n')}\n      </ul>`
+      : (!extraEvents.length && player.nextEvent
+        ? `\n      <h2>Próximo torneo</h2>\n      <ul class="event-list">\n        <li><a href="${esc(player.nextEvent.url)}" target="_blank" rel="noopener noreferrer">${esc(player.nextEvent.name)}</a>, ${esc(player.nextEvent.place)}, ${esc(player.nextEvent.dates)}</li>\n      </ul>`
+        : '');
+    const aceLinks = [];
+    for (const article of news || []) {
+      if ((article.players || []).some((name) => normalizeName(name) === normalizeName(player.name))) {
+        aceLinks.push(`<a href="../noticias/${esc(article.slug)}.html">${esc(article.title)}</a>`);
+      }
+    }
+    for (const tie of h2h?.ties || []) {
+      if ([tie.playerA, tie.playerB].some((name) => normalizeName(name) === normalizeName(player.name))) {
+        aceLinks.push(`<a href="../cara-a-cara/${esc(tie.slug)}.html">${esc(tie.playerA)} – ${esc(tie.playerB)}</a>`);
+      }
+    }
+    const mentionedTournament = linkIndex.tournament(player.hoy?.tournament || '');
+    if (mentionedTournament) aceLinks.push(`<a href="${esc(prefixHref(mentionedTournament.href, 1))}">${esc(mentionedTournament.name)}</a>`);
+    aceLinks.push('<a href="../semana.html">Esta semana</a>');
+    const related = `\n      <h2>En AceArena</h2>\n      <ul class="event-list">\n${aceLinks.map((item) => `        <li>${item}</li>`).join('\n')}\n      </ul>`;
+    const highlights = player.highlights.map((item) => `          <li>${linkProse(item, esc, prose)}</li>`).join('\n');
     entries.push({
       file: `jugadores/${player.slug}.html`,
       lastmod: playersDoc.updated,
       page: {
         title: `${player.name} | AceArena`,
-        description: `${player.name}, ${player.tour}. ${ranking}`,
+        description: `${player.name}, ${player.tour}. ${rankingLine}`,
         canonical: url,
         depth: 1,
         jsonLd: [
@@ -224,13 +302,13 @@ ${playerCards}
     <article class="container article-wrap">
       <p class="news-meta"><a href="../index.html">Inicio</a> · <a href="index.html">Jugadores</a> · ${esc(player.tour)} · ${esc(player.nationality)}</p>
       <div class="player-head">
-        ${avatar(player.name, esc)}
+        ${playerPortrait(player, esc)}
         <h1>${esc(player.name)}</h1>
       </div>
-      <p class="article-summary">${esc(ranking)}</p>${note}
-      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${lastResult}${nextTournament}${nextEvent}
+      <p class="article-summary">${esc(rankingLine)}</p>${note}
+      <p><a href="${esc(player.profileUrl)}" target="_blank" rel="noopener noreferrer">Ficha oficial ${esc(player.tour)}</a></p>${today}${nextEvent}
       <h2>Biografía</h2>
-${paragraphs(player.bio, esc)}${sheet}${favorites}
+${player.bio.map((paragraph) => `        <p>${linkProse(paragraph, esc, prose)}</p>`).join('\n')}${sheet}${favorites}
       <h2>Trayectoria</h2>
       <ul>
 ${highlights}

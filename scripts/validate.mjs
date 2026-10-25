@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, normalize, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { validateRankings } from './ranking.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -697,7 +698,21 @@ export function validateSite(rootDir) {
   }
   const robots = readFileSync(join(publicDir, 'robots.txt'), 'utf8');
   if (!robots.includes('Sitemap: https://acearena.io/sitemap.xml')) errors.push('robots.txt no referencia el sitemap');
+  if (!robots.includes('Sitemap: https://acearena.io/news-sitemap.xml')) errors.push('robots.txt no referencia el sitemap de Google News');
+  const newsSitemap = join(publicDir, 'news-sitemap.xml');
+  if (!existsSync(newsSitemap)) errors.push('falta public/news-sitemap.xml');
   const sitemap = readFileSync(join(publicDir, 'sitemap.xml'), 'utf8');
+  for (const file of walkHtml(publicDir)) {
+    const html = readFileSync(file, 'utf8');
+    const robotsTag = html.match(/<meta name="robots" content="([^"]*)"/);
+    if (!robotsTag || !robotsTag[1].includes('max-image-preview:large')) {
+      errors.push(`${relative(publicDir, file)} no declara max-image-preview:large`);
+    }
+    if (robotsTag && /\bnoindex\b/.test(robotsTag[1])) {
+      const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
+      if (canonical && sitemap.includes(canonical[1])) errors.push(`el sitemap incluye una página noindex: ${canonical[1]}`);
+    }
+  }
   if (!sitemap.includes('<lastmod>')) errors.push('el sitemap no tiene lastmod');
   for (const forbidden of ['/social/', '/og/', 'acearena-patrocinio.pdf', `${indexnow.key}.txt`, '18–31']) {
     if (sitemap.includes(forbidden)) errors.push(`el sitemap no debe incluir ${forbidden}`);
@@ -797,11 +812,15 @@ function main() {
   const indexnow = readJson(join(root, 'data', 'indexnow.json'));
   const week = readJson(join(root, 'data', 'week.json'));
   const race = readJson(join(root, 'data', 'race.json'));
+  const rankings = readJson(join(root, 'data', 'rankings.json'));
+  const countries = readJson(join(root, 'data', 'countries.json'));
+  const spain = readJson(join(root, 'data', 'spain-tennis.json'));
   const errors = [
     ...validatePayload(news, results),
     ...validateEvergreen({ players, calendar, guides, indexnow }),
     ...validateWeek(week),
     ...validateRace(race),
+    ...validateRankings({ rankings, players, countries, spain }),
     ...pendingPlaceholderErrors(root),
   ];
   if (process.argv.includes('--site')) errors.push(...validateSite(root));

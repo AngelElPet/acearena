@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://acearena.io/noticias/jodar-y-davidovich-comparten-cuadro-en-basilea.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>AceArena</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-24</news:publication_date>
+      <news:title>Jódar y Davidovich comparten cuadro en Basilea</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://acearena.io/noticias/wawrinka-se-despide-en-basilea-ante-lehecka.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>AceArena</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-24</news:publication_date>
+      <news:title>Wawrinka se despide en Basilea ante Lehecka</news:title>
+    </news:news>
+  </url>
+</urlset>
