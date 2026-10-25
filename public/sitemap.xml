@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://acearena.io/rankings.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/creditos.html</loc>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://acearena.io/jugadores/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/calendario-2027.html</loc>
@@ -122,67 +122,79 @@
   </url>
   <url>
     <loc>https://acearena.io/jugadores/carlos-alcaraz.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/rafael-jodar.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/alejandro-davidovich-fokina.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/jaume-munar.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/roberto-bautista-agut.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/paula-badosa.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/jessica-bouzas-maneiro.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/cristina-bucsa.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/kaitlin-quevedo.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/oksana-selekhmeteva.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/francisco-cerundolo.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/tomas-martin-etcheverry.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/sebastian-baez.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/alejandro-tabilo.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/camila-osorio.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/jugadores/renata-zarazua.html</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://acearena.io/jugadores/martin-landaluce.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://acearena.io/jugadores/daniel-merida.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://acearena.io/jugadores/pablo-carreno-busta.html</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/aprende/como-funciona-el-ranking-atp.html</loc>
@@ -465,15 +477,7 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/brisbane-australia-2026-01-05.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://acearena.io/torneos/hong-kong-hong-kong-2026-01-05.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/united-cup-australia-2026-01-05.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -482,10 +486,6 @@
   </url>
   <url>
     <loc>https://acearena.io/torneos/wta-adelaide-international-adelaide-aus-2026-01-12.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/adelaide-australia-2026-01-12.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -498,10 +498,6 @@
   </url>
   <url>
     <loc>https://acearena.io/torneos/wta-australian-open-melbourne-aus-2026-01-18.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/australian-open-australia-2026-01-19.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -577,11 +573,11 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/wta-atx-open-austin-tx-usa-2026-02-23.html</loc>
+    <loc>https://acearena.io/torneos/acapulco-mexico-2026-02-23.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/acapulco-mexico-2026-02-23.html</loc>
+    <loc>https://acearena.io/torneos/wta-atx-open-austin-tx-usa-2026-02-23.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -605,19 +601,11 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/wta-bnp-paribas-open-indian-wells-ca-usa-2026-03-04.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://acearena.io/torneos/wta-austin-125-austin-tx-usa-2026-03-09.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/torneos/wta-megasaray-hotels-open-antalya-tur-2026-03-10.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/atp-masters-1000-miami-fl-u-s-a-2026-03-16.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -681,15 +669,11 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/atp-masters-1000-madrid-spain-2026-04-20.html</loc>
+    <loc>https://acearena.io/torneos/wta-mutua-madrid-open-madrid-esp-2026-04-21.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://acearena.io/torneos/wta-oeiras-open-ceto-oeiras-por-2026-04-20.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/wta-mutua-madrid-open-madrid-esp-2026-04-21.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -749,10 +733,6 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/roland-garros-france-2026-05-25.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://acearena.io/torneos/wta-lexus-birmingham-open-birmingham-gbr-2026-06-01.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
@@ -762,10 +742,6 @@
   </url>
   <url>
     <loc>https://acearena.io/torneos/wta-makarska-open-makarska-cro-2026-06-02.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/s-hertogenbosch-netherlands-2026-06-08.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -817,10 +793,6 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/eastbourne-great-britain-2026-06-22.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://acearena.io/torneos/wta-lexus-eastbourne-open-eastbourne-gbr-2026-06-22.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
@@ -830,10 +802,6 @@
   </url>
   <url>
     <loc>https://acearena.io/torneos/wta-the-championships-wimbledon-wimbledon-gbr-2026-06-29.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/wimbledon-great-britain-2026-06-29.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -961,10 +929,6 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/us-open-ny-u-s-a-2026-08-31.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://acearena.io/torneos/wta-atik-antalya-open-antalya-tur-2026-09-07.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
@@ -1029,7 +993,7 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
-    <loc>https://acearena.io/torneos/beijing-china-2026-09-28.html</loc>
+    <loc>https://acearena.io/torneos/wta-china-open-beijing-chn-2026-09-30.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
@@ -1038,10 +1002,6 @@
   </url>
   <url>
     <loc>https://acearena.io/torneos/tokyo-japan-2026-09-28.html</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
-    <loc>https://acearena.io/torneos/wta-china-open-beijing-chn-2026-09-30.html</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-25",
   "players": [
     {
       "slug": "carlos-alcaraz",
@@ -26,8 +26,8 @@
       ],
       "ranking": {
         "position": "3",
-        "points": "5.560",
-        "asOf": "2026-10-12"
+        "points": "5.610",
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -50,7 +50,13 @@
       "hand": "diestro",
       "backhand": "a dos manos",
       "birthPlace": "El Palmar (Murcia)",
-      "favorites": "Golpe favorito: drive. Superficie favorita: tierra batida."
+      "favorites": "Golpe favorito: drive. Superficie favorita: tierra batida.",
+      "hoy": {
+        "asOf": "2026-10-25",
+        "tournament": "Erste Bank Open",
+        "round": "Primera ronda",
+        "opponent": "Karen Khachanov"
+      }
     },
     {
       "slug": "rafael-jodar",
@@ -85,10 +91,10 @@
         }
       ],
       "ranking": {
-        "position": "13",
-        "points": "2.659",
-        "asOf": "2026-10-12",
-        "note": "Ranking del 12 de octubre. Su mejor puesto es el 11 (agosto de 2026)."
+        "position": "11",
+        "points": "3.234",
+        "asOf": "2026-10-19",
+        "note": "Su mejor puesto es el 11, en agosto de 2026."
       },
       "sources": [
         {
@@ -154,10 +160,10 @@
         "La ATP dijo ese día que el lunes siguiente subiría 13 puestos, hasta el 13, el mejor de su carrera."
       ],
       "ranking": {
-        "position": "26",
-        "points": "1.930",
-        "asOf": "2026-10-12",
-        "note": "Ranking del 12 de octubre. Tras ganar Shanghái, la ATP lo sitúa 13.º en la lista del lunes 19, el mejor puesto de su carrera."
+        "position": "13",
+        "points": "2.880",
+        "asOf": "2026-10-19",
+        "note": "Tras ganar Shanghái, la lista del 19 de octubre lo sitúa 13.º, el mejor puesto de su carrera."
       },
       "sources": [
         {
@@ -224,9 +230,9 @@
         "En el circuito Challenger su balance es 142-73."
       ],
       "ranking": {
-        "position": "49",
-        "points": "1.100",
-        "asOf": "2026-10-12"
+        "position": "51",
+        "points": "1.010",
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -272,10 +278,9 @@
         "En la ATP Cup acabó 4-1 en 2022 y 6-0 en 2020. Ayudó a España a ganar la Davis Cup de 2019."
       ],
       "ranking": {
-        "position": "243",
+        "position": "239",
         "points": "233",
-        "asOf": "2026-10-06",
-        "note": "Lista de entrada de la ATP del 6 de octubre: puesto 243, con 233 puntos."
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -320,9 +325,9 @@
         "En 2024 fue Comeback Player of the Year y cerró el año en el puesto 12."
       ],
       "ranking": {
-        "position": "58",
+        "position": "61",
         "points": "1.023",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -330,7 +335,7 @@
           "url": "https://www.wtatennis.com/players/320124/paula-badosa"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
@@ -359,9 +364,9 @@
         "En 2024 llegó a dieciseisavos de Wimbledon y del US Open. En Wimbledon ganó a Markéta Vondroušová en Centre Court, su primera victoria ante una top 10, y se retiró ante Barbora Krejcíková."
       ],
       "ranking": {
-        "position": "99",
-        "points": "750",
-        "asOf": "2026-10-12"
+        "position": "96",
+        "points": "769",
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -369,7 +374,7 @@
           "url": "https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
@@ -398,7 +403,7 @@
       "ranking": {
         "position": "38",
         "points": "1.294",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -406,7 +411,7 @@
           "url": "https://www.wtatennis.com/players/321158/cristina-bucsa"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
@@ -434,9 +439,9 @@
         "En 2025 jugó sus primeros cuadros principales de WTA 125, con semifinales en Caldas da Rainha, y la previa del WTA 1000 de Madrid. Cerró el año en el puesto 144, desde el 317."
       ],
       "ranking": {
-        "position": "76",
-        "points": "908",
-        "asOf": "2026-10-12"
+        "position": "79",
+        "points": "902",
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -444,7 +449,7 @@
           "url": "https://www.wtatennis.com/players/331742/kaitlin-quevedo"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
@@ -470,9 +475,9 @@
         "Ese año entró en Roland Garros y en el US Open como clasificada, y perdió en primera ronda con Markéta Vondroušová. En noviembre entró por primera vez en el top 100."
       ],
       "ranking": {
-        "position": "100",
+        "position": "101",
         "points": "743",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -480,7 +485,7 @@
           "url": "https://www.wtatennis.com/players/329199/oksana-selekhmeteva"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
@@ -508,9 +513,9 @@
         "En 2026 ganó el Queen's Club, el primer título argentino en la historia de ese torneo. También ganó Buenos Aires por primera vez, sin ceder un set. En 2021 había llegado a su primera final ATP en esa ciudad, como número 137 salido de la clasificación."
       ],
       "ranking": {
-        "position": "20",
+        "position": "21",
         "points": "2.220",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -564,9 +569,9 @@
         "Cerró 2025 en el puesto 60, con un balance de 26-30 esa temporada."
       ],
       "ranking": {
-        "position": "31",
+        "position": "29",
         "points": "1.590",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -607,9 +612,9 @@
         "Fue número 1 júnior en marzo de 2018."
       ],
       "ranking": {
-        "position": "53",
+        "position": "49",
         "points": "1.044",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -653,9 +658,9 @@
         "En 2025 ganó Chengdu tras salvar dos bolas de campeonato ante el número 9, Lorenzo Musetti. Es su tercer título ATP."
       ],
       "ranking": {
-        "position": "30",
-        "points": "1.605",
-        "asOf": "2026-10-12"
+        "position": "31",
+        "points": "1.565",
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -699,9 +704,9 @@
         "En la lista del 12 de octubre de 2026 es la única colombiana del top 100."
       ],
       "ranking": {
-        "position": "67",
+        "position": "68",
         "points": "963",
-        "asOf": "2026-10-12"
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -709,7 +714,7 @@
           "url": "https://www.wtatennis.com/players/325898/camila-osorio"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
@@ -737,9 +742,9 @@
         "En la lista del 12 de octubre de 2026 es la mexicana mejor clasificada del top 100."
       ],
       "ranking": {
-        "position": "85",
-        "points": "862",
-        "asOf": "2026-10-12"
+        "position": "94",
+        "points": "801",
+        "asOf": "2026-10-19"
       },
       "sources": [
         {
@@ -747,12 +752,188 @@
           "url": "https://www.wtatennis.com/players/320716/renata-zarazua"
         },
         {
-          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "name": "WTA, lista numérica del 19 de octubre de 2026",
           "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
         }
       ],
       "hand": "diestra",
       "birthPlace": "Ciudad de México"
+    },
+    {
+      "slug": "martin-landaluce",
+      "name": "Martín Landaluce",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/-/l0il/overview",
+      "birthDate": "2006-01-08",
+      "nationality": "España",
+      "portrait": "silhouette",
+      "bio": [
+        "Nacido el 8 de enero de 2006. La fecha sale del ranking ATP por edad del 19 de octubre de 2026."
+      ],
+      "style": [
+        "Nacimiento: 8 de enero de 2006."
+      ],
+      "highlights": [
+        "El 21 de octubre de 2026 perdió en la primera ronda del ATP 250 de Lyon, el Grand Prix Auvergne-Rhône-Alpes, ante Stan Wawrinka por 6-3, 6-7(2) y 7-6(5). Entró con invitación. La ATP lo presenta como #NextGenATP.",
+        "En el cuadro del Erste Bank Open de Viena, hecho el 24 de octubre de 2026, abre ante Alexander Zverev."
+      ],
+      "ranking": {
+        "position": "67",
+        "points": "822",
+        "asOf": "2026-10-19"
+      },
+      "nextEvents": [
+        {
+          "name": "Erste Bank Open",
+          "dates": "26 oct–1 nov",
+          "url": "https://www.atptour.com/en/tournaments/vienna/337/overview"
+        }
+      ],
+      "hoy": {
+        "asOf": "2026-10-25",
+        "tournament": "Erste Bank Open",
+        "round": "Primera ronda",
+        "opponent": "Alexander Zverev"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, primera ronda de Lyon",
+          "url": "https://www.atptour.com/es/news/lyon-2026-primera-ronda-wawrinka-landaluce-musetti"
+        },
+        {
+          "name": "ATP, previa del cuadro de Viena",
+          "url": "https://www.atptour.com/es/news/alcaraz-vienna-2026-draw-preview"
+        },
+        {
+          "name": "ATP, ficha de Martín Landaluce",
+          "url": "https://www.atptour.com/en/players/-/l0il/overview"
+        }
+      ]
+    },
+    {
+      "slug": "daniel-merida",
+      "name": "Daniel Mérida",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/-/m0n7/overview",
+      "birthDate": "2004-09-26",
+      "nationality": "España",
+      "portrait": "silhouette",
+      "bio": [
+        "Nacido el 26 de septiembre de 2004. La fecha sale del ranking ATP por edad del 19 de octubre de 2026."
+      ],
+      "style": [
+        "Nacimiento: 26 de septiembre de 2004."
+      ],
+      "highlights": [
+        "El informe de finales ATP a 18 de octubre de 2026 le anota un título de la temporada, en Umag.",
+        "En el cuadro del Erste Bank Open de Viena, hecho el 24 de octubre de 2026, abre ante Daniil Medvedev."
+      ],
+      "ranking": {
+        "position": "42",
+        "points": "1.195",
+        "asOf": "2026-10-19"
+      },
+      "nextEvents": [
+        {
+          "name": "Erste Bank Open",
+          "dates": "26 oct–1 nov",
+          "url": "https://www.atptour.com/en/tournaments/vienna/337/overview"
+        }
+      ],
+      "hoy": {
+        "asOf": "2026-10-25",
+        "tournament": "Erste Bank Open",
+        "round": "Primera ronda",
+        "opponent": "Daniil Medvedev"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP, previa del cuadro de Viena",
+          "url": "https://www.atptour.com/es/news/alcaraz-vienna-2026-draw-preview"
+        },
+        {
+          "name": "ATP, ficha de Daniel Mérida",
+          "url": "https://www.atptour.com/en/players/-/m0n7/overview"
+        }
+      ]
+    },
+    {
+      "slug": "pablo-carreno-busta",
+      "name": "Pablo Carreño Busta",
+      "tour": "ATP",
+      "profileUrl": "https://www.atptour.com/en/players/-/cd85/overview",
+      "birthDate": "1991-07-12",
+      "nationality": "España",
+      "photo": {
+        "src": "/photos/pablo-carreno-busta.webp",
+        "width": 960,
+        "height": 720,
+        "author": "Kuberzog",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pablo_Carre%C3%B1o-Busta_-_Roland-Garros_-_28.05.2024.jpg"
+      },
+      "bio": [
+        "Nacido el 12 de julio de 1991. La fecha sale del ranking ATP por edad del 19 de octubre de 2026."
+      ],
+      "style": [
+        "Nacimiento: 12 de julio de 1991."
+      ],
+      "highlights": [
+        "En la lista ATP del 19 de octubre de 2026 es el número 74, con 773 puntos.",
+        "El informe de finales ATP a 18 de octubre de 2026 no le anota un título de la temporada."
+      ],
+      "ranking": {
+        "position": "74",
+        "points": "773",
+        "asOf": "2026-10-19"
+      },
+      "hoy": {
+        "asOf": "2026-10-25"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP, ficha de Pablo Carreño Busta",
+          "url": "https://www.atptour.com/en/players/-/cd85/overview"
+        },
+        {
+          "name": "Kuberzog, Roland Garros 2024, CC BY 4.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Pablo_Carre%C3%B1o-Busta_-_Roland-Garros_-_28.05.2024.jpg"
+        }
+      ]
     }
   ]
 }

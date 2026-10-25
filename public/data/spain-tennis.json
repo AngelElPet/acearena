@@ -3,7 +3,7 @@
   "atpAsOf": "2026-10-19",
   "wtaAsOf": "2026-10-19",
   "gaps": [
-    "El calendario ITF masculino de 2026 en España no se pudo leer en itftennis.com.",
+    "El calendario ITF masculino de 2026 en España no está en las fuentes usadas.",
     "Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam. Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com.",
     "La WTA y la ITF femenina salen de la API de torneos de la WTA, consultada el 2026-10-25."
   ],
@@ -968,7 +968,7 @@
     },
     {
       "slug": "daniel-merida",
-      "name": "Daniel Merida",
+      "name": "Daniel Mérida",
       "tour": "ATP",
       "rank": "42",
       "points": "1195",
@@ -1078,7 +1078,7 @@
     },
     {
       "slug": "martin-landaluce",
-      "name": "Martin Landaluce",
+      "name": "Martín Landaluce",
       "tour": "ATP",
       "rank": "67",
       "points": "822",
@@ -1122,7 +1122,7 @@
     },
     {
       "slug": "pablo-carreno-busta",
-      "name": "Pablo Carreno Busta",
+      "name": "Pablo Carreño Busta",
       "tour": "ATP",
       "rank": "74",
       "points": "773",

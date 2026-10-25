@@ -48,3 +48,4 @@ User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://acearena.io/sitemap.xml
+Sitemap: https://acearena.io/news-sitemap.xml

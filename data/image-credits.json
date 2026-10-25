@@ -3105,6 +3105,20 @@
       "pages": [
         "Jugadores por país"
       ]
+    },
+    {
+      "id": "pablo-carreno-busta",
+      "kind": "photo",
+      "title": "Pablo Carreño Busta en Roland Garros 2024",
+      "src": "/photos/pablo-carreno-busta.webp",
+      "author": "Kuberzog",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pablo_Carre%C3%B1o-Busta_-_Roland-Garros_-_28.05.2024.jpg",
+      "pages": [
+        "Ficha de Pablo Carreño Busta"
+      ]
     }
   ]
 }

@@ -40,28 +40,31 @@
 
 ## Rankings
 
-- [Rankings ATP y WTA](https://acearena.io/rankings.html): top 20 de cada circuito a 2026-10-12, más la Race de la WTA.
+- [Rankings ATP y WTA](https://acearena.io/rankings.html): top 20 de cada circuito a 2026-10-19, más la Race de la WTA.
 - Datos de rankings: https://acearena.io/data/rankings.json
 
 ## Jugadores
 
 - [Jugadores](https://acearena.io/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
-- [Carlos Alcaraz](https://acearena.io/jugadores/carlos-alcaraz.html): ATP, número 3 actualizado a 2026-10-12.
-- [Rafael Jódar](https://acearena.io/jugadores/rafael-jodar.html): ATP, número 13 actualizado a 2026-10-12.
-- [Alejandro Davidovich Fokina](https://acearena.io/jugadores/alejandro-davidovich-fokina.html): ATP, número 26 actualizado a 2026-10-12.
-- [Jaume Munar](https://acearena.io/jugadores/jaume-munar.html): ATP, número 49 actualizado a 2026-10-12.
-- [Roberto Bautista Agut](https://acearena.io/jugadores/roberto-bautista-agut.html): ATP, número 243 actualizado a 2026-10-06.
-- [Paula Badosa](https://acearena.io/jugadores/paula-badosa.html): WTA, número 58 actualizado a 2026-10-12.
-- [Jessica Bouzas Maneiro](https://acearena.io/jugadores/jessica-bouzas-maneiro.html): WTA, número 99 actualizado a 2026-10-12.
-- [Cristina Bucsa](https://acearena.io/jugadores/cristina-bucsa.html): WTA, número 38 actualizado a 2026-10-12.
-- [Kaitlin Quevedo](https://acearena.io/jugadores/kaitlin-quevedo.html): WTA, número 76 actualizado a 2026-10-12.
-- [Oksana Selekhmeteva](https://acearena.io/jugadores/oksana-selekhmeteva.html): WTA, número 100 actualizado a 2026-10-12.
-- [Francisco Cerúndolo](https://acearena.io/jugadores/francisco-cerundolo.html): ATP, número 20 actualizado a 2026-10-12.
-- [Tomás Martín Etcheverry](https://acearena.io/jugadores/tomas-martin-etcheverry.html): ATP, número 31 actualizado a 2026-10-12.
-- [Sebastián Báez](https://acearena.io/jugadores/sebastian-baez.html): ATP, número 53 actualizado a 2026-10-12.
-- [Alejandro Tabilo](https://acearena.io/jugadores/alejandro-tabilo.html): ATP, número 30 actualizado a 2026-10-12.
-- [Camila Osorio](https://acearena.io/jugadores/camila-osorio.html): WTA, número 67 actualizado a 2026-10-12.
-- [Renata Zarazúa](https://acearena.io/jugadores/renata-zarazua.html): WTA, número 85 actualizado a 2026-10-12.
+- [Carlos Alcaraz](https://acearena.io/jugadores/carlos-alcaraz.html): ATP, número 3 actualizado a 2026-10-19.
+- [Rafael Jódar](https://acearena.io/jugadores/rafael-jodar.html): ATP, número 11 actualizado a 2026-10-19.
+- [Alejandro Davidovich Fokina](https://acearena.io/jugadores/alejandro-davidovich-fokina.html): ATP, número 13 actualizado a 2026-10-19.
+- [Jaume Munar](https://acearena.io/jugadores/jaume-munar.html): ATP, número 51 actualizado a 2026-10-19.
+- [Roberto Bautista Agut](https://acearena.io/jugadores/roberto-bautista-agut.html): ATP, número 239 actualizado a 2026-10-19.
+- [Paula Badosa](https://acearena.io/jugadores/paula-badosa.html): WTA, número 61 actualizado a 2026-10-19.
+- [Jessica Bouzas Maneiro](https://acearena.io/jugadores/jessica-bouzas-maneiro.html): WTA, número 96 actualizado a 2026-10-19.
+- [Cristina Bucsa](https://acearena.io/jugadores/cristina-bucsa.html): WTA, número 38 actualizado a 2026-10-19.
+- [Kaitlin Quevedo](https://acearena.io/jugadores/kaitlin-quevedo.html): WTA, número 79 actualizado a 2026-10-19.
+- [Oksana Selekhmeteva](https://acearena.io/jugadores/oksana-selekhmeteva.html): WTA, número 101 actualizado a 2026-10-19.
+- [Francisco Cerúndolo](https://acearena.io/jugadores/francisco-cerundolo.html): ATP, número 21 actualizado a 2026-10-19.
+- [Tomás Martín Etcheverry](https://acearena.io/jugadores/tomas-martin-etcheverry.html): ATP, número 29 actualizado a 2026-10-19.
+- [Sebastián Báez](https://acearena.io/jugadores/sebastian-baez.html): ATP, número 49 actualizado a 2026-10-19.
+- [Alejandro Tabilo](https://acearena.io/jugadores/alejandro-tabilo.html): ATP, número 31 actualizado a 2026-10-19.
+- [Camila Osorio](https://acearena.io/jugadores/camila-osorio.html): WTA, número 68 actualizado a 2026-10-19.
+- [Renata Zarazúa](https://acearena.io/jugadores/renata-zarazua.html): WTA, número 94 actualizado a 2026-10-19.
+- [Martín Landaluce](https://acearena.io/jugadores/martin-landaluce.html): ATP, número 67 actualizado a 2026-10-19.
+- [Daniel Mérida](https://acearena.io/jugadores/daniel-merida.html): ATP, número 42 actualizado a 2026-10-19.
+- [Pablo Carreño Busta](https://acearena.io/jugadores/pablo-carreno-busta.html): ATP, número 74 actualizado a 2026-10-19.
 
 ## Jugadores por país y circuito
 
