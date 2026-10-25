@@ -4,17 +4,17 @@
   "wtaAsOf": "2026-10-19",
   "gaps": [
     "El calendario ITF masculino de 2026 en España no se pudo leer en itftennis.com.",
-    "Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam.",
+    "Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam. Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com.",
     "La WTA y la ITF femenina salen de la API de torneos de la WTA, consultada el 2026-10-25."
   ],
   "tournaments": [
     {
-      "name": "Tenerife 1, Spain",
+      "name": "Tenerife 1, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-02-02",
       "endDate": "sin dato",
-      "city": "Tenerife 1, Spain",
+      "city": "Tenerife 1, España",
       "surface": "pista dura",
       "sources": [
         {
@@ -24,12 +24,12 @@
       ]
     },
     {
-      "name": "Tenerife 2, Spain",
+      "name": "Tenerife 2, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-02-09",
       "endDate": "sin dato",
-      "city": "Tenerife 2, Spain",
+      "city": "Tenerife 2, España",
       "surface": "pista dura",
       "sources": [
         {
@@ -84,12 +84,12 @@
       ]
     },
     {
-      "name": "Murcia, Spain",
+      "name": "Murcia, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-03-16",
       "endDate": "sin dato",
-      "city": "Murcia, Spain",
+      "city": "Murcia, España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -114,12 +114,12 @@
       ]
     },
     {
-      "name": "Alicante (Montemar), Spain",
+      "name": "Alicante (Montemar), España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-03-23",
       "endDate": "sin dato",
-      "city": "Alicante (Montemar), Spain",
+      "city": "Alicante (Montemar), España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -129,12 +129,12 @@
       ]
     },
     {
-      "name": "Menorca, Spain",
+      "name": "Menorca, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-03-30",
       "endDate": "sin dato",
-      "city": "Menorca, Spain",
+      "city": "Menorca, España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -159,12 +159,12 @@
       ]
     },
     {
-      "name": "Madrid, Spain",
+      "name": "Madrid, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-04-06",
       "endDate": "sin dato",
-      "city": "Madrid, Spain",
+      "city": "Madrid, España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -174,27 +174,31 @@
       ]
     },
     {
-      "name": "Barcelona, Spain",
+      "name": "Barcelona, España",
       "circuit": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-04-13",
       "endDate": "sin dato",
-      "city": "Barcelona, Spain",
+      "city": "Barcelona, España",
       "surface": "tierra batida",
       "sources": [
         {
           "name": "ATP, finales ATP y Grand Slam de 2026",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP Tour, calendario 2026 (categoría)",
+          "url": "https://www.atptour.com/en/tournaments"
         }
       ]
     },
     {
-      "name": "ATP Masters 1000 Madrid, Spain",
+      "name": "ATP Masters 1000 Madrid, España",
       "circuit": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-04-20",
       "endDate": "sin dato",
-      "city": "ATP Masters 1000 Madrid, Spain",
+      "city": "ATP Masters 1000 Madrid, España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -264,12 +268,12 @@
       ]
     },
     {
-      "name": "Valencia, Spain",
+      "name": "Valencia, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-05-11",
       "endDate": "sin dato",
-      "city": "Valencia, Spain",
+      "city": "Valencia, España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -384,17 +388,21 @@
       ]
     },
     {
-      "name": "Mallorca, Spain",
+      "name": "Mallorca, España",
       "circuit": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-06-22",
       "endDate": "sin dato",
-      "city": "Mallorca, Spain",
+      "city": "Mallorca, España",
       "surface": "hierba",
       "sources": [
         {
           "name": "ATP, finales ATP y Grand Slam de 2026",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP Tour, calendario 2026 (categoría)",
+          "url": "https://www.atptour.com/en/tournaments"
         }
       ]
     },
@@ -444,12 +452,12 @@
       ]
     },
     {
-      "name": "Pozoblanco, Spain",
+      "name": "Pozoblanco, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-07-13",
       "endDate": "sin dato",
-      "city": "Pozoblanco, Spain",
+      "city": "Pozoblanco, España",
       "surface": "pista dura",
       "sources": [
         {
@@ -474,12 +482,12 @@
       ]
     },
     {
-      "name": "Segovia, Spain",
+      "name": "Segovia, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-07-20",
       "endDate": "sin dato",
-      "city": "Segovia, Spain",
+      "city": "Segovia, España",
       "surface": "pista dura",
       "sources": [
         {
@@ -579,12 +587,12 @@
       ]
     },
     {
-      "name": "Manacor, Spain",
+      "name": "Manacor, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-08-31",
       "endDate": "sin dato",
-      "city": "Manacor, Spain",
+      "city": "Manacor, España",
       "surface": "pista dura",
       "sources": [
         {
@@ -609,12 +617,12 @@
       ]
     },
     {
-      "name": "Seville, Spain",
+      "name": "Seville, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-09-07",
       "endDate": "sin dato",
-      "city": "Seville, Spain",
+      "city": "Seville, España",
       "surface": "tierra batida",
       "sources": [
         {
@@ -684,12 +692,12 @@
       ]
     },
     {
-      "name": "Villena, Spain",
+      "name": "Villena, España",
       "circuit": "Challenger",
       "category": "Challenger",
       "startDate": "2026-10-05",
       "endDate": "sin dato",
-      "city": "Villena, Spain",
+      "city": "Villena, España",
       "surface": "pista dura",
       "sources": [
         {

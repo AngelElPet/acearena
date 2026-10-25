@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-25",
-  "coverage": "ATP y Grand Slam: finales publicadas en el informe ATP a 18 de octubre de 2026. La categoría queda en sin dato salvo que la línea del informe diga Masters 1000 o sea un Grand Slam. WTA: torneos de 2026 cuyo nivel en la API es de circuito (Grand Slam, WTA 1000, 500, 250, 125 o Finals). Lo jugado en la ATP después del 18 de octubre no está en ese informe.",
+  "coverage": "ATP y Grand Slam: finales publicadas en el informe ATP a 18 de octubre de 2026. La categoría queda en sin dato salvo que la línea del informe diga Masters 1000 o sea un Grand Slam; Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com. WTA: torneos de 2026 cuyo nivel en la API es de circuito (Grand Slam, WTA 1000, 500, 250, 125 o Finals). Lo jugado en la ATP después del 18 de octubre no está en ese informe.",
   "events": [
     {
       "slug": "wta-united-cup-australia-aus-2026-01-02",
@@ -1044,12 +1044,12 @@
     },
     {
       "slug": "barcelona-spain-2026-04-13",
-      "name": "Barcelona, Spain",
+      "name": "Barcelona, España",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-04-13",
       "endDate": "sin dato",
-      "city": "Barcelona, Spain",
+      "city": "Barcelona, España",
       "surface": "tierra batida",
       "champion": "Arthur Fils",
       "finalist": "Andrey Rublev",
@@ -1059,6 +1059,10 @@
         {
           "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP Tour, calendario 2026 (categoría)",
+          "url": "https://www.atptour.com/en/tournaments"
         }
       ]
     },
@@ -1144,12 +1148,12 @@
     },
     {
       "slug": "atp-masters-1000-madrid-spain-2026-04-20",
-      "name": "ATP Masters 1000 Madrid, Spain",
+      "name": "ATP Masters 1000 Madrid, España",
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-04-20",
       "endDate": "sin dato",
-      "city": "ATP Masters 1000 Madrid, Spain",
+      "city": "ATP Masters 1000 Madrid, España",
       "surface": "tierra batida",
       "champion": "Jannik Sinner",
       "finalist": "Alexander Zverev",
@@ -1864,12 +1868,12 @@
     },
     {
       "slug": "mallorca-spain-2026-06-22",
-      "name": "Mallorca, Spain",
+      "name": "Mallorca, España",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-06-22",
       "endDate": "sin dato",
-      "city": "Mallorca, Spain",
+      "city": "Mallorca, España",
       "surface": "hierba",
       "champion": "Alejandro Davidovich Fokina",
       "finalist": "Ethan Quinn",
@@ -1879,6 +1883,10 @@
         {
           "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP Tour, calendario 2026 (categoría)",
+          "url": "https://www.atptour.com/en/tournaments"
         }
       ]
     },

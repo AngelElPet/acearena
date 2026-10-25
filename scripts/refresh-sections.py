@@ -42,6 +42,9 @@ ATP_AGE = 'http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf
 ATP_PRIZE = 'http://www.protennislive.com/posting/ramr/current_prize.pdf'
 ATP_FINALS = 'http://www.protennislive.com/posting/ramr/finals_atp.pdf'
 ATP_CHALLENGERS = 'http://www.protennislive.com/posting/ramr/finals_challengers.pdf'
+ATP_CALENDAR = 'https://www.atptour.com/en/tournaments'
+# Categorías comprobadas a mano en el calendario oficial de atptour.com (25 de octubre de 2026).
+ATP_VERIFIED_CATEGORIES = {'Barcelona, Spain': 'ATP 500', 'Mallorca, Spain': 'ATP 250'}
 ATP_MEDIA = 'https://edx.atptour.com/en/media/rankings-and-stats'
 WTA_RANK_API = 'https://api.wtatennis.com/tennis/players/ranked'
 WTA_PLAYER_PAGE = 'https://www.wtatennis.com/players/{id}/{slug}'
@@ -203,6 +206,13 @@ def load_json(path: Path, default):
     if path.exists():
         return json.loads(path.read_text(encoding='utf-8'))
     return default
+
+
+def place_es(value):
+    """Escribe 'España' en lugar de 'Spain' en nombres de lugar."""
+    if not isinstance(value, str):
+        return value
+    return re.sub(r'\bSpain\b', 'España', value)
 
 
 def save_json(path: Path, payload) -> None:
@@ -374,6 +384,8 @@ def parse_finals(text: str, kind: str) -> list[dict]:
             category = 'ATP Masters 1000'
         elif kind == 'challenger':
             category = 'Challenger'
+        elif kind != 'challenger' and place in ATP_VERIFIED_CATEGORIES:
+            category = ATP_VERIFIED_CATEGORIES[place]
         events.append({
             'name': place,
             'category': category,
@@ -1038,25 +1050,26 @@ def spain_events(atp_events, challengers, wta_events) -> list[dict]:
         if not re.search(r'\bspain\b', event['name'], re.I):
             continue
         events.append({
-            'name': event['name'],
+            'name': place_es(event['name']),
             'circuit': 'ATP',
             'category': event['category'],
             'startDate': event['startDate'],
             'endDate': MISSING,
-            'city': event['name'],
+            'city': place_es(event['name']),
             'surface': surface_es(event['surface']),
-            'sources': [{'name': 'ATP, finales ATP y Grand Slam de 2026', 'url': ATP_FINALS}],
+            'sources': [{'name': 'ATP, finales ATP y Grand Slam de 2026', 'url': ATP_FINALS}]
+            + ([{'name': 'ATP Tour, calendario 2026 (categoría)', 'url': ATP_CALENDAR}] if event['name'] in ATP_VERIFIED_CATEGORIES else []),
         })
     for event in challengers:
         if not re.search(r'\bspain\b', event['name'], re.I):
             continue
         events.append({
-            'name': event['name'],
+            'name': place_es(event['name']),
             'circuit': 'Challenger',
             'category': 'Challenger',
             'startDate': event['startDate'],
             'endDate': MISSING,
-            'city': event['name'],
+            'city': place_es(event['name']),
             'surface': surface_es(event['surface']),
             'sources': [{'name': 'ATP, finales Challenger de 2026', 'url': ATP_CHALLENGERS}],
         })
@@ -1068,12 +1081,12 @@ def spain_events(atp_events, challengers, wta_events) -> list[dict]:
         name = event.get('name') or event.get('group') or MISSING
         city = event.get('city') or event.get('group') or MISSING
         events.append({
-            'name': name,
+            'name': place_es(name),
             'circuit': 'ITF' if level == 'ITF' else 'WTA',
             'category': level,
             'startDate': event.get('startDate') or MISSING,
             'endDate': event.get('endDate') or MISSING,
-            'city': city if city else MISSING,
+            'city': place_es(city) if city else MISSING,
             'surface': surface_es(event.get('surface') or '', event.get('indoor') or ''),
             'sources': [{'name': 'WTA, API de torneos (circuito femenino, incluida la ITF)', 'url': WTA_TOURNAMENTS}],
         })
@@ -1091,12 +1104,12 @@ def tournament_pages(atp_events, wta_events) -> list[dict]:
         used.add(slug)
         pages.append({
             'slug': slug,
-            'name': event['name'],
+            'name': place_es(event['name']),
             'tour': 'ATP',
             'category': event['category'],
             'startDate': event['startDate'],
             'endDate': MISSING,
-            'city': event['name'],
+            'city': place_es(event['name']),
             'surface': surface_es(event['surface']),
             'champion': event['champion'],
             'finalist': event['finalist'],
@@ -1104,7 +1117,7 @@ def tournament_pages(atp_events, wta_events) -> list[dict]:
             'officialUrl': ATP_FINALS,
             'sources': [
                 {'name': 'ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre', 'url': ATP_FINALS},
-            ],
+            ] + ([{'name': 'ATP Tour, calendario 2026 (categoría)', 'url': ATP_CALENDAR}] if event['name'] in ATP_VERIFIED_CATEGORIES else []),
         })
     for event in wta_events:
         level = event.get('level') or ''
@@ -1377,7 +1390,7 @@ def main() -> None:
         'wtaAsOf': RANK_AS_OF,
         'gaps': [
             'El calendario ITF masculino de 2026 en España no se pudo leer en itftennis.com.',
-            'Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam.',
+            'Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam. Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com.',
             'La WTA y la ITF femenina salen de la API de torneos de la WTA, consultada el ' + TODAY + '.',
         ],
         'tournaments': spain_events(atp_events, challengers, wta_events),
@@ -1388,7 +1401,7 @@ def main() -> None:
         'updated': TODAY,
         'coverage': (
             'ATP y Grand Slam: finales publicadas en el informe ATP a 18 de octubre de 2026. '
-            'La categoría queda en sin dato salvo que la línea del informe diga Masters 1000 o sea un Grand Slam. '
+            'La categoría queda en sin dato salvo que la línea del informe diga Masters 1000 o sea un Grand Slam; Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com. '
             'WTA: torneos de 2026 cuyo nivel en la API es de circuito (Grand Slam, WTA 1000, 500, 250, 125 o Finals). '
             'Lo jugado en la ATP después del 18 de octubre no está en ese informe.'
         ),

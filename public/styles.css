@@ -802,3 +802,7 @@ ul.sheet li:not(:last-child)::after { content: " ·\00a0"; }
   .results-table-wrap { display: none; }
   .results-cards { display: grid; gap: 0.75rem; }
 }
+/* Fichas de jugadores: nombres sin cortes a mitad de palabra y tarjetas más anchas. */
+.card-grid:has(> .player-card) { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.player-card > div { min-width: 0; }
+.player-card h2 { overflow-wrap: normal; word-break: normal; hyphens: manual; }
