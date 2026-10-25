@@ -19,6 +19,12 @@ AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias,
 - Race a Turín: https://acearena.io/race.html
 - Rankings ATP y WTA: https://acearena.io/rankings.html
 - Jugadores: https://acearena.io/jugadores/
+- Jugadores por país: https://acearena.io/paises/
+- Tenis en España: https://acearena.io/tenis-en-espana.html
+- Cara a cara: https://acearena.io/cara-a-cara/
+- Torneos de 2026: https://acearena.io/torneos/
+- Lo de hoy en 30 segundos: https://acearena.io/hoy-en-30-segundos.html
+- Horarios: https://acearena.io/horarios.html
 - Calendario 2027: https://acearena.io/calendario-2027.html
 - Aprende tenis: https://acearena.io/aprende/
 - Sobre AceArena: https://acearena.io/sobre.html

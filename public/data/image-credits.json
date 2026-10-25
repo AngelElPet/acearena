@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-25",
   "items": [
     {
       "id": "pistas",
@@ -11,7 +11,12 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennis_courts_at_Chapel_Hill_High_School.jpg",
-      "pages": ["Portada", "Anúnciate", "Sinner cierra la temporada", "Aprende tenis"]
+      "pages": [
+        "Portada",
+        "Anúnciate",
+        "Sinner cierra la temporada",
+        "Aprende tenis"
+      ]
     },
     {
       "id": "pista-silla",
@@ -23,7 +28,9 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_empty_tennis_court_showcases_an_umpire_chair_positioned_behind_the_net.jpg",
-      "pages": ["Zverev, número 1 de final de año"]
+      "pages": [
+        "Zverev, número 1 de final de año"
+      ]
     },
     {
       "id": "pelota",
@@ -35,7 +42,12 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennis_Ball_Felt_Zoom-In_View.jpg",
-      "pages": ["Qué ver esta semana", "Jódar en la Race", "Rybakina, número 1 de la WTA", "Créditos"]
+      "pages": [
+        "Qué ver esta semana",
+        "Jódar en la Race",
+        "Rybakina, número 1 de la WTA",
+        "Créditos"
+      ]
     },
     {
       "id": "diagramas",
@@ -47,7 +59,13 @@
       "licenseUrl": "",
       "sourceName": "AceArena",
       "sourceUrl": "https://acearena.io/",
-      "pages": ["Reglas", "Semana", "Calendario", "Fichas", "Cómo se llega al circuito"]
+      "pages": [
+        "Reglas",
+        "Semana",
+        "Calendario",
+        "Fichas",
+        "Cómo se llega al circuito"
+      ]
     },
     {
       "id": "avatares",
@@ -59,7 +77,9 @@
       "licenseUrl": "",
       "sourceName": "AceArena",
       "sourceUrl": "https://acearena.io/jugadores/",
-      "pages": ["Jugadores"]
+      "pages": [
+        "Jugadores"
+      ]
     },
     {
       "id": "cabeceras",
@@ -71,7 +91,9 @@
       "licenseUrl": "",
       "sourceName": "AceArena",
       "sourceUrl": "https://acearena.io/noticias/",
-      "pages": ["Noticias"]
+      "pages": [
+        "Noticias"
+      ]
     },
     {
       "id": "qizhong-stadium",
@@ -83,7 +105,9 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qizhong_Stadium.jpg",
-      "pages": ["Fondo de la tarjeta social de Shanghái, recortado y oscurecido"]
+      "pages": [
+        "Fondo de la tarjeta social de Shanghái, recortado y oscurecido"
+      ]
     },
     {
       "id": "wuhan-cns",
@@ -95,7 +119,2992 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
       "sourceName": "Wikimedia Commons",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%83%91%E9%92%A6%E6%96%87%E6%99%8B%E7%BA%A7%E6%AD%A6%E7%BD%91%E5%85%AB%E5%BC%BA%EF%BC%9A%E9%80%86%E8%BD%AC%E8%8E%B7%E8%83%9C%E7%A6%BB%E4%B8%8D%E5%BC%80%E7%8E%B0%E5%9C%BA%E8%A7%82%E4%BC%97%E7%9A%84%E7%83%AD%E6%83%85%E6%94%AF%E6%8C%81.webm",
-      "pages": ["Fondo de la tarjeta social de Wuhan, recortado y oscurecido"]
+      "pages": [
+        "Fondo de la tarjeta social de Wuhan, recortado y oscurecido"
+      ]
+    },
+    {
+      "id": "silueta-jugador",
+      "kind": "illustration",
+      "title": "Silueta genérica de tenista",
+      "src": "/assets/silueta-jugador.svg",
+      "author": "AceArena",
+      "license": "Ilustración propia",
+      "licenseUrl": "",
+      "sourceName": "AceArena",
+      "sourceUrl": "https://acearena.io/paises/",
+      "pages": [
+        "Jugadores por país",
+        "Tenis en España"
+      ]
+    },
+    {
+      "id": "jugador-tom-gentzsch",
+      "kind": "photo",
+      "title": "Tom Gentzsch",
+      "src": "/photos/jugadores/tom-gentzsch.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tom_Gentzsch_%282026_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-daniel-masur",
+      "kind": "photo",
+      "title": "Daniel Masur",
+      "src": "/photos/jugadores/daniel-masur.webp",
+      "author": "Shev123",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Masur_2017_Roland_Garros_Qualifying_Tournament_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tatjana-maria",
+      "kind": "photo",
+      "title": "Tatjana Maria",
+      "src": "/photos/jugadores/tatjana-maria.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tatjana_Maria_%28Roland_Garros_2023%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-eva-lys",
+      "kind": "photo",
+      "title": "Eva Lys",
+      "src": "/photos/jugadores/eva-lys.webp",
+      "author": "Photosheikh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eva_Lys_at_Wimbledon_2024_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-laura-siegemund",
+      "kind": "photo",
+      "title": "Laura Siegemund",
+      "src": "/photos/jugadores/laura-siegemund.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siegemund_WMQ23_%2853061863984%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-francisco-cerundolo",
+      "kind": "photo",
+      "title": "Francisco Cerúndolo",
+      "src": "/photos/jugadores/francisco-cerundolo.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cerundolo_MCM23_%2821%29_%2852883527185%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mariano-navone",
+      "kind": "photo",
+      "title": "Mariano Navone",
+      "src": "/photos/jugadores/mariano-navone.webp",
+      "author": "BugWarp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Road_2_Australia_-_Navone_V_Burruchaga_Final_-_BugWarp_206_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-roman-andres-burruchaga",
+      "kind": "photo",
+      "title": "Roman Andres Burruchaga",
+      "src": "/photos/jugadores/roman-andres-burruchaga.webp",
+      "author": "BugWarp derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rom%C3%A1n_Andr%C3%A9s_Burruchaga_Road_2_Australia_2025_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-camilo-ugo-carabelli",
+      "kind": "photo",
+      "title": "Camilo Ugo Carabelli",
+      "src": "/photos/jugadores/camilo-ugo-carabelli.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ugo_Carabelli_RGQ22_%282%29_%2852129754339%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lautaro-midon",
+      "kind": "photo",
+      "title": "Lautaro Midon",
+      "src": "/photos/jugadores/lautaro-midon.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lautaro_Mid%C3%B3n_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-federico-agustin-gomez",
+      "kind": "photo",
+      "title": "Federico Agustin Gomez",
+      "src": "/photos/jugadores/federico-agustin-gomez.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Federico_Agust%C3%ADn_G%C3%B3mez_%282023_Cary_2%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-julia-riera",
+      "kind": "photo",
+      "title": "Julia Riera",
+      "src": "/photos/jugadores/julia-riera.webp",
+      "author": "BugWarp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Road_2_Australia_-_Riera_V_Ortenzi_Final_-_BugWarp_259_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-maria-lourdes-carle",
+      "kind": "photo",
+      "title": "Maria Lourdes Carle",
+      "src": "/photos/jugadores/maria-lourdes-carle.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carle_WMQ23_%2853062200573%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-alina-charaeva",
+      "kind": "photo",
+      "title": "Alina Charaeva",
+      "src": "/photos/jugadores/alina-charaeva.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alina_Charaeva_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-rinky-hijikata",
+      "kind": "photo",
+      "title": "Rinky Hijikata",
+      "src": "/photos/jugadores/rinky-hijikata.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rinky_Hijikata_%282023_Cary%29_01a_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-adam-walton",
+      "kind": "photo",
+      "title": "Adam Walton",
+      "src": "/photos/jugadores/adam-walton.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Adam_Walton_%282023_Cary%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tristan-schoolkate",
+      "kind": "photo",
+      "title": "Tristan Schoolkate",
+      "src": "/photos/jugadores/tristan-schoolkate.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tristan_Schoolkate_%282023_Cary_2%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-bernard-tomic",
+      "kind": "photo",
+      "title": "Bernard Tomic",
+      "src": "/photos/jugadores/bernard-tomic.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bernard_Tomi%C4%87_%282023_Cary_2%29_01.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-kimberly-birrell",
+      "kind": "photo",
+      "title": "Kimberly Birrell",
+      "src": "/photos/jugadores/kimberly-birrell.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kim_Birrell_%282023_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-ajla-tomljanovic",
+      "kind": "photo",
+      "title": "Ajla Tomljanovic",
+      "src": "/photos/jugadores/ajla-tomljanovic.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ajla_Tomljanovi%C4%87_%282023_US_Open%29_58_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-maddison-inglis",
+      "kind": "photo",
+      "title": "Maddison Inglis",
+      "src": "/photos/jugadores/maddison-inglis.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inglis_WMQ22_%2818%29_%2852191635135%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-emerson-jones",
+      "kind": "photo",
+      "title": "Emerson Jones",
+      "src": "/photos/jugadores/emerson-jones.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emerson_Jones_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-olivia-gadecki",
+      "kind": "photo",
+      "title": "Olivia Gadecki",
+      "src": "/photos/jugadores/olivia-gadecki.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gadecki_WMQ23_%2853061130942%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lukas-neumayer",
+      "kind": "photo",
+      "title": "Lukas Neumayer",
+      "src": "/photos/jugadores/lukas-neumayer.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lukas_Neumayer_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lilli-tagger",
+      "kind": "photo",
+      "title": "Lilli Tagger",
+      "src": "/photos/jugadores/lilli-tagger.webp",
+      "author": "Karney Hatch",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:French_Open_Juniors_Champion_Lilli_Tagger_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sinja-kraus",
+      "kind": "photo",
+      "title": "Sinja Kraus",
+      "src": "/photos/jugadores/sinja-kraus.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Transylvania_Open_2024_-_Sinja_Kraus_%2853513849714%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-aryna-sabalenka",
+      "kind": "photo",
+      "title": "Aryna Sabalenka",
+      "src": "/photos/jugadores/aryna-sabalenka.webp",
+      "author": "Ocoudis derivative work: Kacir",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aryna_Sabalenka_Trophy_US_Open_2024_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-iryna-shymanovich",
+      "kind": "photo",
+      "title": "Iryna Shymanovich",
+      "src": "/photos/jugadores/iryna-shymanovich.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shymanovich_RGQ23_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-yuliya-hatouka",
+      "kind": "photo",
+      "title": "Yuliya Hatouka",
+      "src": "/photos/jugadores/yuliya-hatouka.webp",
+      "author": "Pulv",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021-06_Julija_Hatouka_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-juan-carlos-prado-angelo",
+      "kind": "photo",
+      "title": "Juan Carlos Prado Angelo",
+      "src": "/photos/jugadores/juan-carlos-prado-angelo.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Juan_Carlos_Prado_Angelo_%282023_French_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-nerman-fatic",
+      "kind": "photo",
+      "title": "Nerman Fatic",
+      "src": "/photos/jugadores/nerman-fatic.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nerman_Fati%C4%87_%282023_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-joao-fonseca",
+      "kind": "photo",
+      "title": "Joao Fonseca",
+      "src": "/photos/jugadores/joao-fonseca.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jo%C3%A3o_Fonseca_%282024_Cary%29_09_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-thiago-seyboth-wild",
+      "kind": "photo",
+      "title": "Thiago Seyboth Wild",
+      "src": "/photos/jugadores/thiago-seyboth-wild.webp",
+      "author": "Kuberzog",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thiago_Seyboth_Wild_-_2024_Olympics_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-gustavo-heide",
+      "kind": "photo",
+      "title": "Gustavo Heide",
+      "src": "/photos/jugadores/gustavo-heide.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gustavo_Heide_%282026_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mateus-alves",
+      "kind": "photo",
+      "title": "Mateus Alves",
+      "src": "/photos/jugadores/mateus-alves.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mateus_Alves_%282023_DC_Open%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-grigor-dimitrov",
+      "kind": "photo",
+      "title": "Grigor Dimitrov",
+      "src": "/photos/jugadores/grigor-dimitrov.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grigor_Dimitrov_%282023_DC_Open%29_01.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-adrian-andreev",
+      "kind": "photo",
+      "title": "Adrian Andreev",
+      "src": "/photos/jugadores/adrian-andreev.webp",
+      "author": "BugWarp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Adrian_Andreev_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-elizara-yaneva",
+      "kind": "photo",
+      "title": "Elizara Yaneva",
+      "src": "/photos/jugadores/elizara-yaneva.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elizara_Yaneva_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-isabella-shinikova",
+      "kind": "photo",
+      "title": "Isabella Shinikova",
+      "src": "/photos/jugadores/isabella-shinikova.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shinikova_ANG21_%2811%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-gilles-arnaud-bailly",
+      "kind": "photo",
+      "title": "Gilles Arnaud Bailly",
+      "src": "/photos/jugadores/gilles-arnaud-bailly.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gilles-Arnaud_Bailly_%282026_US_Open%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-david-goffin",
+      "kind": "photo",
+      "title": "David Goffin",
+      "src": "/photos/jugadores/david-goffin.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Goffin_%282024_DC_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-elise-mertens",
+      "kind": "photo",
+      "title": "Elise Mertens",
+      "src": "/photos/jugadores/elise-mertens.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elise_Mertens_%282023_US_Open%29_23_%28cropped%29_2.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-hanne-vandewinkel",
+      "kind": "photo",
+      "title": "Hanne Vandewinkel",
+      "src": "/photos/jugadores/hanne-vandewinkel.webp",
+      "author": "Tvx1",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vandewinkel_Rosmalen_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jeline-vandromme",
+      "kind": "photo",
+      "title": "Jeline Vandromme",
+      "src": "/photos/jugadores/jeline-vandromme.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeline_Vandromme_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-greet-minnen",
+      "kind": "photo",
+      "title": "Greet Minnen",
+      "src": "/photos/jugadores/greet-minnen.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minnen_RG22_%2816%29_%2852143055392%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-justin-boulais",
+      "kind": "photo",
+      "title": "Justin Boulais",
+      "src": "/photos/jugadores/justin-boulais.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Justin_Boulais_%282026_Cary%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-victoria-mboko",
+      "kind": "photo",
+      "title": "Victoria Mboko",
+      "src": "/photos/jugadores/victoria-mboko.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Mboko_returning_serve_2025_DC_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-leylah-fernandez",
+      "kind": "photo",
+      "title": "Leylah Fernandez",
+      "src": "/photos/jugadores/leylah-fernandez.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leylah_Fernandez_%282023_DC_Open%29_06_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-bianca-andreescu",
+      "kind": "photo",
+      "title": "Bianca Andreescu",
+      "src": "/photos/jugadores/bianca-andreescu.webp",
+      "author": "JazzyJoeyD",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bianca_Andreescu%2C_2019_U.S._Open_Women%27s_Singles_Champion_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-raphaelle-lacasse",
+      "kind": "photo",
+      "title": "Raphaelle Lacasse",
+      "src": "/photos/jugadores/raphaelle-lacasse.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rapha%C3%ABlle_Lacasse_%282026_Cary%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jakub-mensik",
+      "kind": "photo",
+      "title": "Jakub Mensik",
+      "src": "/photos/jugadores/jakub-mensik.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jakub_Men%C5%A1%C3%ADk_%282023_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-dalibor-svrcina",
+      "kind": "photo",
+      "title": "Dalibor Svrcina",
+      "src": "/photos/jugadores/dalibor-svrcina.webp",
+      "author": "DarDarCH",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Roland_Garros_Qualifying_Tournament_-_73_Dalibor_Svr%C4%8Dina_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-marek-gengel",
+      "kind": "photo",
+      "title": "Marek Gengel",
+      "src": "/photos/jugadores/marek-gengel.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marek_Gengel_%282025_DC_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-karolina-muchova",
+      "kind": "photo",
+      "title": "Karolina Muchova",
+      "src": "/photos/jugadores/karolina-muchova.webp",
+      "author": "Hameltion derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karol%C3%ADna_Muchov%C3%A1_%282023_US_Open%29_04_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-linda-noskova",
+      "kind": "photo",
+      "title": "Linda Noskova",
+      "src": "/photos/jugadores/linda-noskova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linda_Noskov%C3%A1_%282023_US_Open%29_01_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-marie-bouzkova",
+      "kind": "photo",
+      "title": "Marie Bouzkova",
+      "src": "/photos/jugadores/marie-bouzkova.webp",
+      "author": "Hameltion derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marie_Bouzkov%C3%A1_%282024_DC_Open%29_01_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-nikola-bartunkova",
+      "kind": "photo",
+      "title": "Nikola Bartunkova",
+      "src": "/photos/jugadores/nikola-bartunkova.webp",
+      "author": "Daniel Cooper derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nikola_Bart%C5%AF%C5%88kov%C3%A1_Birmingham_2026_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sara-bejlek",
+      "kind": "photo",
+      "title": "Sara Bejlek",
+      "src": "/photos/jugadores/sara-bejlek.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:S%C3%A1ra_Bejlek_%282023_US_Open%29_10_%28cropped3%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-barbora-krejcikova",
+      "kind": "photo",
+      "title": "Barbora Krejcikova",
+      "src": "/photos/jugadores/barbora-krejcikova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barbora_Krej%C4%8D%C3%ADkov%C3%A1_%282023_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-karolina-pliskova",
+      "kind": "photo",
+      "title": "Karolina Pliskova",
+      "src": "/photos/jugadores/karolina-pliskova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karol%C3%ADna_Pl%C3%AD%C5%A1kov%C3%A1_%282023_DC_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-katerina-siniakova",
+      "kind": "photo",
+      "title": "Katerina Siniakova",
+      "src": "/photos/jugadores/katerina-siniakova.webp",
+      "author": "Pulv",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021-06_Kate%C5%99ina_Siniakov%C3%A1_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tereza-valentova",
+      "kind": "photo",
+      "title": "Tereza Valentova",
+      "src": "/photos/jugadores/tereza-valentova.webp",
+      "author": "Profesorreen",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tereza_Valentov%C3%A1_junior_French_Open_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-linda-fruhvirtova",
+      "kind": "photo",
+      "title": "Linda Fruhvirtova",
+      "src": "/photos/jugadores/linda-fruhvirtova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linda_Fruhvirtova_%28Roland_Garros_2023%29_07_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-vendula-valdmannova",
+      "kind": "photo",
+      "title": "Vendula Valdmannova",
+      "src": "/photos/jugadores/vendula-valdmannova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vendula_Valdmannov%C3%A1_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-anna-siskova",
+      "kind": "photo",
+      "title": "Anna Siskova",
+      "src": "/photos/jugadores/anna-siskova.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anna_Siskov%C3%A1_2025_Transylvania_Open_%2854320259940%29_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-julie-struplova",
+      "kind": "photo",
+      "title": "Julie Struplova",
+      "src": "/photos/jugadores/julie-struplova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Julie_%C5%A0truplov%C3%A1_%282026_US_Open%29_09_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-matias-soto",
+      "kind": "photo",
+      "title": "Matias Soto",
+      "src": "/photos/jugadores/matias-soto.webp",
+      "author": "Cristian Avilés",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mat%C3%ADas_Soto_tenista_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-joanna-garland",
+      "kind": "photo",
+      "title": "Joanna Garland",
+      "src": "/photos/jugadores/joanna-garland.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garland_RGQ23_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-nicolas-mejia",
+      "kind": "photo",
+      "title": "Nicolas Mejia",
+      "src": "/photos/jugadores/nicolas-mejia.webp",
+      "author": "Gastón Cuello",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nicolas_Mejia_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-daniel-elahi-galan",
+      "kind": "photo",
+      "title": "Daniel Elahi Galan",
+      "src": "/photos/jugadores/daniel-elahi-galan.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Elahi_Gal%C3%A1n_%282024_DC_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-nicolas-barrientos",
+      "kind": "photo",
+      "title": "Nicolas Barrientos",
+      "src": "/photos/jugadores/nicolas-barrientos.webp",
+      "author": "Jmmuguerza",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nicolas_Barrientos_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-camila-osorio",
+      "kind": "photo",
+      "title": "Camila Osorio",
+      "src": "/photos/jugadores/camila-osorio.webp",
+      "author": "Carine06",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osorio_Serrano_WM21_%2851281034182%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-emiliana-arango",
+      "kind": "photo",
+      "title": "Emiliana Arango",
+      "src": "/photos/jugadores/emiliana-arango.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emiliana_Arango_%282023_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-dino-prizmic",
+      "kind": "photo",
+      "title": "Dino Prizmic",
+      "src": "/photos/jugadores/dino-prizmic.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dino_Pri%C5%BEmi%C4%87_%282023_French_Open%29_06_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-luka-mikrut",
+      "kind": "photo",
+      "title": "Luka Mikrut",
+      "src": "/photos/jugadores/luka-mikrut.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Luka_Mikrut_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-donna-vekic",
+      "kind": "photo",
+      "title": "Donna Vekic",
+      "src": "/photos/jugadores/donna-vekic.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Donna_Veki%C4%87_%2852171230817%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-august-holmgren",
+      "kind": "photo",
+      "title": "August Holmgren",
+      "src": "/photos/jugadores/august-holmgren.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:August_Holmgren_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lukas-pokorny",
+      "kind": "photo",
+      "title": "Lukas Pokorny",
+      "src": "/photos/jugadores/lukas-pokorny.webp",
+      "author": "Pokyno123",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Luk%C3%A1%C5%A1_Pokorn%C3%BD_oslavuje_v%C3%AD%C5%A5azstvo_v_Monastire_%282024%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-rebecca-sramkova",
+      "kind": "photo",
+      "title": "Rebecca Sramkova",
+      "src": "/photos/jugadores/rebecca-sramkova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rebecca_%C5%A0ramkov%C3%A1_%282023_US_Open%29_10_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tamara-zidansek",
+      "kind": "photo",
+      "title": "Tamara Zidansek",
+      "src": "/photos/jugadores/tamara-zidansek.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zidansek_RG22_%2822%29_%2852144299054%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-dalila-jakupovic",
+      "kind": "photo",
+      "title": "Dalila Jakupovic",
+      "src": "/photos/jugadores/dalila-jakupovic.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jakupovic_WMQ23_%2853061704151%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-carlos-alcaraz",
+      "kind": "photo",
+      "title": "Carlos Alcaraz",
+      "src": "/photos/jugadores/carlos-alcaraz.webp",
+      "author": "Like tears in rain derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Alcaraz_Roland_Garros_2025_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-rafael-jodar",
+      "kind": "photo",
+      "title": "Rafael Jódar",
+      "src": "/photos/jugadores/rafael-jodar.webp",
+      "author": "Crosscourt View",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rafael_J%C3%B3dar_Roland_Garros_2026_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-nikolas-sanchez-izquierdo",
+      "kind": "photo",
+      "title": "Nikolas Sanchez Izquierdo",
+      "src": "/photos/jugadores/nikolas-sanchez-izquierdo.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nikol%C3%A1s_S%C3%A1nchez_Izquierdo_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-david-jorda-sanchis",
+      "kind": "photo",
+      "title": "David Jorda Sanchis",
+      "src": "/photos/jugadores/david-jorda-sanchis.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Jord%C3%A0_Sanchis_%282026_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-pol-martin-tiffon",
+      "kind": "photo",
+      "title": "Pol Martin Tiffon",
+      "src": "/photos/jugadores/pol-martin-tiffon.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pol_Mart%C3%ADn_Tiffon_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-daniel-rincon",
+      "kind": "photo",
+      "title": "Daniel Rincon",
+      "src": "/photos/jugadores/daniel-rincon.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Rinc%C3%B3n_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-cristina-bucsa",
+      "kind": "photo",
+      "title": "Cristina Bucsa",
+      "src": "/photos/jugadores/cristina-bucsa.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristina_Buc%C8%99a_%2853002855843%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-paula-badosa",
+      "kind": "photo",
+      "title": "Paula Badosa",
+      "src": "/photos/jugadores/paula-badosa.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paula_Badosa_%282024_DC_Open%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sara-sorribes-tormo",
+      "kind": "photo",
+      "title": "Sara Sorribes Tormo",
+      "src": "/photos/jugadores/sara-sorribes-tormo.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sorribes_Tormo_RG21_%2820%29_%2851376076476%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-angela-fita-boluda",
+      "kind": "photo",
+      "title": "Angela Fita Boluda",
+      "src": "/photos/jugadores/angela-fita-boluda.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%81ngela_Fita_Boluda_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-brandon-nakashima",
+      "kind": "photo",
+      "title": "Brandon Nakashima",
+      "src": "/photos/jugadores/brandon-nakashima.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brandon_Nakashima_%282024_DC_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-ethan-quinn",
+      "kind": "photo",
+      "title": "Ethan Quinn",
+      "src": "/photos/jugadores/ethan-quinn.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ethan_Quinn_%282023_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sebastian-korda",
+      "kind": "photo",
+      "title": "Sebastian Korda",
+      "src": "/photos/jugadores/sebastian-korda.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sebastian_Korda_%282023_DC_Open%29_02.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-aleksandar-kovacevic",
+      "kind": "photo",
+      "title": "Aleksandar Kovacevic",
+      "src": "/photos/jugadores/aleksandar-kovacevic.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aleksandar_Kovacevic_%28Roland_Garros_2023%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-michael-zheng",
+      "kind": "photo",
+      "title": "Michael Zheng",
+      "src": "/photos/jugadores/michael-zheng.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Zheng_%282023_US_Open%29_13_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-patrick-kypson",
+      "kind": "photo",
+      "title": "Patrick Kypson",
+      "src": "/photos/jugadores/patrick-kypson.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Patrick_Kypson_%282023_Cary_2%29_05_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jessica-pegula",
+      "kind": "photo",
+      "title": "Jessica Pegula",
+      "src": "/photos/jugadores/jessica-pegula.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jessica_Pegula_%282025_DC_Open%29_05_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-madison-keys",
+      "kind": "photo",
+      "title": "Madison Keys",
+      "src": "/photos/jugadores/madison-keys.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madison_Keys_%282023_DC_Open%29_01a_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-emma-navarro",
+      "kind": "photo",
+      "title": "Emma Navarro",
+      "src": "/photos/jugadores/emma-navarro.webp",
+      "author": "SaidSimmons",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:EmmaNavarro_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-peyton-stearns",
+      "kind": "photo",
+      "title": "Peyton Stearns",
+      "src": "/photos/jugadores/peyton-stearns.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peyton_Stearns_%282024_DC_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-ashlyn-krueger",
+      "kind": "photo",
+      "title": "Ashlyn Krueger",
+      "src": "/photos/jugadores/ashlyn-krueger.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ashlyn_Krueger_%282023_DC_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-caty-mcnally",
+      "kind": "photo",
+      "title": "Caty Mcnally",
+      "src": "/photos/jugadores/caty-mcnally.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:McNally_RGQ22_%2813%29_%2852128520717%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-katie-volynets",
+      "kind": "photo",
+      "title": "Katie Volynets",
+      "src": "/photos/jugadores/katie-volynets.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Katie_Volynets_%282023_US_Open%29_11_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-claire-liu",
+      "kind": "photo",
+      "title": "Claire Liu",
+      "src": "/photos/jugadores/claire-liu.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Claire_Liu_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mccartney-kessler",
+      "kind": "photo",
+      "title": "Mccartney Kessler",
+      "src": "/photos/jugadores/mccartney-kessler.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:McCartney_Kessler_%282024_DC_Open%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-elvina-kalieva",
+      "kind": "photo",
+      "title": "Elvina Kalieva",
+      "src": "/photos/jugadores/elvina-kalieva.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elvina_Kalieva_%282026_Cary%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mary-stoiana",
+      "kind": "photo",
+      "title": "Mary Stoiana",
+      "src": "/photos/jugadores/mary-stoiana.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mary_Stoiana_%282023_Wolfpack_Invite%29_01.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sloane-stephens",
+      "kind": "photo",
+      "title": "Sloane Stephens",
+      "src": "/photos/jugadores/sloane-stephens.webp",
+      "author": "Keith Allison from Hanover, MD, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Citi_Open_Tennis_Sloane_Stephens_%2836261045461%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-kayla-day",
+      "kind": "photo",
+      "title": "Kayla Day",
+      "src": "/photos/jugadores/kayla-day.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Day_RGQ23_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-alexandra-eala",
+      "kind": "photo",
+      "title": "Alexandra Eala",
+      "src": "/photos/jugadores/alexandra-eala.webp",
+      "author": "Philippine Sports Commission",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ealas_and_Patrick_Gregorio_%28cropped_Alexandra_Eala%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-eero-vasa",
+      "kind": "photo",
+      "title": "Eero Vasa",
+      "src": "/photos/jugadores/eero-vasa.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eero_Vasa_%282023_Cary_2%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-emil-ruusuvuori",
+      "kind": "photo",
+      "title": "Emil Ruusuvuori",
+      "src": "/photos/jugadores/emil-ruusuvuori.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emil_Ruusuvuori_%282023_DC_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-titouan-droguet",
+      "kind": "photo",
+      "title": "Titouan Droguet",
+      "src": "/photos/jugadores/titouan-droguet.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Titouan_Droguet_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-corentin-moutet",
+      "kind": "photo",
+      "title": "Corentin Moutet",
+      "src": "/photos/jugadores/corentin-moutet.webp",
+      "author": "Carine06 from UK",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corentin_Moutet_%2845135594272%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-giovanni-mpetshi-perricard",
+      "kind": "photo",
+      "title": "Giovanni Mpetshi Perricard",
+      "src": "/photos/jugadores/giovanni-mpetshi-perricard.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_Mpetshi_Perricard_%282023_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-clement-tabur",
+      "kind": "photo",
+      "title": "Clement Tabur",
+      "src": "/photos/jugadores/clement-tabur.webp",
+      "author": "BugWarp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cl%C3%A9ment_Tabur_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-diane-parry",
+      "kind": "photo",
+      "title": "Diane Parry",
+      "src": "/photos/jugadores/diane-parry.webp",
+      "author": "Raffaele Di Buono derivative work: Kacir",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diane_Parry%2C_Roma_2026_%28cropped3%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-clara-burel",
+      "kind": "photo",
+      "title": "Clara Burel",
+      "src": "/photos/jugadores/clara-burel.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burel_RG22_%281%29_%2852144106503%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-elsa-jacquemot",
+      "kind": "photo",
+      "title": "Elsa Jacquemot",
+      "src": "/photos/jugadores/elsa-jacquemot.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elsa_Jacquemot_%282023_US_Open%29_09_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-carole-monnet",
+      "kind": "photo",
+      "title": "Carole Monnet",
+      "src": "/photos/jugadores/carole-monnet.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monnet_WMQ22_%2823%29_%2852191390719%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jessika-ponchet",
+      "kind": "photo",
+      "title": "Jessika Ponchet",
+      "src": "/photos/jugadores/jessika-ponchet.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ponchet_WMQ23_%2853062186248%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tiantsoa-rakotomanga-rajaonah",
+      "kind": "photo",
+      "title": "Tiantsoa Rakotomanga Rajaonah",
+      "src": "/photos/jugadores/tiantsoa-rakotomanga-rajaonah.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rakotomanga_Rajaonah_WMQ26_%2826%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-stefanos-sakellaridis",
+      "kind": "photo",
+      "title": "Stefanos Sakellaridis",
+      "src": "/photos/jugadores/stefanos-sakellaridis.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stefanos_Sakellaridis_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-maria-sakkari",
+      "kind": "photo",
+      "title": "Maria Sakkari",
+      "src": "/photos/jugadores/maria-sakkari.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maria_Sakkari_%282023_DC_Open%29_01a_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-despina-papamichail",
+      "kind": "photo",
+      "title": "Despina Papamichail",
+      "src": "/photos/jugadores/despina-papamichail.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papamichail_WMQ23_%2853062087105%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-coleman-wong",
+      "kind": "photo",
+      "title": "Coleman Wong",
+      "src": "/photos/jugadores/coleman-wong.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coleman_Wong_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-anna-bondar",
+      "kind": "photo",
+      "title": "Anna Bondar",
+      "src": "/photos/jugadores/anna-bondar.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Transylvania_Open_2026_-_Anna_Bondar_v_Ella_Seidel_4-6%2C_7-6_%288-6%29%2C_6-0_01.01.2026_%2855078278088%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-dalma-galfi",
+      "kind": "photo",
+      "title": "Dalma Galfi",
+      "src": "/photos/jugadores/dalma-galfi.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C3%A1lfi_Dalma_%2832111454447%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jannik-sinner",
+      "kind": "photo",
+      "title": "Jannik Sinner",
+      "src": "/photos/jugadores/jannik-sinner.webp",
+      "author": "The White House derivative work: Kacir",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jannik_Sinner_US_Open_2025_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mattia-bellucci",
+      "kind": "photo",
+      "title": "Mattia Bellucci",
+      "src": "/photos/jugadores/mattia-bellucci.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mattia_Bellucci_%282024_DC_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-federico-cina",
+      "kind": "photo",
+      "title": "Federico Cina",
+      "src": "/photos/jugadores/federico-cina.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Federico_Cin%C3%A0_%282026_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-andrea-guerrieri",
+      "kind": "photo",
+      "title": "Andrea Guerrieri",
+      "src": "/photos/jugadores/andrea-guerrieri.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andrea_Guerrieri_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lisa-pigato",
+      "kind": "photo",
+      "title": "Lisa Pigato",
+      "src": "/photos/jugadores/lisa-pigato.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lisa_Pigato_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lucia-bronzetti",
+      "kind": "photo",
+      "title": "Lucia Bronzetti",
+      "src": "/photos/jugadores/lucia-bronzetti.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania derivative work: Kacir",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lucia_Bronzetti_2025_Transylvania_Open_%2854320690198%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tyra-caterina-grant",
+      "kind": "photo",
+      "title": "Tyra Caterina Grant",
+      "src": "/photos/jugadores/tyra-caterina-grant.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tyra_Caterina_Grant_%282023_French_Open%29_01.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-nuria-brancaccio",
+      "kind": "photo",
+      "title": "Nuria Brancaccio",
+      "src": "/photos/jugadores/nuria-brancaccio.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brancaccio_N._RGQ23_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jennifer-ruggeri",
+      "kind": "photo",
+      "title": "Jennifer Ruggeri",
+      "src": "/photos/jugadores/jennifer-ruggeri.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jennifer_Ruggeri_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-martina-trevisan",
+      "kind": "photo",
+      "title": "Martina Trevisan",
+      "src": "/photos/jugadores/martina-trevisan.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trevisan_WMQ18_%2828%29_%2829680365228%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-rei-sakamoto",
+      "kind": "photo",
+      "title": "Rei Sakamoto",
+      "src": "/photos/jugadores/rei-sakamoto.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rei_Sakamoto_%282026_Cary%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-yuta-shimizu",
+      "kind": "photo",
+      "title": "Yuta Shimizu",
+      "src": "/photos/jugadores/yuta-shimizu.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yuta_Shimizu_%282026_Cary%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-naomi-osaka",
+      "kind": "photo",
+      "title": "Naomi Osaka",
+      "src": "/photos/jugadores/naomi-osaka.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naomi_Osaka_2017_Wimbledon.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mai-hontama",
+      "kind": "photo",
+      "title": "Mai Hontama",
+      "src": "/photos/jugadores/mai-hontama.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hontama_WMQ23_%2853062191893%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sara-saito",
+      "kind": "photo",
+      "title": "Sara Saito",
+      "src": "/photos/jugadores/sara-saito.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sara_Saito_%282023_French_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-yuki-naito",
+      "kind": "photo",
+      "title": "Yuki Naito",
+      "src": "/photos/jugadores/yuki-naito.webp",
+      "author": "Gastón Cuello",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yuki_Naito_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-haruka-kaji",
+      "kind": "photo",
+      "title": "Haruka Kaji",
+      "src": "/photos/jugadores/haruka-kaji.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haruka_Kaji_%282023_US_Open%29_03_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-naho-sato",
+      "kind": "photo",
+      "title": "Naho Sato",
+      "src": "/photos/jugadores/naho-sato.webp",
+      "author": "Gastón Cuello",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naho_Sato_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-alexander-bublik",
+      "kind": "photo",
+      "title": "Alexander Bublik",
+      "src": "/photos/jugadores/alexander-bublik.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sascha_Bublik_%282023_DC_Open%29_05_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-beibit-zhukayev",
+      "kind": "photo",
+      "title": "Beibit Zhukayev",
+      "src": "/photos/jugadores/beibit-zhukayev.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beibit_Zhukayev_%282023_Cary%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-elena-rybakina",
+      "kind": "photo",
+      "title": "Elena Rybakina",
+      "src": "/photos/jugadores/elena-rybakina.webp",
+      "author": "Hameltion derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elena_Rybakina_%282025_DC_Open%29_07_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-vilius-gaubas",
+      "kind": "photo",
+      "title": "Vilius Gaubas",
+      "src": "/photos/jugadores/vilius-gaubas.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vilius_Gaubas_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-rodrigo-pacheco-mendez",
+      "kind": "photo",
+      "title": "Rodrigo Pacheco Mendez",
+      "src": "/photos/jugadores/rodrigo-pacheco-mendez.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rodrigo_Pacheco_M%C3%A9ndez_%282023_French_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-renata-zarazua",
+      "kind": "photo",
+      "title": "Renata Zarazúa",
+      "src": "/photos/jugadores/renata-zarazua.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Renata_Zaraz%C3%BAa_%282024_DC_Open%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-valentin-vacherot",
+      "kind": "photo",
+      "title": "Valentin Vacherot",
+      "src": "/photos/jugadores/valentin-vacherot.webp",
+      "author": "Peter Arnold",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valentin_Vacherot_Basel_2025_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-guy-den-ouden",
+      "kind": "photo",
+      "title": "Guy Den Ouden",
+      "src": "/photos/jugadores/guy-den-ouden.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Guy_den_Ouden_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-gijs-brouwer",
+      "kind": "photo",
+      "title": "Gijs Brouwer",
+      "src": "/photos/jugadores/gijs-brouwer.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gijs_Brouwer_%282023_Cary%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-eva-vedder",
+      "kind": "photo",
+      "title": "Eva Vedder",
+      "src": "/photos/jugadores/eva-vedder.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eva_Vedder_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-anouk-koevermans",
+      "kind": "photo",
+      "title": "Anouk Koevermans",
+      "src": "/photos/jugadores/anouk-koevermans.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anouk_Koevermans_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-arianne-hartono",
+      "kind": "photo",
+      "title": "Arianne Hartono",
+      "src": "/photos/jugadores/arianne-hartono.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hartono_WMQ23_%2853062201158%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lucciana-perez-alarcon",
+      "kind": "photo",
+      "title": "Lucciana Perez Alarcon",
+      "src": "/photos/jugadores/lucciana-perez-alarcon.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lucciana_P%C3%A9rez_Alarc%C3%B3n_%282023_French_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-maks-kasnikowski",
+      "kind": "photo",
+      "title": "Maks Kasnikowski",
+      "src": "/photos/jugadores/maks-kasnikowski.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maks_Ka%C5%9Bnikowski_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-magdalena-frech",
+      "kind": "photo",
+      "title": "Magdalena Frech",
+      "src": "/photos/jugadores/magdalena-frech.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magdalena_Fr%C4%99ch_%282023_DC_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-magda-linette",
+      "kind": "photo",
+      "title": "Magda Linette",
+      "src": "/photos/jugadores/magda-linette.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linette_RG21_%2831%29_%2851376169766%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-katarzyna-kawa",
+      "kind": "photo",
+      "title": "Katarzyna Kawa",
+      "src": "/photos/jugadores/katarzyna-kawa.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kawa_RGQ22_%284%29_%2852129558436%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-linda-klimovicova",
+      "kind": "photo",
+      "title": "Linda Klimovicova",
+      "src": "/photos/jugadores/linda-klimovicova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linda_Klimovi%C4%8Dov%C3%A1_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-katarzyna-piter",
+      "kind": "photo",
+      "title": "Katarzyna Piter",
+      "src": "/photos/jugadores/katarzyna-piter.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Piter_RG22_%287%29_%2852143027477%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-henrique-rocha",
+      "kind": "photo",
+      "title": "Henrique Rocha",
+      "src": "/photos/jugadores/henrique-rocha.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henrique_Rocha_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-henry-searle",
+      "kind": "photo",
+      "title": "Henry Searle",
+      "src": "/photos/jugadores/henry-searle.webp",
+      "author": "Davidjmr",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henry_Searle_at_Wimbledon_Qualifying_in_2026_%28cropped%29.png",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-katie-boulter",
+      "kind": "photo",
+      "title": "Katie Boulter",
+      "src": "/photos/jugadores/katie-boulter.webp",
+      "author": "Robkeating66",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:00001Canberra-_7_January_2023_%E2%80%93_Britain%27s_Katie_Boulter_after_winning_the_final_at_the_Canberra_International_tournament._Photo_by_Rob_Keating%2C_http---robiciatennisphotography.com2023_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-katie-swan",
+      "kind": "photo",
+      "title": "Katie Swan",
+      "src": "/photos/jugadores/katie-swan.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swan_RGQ22_%2815%29_%2852128489862%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mika-stojsavljevic",
+      "kind": "photo",
+      "title": "Mika Stojsavljevic",
+      "src": "/photos/jugadores/mika-stojsavljevic.webp",
+      "author": "Daniel Cooper",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mika_Stojsavljevic_2026_Birmingham_Open_2_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-naiktha-bains",
+      "kind": "photo",
+      "title": "Naiktha Bains",
+      "src": "/photos/jugadores/naiktha-bains.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bains_WMQ23_%2853061900419%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-amelia-rajecki",
+      "kind": "photo",
+      "title": "Amelia Rajecki",
+      "src": "/photos/jugadores/amelia-rajecki.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amelia_Rajecki_%282023_Wolfpack_Invite%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-heather-watson",
+      "kind": "photo",
+      "title": "Heather Watson",
+      "src": "/photos/jugadores/heather-watson.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heather_Watson_%2849810069577%29_%28cropped2%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-sorana-cirstea",
+      "kind": "photo",
+      "title": "Sorana Cirstea",
+      "src": "/photos/jugadores/sorana-cirstea.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania derivative work: Kacir",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sorana_C%C3%AErstea_2025_Transylvania_Open_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-miriam-bulgaru",
+      "kind": "photo",
+      "title": "Miriam Bulgaru",
+      "src": "/photos/jugadores/miriam-bulgaru.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miriam_Bulgaru_%2853823867450%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-irina-camelia-begu",
+      "kind": "photo",
+      "title": "Irina-Camelia Begu",
+      "src": "/photos/jugadores/irina-camelia-begu.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Day_7_Transylvania_Open_Irina-Camelia_Begu_%2854321012463%29_%28cropped_Begu%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-anna-kalinskaya",
+      "kind": "photo",
+      "title": "Anna Kalinskaya",
+      "src": "/photos/jugadores/anna-kalinskaya.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anna_Kalinskaya_%282025_DC_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-ekaterina-alexandrova",
+      "kind": "photo",
+      "title": "Ekaterina Alexandrova",
+      "src": "/photos/jugadores/ekaterina-alexandrova.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ekaterina_Alexandrova_BJK_Cup_2020-21_%28cropped%29_%28cropped%29.png",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-liudmila-samsonova",
+      "kind": "photo",
+      "title": "Liudmila Samsonova",
+      "src": "/photos/jugadores/liudmila-samsonova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Liudmila_Samsonova_%282023_DC_Open%29_01.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-alina-korneeva",
+      "kind": "photo",
+      "title": "Alina Korneeva",
+      "src": "/photos/jugadores/alina-korneeva.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alina_Korneeva_%282023_French_Open%29_02.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-kristina-liutova",
+      "kind": "photo",
+      "title": "Kristina Liutova",
+      "src": "/photos/jugadores/kristina-liutova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kristina_Liutova_%282026_Cary%29_05_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-tatiana-prozorova",
+      "kind": "photo",
+      "title": "Tatiana Prozorova",
+      "src": "/photos/jugadores/tatiana-prozorova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tatiana_Prozorova_%282023_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-polina-iatcenko",
+      "kind": "photo",
+      "title": "Polina Iatcenko",
+      "src": "/photos/jugadores/polina-iatcenko.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polina_Iatcenko_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-alevtina-ibragimova",
+      "kind": "photo",
+      "title": "Alevtina Ibragimova",
+      "src": "/photos/jugadores/alevtina-ibragimova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alevtina_Ibragimova_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-elena-pridankina",
+      "kind": "photo",
+      "title": "Elena Pridankina",
+      "src": "/photos/jugadores/elena-pridankina.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elena_Pridankina_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-anastasia-gasanova",
+      "kind": "photo",
+      "title": "Anastasia Gasanova",
+      "src": "/photos/jugadores/anastasia-gasanova.webp",
+      "author": "ElfySky",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anastasia_Gasanova_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-novak-djokovic",
+      "kind": "photo",
+      "title": "Novak Djokovic",
+      "src": "/photos/jugadores/novak-djokovic.webp",
+      "author": "Andymiah",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Novak_Djokovic_Paris_2024_Olympic_Games_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-teodora-kostovic",
+      "kind": "photo",
+      "title": "Teodora Kostovic",
+      "src": "/photos/jugadores/teodora-kostovic.webp",
+      "author": "ZooTennis.com",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Teodora_Kostovi%C4%87_ITF_J300_College_Park_girls_singles_final_2_%28cropped%29.png",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mia-ristic",
+      "kind": "photo",
+      "title": "Mia Ristic",
+      "src": "/photos/jugadores/mia-ristic.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mia_Risti%C4%87_%282026_US_Open%29_02_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-remy-bertola",
+      "kind": "photo",
+      "title": "Remy Bertola",
+      "src": "/photos/jugadores/remy-bertola.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:R%C3%A9my_Bertola_%282026_US_Open%29_04_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-leandro-riedi",
+      "kind": "photo",
+      "title": "Leandro Riedi",
+      "src": "/photos/jugadores/leandro-riedi.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leandro_Riedi_%282024_DC_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-kilian-feldbausch",
+      "kind": "photo",
+      "title": "Kilian Feldbausch",
+      "src": "/photos/jugadores/kilian-feldbausch.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kilian_Feldbausch_%282026_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-henry-bernet",
+      "kind": "photo",
+      "title": "Henry Bernet",
+      "src": "/photos/jugadores/henry-bernet.webp",
+      "author": "Skyscraper2010",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henry_Bernet%2C_Swiss_tennis_player_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-jakub-paul",
+      "kind": "photo",
+      "title": "Jakub Paul",
+      "src": "/photos/jugadores/jakub-paul.webp",
+      "author": "LHC88",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jakub_Paul_Basel_2025_%28cropped%29.png",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-viktorija-golubic",
+      "kind": "photo",
+      "title": "Viktorija Golubic",
+      "src": "/photos/jugadores/viktorija-golubic.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Golubic_RG22_%2810%29_%2852144330099%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-simona-waltert",
+      "kind": "photo",
+      "title": "Simona Waltert",
+      "src": "/photos/jugadores/simona-waltert.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Simona_Waltert_%2853823868550%29_Wimbledon_qualifying_2024_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-susan-bandecchi",
+      "kind": "photo",
+      "title": "Susan Bandecchi",
+      "src": "/photos/jugadores/susan-bandecchi.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bandecchi_WMQ23_%2853061717131%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-rebeka-masarova",
+      "kind": "photo",
+      "title": "Rebeka Masarova",
+      "src": "/photos/jugadores/rebeka-masarova.webp",
+      "author": "Pulv",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023-06_Rebeka_Masarova_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-lanlana-tararudee",
+      "kind": "photo",
+      "title": "Lanlana Tararudee",
+      "src": "/photos/jugadores/lanlana-tararudee.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lanlana_Tararudee_%282024_Cary%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-mananchaya-sawangkaew",
+      "kind": "photo",
+      "title": "Mananchaya Sawangkaew",
+      "src": "/photos/jugadores/mananchaya-sawangkaew.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mananchaya_Sawangkaew_%282024_Cary%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-peangtarn-plipuech",
+      "kind": "photo",
+      "title": "Peangtarn Plipuech",
+      "src": "/photos/jugadores/peangtarn-plipuech.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peangtarn_Plipuech_%282026_Cary%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-zeynep-sonmez",
+      "kind": "photo",
+      "title": "Zeynep Sonmez",
+      "src": "/photos/jugadores/zeynep-sonmez.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zeynep_S%C3%B6nmez_Wimbledon_qualifying_2024_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-ipek-oz",
+      "kind": "photo",
+      "title": "Ipek Oz",
+      "src": "/photos/jugadores/ipek-oz.webp",
+      "author": "Peter Menzel",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C4%B0pek_%C3%96z_%2840083790853%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-marta-kostyuk",
+      "kind": "photo",
+      "title": "Marta Kostyuk",
+      "src": "/photos/jugadores/marta-kostyuk.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marta_Kostyuk_%282023_US_Open%29_20_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-daria-snigur",
+      "kind": "photo",
+      "title": "Daria Snigur",
+      "src": "/photos/jugadores/daria-snigur.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daria_Snigur_Transylvania_Open_2026_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-anhelina-kalinina",
+      "kind": "photo",
+      "title": "Anhelina Kalinina",
+      "src": "/photos/jugadores/anhelina-kalinina.webp",
+      "author": "si.robi",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kalinina_RG22_%2813%29_%2852144115143%29_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-oleksandra-oliynykova",
+      "kind": "photo",
+      "title": "Oleksandra Oliynykova",
+      "src": "/photos/jugadores/oleksandra-oliynykova.webp",
+      "author": "Nuță Lucian from Cluj-Napoca, Romania derivative work: Kacir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oleksandra_Oliynykova_Transylvania_Open_2026_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-kamilla-rakhimova",
+      "kind": "photo",
+      "title": "Kamilla Rakhimova",
+      "src": "/photos/jugadores/kamilla-rakhimova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamilla_Rakhimova_%282024_DC_Open%29_05_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-maria-timofeeva",
+      "kind": "photo",
+      "title": "Maria Timofeeva",
+      "src": "/photos/jugadores/maria-timofeeva.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maria_Timofeeva_%282023_US_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-polina-kudermetova",
+      "kind": "photo",
+      "title": "Polina Kudermetova",
+      "src": "/photos/jugadores/polina-kudermetova.webp",
+      "author": "Hameltion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polina_Kudermetova_%282025_DC_Open%29_01_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
+    },
+    {
+      "id": "jugador-carlos-taberner",
+      "kind": "photo",
+      "title": "Carlos Taberner",
+      "src": "/photos/jugadores/carlos-taberner.webp",
+      "author": "jmmuguerza",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceName": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Taberner_%28cropped%29.jpg",
+      "pages": [
+        "Jugadores por país"
+      ]
     }
   ]
 }

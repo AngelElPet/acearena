@@ -30,7 +30,7 @@ export function pendingPlaceholderErrors(rootDir) {
   const errors = [];
   const walk = (dir) => {
     for (const name of readdirSync(dir)) {
-      if (name === '.git' || name === 'node_modules') continue;
+      if (name === '.git' || name === 'node_modules' || name === '.cache' || name === '__pycache__') continue;
       const full = join(dir, name);
       if (statSync(full).isDirectory()) {
         walk(full);

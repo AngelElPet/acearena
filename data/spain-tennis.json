@@ -1,0 +1,4851 @@
+{
+  "updated": "2026-10-25",
+  "atpAsOf": "2026-10-19",
+  "wtaAsOf": "2026-10-19",
+  "gaps": [
+    "El calendario ITF masculino de 2026 en España no se pudo leer en itftennis.com.",
+    "Los Challenger y los ATP de España salen de los informes de finales a 18 de octubre de 2026: la fecha de fin no viene en ese informe. La categoría ATP 250 o 500 tampoco: solo se anota si la línea dice Masters 1000 o es un Grand Slam. Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com.",
+    "La WTA y la ITF femenina salen de la API de torneos de la WTA, consultada el 2026-10-25."
+  ],
+  "tournaments": [
+    {
+      "name": "Tenerife 1, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-02-02",
+      "endDate": "sin dato",
+      "city": "Tenerife 1, España",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Tenerife 2, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-02-09",
+      "endDate": "sin dato",
+      "city": "Tenerife 2, España",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - MANACOR, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-02-09",
+      "endDate": "2026-02-15",
+      "city": "MANACOR",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - MANACOR 2, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-02-16",
+      "endDate": "2026-02-22",
+      "city": "MANACOR 2",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - MANACOR 3, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-02-23",
+      "endDate": "2026-03-01",
+      "city": "MANACOR 3",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Murcia, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-03-16",
+      "endDate": "sin dato",
+      "city": "Murcia, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - SABADELL, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-03-16",
+      "endDate": "2026-03-22",
+      "city": "SABADELL",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Alicante (Montemar), España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-03-23",
+      "endDate": "sin dato",
+      "city": "Alicante (Montemar), España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Menorca, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-03-30",
+      "endDate": "sin dato",
+      "city": "Menorca, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Grand Prix Open Villa de Madrid by Silverway - Madrid, ESP",
+      "circuit": "WTA",
+      "category": "WTA 125",
+      "startDate": "2026-04-06",
+      "endDate": "2026-04-12",
+      "city": "MADRID",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Madrid, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-04-06",
+      "endDate": "sin dato",
+      "city": "Madrid, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Barcelona, España",
+      "circuit": "ATP",
+      "category": "ATP 500",
+      "startDate": "2026-04-13",
+      "endDate": "sin dato",
+      "city": "Barcelona, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP Tour, calendario 2026 (categoría)",
+          "url": "https://www.atptour.com/en/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "ATP Masters 1000 Madrid, España",
+      "circuit": "ATP",
+      "category": "ATP Masters 1000",
+      "startDate": "2026-04-20",
+      "endDate": "sin dato",
+      "city": "ATP Masters 1000 Madrid, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Mutua Madrid Open - Madrid, ESP",
+      "circuit": "WTA",
+      "category": "WTA 1000",
+      "startDate": "2026-04-21",
+      "endDate": "2026-05-03",
+      "city": "MADRID",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Catalonia Open Solgironès - La Bisbal d'Empordà, Catalonia",
+      "circuit": "WTA",
+      "category": "WTA 125",
+      "startDate": "2026-04-27",
+      "endDate": "2026-05-03",
+      "city": "LA BISBAL D'EMPORDÁ",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - MADRID, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-04-27",
+      "endDate": "2026-05-03",
+      "city": "MADRID",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - PLATJA D'ARO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-05-04",
+      "endDate": "2026-05-10",
+      "city": "PLATJA D'ARO",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Valencia, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-05-11",
+      "endDate": "sin dato",
+      "city": "Valencia, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - MONZON, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-05-11",
+      "endDate": "2026-05-17",
+      "city": "MONZON",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - ESTEPONA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-05-18",
+      "endDate": "2026-05-24",
+      "city": "ESTEPONA MALAGA",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - OLIVA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-05-25",
+      "endDate": "2026-05-31",
+      "city": "OLIVA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W75 - ZARAGOZA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-05-25",
+      "endDate": "2026-05-31",
+      "city": "ZARAGOZA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - ONTINYENT, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-07",
+      "city": "ONTINYENT",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - MADRID 2, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-06-08",
+      "endDate": "2026-06-14",
+      "city": "MADRID 2",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - TAUSTE, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-06-15",
+      "endDate": "2026-06-21",
+      "city": "TAUSTE",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Mallorca, España",
+      "circuit": "ATP",
+      "category": "ATP 250",
+      "startDate": "2026-06-22",
+      "endDate": "sin dato",
+      "city": "Mallorca, España",
+      "surface": "hierba",
+      "sources": [
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP Tour, calendario 2026 (categoría)",
+          "url": "https://www.atptour.com/en/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W50- PALMA DEL RIO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-06-22",
+      "endDate": "2026-06-28",
+      "city": "PALMA DEL RIO",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - GETXO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-06-29",
+      "endDate": "2026-07-05",
+      "city": "GETXO",
+      "surface": "tierra batida indoor",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - DON BENITO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-07-06",
+      "endDate": "2026-07-12",
+      "city": "DON BENITO",
+      "surface": "moqueta",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Pozoblanco, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-07-13",
+      "endDate": "sin dato",
+      "city": "Pozoblanco, España",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W75 - VITORIA-GASTEIZ, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-07-13",
+      "endDate": "2026-07-19",
+      "city": "VITORIA-GASTEIZ",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Segovia, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-07-20",
+      "endDate": "sin dato",
+      "city": "Segovia, España",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - LAS PALMAS DE GRAN CANARIA",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-07-20",
+      "endDate": "2026-07-26",
+      "city": "LAS PALMAS DE GRAN CANARIA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W100 - GRAN CANARIA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-07-27",
+      "endDate": "2026-08-02",
+      "city": "GRAN CANARIA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W75 - OURENSE, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-08-03",
+      "endDate": "2026-08-09",
+      "city": "OURENSE",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - VIGO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-08-10",
+      "endDate": "2026-08-16",
+      "city": "VIGO",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - LOGRONO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-23",
+      "city": "LOGRONO",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - TORELLO, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-30",
+      "city": "TORELLO",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Manacor, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-08-31",
+      "endDate": "sin dato",
+      "city": "Manacor, España",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W15 - BADALONA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-06",
+      "city": "BADALONA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Seville, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-09-07",
+      "endDate": "sin dato",
+      "city": "Seville, España",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - REUS, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-13",
+      "city": "REUS",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "BBVA Open Internacional de Valencia - Valencia, ESP",
+      "circuit": "WTA",
+      "category": "WTA 125",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "city": "VALENCIA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W50 - YECLA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-09-21",
+      "endDate": "2026-09-27",
+      "city": "YECLA",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - BAZA, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-04",
+      "city": "BAZA",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Villena, España",
+      "circuit": "Challenger",
+      "category": "Challenger",
+      "startDate": "2026-10-05",
+      "endDate": "sin dato",
+      "city": "Villena, España",
+      "surface": "pista dura",
+      "sources": [
+        {
+          "name": "ATP, finales Challenger de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/finals_challengers.pdf"
+        }
+      ]
+    },
+    {
+      "name": "WTT W35 - SEVILLE, SPAIN",
+      "circuit": "ITF",
+      "category": "ITF",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-11",
+      "city": "SEVILLE",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "name": "Vanda Pharmaceuticals Mallorca Women's Championships - Mallorca, ESP",
+      "circuit": "WTA",
+      "category": "WTA 125",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-18",
+      "city": "MALLORCA",
+      "surface": "tierra batida",
+      "sources": [
+        {
+          "name": "WTA, API de torneos (circuito femenino, incluida la ITF)",
+          "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    }
+  ],
+  "atp": [
+    {
+      "slug": "carlos-alcaraz",
+      "name": "Carlos Alcaraz",
+      "tour": "ATP",
+      "rank": "3",
+      "points": "5610",
+      "birthDate": "2003-05-05",
+      "age": "23",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestro",
+      "height": "183 cm",
+      "titlesSeason": "3",
+      "titlesSeasonNames": [
+        "Australian Open, Australia",
+        "Doha, Qatar",
+        "Tokyo, Japan"
+      ],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "Campeón de Australian Open, Australia",
+      "prizeSeason": "5645174",
+      "prizeCareer": "66095691",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "17",
+      "profileUrl": "https://www.atptour.com/en/players/carlos-alcaraz/a0e2/overview",
+      "ficha": "jugadores/carlos-alcaraz.html",
+      "photo": {
+        "src": "/photos/jugadores/carlos-alcaraz.webp",
+        "width": 160,
+        "height": 237,
+        "author": "Like tears in rain derivative work: Kacir",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Alcaraz_Roland_Garros_2025_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        },
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP, ficha de Carlos Alcaraz",
+          "url": "https://www.atptour.com/en/players/carlos-alcaraz/a0e2/overview"
+        },
+        {
+          "name": "ATP, biografía actualizada el 26 de agosto de 2026",
+          "url": "https://www.atptour.com/en/players/-/a0e2/bio"
+        },
+        {
+          "name": "ATP, media guide 2025 (nacimiento, estatura y golpe)",
+          "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf"
+        },
+        {
+          "name": "Ranking ATP",
+          "url": "https://www.atptour.com/en/rankings/singles/"
+        }
+      ]
+    },
+    {
+      "slug": "rafael-jodar",
+      "name": "Rafael Jódar",
+      "tour": "ATP",
+      "rank": "11",
+      "points": "3234",
+      "birthDate": "2006-09-17",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "11",
+      "careerHighDate": "sin dato",
+      "hand": "diestro",
+      "height": "191 cm",
+      "titlesSeason": "1",
+      "titlesSeasonNames": [
+        "Marrakech, Morocco"
+      ],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "3281551",
+      "prizeCareer": "3601684",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "21",
+      "profileUrl": "https://www.atptour.com/en/players/-/j0dz/overview",
+      "ficha": "jugadores/rafael-jodar.html",
+      "photo": {
+        "src": "/photos/jugadores/rafael-jodar.webp",
+        "width": 160,
+        "height": 245,
+        "author": "Crosscourt View",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rafael_J%C3%B3dar_Roland_Garros_2026_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        },
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP, biografía de Rafael Jódar actualizada el 27 de agosto de 2026",
+          "url": "https://www.atptour.com/en/players/-/j0dz/bio"
+        },
+        {
+          "name": "ATP, ficha de Rafael Jódar",
+          "url": "https://www.atptour.com/en/players/-/j0dz/overview"
+        },
+        {
+          "name": "ATP, media guide 2026 (nacimiento, estatura y golpe)",
+          "url": "https://www.atptour.com/-/media/files/media-guide/2026/2026-atp-media-guide-player-bios-birthdays-updated.pdf"
+        },
+        {
+          "name": "ATP, final de Shanghái 2026",
+          "url": "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final"
+        },
+        {
+          "name": "ATP, semifinales de Shanghái 2026",
+          "url": "https://www.atptour.com/en/news/medvedev-jodar-shanghai-2026-saturday"
+        },
+        {
+          "name": "Ranking ATP",
+          "url": "https://www.atptour.com/en/rankings/singles/"
+        }
+      ]
+    },
+    {
+      "slug": "alejandro-davidovich-fokina",
+      "name": "Alejandro Davidovich Fokina",
+      "tour": "ATP",
+      "rank": "13",
+      "points": "2880",
+      "birthDate": "1999-06-05",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "13",
+      "careerHighDate": "sin dato",
+      "hand": "diestro",
+      "height": "183 cm",
+      "titlesSeason": "3",
+      "titlesSeasonNames": [
+        "Mallorca, Spain",
+        "Chengdu, China",
+        "ATP Masters 1000 Shanghai, China"
+      ],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "2816145",
+      "prizeCareer": "13598539",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "24",
+      "profileUrl": "https://www.atptour.com/en/players/alejandro-/dh50/overview",
+      "ficha": "jugadores/alejandro-davidovich-fokina.html",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        },
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "ATP, ficha de Alejandro Davidovich Fokina",
+          "url": "https://www.atptour.com/en/players/alejandro-/dh50/overview"
+        },
+        {
+          "name": "ATP, final de Shanghái 2026",
+          "url": "https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final"
+        },
+        {
+          "name": "ATP, media guide 2025 (nacimiento y estatura)",
+          "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf"
+        },
+        {
+          "name": "Ranking ATP",
+          "url": "https://www.atptour.com/en/rankings/singles/"
+        }
+      ]
+    },
+    {
+      "slug": "daniel-merida",
+      "name": "Daniel Merida",
+      "tour": "ATP",
+      "rank": "42",
+      "points": "1195",
+      "birthDate": "2004-09-26",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "1",
+      "titlesSeasonNames": [
+        "Umag, Croatia"
+      ],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "1255206",
+      "prizeCareer": "1516962",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "25",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        },
+        {
+          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "jaume-munar",
+      "name": "Jaume Munar",
+      "tour": "ATP",
+      "rank": "51",
+      "points": "1010",
+      "birthDate": "1997-05-05",
+      "age": "29",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestro",
+      "height": "183 cm",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "1233554",
+      "prizeCareer": "7979354",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "24",
+      "profileUrl": "https://www.atptour.com/en/players/Jaume-Munar/MU94/overview",
+      "ficha": "jugadores/jaume-munar.html",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        },
+        {
+          "name": "ATP, ficha de Jaume Munar",
+          "url": "https://www.atptour.com/en/players/Jaume-Munar/MU94/overview"
+        },
+        {
+          "name": "ATP, biografía actualizada el 27 de agosto de 2026",
+          "url": "https://www.atptour.com/en/players/jaume-munar/mu94/bio"
+        },
+        {
+          "name": "ATP, media guide 2025 (nacimiento y estatura)",
+          "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf"
+        },
+        {
+          "name": "Ranking ATP",
+          "url": "https://www.atptour.com/en/rankings/singles/"
+        }
+      ]
+    },
+    {
+      "slug": "martin-landaluce",
+      "name": "Martin Landaluce",
+      "tour": "ATP",
+      "rank": "67",
+      "points": "822",
+      "birthDate": "2006-01-08",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "1172218",
+      "prizeCareer": "1972717",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "26",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pablo-carreno-busta",
+      "name": "Pablo Carreno Busta",
+      "tour": "ATP",
+      "rank": "74",
+      "points": "773",
+      "birthDate": "1991-07-12",
+      "age": "35",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "1158263",
+      "prizeCareer": "18156421",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "20",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pedro-martinez",
+      "name": "Pedro Martinez",
+      "tour": "ATP",
+      "rank": "125",
+      "points": "462",
+      "birthDate": "1997-04-26",
+      "age": "29",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "499253",
+      "prizeCareer": "6159061",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "28",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "max-alcala-gurri",
+      "name": "Max Alcala Gurri",
+      "tour": "ATP",
+      "rank": "132",
+      "points": "429",
+      "birthDate": "2002-09-11",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "147530",
+      "prizeCareer": "257101",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "27",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pablo-llamas-ruiz",
+      "name": "Pablo Llamas Ruiz",
+      "tour": "ATP",
+      "rank": "139",
+      "points": "403",
+      "birthDate": "2002-10-13",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "512144",
+      "prizeCareer": "1106454",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "19",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nikolas-sanchez-izquierdo",
+      "name": "Nikolas Sanchez Izquierdo",
+      "tour": "ATP",
+      "rank": "154",
+      "points": "369",
+      "birthDate": "1999-03-15",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "148623",
+      "prizeCareer": "423016",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "29",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/nikolas-sanchez-izquierdo.webp",
+        "width": 160,
+        "height": 223,
+        "author": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nikol%C3%A1s_S%C3%A1nchez_Izquierdo_%282026_US_Open%29_01_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "inaki-montes-de-la-torre",
+      "name": "Inaki Montes-De La Torre",
+      "tour": "ATP",
+      "rank": "185",
+      "points": "307",
+      "birthDate": "2002-10-03",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "56759",
+      "prizeCareer": "150455",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "22",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "david-jorda-sanchis",
+      "name": "David Jorda Sanchis",
+      "tour": "ATP",
+      "rank": "193",
+      "points": "301",
+      "birthDate": "1994-06-14",
+      "age": "32",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "130126",
+      "prizeCareer": "305794",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "31",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/david-jorda-sanchis.webp",
+        "width": 160,
+        "height": 207,
+        "author": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:David_Jord%C3%A0_Sanchis_%282026_US_Open%29_03_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, ranking de individuales por edad del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pol-martin-tiffon",
+      "name": "Pol Martin Tiffon",
+      "tour": "ATP",
+      "rank": "211",
+      "points": "268",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "159929",
+      "prizeCareer": "445377",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/pol-martin-tiffon.webp",
+        "width": 160,
+        "height": 207,
+        "author": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pol_Mart%C3%ADn_Tiffon_%282026_US_Open%29_01_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alejandro-moro-canas",
+      "name": "Alejandro Moro Canas",
+      "tour": "ATP",
+      "rank": "232",
+      "points": "248",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "206101",
+      "prizeCareer": "751157",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "31",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "daniel-rincon",
+      "name": "Daniel Rincon",
+      "tour": "ATP",
+      "rank": "235",
+      "points": "244",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "165421",
+      "prizeCareer": "641619",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "29",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/daniel-rincon.webp",
+        "width": 160,
+        "height": 204,
+        "author": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Rinc%C3%B3n_%282026_US_Open%29_02_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "roberto-bautista-agut",
+      "name": "Roberto Bautista Agut",
+      "tour": "ATP",
+      "rank": "239",
+      "points": "233",
+      "birthDate": "1988-04-14",
+      "age": "38",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestro",
+      "height": "183 cm",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "547320",
+      "prizeCareer": "20524698",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "18",
+      "profileUrl": "https://www.atptour.com/en/players/-/bd06/overview",
+      "ficha": "jugadores/roberto-bautista-agut.html",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        },
+        {
+          "name": "ATP, ficha de Roberto Bautista Agut",
+          "url": "https://www.atptour.com/en/players/-/bd06/overview"
+        },
+        {
+          "name": "ATP, biografía actualizada el 22 de mayo de 2026",
+          "url": "https://www.atptour.com/en/players/roberto-bautista/bd06/bio"
+        },
+        {
+          "name": "ATP, media guide 2025 (nacimiento y estatura)",
+          "url": "https://www.atptour.com/-/media/files/media-guide/2025/2025-atp-media-guide-player-bios-birthdays.pdf"
+        },
+        {
+          "name": "ATP, lista de entrada a 6 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_alpha.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "roberto-carballes-baena",
+      "name": "Roberto Carballes Baena",
+      "tour": "ATP",
+      "rank": "259",
+      "points": "213",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "272658",
+      "prizeCareer": "6423237",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "20",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "oriol-roca-batalla",
+      "name": "Oriol Roca Batalla",
+      "tour": "ATP",
+      "rank": "304",
+      "points": "178",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "65902",
+      "prizeCareer": "736223",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "33",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alejo-sanchez-quilez",
+      "name": "Alejo Sanchez Quilez",
+      "tour": "ATP",
+      "rank": "323",
+      "points": "167",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "62819",
+      "prizeCareer": "107714",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "27",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "carlos-sanchez-jover",
+      "name": "Carlos Sanchez Jover",
+      "tour": "ATP",
+      "rank": "325",
+      "points": "166",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "44833",
+      "prizeCareer": "235063",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "29",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "miguel-damas",
+      "name": "Miguel Damas",
+      "tour": "ATP",
+      "rank": "342",
+      "points": "152",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "68046",
+      "prizeCareer": "182917",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "31",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alex-martinez",
+      "name": "Alex Martinez",
+      "tour": "ATP",
+      "rank": "384",
+      "points": "130",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "32389",
+      "prizeCareer": "101614",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "17",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "ivan-marrero-curbelo",
+      "name": "Ivan Marrero Curbelo",
+      "tour": "ATP",
+      "rank": "386",
+      "points": "129",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "33482",
+      "prizeCareer": "96367",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "20",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "izan-almazan-valiente",
+      "name": "Izan Almazan Valiente",
+      "tour": "ATP",
+      "rank": "409",
+      "points": "119",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "25669",
+      "prizeCareer": "38382",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "28",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "sergi-perez-contri",
+      "name": "Sergi Perez Contri",
+      "tour": "ATP",
+      "rank": "429",
+      "points": "112",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "25488",
+      "prizeCareer": "115470",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "carlos-taberner",
+      "name": "Carlos Taberner",
+      "tour": "ATP",
+      "rank": "447",
+      "points": "104",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "262040",
+      "prizeCareer": "1734011",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "13",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/carlos-taberner.webp",
+        "width": 160,
+        "height": 218,
+        "author": "jmmuguerza",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Taberner_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "sergio-callejon-hernando",
+      "name": "Sergio Callejon Hernando",
+      "tour": "ATP",
+      "rank": "479",
+      "points": "94",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "25913",
+      "prizeCareer": "56394",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alex-marti-pujolras",
+      "name": "Alex Marti Pujolras",
+      "tour": "ATP",
+      "rank": "484",
+      "points": "92",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "25878",
+      "prizeCareer": "160001",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "20",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "john-echeverria",
+      "name": "John Echeverria",
+      "tour": "ATP",
+      "rank": "523",
+      "points": "82",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "23714",
+      "prizeCareer": "98169",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "25",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pedro-vives-marcos",
+      "name": "Pedro Vives Marcos",
+      "tour": "ATP",
+      "rank": "546",
+      "points": "75",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "23977",
+      "prizeCareer": "91823",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "16",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alejandro-juan-mano",
+      "name": "Alejandro Juan Mano",
+      "tour": "ATP",
+      "rank": "590",
+      "points": "65",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "12058",
+      "prizeCareer": "25931",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "15",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "javier-barranco-cosano",
+      "name": "Javier Barranco Cosano",
+      "tour": "ATP",
+      "rank": "610",
+      "points": "60",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "17348",
+      "prizeCareer": "422119",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "17",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pedro-rodenas",
+      "name": "Pedro Rodenas",
+      "tour": "ATP",
+      "rank": "623",
+      "points": "58",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "9962",
+      "prizeCareer": "37786",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "17",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "imanol-lopez-morillo",
+      "name": "Imanol Lopez Morillo",
+      "tour": "ATP",
+      "rank": "661",
+      "points": "53",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "17078",
+      "prizeCareer": "112149",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "28",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "carlos-lopez-montagud",
+      "name": "Carlos Lopez Montagud",
+      "tour": "ATP",
+      "rank": "681",
+      "points": "49",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "8150",
+      "prizeCareer": "141040",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "15",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pablo-martinez-gomez",
+      "name": "Pablo Martinez Gomez",
+      "tour": "ATP",
+      "rank": "683",
+      "points": "48",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "10603",
+      "prizeCareer": "22801",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "9",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "roger-pascual-ferra",
+      "name": "Roger Pascual Ferra",
+      "tour": "ATP",
+      "rank": "684",
+      "points": "48",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "15897",
+      "prizeCareer": "28658",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "9",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "mario-gonzalez-fernandez",
+      "name": "Mario Gonzalez Fernandez",
+      "tour": "ATP",
+      "rank": "699",
+      "points": "47",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "17039",
+      "prizeCareer": "75613",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "22",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "oscar-jose-gutierrez",
+      "name": "Oscar Jose Gutierrez",
+      "tour": "ATP",
+      "rank": "701",
+      "points": "47",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "12658",
+      "prizeCareer": "179529",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "26",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alberto-barroso-campos",
+      "name": "Alberto Barroso Campos",
+      "tour": "ATP",
+      "rank": "710",
+      "points": "45",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "19733",
+      "prizeCareer": "173327",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "19",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "carles-hernandez",
+      "name": "Carles Hernandez",
+      "tour": "ATP",
+      "rank": "755",
+      "points": "40",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "12937",
+      "prizeCareer": "33000",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "28",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "rafael-izquierdo-luque",
+      "name": "Rafael Izquierdo Luque",
+      "tour": "ATP",
+      "rank": "768",
+      "points": "38",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "14264",
+      "prizeCareer": "45423",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "20",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "andres-santamarta-roig",
+      "name": "Andres Santamarta Roig",
+      "tour": "ATP",
+      "rank": "774",
+      "points": "37",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "8130",
+      "prizeCareer": "32403",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "9",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "carles-cordoba",
+      "name": "Carles Cordoba",
+      "tour": "ATP",
+      "rank": "780",
+      "points": "37",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "11894",
+      "prizeCareer": "20450",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "27",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "pablo-perez-ramos",
+      "name": "Pablo Perez Ramos",
+      "tour": "ATP",
+      "rank": "912",
+      "points": "25",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "8415",
+      "prizeCareer": "8415",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "8",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "nicolas-alvarez-varona",
+      "name": "Nicolas Alvarez Varona",
+      "tour": "ATP",
+      "rank": "926",
+      "points": "24",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "19474",
+      "prizeCareer": "211197",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "8",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "alejandro-turriziani-alvarez",
+      "name": "Alejandro Turriziani Alvarez",
+      "tour": "ATP",
+      "rank": "940",
+      "points": "24",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "9835",
+      "prizeCareer": "33619",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "tomas-curras-abasolo",
+      "name": "Tomas Curras Abasolo",
+      "tour": "ATP",
+      "rank": "982",
+      "points": "21",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "8270",
+      "prizeCareer": "43657",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "23",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "jorge-plans",
+      "name": "Jorge Plans",
+      "tour": "ATP",
+      "rank": "1031",
+      "points": "18",
+      "birthDate": "sin dato",
+      "age": "sin dato",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "0",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "7555",
+      "prizeCareer": "27159",
+      "prizeCurrency": "USD",
+      "tournamentsSeason": "26",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "ATP, ranking numérico de individuales del 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/singles_entry_numerical.pdf"
+        },
+        {
+          "name": "ATP, informe de rankings enlazado en Rankings & Media Reports",
+          "url": "https://edx.atptour.com/en/media/rankings-and-stats"
+        },
+        {
+          "name": "ATP, premios de la temporada y de carrera a 19 de octubre de 2026",
+          "url": "http://www.protennislive.com/posting/ramr/current_prize.pdf"
+        }
+      ]
+    }
+  ],
+  "wta": [
+    {
+      "slug": "cristina-bucsa",
+      "name": "Cristina Bucsa",
+      "tour": "WTA",
+      "rank": "38",
+      "points": "1294",
+      "birthDate": "1998-01-01",
+      "age": "28",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestra",
+      "height": "176 cm",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "24",
+      "profileUrl": "https://www.wtatennis.com/players/321158/cristina-bucsa",
+      "ficha": "jugadores/cristina-bucsa.html",
+      "photo": {
+        "src": "/photos/jugadores/cristina-bucsa.webp",
+        "width": 160,
+        "height": 213,
+        "author": "Peter Menzel",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristina_Buc%C8%99a_%2853002855843%29_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        },
+        {
+          "name": "WTA, ficha de Cristina Bucsa",
+          "url": "https://www.wtatennis.com/players/321158/cristina-bucsa"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "paula-badosa",
+      "name": "Paula Badosa",
+      "tour": "WTA",
+      "rank": "61",
+      "points": "1023",
+      "birthDate": "1997-11-15",
+      "age": "28",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestra",
+      "height": "180 cm",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "22",
+      "profileUrl": "https://www.wtatennis.com/players/320124/paula-badosa",
+      "ficha": "jugadores/paula-badosa.html",
+      "photo": {
+        "src": "/photos/jugadores/paula-badosa.webp",
+        "width": 160,
+        "height": 275,
+        "author": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paula_Badosa_%282024_DC_Open%29_04_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        },
+        {
+          "name": "WTA, ficha de Paula Badosa",
+          "url": "https://www.wtatennis.com/players/320124/paula-badosa"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "kaitlin-quevedo",
+      "name": "Kaitlin Quevedo",
+      "tour": "WTA",
+      "rank": "79",
+      "points": "902",
+      "birthDate": "2006-02-13",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestra",
+      "height": "167 cm",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "23",
+      "profileUrl": "https://www.wtatennis.com/players/331742/kaitlin-quevedo",
+      "ficha": "jugadores/kaitlin-quevedo.html",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        },
+        {
+          "name": "WTA, ficha de Kaitlin Quevedo",
+          "url": "https://www.wtatennis.com/players/331742/kaitlin-quevedo"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "jessica-bouzas-maneiro",
+      "name": "Jessica Bouzas Maneiro",
+      "tour": "WTA",
+      "rank": "96",
+      "points": "769",
+      "birthDate": "2002-09-24",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "diestra",
+      "height": "170 cm",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "29",
+      "profileUrl": "https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/",
+      "ficha": "jugadores/jessica-bouzas-maneiro.html",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        },
+        {
+          "name": "WTA, ficha de Jessica Bouzas Maneiro",
+          "url": "https://www.wtatennis.com/players/328139/jessica-bouzas-maneiro/"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "oksana-selekhmeteva",
+      "name": "Oksana Selekhmeteva",
+      "tour": "WTA",
+      "rank": "101",
+      "points": "743",
+      "birthDate": "2003-01-13",
+      "age": "23",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "zurda",
+      "height": "172 cm",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "31",
+      "profileUrl": "https://www.wtatennis.com/players/329199/oksana-selekhmeteva",
+      "ficha": "jugadores/oksana-selekhmeteva.html",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        },
+        {
+          "name": "WTA, ficha de Oksana Selekhmeteva",
+          "url": "https://www.wtatennis.com/players/329199/oksana-selekhmeteva"
+        },
+        {
+          "name": "WTA, lista numérica del 12 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "leyre-romero-gormaz",
+      "name": "Leyre Romero Gormaz",
+      "tour": "WTA",
+      "rank": "129",
+      "points": "585",
+      "birthDate": "2002-04-06",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "29",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "marina-bassols-ribera",
+      "name": "Marina Bassols Ribera",
+      "tour": "WTA",
+      "rank": "130",
+      "points": "581",
+      "birthDate": "1999-12-13",
+      "age": "26",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "28",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "andrea-lazaro-garcia",
+      "name": "Andrea Lazaro Garcia",
+      "tour": "WTA",
+      "rank": "138",
+      "points": "525",
+      "birthDate": "1994-11-04",
+      "age": "31",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "guiomar-maristany-zuleta-de-reales",
+      "name": "Guiomar Maristany Zuleta De Reales",
+      "tour": "WTA",
+      "rank": "140",
+      "points": "519",
+      "birthDate": "1999-02-19",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "23",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "sara-sorribes-tormo",
+      "name": "Sara Sorribes Tormo",
+      "tour": "WTA",
+      "rank": "170",
+      "points": "454",
+      "birthDate": "1996-10-08",
+      "age": "30",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "23",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/sara-sorribes-tormo.webp",
+        "width": 160,
+        "height": 213,
+        "author": "si.robi",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sorribes_Tormo_RG21_%2820%29_%2851376076476%29_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "irene-burillo",
+      "name": "Irene Burillo",
+      "tour": "WTA",
+      "rank": "213",
+      "points": "364",
+      "birthDate": "1997-07-23",
+      "age": "29",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "30",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "alicia-herrero-linana",
+      "name": "Alicia Herrero Linana",
+      "tour": "WTA",
+      "rank": "217",
+      "points": "356",
+      "birthDate": "1998-12-29",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "29",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "ane-mintegi-del-olmo",
+      "name": "Ane Mintegi Del Olmo",
+      "tour": "WTA",
+      "rank": "220",
+      "points": "352",
+      "birthDate": "2003-10-24",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "22",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "angela-fita-boluda",
+      "name": "Angela Fita Boluda",
+      "tour": "WTA",
+      "rank": "222",
+      "points": "349",
+      "birthDate": "1999-07-12",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "34",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": {
+        "src": "/photos/jugadores/angela-fita-boluda.webp",
+        "width": 160,
+        "height": 217,
+        "author": "Hameltion",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceName": "Wikimedia Commons",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%81ngela_Fita_Boluda_%282026_US_Open%29_01_%28cropped%29.jpg"
+      },
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "ariana-geerlings",
+      "name": "Ariana Geerlings",
+      "tour": "WTA",
+      "rank": "301",
+      "points": "235",
+      "birthDate": "2005-09-01",
+      "age": "21",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "8",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "eva-guerrero-alvarez",
+      "name": "Eva Guerrero Alvarez",
+      "tour": "WTA",
+      "rank": "360",
+      "points": "179",
+      "birthDate": "1999-09-04",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "14",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "aran-teixido-garcia",
+      "name": "Aran Teixido Garcia",
+      "tour": "WTA",
+      "rank": "361",
+      "points": "179",
+      "birthDate": "2001-01-17",
+      "age": "25",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "23",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "carlota-martinez-cirez",
+      "name": "Carlota Martinez Cirez",
+      "tour": "WTA",
+      "rank": "369",
+      "points": "173",
+      "birthDate": "2001-02-13",
+      "age": "25",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "lucia-cortez-llorca",
+      "name": "Lucia Cortez Llorca",
+      "tour": "WTA",
+      "rank": "392",
+      "points": "159",
+      "birthDate": "2000-06-05",
+      "age": "26",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "24",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "carmen-gallardo-guevara",
+      "name": "Carmen Gallardo Guevara",
+      "tour": "WTA",
+      "rank": "442",
+      "points": "133",
+      "birthDate": "2003-11-21",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "19",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "charo-esquiva-banuls",
+      "name": "Charo Esquiva Banuls",
+      "tour": "WTA",
+      "rank": "447",
+      "points": "130",
+      "birthDate": "2008-03-12",
+      "age": "18",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "10",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "maria-garcia-cid",
+      "name": "Maria Garcia Cid",
+      "tour": "WTA",
+      "rank": "471",
+      "points": "121",
+      "birthDate": "2005-04-05",
+      "age": "21",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "16",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "ruth-roura-llaverias",
+      "name": "Ruth Roura Llaverias",
+      "tour": "WTA",
+      "rank": "483",
+      "points": "115",
+      "birthDate": "2006-02-08",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "19",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "celia-cervino-ruiz",
+      "name": "Celia Cervino Ruiz",
+      "tour": "WTA",
+      "rank": "490",
+      "points": "114",
+      "birthDate": "1997-12-14",
+      "age": "28",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "22",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "maria-martinez-vaquero",
+      "name": "Maria Martinez Vaquero",
+      "tour": "WTA",
+      "rank": "500",
+      "points": "110",
+      "birthDate": "2002-02-09",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "28",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "aliona-bolsova",
+      "name": "Aliona Bolsova",
+      "tour": "WTA",
+      "rank": "534",
+      "points": "96",
+      "birthDate": "1997-11-06",
+      "age": "28",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "13",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "sara-dols",
+      "name": "Sara Dols",
+      "tour": "WTA",
+      "rank": "582",
+      "points": "80",
+      "birthDate": "2005-05-09",
+      "age": "21",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "11",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "neus-torner-sensano",
+      "name": "Neus Torner Sensano",
+      "tour": "WTA",
+      "rank": "608",
+      "points": "74",
+      "birthDate": "2007-10-08",
+      "age": "19",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "14",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "marta-soriano-santiago",
+      "name": "Marta Soriano Santiago",
+      "tour": "WTA",
+      "rank": "701",
+      "points": "56",
+      "birthDate": "2006-04-20",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "18",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "cristina-diaz-adrover",
+      "name": "Cristina Diaz Adrover",
+      "tour": "WTA",
+      "rank": "724",
+      "points": "51",
+      "birthDate": "2005-12-03",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "12",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "alba-rey-garcia",
+      "name": "Alba Rey Garcia",
+      "tour": "WTA",
+      "rank": "731",
+      "points": "51",
+      "birthDate": "2002-06-29",
+      "age": "24",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "22",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "georgina-garcia-perez",
+      "name": "Georgina Garcia Perez",
+      "tour": "WTA",
+      "rank": "733",
+      "points": "50",
+      "birthDate": "1992-05-13",
+      "age": "34",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "16",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "nuria-parrizas-diaz",
+      "name": "Nuria Parrizas Diaz",
+      "tour": "WTA",
+      "rank": "742",
+      "points": "49",
+      "birthDate": "1991-07-15",
+      "age": "35",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "15",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "meritxell-teixido-garcia",
+      "name": "Meritxell Teixido Garcia",
+      "tour": "WTA",
+      "rank": "773",
+      "points": "45",
+      "birthDate": "2007-06-30",
+      "age": "19",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "16",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "berta-passola",
+      "name": "Berta Passola",
+      "tour": "WTA",
+      "rank": "777",
+      "points": "44",
+      "birthDate": "2004-12-06",
+      "age": "21",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "4",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "juliana-giaccio",
+      "name": "Juliana Giaccio",
+      "tour": "WTA",
+      "rank": "791",
+      "points": "43",
+      "birthDate": "2008-12-03",
+      "age": "17",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "11",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "maria-oliver-sanchez",
+      "name": "Maria Oliver Sanchez",
+      "tour": "WTA",
+      "rank": "799",
+      "points": "41",
+      "birthDate": "2000-05-14",
+      "age": "26",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "11",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "carmen-lopez-martinez",
+      "name": "Carmen Lopez Martinez",
+      "tour": "WTA",
+      "rank": "878",
+      "points": "31",
+      "birthDate": "2005-04-23",
+      "age": "21",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "14",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "lorena-solar-donoso",
+      "name": "Lorena Solar Donoso",
+      "tour": "WTA",
+      "rank": "914",
+      "points": "28",
+      "birthDate": "2007-06-07",
+      "age": "19",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "10",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "didi-bredberg-canizares",
+      "name": "Didi Bredberg Canizares",
+      "tour": "WTA",
+      "rank": "938",
+      "points": "26",
+      "birthDate": "2004-07-29",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "5",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "esther-lopez-alcaraz",
+      "name": "Esther Lopez Alcaraz",
+      "tour": "WTA",
+      "rank": "1013",
+      "points": "19",
+      "birthDate": "1999-03-01",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "8",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "carolina-gomez",
+      "name": "Carolina Gomez",
+      "tour": "WTA",
+      "rank": "1093",
+      "points": "14",
+      "birthDate": "2004-09-18",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "4",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "victoria-gomez",
+      "name": "Victoria Gomez",
+      "tour": "WTA",
+      "rank": "1094",
+      "points": "14",
+      "birthDate": "2003-11-13",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "5",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "claudia-ferrer-perez",
+      "name": "Claudia Ferrer Perez",
+      "tour": "WTA",
+      "rank": "1105",
+      "points": "14",
+      "birthDate": "2006-07-14",
+      "age": "20",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "7",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "eugenia-zozaya-menendez",
+      "name": "Eugenia  Zozaya Menendez",
+      "tour": "WTA",
+      "rank": "1140",
+      "points": "13",
+      "birthDate": "2007-10-22",
+      "age": "18",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "7",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "alba-maria-coromina-boluda",
+      "name": "Alba Maria Coromina Boluda",
+      "tour": "WTA",
+      "rank": "1162",
+      "points": "12",
+      "birthDate": "2009-05-28",
+      "age": "17",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "6",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "raquel-gonzalez-vilar",
+      "name": "Raquel Gonzalez Vilar",
+      "tour": "WTA",
+      "rank": "1183",
+      "points": "11",
+      "birthDate": "2004-04-05",
+      "age": "22",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "4",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "lucia-natal-gomez",
+      "name": "Lucia Natal Gomez",
+      "tour": "WTA",
+      "rank": "1226",
+      "points": "10",
+      "birthDate": "1999-05-31",
+      "age": "27",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "5",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "maria-berlanga-bandera",
+      "name": "Maria Berlanga Bandera",
+      "tour": "WTA",
+      "rank": "1299",
+      "points": "8",
+      "birthDate": "2003-01-02",
+      "age": "23",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "4",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    },
+    {
+      "slug": "alice-ferlito",
+      "name": "Alice  Ferlito",
+      "tour": "WTA",
+      "rank": "1307",
+      "points": "8",
+      "birthDate": "2005-08-02",
+      "age": "21",
+      "ageAsOf": "2026-10-19",
+      "careerHigh": "sin dato",
+      "careerHighDate": "sin dato",
+      "hand": "sin dato",
+      "height": "sin dato",
+      "titlesSeason": "sin dato",
+      "titlesSeasonNames": [],
+      "titlesCareer": "sin dato",
+      "grandSlamBest": "sin dato",
+      "grandSlam2026": "sin dato",
+      "prizeSeason": "sin dato",
+      "prizeCareer": "sin dato",
+      "prizeCurrency": "",
+      "tournamentsSeason": "4",
+      "profileUrl": "",
+      "ficha": "",
+      "photo": null,
+      "sources": [
+        {
+          "name": "WTA, ranking de individuales del 19 de octubre de 2026",
+          "url": "https://wtafiles.wtatennis.com/pdf/rankings/Singles_Numeric.pdf"
+        },
+        {
+          "name": "WTA, API del ranking de individuales",
+          "url": "https://api.wtatennis.com/tennis/players/ranked"
+        }
+      ]
+    }
+  ]
+}

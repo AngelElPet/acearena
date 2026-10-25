@@ -63,6 +63,16 @@
 - [Camila Osorio](https://acearena.io/jugadores/camila-osorio.html): WTA, número 67 actualizado a 2026-10-12.
 - [Renata Zarazúa](https://acearena.io/jugadores/renata-zarazua.html): WTA, número 85 actualizado a 2026-10-12.
 
+## Jugadores por país y circuito
+
+- [Jugadores por país](https://acearena.io/paises/): hasta 20 ATP y 20 WTA de cada país con alguien en el top 200. Criterio, fecha y huecos en la propia página.
+- [Tenis en España](https://acearena.io/tenis-en-espana.html): torneos ATP, Challenger, WTA, WTA 125 e ITF femenino en España, y el top 50 de cada circuito.
+- [Cara a cara](https://acearena.io/cara-a-cara/): enfrentamientos de la semana. Sin cuotas.
+- [Torneos de 2026](https://acearena.io/torneos/): una página por torneo ATP o WTA de la temporada, con la fuente.
+- [Lo de hoy en 30 segundos](https://acearena.io/hoy-en-30-segundos.html): frases de las piezas del día, cada una con enlace a la noticia.
+- [Horarios](https://acearena.io/horarios.html): orden de juego en hora de Madrid, Buenos Aires y Ciudad de México. Sin canales de televisión.
+- Datos: https://acearena.io/data/countries.json · https://acearena.io/data/spain-tennis.json · https://acearena.io/data/tournaments-2026.json · https://acearena.io/data/head-to-head.json · https://acearena.io/data/order-of-play.json
+
 ## Calendario
 
 - [Calendario 2027](https://acearena.io/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada.

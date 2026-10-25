@@ -1,0 +1,38 @@
+{
+  "updated": "2026-10-25",
+  "date": "2026-10-25",
+  "matches": [],
+  "note": "Consulta del 2026-10-25. No hay un orden de juego oficial con horas que se pueda publicar en Madrid, Buenos Aires y Ciudad de México. Esas horas quedan en sin dato.",
+  "attempts": [
+    {
+      "name": "WTA, página de marcadores",
+      "url": "https://www.wtatennis.com/scores",
+      "result": "No trae un orden de juego con horas."
+    },
+    {
+      "name": "ATP, Daily Media Notes",
+      "url": "https://edx.atptour.com/en/media/daily-media-notes",
+      "result": "No trae un orden de juego con horas."
+    },
+    {
+      "name": "BNB Ningbo Open - Ningbo, CHN",
+      "url": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
+      "result": "La ficha menciona el orden de juego, sin horas ligadas a un partido y a las tres ciudades."
+    },
+    {
+      "name": "Río Ladies Open by MundoTênis Tours  - Rio De Janeiro, BRA",
+      "url": "https://www.wtatennis.com/tournaments/1150/rio-de-janeiro-125/2026",
+      "result": "La ficha menciona el orden de juego, sin horas ligadas a un partido y a las tres ciudades."
+    },
+    {
+      "name": "Kinoshita Group Japan Open - Osaka, JPN",
+      "url": "https://www.wtatennis.com/tournaments/405/osaka/2026",
+      "result": "La ficha menciona el orden de juego, sin horas ligadas a un partido y a las tres ciudades."
+    }
+  ],
+  "zones": {
+    "madrid": "Europe/Madrid",
+    "buenosAires": "America/Argentina/Buenos_Aires",
+    "mexicoCity": "America/Mexico_City"
+  }
+}
