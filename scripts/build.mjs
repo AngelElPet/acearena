@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
+import { sectionEntries } from './sections.mjs';
 import { writeArticleHeaders } from './headers.mjs';
 import { validateEvergreen, validatePayload, validateRace, validateWeek } from './validate.mjs';
 
@@ -147,6 +148,12 @@ function chrome(depth) {
         <a href="${p}noticias/index.html">Noticias</a>
         <a href="${p}rankings.html">Rankings</a>
         <a href="${p}jugadores/index.html">Jugadores</a>
+        <a href="${p}paises/index.html">Países</a>
+        <a href="${p}tenis-en-espana.html">España</a>
+        <a href="${p}cara-a-cara/index.html">Cara a cara</a>
+        <a href="${p}torneos/index.html">Torneos</a>
+        <a href="${p}hoy-en-30-segundos.html">En 30 s</a>
+        <a href="${p}horarios.html">Horarios</a>
         <a href="${p}aprende/index.html">Aprende</a>
         <a href="${p}agencias.html" class="nav-quiet">Anúnciate</a>
       </nav>
@@ -168,6 +175,12 @@ function chrome(depth) {
           <a href="${p}noticias/index.html">Noticias</a>
           <a href="${p}rankings.html">Rankings</a>
           <a href="${p}jugadores/index.html">Jugadores</a>
+          <a href="${p}paises/index.html">Por país</a>
+          <a href="${p}tenis-en-espana.html">Tenis en España</a>
+          <a href="${p}cara-a-cara/index.html">Cara a cara</a>
+          <a href="${p}torneos/index.html">Torneos</a>
+          <a href="${p}hoy-en-30-segundos.html">En 30 segundos</a>
+          <a href="${p}horarios.html">Horarios</a>
           <a href="${p}race.html">Race a Turín</a>
           <a href="${p}resultados.html">Resultados</a>
           <a href="${p}calendario-2027.html">Calendario</a>
@@ -1150,6 +1163,16 @@ ${lines.join('\n')}
 - [Jugadores](${SITE}/jugadores/): fichas de España y de América Latina, con ranking fechado y enlace a la ficha oficial.
 ${playerLines.join('\n')}
 
+## Jugadores por país y circuito
+
+- [Jugadores por país](${SITE}/paises/): hasta 20 ATP y 20 WTA de cada país con alguien en el top 200. Criterio, fecha y huecos en la propia página.
+- [Tenis en España](${SITE}/tenis-en-espana.html): torneos ATP, Challenger, WTA, WTA 125 e ITF femenino en España, y el top 50 de cada circuito.
+- [Cara a cara](${SITE}/cara-a-cara/): enfrentamientos de la semana. Sin cuotas.
+- [Torneos de 2026](${SITE}/torneos/): una página por torneo ATP o WTA de la temporada, con la fuente.
+- [Lo de hoy en 30 segundos](${SITE}/hoy-en-30-segundos.html): frases de las piezas del día, cada una con enlace a la noticia.
+- [Horarios](${SITE}/horarios.html): orden de juego en hora de Madrid, Buenos Aires y Ciudad de México. Sin canales de televisión.
+- Datos: ${SITE}/data/countries.json · ${SITE}/data/spain-tennis.json · ${SITE}/data/tournaments-2026.json · ${SITE}/data/head-to-head.json · ${SITE}/data/order-of-play.json
+
 ## Calendario
 
 - [Calendario 2027](${SITE}/calendario-2027.html): Grand Slams, finales y torneos 1000 con fecha publicada.
@@ -1335,6 +1358,12 @@ AceArena es un medio digital de tenis. Cubre el circuito ATP y el WTA: noticias,
 - Race a Turín: ${SITE}/race.html
 - Rankings ATP y WTA: ${SITE}/rankings.html
 - Jugadores: ${SITE}/jugadores/
+- Jugadores por país: ${SITE}/paises/
+- Tenis en España: ${SITE}/tenis-en-espana.html
+- Cara a cara: ${SITE}/cara-a-cara/
+- Torneos de 2026: ${SITE}/torneos/
+- Lo de hoy en 30 segundos: ${SITE}/hoy-en-30-segundos.html
+- Horarios: ${SITE}/horarios.html
 - Calendario 2027: ${SITE}/calendario-2027.html
 - Aprende tenis: ${SITE}/aprende/
 - Sobre AceArena: ${SITE}/sobre.html
@@ -1533,6 +1562,15 @@ async function build() {
   for (const entry of evergreen) {
     writeHtml(entry.file, page(entry.page));
   }
+  const countries = readJson('countries.json');
+  const spain = readJson('spain-tennis.json');
+  const tournaments = readJson('tournaments-2026.json');
+  const h2h = readJson('head-to-head.json');
+  const order = readJson('order-of-play.json');
+  const sections = sectionEntries({ countries, spain, tournaments, h2h, order, news: articles }, { esc, site: SITE });
+  for (const entry of sections) {
+    writeHtml(entry.file, page(entry.page));
+  }
   writeHtml('resultados.html', resultsPage(matches, resultsDoc.updated));
 
   const analyticsNote = 'AceArena utiliza Cloudflare Web Analytics para medir las visitas de forma agregada. Esta herramienta no usa cookies ni almacena datos personales.';
@@ -1648,6 +1686,12 @@ async function build() {
   copyFileSync(join(root, 'data', 'race.json'), join(publicDir, 'data', 'race.json'));
   copyFileSync(join(root, 'data', 'rankings.json'), join(publicDir, 'data', 'rankings.json'));
   copyFileSync(join(root, 'data', 'image-credits.json'), join(publicDir, 'data', 'image-credits.json'));
+  copyFileSync(join(root, 'data', 'countries.json'), join(publicDir, 'data', 'countries.json'));
+  copyFileSync(join(root, 'data', 'spain-tennis.json'), join(publicDir, 'data', 'spain-tennis.json'));
+  copyFileSync(join(root, 'data', 'tournaments-2026.json'), join(publicDir, 'data', 'tournaments-2026.json'));
+  copyFileSync(join(root, 'data', 'head-to-head.json'), join(publicDir, 'data', 'head-to-head.json'));
+  copyFileSync(join(root, 'data', 'order-of-play.json'), join(publicDir, 'data', 'order-of-play.json'));
+  copyFileSync(join(root, 'data', 'featured-ties.json'), join(publicDir, 'data', 'featured-ties.json'));
   writeText(`${indexnow.key}.txt`, `${indexnow.key}\n`);
 
   const urls = [
@@ -1677,6 +1721,10 @@ async function build() {
     ...guidesDoc.guides.map((guide) => ({
       loc: `${SITE}/aprende/${guide.slug}.html`,
       lastmod: guidesDoc.updated,
+    })),
+    ...sections.map((entry) => ({
+      loc: entry.page.canonical,
+      lastmod: String(entry.lastmod).slice(0, 10),
     })),
   ];
   writeText('sitemap.xml', sitemap(urls));

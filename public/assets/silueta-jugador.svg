@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" role="img" aria-labelledby="siluetaTitulo siluetaDesc">
+  <title id="siluetaTitulo">Silueta de tenista</title>
+  <desc id="siluetaDesc">Silueta genérica de un jugador. No es una fotografía.</desc>
+  <rect width="160" height="200" rx="16" fill="#1A2230"/>
+  <circle cx="80" cy="68" r="32" fill="#8E97A8"/>
+  <path d="M28 188c4-44 26-68 52-68s48 24 52 68" fill="#8E97A8"/>
+</svg>

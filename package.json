@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "validate": "node scripts/validate.mjs",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "refresh-sections": "python3 scripts/refresh-sections.py"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
