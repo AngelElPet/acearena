@@ -51,19 +51,24 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
-        <a href="../index.html#hoy">Hoy</a>
-        <a href="../semana.html">Esta semana</a>
+        <a href="../index.html">Hoy</a>
         <a href="../noticias/index.html">Noticias</a>
+        <a href="../calendario.html">Calendario</a>
         <a href="../rankings.html">Rankings</a>
         <a href="../jugadores/index.html">Jugadores</a>
-        <a href="../paises/index.html">Países</a>
         <a href="../tenis-en-espana.html">España</a>
-        <a href="../cara-a-cara/index.html">Cara a cara</a>
-        <a href="../torneos/index.html">Torneos</a>
-        <a href="../hoy-en-30-segundos.html">En 30 s</a>
-        <a href="../horarios.html">Horarios</a>
-        <a href="../aprende/index.html">Aprende</a>
-        <a href="../agencias.html" class="nav-quiet">Anúnciate</a>
+        <div class="nav-more">
+          <button type="button" class="nav-more-btn" id="moreToggle" aria-expanded="false" aria-controls="moreMenu">Más</button>
+          <div class="nav-more-panel" id="moreMenu" hidden>
+            <a href="../paises/index.html">Países</a>
+            <a href="../cara-a-cara/index.html">Cara a cara</a>
+            <a href="../horarios.html">Horarios</a>
+            <a href="../hoy-en-30-segundos.html">En 30 segundos</a>
+            <a href="../aprende/index.html">Aprende</a>
+            <a href="../sobre.html">Sobre</a>
+            <a href="../metodologia.html">Metodología</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -74,8 +79,8 @@
         <span class="section-tag">Rankings</span>
         <h1>Jugadores por país</h1>
         <p class="article-byline">Redacción AceArena</p>
-        <p>Entra un país si al menos un jugador con código de nacionalidad está en el top 200 ATP (informe numérico del 2026-10-19) o en el top 200 WTA (lista del 2026-10-19). En cada país se publican hasta 20 jugadores ATP y 20 jugadoras WTA, los mejor clasificados en la lista completa consultada, aunque queden fuera del top 200. Si hay menos, se publican los que hay.</p>
-        <p class="as-of">Ranking ATP y WTA del 19 de octubre de 2026. Informe de finales ATP a 18 de octubre de 2026.</p>
+        <p>Entra un país si al menos un jugador con código de nacionalidad está en el top 200 ATP o en el top 200 WTA de la lista del 19 de octubre de 2026. En cada país se publican hasta 20 jugadores ATP y 20 jugadoras WTA, los mejor clasificados de esa lista, aunque queden fuera del top 200. Si hay menos, se publican los que hay. El criterio se explica en Metodología.</p>
+        <p class="as-of">Actualizado el 25 de octubre de 2026. Ranking del 19 de octubre de 2026. <a href="../metodologia.html">Metodología</a>.</p>
       </div>
       <ul class="event-list">
         <li><a href="alemania.html">Alemania</a>. ATP: 20. WTA: 20.</li>
@@ -139,22 +144,21 @@
       </ul>
       <h2>Qué no publica la fuente</h2>
       <ul class="event-list">
-        <li>Mejor resultado de Grand Slam en la carrera: los informes usados no lo publican jugador a jugador. Si alguien fue campeón o finalista de un Grand Slam en 2026, esa final sí consta, sacada del informe ATP a 18 de octubre. En la WTA el campo queda en <span class="sin-dato" aria-label="Sin dato">—</span>.</li>
-        <li>Títulos de carrera ATP: <span class="sin-dato" aria-label="Sin dato">—</span>. Los títulos de 2026 cuentan solo las finales ATP y Grand Slam del informe a 18 de octubre, no los Challenger ni lo jugado después.</li>
-        <li>Mano y estatura ATP: <span class="sin-dato" aria-label="Sin dato">—</span>, salvo las fichas que AceArena ya tenía con fuente en /jugadores/.</li>
+        <li>Mejor resultado de Grand Slam en la carrera: las listas usadas no lo publican jugador a jugador. Si alguien fue campeón o finalista de un Grand Slam en 2026, esa final sí consta, sacada de las finales ATP a 18 de octubre. En la WTA ese campo no consta.</li>
+        <li>Títulos de carrera ATP: no constan en la lista. Los títulos de 2026 cuentan solo las finales ATP y Grand Slam publicadas a 18 de octubre, no los Challenger ni lo jugado después.</li>
+        <li>Mano y estatura ATP: no constan en la lista, salvo las fichas que AceArena ya tenía con fuente en /jugadores/.</li>
         <li>Fecha de nacimiento ATP: solo cuando sale en el ranking por edad (sobre todo el top 200) o en una ficha ya publicada.</li>
         <li>Finalista y marcador de la final en los torneos WTA: la API da la campeona cuando consta, y no el marcador.</li>
         <li>ITF masculino en España: no consta en las fuentes usadas.</li>
         <li>Historial cara a cara y últimos cinco partidos: no constan en las fuentes usadas.</li>
-        <li>Horas del día consultado: <span class="sin-dato" aria-label="Sin dato">—</span>. Algunas fichas mencionan el orden de juego, pero no publican partidos con hora de Madrid, Buenos Aires y Ciudad de México.</li>
-        <li>Seis jugadores del top 200 ATP no traen código de nacionalidad en el informe del 19 de octubre de 2026: Daniil Medvedev, Andrey Rublev, Karen Khachanov, Roman Safiullin, Ilia Simakin y Pavel Kotov. No se les asigna un país. En la lista WTA de esa fecha, el top 200 sí trae código.</li>
+        <li>Horas del día consultado: no hay un orden de juego oficial con horas de partido. Algunas fichas mencionan el orden de juego, pero no publican partidos con hora de Madrid, Buenos Aires y Ciudad de México.</li>
+        <li>Seis jugadores del top 200 ATP no traen código de nacionalidad en la lista del 19 de octubre de 2026: Daniil Medvedev, Andrey Rublev, Karen Khachanov, Roman Safiullin, Ilia Simakin y Pavel Kotov. No se les asigna un país. En la lista WTA de esa fecha, el top 200 sí trae código.</li>
         <li>Mano, estatura, mejor ranking, títulos y premios de la WTA: no constan en las fuentes usadas. El puesto, los puntos, la fecha de nacimiento y los torneos de la temporada sí salen de la lista del 19 de octubre de 2026.</li>
       </ul>
       <p>Jugadores del top 200 ATP sin código de nacionalidad en el informe: 6. Jugadoras del top 200 WTA sin código: 0. No se les asigna un país.</p>
       <p><a href="../tenis-en-espana.html">Tenis en España</a> · <a href="../jugadores/index.html">Fichas ya publicadas</a> · <a href="../rankings.html">Top 20</a></p>
     </div>
   </main>
-
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -163,30 +167,32 @@
       </div>
       <div class="footer-links">
         <div>
-          <h2>El circuito</h2>
-          <a href="../index.html#hoy">Hoy</a>
-          <a href="../semana.html">Esta semana</a>
+          <h2>Secciones</h2>
+          <a href="../index.html">Hoy</a>
           <a href="../noticias/index.html">Noticias</a>
+          <a href="../calendario.html">Calendario</a>
           <a href="../rankings.html">Rankings</a>
           <a href="../jugadores/index.html">Jugadores</a>
-          <a href="../paises/index.html">Por país</a>
-          <a href="../tenis-en-espana.html">Tenis en España</a>
+          <a href="../tenis-en-espana.html">España</a>
+          <a href="../paises/index.html">Países</a>
           <a href="../cara-a-cara/index.html">Cara a cara</a>
-          <a href="../torneos/index.html">Torneos</a>
-          <a href="../hoy-en-30-segundos.html">En 30 segundos</a>
           <a href="../horarios.html">Horarios</a>
+          <a href="../hoy-en-30-segundos.html">En 30 segundos</a>
+          <a href="../aprende/index.html">Aprende</a>
+          <a href="../torneos/index.html">Torneos</a>
+          <a href="../semana.html">Esta semana</a>
           <a href="../race.html">Race a Turín</a>
           <a href="../resultados.html">Resultados</a>
-          <a href="../calendario-2027.html">Calendario</a>
-          <a href="../aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>AceArena</h2>
-          <a href="../sobre.html">Sobre AceArena</a>
-          <a href="../index.html#newsletter">Resumen del lunes</a>
+          <a href="../sobre.html">Sobre</a>
+          <a href="../metodologia.html">Metodología</a>
+          <a href="../correcciones.html">Correcciones</a>
           <a href="../agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
           <a href="https://www.instagram.com/acearenaes/" rel="noopener noreferrer">Instagram</a>
+          <a href="../index.html#newsletter">Resumen del lunes</a>
         </div>
         <div>
           <h2>Legal</h2>
@@ -198,7 +204,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a></p>
     </div>
   </footer>
   <div class="sticky-cta" id="stickyCta">

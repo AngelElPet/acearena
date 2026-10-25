@@ -56,6 +56,11 @@
         "tournament": "Erste Bank Open",
         "round": "Primera ronda",
         "opponent": "Karen Khachanov"
+      },
+      "facts": {
+        "careerHigh": "1",
+        "careerHighNote": "septiembre de 2022",
+        "grandSlamBest": "7 títulos de Grand Slam"
       }
     },
     {
@@ -138,7 +143,17 @@
           "href": "../race.html",
           "label": "Race a Turín"
         }
-      ]
+      ],
+      "hoy": {
+        "asOf": "2026-10-25",
+        "tournament": "Swiss Indoors Basel",
+        "round": "Primera ronda",
+        "opponent": "Alejandro Tabilo"
+      },
+      "facts": {
+        "careerHigh": "11",
+        "careerHighNote": "agosto de 2026"
+      }
     },
     {
       "slug": "alejandro-davidovich-fokina",
@@ -205,7 +220,17 @@
           "href": "../race.html",
           "label": "Race a Turín"
         }
-      ]
+      ],
+      "hoy": {
+        "asOf": "2026-10-25",
+        "tournament": "Swiss Indoors Basel",
+        "round": "Primera ronda",
+        "opponent": "Zizou Bergs"
+      },
+      "facts": {
+        "careerHigh": "13",
+        "careerHighNote": "19 de octubre de 2026"
+      }
     },
     {
       "slug": "jaume-munar",
@@ -302,7 +327,11 @@
       ],
       "hand": "diestro",
       "backhand": "a dos manos",
-      "birthPlace": "Castellón de la Plana"
+      "birthPlace": "Castellón de la Plana",
+      "facts": {
+        "careerHigh": "9",
+        "careerHighNote": "2019"
+      }
     },
     {
       "slug": "paula-badosa",
@@ -341,7 +370,10 @@
       ],
       "hand": "diestra",
       "birthPlace": "Nueva York",
-      "favorites": "Golpe favorito: saque. Juega agresiva desde el fondo."
+      "favorites": "Golpe favorito: saque. Juega agresiva desde el fondo.",
+      "facts": {
+        "titlesCareer": "4 títulos WTA"
+      }
     },
     {
       "slug": "jessica-bouzas-maneiro",
@@ -589,7 +621,12 @@
       ],
       "hand": "diestro",
       "backhand": "a dos manos",
-      "birthPlace": "La Plata"
+      "birthPlace": "La Plata",
+      "facts": {
+        "careerHigh": "27",
+        "careerHighNote": "12 de febrero de 2024",
+        "titlesCareer": "0 títulos ATP"
+      }
     },
     {
       "slug": "sebastian-baez",
@@ -636,7 +673,12 @@
       ],
       "hand": "diestro",
       "backhand": "a dos manos",
-      "birthPlace": "Buenos Aires"
+      "birthPlace": "Buenos Aires",
+      "facts": {
+        "careerHigh": "18",
+        "careerHighNote": "junio de 2024",
+        "titlesCareer": "7 títulos ATP"
+      }
     },
     {
       "slug": "alejandro-tabilo",
@@ -682,7 +724,11 @@
       ],
       "hand": "zurdo",
       "backhand": "a dos manos",
-      "birthPlace": "Toronto"
+      "birthPlace": "Toronto",
+      "facts": {
+        "careerHigh": "19",
+        "careerHighNote": "julio de 2024"
+      }
     },
     {
       "slug": "camila-osorio",
@@ -833,7 +879,7 @@
         "Nacimiento: 26 de septiembre de 2004."
       ],
       "highlights": [
-        "El informe de finales ATP a 18 de octubre de 2026 le anota un título de la temporada, en Umag.",
+        "Las finales ATP publicadas a 18 de octubre de 2026 le anotan un título de la temporada, en Umag.",
         "En el cuadro del Erste Bank Open de Viena, hecho el 24 de octubre de 2026, abre ante Daniil Medvedev."
       ],
       "ranking": {
@@ -864,7 +910,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
         },
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {
@@ -902,7 +948,7 @@
       ],
       "highlights": [
         "En la lista ATP del 19 de octubre de 2026 es el número 74, con 773 puntos.",
-        "El informe de finales ATP a 18 de octubre de 2026 no le anota un título de la temporada."
+        "Las finales ATP publicadas a 18 de octubre de 2026 no le anotan un título de la temporada."
       ],
       "ranking": {
         "position": "74",
@@ -922,7 +968,7 @@
           "url": "http://www.protennislive.com/posting/ramr/singles_rankings_by_age.pdf"
         },
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {

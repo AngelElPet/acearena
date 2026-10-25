@@ -1,15 +1,15 @@
 {
   "updated": "2026-10-25",
-  "coverage": "ATP y Grand Slam: finales publicadas en el informe ATP a 18 de octubre de 2026. La categoría queda en sin dato salvo que la línea del informe diga Masters 1000 o sea un Grand Slam; Barcelona (ATP 500) y Mallorca (ATP 250) se han comprobado en el calendario oficial de atptour.com. WTA: torneos de 2026 cuyo nivel en la API es de circuito (Grand Slam, WTA 1000, 500, 250, 125 o Finals). Lo jugado en la ATP después del 18 de octubre no está en ese informe.",
+  "coverage": "Torneos ATP y WTA de 2026, con categoría, fechas y superficie, y el campeón cuando la fuente lo publica.",
   "events": [
     {
       "slug": "wta-united-cup-australia-aus-2026-01-02",
-      "name": "United Cup - Australia, AUS",
+      "name": "United Cup",
       "tour": "WTA",
       "category": "WTA 500",
       "startDate": "2026-01-02",
       "endDate": "2026-01-11",
-      "city": "PERTH + SYDNEY",
+      "city": "Perth y Sídney, Australia",
       "surface": "pista dura",
       "champion": "sin dato",
       "finalist": "sin dato",
@@ -19,6 +19,10 @@
         {
           "name": "WTA, API de torneos de 2026",
           "url": "https://api.wtatennis.com/tennis/tournaments"
+        },
+        {
+          "name": "United Cup, sedes y fechas 2026",
+          "url": "https://www.unitedcup.com/en/media/news/united-cup-2026-history-draw-schedule"
         }
       ]
     },
@@ -66,9 +70,9 @@
       "slug": "brisbane-australia-2026-01-05",
       "name": "Brisbane, Australia",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-01-05",
-      "endDate": "sin dato",
+      "endDate": "2026-01-11",
       "city": "Brisbane, Australia",
       "surface": "pista dura",
       "champion": "Daniil Medvedev",
@@ -77,8 +81,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -86,9 +94,9 @@
       "slug": "hong-kong-hong-kong-2026-01-05",
       "name": "Hong Kong, Hong Kong",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-01-05",
-      "endDate": "sin dato",
+      "endDate": "2026-01-11",
       "city": "Hong Kong, Hong Kong",
       "surface": "pista dura",
       "champion": "Alexander Bublik",
@@ -97,19 +105,23 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
     {
       "slug": "united-cup-australia-2026-01-05",
-      "name": "United Cup, Australia",
+      "name": "United Cup",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "United Cup",
       "startDate": "2026-01-05",
-      "endDate": "sin dato",
-      "city": "United Cup, Australia",
+      "endDate": "2026-01-11",
+      "city": "Perth y Sídney, Australia",
       "surface": "pista dura",
       "champion": "Hubert Hurkacz",
       "finalist": "Stan Wawrinka",
@@ -117,8 +129,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "United Cup, sedes y fechas 2026",
+          "url": "https://www.unitedcup.com/en/media/news/united-cup-2026-history-draw-schedule"
         }
       ]
     },
@@ -166,9 +182,9 @@
       "slug": "adelaide-australia-2026-01-12",
       "name": "Adelaide, Australia",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-01-12",
-      "endDate": "sin dato",
+      "endDate": "2026-01-18",
       "city": "Adelaide, Australia",
       "surface": "pista dura",
       "champion": "Tomas Machac",
@@ -177,8 +193,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -186,9 +206,9 @@
       "slug": "auckland-new-zealand-2026-01-12",
       "name": "Auckland, New Zealand",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-01-12",
-      "endDate": "sin dato",
+      "endDate": "2026-01-18",
       "city": "Auckland, New Zealand",
       "surface": "pista dura",
       "champion": "Jakub Mensik",
@@ -197,8 +217,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -248,7 +272,7 @@
       "tour": "ATP",
       "category": "Grand Slam",
       "startDate": "2026-01-19",
-      "endDate": "sin dato",
+      "endDate": "2026-02-01",
       "city": "Australian Open, Australia",
       "surface": "pista dura",
       "champion": "Carlos Alcaraz",
@@ -257,8 +281,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -366,9 +394,9 @@
       "slug": "montpellier-france-2026-02-02",
       "name": "Montpellier, France",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-02-02",
-      "endDate": "sin dato",
+      "endDate": "2026-02-08",
       "city": "Montpellier, France",
       "surface": "pista dura",
       "champion": "Felix Auger-Aliassime",
@@ -377,8 +405,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -406,9 +438,9 @@
       "slug": "buenos-aires-argentina-2026-02-09",
       "name": "Buenos Aires, Argentina",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-02-09",
-      "endDate": "sin dato",
+      "endDate": "2026-02-15",
       "city": "Buenos Aires, Argentina",
       "surface": "tierra batida",
       "champion": "Francisco Cerundolo",
@@ -417,8 +449,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -426,9 +462,9 @@
       "slug": "dallas-tx-u-s-a-2026-02-09",
       "name": "Dallas, TX, U.S.A.",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-02-09",
-      "endDate": "sin dato",
+      "endDate": "2026-02-15",
       "city": "Dallas, TX, U.S.A.",
       "surface": "pista dura",
       "champion": "Ben Shelton",
@@ -437,8 +473,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -466,9 +506,9 @@
       "slug": "rotterdam-netherlands-2026-02-09",
       "name": "Rotterdam, Netherlands",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-02-09",
-      "endDate": "sin dato",
+      "endDate": "2026-02-15",
       "city": "Rotterdam, Netherlands",
       "surface": "pista dura",
       "champion": "Alex de Minaur",
@@ -477,8 +517,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -506,9 +550,9 @@
       "slug": "delray-beach-fl-u-s-a-2026-02-16",
       "name": "Delray Beach, FL, U.S.A.",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-02-16",
-      "endDate": "sin dato",
+      "endDate": "2026-02-22",
       "city": "Delray Beach, FL, U.S.A.",
       "surface": "pista dura",
       "champion": "Sebastian Korda",
@@ -517,8 +561,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -526,9 +574,9 @@
       "slug": "doha-qatar-2026-02-16",
       "name": "Doha, Qatar",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-02-16",
-      "endDate": "sin dato",
+      "endDate": "2026-02-22",
       "city": "Doha, Qatar",
       "surface": "pista dura",
       "champion": "Carlos Alcaraz",
@@ -537,8 +585,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -606,9 +658,9 @@
       "slug": "rio-de-janeiro-brazil-2026-02-16",
       "name": "Rio de Janeiro, Brazil",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-02-16",
-      "endDate": "sin dato",
+      "endDate": "2026-02-22",
       "city": "Rio de Janeiro, Brazil",
       "surface": "tierra batida",
       "champion": "Tomas Martin Etcheverry",
@@ -617,8 +669,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -646,9 +702,9 @@
       "slug": "acapulco-mexico-2026-02-23",
       "name": "Acapulco, Mexico",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-02-23",
-      "endDate": "sin dato",
+      "endDate": "2026-03-01",
       "city": "Acapulco, Mexico",
       "surface": "pista dura",
       "champion": "Flavio Cobolli",
@@ -657,8 +713,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -686,9 +746,9 @@
       "slug": "santiago-chile-2026-02-23",
       "name": "Santiago, Chile",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-02-23",
-      "endDate": "sin dato",
+      "endDate": "2026-03-01",
       "city": "Santiago, Chile",
       "surface": "tierra batida",
       "champion": "Luciano Darderi",
@@ -697,8 +757,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -728,7 +792,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-03-02",
-      "endDate": "sin dato",
+      "endDate": "2026-03-15",
       "city": "ATP Masters 1000 Indian Wells, CA, U.S.A.",
       "surface": "pista dura",
       "champion": "Jannik Sinner",
@@ -737,8 +801,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -828,7 +896,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-03-16",
-      "endDate": "sin dato",
+      "endDate": "2026-03-29",
       "city": "ATP Masters 1000 Miami, FL, U.S.A.",
       "surface": "pista dura",
       "champion": "Jannik Sinner",
@@ -837,8 +905,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -886,9 +958,9 @@
       "slug": "bucharest-romania-2026-03-30",
       "name": "Bucharest, Romania",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-03-30",
-      "endDate": "sin dato",
+      "endDate": "2026-04-05",
       "city": "Bucharest, Romania",
       "surface": "tierra batida",
       "champion": "Mariano Navone",
@@ -897,8 +969,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -946,9 +1022,9 @@
       "slug": "houston-tx-u-s-a-2026-03-30",
       "name": "Houston, TX, U.S.A.",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-03-30",
-      "endDate": "sin dato",
+      "endDate": "2026-04-05",
       "city": "Houston, TX, U.S.A.",
       "surface": "tierra batida",
       "champion": "Tommy Paul",
@@ -957,8 +1033,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -966,9 +1046,9 @@
       "slug": "marrakech-morocco-2026-03-30",
       "name": "Marrakech, Morocco",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-03-30",
-      "endDate": "sin dato",
+      "endDate": "2026-04-05",
       "city": "Marrakech, Morocco",
       "surface": "tierra batida",
       "champion": "Rafael Jodar",
@@ -977,8 +1057,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -988,7 +1072,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-04-06",
-      "endDate": "sin dato",
+      "endDate": "2026-04-12",
       "city": "ATP Masters 1000 Monte-Carlo, Monaco",
       "surface": "tierra batida",
       "champion": "Jannik Sinner",
@@ -997,8 +1081,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1044,11 +1132,11 @@
     },
     {
       "slug": "barcelona-spain-2026-04-13",
-      "name": "Barcelona, España",
+      "name": "Barcelona Open",
       "tour": "ATP",
       "category": "ATP 500",
       "startDate": "2026-04-13",
-      "endDate": "sin dato",
+      "endDate": "2026-04-19",
       "city": "Barcelona, España",
       "surface": "tierra batida",
       "champion": "Arthur Fils",
@@ -1057,22 +1145,27 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {
           "name": "ATP Tour, calendario 2026 (categoría)",
           "url": "https://www.atptour.com/en/tournaments"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
-      ]
+      ],
+      "aliases": []
     },
     {
       "slug": "munich-germany-2026-04-13",
       "name": "Munich, Germany",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-04-13",
-      "endDate": "sin dato",
+      "endDate": "2026-04-19",
       "city": "Munich, Germany",
       "surface": "tierra batida",
       "champion": "Ben Shelton",
@@ -1081,8 +1174,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1148,12 +1245,12 @@
     },
     {
       "slug": "atp-masters-1000-madrid-spain-2026-04-20",
-      "name": "ATP Masters 1000 Madrid, España",
+      "name": "Mutua Madrid Open",
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-04-20",
-      "endDate": "sin dato",
-      "city": "ATP Masters 1000 Madrid, España",
+      "endDate": "2026-05-03",
+      "city": "Madrid, España",
       "surface": "tierra batida",
       "champion": "Jannik Sinner",
       "finalist": "Alexander Zverev",
@@ -1161,9 +1258,21 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "WTA, Mutua Madrid Open",
+          "url": "https://www.wtatennis.com/tournaments/1038/madrid/2026"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
+      ],
+      "aliases": [
+        "Madrid Open",
+        "Mutua Madrid Open"
       ]
     },
     {
@@ -1272,7 +1381,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-05-04",
-      "endDate": "sin dato",
+      "endDate": "2026-05-17",
       "city": "ATP Masters 1000 Rome, Italy",
       "surface": "tierra batida",
       "champion": "Jannik Sinner",
@@ -1281,8 +1390,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1410,9 +1523,9 @@
       "slug": "geneva-switzerland-2026-05-18",
       "name": "Geneva, Switzerland",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-05-18",
-      "endDate": "sin dato",
+      "endDate": "2026-05-24",
       "city": "Geneva, Switzerland",
       "surface": "tierra batida",
       "champion": "Learner Tien",
@@ -1421,8 +1534,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1450,9 +1567,9 @@
       "slug": "hamburg-germany-2026-05-18",
       "name": "Hamburg, Germany",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-05-18",
-      "endDate": "sin dato",
+      "endDate": "2026-05-24",
       "city": "Hamburg, Germany",
       "surface": "tierra batida",
       "champion": "Ignacio Buse",
@@ -1461,8 +1578,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1492,7 +1613,7 @@
       "tour": "ATP",
       "category": "Grand Slam",
       "startDate": "2026-05-25",
-      "endDate": "sin dato",
+      "endDate": "2026-06-07",
       "city": "Roland Garros, France",
       "surface": "tierra batida",
       "champion": "Alexander Zverev",
@@ -1501,8 +1622,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1570,9 +1695,9 @@
       "slug": "s-hertogenbosch-netherlands-2026-06-08",
       "name": "'s-Hertogenbosch, Netherlands",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-06-08",
-      "endDate": "sin dato",
+      "endDate": "2026-06-14",
       "city": "'s-Hertogenbosch, Netherlands",
       "surface": "hierba",
       "champion": "Kamil Majchrzak",
@@ -1581,8 +1706,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1650,9 +1779,9 @@
       "slug": "stuttgart-germany-2026-06-08",
       "name": "Stuttgart, Germany",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-06-08",
-      "endDate": "sin dato",
+      "endDate": "2026-06-14",
       "city": "Stuttgart, Germany",
       "surface": "hierba",
       "champion": "Ben Shelton",
@@ -1661,8 +1790,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1710,9 +1843,9 @@
       "slug": "halle-germany-2026-06-15",
       "name": "Halle, Germany",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-06-15",
-      "endDate": "sin dato",
+      "endDate": "2026-06-21",
       "city": "Halle, Germany",
       "surface": "hierba",
       "champion": "Frances Tiafoe",
@@ -1721,8 +1854,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1770,9 +1907,9 @@
       "slug": "london-queens-club-great-britain-2026-06-15",
       "name": "London / Queen's Club, Great Britain",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-06-15",
-      "endDate": "sin dato",
+      "endDate": "2026-06-21",
       "city": "London / Queen's Club, Great Britain",
       "surface": "hierba",
       "champion": "Francisco Cerundolo",
@@ -1781,8 +1918,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1830,9 +1971,9 @@
       "slug": "eastbourne-great-britain-2026-06-22",
       "name": "Eastbourne, Great Britain",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-06-22",
-      "endDate": "sin dato",
+      "endDate": "2026-06-28",
       "city": "Eastbourne, Great Britain",
       "surface": "hierba",
       "champion": "Zizou Bergs",
@@ -1841,8 +1982,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -1868,12 +2013,12 @@
     },
     {
       "slug": "mallorca-spain-2026-06-22",
-      "name": "Mallorca, España",
+      "name": "Mallorca Championships",
       "tour": "ATP",
       "category": "ATP 250",
       "startDate": "2026-06-22",
-      "endDate": "sin dato",
-      "city": "Mallorca, España",
+      "endDate": "2026-06-28",
+      "city": "Santa Ponsa, España",
       "surface": "hierba",
       "champion": "Alejandro Davidovich Fokina",
       "finalist": "Ethan Quinn",
@@ -1881,13 +2026,20 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
         },
         {
           "name": "ATP Tour, calendario 2026 (categoría)",
           "url": "https://www.atptour.com/en/tournaments"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
+      ],
+      "aliases": [
+        "Mallorca"
       ]
     },
     {
@@ -1916,7 +2068,7 @@
       "tour": "ATP",
       "category": "Grand Slam",
       "startDate": "2026-06-29",
-      "endDate": "sin dato",
+      "endDate": "2026-07-12",
       "city": "Wimbledon, Great Britain",
       "surface": "hierba",
       "champion": "Jannik Sinner",
@@ -1925,8 +2077,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2014,9 +2170,9 @@
       "slug": "bastad-sweden-2026-07-13",
       "name": "Bastad, Sweden",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-07-13",
-      "endDate": "sin dato",
+      "endDate": "2026-07-19",
       "city": "Bastad, Sweden",
       "surface": "tierra batida",
       "champion": "Andrey Rublev",
@@ -2025,8 +2181,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2074,9 +2234,9 @@
       "slug": "gstaad-switzerland-2026-07-13",
       "name": "Gstaad, Switzerland",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-07-13",
-      "endDate": "sin dato",
+      "endDate": "2026-07-19",
       "city": "Gstaad, Switzerland",
       "surface": "tierra batida",
       "champion": "Stefanos Tsitsipas",
@@ -2085,8 +2245,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2094,9 +2258,9 @@
       "slug": "umag-croatia-2026-07-13",
       "name": "Umag, Croatia",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-07-13",
-      "endDate": "sin dato",
+      "endDate": "2026-07-19",
       "city": "Umag, Croatia",
       "surface": "tierra batida",
       "champion": "Daniel Merida",
@@ -2105,8 +2269,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2174,9 +2342,9 @@
       "slug": "estoril-portugal-2026-07-20",
       "name": "Estoril, Portugal",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-07-20",
-      "endDate": "sin dato",
+      "endDate": "2026-07-26",
       "city": "Estoril, Portugal",
       "surface": "tierra batida",
       "champion": "Luca Van Assche",
@@ -2185,8 +2353,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2194,9 +2366,9 @@
       "slug": "kitzbuhel-austria-2026-07-20",
       "name": "Kitzbuhel, Austria",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-07-20",
-      "endDate": "sin dato",
+      "endDate": "2026-07-26",
       "city": "Kitzbuhel, Austria",
       "surface": "tierra batida",
       "champion": "Quentin Halys",
@@ -2205,8 +2377,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2294,9 +2470,9 @@
       "slug": "los-cabos-mexico-2026-07-27",
       "name": "Los Cabos, Mexico",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-07-27",
-      "endDate": "sin dato",
+      "endDate": "2026-08-02",
       "city": "Los Cabos, Mexico",
       "surface": "pista dura",
       "champion": "Arthur Gea",
@@ -2305,8 +2481,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2354,9 +2534,9 @@
       "slug": "washington-dc-u-s-a-2026-07-27",
       "name": "Washington, DC, U.S.A.",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-07-27",
-      "endDate": "sin dato",
+      "endDate": "2026-08-02",
       "city": "Washington, DC, U.S.A.",
       "surface": "pista dura",
       "champion": "Taylor Fritz",
@@ -2365,8 +2545,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2396,7 +2580,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-08-03",
-      "endDate": "sin dato",
+      "endDate": "2026-08-09",
       "city": "ATP Masters 1000 Canada, Canada",
       "surface": "pista dura",
       "champion": "Ben Shelton",
@@ -2405,8 +2589,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2436,7 +2624,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-08-10",
-      "endDate": "sin dato",
+      "endDate": "2026-08-23",
       "city": "ATP Masters 1000 Cincinnati, OH, U.S.A.",
       "surface": "pista dura",
       "champion": "Arthur Fils",
@@ -2445,8 +2633,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2514,9 +2706,9 @@
       "slug": "winston-salem-nc-u-s-a-2026-08-24",
       "name": "Winston-Salem, NC, U.S.A.",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-08-24",
-      "endDate": "sin dato",
+      "endDate": "2026-08-30",
       "city": "Winston-Salem, NC, U.S.A.",
       "surface": "pista dura",
       "champion": "Ignacio Buse",
@@ -2525,8 +2717,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2556,7 +2752,7 @@
       "tour": "ATP",
       "category": "Grand Slam",
       "startDate": "2026-08-31",
-      "endDate": "sin dato",
+      "endDate": "2026-09-13",
       "city": "US Open, NY, U.S.A.",
       "surface": "pista dura",
       "champion": "Alexander Zverev",
@@ -2565,8 +2761,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2734,9 +2934,9 @@
       "slug": "chengdu-china-2026-09-21",
       "name": "Chengdu, China",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-09-21",
-      "endDate": "sin dato",
+      "endDate": "2026-09-27",
       "city": "Chengdu, China",
       "surface": "pista dura",
       "champion": "Alejandro Davidovich Fokina",
@@ -2745,8 +2945,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2794,9 +2998,9 @@
       "slug": "hangzhou-china-2026-09-21",
       "name": "Hangzhou, China",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 250",
       "startDate": "2026-09-21",
-      "endDate": "sin dato",
+      "endDate": "2026-09-27",
       "city": "Hangzhou, China",
       "surface": "pista dura",
       "champion": "Daniil Medvedev",
@@ -2805,8 +3009,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2894,9 +3102,9 @@
       "slug": "beijing-china-2026-09-28",
       "name": "Beijing, China",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-09-28",
-      "endDate": "sin dato",
+      "endDate": "2026-10-04",
       "city": "Beijing, China",
       "surface": "pista dura",
       "champion": "Novak Djokovic",
@@ -2905,8 +3113,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2934,9 +3146,9 @@
       "slug": "tokyo-japan-2026-09-28",
       "name": "Tokyo, Japan",
       "tour": "ATP",
-      "category": "sin dato",
+      "category": "ATP 500",
       "startDate": "2026-09-28",
-      "endDate": "sin dato",
+      "endDate": "2026-10-04",
       "city": "Tokyo, Japan",
       "surface": "pista dura",
       "champion": "Carlos Alcaraz",
@@ -2945,8 +3157,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -2976,7 +3192,7 @@
       "tour": "ATP",
       "category": "ATP Masters 1000",
       "startDate": "2026-10-05",
-      "endDate": "sin dato",
+      "endDate": "2026-10-18",
       "city": "ATP Masters 1000 Shanghai, China",
       "surface": "pista dura",
       "champion": "Alejandro Davidovich Fokina",
@@ -2985,8 +3201,12 @@
       "officialUrl": "http://www.protennislive.com/posting/ramr/finals_atp.pdf",
       "sources": [
         {
-          "name": "ATP, finales ATP y Grand Slam de 2026, informe a 18 de octubre",
+          "name": "ATP, finales ATP y Grand Slam de 2026 (18 de octubre)",
           "url": "http://www.protennislive.com/posting/ramr/finals_atp.pdf"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     },
@@ -3097,7 +3317,7 @@
       "category": "WTA 125",
       "startDate": "2026-10-12",
       "endDate": "2026-10-18",
-      "city": "MALLORCA",
+      "city": "Mallorca, España",
       "surface": "tierra batida",
       "champion": "Ariana Geerlings",
       "finalist": "sin dato",
@@ -3107,6 +3327,10 @@
         {
           "name": "WTA, API de torneos de 2026",
           "url": "https://api.wtatennis.com/tennis/tournaments"
+        },
+        {
+          "name": "WTA, Mallorca Women's Championships",
+          "url": "https://www.wtatennis.com/tournaments/1128/mallorca-125/2026"
         }
       ]
     },
@@ -3507,6 +3731,145 @@
         {
           "name": "WTA, API de torneos de 2026",
           "url": "https://api.wtatennis.com/tennis/tournaments"
+        }
+      ]
+    },
+    {
+      "slug": "swiss-indoors-basel-2026-10-26",
+      "name": "Swiss Indoors Basel",
+      "aliases": [
+        "Basilea",
+        "Swiss Indoors"
+      ],
+      "tour": "ATP",
+      "category": "ATP 500",
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-01",
+      "city": "Basilea, Suiza",
+      "surface": "pista dura indoor",
+      "champion": "sin dato",
+      "finalist": "sin dato",
+      "score": "sin dato",
+      "officialUrl": "https://www.atptour.com/en/tournaments/basel/328/overview",
+      "sources": [
+        {
+          "name": "ATP, ficha de Basilea",
+          "url": "https://www.atptour.com/en/tournaments/basel/328/overview"
+        },
+        {
+          "name": "ATP, calendario de Basilea 2026",
+          "url": "https://www.atptour.com/en/news/basel-atp-500-2026-history-draw-schedule"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
+        }
+      ]
+    },
+    {
+      "slug": "erste-bank-open-viena-2026-10-26",
+      "name": "Erste Bank Open",
+      "aliases": [
+        "Vienna Open",
+        "Viena"
+      ],
+      "tour": "ATP",
+      "category": "ATP 500",
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-01",
+      "city": "Viena, Austria",
+      "surface": "pista dura indoor",
+      "champion": "sin dato",
+      "finalist": "sin dato",
+      "score": "sin dato",
+      "officialUrl": "https://www.atptour.com/en/tournaments/vienna/337/overview",
+      "sources": [
+        {
+          "name": "ATP, ficha de Viena",
+          "url": "https://www.atptour.com/en/tournaments/vienna/337/overview"
+        },
+        {
+          "name": "Erste Bank Open, información del evento",
+          "url": "https://www.erstebank-open.com/en/event/event-infos"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
+        }
+      ]
+    },
+    {
+      "slug": "rolex-paris-masters-2026-11-02",
+      "name": "Rolex Paris Masters",
+      "aliases": [
+        "Paris Masters",
+        "París"
+      ],
+      "tour": "ATP",
+      "category": "ATP Masters 1000",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-08",
+      "city": "París, Francia",
+      "surface": "pista dura indoor",
+      "champion": "sin dato",
+      "finalist": "sin dato",
+      "score": "sin dato",
+      "officialUrl": "https://www.atptour.com/en/tournaments/-/352/overview",
+      "sources": [
+        {
+          "name": "ATP, ficha del Rolex Paris Masters",
+          "url": "https://www.atptour.com/en/tournaments/-/352/overview"
+        },
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
+        }
+      ]
+    },
+    {
+      "slug": "stockholm-open-2026-11-09",
+      "name": "Stockholm Open",
+      "aliases": [
+        "Estocolmo"
+      ],
+      "tour": "ATP",
+      "category": "ATP 250",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-15",
+      "city": "Estocolmo, Suecia",
+      "surface": "pista dura indoor",
+      "champion": "sin dato",
+      "finalist": "sin dato",
+      "score": "sin dato",
+      "officialUrl": "https://en.wikipedia.org/wiki/2026_ATP_Tour",
+      "sources": [
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
+        }
+      ]
+    },
+    {
+      "slug": "nitto-atp-finals-turin-2026-11-16",
+      "name": "Nitto ATP Finals",
+      "aliases": [
+        "ATP Finals",
+        "Turín"
+      ],
+      "tour": "ATP",
+      "category": "ATP Finals",
+      "startDate": "2026-11-16",
+      "endDate": "sin dato",
+      "city": "Turín, Italia",
+      "surface": "pista dura indoor",
+      "champion": "sin dato",
+      "finalist": "sin dato",
+      "score": "sin dato",
+      "officialUrl": "https://en.wikipedia.org/wiki/2026_ATP_Tour",
+      "sources": [
+        {
+          "name": "Wikipedia, 2026 ATP Tour (cita a la ATP)",
+          "url": "https://en.wikipedia.org/wiki/2026_ATP_Tour"
         }
       ]
     }

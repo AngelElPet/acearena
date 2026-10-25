@@ -95,6 +95,10 @@
 ## El sitio
 
 - [Portada](https://acearena.io/): lo último del circuito, rankings ATP y WTA con fecha y guía de Grand Slams.
-- [Sobre AceArena](https://acearena.io/sobre.html): quiénes somos, cómo trabajamos, correcciones y contenido patrocinado.
+- [Sobre AceArena](https://acearena.io/sobre.html): lo fundó Angel Cebria Morales. Independiente, con el contenido patrocinado señalado.
+- [Metodología](https://acearena.io/metodologia.html): de dónde sale cada dato, cuándo se actualiza y qué significa la raya gris.
+- [Correcciones](https://acearena.io/correcciones.html): cambios ya publicados, con fecha y fuente.
+- [Calendario](https://acearena.io/calendario.html): las próximas cuatro semanas, con enlace a 2026 y a 2027.
+- [Guía del Australian Open 2027](https://acearena.io/guia-australian-open-2027.html): fechas oficiales y los españoles mejor clasificados.
 - [Patrocinio](https://acearena.io/agencias.html): patrocinio con precios públicos. Bronze desde 4.500 €/trimestre, Silver desde 12.000 €/trimestre, Gold desde 28.000 €/trimestre, Platinum a medida.
 - [Créditos de imagen](https://acearena.io/creditos.html): fotos con licencia y gráficos propios.

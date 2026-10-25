@@ -81,7 +81,7 @@
   }
   </script>
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="header" id="header">
     <div class="header-inner">
@@ -92,19 +92,26 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="Principal">
-        <a href="#hoy">Hoy</a>
-        <a href="semana.html">Esta semana</a>
+        <!-- AUTO:NAV -->
+<a href="index.html">Hoy</a>
         <a href="noticias/index.html">Noticias</a>
+        <a href="calendario.html">Calendario</a>
         <a href="rankings.html">Rankings</a>
         <a href="jugadores/index.html">Jugadores</a>
-        <a href="paises/index.html">Países</a>
         <a href="tenis-en-espana.html">España</a>
-        <a href="cara-a-cara/index.html">Cara a cara</a>
-        <a href="torneos/index.html">Torneos</a>
-        <a href="hoy-en-30-segundos.html">En 30 s</a>
-        <a href="horarios.html">Horarios</a>
-        <a href="aprende/index.html">Aprende</a>
-        <a href="agencias.html" class="nav-quiet">Anúnciate</a>
+        <div class="nav-more">
+          <button type="button" class="nav-more-btn" id="moreToggle" aria-expanded="false" aria-controls="moreMenu">Más</button>
+          <div class="nav-more-panel" id="moreMenu" hidden>
+            <a href="paises/index.html">Países</a>
+            <a href="cara-a-cara/index.html">Cara a cara</a>
+            <a href="horarios.html">Horarios</a>
+            <a href="hoy-en-30-segundos.html">En 30 segundos</a>
+            <a href="aprende/index.html">Aprende</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="metodologia.html">Metodología</a>
+          </div>
+        </div>
+<!-- /AUTO:NAV -->
       </nav>
     </div>
   </header>
@@ -113,6 +120,35 @@
     <section class="hero" id="hoy">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-stack">
+      <div class="hero-layout">
+        <div>
+        <p class="kicker"><!-- AUTO:EDITION -->
+Domingo, 25 de octubre de 2026 · Edición de hoy
+<!-- /AUTO:EDITION --></p>
+        <h1>El tenis, contado <span>con datos</span></h1>
+        <p class="lede">ATP y WTA, con Alcaraz, Jódar y los españoles en primer plano. Resultados con fuente, rankings con fecha y explicaciones claras para seguir el circuito.</p>
+        <!-- AUTO:HOY -->
+<section class="hoy-tenis" aria-labelledby="hoy-title">
+        <h2 id="hoy-title">Hoy en el tenis</h2>
+        <p class="as-of">Actualizado el 25 de octubre de 2026.</p>
+        <p class="hoy-lead"><a href="noticias/jodar-y-davidovich-comparten-cuadro-en-basilea.html">Jódar y Davidovich comparten cuadro en Basilea</a>. El 24 de octubre quedaron hechos los cuadros de Basilea y Viena, ATP 500 del 26 de octubre al 1 de noviembre. Jódar abre ante Tabilo y puede cruzar en cuartos con Davidovich Fokina; en Viena, Alcaraz abre ante Khachanov.</p>
+        <h3>Los españoles esta semana</h3>
+        <ul class="event-list">
+        <li><a href="torneos/erste-bank-open-viena-2026-10-26.html">Alcaraz abre ante Khachanov en la primera ronda de Viena</a>. Cayó el 12 de octubre. <a href="https://www.bbc.com/sport/tennis/articles/cw3dj8jr8xj2o" target="_blank" rel="noopener noreferrer">Fuente</a></li>
+        <li><a href="torneos/swiss-indoors-basel-2026-10-26.html">Jódar abre ante Tabilo en la primera ronda de Basilea</a>. Cayó el 18 de octubre. <a href="https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final" target="_blank" rel="noopener noreferrer">Fuente</a></li>
+        <li><a href="torneos/swiss-indoors-basel-2026-10-26.html">Davidovich Fokina abre ante Bergs en la primera ronda de Basilea</a>. Ganó el 18 de octubre. <a href="https://www.atptour.com/en/news/jodar-davidovich-fokina-shanghai-2026-final" target="_blank" rel="noopener noreferrer">Fuente</a></li>
+        <li><a href="torneos/erste-bank-open-viena-2026-10-26.html">Landaluce abre ante Zverev en la primera ronda de Viena</a>. Cayó el 21 de octubre. <a href="https://www.flashscore.es/noticias/tenis-en-directo-lyon-martin-landaluce-debuta-stan-wawrinka/S8ZS4iDa/" target="_blank" rel="noopener noreferrer">Fuente</a></li>
+        <li><a href="torneos/erste-bank-open-viena-2026-10-26.html">Mérida abre ante Medvedev en la primera ronda de Viena</a>. Último resultado: <span class="sin-dato" aria-label="Sin dato">—</span></li>
+        </ul>
+      </section>
+<!-- /AUTO:HOY -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#noticias">Lo último del circuito</a>
+          <a class="btn btn-ghost" href="#newsletter">Recibe el resumen del lunes</a>
+          <button class="btn btn-ghost" id="sharePage" type="button" data-label="Compartir AceArena">Compartir AceArena</button>
+        </div>
+        </div>
+      </div>
       <figure class="photo-figure hero-banner hero-banner-home">
         <picture>
           <source media="(max-width: 800px)" type="image/avif" srcset="photos/pistas-mobile.avif?v=ca1a6d4e37">
@@ -122,45 +158,6 @@
         </picture>
         <figcaption>Foto: Hameltion, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Tennis_courts_at_Chapel_Hill_High_School.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</figcaption>
       </figure>
-      <div class="hero-layout">
-        <div>
-        <p class="kicker"><!-- AUTO:EDITION -->
-Domingo, 25 de octubre de 2026 · Edición de hoy
-<!-- /AUTO:EDITION --></p>
-        <h1>El tenis, contado <span>con datos</span></h1>
-        <p class="lede">ATP y WTA, con Alcaraz, Jódar y los españoles en primer plano. Resultados con fuente, rankings con fecha y explicaciones claras para que no se te escape nada del circuito.</p>
-        <div class="week-line"><!-- AUTO:WEEKLINE -->
-<ul class="event-list hero-week-list">
-          <li><a href="https://www.atptour.com/en/tournaments/basel/328/overview" target="_blank" rel="noopener noreferrer">Swiss Indoors Basel</a>, Basilea, 26 de octubre–1 de noviembre de 2026</li>
-          <li><a href="https://www.atptour.com/en/tournaments/vienna/337/overview" target="_blank" rel="noopener noreferrer">Erste Bank Open</a>, Viena, 26 de octubre–1 de noviembre de 2026</li>
-          <li><a href="https://www.wtatennis.com/tournaments/1056/tokyo/2026" target="_blank" rel="noopener noreferrer">Toray Pan Pacific Open</a>, Tokio, 26 de octubre–1 de noviembre de 2026</li>
-          <li><a href="https://www.wtatennis.com/tournaments/1023/guangzhou/2026" target="_blank" rel="noopener noreferrer">Guangzhou Open</a>, Guangzhou, 26 de octubre–1 de noviembre de 2026</li>
-        </ul>
-        <p class="hero-week-more"><a href="semana.html">Ver la semana →</a></p>
-<!-- /AUTO:WEEKLINE --></div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#noticias">Lo último del circuito</a>
-          <a class="btn btn-ghost" href="#newsletter">Recibe el resumen del lunes</a>
-          <button class="btn btn-ghost" id="sharePage" type="button" data-label="Compartir AceArena">Compartir AceArena</button>
-        </div>
-        <a class="hero-feature" href="noticias/davidovich-fokina-gana-el-masters-de-shanghai.html">
-          <strong>Davidovich Fokina, campeón en Shanghái.</strong>
-          Remontó a Rafael Jódar por 1-6, 7-6(5) y 6-4 en una final española de Masters 1000.
-        </a>
-        </div>
-        <aside class="hero-today" aria-label="Hoy">
-          <!-- AUTO:TODAY -->
-<div class="today-card">
-          <p class="kicker">Hoy</p>
-          <h2><a href="noticias/jodar-y-davidovich-comparten-cuadro-en-basilea.html">Jódar y Davidovich comparten cuadro en Basilea</a></h2>
-          <p>El cuadro del 24 de octubre los deja en la misma zona, con un cruce posible en cuartos. En Viena, Alcaraz abre ante Khachanov.</p>
-          <h3>Próxima cita</h3>
-          <p><a href="semana.html">Swiss Indoors Basel</a>, Basilea, 26 de octubre–1 de noviembre de 2026.</p>
-          <p><a href="semana.html">Toda la semana</a></p>
-        </div>
-<!-- /AUTO:TODAY -->
-        </aside>
-      </div>
       </div>
     </section>
 
@@ -192,26 +189,26 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
         <p class="kicker">Esta semana</p>
         <h2 id="week-title">Qué ver esta semana</h2>
         <!-- AUTO:WEEK -->
-<p class="section-intro">Torneos ATP y WTA del 26 de octubre al 1 de noviembre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.</p>
+<p class="section-intro">26 de octubre–1 de noviembre de 2026. Sede, superficie y enlace a la ficha.</p>
         <ul class="event-cards">
         <li class="event-card">
           <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 500</span></p>
-          <h3><a href="https://www.atptour.com/en/tournaments/basel/328/overview" target="_blank" rel="noopener noreferrer">Swiss Indoors Basel</a></h3>
+          <h3><a href="torneos/swiss-indoors-basel-2026-10-26.html">Swiss Indoors Basel</a></h3>
           <p class="event-where">Basilea, Suiza · 26 de octubre–1 de noviembre de 2026</p>
         </li>
         <li class="event-card">
           <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-indoor.svg?v=56bf788582" alt="" width="36" height="36"><span>ATP · ATP 500</span></p>
-          <h3><a href="https://www.atptour.com/en/tournaments/vienna/337/overview" target="_blank" rel="noopener noreferrer">Erste Bank Open</a></h3>
+          <h3><a href="torneos/erste-bank-open-viena-2026-10-26.html">Erste Bank Open</a></h3>
           <p class="event-where">Viena, Austria · 26 de octubre–1 de noviembre de 2026</p>
         </li>
         <li class="event-card">
           <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"><span>WTA · WTA 500</span></p>
-          <h3><a href="https://www.wtatennis.com/tournaments/1056/tokyo/2026" target="_blank" rel="noopener noreferrer">Toray Pan Pacific Open</a></h3>
+          <h3><a href="torneos/wta-toray-pan-pacific-open-tennis-tokyo-jpn-2026-10-26.html">Toray Pan Pacific Open</a></h3>
           <p class="event-where">Tokio, Japón · 26 de octubre–1 de noviembre de 2026</p>
         </li>
         <li class="event-card">
           <p class="kicker"><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"><span>WTA · WTA 250</span></p>
-          <h3><a href="https://www.wtatennis.com/tournaments/1023/guangzhou/2026" target="_blank" rel="noopener noreferrer">Guangzhou Open</a></h3>
+          <h3><a href="torneos/wta-guangzhou-open-guangzhou-chn-2026-10-26.html">Guangzhou Open</a></h3>
           <p class="event-where">Guangzhou, China · 26 de octubre–1 de noviembre de 2026</p>
         </li>
         </ul>
@@ -245,12 +242,6 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
           <h3><a href="noticias/muchova-cierra-el-cuadro-de-las-wta-finals.html">Muchova cierra el cuadro de las WTA Finals</a></h3>
           <p>Karolina Muchova, de 30 años, ocupó el 21 de octubre la octava plaza de las WTA Finals de Indian Wells, del 8 al 15 de noviembre, sin jugar esa semana, tras la retirada de Marta Kostyuk en Ningbo.</p>
         </article>
-        <article class="news-card">
-          <a class="news-card-media" href="noticias/wawrinka-frena-a-landaluce-en-lyon.html" tabindex="-1" aria-hidden="true"><picture><img src="art/wawrinka-frena-a-landaluce-en-lyon-400.webp?v=3bbb2ea529" srcset="art/wawrinka-frena-a-landaluce-en-lyon-400.webp?v=3bbb2ea529 400w, art/wawrinka-frena-a-landaluce-en-lyon-800.webp?v=b58611039d 800w, art/wawrinka-frena-a-landaluce-en-lyon.webp?v=db7de79e56 1200w" sizes="(max-width: 700px) calc(100vw - 4.4rem), 360px" alt="" width="1200" height="630" loading="lazy" decoding="async"></picture></a>
-          <div class="news-meta"><span class="tour-badge">ATP</span> Redacción AceArena · 21 oct 2026 · Fuente: ATP</div>
-          <h3><a href="noticias/wawrinka-frena-a-landaluce-en-lyon.html">Wawrinka frena a Landaluce en Lyon</a></h3>
-          <p>Stan Wawrinka, con invitación, ganó el 21 de octubre a Martín Landaluce en la primera ronda del ATP 250 de Lyon por 6-3, 6-7(2) y 7-6(5), en 2 horas y 46 minutos.</p>
-        </article>
 <!-- /AUTO:NEWS -->
         </div>
         <!-- AUTO:RESULTS -->
@@ -272,22 +263,6 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
             <span class="result-meta">Grand Prix Auvergne-Rhône-Alpes · Semifinal · 4-6 6-2 7-5</span>
           </div>
           <a href="https://www.atptour.com/en/news/fritz-paul-cobolli-musetti-lyon-2026-sfs" target="_blank" rel="noopener noreferrer">Fuente</a>
-        </article>
-        <article class="result-row">
-          <time datetime="2026-10-24">24 oct 2026</time>
-          <div>
-            <strong>Tallon Griekspoor</strong> venció a Francisco Cerúndolo
-            <span class="result-meta">BNP Paribas Fortis European Open · Semifinal · 2-6 6-3 7-6(4)</span>
-          </div>
-          <a href="https://www.atptour.com/en/news/struff-fils-brussels-2026-saturday-sf" target="_blank" rel="noopener noreferrer">Fuente</a>
-        </article>
-        <article class="result-row">
-          <time datetime="2026-10-24">24 oct 2026</time>
-          <div>
-            <strong>Jan-Lennard Struff</strong> venció a Arthur Fils
-            <span class="result-meta">BNP Paribas Fortis European Open · Semifinal · 6-4 6-7(7) 7-6(5)</span>
-          </div>
-          <a href="https://www.atptour.com/en/news/struff-fils-brussels-2026-saturday-sf" target="_blank" rel="noopener noreferrer">Fuente</a>
         </article>
       </div>
       <p class="results-more"><a href="noticias/index.html">Archivo de noticias</a> · <a href="resultados.html">Todos los resultados</a></p>
@@ -351,13 +326,13 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
       <div class="container">
         <p class="kicker">Aprende tenis</p>
         <h2 id="guide-title">Los cuatro grandes: guía rápida de los Grand Slams</h2>
-        <p class="section-intro">Cuatro torneos, cuatro superficies, cuatro maneras de jugar. Lo básico para seguir la temporada desde el primer día. <a href="aprende/grand-slams.html">La guía completa</a> · <a href="aprende/index.html">Aprende tenis</a> · <a href="aprende/reglas-del-tenis-basicas.html">Reglas del marcador</a>.</p>
         <ul class="event-list">
-          <li><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"> Australian Open, Melbourne Park, 11–31 de enero de 2027. Cuadro principal: 17–31 de enero. Pista dura.</li>
-          <li><img class="surface-icon" src="assets/diagrams/surface-clay.svg?v=f36c7a4f50" alt="" width="36" height="36"> Roland Garros, París, 23 de mayo–6 de junio de 2027. Tierra batida.</li>
-          <li><img class="surface-icon" src="assets/diagrams/surface-grass.svg?v=3326d922fe" alt="" width="36" height="36"> Wimbledon, Londres, 28 de junio–11 de julio de 2027. Hierba.</li>
-          <li><img class="surface-icon" src="assets/diagrams/surface-hard.svg?v=e14d4cf5ac" alt="" width="36" height="36"> US Open, Nueva York. Empieza el 29 de agosto de 2027; fecha de cierre por confirmar. Pista dura.</li>
+          <li>Australian Open, 11–31 de enero de 2027, pista dura.</li>
+          <li>Roland Garros, 23 de mayo–6 de junio de 2027, tierra batida.</li>
+          <li>Wimbledon, 28 de junio–11 de julio de 2027, hierba.</li>
+          <li>US Open, desde el 29 de agosto de 2027, pista dura. Cierre por confirmar.</li>
         </ul>
+        <p class="results-more"><a href="guia-australian-open-2027.html">Guía del Australian Open 2027</a> · <a href="aprende/grand-slams.html">Grand Slams</a></p>
       </div>
     </section>
 
@@ -365,13 +340,7 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
       <div class="container">
         <p class="kicker">Glosario</p>
         <h2 id="glossary-title">Habla tenis en 2 minutos</h2>
-        <p class="section-intro">¿Vienes del pádel o acabas de engancharte? Estas son las palabras que vas a oír en cada retransmisión. <a href="aprende/glosario.html">Glosario completo</a>.</p>
-        <div class="faq-list">
-          <article class="faq-item"><h3>ATP / WTA</h3><p>La ATP organiza el circuito profesional masculino y la WTA el femenino. De ahí salen los rankings y el calendario.</p></article>
-          <article class="faq-item"><h3>Masters 1000</h3><p>El escalón justo por debajo de un Grand Slam en la ATP. El campeón suma 1.000 puntos y el cuadro reúne a casi todo el top.</p></article>
-          <article class="faq-item"><h3>Race (la carrera)</h3><p>La clasificación que solo cuenta los puntos de este año y decide las ATP Finals de Turín. La lista vigente está en la <a href="race.html">Race a Turín</a>.</p></article>
-          <article class="faq-item"><h3>Ranking</h3><p>La lista oficial de puntos de las últimas 52 semanas. En AceArena el top 5 lleva la fecha de la lista y el enlace a ATP o WTA.</p></article>
-        </div>
+        <p class="section-intro">ATP, WTA, Masters 1000, Race y ranking, con la lista vigente enlazada. <a href="aprende/glosario.html">Glosario completo</a> · <a href="race.html">Race a Turín</a>.</p>
       </div>
     </section>
 
@@ -414,7 +383,8 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- AUTO:FOOTER -->
+<footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="index.html"><img src="assets/logo.svg?v=0f5879f7d7" alt="AceArena" width="140" height="40" loading="lazy"></a>
@@ -422,30 +392,32 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
       </div>
       <div class="footer-links">
         <div>
-          <h2>El circuito</h2>
-          <a href="#hoy">Hoy</a>
-          <a href="semana.html">Esta semana</a>
+          <h2>Secciones</h2>
+          <a href="index.html">Hoy</a>
           <a href="noticias/index.html">Noticias</a>
+          <a href="calendario.html">Calendario</a>
           <a href="rankings.html">Rankings</a>
           <a href="jugadores/index.html">Jugadores</a>
-          <a href="paises/index.html">Por país</a>
-          <a href="tenis-en-espana.html">Tenis en España</a>
+          <a href="tenis-en-espana.html">España</a>
+          <a href="paises/index.html">Países</a>
           <a href="cara-a-cara/index.html">Cara a cara</a>
-          <a href="torneos/index.html">Torneos</a>
-          <a href="hoy-en-30-segundos.html">En 30 segundos</a>
           <a href="horarios.html">Horarios</a>
+          <a href="hoy-en-30-segundos.html">En 30 segundos</a>
+          <a href="aprende/index.html">Aprende</a>
+          <a href="torneos/index.html">Torneos</a>
+          <a href="semana.html">Esta semana</a>
           <a href="race.html">Race a Turín</a>
           <a href="resultados.html">Resultados</a>
-          <a href="calendario-2027.html">Calendario</a>
-          <a href="aprende/index.html">Aprende tenis</a>
         </div>
         <div>
           <h2>AceArena</h2>
-          <a href="sobre.html">Sobre AceArena</a>
-          <a href="#newsletter">Resumen del lunes</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="metodologia.html">Metodología</a>
+          <a href="correcciones.html">Correcciones</a>
           <a href="agencias.html">Anúnciate</a>
           <a href="mailto:hola@acearena.io">Contacto</a>
           <a href="https://www.instagram.com/acearenaes/" rel="noopener noreferrer">Instagram</a>
+          <a href="index.html#newsletter">Resumen del lunes</a>
         </div>
         <div>
           <h2>Legal</h2>
@@ -457,9 +429,10 @@ Domingo, 25 de octubre de 2026 · Edición de hoy
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+      <p>© 2026 AceArena · <a href="mailto:hola@acearena.io">hola@acearena.io</a></p>
     </div>
   </footer>
+<!-- /AUTO:FOOTER -->
   <div class="sticky-cta" id="stickyCta">
     <p>El resumen del lunes, en 3 minutos</p>
     <a class="btn btn-primary btn-sm" href="#newsletter">Quiero el resumen</a>

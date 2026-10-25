@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, normalize, relative, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { sheetDisagreements } from './facts.mjs';
 import { validateRankings } from './ranking.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -722,6 +723,27 @@ export function validateSite(rootDir) {
   }
   const cssOrder = cssCascadeErrors(readFileSync(join(publicDir, 'styles.css'), 'utf8'));
   errors.push(...cssOrder);
+  const redirectsPath = join(publicDir, '_redirects');
+  if (!existsSync(redirectsPath)) errors.push('falta public/_redirects');
+  else {
+    const lines = readFileSync(redirectsPath, 'utf8').split('\n').map((line) => line.trim()).filter(Boolean);
+    if (lines.length === 0) errors.push('public/_redirects está vacío');
+    const sorted = [...lines].sort((a, b) => a.localeCompare(b, 'es'));
+    if (lines.join('\n') !== sorted.join('\n')) errors.push('public/_redirects no está ordenado');
+    for (const line of lines) {
+      const parts = line.split(/\s+/);
+      if (parts.length !== 3 || parts[2] !== '301') {
+        errors.push(`public/_redirects: línea no válida (${line})`);
+        continue;
+      }
+      const [from, to] = parts;
+      const sourceFile = join(publicDir, from.replace(/^\//, ''));
+      const sourceHtml = sourceFile.endsWith('.html') ? sourceFile : `${sourceFile}.html`;
+      if (existsSync(sourceFile) || existsSync(sourceHtml)) errors.push(`public/_redirects: ${from} sigue existiendo como archivo`);
+      const target = join(publicDir, to.replace(/^\//, ''));
+      if (!existsSync(target)) errors.push(`public/_redirects: ${to} no existe`);
+    }
+  }
   const llmsFull = readFileSync(join(publicDir, 'llms-full.txt'), 'utf8');
   if (llmsFull.includes('18–31')) errors.push('public/llms-full.txt sigue con el tramo antiguo del Australian Open');
   if (!llmsFull.includes('11–31 de enero') || !llmsFull.includes('17–31')) {
@@ -821,6 +843,7 @@ function main() {
     ...validateWeek(week),
     ...validateRace(race),
     ...validateRankings({ rankings, players, countries, spain }),
+    ...sheetDisagreements(players, countries),
     ...pendingPlaceholderErrors(root),
   ];
   if (process.argv.includes('--site')) errors.push(...validateSite(root));
