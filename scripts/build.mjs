@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { writeSocialCards } from './cards.mjs';
 import { evergreenEntries } from './evergreen.mjs';
+import { emptyBlock, isMissing, sinDatoHtml } from './missing.mjs';
 import { sectionEntries } from './sections.mjs';
 import { writeArticleHeaders } from './headers.mjs';
 import { validateEvergreen, validatePayload, validateRace, validateWeek } from './validate.mjs';
@@ -323,7 +324,7 @@ function cardImage(article, assetPrefix) {
 
 function newsCards(articles, hrefFor, assetPrefix = '') {
   if (articles.length === 0) {
-    return '<p class="rankings-note">No hay noticias de los últimos 60 días.</p>';
+    return emptyBlock();
   }
   return articles.map((article) => {
     const image = cardImage(article, assetPrefix);
@@ -340,7 +341,7 @@ function newsCards(articles, hrefFor, assetPrefix = '') {
 
 function resultRows(matches) {
   if (matches.length === 0) {
-    return '<p class="rankings-note">No hay resultados de los últimos 60 días.</p>';
+    return emptyBlock();
   }
   return matches.map((match) => `        <article class="result-row">
           <time datetime="${esc(match.date)}">${esc(formatDay(match.date))}</time>
@@ -636,20 +637,23 @@ function competitor(name) {
   return { '@type': name.includes(' / ') ? 'SportsTeam' : 'Person', name };
 }
 
+function dataCell(value) {
+  if (isMissing(value)) return `<td class="is-missing">${sinDatoHtml()}</td>`;
+  return `<td>${esc(value)}</td>`;
+}
+
 function resultsPage(matches, updated) {
   const url = `${SITE}/resultados.html`;
   const rows = matches.map((match) => `            <tr>
               <td><time datetime="${esc(match.date)}">${esc(formatDay(match.date))}</time></td>
-              <td>${esc(match.tournament)}</td>
-              <td>${esc(match.round)}</td>
-              <td>${esc(match.winner)}</td>
-              <td>${esc(match.loser)}</td>
-              <td>${esc(tiebreak(match.score))}</td>
+              ${dataCell(match.tournament)}
+              ${dataCell(match.round)}
+              ${dataCell(match.winner)}
+              ${dataCell(match.loser)}
+              ${dataCell(tiebreak(match.score))}
               <td><a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a></td>
             </tr>`).join('\n');
-  const empty = matches.length === 0
-    ? '<p class="rankings-note">No hay resultados en el fichero.</p>'
-    : '';
+  const empty = matches.length === 0 ? emptyBlock() : '';
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
       <div class="section-header">
@@ -661,9 +665,9 @@ function resultsPage(matches, updated) {
       <div class="results-cards">
 ${matches.map((match) => `        <article class="result-card">
           <p class="news-meta"><time datetime="${esc(match.date)}">${esc(formatDay(match.date))}</time> · ${esc(match.tournament)} · ${esc(match.round)}</p>
-          <p><strong>${esc(match.winner)}</strong></p>
-          <p>${esc(match.loser)}</p>
-          <p class="result-score">${esc(tiebreak(match.score))}</p>
+          <p><strong>${isMissing(match.winner) ? sinDatoHtml() : esc(match.winner)}</strong></p>
+          <p>${isMissing(match.loser) ? sinDatoHtml() : esc(match.loser)}</p>
+          <p class="result-score">${isMissing(match.score) ? sinDatoHtml() : esc(tiebreak(match.score))}</p>
           <p><a href="${esc(match.source)}" target="_blank" rel="noopener noreferrer">Fuente</a></p>
         </article>`).join('\n')}
       </div>
@@ -982,9 +986,9 @@ function racePlayer(name) {
 function racePage(race) {
   const url = `${SITE}/race.html`;
   const rows = race.rows.map((row) => `            <tr>
-              <td>${esc(row.position)}</td>
-              <td>${racePlayer(row.player)}</td>
-              <td>${esc(row.points)}</td>
+              ${dataCell(row.position)}
+              <td${isMissing(row.player) ? ' class="is-missing"' : ''}>${isMissing(row.player) ? sinDatoHtml() : racePlayer(row.player)}</td>
+              ${dataCell(row.points)}
             </tr>`).join('\n');
   const main = `  <main class="section page-section" id="contenido">
     <div class="container">
@@ -1196,11 +1200,13 @@ ${guideLines.join('\n')}
 function rankRows(rows, links) {
   return rows.map((row) => {
     const href = links[row.player];
-    const name = href ? `<a href="${esc(href)}">${esc(row.player)}</a>` : esc(row.player);
+    const name = isMissing(row.player)
+      ? sinDatoHtml()
+      : (href ? `<a href="${esc(href)}">${esc(row.player)}</a>` : esc(row.player));
     return `            <tr>
-              <td>${esc(row.position)}</td>
-              <td>${name}</td>
-              <td>${esc(row.points)}</td>
+              ${dataCell(row.position)}
+              <td${isMissing(row.player) ? ' class="is-missing"' : ''}>${name}</td>
+              ${dataCell(row.points)}
             </tr>`;
   }).join('\n');
 }

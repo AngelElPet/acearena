@@ -1,3 +1,5 @@
+import { sinDatoHtml } from './missing.mjs';
+
 const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
 function surfaceFile(surface) {
@@ -168,15 +170,20 @@ ${playerCards}
     const url = `${site}/jugadores/${player.slug}.html`;
     const ranking = `Número ${player.ranking.position} · ${player.ranking.points} puntos. Actualizado a ${longDate(player.ranking.asOf)}.`;
     const note = player.ranking.note ? `\n        <p>${esc(player.ranking.note)}</p>` : '';
+    const height = player.height
+      ? `${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m`
+      : '';
+    const born = player.birthDate
+      ? `${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}`
+      : '';
+    const tech = (value) => (value ? esc(value) : sinDatoHtml());
     const sheetParts = [
-      player.hand ? `Mano: ${player.hand}` : '',
-      player.backhand ? `Revés: ${player.backhand}` : '',
-      player.height ? `Estatura: ${player.height.replace(' cm', '').replace(/^(\d)(\d{2})$/, '$1,$2')} m` : '',
-      player.birthDate ? `Nacimiento: ${longDate(player.birthDate)}${player.birthPlace ? `, ${player.birthPlace}` : ''}` : '',
-    ].filter(Boolean);
-    const sheet = sheetParts.length
-      ? `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${esc(part)}</li>`).join('\n')}\n      </ul>`
-      : `\n      <h2>Ficha técnica</h2>\n${paragraphs(player.style, esc)}`;
+      `Mano: ${tech(player.hand)}`,
+      `Revés: ${tech(player.backhand)}`,
+      `Estatura: ${tech(height)}`,
+      `Nacimiento: ${tech(born)}`,
+    ];
+    const sheet = `\n      <h2>Ficha técnica</h2>\n      <ul class="sheet">\n${sheetParts.map((part) => `        <li>${part}</li>`).join('\n')}\n      </ul>`;
     const favorites = player.favorites ? `\n      <p>${esc(player.favorites)}</p>` : '';
     const lastResult = lastResultBlock(player, resultsDoc, esc);
     const nextTournament = nextTournamentBlock(player, week, esc);
