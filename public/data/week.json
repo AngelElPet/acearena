@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "range": "26 de octubre–1 de noviembre de 2026",
   "hoursNote": "Torneos ATP y WTA del 26 de octubre al 1 de noviembre, con sede, superficie y quién juega. Las horas en Madrid, Buenos Aires y Ciudad de México, en cuanto cada torneo publique su orden de juego.",
   "hero": [
@@ -43,9 +43,9 @@
     }
   ],
   "today": {
-    "resultTitle": "Jódar y Davidovich comparten cuadro en Basilea",
-    "resultText": "El cuadro del 24 de octubre los deja en la misma zona, con un cruce posible en cuartos. En Viena, Alcaraz abre ante Khachanov.",
-    "resultHref": "noticias/jodar-y-davidovich-comparten-cuadro-en-basilea.html",
+    "resultTitle": "Davidovich Fokina se baja de Basilea por un virus estomacal",
+    "resultText": "El 25 de octubre se retiró del ATP 500. El cuadro deja a Bergs ante Hurkacz y Jódar abre el martes ante Tabilo.",
+    "resultHref": "noticias/davidovich-fokina-se-baja-de-basilea.html",
     "nextTitle": "Próxima cita",
     "nextText": "Del 26 de octubre al 1 de noviembre: Basilea y Viena en la ATP, y Tokio y Guangzhou en la WTA.",
     "nextHref": "semana.html"
@@ -60,9 +60,9 @@
       "surface": "indoor",
       "surfaceLabel": "pista dura indoor",
       "officialUrl": "https://www.atptour.com/en/tournaments/basel/328/overview",
-      "detail": "ATP 500 bajo techo. El cuadro se publicó el 24 de octubre.",
-      "watch": "Rafael Jódar abre ante Alejandro Tabilo. Alejandro Davidovich Fokina abre ante Zizou Bergs. Novak Djokovic abre ante Ugo Humbert y Stan Wawrinka ante Jiri Lehecka.",
-      "entries": "Rafael Jódar abre ante Alejandro Tabilo. Alejandro Davidovich Fokina abre ante Zizou Bergs. También está Alejandro Tabilo.",
+      "detail": "ATP 500 bajo techo. El cuadro se publicó el 24 de octubre. El 25 de octubre, Alejandro Davidovich Fokina se bajó por un virus estomacal.",
+      "watch": "Rafael Jódar abre el martes ante Alejandro Tabilo. Alejandro Davidovich Fokina se bajó el 25 de octubre. El cuadro de la ATP empareja a Zizou Bergs con Hubert Hurkacz. Novak Djokovic abre ante Ugo Humbert y Stan Wawrinka ante Jiri Lehecka.",
+      "entries": "Rafael Jódar abre el martes ante Alejandro Tabilo. Alejandro Davidovich Fokina no juega Basilea. También está Alejandro Tabilo.",
       "sources": [
         {
           "name": "ATP, ficha de Basilea",
@@ -79,6 +79,10 @@
         {
           "name": "ATP, calendario 2026",
           "url": "https://www.atptour.com/-/media/files/calendar-pdfs/2025/2026-atp-tour-calendar-december-2025.pdf"
+        },
+        {
+          "name": "Marca, baja de Davidovich Fokina",
+          "url": "https://www.marca.com/tenis/2026/10/25/alejandro-davidovich-baja-basilea-virus-estomacal.html"
         }
       ]
     },
@@ -198,10 +202,10 @@
     {
       "name": "Alejandro Davidovich Fokina",
       "href": "jugadores/alejandro-davidovich-fokina.html",
-      "tournament": "Swiss Indoors Basel",
-      "text": "Swiss Indoors Basel, Basilea, Suiza, 26 de octubre–1 de noviembre de 2026. Abre ante Zizou Bergs.",
-      "sourceName": "ATP, previa del cuadro de Basilea",
-      "sourceUrl": "https://www.atptour.com/es/news/djokovic-basel-2026-draw-preview"
+      "tournament": "Rolex Paris Masters",
+      "text": "Rolex Paris Masters, París, Francia, 2–8 de noviembre de 2026. Se bajó de Basilea el 25 de octubre.",
+      "sourceName": "Marca",
+      "sourceUrl": "https://www.marca.com/tenis/2026/10/25/alejandro-davidovich-baja-basilea-virus-estomacal.html"
     },
     {
       "name": "Alejandro Tabilo",

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://acearena.io/noticias/jodar-y-davidovich-comparten-cuadro-en-basilea.html</loc>
+    <loc>https://acearena.io/noticias/davidovich-fokina-se-baja-de-basilea.html</loc>
     <news:news>
       <news:publication>
         <news:name>AceArena</news:name>
         <news:language>es</news:language>
       </news:publication>
-      <news:publication_date>2026-10-24</news:publication_date>
-      <news:title>Jódar y Davidovich comparten cuadro en Basilea</news:title>
+      <news:publication_date>2026-10-25</news:publication_date>
+      <news:title>Davidovich Fokina se baja de Basilea por un virus estomacal</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://acearena.io/noticias/wawrinka-se-despide-en-basilea-ante-lehecka.html</loc>
+    <loc>https://acearena.io/noticias/musetti-griekspoor-medvedev-rybakina-y-siniakova.html</loc>
     <news:news>
       <news:publication>
         <news:name>AceArena</news:name>
         <news:language>es</news:language>
       </news:publication>
-      <news:publication_date>2026-10-24</news:publication_date>
-      <news:title>Wawrinka se despide en Basilea ante Lehecka</news:title>
+      <news:publication_date>2026-10-25</news:publication_date>
+      <news:title>Musetti, Griekspoor, Medvedev, Rybakina y Siniakova, campeones del domingo</news:title>
     </news:news>
   </url>
 </urlset>

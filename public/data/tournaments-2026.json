@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "coverage": "Torneos ATP y WTA de 2026, con categoría, fechas y superficie, y el campeón cuando la fuente lo publica.",
   "events": [
     {
@@ -3343,14 +3343,18 @@
       "endDate": "2026-10-25",
       "city": "NINGBO",
       "surface": "pista dura",
-      "champion": "sin dato",
-      "finalist": "sin dato",
-      "score": "sin dato",
+      "champion": "Elena Rybakina",
+      "finalist": "Leylah Fernandez",
+      "score": "6-2, 6-2",
       "officialUrl": "https://www.wtatennis.com/tournaments/2092/ningbo/2026",
       "sources": [
         {
           "name": "WTA, API de torneos de 2026",
           "url": "https://api.wtatennis.com/tennis/tournaments"
+        },
+        {
+          "name": "WTA, final de Ningbo 2026",
+          "url": "https://www.wtatennis.com/news/4598517/by-the-numbers-rybakina-wins-ningbo-open-for-tour-leading-fourth-title-of-season"
         }
       ]
     },
@@ -3363,14 +3367,18 @@
       "endDate": "2026-10-25",
       "city": "OSAKA",
       "surface": "pista dura",
-      "champion": "sin dato",
-      "finalist": "sin dato",
-      "score": "sin dato",
+      "champion": "Katerina Siniakova",
+      "finalist": "Ashlyn Krueger",
+      "score": "6-1, 6-0",
       "officialUrl": "https://www.wtatennis.com/tournaments/405/osaka/2026",
       "sources": [
         {
           "name": "WTA, API de torneos de 2026",
           "url": "https://api.wtatennis.com/tennis/tournaments"
+        },
+        {
+          "name": "WTA, final del Japan Open 2026",
+          "url": "https://www.wtatennis.com/news/4598497/siniakova-wins-10-straight-games-to-clinch-sixth-wta-singlea-title"
         }
       ]
     },
