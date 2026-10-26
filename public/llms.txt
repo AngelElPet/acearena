@@ -5,6 +5,8 @@
 
 ## Noticias
 
+- [Davidovich Fokina se baja de Basilea por un virus estomacal](https://acearena.io/noticias/davidovich-fokina-se-baja-de-basilea.html): El 25 de octubre, Alejandro Davidovich Fokina se bajó del Swiss Indoors Basel, ATP 500, por un virus estomacal. Defendía 330 puntos de finalista y reaparece en el Rolex Paris Masters.
+- [Musetti, Griekspoor, Medvedev, Rybakina y Siniakova, campeones del domingo](https://acearena.io/noticias/musetti-griekspoor-medvedev-rybakina-y-siniakova.html): El 25 de octubre, Musetti ganó en Lyon, Griekspoor en Bruselas y Medvedev defendió Almaty. En la WTA, Rybakina retuvo Ningbo y Siniakova se impuso en Osaka.
 - [Jódar y Davidovich comparten cuadro en Basilea](https://acearena.io/noticias/jodar-y-davidovich-comparten-cuadro-en-basilea.html): El 24 de octubre quedaron hechos los cuadros de Basilea y Viena, ATP 500 del 26 de octubre al 1 de noviembre. Jódar abre ante Tabilo y puede cruzar en cuartos con Davidovich Fokina; en Viena, Alcaraz abre ante Khachanov.
 - [Wawrinka se despide en Basilea ante Lehecka](https://acearena.io/noticias/wawrinka-se-despide-en-basilea-ante-lehecka.html): Stan Wawrinka, número 140 e invitado, juega en Basilea el último torneo de su carrera y abre el 27 de octubre ante Jiri Lehecka. El lunes 26, a las 18:00, hay un homenaje en la St. Jakobshalle.
 - [Muchova cierra el cuadro de las WTA Finals](https://acearena.io/noticias/muchova-cierra-el-cuadro-de-las-wta-finals.html): Karolina Muchova, de 30 años, ocupó el 21 de octubre la octava plaza de las WTA Finals de Indian Wells, del 8 al 15 de noviembre, sin jugar esa semana, tras la retirada de Marta Kostyuk en Ningbo.
@@ -23,7 +25,7 @@
 
 ## Resultados
 
-- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 25 oct 2026, 08:02 UTC.
+- [Resultados recientes](https://acearena.io/resultados.html): marcadores con torneo, ronda, fecha y fuente. Actualizado el 26 oct 2026, 05:00 UTC.
 - Datos de noticias: https://acearena.io/data/news.json
 - Datos de resultados: https://acearena.io/data/results.json
 

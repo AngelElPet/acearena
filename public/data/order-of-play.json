@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-25",
-  "date": "2026-10-25",
-  "note": "Consulta del 25 de octubre de 2026. Aún no hay orden de juego oficial con horas.",
+  "updated": "2026-10-26",
+  "date": "2026-10-26",
+  "note": "Consulta del 26 de octubre de 2026. Aún no hay orden de juego oficial con horas. Alejandro Davidovich Fokina se bajó de Basilea el 25 de octubre.",
   "matches": [],
   "sessions": [
     {
@@ -38,12 +38,21 @@
   ],
   "players": [
     { "name": "Rafael Jódar", "tournament": "Swiss Indoors Basel", "round": "Primera ronda", "opponent": "Alejandro Tabilo" },
-    { "name": "Alejandro Davidovich Fokina", "tournament": "Swiss Indoors Basel", "round": "Primera ronda", "opponent": "Zizou Bergs" },
     { "name": "Carlos Alcaraz", "tournament": "Erste Bank Open", "round": "Primera ronda", "opponent": "Karen Khachanov" },
     { "name": "Martín Landaluce", "tournament": "Erste Bank Open", "round": "Primera ronda", "opponent": "Alexander Zverev" },
     { "name": "Daniel Mérida", "tournament": "Erste Bank Open", "round": "Primera ronda", "opponent": "Daniil Medvedev" }
   ],
   "attempts": [
+    {
+      "name": "ATP, cuadro de Basilea",
+      "url": "https://www.atptour.com/en/scores/current/basel/328/draws",
+      "result": "El 26 de octubre el cuadro empareja a Zizou Bergs con Hubert Hurkacz. Alejandro Davidovich Fokina no figura."
+    },
+    {
+      "name": "Marca, baja de Davidovich Fokina",
+      "url": "https://www.marca.com/tenis/2026/10/25/alejandro-davidovich-baja-basilea-virus-estomacal.html",
+      "result": "Se bajó el 25 de octubre por un virus estomacal. No hay hora de partido."
+    },
     {
       "name": "Erste Bank Open, horarios del recinto",
       "url": "https://www.erstebank-open.com/en/event/event-infos",

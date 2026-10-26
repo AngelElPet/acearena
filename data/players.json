@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "players": [
     {
       "slug": "carlos-alcaraz",
@@ -202,10 +202,10 @@
       "backhand": "a dos manos",
       "birthPlace": "Málaga",
       "nextEvent": {
-        "name": "BNP Paribas Fortis European Open",
-        "place": "Bruselas, Bélgica",
-        "dates": "19–25 de octubre de 2026",
-        "url": "https://www.atptour.com/en/news/brussels-atp-250-2026-history-draw-schedule"
+        "name": "Rolex Paris Masters",
+        "place": "París, Francia",
+        "dates": "2–8 de noviembre de 2026",
+        "url": "https://www.atptour.com/en/tournaments/-/352/overview"
       },
       "related": [
         {
@@ -222,10 +222,8 @@
         }
       ],
       "hoy": {
-        "asOf": "2026-10-25",
-        "tournament": "Swiss Indoors Basel",
-        "round": "Primera ronda",
-        "opponent": "Zizou Bergs"
+        "asOf": "2026-10-26",
+        "tournament": "Rolex Paris Masters"
       },
       "facts": {
         "careerHigh": "13",

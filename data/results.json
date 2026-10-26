@@ -1,6 +1,60 @@
 {
-  "updated": "2026-10-25T08:02:07.000Z",
+  "updated": "2026-10-26T05:00:16.000Z",
   "results": [
+    {
+      "tournament": "Grand Prix Auvergne-Rhône-Alpes",
+      "round": "Final",
+      "date": "2026-10-25",
+      "winner": "Lorenzo Musetti",
+      "loser": "Taylor Fritz",
+      "score": "6-3 6-4",
+      "source": "https://www.atptour.com/en/news/fritz-musetti-lyon-2026-final-sunday"
+    },
+    {
+      "tournament": "BNP Paribas Fortis European Open",
+      "round": "Final",
+      "date": "2026-10-25",
+      "winner": "Tallon Griekspoor",
+      "loser": "Jan-Lennard Struff",
+      "score": "4-6 6-3 6-4",
+      "source": "https://www.atptour.com/en/news/griekspoor-struff-brussels-2026-final-sunday"
+    },
+    {
+      "tournament": "Almaty Open",
+      "round": "Final",
+      "date": "2026-10-25",
+      "winner": "Daniil Medvedev",
+      "loser": "Nikoloz Basilashvili",
+      "score": "6-7(6) 6-1 6-3",
+      "source": "https://www.atptour.com/en/news/medvedev-basilashvili-almaty-2026-final"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Final",
+      "date": "2026-10-25",
+      "winner": "Elena Rybakina",
+      "loser": "Leylah Fernandez",
+      "score": "6-2 6-2",
+      "source": "https://www.wtatennis.com/news/4598517/by-the-numbers-rybakina-wins-ningbo-open-for-tour-leading-fourth-title-of-season"
+    },
+    {
+      "tournament": "Kinoshita Group Japan Open",
+      "round": "Final",
+      "date": "2026-10-25",
+      "winner": "Katerina Siniakova",
+      "loser": "Ashlyn Krueger",
+      "score": "6-1 6-0",
+      "source": "https://www.wtatennis.com/news/4598497/siniakova-wins-10-straight-games-to-clinch-sixth-wta-singlea-title"
+    },
+    {
+      "tournament": "BNB Ningbo Open",
+      "round": "Final de dobles",
+      "date": "2026-10-25",
+      "winner": "Desirae Krawczyk / Fanny Stollár",
+      "loser": "Cristina Bucsa / Nicole Melichar-Martinez",
+      "score": "7-6(5) 5-7 [10-6]",
+      "source": "https://www.tennis.com/tournaments/ningbo-open/matches/bucsa-c-melichar-martinez-n-vs-krawczyk-d-stollar-f-2026-10-25"
+    },
     {
       "tournament": "Grand Prix Auvergne-Rhône-Alpes",
       "round": "Semifinal",
